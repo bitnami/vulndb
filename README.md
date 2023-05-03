@@ -4,7 +4,15 @@ This repository contains the data and configuration provided by [Bitnami](https:
 
 ## How the database is created
 
-At [config](config) folder you can find the information about the Bitnami components, specially the vendor and product names to work with their [CPE specifications](https://cpe.mitre.org/specification/). Based on the information exists in that folder, periodically the [data](data) folder is updated with the set of CVE related to our components.
+At [config](config) folder you can find the information about the Bitnami components, specially the vendor and product names to work with their [CPE specifications](https://cpe.mitre.org/specification/). Based on this information, the [data](data) folder is updated periodically with the set of CVEs related to our components.
+
+### Available fields in config files
+
+Most of the files under the `config/components` directory only include its component name, but there are components defining other properties like `cpeVendor`, `cpeProduct`, or `cpeSoftwareEdition`. In order to filter the CVEs related to each component, a sample `:cpeVendor:cpeProduct:` string is used, where `cpeVendor` and `cpeProduct` can be overriden by defining the property in its config file, being `name` the default value for both properties.
+
+[All keys in the CPE string](https://cpe.mitre.org/specification/) can be defined in the different config files, which will be consumed by the Bitnami processes generating the SPDX information that are available in the final images. Here is the list of the different keys available: `cpeVendor`, `cpeProduct`, `cpeVersion`, `cpeUpdate`, `cpeEdition`, `cpeLanguage`, `cpeSoftwareEdition`, `cpeTargetSoftware`, `cpeTargetHardware`, and `cpeOther`.
+
+Only `name` is mandatory in the JSON file, and the rest are totally optional. As mentioned previously, `cpeVendor` and `cpeProduct` defaults to `name` key, while the rest of properties are set to `*` by default in case it is not specified.
 
 ## Reporting a vulnerability or feedback
 
