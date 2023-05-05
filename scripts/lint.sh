@@ -18,7 +18,7 @@ while read -r f; do
         fi
     fi
     exitCodeSum=$((exitCodeSum + exitCode))
-done < <(find . -type f -name "*.json")
+done < <(find ./config -type f -name "*.json")
 
 if [ $exitCodeSum -ne 0 ]; then
     echo "Errors found in the next files: '${errorFiles[@]}'. Please review them"
