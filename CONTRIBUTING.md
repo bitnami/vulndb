@@ -13,9 +13,9 @@ Any type of contribution is welcome: new features, bug fixes, documentation impr
 
 When submitting a PR make sure that:
 
-- It must pass CI jobs for linting and test the changes (if any).
-- The title of the PR is clear enough and starts with "[feat/***] or [fix/***]"
-- If necessary, add information to the repository's `README.md`.
+* It must pass CI jobs for linting and test the changes (if any).
+* The title of the PR is clear enough and starts with "[feat/***] or [fix/***]"
+* If necessary, add information to the repository's `README.md`.
 
 #### Sign Your Work
 
@@ -52,3 +52,4 @@ Notice the `Author` and `Signed-off-by` lines match. If they don't your PR will 
 4. Then our CI/CD system is going refresh the vulnerability database.
 
 ***NOTE***: Please note that, in terms of time, may be a slight difference between the appearance of the code in GitHub and the data processed after that code execution.
+
