@@ -30,13 +30,13 @@ jobs:
       - id: s3-upload
         name: 'Upload updated files'
         run: |
-          cd charts
+          cd config
           files_changed="$(git show --pretty="" --name-only)"
           for f in "$files_changed"; do
             base_filename="$(basename -- "$f")"
             file_extension="${base_filename##*.}"
             if [ "$file_extension" = "json" ]; then
-              s3_dest="s3://${{ secrets.AWS_CBE_S3_BUCKET }}/securityConfig/${base_filename}"
+              s3_dest="s3://${{ secrets.AWS_S3_BUCKET }}/securityConfig/${base_filename}"
               aws s3 cp --color off "${{ github.workspace }}/${f}" "$s3_dest"
             fi
           done
