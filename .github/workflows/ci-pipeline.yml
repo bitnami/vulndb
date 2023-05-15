@@ -1,11 +1,10 @@
 name: '[CI/CD] CI Pipeline'
 on: # rebuild any PRs and main branch changes
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - reopened
       - synchronize
-      - labeled
     branches:
       - main
       - bitnami:main
@@ -27,9 +26,6 @@ jobs:
         run: sudo apt-get install -y jq
       - uses: actions/checkout@v3
         name: Checkout Repository
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
       - id: lint
         name: Lint modified files
         env:
@@ -79,7 +75,7 @@ jobs:
         with:
           issue-number: ${{ github.event.number }}
           # Necessary to trigger support workflows
-          token: ${{ secrets.BITNAMI_BOT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             There has been an error during the automated release process. Manual revision is now required.
             Please check the related [action_run#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more information.
