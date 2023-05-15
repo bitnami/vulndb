@@ -74,7 +74,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3.0.0
         with:
           issue-number: ${{ github.event.number }}
-          # Necessary to trigger support workflows
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             There has been an error during the automated release process. Manual revision is now required.
