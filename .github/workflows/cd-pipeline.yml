@@ -7,12 +7,12 @@ on: # rebuild any PRs and main branch changes
     paths:
       - 'config/components/**.json'
       - '!**.md'
+permissions:
+  contents: read
 jobs:
   s3-upload:
     runs-on: ubuntu-latest
     name: 'Upload modified files to s3'
-    outputs:
-      result: ${{ steps.s3-upload.outputs.result }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -22,11 +22,7 @@ jobs:
         run: |
           # AWS CLI
           export DEBIAN_FRONTEND=noninteractive
-          sudo apt-get update && sudo apt-get install -y awscli
-          aws configure set region us-east-1
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws configure set source_profile default
+          sudo apt-get update && sudo apt-get install -y s3cmd
       - id: s3-upload
         name: 'Upload updated files'
         run: |
@@ -37,7 +33,8 @@ jobs:
             file_extension="${base_filename##*.}"
             if [ "$file_extension" = "json" ]; then
               s3_dest="s3://${{ secrets.AWS_S3_BUCKET }}/securityConfig/${base_filename}"
-              aws s3 cp --color off "${{ github.workspace }}/${f}" "$s3_dest"
+              # Override present file with latest version available
+              s3cmd put --force "${{ github.workspace }}/${f}" "$s3_dest"
             fi
           done
   # If the CD Pipeline does not succeed we should notify the interested agents
