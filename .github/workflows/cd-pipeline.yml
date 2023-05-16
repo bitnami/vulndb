@@ -16,7 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: config
           fetch-depth: 2 # to be able to obtain files changed in the latest commit
       - name: Install and configure s3cmd
         run: |
@@ -30,7 +29,6 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.MAIN_CATALOG_BUCKET }}
           AWS_DEFAULT_REGION: us-east-1
         run: |
-          cd config
           files_changed="$(git show --pretty="" --name-only)"
           for f in "$files_changed"; do
             base_filename="$(basename -- "$f")"
