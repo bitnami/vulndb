@@ -18,13 +18,18 @@ jobs:
         with:
           path: config
           fetch-depth: 2 # to be able to obtain files changed in the latest commit
-      - name: Install and configure aws-cli and helm
+      - name: Install and configure s3cmd
         run: |
           # AWS CLI
           export DEBIAN_FRONTEND=noninteractive
           sudo apt-get update && sudo apt-get install -y s3cmd
       - id: s3-upload
         name: 'Upload updated files'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.MAIN_CATALOG_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.MAIN_CATALOG_SECRET_ACCESS_KEY }}
+          AWS_S3_BUCKET: ${{ secrets.MAIN_CATALOG_BUCKET }}
+          AWS_DEFAULT_REGION: us-east-1
         run: |
           cd config
           files_changed="$(git show --pretty="" --name-only)"
@@ -32,7 +37,7 @@ jobs:
             base_filename="$(basename -- "$f")"
             file_extension="${base_filename##*.}"
             if [ "$file_extension" = "json" ]; then
-              s3_dest="s3://${{ secrets.AWS_S3_BUCKET }}/securityConfig/${base_filename}"
+              s3_dest="s3://${AWS_S3_BUCKET}/securityConfig/${base_filename}"
               # Override present file with latest version available
               s3cmd put --force "${{ github.workspace }}/${f}" "$s3_dest"
             fi
