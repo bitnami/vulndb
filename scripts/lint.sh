@@ -19,38 +19,40 @@ fi
 
 if [[ "${#files_to_check[@]}" -ne 0 ]]; then
     for f in "${files_to_check[@]}"; do
-        # Run a different linter depending on file extension
-        base_file="$(basename -- "$f")"
-        echo "Checking '$base_file'"
-        file_extension="${base_file##*.}"
-        if [[ "$file_extension" = "json" ]]; then
-            jq_request="."
-            if [[ "$f" =~ .*\/?config\/.* ]]; then
-                # Check both 'name' key is present and it is a valid JSON file
-                jq_request=".name"
-            fi
-            output="$(jq --exit-status "${jq_request}" "$f")"
-            exit_code=$?
-            if [[ $exit_code -ne 0 ]]; then
-                # jq doesn't return any error message if 'name' is not found, just 'null'.
-                # Let the user know about this specific issue
-                if [[ "$output" = "null" ]] && [[ "$jq_request" = ".name" ]]; then
-                    echo "error: 'name' key not found"
+        if [[ -f "$f" ]]; then
+            # Run a different linter depending on file extension
+            base_file="$(basename -- "$f")"
+            echo "Checking '$base_file'"
+            file_extension="${base_file##*.}"
+            if [[ "$file_extension" = "json" ]]; then
+                jq_request="."
+                if [[ "$f" =~ .*\/?config\/.* ]]; then
+                    # Check both 'name' key is present and it is a valid JSON file
+                    jq_request=".name"
                 fi
+                output="$(jq --exit-status "${jq_request}" "$f")"
+                exit_code=$?
+                if [[ $exit_code -ne 0 ]]; then
+                    # jq doesn't return any error message if 'name' is not found, just 'null'.
+                    # Let the user know about this specific issue
+                    if [[ "$output" = "null" ]] && [[ "$jq_request" = ".name" ]]; then
+                        echo "error: 'name' key not found"
+                    fi
+                fi
+            elif [[ "$file_extension" = "md" ]]; then
+                # MD013: allow long lines in file
+                markdownlint --disable=MD013 "$f"
+                exit_code=$?
+            else
+                echo "Skipping '$base_file'"
+                continue
             fi
-        elif [[ "$file_extension" = "md" ]]; then
-            # MD013: allow long lines in file
-            markdownlint --disable=MD013 "$f"
-            exit_code=$?
-        else
-            echo "Skipping '$base_file'"
-            continue
+            # Check error code to report errors
+            if [[ $exit_code -ne 0 ]]; then
+                error_files+=("$(basename "$f")")
+            fi
+            exit_code_sum=$((exit_code_sum + exit_code))
         fi
-        # Check error code to report errors
-        if [[ $exit_code -ne 0 ]]; then
-            error_files+=("$(basename "$f")")
-        fi
-        exit_code_sum=$((exit_code_sum + exit_code))
     done
 fi
 
