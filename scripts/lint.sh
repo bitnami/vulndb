@@ -2,6 +2,7 @@
 
 set -u
 read -a files_to_check <<< "$@"
+root_dir="$(git rev-parse --show-toplevel)"
 error_files=()
 exit_code_sum=0
 FORCE=${FORCE:-0}
@@ -25,13 +26,15 @@ if [[ "${#files_to_check[@]}" -ne 0 ]]; then
             echo "Checking '$base_file'"
             file_extension="${base_file##*.}"
             if [[ "$file_extension" = "json" ]]; then
-                jq_request="."
                 if [[ "$f" =~ .*\/?config\/.* ]]; then
                     # Check both 'name' key is present and it is a valid JSON file
-                    jq_request=".name"
+                    output="$(jq --exit-status ".name" "$f")"
+                    exit_code=$?
+                elif [[ "$f" =~ .*\/?data\/.* ]]; then
+                    # Check CVE file against OSV schema
+                    output="$(jsonschema "${root_dir}/config/validation/schema.json" < "$f" 2>/dev/null)"
+                    exit_code=$?
                 fi
-                output="$(jq --exit-status "${jq_request}" "$f")"
-                exit_code=$?
                 if [[ $exit_code -ne 0 ]]; then
                     # jq doesn't return any error message if 'name' is not found, just 'null'.
                     # Let the user know about this specific issue
