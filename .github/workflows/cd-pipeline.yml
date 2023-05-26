@@ -29,11 +29,11 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.MAIN_CATALOG_BUCKET }}
           AWS_DEFAULT_REGION: us-east-1
         run: |
-          files_changed="$(git show --pretty="" --name-only)"
-          for f in "$files_changed"; do
+          readarray -t files_changed < <(git show --pretty="" --name-only)
+          for f in "${files_changed[@]}"; do
             base_filename="$(basename -- "$f")"
             file_extension="${base_filename##*.}"
-            if [ "$file_extension" = "json" ]; then
+            if [[ -f "$f" ]] && [[ "$file_extension" = "json" ]]; then
               s3_dest="s3://${AWS_S3_BUCKET}/securityConfig/${base_filename}"
               # Override present file with latest version available
               s3cmd put --force "${{ github.workspace }}/${f}" "$s3_dest"
