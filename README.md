@@ -14,6 +14,15 @@ Most of the files under the `config/components` directory only include its compo
 
 Only `name` is mandatory in the JSON file, and the rest are totally optional. As mentioned previously, `cpeVendor` and `cpeProduct` defaults to `name` key, while the rest of properties are set to `*` by default in case it is not specified.
 
+Additionally, a `to-be-deprecated: <date>` value may be present in those components that will be removed in the short term. For further information on this, please check the [deprecation policy](#deprecation-policy) section.
+
+## Deprecation policy
+
+From time to time, one or more assets may be deprecated. In that situation, we will continue generating the related CVE information for at least one month, or after the expiration date is met. Notice the expiration date is present in the format `yyyymmdd` (i.e. `20231231` stands for Dec. 31st 2023). The procedure of deprecation and deletion is done by:
+
+* Annotate components with the `to-be-deprecated: <date>` field in their config file setting the date when it will be removed. Add a deprecation notice in this `README.md` file as well.
+* Delete the config file and the associated `data/${name}` folder once the retention period has expired.
+
 ## Reporting a vulnerability or feedback
 
 [Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or giving feedback about the project.
