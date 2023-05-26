@@ -26,9 +26,15 @@ if [[ "${#files_to_check[@]}" -ne 0 ]]; then
             echo "Checking '$base_file'"
             file_extension="${base_file##*.}"
             if [[ "$file_extension" = "json" ]]; then
-                if [[ "$f" =~ .*\/?config\/.* ]]; then
+                jq_request="."
+                if [[ "$f" =~ .*\/?config\/components\/.* ]]; then
                     # Check both 'name' key is present and it is a valid JSON file
-                    output="$(jq --exit-status ".name" "$f")"
+                    jq_request=".name"
+                    output="$(jq --exit-status "$jq_request" "$f")"
+                    exit_code=$?
+                elif [[ "$f" =~ .*\/?config\/.* ]]; then
+                    # Check it is a valid JSON file
+                    output="$(jq --exit-status "$jq_request" "$f")"
                     exit_code=$?
                 elif [[ "$f" =~ .*\/?data\/.* ]]; then
                     # Check CVE file against OSV schema
