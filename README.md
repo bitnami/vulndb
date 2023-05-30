@@ -2,7 +2,7 @@
 
 This repository contains the data and configuration provided by [Bitnami](https://bitnami.com) to generate its vulnerability database.
 
-Please note that this database is populated with information from the year 2020 to current days.
+Please note that this database is populated with information from the year 2020 onwards.
 
 ## How the database is created
 
