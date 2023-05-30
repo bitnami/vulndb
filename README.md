@@ -37,18 +37,18 @@ From time to time, one or more assets may be deprecated. In that situation, we w
 
 This database includes CVE information **only** for Bitnami packages installed on top of the operating system for all distributed solutions (containers, Helm charts, OVAs, cloud images, etc.). The procedure to consume this information is shown below:
 
-* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` folder and named with pattern `.spdx-<component>.spdx`
+* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` folder and named with the pattern `.spdx-<component>.spdx`
 
 ```bash
 $ docker run --rm -it -u root --entrypoint=/bin/bash bitnami/postgresql
-root@05dbe2385648:/opt/bitnami# find . -type f -name ".spdx-*"
-./postgresql/.spdx-postgresql.spdx
+# find /opt/bitnami -type f -name ".spdx-*"
+/opt/bitnami/postgresql/.spdx-postgresql.spdx
 ```
 
 * Get the packages included in the SPDX file under the `packages` section:
 
 ```json
-(...)
+  "...": "...",
   "packages": [
     {
       "SPDXID": "SPDXRef-postgresql",
@@ -92,14 +92,14 @@ root@05dbe2385648:/opt/bitnami# find . -type f -name ".spdx-*"
         }
       ]
     },
-(...)
+  "...": "...",
 ```
 
-* Finally, match the different CVEs under the `data/<name>/` folder (with `name` in lowercase) with the version of the asset included in your solution to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
+* Finally, verify the version of your components against the affected versions of the different CVEs located under the `data/<name>/` folder (lowercase) to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
 
 ## Reporting a vulnerability or feedback
 
-[Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or giving feedback about the project.
+[Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
 
 ## License
 
