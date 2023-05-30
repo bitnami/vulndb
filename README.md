@@ -4,6 +4,14 @@ This repository contains the data and configuration provided by [Bitnami](https:
 
 Please note that this database is populated with information from the year 2020 onwards.
 
+## Table of contents
+
+* [How the database is created](#how-the-database-is-created)
+* [Deprecation policy](#deprecation-policy)
+* [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
+* [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+* [License](#license)
+
 ## How the database is created
 
 At [config](config) folder you can find the information about the Bitnami components, specially the vendor and product names to work with their [CPE specifications](https://cpe.mitre.org/specification/). Based on this information, the [data](data) folder is updated periodically with the set of CVEs related to our components.
@@ -24,6 +32,70 @@ From time to time, one or more assets may be deprecated. In that situation, we w
 
 * Annotate components with the `to-be-deprecated: <date>` field in their config file setting the date when it will be removed. Add a deprecation notice in this `README.md` file as well.
 * Delete the config file and the associated `data/${name}` folder once the retention period has expired.
+
+## How to consume this CVE feed
+
+This database includes CVE information **only** for Bitnami packages installed on top of the operating system for all distributed solutions (containers, Helm charts, OVAs, cloud images, etc.). The procedure to consume this information is shown below:
+
+* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` folder and named with pattern `.spdx-<component>.spdx`
+
+```bash
+$ docker run --rm -it -u root --entrypoint=/bin/bash bitnami/postgresql
+root@05dbe2385648:/opt/bitnami# find . -type f -name ".spdx-*"
+./postgresql/.spdx-postgresql.spdx
+```
+
+* Get the packages included in the SPDX file under the `packages` section:
+
+```json
+(...)
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-postgresql",
+      "name": "PostgreSQL",
+      "versionInfo": "15.3.0",
+      "downloadLocation": "https://ftp.postgresql.org/pub/source/v15.3/postgresql-15.3.tar.gz",
+      "licenseConcluded": "PostgreSQL",
+      "licenseDeclared": "PostgreSQL",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:*:postgresql:postgresql:15.3.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:bitnami/postgresql@15.3.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-geos",
+      "name": "GEOS",
+      "versionInfo": "3.8.3",
+      "downloadLocation": "https://github.com/libgeos/geos/archive/3.8.3.tar.gz",
+      "licenseConcluded": "LGPL-2.1-only",
+      "licenseDeclared": "LGPL-2.1-only",
+      "filesAnalyzed": false,
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:*:libgeos:geos:3.8.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:bitnami/geos@3.8.3"
+        }
+      ]
+    },
+(...)
+```
+
+* Finally, match the different CVEs under the `data/<name>/` folder (with `name` in lowercase) with the version of the asset included in your solution to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
 
 ## Reporting a vulnerability or feedback
 
