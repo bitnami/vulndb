@@ -2,6 +2,8 @@
 
 This repository contains the data and configuration provided by [Bitnami](https://bitnami.com) to generate its vulnerability database.
 
+Please note that this database is populated with information from the year 2020 onwards.
+
 ## How the database is created
 
 At [config](config) folder you can find the information about the Bitnami components, specially the vendor and product names to work with their [CPE specifications](https://cpe.mitre.org/specification/). Based on this information, the [data](data) folder is updated periodically with the set of CVEs related to our components.
