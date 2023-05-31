@@ -40,6 +40,7 @@ This database includes CVE information **only** for Bitnami packages installed o
 * Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` directory and named with the pattern `.spdx-<component>.spdx`
 
 For instance, in the case of a container:
+
 ```console
 $ docker run bitnami/postgresql find /opt/bitnami -type f -name ".spdx-*"
 /opt/bitnami/postgresql/.spdx-postgresql.spdx
@@ -54,6 +55,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 * Get the packages included in the SPDX file under the `packages` section.
 
 For instance, in the case of a container image:
+
 ```console
 $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spdx
   "...": "...",
