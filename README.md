@@ -56,7 +56,6 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 For instance, in the case of a container image:
 ```console
 $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spdx
-```json
   "...": "...",
   "packages": [
     {
