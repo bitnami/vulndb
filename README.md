@@ -37,16 +37,25 @@ From time to time, one or more assets may be deprecated. In that situation, we w
 
 This database includes CVE information **only** for Bitnami packages installed on top of the operating system for all distributed solutions (containers, Helm charts, OVAs, cloud images, etc.). The procedure to consume this information is shown below:
 
-* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` folder and named with the pattern `.spdx-<component>.spdx`
+* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` directory and named with the pattern `.spdx-<component>.spdx`
 
-```bash
-$ docker run --rm -it -u root --entrypoint=/bin/bash bitnami/postgresql
-# find /opt/bitnami -type f -name ".spdx-*"
+For instance, in the case of a container:
+```console
+$ docker run bitnami/postgresql find /opt/bitnami -type f -name ".spdx-*"
 /opt/bitnami/postgresql/.spdx-postgresql.spdx
+
+$ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spdx
+{
+    "SPDXID": "SPDXRef-postgresql",
+    "spdxVersion": "SPDX-2.3",
+    ...
 ```
 
-* Get the packages included in the SPDX file under the `packages` section:
+* Get the packages included in the SPDX file under the `packages` section.
 
+For instance, in the case of a container image:
+```console
+$ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spdx
 ```json
   "...": "...",
   "packages": [
@@ -95,7 +104,7 @@ $ docker run --rm -it -u root --entrypoint=/bin/bash bitnami/postgresql
   "...": "...",
 ```
 
-* Finally, verify the version of your components against the affected versions of the different CVEs located under the `data/<name>/` folder (lowercase) to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
+* Finally, verify the version of your components against the affected versions of the different CVEs located under the `data/<name>/` directory (lowercase) to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
 
 ## Reporting a vulnerability or feedback
 
