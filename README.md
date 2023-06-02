@@ -116,7 +116,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ## Deprecation notes
 
 ### 2023-07
-Wavefront
+* Wavefront
 
 ## License
 
