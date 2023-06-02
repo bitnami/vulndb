@@ -35,12 +35,6 @@ From time to time, one or more assets may be deprecated. In that situation, we w
 * Annotate components with the `to-be-deprecated: <date>` field in their config file setting the date when it will be removed. Add a deprecation notice in this `README.md` file as well.
 * Delete the config file and the associated `data/${name}` folder once the retention period has expired.
 
-### Deprecation notes
-
-### 2023-07-02
-
-Wavefront will no longer be supported.
-
 ## How to consume this CVE feed
 
 This database includes CVE information **only** for Bitnami packages installed on top of the operating system for all distributed solutions (containers, Helm charts, OVAs, cloud images, etc.). The procedure to consume this information is shown below:
@@ -118,6 +112,11 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ## Reporting a vulnerability or feedback
 
 [Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
+
+## Deprecation notes
+
+### 2023-07
+Wavefront
 
 ## License
 
