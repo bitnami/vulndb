@@ -12,6 +12,7 @@ Please note that this database is populated with information from the year 2020 
 * [Deprecation policy](#deprecation-policy)
 * [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
 * [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+* [Deprecation notes](#deprecation-notes)
 * [License](#license)
 
 ## How the database is created
