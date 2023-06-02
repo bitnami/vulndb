@@ -12,6 +12,7 @@ Please note that this database is populated with information from the year 2020 
 * [Deprecation policy](#deprecation-policy)
 * [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
 * [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+* [Deprecation notes](#deprecation-notes)
 * [License](#license)
 
 ## How the database is created
@@ -112,6 +113,12 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ## Reporting a vulnerability or feedback
 
 [Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
+
+## Deprecation notes
+
+### 2023-07
+
+* Wavefront
 
 ## License
 
