@@ -37,9 +37,9 @@ From time to time, one or more assets may be deprecated. In that situation, we w
 
 ### Deprecation notes
 
-**2023-07-02**
+### 2023-07-02
 
-Wavefront will no longer be supported. 
+Wavefront will no longer be supported.
 
 ## How to consume this CVE feed
 
