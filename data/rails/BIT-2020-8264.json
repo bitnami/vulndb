@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-8264",
+  "details": "In actionpack gem >= 6.0.0, a possible XSS vulnerability exists when an application is running in development mode allowing an attacker to send or embed (in another page) a specially crafted URL which can allow the attacker to execute JavaScript in the context of the local application. This vulnerability is in the Actionable Exceptions middleware.",
+  "aliases": [
+    "CVE-2020-8264"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "rails",
+          "purl": "pkg:bitnami/rails"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/yQzUVfv42jk/m/oJWw-xhNAQAJ"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/904059"
+    }
+  ],
+  "published": "2023-06-12T14:24:59.874Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

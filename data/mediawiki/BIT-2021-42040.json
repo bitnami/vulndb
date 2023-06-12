@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-42040",
+  "details": "An issue was discovered in MediaWiki through 1.36.2. A parser function related to loop control allowed for an infinite loop (and php-fpm hang) within the Loops extension because egLoopsCountLimit is mishandled. This could lead to memory exhaustion.",
+  "aliases": [
+    "CVE-2021-42040"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I0caf6f129f94612b5bcf406a171aa5ffedea1f80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T287347"
+    }
+  ],
+  "published": "2023-06-12T14:25:11.073Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

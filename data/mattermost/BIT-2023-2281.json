@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-2281",
+  "details": "When archiving a team, Mattermost fails to sanitize the related Websocket event sent to currently connected clients. This allows the clients to see the name, display name, description, and other data about the archived team.",
+  "aliases": [
+    "CVE-2023-2281"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mattermost",
+          "purl": "pkg:bitnami/mattermost"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-06-12T14:16:24.267Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-7014",
+  "details": "The fix for CVE-2020-7009 was found to be incomplete. Elasticsearch versions from 6.7.0 to 6.8.7 and 7.0.0 to 7.6.1 contain a privilege escalation flaw if an attacker is able to create API keys and also authentication tokens. An attacker who is able to generate an API key and an authentication token can perform a series of steps that result in an authentication token being generated with elevated privileges.",
+  "aliases": [
+    "CVE-2020-7014"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "elasticsearch",
+          "purl": "pkg:bitnami/elasticsearch"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.7.0"
+            },
+            {
+              "fixed": "6.8.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200619-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.elastic.co/community/security/"
+    }
+  ],
+  "published": "2023-06-12T14:13:58.068Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

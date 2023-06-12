@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-22797",
+  "details": "An open redirect vulnerability is fixed in Rails 7.0.4.1 with the new protection against open redirects from calling redirect_to with untrusted user input. In prior versions the developer was fully responsible for only providing trusted input. However the check introduced could allow an attacker to bypass with a carefully crafted URL resulting in an open redirect vulnerability.",
+  "aliases": [
+    "CVE-2023-22797"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "rails",
+          "purl": "pkg:bitnami/rails"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.rubyonrails.org/t/cve-2023-22799-possible-redos-based-dos-vulnerability-in-globalid/82127"
+    }
+  ],
+  "published": "2023-06-12T14:22:44.773Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-40127",
+  "details": "A vulnerability in Example Dags of Apache Airflow allows an attacker with UI access who can trigger DAGs, to execute arbitrary commands via manually provided run_id parameter. This issue affects Apache Airflow Apache Airflow versions prior to 2.4.0.",
+  "aliases": [
+    "CVE-2022-40127"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "airflow",
+          "purl": "pkg:bitnami/airflow"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/11/14/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/25960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/cf132hgm6jvzvsbpsozl3plf1r4cwysy"
+    }
+  ],
+  "published": "2023-06-12T14:12:38.166Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

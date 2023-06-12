@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-24604",
+  "details": "A Reflected XSS vulnerability was discovered in Ignite Realtime Openfire version 4.5.1. The XSS vulnerability allows remote attackers to inject arbitrary web script or HTML via the GET request \"searchName\", \"searchValue\", \"searchDescription\", \"searchDefaultValue\",\"searchPlugin\", \"searchDescription\" and \"searchDynamic\" in server-properties.jsp and security-audit-viewer.jsp",
+  "aliases": [
+    "CVE-2020-24604"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "openfire",
+          "purl": "pkg:bitnami/openfire"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "4.5.1"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:igniterealtime:openfire:4.5.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cybersecurityworks.com/zerodays/cve-2020-24604-ignite-realtime-openfire.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.igniterealtime.org/browse/OF-1963"
+    }
+  ],
+  "published": "2023-06-12T14:19:47.966Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-5247",
+  "details": "In Puma (RubyGem) before 4.3.2 and before 3.12.3, if an application using Puma allows untrusted input in a response header, an attacker can use newline characters (i.e. `CR`, `LF` or`/r`, `/n`) to end the header and inject malicious content, such as additional headers or an entirely new response body. This vulnerability is known as HTTP Response Splitting. While not an attack in itself, response splitting is a vector for several other attacks, such as cross-site scripting (XSS). This is related to CVE-2019-16254, which fixed this vulnerability for the WEBrick Ruby web server. This has been fixed in versions 4.3.2 and 3.12.3 by checking all headers for line endings and rejecting headers with those characters.",
+  "aliases": [
+    "CVE-2020-5247"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "ruby",
+          "purl": "pkg:bitnami/ruby"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "2.5.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:ruby-lang:ruby:2.7.0:preview1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/puma/puma/security/advisories/GHSA-84j7-475p-hp8v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00034.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BMJ3CGZ3DLBJ5WUUKMI5ZFXFJQMXJZIK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DIHVO3CQMU7BZC7FCTSRJ33YDNS3GFPK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NJ3LL5F5QADB6LM46GXZETREAKZMQNRD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://owasp.org/www-community/attacks/HTTP_Response_Splitting"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ruby-lang.org/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254"
+    }
+  ],
+  "published": "2023-06-12T14:25:09.466Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

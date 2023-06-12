@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-44521",
+  "details": "When running Apache Cassandra with the following configuration: enable_user_defined_functions: true enable_scripted_user_defined_functions: true enable_user_defined_functions_threads: false it is possible for an attacker to execute arbitrary code on the host. The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this. Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.",
+  "aliases": [
+    "CVE-2021-44521"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "cassandra",
+          "purl": "pkg:bitnami/cassandra"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/02/11/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jfrog.com/blog/cve-2021-44521-exploiting-apache-cassandra-user-defined-functions-for-remote-code-execution/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/y4nb9s4co34j8hdfmrshyl09lokm7356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220225-0001/"
+    }
+  ],
+  "published": "2023-06-12T14:11:16.270Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

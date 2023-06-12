@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-35478",
+  "details": "MediaWiki before 1.35.1 allows XSS via BlockLogFormatter.php. MediaWiki:blanknamespace potentially can be output as raw HTML with SCRIPT tags via LogFormatter::makePageLink(). This affects MediaWiki 1.33.0 and later.",
+  "aliases": [
+    "CVE-2020-35478"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.33.0"
+            },
+            {
+              "fixed": "1.35.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/STT5Z4A3BCXVH3WIPICWU2FP4IPIMUPC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2020-December/000268.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T268938"
+    }
+  ],
+  "published": "2023-06-12T14:29:14.181Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

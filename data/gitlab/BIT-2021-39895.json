@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-39895",
+  "details": "In all versions of GitLab CE/EE since version 8.0, an attacker can set the pipeline schedules to be active in a project export so when an unsuspecting owner imports that project, pipelines are active by default on that project. Under specialized conditions, this may lead to information disclosure if the project is imported from an untrusted source.",
+  "aliases": [
+    "CVE-2021-39895"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "14.1.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.2.0"
+            },
+            {
+              "fixed": "14.2.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39895.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/337824"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1272535"
+    }
+  ],
+  "published": "2023-06-12T14:32:02.404Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

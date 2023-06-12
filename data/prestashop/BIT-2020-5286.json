@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-5286",
+  "details": "In PrestaShop between versions 1.7.4.0 and 1.7.6.5, there is a reflected XSS when uploading a wrong file. The problem is fixed in 1.7.6.5",
+  "aliases": [
+    "CVE-2020-5286"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "prestashop",
+          "purl": "pkg:bitnami/prestashop"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.4.0"
+            },
+            {
+              "fixed": "1.7.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/fc0625fb0a9aab1835515f1bea52e8e063384da7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-98j8-hvjv-x47j"
+    }
+  ],
+  "published": "2023-06-12T14:24:26.374Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

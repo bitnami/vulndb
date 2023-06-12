@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-22132",
+  "details": "Elasticsearch versions 7.7.0 to 7.10.1 contain an information disclosure flaw in the async search API. Users who execute an async search will improperly store the HTTP headers. An Elasticsearch user with the ability to read the .tasks index could obtain sensitive request headers of other users in the cluster. This issue is fixed in Elasticsearch 7.10.2",
+  "aliases": [
+    "CVE-2021-22132"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "elasticsearch",
+          "purl": "pkg:bitnami/elasticsearch"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.7.0"
+            },
+            {
+              "fixed": "7.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-7-10-2-security-update/261164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210219-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+    }
+  ],
+  "published": "2023-06-12T14:13:19.771Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

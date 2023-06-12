@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-1352",
+  "details": "Due to an insecure direct object reference vulnerability in Gitlab EE/CE affecting all versions from 11.0 prior to 14.8.6, 14.9 prior to 14.9.4, and 14.10 prior to 14.10.1, an endpoint may reveal the issue title to a user who crafted an API call with the ID of the issue from a public project that restricts access to issue only to project members.",
+  "aliases": [
+    "CVE-2022-1352"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "14.8.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.9.0"
+            },
+            {
+              "fixed": "14.9.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.10.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.10.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-1352.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/350691"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1450306"
+    }
+  ],
+  "published": "2023-06-12T14:30:57.767Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

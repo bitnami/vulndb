@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41095",
+  "details": "Discourse is an open source discussion platform. There is a cross-site scripting (XSS) vulnerability in versions 2.7.7 and earlier of the `stable` branch, versions 2.8.0.beta6 and earlier of the `beta` branch, and versions 2.8.0.beta6 and earlier of the `tests-passed` branch. Rendering of some error messages that contain user input can be susceptible to XSS attacks. This vulnerability only affects sites which have blocked watched words that contain HTML tags, modified or disabled Discourse's default Content Security Policy. This issue is patched in the latest `stable`, `beta` and `tests-passed` versions of Discourse. As a workaround, avoid modifying or disabling Discourseâ€™s default Content Security Policy, and blocking watched words containing HTML tags.",
+  "aliases": [
+    "CVE-2021-41095"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "discourse",
+          "purl": "pkg:bitnami/discourse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta6:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/pull/14434/commits/40b776b9d39c41d9273d01eecf8fe03aa39fcb59"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-qvqx-2h7w-m479"
+    }
+  ],
+  "published": "2023-06-12T14:21:38.571Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

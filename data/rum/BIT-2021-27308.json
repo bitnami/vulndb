@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-27308",
+  "details": "A cross-site scripting (XSS) vulnerability in the admin login panel in 4images version 1.8 allows remote attackers to inject JavaScript via the \"redirect\" parameter.",
+  "aliases": [
+    "CVE-2021-27308"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "rum",
+          "purl": "pkg:bitnami/rum"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "1.8"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:4homepages:4images:1.8:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/162946/4Images-1.8-Cross-Site-Scripting.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/4images/4images/issues/3"
+    }
+  ],
+  "published": "2023-06-12T14:23:34.872Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

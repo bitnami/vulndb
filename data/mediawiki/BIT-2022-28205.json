@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-28205",
+  "details": "An issue was discovered in MediaWiki through 1.37.1. The CentralAuth extension mishandles a ttl issue for groups expiring in the future.",
+  "aliases": [
+    "CVE-2022-28205"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.37.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/Ic6ba1a37b78df5b342ceeba4c1493dbde583b81f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T302248"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202305-24"
+    }
+  ],
+  "published": "2023-06-12T14:20:19.272Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

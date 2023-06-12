@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-20612",
+  "details": "A cross-site request forgery (CSRF) vulnerability in Jenkins 2.329 and earlier, LTS 2.319.1 and earlier allows attackers to trigger build of job without parameters when no security realm is set.",
+  "aliases": [
+    "CVE-2022-20612"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "jenkins",
+          "purl": "pkg:bitnami/jenkins"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.319.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.329"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/01/12/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2022-01-12/#SECURITY-2558"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+    }
+  ],
+  "published": "2023-06-12T14:16:24.872Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

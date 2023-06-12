@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-3030",
+  "details": "An improper access control issue in GitLab CE/EE affecting all versions starting before 15.1.6, all versions from 15.2 before 15.2.4, all versions from 15.3 before 15.3.2 allows disclosure of pipeline status to unauthorized users.",
+  "aliases": [
+    "CVE-2022-3030"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "15.1.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.2"
+            },
+            {
+              "fixed": "15.2.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.3"
+            },
+            {
+              "fixed": "15.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-3030.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/37959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/749882"
+    }
+  ],
+  "published": "2023-06-12T14:27:35.278Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

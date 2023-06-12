@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-38298",
+  "details": "Appsmith v1.7.11 was discovered to allow attackers to execute an authenticated Server-Side Request Forgery (SSRF) via redirecting incoming requests to the AWS internal metadata endpoint.",
+  "aliases": [
+    "CVE-2022-38298"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "appsmith",
+          "purl": "pkg:bitnami/appsmith"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "1.7.11"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:1.7.11:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/pull/15782"
+    }
+  ],
+  "published": "2023-06-12T14:11:16.775Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

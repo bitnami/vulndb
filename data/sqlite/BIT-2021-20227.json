@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-20227",
+  "details": "A flaw was found in SQLite's SELECT query functionality (src/select.c). This flaw allows an attacker who is capable of running SQL queries locally on the SQLite database to cause a denial of service or possible code execution by triggering a use-after-free. The highest threat from this vulnerability is to system availability.",
+  "aliases": [
+    "CVE-2021-20227"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "sqlite",
+          "purl": "pkg:bitnami/sqlite"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.33.0"
+            },
+            {
+              "fixed": "3.34.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1924886"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202103-04"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202210-40"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210423-0010/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sqlite.org/releaselog/3_34_1.html"
+    }
+  ],
+  "published": "2023-06-12T14:25:18.169Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

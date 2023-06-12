@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-15945",
+  "details": "Lua through 5.4.0 has a segmentation fault in changedline in ldebug.c (e.g., when called by luaG_traceexec) because it incorrectly expects that an oldpc value is always updated upon a return of the flow of control to a function.",
+  "aliases": [
+    "CVE-2020-15945"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "lua",
+          "purl": "pkg:bitnami/lua"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.3.1"
+            },
+            {
+              "fixed": "5.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00123.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lua/lua/commit/a2195644d89812e5b157ce7bac35543e06db05e3"
+    }
+  ],
+  "published": "2023-06-12T14:17:16.368Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

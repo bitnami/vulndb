@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-0483",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 12.1 before 15.7.8, all versions starting from 15.8 before 15.8.4, all versions starting from 15.9 before 15.9.2. It was possible for a project maintainer to extract a Datadog integration API key by modifying the site.",
+  "aliases": [
+    "CVE-2023-0483"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.1.0"
+            },
+            {
+              "fixed": "15.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.8.0"
+            },
+            {
+              "fixed": "15.8.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "15.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-0483.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1836466"
+    }
+  ],
+  "published": "2023-06-12T14:16:55.074Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-41743",
+  "details": "NGINX Plus before versions R27 P1 and R26 P1 have a vulnerability in the module ngx_http_hls_module that might allow a local attacker to corrupt NGINX worker memory, resulting in its crash or potential other impact using a specially crafted audio or video file. The issue affects only NGINX Plus when the hls directive is used in the configuration file. Further, the attack is possible only if an attacker can trigger processing of a specially crafted audio or video file with the module ngx_http_hls_module.",
+  "aliases": [
+    "CVE-2022-41743"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "nginx-ingress-controller",
+          "purl": "pkg:bitnami/nginx-ingress-controller"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "1.12.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:f5:nginx_ingress_controller:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://support.f5.com/csp/article/K01112063"
+    }
+  ],
+  "published": "2023-06-12T14:18:02.873Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

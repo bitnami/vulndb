@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-29662",
+  "details": "In Harbor 2.0 before 2.0.5 and 2.1.x before 2.1.2 the catalog’s registry API is exposed on an unauthenticated path.",
+  "aliases": [
+    "CVE-2020-29662"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "harbor",
+          "purl": "pkg:bitnami/harbor"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0"
+            },
+            {
+              "fixed": "2.0.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.1.0"
+            },
+            {
+              "fixed": "2.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-38r5-34mr-mvm7"
+    }
+  ],
+  "published": "2023-06-12T14:13:50.471Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-24112",
+  "details": "An attacker can abuse the batch-requests plugin to send requests to bypass the IP restriction of Admin API. A default configuration of Apache APISIX (with default API key) is vulnerable to remote code execution. When the admin key was changed or the port of Admin API was changed to a port different from the data panel, the impact is lower. But there is still a risk to bypass the IP restriction of Apache APISIX's data panel. There is a check in the batch-requests plugin which overrides the client IP with its real remote IP. But due to a bug in the code, this check can be bypassed.",
+  "aliases": [
+    "CVE-2022-24112"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "apisix",
+          "purl": "pkg:bitnami/apisix"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.10.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.11.0"
+            },
+            {
+              "fixed": "2.12.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/166228/Apache-APISIX-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/166328/Apache-APISIX-2.12.1-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/02/11/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/lcdqywz8zy94mdysk7p3gfdgn51jmt94"
+    }
+  ],
+  "published": "2023-06-12T14:11:07.271Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

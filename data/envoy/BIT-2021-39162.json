@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-39162",
+  "details": "Pomerium is an open source identity-aware access proxy. Envoy, which Pomerium is based on, can abnormally terminate if an H/2 GOAWAY and SETTINGS frame are received in the same IO event. This can lead to a DoS in the presence of untrusted *upstream* servers. 0.15.1 contains an upgraded envoy binary with this vulnerability patched. If only trusted upstreams are configured, there is not substantial risk of this condition being triggered.",
+  "aliases": [
+    "CVE-2021-39162"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "envoy",
+          "purl": "pkg:bitnami/envoy"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.18.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.19.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:1.19.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-j374-mjrw-vvp8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pomerium/pomerium/security/advisories/GHSA-gjcg-vrxg-xmgv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/envoy-announce/c/5xBpsEZZDfE/m/wD05NZBbAgAJ"
+    }
+  ],
+  "published": "2023-06-12T14:15:14.372Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

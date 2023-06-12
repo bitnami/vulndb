@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-28566",
+  "details": "Magento versions 2.4.2 (and earlier), 2.4.1-p1 (and earlier) and 2.3.6-p1 (and earlier) are vulnerable to an Information Disclosure vulnerability when uploading a modified png file to a product image. Successful exploitation could lead to the disclosure of document root path by an unauthenticated attacker. Access to the admin console is required for successful exploitation.",
+  "aliases": [
+    "CVE-2021-28566"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "magento",
+          "purl": "pkg:bitnami/magento"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb21-30.html"
+    }
+  ],
+  "published": "2023-06-12T14:17:47.772Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

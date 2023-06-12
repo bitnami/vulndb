@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-45116",
+  "details": "An issue was discovered in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1. Due to leveraging the Django Template Language's variable resolution logic, the dictsort template filter was potentially vulnerable to information disclosure, or an unintended method call, if passed a suitably crafted key.",
+  "aliases": [
+    "CVE-2021-45116"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "django",
+          "purl": "pkg:bitnami/django"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.2"
+            },
+            {
+              "fixed": "2.2.26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2"
+            },
+            {
+              "fixed": "3.2.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0"
+            },
+            {
+              "fixed": "4.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/4.0/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/forum/#!forum/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B4SQG2EAF4WCI2SLRL6XRDJ3RPK3ZRDV/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220121-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2022/jan/04/security-releases/"
+    }
+  ],
+  "published": "2023-06-12T14:13:17.473Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

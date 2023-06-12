@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-0319",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 13.6 before 15.8.5, all versions starting from 15.9 before 15.9.4, all versions starting from 15.10 before 15.10.1, allowing to read environment names supposed to be restricted to project memebers only.",
+  "aliases": [
+    "CVE-2023-0319"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.6.0"
+            },
+            {
+              "fixed": "15.8.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "15.9.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-0319.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1817586"
+    }
+  ],
+  "published": "2023-06-12T14:17:18.170Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

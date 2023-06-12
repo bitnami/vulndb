@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-31008",
+  "details": "RabbitMQ is a multi-protocol messaging and streaming broker. In affected versions the shovel and federation plugins perform URI obfuscation in their worker (link) state. The encryption key used to encrypt the URI was seeded with a predictable secret. This means that in case of certain exceptions related to Shovel and Federation plugins, reasonably easily deobfuscatable data could appear in the node log. Patched versions correctly use a cluster-wide secret for that purpose. This issue has been addressed and Patched versions: `3.10.2`, `3.9.18`, `3.8.32` are available. Users unable to upgrade should disable the Shovel and Federation plugins.",
+  "aliases": [
+    "CVE-2022-31008"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "rabbitmq",
+          "purl": "pkg:bitnami/rabbitmq"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.8.32"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/pull/4841"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-v9gv-xp36-jgj8"
+    }
+  ],
+  "published": "2023-06-12T14:22:43.767Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

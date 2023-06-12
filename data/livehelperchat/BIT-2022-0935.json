@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-0935",
+  "details": "Host Header injection in password Reset in GitHub repository livehelperchat/livehelperchat prior to 3.97.",
+  "aliases": [
+    "CVE-2022-0935"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "livehelperchat",
+          "purl": "pkg:bitnami/livehelperchat"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.97"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/ce96791cb4c7420266b668fc234c211914259ba7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/a7e40fdf-a333-4a50-8a53-d11b16ce3ec2"
+    }
+  ],
+  "published": "2023-06-12T14:16:29.067Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-8547",
+  "details": "phpList 3.5.0 allows type juggling for admin login bypass because == is used instead of === for password hashes, which mishandles hashes that begin with 0e followed by exclusively numerical characters.",
+  "aliases": [
+    "CVE-2020-8547"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "phplist",
+          "purl": "pkg:bitnami/phplist"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "3.5.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:3.5.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/47989"
+    }
+  ],
+  "published": "2023-06-12T14:20:59.072Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

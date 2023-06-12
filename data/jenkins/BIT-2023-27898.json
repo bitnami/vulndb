@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-27898",
+  "details": "Jenkins 2.270 through 2.393 (both inclusive), LTS 2.277.1 through 2.375.3 (both inclusive) does not escape the Jenkins version a plugin depends on when rendering the error message stating its incompatibility with the current version of Jenkins, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers able to provide plugins to the configured update sites and have this message shown by Jenkins instances.",
+  "aliases": [
+    "CVE-2023-27898"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "jenkins",
+          "purl": "pkg:bitnami/jenkins"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.270"
+            },
+            {
+              "fixed": "2.394"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.277.1"
+            },
+            {
+              "fixed": "2.375.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2023-03-08/#SECURITY-3037"
+    }
+  ],
+  "published": "2023-06-12T14:15:07.270Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

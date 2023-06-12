@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-4074",
+  "details": "In PrestaShop from version 1.5.0.0 and before version 1.7.6.6, the authentication system is malformed and an attacker is able to forge requests and execute admin commands. The problem is fixed in 1.7.6.6.",
+  "aliases": [
+    "CVE-2020-4074"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "prestashop",
+          "purl": "pkg:bitnami/prestashop"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.5.0.0"
+            },
+            {
+              "fixed": "1.7.6.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/30b6a7bdaca9cb940d3ce462906dbb062499fc30"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-ccvh-jh5x-mpg4"
+    }
+  ],
+  "published": "2023-06-12T14:26:18.877Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

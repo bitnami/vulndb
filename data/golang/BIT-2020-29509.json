@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-29509",
+  "details": "The encoding/xml package in Go (all versions) does not correctly preserve the semantics of attribute namespace prefixes during tokenization round-trips, which allows an attacker to craft inputs that behave in conflicting ways during different stages of processing in affected downstream applications.",
+  "aliases": [
+    "CVE-2020-29509"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "golang",
+          "purl": "pkg:bitnami/golang"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mattermost/xml-roundtrip-validator/blob/master/advisories/unstable-attributes.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210129-0006/"
+    }
+  ],
+  "published": "2023-06-12T14:23:13.177Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

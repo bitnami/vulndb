@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-8166",
+  "details": "A CSRF forgery vulnerability exists in rails < 5.2.5, rails < 6.0.4 that makes it possible for an attacker to, given a global CSRF token such as the one present in the authenticity_token meta tag, forge a per-form CSRF token.",
+  "aliases": [
+    "CVE-2020-8166"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "rails",
+          "purl": "pkg:bitnami/rails"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/NOjKiGeXUgw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/732415"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4766"
+    }
+  ],
+  "published": "2023-06-12T14:25:28.370Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

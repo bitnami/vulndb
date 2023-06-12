@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-39261",
+  "details": "Twig is a template language for PHP. Versions 1.x prior to 1.44.7, 2.x prior to 2.15.3, and 3.x prior to 3.4.3 encounter an issue when the filesystem loader loads templates for which the name is a user input. It is possible to use the `source` or `include` statement to read arbitrary files from outside the templates' directory when using a namespace like `@somewhere/../some.file`. In such a case, validation is bypassed. Versions 1.44.7, 2.15.3, and 3.4.3 contain a fix for validation of such template names. There are no known workarounds aside from upgrading.",
+  "aliases": [
+    "CVE-2022-39261"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "drupal",
+          "purl": "pkg:bitnami/drupal"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "9.3.22"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/twigphp/Twig/commit/35f3035c5deb0041da7b84daf02dea074ddc7a0b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/twigphp/Twig/security/advisories/GHSA-52m2-vc4m-jj33"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00016.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2OKRUHPVLIQVFPPJ2UWC3WV3WQO763NR/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AUVTXMNPSZAHS3DWZEM56V5W4NPVR6L7/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NWRFPZSR74SYVJKBTKTMYUK36IJ3SQJP/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TW53TFJ6WWNXMUHOFACKATJTS7NIHVQE/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WV5TNNJLGG536TJH6DLCIAAZZIPV2GUD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YU4ZYX62H2NUAKKGUES4RZIM4KMTKZ7F/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5248"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2022-016"
+    }
+  ],
+  "published": "2023-06-12T14:11:49.070Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

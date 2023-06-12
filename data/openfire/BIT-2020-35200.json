@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-35200",
+  "details": "Ignite Realtime Openfire 4.6.0 has plugins/clientcontrol/spark-form.jsp Reflective XSS.",
+  "aliases": [
+    "CVE-2020-35200"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "openfire",
+          "purl": "pkg:bitnami/openfire"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "4.6.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:igniterealtime:openfire:4.6.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discourse.igniterealtime.org/t/openfire-4-6-0-has-reflective-xss-vulnerabilities/89296"
+    }
+  ],
+  "published": "2023-06-12T14:19:22.170Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

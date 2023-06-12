@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41192",
+  "details": "Redash is a package for data visualization and sharing. If an admin sets up Redash versions 10.0.0 and prior without explicitly specifying the `REDASH_COOKIE_SECRET` or `REDASH_SECRET_KEY` environment variables, a default value is used for both that is the same across all installations. In such cases, the instance is vulnerable to attackers being able to forge sessions using the known default value. This issue only affects installations where the `REDASH_COOKIE_SECRET or REDASH_SECRET_KEY` environment variables have not been explicitly set. This issue does not affect users of the official Redash cloud images, Redash's Digital Ocean marketplace droplets, or the scripts in the `getredash/setup` repository. These instances automatically generate unique secret keys during installation. One can verify whether one's instance is affected by checking the value of the `REDASH_COOKIE_SECRET` environment variable. If it is `c292a0a3aa32397cdb050e233733900f`, should follow the steps to secure the instance, outlined in the GitHub Security Advisory.",
+  "aliases": [
+    "CVE-2021-41192"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "redash",
+          "purl": "pkg:bitnami/redash"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redash:redash:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/getredash/redash/commit/ce60d20c4e3d1537581f2f70f1308fe77ab6a214"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/getredash/redash/security/advisories/GHSA-g8xr-f424-h2rv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ian.sh/redash"
+    }
+  ],
+  "published": "2023-06-12T14:23:14.969Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-10750",
+  "details": "Sensitive information written to a log file vulnerability was found in jaegertracing/jaeger before version 1.18.1 when the Kafka data store is used. This flaw allows an attacker with access to the container's log file to discover the Kafka credentials.",
+  "aliases": [
+    "CVE-2020-10750"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "jaeger",
+          "purl": "pkg:bitnami/jaeger"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.18.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:jaeger:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-10750"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jaegertracing/jaeger/releases/tag/v1.18.1"
+    }
+  ],
+  "published": "2023-06-12T14:13:53.971Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

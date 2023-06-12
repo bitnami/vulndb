@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-29140",
+  "details": "An issue was discovered in the GrowthExperiments extension for MediaWiki through 1.39.3. Attackers might be able to see edits for which the username has been hidden, because there is no check for rev_deleted.",
+  "aliases": [
+    "CVE-2023-29140"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.39.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T327613"
+    }
+  ],
+  "published": "2023-06-12T14:16:17.169Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

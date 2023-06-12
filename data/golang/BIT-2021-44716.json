@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-44716",
+  "details": "net/http in Go before 1.16.12 and 1.17.x before 1.17.5 allows uncontrolled memory consumption in the header canonicalization cache via HTTP/2 requests.",
+  "aliases": [
+    "CVE-2021-44716"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "golang",
+          "purl": "pkg:bitnami/golang"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.16.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "fixed": "1.17.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-744259.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/hcmEScgc00k"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00016.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00017.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202208-02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220121-0002/"
+    }
+  ],
+  "published": "2023-06-12T14:19:41.072Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

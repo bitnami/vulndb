@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-0266",
+  "details": "Authorization Bypass Through User-Controlled Key in Packagist remdex/livehelperchat prior to 3.92v.",
+  "aliases": [
+    "CVE-2022-0266"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "livehelperchat",
+          "purl": "pkg:bitnami/livehelperchat"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.92"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/cc1122aed0d1ad9f05757eaea2ab9e6a924776bd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/1ac267be-3af8-4774-89f2-77234d144d6b"
+    }
+  ],
+  "published": "2023-06-12T14:17:40.572Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

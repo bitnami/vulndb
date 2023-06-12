@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41244",
+  "details": "Grafana is an open-source platform for monitoring and observability. In affected versions when the fine-grained access control beta feature is enabled and there is more than one organization in the Grafana instance admins are able to access users from other organizations. Grafana 8.0 introduced a mechanism which allowed users with the Organization Admin role to list, add, remove, and update users’ roles in other organizations in which they are not an admin. With fine-grained access control enabled, organization admins can list, add, remove and update users' roles in another organization, where they do not have organization admin role. All installations between v8.0 and v8.2.3 that have fine-grained access control beta enabled and more than one organization should be upgraded as soon as possible. If you cannot upgrade, you should turn off the fine-grained access control using a feature flag.",
+  "aliases": [
+    "CVE-2021-41244"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "grafana",
+          "purl": "pkg:bitnami/grafana"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2021/11/15/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-mpwp-42x6-4wmx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/blog/2021/11/15/grafana-8.2.4-released-with-security-fixes/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20211223-0001/"
+    }
+  ],
+  "published": "2023-06-12T14:18:26.372Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

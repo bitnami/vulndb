@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-46663",
+  "details": "MariaDB through 10.5.13 allows a ha_maria::extra application crash via certain SELECT statements.",
+  "aliases": [
+    "CVE-2021-46663"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mariadb",
+          "purl": "pkg:bitnami/mariadb"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.2.41"
+            },
+            {
+              "fixed": "10.2.43"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.32"
+            },
+            {
+              "fixed": "10.3.34"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.22"
+            },
+            {
+              "fixed": "10.4.24"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.5.9"
+            },
+            {
+              "fixed": "10.5.15"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-26351"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DKJRBYJAQCOPHSED43A3HUPNKQLDTFGD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EZFZVMJL5UDTOZMARLXQIMG3BTG6UNYW/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NJ4KDAGF3H4D4BDTHRAM6ZEAJJWWMRUO/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mariadb.com/kb/en/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220221-0002/"
+    }
+  ],
+  "published": "2023-06-12T14:24:47.867Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

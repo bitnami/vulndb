@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-37703",
+  "details": "Discourse is an open-source platform for community discussion. In Discourse before versions 2.7.8 and 2.8.0.beta5, a user's read state for a topic such as the last read post number and the notification level is exposed.",
+  "aliases": [
+    "CVE-2021-37703"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "discourse",
+          "purl": "pkg:bitnami/discourse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/aed65ec16d38886d7be7209d8c02df4ffd4937a4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-gq2h-qhg2-phf9"
+    }
+  ],
+  "published": "2023-06-12T14:22:07.468Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

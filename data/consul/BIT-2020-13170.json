@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-13170",
+  "details": "HashiCorp Consul and Consul Enterprise did not appropriately enforce scope for local tokens issued by a primary data center, where replication to a secondary data center was not enabled. Introduced in 1.4.0, fixed in 1.6.6 and 1.7.4.",
+  "aliases": [
+    "CVE-2020-13170"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "consul",
+          "purl": "pkg:bitnami/consul"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.4.0"
+            },
+            {
+              "fixed": "1.6.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "fixed": "1.7.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/consul/blob/v1.6.6/CHANGELOG.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/consul/blob/v1.7.4/CHANGELOG.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/consul/pull/8068"
+    }
+  ],
+  "published": "2023-06-12T14:14:19.266Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

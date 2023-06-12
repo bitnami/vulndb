@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-43792",
+  "details": "Discourse is an open source discussion platform. In affected versions a vulnerability affects users of tag groups who use the \"Tags are visible only to the following groups\" feature. A tag group may only allow a certain group (e.g. staff) to view certain tags. Users who were tracking or watching the tags via /preferences/tags, then have their staff status revoked will still see notifications related to the tag, but will not see the tag on each topic. This issue has been patched in stable version 2.7.11. Users are advised to upgrade as soon as possible.",
+  "aliases": [
+    "CVE-2021-43792"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "discourse",
+          "purl": "pkg:bitnami/discourse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta7:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/cdaf7f4bb3ec268238e4c29a14bb73fad56574b4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-pq2x-vq37-8522"
+    },
+    {
+      "type": "WEB",
+      "url": "https://meta.discourse.org/t/non-forum-staff-getting-notifications-for-staff-only-tags/184895"
+    }
+  ],
+  "published": "2023-06-12T14:21:08.678Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

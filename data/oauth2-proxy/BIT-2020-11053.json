@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-11053",
+  "details": "In OAuth2 Proxy before 5.1.1, there is an open redirect vulnerability. Users can provide a redirect address for the proxy to send the authenticated user to at the end of the authentication flow. This is expected to be the original URL that the user was trying to access. This redirect URL is checked within the proxy and validated before redirecting the user to prevent malicious actors providing redirects to potentially harmful sites. However, by crafting a redirect URL with HTML encoded whitespace characters the validation could be bypassed and allow a redirect to any URL provided. This has been patched in 5.1.1.",
+  "aliases": [
+    "CVE-2020-11053"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "oauth2-proxy",
+          "purl": "pkg:bitnami/oauth2-proxy"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oauth2_proxy_project:oauth2_proxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/security/advisories/GHSA-j7px-6hwj-hpjg"
+    }
+  ],
+  "published": "2023-06-12T14:19:12.167Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

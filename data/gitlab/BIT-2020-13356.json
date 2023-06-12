@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-13356",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 8.8.9. A specially crafted request could bypass Multipart protection and read files in certain specific paths on the server. Affected versions are: >=8.8.9, <13.3.9,>=13.4, <13.4.5,>=13.5, <13.5.2.",
+  "aliases": [
+    "CVE-2020-13356"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.8.9"
+            },
+            {
+              "fixed": "13.3.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.4.0"
+            },
+            {
+              "fixed": "13.4.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.5.0"
+            },
+            {
+              "fixed": "13.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13356.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/230878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/927953"
+    }
+  ],
+  "published": "2023-06-12T14:33:30.526Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

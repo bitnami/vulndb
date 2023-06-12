@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-40828",
+  "details": "B.C. Institute of Technology CodeIgniter <=3.1.13 is vulnerable to SQL Injection via system\\database\\DB_query_builder.php or_where_not_in() function.",
+  "aliases": [
+    "CVE-2022-40828"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "codeigniter",
+          "purl": "pkg:bitnami/codeigniter"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0"
+            },
+            {
+              "fixed": "3.1.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:codeigniter:codeigniter:3.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:codeigniter:codeigniter:3.0:rc2:*:*:*:*:*:*",
+      "cpe:2.3:a:codeigniter:codeigniter:3.0:rc3:*:*:*:*:*:*",
+      "cpe:2.3:a:codeigniter:codeigniter:3.0:rc:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/726232111/CodeIgniter3.1.13-SQL-Inject/blob/main/README.md"
+    }
+  ],
+  "published": "2023-06-12T14:12:40.167Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

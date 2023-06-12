@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-2162",
+  "details": "Jenkins 2.227 and earlier, LTS 2.204.5 and earlier does not set Content-Security-Policy headers for files uploaded as file parameters to a build, resulting in a stored XSS vulnerability.",
+  "aliases": [
+    "CVE-2020-2162"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "jenkins",
+          "purl": "pkg:bitnami/jenkins"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.204.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.227"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2020/03/25/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jenkins.io/security/advisory/2020-03-25/#SECURITY-1793"
+    }
+  ],
+  "published": "2023-06-12T14:23:34.870Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

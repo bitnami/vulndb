@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-22815",
+  "details": "path_getbbox in path.c in Pillow before 9.0.0 improperly initializes ImagePath.Path.",
+  "aliases": [
+    "CVE-2022-22815"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "pillow",
+          "purl": "pkg:bitnami/pillow"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/blob/c5d9223a8b5e9295d15b5a9b1ef1dae44c8499f3/src/path.c#L331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00018.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#fixed-imagepath-path-array-handling"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202211-10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5053"
+    }
+  ],
+  "published": "2023-06-12T14:21:52.370Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

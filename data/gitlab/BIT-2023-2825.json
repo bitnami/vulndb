@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-2825",
+  "details": "An issue has been discovered in GitLab CE/EE affecting only version 16.0.0. An unauthenticated malicious user can use a path traversal vulnerability to read arbitrary files on the server when an attachment exists in a public project nested within at least five groups.",
+  "aliases": [
+    "CVE-2023-2825"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "versions": [
+        "16.0.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-2825.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/412371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1994725"
+    }
+  ],
+  "published": "2023-06-12T14:12:42.867Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

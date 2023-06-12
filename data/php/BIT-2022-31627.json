@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-31627",
+  "details": "In PHP versions 8.1.x below 8.1.8, when fileinfo functions, such as finfo_buffer, due to incorrect patch applied to the third party code from libmagic, incorrect function may be used to free allocated memory, which may lead to heap corruption.",
+  "aliases": [
+    "CVE-2022-31627"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "php",
+          "purl": "pkg:bitnami/php"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.1.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=81723"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202209-20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220826-0008/"
+    }
+  ],
+  "published": "2023-06-12T14:21:55.669Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

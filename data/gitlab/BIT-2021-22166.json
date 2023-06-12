@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-22166",
+  "details": "An attacker could cause a Prometheus denial of service in GitLab 13.7+ by sending an HTTP request with a malformed method",
+  "aliases": [
+    "CVE-2021-22166"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.7.0"
+            },
+            {
+              "fixed": "13.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22166.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/labkit/-/issues/29"
+    }
+  ],
+  "published": "2023-06-12T14:33:09.594Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

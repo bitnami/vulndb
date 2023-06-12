@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-29139",
+  "details": "An issue was discovered in the CheckUser extension for MediaWiki through 1.39.3. When a user with checkuserlog permissions makes many CheckUserLog API requests in some configurations, denial of service can occur (RequestTimeoutException or upstream request timeout).",
+  "aliases": [
+    "CVE-2023-29139"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.39.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T326293"
+    }
+  ],
+  "published": "2023-06-12T14:16:27.673Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

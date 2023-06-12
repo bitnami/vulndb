@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-36062",
+  "details": "Grafana is an open-source platform for monitoring and observability. In versions prior to 8.5.13, 9.0.9, and 9.1.6, Grafana is subject to Improper Preservation of Permissions resulting in privilege escalation on some folders where Admin is the only used permission. The vulnerability impacts Grafana instances where RBAC was disabled and enabled afterwards, as the migrations which are translating legacy folder permissions to RBAC permissions do not account for the scenario where the only user permission in the folder is Admin, as a result RBAC adds permissions for Editors and Viewers which allow them to edit and view folders accordingly. This issue has been patched in versions 8.5.13, 9.0.9, and 9.1.6. A workaround when the impacted folder/dashboard is known is to remove the additional permissions manually.",
+  "aliases": [
+    "CVE-2022-36062"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "grafana",
+          "purl": "pkg:bitnami/grafana"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.5.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-p978-56hq-r492"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20221215-0001/"
+    }
+  ],
+  "published": "2023-06-12T14:14:55.466Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

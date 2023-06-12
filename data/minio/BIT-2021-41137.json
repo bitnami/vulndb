@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41137",
+  "details": "Minio is a Kubernetes native application for cloud storage. All users on release `RELEASE.2021-10-10T16-53-30Z` are affected by a vulnerability that involves bypassing policy restrictions on regular users. Normally, checkKeyValid() should return owner true for rootCreds. In the affected version, policy restriction did not work properly for users who did not have service (svc) or security token service (STS) accounts. This issue is fixed in `RELEASE.2021-10-13T00-23-17Z`. A downgrade back to release `RELEASE.2021-10-08T23-58-24Z` is available as a workaround.",
+  "aliases": [
+    "CVE-2021-41137"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "minio",
+          "purl": "pkg:bitnami/minio"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "2021"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:minio:minio:2021-10-10t16-53-30z:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/commit/415bbc74aacd53a120e54a663e941b1809982dbd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/pull/13388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/pull/13422"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/security/advisories/GHSA-v64v-g97p-577c"
+    }
+  ],
+  "published": "2023-06-12T14:18:03.169Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

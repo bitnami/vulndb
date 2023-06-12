@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-3426",
+  "details": "There's a flaw in Python 3's pydoc. A local or adjacent attacker who discovers or is able to convince another local or adjacent user to start a pydoc server could access the server and use it to disclose sensitive information belonging to the other user that they would not normally be able to access. The highest risk of this flaw is to data confidentiality. This flaw affects Python versions before 3.8.9, Python versions before 3.9.3 and Python versions before 3.10.0a7.",
+  "aliases": [
+    "CVE-2021-3426"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "python",
+          "purl": "pkg:bitnami/python"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha1:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha2:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha3:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha4:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha5:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha6:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1935913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/04/msg00005.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/25HVHLBGO2KNPXJ3G426QEYSSCECJDU5/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BF2K7HEWADHN6P52R3QLIOX27U3DJ4HI/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DQYPUKLLBOZMKFPO7RD7CENTXHUUEUV7/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LM5V4VPLBHBEASSAROYPSHXGXGGPHNOE/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N6VXJZSZ6N64AILJX4CTMACYGQGHHD5C/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QNGAFMPIYIVJ47FCF2NK2PIX22HUG35B/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VPX7Y5GQDNB4FJTREWONGC4ZSVH7TGHF/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202104-04"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210629-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    }
+  ],
+  "published": "2023-06-12T14:24:09.071Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

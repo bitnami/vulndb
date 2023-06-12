@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-23135",
+  "details": "Exposure of System Data to an Unauthorized Control Sphere vulnerability in web UI of Argo CD allows attacker to cause leaked secret data into web UI error messages and logs. This issue affects Argo CD 1.8 versions prior to 1.8.7; 1.7 versions prior to 1.7.14.",
+  "aliases": [
+    "CVE-2021-23135"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "argo-cd",
+          "purl": "pkg:bitnami/argo-cd"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "fixed": "1.7.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "fixed": "1.8.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-fp89-h8pj-8894"
+    }
+  ],
+  "published": "2023-06-12T14:11:14.170Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

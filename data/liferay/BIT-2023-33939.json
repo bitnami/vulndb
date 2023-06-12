@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-33939",
+  "details": "Cross-site scripting (XSS) vulnerability in the Modified Facet widget in Liferay Portal 7.1.0 through 7.4.3.12, and Liferay DXP 7.1 before fix pack 27, 7.2 before fix pack 18, 7.3 before update 4, and 7.4 before update 9 allows remote attackers to inject arbitrary web script or HTML via a crafted payload injected into a facet label.",
+  "aliases": [
+    "CVE-2023-33939"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "liferay",
+          "purl": "pkg:bitnami/liferay"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_10:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_11:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_12:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_13:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_14:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_15:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_16:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_17:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_18:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_19:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_20:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_21:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_22:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_23:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_24:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_25:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_26:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_3:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_4:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_5:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_6:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_7:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_8:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_9:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_10:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_11:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_12:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_13:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_14:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_15:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_16:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_3:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_4:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_5:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_6:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_7:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_8:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_9:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33939"
+    }
+  ],
+  "published": "2023-06-12T14:17:24.272Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

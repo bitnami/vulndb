@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-30606",
+  "details": "Discourse is an open source platform for community discussion. In affected versions a user logged as an administrator can call arbitrary methods on the `SiteSetting` class, notably `#clear_cache!` and `#notify_changed!`, which when done on a multisite instance, can affect the entire cluster resulting in a denial of service. Users not running in multisite environments are not affected. This issue is patched in the latest stable, beta and tests-passed versions of Discourse. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-30606"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "discourse",
+          "purl": "pkg:bitnami/discourse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.0.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta1:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta2:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-jj93-w3mv-3jvv"
+    }
+  ],
+  "published": "2023-06-12T14:11:29.068Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

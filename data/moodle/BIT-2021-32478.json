@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-32478",
+  "details": "The redirect URI in the LTI authorization endpoint required extra sanitizing to prevent reflected XSS and open redirect risks. Moodle versions 3.10 to 3.10.3, 3.9 to 3.9.6, 3.8 to 3.8.8 and earlier unsupported versions are affected.",
+  "aliases": [
+    "CVE-2021-32478"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "moodle",
+          "purl": "pkg:bitnami/moodle"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.8.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=422314"
+    }
+  ],
+  "published": "2023-06-12T14:27:28.069Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

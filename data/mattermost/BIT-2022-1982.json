@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-1982",
+  "details": "Uncontrolled resource consumption in Mattermost version 6.6.0 and earlier allows an authenticated attacker to crash the server via a crafted SVG attachment on a post.",
+  "aliases": [
+    "CVE-2022-1982"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mattermost",
+          "purl": "pkg:bitnami/mattermost"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "6.3.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:6.5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:6.6.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-06-12T14:18:15.671Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

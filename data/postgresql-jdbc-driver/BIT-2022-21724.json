@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-21724",
+  "details": "pgjdbc is the offical PostgreSQL JDBC Driver. A security hole was found in the jdbc driver for postgresql database while doing security research. The system using the postgresql library will be attacked when attacker control the jdbc url or properties. pgjdbc instantiates plugin instances based on class names provided via `authenticationPluginClassName`, `sslhostnameverifier`, `socketFactory`, `sslfactory`, `sslpasswordcallback` connection properties. However, the driver did not verify if the class implements the expected interface before instantiating the class. This can lead to code execution loaded via arbitrary classes. Users using plugins are advised to upgrade. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2022-21724"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "postgresql-jdbc-driver",
+          "purl": "pkg:bitnami/postgresql-jdbc-driver"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "42.2.25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "42.3.0"
+            },
+            {
+              "fixed": "42.3.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "42.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:42.3.2:rc1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pgjdbc/pgjdbc/commit/f4d0ed69c0b3aae8531d83d6af4c57f22312c813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-v7wg-cpwc-24m4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00027.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BVEO7BEFXPBVHSPYL3YKQWZI6DYXQLFS/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220311-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5196"
+    }
+  ],
+  "published": "2023-06-12T14:22:04.968Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

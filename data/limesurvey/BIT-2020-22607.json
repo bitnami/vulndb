@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-22607",
+  "details": "Cross Site Scripting vulnerabilty in LimeSurvey 4.1.11+200316 via the (1) name and (2) description parameters in application/controllers/admin/PermissiontemplatesController.php.",
+  "aliases": [
+    "CVE-2020-22607"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "limesurvey",
+          "purl": "pkg:bitnami/limesurvey"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "4.1.11"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:4.1.11\\+200316:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/commit/2aada33c76efbbc35d33c149ac02b1dc16a81f62"
+    }
+  ],
+  "published": "2023-06-12T14:17:10.368Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

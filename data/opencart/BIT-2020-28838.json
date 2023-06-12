@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-28838",
+  "details": "Cross Site Request Forgery (CSRF) in CART option in OpenCart Ltd. Opencart CMS 3.0.3.6 allows attacker to add cart items via Add to cart.",
+  "aliases": [
+    "CVE-2020-28838"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "opencart",
+          "purl": "pkg:bitnami/opencart"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "3.0.3.6"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:3.0.3.6:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49228"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.opencart.com/"
+    }
+  ],
+  "published": "2023-06-12T14:19:11.173Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

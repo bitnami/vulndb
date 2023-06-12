@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-1387",
+  "details": "Grafana is an open-source platform for monitoring and observability. Starting with the 9.1 branch, Grafana introduced the ability to search for a JWT in the URL query parameter auth_token and use it as the authentication token. By enabling the \"url_login\" configuration option (disabled by default), a JWT might be sent to data sources. If an attacker has access to the data source, the leaked token could be used to authenticate to Grafana.",
+  "aliases": [
+    "CVE-2023-1387"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "grafana",
+          "purl": "pkg:bitnami/grafana"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.2.17"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "9.3.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/bugbounty/security/advisories/GHSA-5585-m9r5-p86j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2023-1387/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230609-0003/"
+    }
+  ],
+  "published": "2023-06-12T14:13:32.771Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

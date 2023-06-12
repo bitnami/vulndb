@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-23166",
+  "details": "A sandboxing issue in Odoo Community 15.0 and earlier and Odoo Enterprise 15.0 and earlier allows authenticated administrators to read and write local files on the server.",
+  "aliases": [
+    "CVE-2021-23166"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "odoo",
+          "purl": "pkg:bitnami/odoo"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:odoo:odoo:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:odoo:odoo:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/odoo/odoo/issues/107687"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5399"
+    }
+  ],
+  "published": "2023-06-12T14:20:57.767Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

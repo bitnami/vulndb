@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-42048",
+  "details": "An issue was discovered in the Growth extension in MediaWiki through 1.36.2. Any admin can add arbitrary JavaScript code to the Newcomer home page footer, which can be executed by viewers with zero edits.",
+  "aliases": [
+    "CVE-2021-42048"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/Iaa90a8976834d70caad592e9d1b18510318db537"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T289064"
+    }
+  ],
+  "published": "2023-06-12T14:23:55.771Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

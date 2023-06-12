@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-39919",
+  "details": "In all versions of GitLab CE/EE starting version 14.0 before 14.3.6, all versions starting from 14.4 before 14.4.4, all versions starting from 14.5 before 14.5.2, the reset password token and new user email token are accidentally logged which may lead to information disclosure.",
+  "aliases": [
+    "CVE-2021-39919"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.4.0"
+            },
+            {
+              "fixed": "14.4.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.5.0"
+            },
+            {
+              "fixed": "14.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39919.json"
+    }
+  ],
+  "published": "2023-06-12T14:31:45.289Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

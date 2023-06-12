@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-28882",
+  "details": "Trustwave ModSecurity 3.0.5 through 3.0.8 before 3.0.9 allows a denial of service (worker crash and unresponsiveness) because some inputs cause a segfault in the Transaction class for some configurations.",
+  "aliases": [
+    "CVE-2023-28882"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "modsecurity",
+          "purl": "pkg:bitnami/modsecurity"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.5"
+            },
+            {
+              "fixed": "3.0.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.trustwave.com/en-us/resources/security-resources/software-updates/announcing-modsecurity-version-309/"
+    }
+  ],
+  "published": "2023-06-12T14:16:47.267Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}
