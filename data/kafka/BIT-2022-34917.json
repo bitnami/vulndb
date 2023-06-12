@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-34917",
+  "details": "A security vulnerability has been identified in Apache Kafka. It affects all releases since 2.8.0. The vulnerability allows malicious unauthenticated clients to allocate large amounts of memory on brokers. This can lead to brokers hitting OutOfMemoryException and causing denial of service. Example scenarios: - Kafka cluster without authentication: Any clients able to establish a network connection to a broker can trigger the issue. - Kafka cluster with SASL authentication: Any clients able to establish a network connection to a broker, without the need for valid SASL credentials, can trigger the issue. - Kafka cluster with TLS authentication: Only clients able to successfully authenticate via TLS can trigger the issue. We advise the users to upgrade the Kafka installations to one of the 3.2.3, 3.1.2, 3.0.2, 2.8.2 versions.",
+  "aliases": [
+    "CVE-2022-34917"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "kafka",
+          "purl": "pkg:bitnami/kafka"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "fixed": "2.8.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:kafka:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://kafka.apache.org/cve-list"
+    }
+  ],
+  "published": "2023-06-12T14:14:48.667Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

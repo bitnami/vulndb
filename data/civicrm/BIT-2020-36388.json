@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-36388",
+  "details": "In CiviCRM before 5.21.3 and 5.22.x through 5.24.x before 5.24.3, users may be able to upload and execute a crafted PHAR archive.",
+  "aliases": [
+    "CVE-2020-36388"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "civicrm",
+          "purl": "pkg:bitnami/civicrm"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.21.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.22.0"
+            },
+            {
+              "fixed": "5.24.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:civicrm:civicrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.sonarsource.com/civicrm-code-execution-vulnerability-chain-explained/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://civicrm.org/advisory/civi-sa-2020-03"
+    }
+  ],
+  "published": "2023-06-12T14:11:26.475Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

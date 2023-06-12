@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-45346",
+  "details": "** DISPUTED ** A Memory Leak vulnerability exists in SQLite Project SQLite3 3.35.1 and 3.37.0 via maliciously crafted SQL Queries (made via editing the Database File), it is possible to query a record, and leak subsequent bytes of memory that extend beyond the record, which could let a malicious user obtain sensitive information. NOTE: The developer disputes this as a vulnerability stating that If you give SQLite a corrupted database file and submit a query against the database, it might read parts of the database that you did not intend or expect.",
+  "aliases": [
+    "CVE-2021-45346"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "sqlite",
+          "purl": "pkg:bitnami/sqlite"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "versions": [
+        "3.35.1",
+        "3.37.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:3.35.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:sqlite:sqlite:3.37.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/guyinatuxedo/sqlite3_record_leaking"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220303-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/forum/forumpost/056d557c2f8c452ed5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/forum/forumpost/53de8864ba114bf6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sqlite.org/cves.html#status_of_recent_sqlite_cves"
+    }
+  ],
+  "published": "2023-06-12T14:24:50.170Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

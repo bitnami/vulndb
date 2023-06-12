@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-7955",
+  "details": "HashiCorp Consul and Consul Enterprise 1.4.1 through 1.6.2 did not uniformly enforce ACLs across all API endpoints, resulting in potential unintended information disclosure. Fixed in 1.6.3.",
+  "aliases": [
+    "CVE-2020-7955"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "consul",
+          "purl": "pkg:bitnami/consul"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.4.1"
+            },
+            {
+              "fixed": "1.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/consul/issues/7160"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.hashicorp.com/blog/category/consul/"
+    }
+  ],
+  "published": "2023-06-12T14:13:23.573Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

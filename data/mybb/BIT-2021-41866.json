@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41866",
+  "details": "MyBB before 1.8.28 allows stored XSS because the displayed Template Name value in the Admin CP's theme management is not escaped properly.",
+  "aliases": [
+    "CVE-2021-41866"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mybb",
+          "purl": "pkg:bitnami/mybb"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.28"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mybb:mybb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mybb/mybb/security/advisories/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mybb/mybb/security/advisories/GHSA-gxhv-r3m5-6qv7"
+    }
+  ],
+  "published": "2023-06-12T14:18:35.674Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

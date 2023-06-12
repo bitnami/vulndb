@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-29471",
+  "details": "OpenCart 3.0.3.6 is affected by cross-site scripting (XSS) in the Profile Image. An admin can upload a profile image as a malicious code using JavaScript. Whenever anyone will see the profile picture, the code will execute and XSS will trigger.",
+  "aliases": [
+    "CVE-2020-29471"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "opencart",
+          "purl": "pkg:bitnami/opencart"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "3.0.3.6"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:3.0.3.6:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49098"
+    }
+  ],
+  "published": "2023-06-12T14:18:52.768Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

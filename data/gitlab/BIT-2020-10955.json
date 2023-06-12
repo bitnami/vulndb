@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-10955",
+  "details": "GitLab EE/CE 11.1 through 12.9 is vulnerable to parameter tampering on an upload feature that allows an unauthorized user to read content available under specific folders.",
+  "aliases": [
+    "CVE-2020-10955"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "12.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2020/03/26/security-release-12-dot-9-dot-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/categories/releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4691"
+    }
+  ],
+  "published": "2023-06-12T14:34:27.551Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

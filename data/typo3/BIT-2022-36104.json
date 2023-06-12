@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-36104",
+  "details": "TYPO3 is an open source PHP based web content management system released under the GNU GPL. In affected versions requesting invalid or non-existing resources via HTTP triggers the page error handler which again could retrieve content to be shown as an error message from another page. This leads to a scenario in which the application is calling itself recursively - amplifying the impact of the initial attack until the limits of the web server are exceeded. Users are advised to update to TYPO3 version 11.5.16 to resolve this issue. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2022-36104"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "typo3",
+          "purl": "pkg:bitnami/typo3"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.4.0"
+            },
+            {
+              "fixed": "11.5.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/179dd7cd78947081d573fee2050e197faa556f13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/security/advisories/GHSA-fffr-7x4x-f98q"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2022-006"
+    }
+  ],
+  "published": "2023-06-12T14:26:44.771Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

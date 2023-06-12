@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-10596",
+  "details": "OpenCart 3.0.3.2 allows remote authenticated users to conduct XSS attacks via a crafted filename in the users' image upload section.",
+  "aliases": [
+    "CVE-2020-10596"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "opencart",
+          "purl": "pkg:bitnami/opencart"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "3.0.3.2"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:3.0.3.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/157908/OpenCart-3.0.3.2-Cross-Site-Scripting.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/opencart/opencart/issues/7810"
+    }
+  ],
+  "published": "2023-06-12T14:19:29.271Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

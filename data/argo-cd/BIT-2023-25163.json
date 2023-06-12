@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-25163",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. All versions of Argo CD starting with v2.6.0-rc1 have an output sanitization bug which leaks repository access credentials in error messages. These error messages are visible to the user, and they are logged. The error message is visible when a user attempts to create or update an Application via the Argo CD API (and therefor the UI or CLI). The user must have `applications, create` or `applications, update` RBAC access to reach the code which may produce the error. The user is not guaranteed to be able to trigger the error message. They may attempt to spam the API with requests to trigger a rate limit error from the upstream repository. If the user has `repositories, update` access, they may edit an existing repository to introduce a URL typo or otherwise force an error message. But if they have that level of access, they are probably intended to have access to the credentials anyway. A patch for this vulnerability has been released in version 2.6.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-25163"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "argo-cd",
+          "purl": "pkg:bitnami/argo-cd"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "versions": [
+        "2.6.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:-:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc1:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc2:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc3:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc4:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc5:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc6:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:2.6.0:rc7:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/rbac/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/issues/12309"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/pull/12320"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-mv6w-j4xc-qpfw"
+    }
+  ],
+  "published": "2023-06-12T14:10:45.771Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

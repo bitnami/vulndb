@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-1733",
+  "details": "A denial of service condition exists in the Prometheus server bundled with GitLab affecting all versions from 11.10 to 15.8.5, 15.9 to 15.9.4 and 15.10 to 15.10.1.",
+  "aliases": [
+    "CVE-2023-1733"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.10.0"
+            },
+            {
+              "fixed": "15.8.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "15.9.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-1733.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1723124"
+    }
+  ],
+  "published": "2023-06-12T14:13:57.266Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

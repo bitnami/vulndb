@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-42840",
+  "details": "SuiteCRM before 7.11.19 allows remote code execution via the system settings Log File Name setting. In certain circumstances involving admin account takeover, logger_file_name can refer to an attacker-controlled PHP file under the web root, because only the all-lowercase PHP file extensions were blocked. NOTE: this issue exists because of an incomplete fix for CVE-2020-28328.",
+  "aliases": [
+    "CVE-2021-42840"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "suitecrm",
+          "purl": "pkg:bitnami/suitecrm"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.11.19"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/165001/SuiteCRM-7.11.18-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.11.x/#_7_11_19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rapid7/metasploit-framework/commits/master/modules/exploits/linux/http/suitecrm_log_file_rce.rb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://suitecrm.com/time-to-upgrade-suitecrm-7-11-19-7-10-30-lts-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://theyhack.me/SuiteCRM-RCE-2/"
+    }
+  ],
+  "published": "2023-06-12T14:26:22.168Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

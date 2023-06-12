@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-21018",
+  "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) are vulnerable to OS command injection via the scheduled operation module. Successful exploitation could lead to arbitrary code execution by an authenticated attacker. Access to the admin console is required for successful exploitation.",
+  "aliases": [
+    "CVE-2021-21018"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "magento",
+          "purl": "pkg:bitnami/magento"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:p1:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb21-08.html"
+    }
+  ],
+  "published": "2023-06-12T14:20:06.374Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

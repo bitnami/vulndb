@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-12626",
+  "details": "An issue was discovered in Roundcube Webmail before 1.4.4. A CSRF attack can cause an authenticated user to be logged out because POST was not considered.",
+  "aliases": [
+    "CVE-2020-12626"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "roundcube",
+          "purl": "pkg:bitnami/roundcube"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/roundcube/roundcubemail/commit/9bbda422ff0b782b81de59c86994f1a5fd93f8e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/roundcube/roundcubemail/compare/1.4.3...1.4.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/roundcube/roundcubemail/pull/7302"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.4.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202007-41"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4674"
+    }
+  ],
+  "published": "2023-06-12T14:25:16.573Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

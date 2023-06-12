@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-42968",
+  "details": "Gitea before 1.17.3 does not sanitize and escape refs in the git backend. Arguments to git commands are mishandled.",
+  "aliases": [
+    "CVE-2022-42968"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitea",
+          "purl": "pkg:bitnami/gitea"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.17.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/21463"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v1.17.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202210-14"
+    }
+  ],
+  "published": "2023-06-12T14:12:44.273Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

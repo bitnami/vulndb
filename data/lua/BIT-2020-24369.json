@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-24369",
+  "details": "ldebug.c in Lua 5.4.0 attempts to access debug information via the line hook of a stripped function, leading to a NULL pointer dereference.",
+  "aliases": [
+    "CVE-2020-24369"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "lua",
+          "purl": "pkg:bitnami/lua"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "versions": [
+        "5.4.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lua:lua:5.4.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/lua/lua/commit/ae5b5ba529753c7a653901ffc29b5ea24c3fdf3a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.lua.org/bugs.html#5.4.0-12"
+    }
+  ],
+  "published": "2023-06-12T14:16:55.668Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

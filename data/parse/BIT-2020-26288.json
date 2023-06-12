@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-26288",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. It is an npm package \"parse-server\". In Parse Server before version 4.5.0, user passwords involved in LDAP authentication are stored in cleartext. This is fixed in version 4.5.0 by stripping password after authentication to prevent cleartext password storage.",
+  "aliases": [
+    "CVE-2020-26288"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "parse",
+          "purl": "pkg:bitnami/parse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/da905a357d062ab4fea727a21eac231acc2ed92a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/4.5.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-4w46-w44m-3jq3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.npmjs.com/package/parse-server"
+    }
+  ],
+  "published": "2023-06-12T14:22:31.168Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

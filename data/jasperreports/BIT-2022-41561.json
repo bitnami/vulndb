@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-41561",
+  "details": "The JNDI Data Sources component of TIBCO Software Inc.'s TIBCO JasperReports Server, TIBCO JasperReports Server, TIBCO JasperReports Server - Community Edition, TIBCO JasperReports Server - Developer Edition, TIBCO JasperReports Server for AWS Marketplace, TIBCO JasperReports Server for AWS Marketplace, TIBCO JasperReports Server for Microsoft Azure, and TIBCO JasperReports Server for Microsoft Azure contains an easily exploitable vulnerability that allows a privileged/administrative attacker with network access to execute Remote Code Execution to obtain a reverse shell on the affected system. Affected releases are TIBCO Software Inc.'s TIBCO JasperReports Server: versions 8.0.2 and below, TIBCO JasperReports Server: version 8.1.0, TIBCO JasperReports Server - Community Edition: versions 8.1.0 and below, TIBCO JasperReports Server - Developer Edition: versions 8.1.0 and below, TIBCO JasperReports Server for AWS Marketplace: versions 8.0.2 and below, TIBCO JasperReports Server for AWS Marketplace: version 8.1.0, TIBCO JasperReports Server for Microsoft Azure: versions 8.0.2 and below, and TIBCO JasperReports Server for Microsoft Azure: version 8.1.0.",
+  "aliases": [
+    "CVE-2022-41561"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "jasperreports",
+          "purl": "pkg:bitnami/jasperreports"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.0.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:developer:*:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:-:-:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:8.1.0:*:*:*:-:-:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:*:aws_marketplace:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:8.1.0:*:*:*:*:aws_marketplace:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:*:microsoft_azure:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:8.1.0:*:*:*:*:microsoft_azure:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.tibco.com/services/support/advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tibco.com/support/advisories/2022/12/tibco-security-advisory-december-13-2022-tibco-jasperreports-server-cve-2022-41561"
+    }
+  ],
+  "published": "2023-06-12T14:15:16.174Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

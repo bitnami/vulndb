@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-44967",
+  "details": "A Remote Code Execution (RCE) vulnerabilty exists in LimeSurvey 5.2.4 via the upload and install plugins function, which could let a remote malicious user upload an arbitrary PHP code file.",
+  "aliases": [
+    "CVE-2021-44967"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "limesurvey",
+          "purl": "pkg:bitnami/limesurvey"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "5.2.4"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:5.2.4:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Y1LD1R1M-1337/Limesurvey-RCE"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50573"
+    }
+  ],
+  "published": "2023-06-12T14:16:07.371Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

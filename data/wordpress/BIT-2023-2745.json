@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-2745",
+  "details": "WordPress Core is vulnerable to Directory Traversal in versions up to, and including, 6.2, via the ‘wp_lang’ parameter. This allows unauthenticated attackers to access and load arbitrary translation files. In cases where an attacker is able to upload a crafted translation file onto the site, such as via an upload form, this could be also used to perform a Cross-Site Scripting attack.",
+  "aliases": [
+    "CVE-2023-2745"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "wordpress",
+          "purl": "pkg:bitnami/wordpress"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.38"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2"
+            },
+            {
+              "fixed": "4.2.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.3"
+            },
+            {
+              "fixed": "4.3.31"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4"
+            },
+            {
+              "fixed": "4.4.30"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.5"
+            },
+            {
+              "fixed": "4.5.29"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.6"
+            },
+            {
+              "fixed": "4.6.26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.7"
+            },
+            {
+              "fixed": "4.7.26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.8"
+            },
+            {
+              "fixed": "4.8.22"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.9"
+            },
+            {
+              "fixed": "4.9.23"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0"
+            },
+            {
+              "fixed": "5.0.19"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.1"
+            },
+            {
+              "fixed": "5.1.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.2"
+            },
+            {
+              "fixed": "5.2.18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.3"
+            },
+            {
+              "fixed": "5.3.15"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4"
+            },
+            {
+              "fixed": "5.4.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.5"
+            },
+            {
+              "fixed": "5.5.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.6"
+            },
+            {
+              "fixed": "5.6.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.7"
+            },
+            {
+              "fixed": "5.7.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.8"
+            },
+            {
+              "fixed": "5.8.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.9"
+            },
+            {
+              "fixed": "5.9.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0"
+            },
+            {
+              "fixed": "6.0.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.1"
+            },
+            {
+              "fixed": "6.1.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:wordpress:wordpress:6.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/172426/WordPress-Core-6.2-XSS-CSRF-Directory-Traversal.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=55765%40%2F&new=55765%40%2F&sfp_email=&sfph_mail="
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2023/05/wordpress-6-2-1-maintenance-security-release/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/edcf46b6-368e-49c0-b2c3-99bf6e2d358f?source=cve"
+    }
+  ],
+  "published": "2023-06-12T14:27:10.970Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

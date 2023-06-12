@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-21514",
+  "details": "An issue was discovered in Fluent Fluentd v.1.8.0 and Fluent-ui v.1.2.2 allows attackers to gain escilated privlidges and execute arbitrary code due to a default password.",
+  "aliases": [
+    "CVE-2020-21514"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "fluentd",
+          "purl": "pkg:bitnami/fluentd"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "1.8.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:fluentd:fluentd:1.8.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/issues/2722"
+    }
+  ],
+  "published": "2023-06-12T14:12:31.374Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

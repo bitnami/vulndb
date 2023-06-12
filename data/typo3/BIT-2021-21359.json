@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-21359",
+  "details": "TYPO3 is an open source PHP based web content management system. In TYPO3 before versions 9.5.25, 10.4.14, 11.1.1 requesting invalid or non-existing resources via HTTP triggers the page error handler which again could retrieve content to be shown as error message from another page. This leads to a scenario in which the application is calling itself recursively - amplifying the impact of the initial attack until the limits of the web server are exceeded. This is fixed in versions 9.5.25, 10.4.14, 11.1.1.",
+  "aliases": [
+    "CVE-2021-21359"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "typo3",
+          "purl": "pkg:bitnami/typo3"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-4p9g-qgx9-397p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/typo3/cms-core"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2021-005"
+    }
+  ],
+  "published": "2023-06-12T14:28:32.577Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

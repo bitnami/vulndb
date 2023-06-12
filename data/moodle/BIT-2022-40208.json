@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-40208",
+  "details": "In Moodle, insufficient limitations in some quiz web services made it possible for students to bypass sequential navigation during a quiz attempt.",
+  "aliases": [
+    "CVE-2022-40208"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "moodle",
+          "purl": "pkg:bitnami/moodle"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:3.11.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:3.9.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:4.0.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=438761"
+    }
+  ],
+  "published": "2023-06-12T14:20:49.573Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

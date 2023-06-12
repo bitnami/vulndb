@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-11631",
+  "details": "An issue was discovered in EJBCA before 6.15.2.6 and 7.x before 7.3.1.2. An error state can be generated in the CA UI by a malicious user. This, in turn, allows exploitation of other bugs. This follow-on exploitation can lead to privilege escalation and remote code execution. (This is exploitable only when at least one accessible port lacks a requirement for client certificate authentication. These ports are 8442 or 8080 in a standard installation.)",
+  "aliases": [
+    "CVE-2020-11631"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "ejbca",
+          "purl": "pkg:bitnami/ejbca"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.15.2.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.3.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:primekey:ejbca:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://support.primekey.com/news/primekey-announcements"
+    }
+  ],
+  "published": "2023-06-12T14:13:01.768Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

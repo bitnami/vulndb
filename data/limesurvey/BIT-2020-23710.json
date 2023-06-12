@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-23710",
+  "details": "Cross Site Scripting (XSS) vulneraiblity in LimeSurvey 4.2.5 on textbox via the Notifications & data feature.",
+  "aliases": [
+    "CVE-2020-23710"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "limesurvey",
+          "purl": "pkg:bitnami/limesurvey"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "4.2.5"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:4.2.5:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/pull/1441#partial-pull-merging"
+    }
+  ],
+  "published": "2023-06-12T14:17:00.567Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

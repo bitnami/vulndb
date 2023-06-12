@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-36309",
+  "details": "ngx_http_lua_module (aka lua-nginx-module) before 0.10.16 in OpenResty allows unsafe characters in an argument when using the API to mutate a URI, or a request or response header.",
+  "aliases": [
+    "CVE-2020-36309"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "openresty",
+          "purl": "pkg:bitnami/openresty"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.10.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openresty:lua-nginx-module:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openresty/lua-nginx-module/compare/v0.10.15...v0.10.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openresty/lua-nginx-module/pull/1654"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=26712562"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210507-0005/"
+    }
+  ],
+  "published": "2023-06-12T14:19:03.271Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-22249",
+  "details": "Remote Code Execution vulnerability in phplist 3.5.1. The application does not check any file extensions stored in the plugin zip file, Uploading a malicious plugin which contains the php files with extensions like PHP,phtml,php7 will be copied to the plugins directory which would lead to the remote code execution",
+  "aliases": [
+    "CVE-2020-22249"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "phplist",
+          "purl": "pkg:bitnami/phplist"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "3.5.1"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:3.5.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://drive.google.com/open?id=1znDU4fDKA_seg16mJLLtgaaFfvmf-mS6"
+    }
+  ],
+  "published": "2023-06-12T14:23:17.473Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

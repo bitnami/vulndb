@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-23190",
+  "details": "A stored cross site scripting (XSS) vulnerability in the \"Import emails\" module in phplist 3.5.4 allows authenticated attackers to execute arbitrary web scripts or HTML via a crafted payload.",
+  "aliases": [
+    "CVE-2020-23190"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "phplist",
+          "purl": "pkg:bitnami/phplist"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "3.5.4"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:3.5.4:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpList/phplist3/issues/667"
+    }
+  ],
+  "published": "2023-06-12T14:22:59.275Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

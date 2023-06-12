@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-45897",
+  "details": "SuiteCRM before 7.12.3 and 8.x before 8.0.2 allows remote code execution.",
+  "aliases": [
+    "CVE-2021-45897"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "suitecrm",
+          "purl": "pkg:bitnami/suitecrm"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.12.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:rc:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/8.x/admin/releases/8.0/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.12.x/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/manuelz120/CVE-2021-45897"
+    }
+  ],
+  "published": "2023-06-12T14:26:04.467Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

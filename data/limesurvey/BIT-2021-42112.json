@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-42112",
+  "details": "The \"File upload question\" functionality in LimeSurvey 3.x-LTS through 3.27.18 allows XSS in assets/scripts/modaldialog.js and assets/scripts/uploader.js.",
+  "aliases": [
+    "CVE-2021-42112"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "limesurvey",
+          "purl": "pkg:bitnami/limesurvey"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.27.18"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.limesurvey.org/view.php?id=17562"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/commit/d56619a50cfd191bbffd0adb660638a5e438070d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.on-x.com/sites/default/files/on-x_-_security_advisory_-_limesurvey_-_cve-2021-42112.pdf"
+    }
+  ],
+  "published": "2023-06-12T14:16:16.573Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

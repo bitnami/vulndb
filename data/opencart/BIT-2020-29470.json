@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-29470",
+  "details": "OpenCart 3.0.3.6 is affected by cross-site scripting (XSS) in the Subject field of mail. This vulnerability can allow an attacker to inject the XSS payload in the Subject field of the mail and each time any user will open that mail of the website, the XSS triggers and the attacker can able to steal the cookie according to the crafted payload.",
+  "aliases": [
+    "CVE-2020-29470"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "opencart",
+          "purl": "pkg:bitnami/opencart"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "3.0.3.6"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:3.0.3.6:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49099"
+    }
+  ],
+  "published": "2023-06-12T14:19:01.374Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

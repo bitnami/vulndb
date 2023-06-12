@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-44964",
+  "details": "Use after free in garbage collector and finalizer of lgc.c in Lua interpreter 5.4.0~5.4.3 allows attackers to perform Sandbox Escape via a crafted script file.",
+  "aliases": [
+    "CVE-2021-44964"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "lua",
+          "purl": "pkg:bitnami/lua"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "fixed": "5.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2021-11/msg00186.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2021-12/msg00007.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2021-12/msg00015.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2021-12/msg00030.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Lua-Project/lua-5.4.4-sandbox-escape-with-new-vulnerability"
+    }
+  ],
+  "published": "2023-06-12T14:16:02.168Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

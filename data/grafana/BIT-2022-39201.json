@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-39201",
+  "details": "Grafana is an open source observability and data visualization platform. Starting with version 5.0.0-beta1 and prior to versions 8.5.14 and 9.1.8, Grafana could leak the authentication cookie of users to plugins. The vulnerability impacts data source and plugin proxy endpoints under certain conditions. The destination plugin could receive a user's Grafana authentication cookie. Versions 9.1.8 and 8.5.14 contain a patch for this issue. There are no known workarounds.",
+  "aliases": [
+    "CVE-2022-39201"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "grafana",
+          "purl": "pkg:bitnami/grafana"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.1"
+            },
+            {
+              "fixed": "8.5.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:5.0.0:beta5:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/commit/b571acc1dc130a33f24742c1f93b93216da6cf57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/commit/c658816f5229d17f877579250c07799d3bbaebc9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/releases/tag/v9.1.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-x744-mm8v-vpgr"
+    }
+  ],
+  "published": "2023-06-12T14:14:47.074Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

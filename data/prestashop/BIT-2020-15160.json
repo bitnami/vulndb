@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-15160",
+  "details": "PrestaShop from version 1.7.5.0 and before version 1.7.6.8 is vulnerable to a blind SQL Injection attack in the Catalog Product edition page with location parameter. The problem is fixed in 1.7.6.8",
+  "aliases": [
+    "CVE-2020-15160"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "prestashop",
+          "purl": "pkg:bitnami/prestashop"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.5.0"
+            },
+            {
+              "fixed": "1.7.6.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/162140/PrestaShop-1.7.6.7-SQL-Injection.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/3fa0dfa5a8f4b149c7c90b948a12b4f5999a5ef8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/releases/tag/1.7.6.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-fghq-8h87-826g"
+    }
+  ],
+  "published": "2023-06-12T14:27:06.777Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

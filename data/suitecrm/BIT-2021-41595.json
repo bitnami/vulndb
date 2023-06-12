@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-41595",
+  "details": "SuiteCRM before 7.10.33 and 7.11.22 allows information disclosure via Directory Traversal. An attacker can partially include arbitrary files via the file_name parameter of the Step3 import functionality.",
+  "aliases": [
+    "CVE-2021-41595"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "suitecrm",
+          "purl": "pkg:bitnami/suitecrm"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.10.33"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.11.0"
+            },
+            {
+              "fixed": "7.11.22"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.10.x/#_7_10_33"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.11.x/#_7_11_22"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ach-ing/cves/blob/main/CVE-2021-41595.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM"
+    }
+  ],
+  "published": "2023-06-12T14:26:59.972Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

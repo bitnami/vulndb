@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-1955",
+  "details": "CouchDB version 3.0.0 shipped with a new configuration setting that governs access control to the entire database server called `require_valid_user_except_for_up`. It was meant as an extension to the long standing setting `require_valid_user`, which in turn requires that any and all requests to CouchDB will have to be made with valid credentials, effectively forbidding any anonymous requests. The new `require_valid_user_except_for_up` is an off-by-default setting that was meant to allow requiring valid credentials for all endpoints except for the `/_up` endpoint. However, the implementation of this made an error that lead to not enforcing credentials on any endpoint, when enabled. CouchDB versions 3.0.1[1] and 3.1.0[2] fix this issue.",
+  "aliases": [
+    "CVE-2020-1955"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "couchdb",
+          "purl": "pkg:bitnami/couchdb"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "3.0.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:couchdb:3.0.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.couchdb.org/en/master/cve/2020-1955.html"
+    }
+  ],
+  "published": "2023-06-12T14:11:48.071Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-35202",
+  "details": "Ignite Realtime Openfire 4.6.0 has plugins/dbaccess/db-access.jsp sql Stored XSS.",
+  "aliases": [
+    "CVE-2020-35202"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "openfire",
+          "purl": "pkg:bitnami/openfire"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "4.6.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:igniterealtime:openfire:4.6.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49235"
+    }
+  ],
+  "published": "2023-06-12T14:19:03.975Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

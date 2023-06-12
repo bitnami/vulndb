@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-6632",
+  "details": "In PrestaShop 1.7.6.2, XSS can occur during addition or removal of a QuickAccess link. This is related to AdminQuickAccessesController.php, themes/default/template/header.tpl, and themes/new-theme/js/header.js.",
+  "aliases": [
+    "CVE-2020-6632"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "prestashop",
+          "purl": "pkg:bitnami/prestashop"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "1.7.6.2"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:1.7.6.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/pull/17050/commits"
+    }
+  ],
+  "published": "2023-06-12T14:23:45.569Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

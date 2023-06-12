@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-15094",
+  "details": "In Symfony before versions 4.4.13 and 5.1.5, the CachingHttpClient class from the HttpClient Symfony component relies on the HttpCache class to handle requests. HttpCache uses internal headers like X-Body-Eval and X-Body-File to control the restoration of cached responses. The class was initially written with surrogate caching and ESI support in mind (all HTTP calls come from a trusted backend in that scenario). But when used by CachingHttpClient and if an attacker can control the response for a request being made by the CachingHttpClient, remote code execution is possible. This has been fixed in versions 4.4.13 and 5.1.5.",
+  "aliases": [
+    "CVE-2020-15094"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "symfony",
+          "purl": "pkg:bitnami/symfony"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:sensiolabs:symfony:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/commit/d9910e0b33a2e0f993abff41c6fbc86951b66d78"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-754h-5r27-7x3r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HNGUWOEETOFVH4PN3I3YO4QZHQ4AUKF3/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VAQJXAKWPMWB7OL6QPG2ZSEQZYYPU5RC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/symfony/http-kernel"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/symfony/symfony"
+    }
+  ],
+  "published": "2023-06-12T14:26:51.967Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

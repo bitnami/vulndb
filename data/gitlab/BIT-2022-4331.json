@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-4331",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 15.1 before 15.7.8, all versions starting from 15.8 before 15.8.4, all versions starting from 15.9 before 15.9.2. If a group with SAML SSO enabled is transferred to a new namespace as a child group, it's possible previously removed malicious maintainer or owner of the child group can still gain access to the group via SSO or a SCIM token to perform actions on the group.",
+  "aliases": [
+    "CVE-2022-4331"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.1"
+            },
+            {
+              "fixed": "15.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.8"
+            },
+            {
+              "fixed": "15.8.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9"
+            },
+            {
+              "fixed": "15.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-4331.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/385050"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1791518"
+    }
+  ],
+  "published": "2023-06-12T14:18:54.168Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

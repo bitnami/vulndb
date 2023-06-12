@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-21967",
+  "details": "File upload vulnerability in the Catalog feature in Prestashop 1.7.6.7 allows remote attackers to run arbitrary code via the add new file page.",
+  "aliases": [
+    "CVE-2020-21967"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "prestashop",
+          "purl": "pkg:bitnami/prestashop"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "1.7.6.7"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:1.7.6.7:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/167742/PrestaShop-1.7.6.7-Cross-Site-Scripting.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/issues/20306"
+    }
+  ],
+  "published": "2023-06-12T14:26:39.669Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

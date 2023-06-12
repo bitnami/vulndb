@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-15270",
+  "details": "Parse Server (npm package parse-server) broadcasts events to all clients without checking if the session token is valid. This allows clients with expired sessions to still receive subscription objects. It is not possible to create subscription objects with invalid session tokens. The issue is not patched.",
+  "aliases": [
+    "CVE-2020-15270"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "parse",
+          "purl": "pkg:bitnami/parse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/78b59fb26b1c36e3cdbd42ba9fec025003267f58"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-2xm2-xj2q-qgpj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://npmjs.com/parse-server"
+    }
+  ],
+  "published": "2023-06-12T14:22:42.871Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}

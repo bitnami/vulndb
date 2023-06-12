@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-0056",
+  "details": "An uncontrolled resource consumption vulnerability was discovered in HAProxy which could crash the service. This issue could allow an authenticated remote attacker to run a specially crafted malicious server in an OpenShift cluster. The biggest impact is to availability.",
+  "aliases": [
+    "CVE-2023-0056"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "haproxy",
+          "purl": "pkg:bitnami/haproxy"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:-:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2023-0056"
+    }
+  ],
+  "published": "2023-06-12T14:13:55.271Z",
+  "modified": "2023-06-12T14:35:05.390Z"
+}
