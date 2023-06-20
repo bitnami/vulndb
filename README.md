@@ -121,6 +121,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 * Wavefront
 * Wavefront Proxy
 * Wavefront Prometheus Adapter
+* Wavefront HPA Adapter
 
 ## License
 
