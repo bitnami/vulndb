@@ -43,7 +43,7 @@ jobs:
           # Populate extra output. Do not automerge if too many files were updated
           num_files_changed="$(echo "$files_changed_data" | jq -r '.[] | length')"
           allow_auto_merge="true"
-          if [[ "$num_files_changed" -gt "$LINTED_FILES_THRESHOLD" ]] then
+          if [[ "$num_files_changed" -gt "$LINTED_FILES_THRESHOLD" ]]; then
             allow_auto_merge="false"
           fi
           echo "allow_auto_merge=${allow_auto_merge}" >> $GITHUB_OUTPUT
