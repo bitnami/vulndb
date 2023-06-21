@@ -8,10 +8,7 @@ on: # rebuild any PRs and main branch changes
     branches:
       - main
       - bitnami:main
-permissions:
-  issues: write
-  pull-requests: write
-  contents: read
+permissions: {}
 # Avoid concurrency over the same PR
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -19,6 +16,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     name: Linter
+    permissions:
+      contents: read
+    outputs:
+      allow_auto_merge: ${{ steps.lint.outputs.allow_auto_merge }}
     steps:
       - name: Install system deps
         run: sudo apt-get install -y jq python3
@@ -31,17 +32,28 @@ jobs:
       - id: lint
         name: Lint modified files
         env:
+          # Max number of modified files in PR that are allowed to be automerged
+          LINTED_FILES_THRESHOLD: 20
           DIFF_URL: "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files"
         run: |
           # Get the list of files changed in the PR
           files_changed_data=$(curl -s --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -X GET -G "$DIFF_URL")
           files_changed="$(echo "$files_changed_data" | jq -r .[].filename | paste -s -d ' ')"
+          # Populate extra output. Do not automerge if too many files were updated
+          num_files_changed="$(echo "$files_changed_data" | jq -r '.[] | length')"
+          allow_auto_merge="true"
+          if [[ "$num_files_changed" -gt "$LINTED_FILES_THRESHOLD" ]]; then
+            allow_auto_merge="false"
+          fi
+          echo "allow_auto_merge=${allow_auto_merge}" >> $GITHUB_OUTPUT
           # Lint changed files only
           bash "${{ github.workspace }}/scripts/lint.sh" "$files_changed"
   auto-pr-review:
     runs-on: ubuntu-latest
     needs: lint
     name: Reviewal for automated PRs
+    permissions:
+      pull-requests: write
     # Only auto-merge if PR was created by bitnami-bot user
     if: |
       always() &&
@@ -50,13 +62,17 @@ jobs:
       # Approve the CI's PR if the 'lint' job succeeded
       # Approved by the 'github-actions' user; a PR can't be approved by its author
       - name: PR approval
-        if: ${{ needs.lint.result == 'success' }}
+        if: |
+          needs.lint.result == 'success' &&
+          needs.lint.outputs.allow_auto_merge == 'true'
         uses: hmarr/auto-approve-action@v3.0.0
         with:
           pull-request-number: ${{ github.event.number }}
       - name: Merge
         id: merge
-        if: ${{ needs.lint.result == 'success' }}
+        if: |
+          needs.lint.result == 'success' &&
+          needs.lint.outputs.allow_auto_merge == 'true'
         uses: actions/github-script@v6
         with:
           result-encoding: string
@@ -79,4 +95,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             There has been an error during the automated release process. Manual revision is now required.
-            Please check the related [action_run#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more information.
+            Please check the related [action_run#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more information and the changes in the final files (too many files updated at the same time?).
+      - name: Assign to a person to work on it
+        if: ${{ always() && (needs.lint.result != 'success' || steps.merge.outcome != 'success' ) }}
+        uses: pozil/auto-assign-issue@v1.11.0
+        with:
+          numOfAssignee: 1
+          teams: ${{ secrets.SUPPORT_TEAM }}
+          repo-token: ${{ secrets.BITNAMI_BOT_TOKEN }}
+          allowSelfAssign: false
