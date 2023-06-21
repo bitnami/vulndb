@@ -17,7 +17,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -286,8 +286,12 @@
     {
       "type": "WEB",
       "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/edcf46b6-368e-49c0-b2c3-99bf6e2d358f?source=cve"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00024.html"
     }
   ],
   "published": "2023-06-12T14:27:10.970Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-06-21T06:40:25.580Z"
 }
