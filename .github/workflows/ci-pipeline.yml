@@ -8,10 +8,7 @@ on: # rebuild any PRs and main branch changes
     branches:
       - main
       - bitnami:main
-permissions:
-  issues: write
-  pull-requests: write
-  contents: read
+permissions: {}
 # Avoid concurrency over the same PR
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
@@ -19,6 +16,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     name: Linter
+    permissions:
+      contents: read
     outputs:
       allow_auto_merge: ${{ steps.lint.outputs.allow_auto_merge }}
     steps:
@@ -53,6 +52,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: lint
     name: Reviewal for automated PRs
+    permissions:
+      pull-requests: write
     # Only auto-merge if PR was created by bitnami-bot user
     if: |
       always() &&
@@ -63,7 +64,7 @@ jobs:
       - name: PR approval
         if: |
           needs.lint.result == 'success' &&
-          needs.lint.outputs.allow_auto_merge == true
+          needs.lint.outputs.allow_auto_merge == 'true'
         uses: hmarr/auto-approve-action@v3.0.0
         with:
           pull-request-number: ${{ github.event.number }}
@@ -71,7 +72,7 @@ jobs:
         id: merge
         if: |
           needs.lint.result == 'success' &&
-          needs.lint.outputs.allow_auto_merge == true
+          needs.lint.outputs.allow_auto_merge == 'true'
         uses: actions/github-script@v6
         with:
           result-encoding: string
