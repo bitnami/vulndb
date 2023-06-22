@@ -40,7 +40,8 @@ jobs:
           files_changed_data=$(curl -s --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -X GET -G "$DIFF_URL")
           files_changed="$(echo "$files_changed_data" | jq -r .[].filename | paste -s -d ' ')"
           # Populate extra output. Do not automerge if too many files were updated
-          num_files_changed="$(echo "$files_changed_data" | jq -r '.[] | length')"
+          num_files_changed="$(echo "$files_changed_data" | jq -r 'length')"
+          echo "num_files_changed: '${num_files_changed}'"
           allow_auto_merge="true"
           if [[ "$num_files_changed" -gt "$LINTED_FILES_THRESHOLD" ]]; then
             allow_auto_merge="false"
