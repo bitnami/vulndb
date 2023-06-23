@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-34250",
+  "details": "Discourse is an open source discussion platform. Prior to version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches, an attacker could use the new topics dismissal endpoint to reveal the number of topics recently created (but not the actual content thereof) in categories they didn't have access to. This issue is patched in version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches. There are no known workarounds.",
+  "aliases": [
+    "CVE-2023-34250"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "discourse",
+          "purl": "pkg:bitnami/discourse"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.0.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta1:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta2:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta3:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta4:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-q8m5-wmjr-3ppg"
+    }
+  ],
+  "published": "2023-06-23T06:16:57.446Z",
+  "modified": "2023-06-23T06:45:38.669Z"
+}
