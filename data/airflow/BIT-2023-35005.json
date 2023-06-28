@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-35005",
+  "details": "In Apache Airflow, some potentially sensitive values were being shown to the user in certain situations.This vulnerability is mitigated by the fact configuration is not shown in the UI by default (only if `[webserver] expose_config` is set to `non-sensitive-only`), and not all uncensored values are actually sentitive.This issue affects Apache Airflow: from 2.5.0 before 2.6.2. Users are recommended to update to version 2.6.2 or later.",
+  "aliases": [
+    "CVE-2023-35005"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "airflow",
+          "purl": "pkg:bitnami/airflow"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "2.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/31788"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/31820"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/o4f2cxh0054m9tlxpb81c1yhylor5gjd"
+    }
+  ],
+  "published": "2023-06-28T06:17:56.216Z",
+  "modified": "2023-06-28T06:49:19.565Z"
+}
