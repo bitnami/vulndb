@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-36191",
+  "details": "sqlite3 v3.40.1 was discovered to contain a segmentation violation at /sqlite3_aflpp/shell.c.",
+  "aliases": [
+    "CVE-2023-36191"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "sqlite",
+          "purl": "pkg:bitnami/sqlite"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "versions": [
+        "3.40.1"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:3.40.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.sqlite.org/forum/forumpost/19f55ef73b"
+    }
+  ],
+  "published": "2023-07-01T06:32:48.402Z",
+  "modified": "2023-07-01T06:46:12.312Z"
+}
