@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-2232",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 15.10 before 16.1, leading to a ReDoS vulnerability in the Jira prefix",
+  "aliases": [
+    "CVE-2023-2232"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "gitlab",
+          "purl": "pkg:bitnami/gitlab"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10"
+            },
+            {
+              "fixed": "16.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-2232.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/408352"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1934802"
+    }
+  ],
+  "published": "2023-07-07T06:20:10.351Z",
+  "modified": "2023-07-07T06:49:57.252Z"
+}
