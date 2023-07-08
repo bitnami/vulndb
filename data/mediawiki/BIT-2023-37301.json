@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-37301",
+  "details": "An issue was discovered in SubmitEntityAction in Wikibase in MediaWiki through 1.39.3. Because it doesn't use EditEntity for undo and restore, the intended interaction with AbuseFilter does not occur.",
+  "aliases": [
+    "CVE-2023-37301"
+  ],
+  "affected": [
+    {
+      "packages": [
+        {
+          "ecosystem": "bitnami",
+          "name": "mediawiki",
+          "purl": "pkg:bitnami/mediawiki"
+        }
+      ],
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.39.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/Wikibase/+/933663"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T250720"
+    }
+  ],
+  "published": "2023-07-08T06:24:34.254Z",
+  "modified": "2023-07-08T06:48:31.903Z"
+}
