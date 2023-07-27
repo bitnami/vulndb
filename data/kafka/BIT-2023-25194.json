@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "kafka",
-          "purl": "pkg:bitnami/kafka"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "kafka",
+        "purl": "pkg:bitnami/kafka"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -56,5 +54,5 @@
     }
   ],
   "published": "2023-06-12T14:14:40.170Z",
-  "modified": "2023-06-28T06:49:19.565Z"
+  "modified": "2023-07-27T08:48:49.626Z"
 }
