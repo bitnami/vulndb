@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "jenkins",
-          "purl": "pkg:bitnami/jenkins"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -64,5 +62,5 @@
     }
   ],
   "published": "2023-06-25T06:20:12.746Z",
-  "modified": "2023-06-25T06:45:00.227Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

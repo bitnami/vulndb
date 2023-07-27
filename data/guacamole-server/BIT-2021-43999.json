@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "guacamole-server",
-          "purl": "pkg:bitnami/guacamole-server"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "guacamole-server",
+        "purl": "pkg:bitnami/guacamole-server"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -44,5 +42,5 @@
     }
   ],
   "published": "2023-06-12T14:13:20.173Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

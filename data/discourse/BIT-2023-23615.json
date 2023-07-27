@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "discourse",
-          "purl": "pkg:bitnami/discourse"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -423,5 +421,5 @@
     }
   ],
   "published": "2023-06-12T14:14:10.872Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "mediawiki",
-          "purl": "pkg:bitnami/mediawiki"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -56,5 +54,5 @@
     }
   ],
   "published": "2023-07-08T06:24:17.653Z",
-  "modified": "2023-07-08T06:48:31.903Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

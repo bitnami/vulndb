@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "sqlite",
-          "purl": "pkg:bitnami/sqlite"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -46,5 +44,5 @@
     }
   ],
   "published": "2023-07-01T06:32:48.402Z",
-  "modified": "2023-07-05T06:52:01.801Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

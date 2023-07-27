@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "solr",
-          "purl": "pkg:bitnami/solr"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "solr",
+        "purl": "pkg:bitnami/solr"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -154,5 +152,5 @@
     }
   ],
   "published": "2023-06-12T14:25:24.376Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

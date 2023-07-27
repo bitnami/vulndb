@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "mariadb",
-          "purl": "pkg:bitnami/mariadb"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -64,5 +62,5 @@
     }
   ],
   "published": "2023-06-12T14:15:45.375Z",
-  "modified": "2023-06-17T06:37:25.789Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "golang",
-          "purl": "pkg:bitnami/golang"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -71,5 +69,5 @@
     }
   ],
   "published": "2023-07-20T06:18:59.078Z",
-  "modified": "2023-07-20T06:50:11.240Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

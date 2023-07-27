@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "suitecrm",
-          "purl": "pkg:bitnami/suitecrm"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -52,5 +50,5 @@
     }
   ],
   "published": "2023-06-12T14:25:05.572Z",
-  "modified": "2023-06-29T18:46:58.491Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "rails",
-          "purl": "pkg:bitnami/rails"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -89,5 +87,5 @@
     }
   ],
   "published": "2023-06-12T14:24:03.673Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

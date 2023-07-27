@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "neo4j-apoc-procedures",
-          "purl": "pkg:bitnami/neo4j-apoc-procedures"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "neo4j-apoc-procedures",
+        "purl": "pkg:bitnami/neo4j-apoc-procedures"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -85,5 +83,5 @@
     }
   ],
   "published": "2023-06-12T14:17:52.772Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

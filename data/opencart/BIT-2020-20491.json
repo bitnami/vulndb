@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "opencart",
-          "purl": "pkg:bitnami/opencart"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "opencart",
+        "purl": "pkg:bitnami/opencart"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -48,5 +46,5 @@
     }
   ],
   "published": "2023-06-28T06:29:12.323Z",
-  "modified": "2023-06-28T06:49:19.565Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

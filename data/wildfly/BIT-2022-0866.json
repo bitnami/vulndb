@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "wildfly",
-          "purl": "pkg:bitnami/wildfly"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "wildfly",
+        "purl": "pkg:bitnami/wildfly"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -45,5 +43,5 @@
     }
   ],
   "published": "2023-06-12T14:26:53.875Z",
-  "modified": "2023-06-21T16:40:51.759Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

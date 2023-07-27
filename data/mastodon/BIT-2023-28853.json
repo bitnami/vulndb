@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "mastodon",
-          "purl": "pkg:bitnami/mastodon"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -98,5 +96,5 @@
     }
   ],
   "published": "2023-06-12T14:15:47.371Z",
-  "modified": "2023-07-07T06:49:57.252Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

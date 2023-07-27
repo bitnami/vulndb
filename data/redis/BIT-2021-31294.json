@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "redis",
-          "purl": "pkg:bitnami/redis"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -56,5 +54,5 @@
     }
   ],
   "published": "2023-07-26T06:37:55.999Z",
-  "modified": "2023-07-26T06:48:39.774Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

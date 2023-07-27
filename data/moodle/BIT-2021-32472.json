@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "moodle",
-          "purl": "pkg:bitnami/moodle"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -70,5 +68,5 @@
     }
   ],
   "published": "2023-06-12T14:28:00.183Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

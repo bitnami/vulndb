@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "percona-xtrabackup",
-          "purl": "pkg:bitnami/percona-xtrabackup"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "percona-xtrabackup",
+        "purl": "pkg:bitnami/percona-xtrabackup"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -63,5 +61,5 @@
     }
   ],
   "published": "2023-06-16T06:25:58.153Z",
-  "modified": "2023-06-16T06:39:54.416Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

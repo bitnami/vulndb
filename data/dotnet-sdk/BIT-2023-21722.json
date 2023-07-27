@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "dotnet-sdk",
-          "purl": "pkg:bitnami/dotnet-sdk"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -47,5 +45,5 @@
     }
   ],
   "published": "2023-06-12T14:12:11.567Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

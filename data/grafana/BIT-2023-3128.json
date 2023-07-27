@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "grafana",
-          "purl": "pkg:bitnami/grafana"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -101,5 +99,5 @@
     }
   ],
   "published": "2023-07-01T06:19:07.398Z",
-  "modified": "2023-07-19T06:49:00.977Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }

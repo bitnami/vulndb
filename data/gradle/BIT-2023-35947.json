@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "gradle",
-          "purl": "pkg:bitnami/gradle"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "gradle",
+        "purl": "pkg:bitnami/gradle"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -67,5 +65,5 @@
     }
   ],
   "published": "2023-07-11T06:19:41.938Z",
-  "modified": "2023-07-11T06:50:53.527Z"
+  "modified": "2023-07-27T06:31:06.924Z"
 }
