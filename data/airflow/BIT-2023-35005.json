@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "airflow",
-          "purl": "pkg:bitnami/airflow"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -56,5 +54,5 @@
     }
   ],
   "published": "2023-06-28T06:17:56.216Z",
-  "modified": "2023-06-28T06:49:19.565Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

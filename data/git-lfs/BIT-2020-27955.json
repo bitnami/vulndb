@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "git-lfs",
-          "purl": "pkg:bitnami/git-lfs"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "git-lfs",
+        "purl": "pkg:bitnami/git-lfs"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -62,5 +60,5 @@
     }
   ],
   "published": "2023-06-12T14:12:50.968Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "neos",
-          "purl": "pkg:bitnami/neos"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "neos",
+        "purl": "pkg:bitnami/neos"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -107,5 +105,5 @@
     }
   ],
   "published": "2023-06-12T14:18:00.873Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "odoo",
-          "purl": "pkg:bitnami/odoo"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "odoo",
+        "purl": "pkg:bitnami/odoo"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -46,5 +44,5 @@
     }
   ],
   "published": "2023-06-12T14:20:18.575Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

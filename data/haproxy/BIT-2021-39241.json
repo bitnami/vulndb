@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "haproxy",
-          "purl": "pkg:bitnami/haproxy"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -97,5 +95,5 @@
     }
   ],
   "published": "2023-06-12T14:14:31.969Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

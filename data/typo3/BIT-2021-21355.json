@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "typo3",
-          "purl": "pkg:bitnami/typo3"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -89,5 +87,5 @@
     }
   ],
   "published": "2023-06-12T14:28:43.067Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

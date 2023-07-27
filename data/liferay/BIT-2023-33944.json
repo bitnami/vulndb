@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "liferay",
-          "purl": "pkg:bitnami/liferay"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -50,5 +48,5 @@
     }
   ],
   "published": "2023-06-12T14:16:28.971Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }
