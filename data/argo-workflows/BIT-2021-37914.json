@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "argo-workflows",
-          "purl": "pkg:bitnami/argo-workflows"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "argo-workflows",
+        "purl": "pkg:bitnami/argo-workflows"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -52,5 +50,5 @@
     }
   ],
   "published": "2023-06-12T14:10:57.070Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

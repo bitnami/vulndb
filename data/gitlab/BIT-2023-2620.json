@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "gitlab",
-          "purl": "pkg:bitnami/gitlab"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -75,5 +73,5 @@
     }
   ],
   "published": "2023-07-21T06:20:01.227Z",
-  "modified": "2023-07-21T06:47:31.132Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

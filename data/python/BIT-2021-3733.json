@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "python",
-          "purl": "pkg:bitnami/python"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -118,5 +116,5 @@
     }
   ],
   "published": "2023-06-12T14:23:59.868Z",
-  "modified": "2023-07-01T06:46:12.312Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

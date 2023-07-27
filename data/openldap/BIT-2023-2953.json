@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "openldap",
-          "purl": "pkg:bitnami/openldap"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "openldap",
+        "purl": "pkg:bitnami/openldap"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -70,5 +68,5 @@
     }
   ],
   "published": "2023-06-12T14:19:01.069Z",
-  "modified": "2023-07-26T06:48:39.774Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "django",
-          "purl": "pkg:bitnami/django"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -82,5 +80,5 @@
     }
   ],
   "published": "2023-07-12T06:17:54.750Z",
-  "modified": "2023-07-20T06:50:11.240Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

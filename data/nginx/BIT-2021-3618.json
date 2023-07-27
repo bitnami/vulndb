@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "nginx",
-          "purl": "pkg:bitnami/nginx"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "nginx",
+        "purl": "pkg:bitnami/nginx"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -56,5 +54,5 @@
     }
   ],
   "published": "2023-06-12T14:18:36.967Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }

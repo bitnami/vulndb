@@ -7,13 +7,11 @@
   ],
   "affected": [
     {
-      "packages": [
-        {
-          "ecosystem": "bitnami",
-          "name": "drupal",
-          "purl": "pkg:bitnami/drupal"
-        }
-      ],
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
       "severity": [
         {
           "type": "CVSS_V3",
@@ -70,5 +68,5 @@
     }
   ],
   "published": "2023-06-12T14:15:45.370Z",
-  "modified": "2023-06-12T14:35:05.390Z"
+  "modified": "2023-07-27T06:48:49.626Z"
 }
