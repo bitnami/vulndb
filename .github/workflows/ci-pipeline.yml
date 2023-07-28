@@ -25,8 +25,8 @@ jobs:
         run: sudo apt-get install -y jq python3
       - name: Install markdownlint
         run: npm install -g markdownlint-cli@0.33.0
-      - name: Install jsonschema
-        run: python3 -m pip install jsonschema
+      - name: Install check-jsonschema
+        run: python3 -m pip install check-jsonschema
       - uses: actions/checkout@v3
         name: Checkout Repository
       - id: lint

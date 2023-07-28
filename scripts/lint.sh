@@ -19,6 +19,7 @@ elif [[ "$FORCE" -eq 1 ]] && [[ "${#files_to_check[@]}" -eq 0 ]]; then
 fi
 
 if [[ "${#files_to_check[@]}" -ne 0 ]]; then
+    echo "Will check ${#files_to_check[@]} files"
     for f in "${files_to_check[@]}"; do
         if [[ -f "$f" ]]; then
             # Run a different linter depending on file extension
@@ -38,7 +39,7 @@ if [[ "${#files_to_check[@]}" -ne 0 ]]; then
                     exit_code=$?
                 elif [[ "$f" =~ .*\/?data\/.* ]]; then
                     # Check CVE file against OSV schema
-                    output="$(jsonschema "${root_dir}/config/validation/schema.json" < "$f" 2>/dev/null)"
+                    check-jsonschema --verbose --schemafile "${root_dir}/config/validation/schema.json" "$f"
                     exit_code=$?
                 fi
                 if [[ $exit_code -ne 0 ]]; then
