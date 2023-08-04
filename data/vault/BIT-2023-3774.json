@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-3774",
+  "details": "An unhandled error in Vault Enterprise's namespace creation may cause the Vault process to crash, potentially resulting in denial of service. Fixed in 1.14.1, 1.13.5, and 1.12.9.",
+  "aliases": [
+    "CVE-2023-3774"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "versions": [
+        "1.12.8",
+        "1.13.4",
+        "1.14.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:1.12.8:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:1.13.4:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:1.14.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2023-23-vault-enterprise-namespace-creation-may-lead-to-denial-of-service/56617"
+    }
+  ],
+  "published": "2023-08-04T18:38:16.750Z",
+  "modified": "2023-08-04T18:51:03.209Z"
+}
