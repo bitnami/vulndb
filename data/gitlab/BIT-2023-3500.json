@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-3500",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 10.0 before 16.0.8, all versions starting from 16.1 before 16.1.3, all versions starting from 16.2 before 16.2.2. A reflected XSS was possible when creating specific PlantUML diagrams that allowed the attacker to perform arbitrary actions on behalf of victims.",
+  "aliases": [
+    "CVE-2023-3500"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0"
+            },
+            {
+              "fixed": "16.0.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.1"
+            },
+            {
+              "fixed": "16.1.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2"
+            },
+            {
+              "fixed": "16.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/416902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2010926"
+    }
+  ],
+  "published": "2023-08-05T06:20:24.347Z",
+  "modified": "2023-08-05T06:50:32.591Z"
+}
