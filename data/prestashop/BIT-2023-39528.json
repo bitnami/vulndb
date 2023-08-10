@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-39528",
+  "details": "PrestaShop is an open source e-commerce web application. Prior to version 8.1.1, the `displayAjaxEmailHTML` method can be used to read any file on the server, potentially even outside of the project if the server is not correctly configured. Version 8.1.1 contains a patch for this issue. There are no known workarounds.",
+  "aliases": [
+    "CVE-2023-39528"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/11de3a84322fa4ecd0995ac40d575db61804724c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-hpf4-v7v2-95p2"
+    }
+  ],
+  "published": "2023-08-10T06:34:25.058Z",
+  "modified": "2023-08-10T06:54:20.303Z"
+}

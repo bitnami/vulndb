@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-39508",
+  "details": "Execution with Unnecessary Privileges, : Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Software Foundation Apache Airflow.The \"Run Task\" feature enables authenticated user to bypass some of the restrictions put in place. It allows to execute code in the webserver context as well as allows to bypas limitation of access the user has to certain DAGs. The \"Run Task\" feature is considered dangerous and it has been removed entirely in Airflow 2.6.0This issue affects Apache Airflow: before 2.6.0.",
+  "aliases": [
+    "CVE-2023-39508"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Jul/43"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/29706"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/j2nkjd0zqvtqk85s6ywpx3c35pvzyx15"
+    }
+  ],
+  "published": "2023-08-10T06:17:37.754Z",
+  "modified": "2023-08-10T06:54:20.303Z"
+}
