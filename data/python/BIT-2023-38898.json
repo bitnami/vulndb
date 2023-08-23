@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-38898",
+  "details": "An issue in Python cpython v.3.7 allows an attacker to obtain sensitive information via the _asyncio._swap_current_task component.",
+  "aliases": [
+    "CVE-2023-38898"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "versions": [
+        "3.13.0"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:3.13.0:alpha0:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://python.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/105987"
+    }
+  ],
+  "published": "2023-08-23T06:33:42.482Z",
+  "modified": "2023-08-23T06:53:34.331Z"
+}
