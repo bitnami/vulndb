@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-27576",
+  "details": "An issue was discovered in phpList 3.6.12. Due to an access error, it was possible to manipulate and edit data of the system's super admin, allowing one to perform an account takeover of the user with super-admin permission.",
+  "aliases": [
+    "CVE-2023-27576"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "phplist",
+        "purl": "pkg:bitnami/phplist"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "3.6.12"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:3.6.12:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cupc4k3.lol/cve-2023-27576-hacking-phplist-how-i-gained-super-admin-access-44c7c90d82da"
+    }
+  ],
+  "published": "2023-08-24T18:32:40.141Z",
+  "modified": "2023-08-24T18:53:58.934Z"
+}
