@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-32292",
+  "details": "An issue was discovered in json-c through 0.15-20200726. A stack-buffer-overflow exists in the function parseit located in json_parse.c. It allows an attacker to cause code Execution.",
+  "aliases": [
+    "CVE-2021-32292"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "json-c",
+        "purl": "pkg:bitnami/json-c"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.15-20200726"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:json-c_project:json-c:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/json-c/json-c/issues/654"
+    }
+  ],
+  "published": "2023-08-28T18:21:49.285Z",
+  "modified": "2023-08-28T18:53:05.273Z"
+}
