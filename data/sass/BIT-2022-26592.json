@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-26592",
+  "details": "Stack Overflow vulnerability in libsass 3.6.5 via the CompoundSelector::has_real_parent_ref function.",
+  "aliases": [
+    "CVE-2022-26592"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "sass",
+        "purl": "pkg:bitnami/sass"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "3.6.5"
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:sass-lang:libsass:3.6.5:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sass/libsass/issues/3174"
+    }
+  ],
+  "published": "2023-08-28T18:35:13.983Z",
+  "modified": "2023-08-28T18:53:05.273Z"
+}
