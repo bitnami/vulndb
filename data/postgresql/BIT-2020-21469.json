@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-2020-21469",
-  "details": "An issue was discovered in PostgreSQL 12.2 allows attackers to cause a denial of service via repeatedly sending SIGHUP signals.",
+  "details": "** DISPUTED ** An issue was discovered in PostgreSQL 12.2 allows attackers to cause a denial of service via repeatedly sending SIGHUP signals. NOTE: this is disputed by the vendor because untrusted users cannot send SIGHUP signals; they can only be sent by a PostgreSQL superuser, a user with pg_reload_conf access, or a user with sufficient privileges at the OS level (the postgres account or the root account).",
   "aliases": [
     "CVE-2020-21469"
   ],
@@ -33,8 +33,16 @@
     {
       "type": "WEB",
       "url": "https://www.postgresql.org/message-id/CAA8ZSMqAHDCgo07hqKoM5XJaoQy6Vv76O7966agez4ffyQktkA%40mail.gmail.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/message-id/flat/CAA8ZSMqAHDCgo07hqKoM5XJaoQy6Vv76O7966agez4ffyQktkA%40mail.gmail.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/"
     }
   ],
   "published": "2023-08-25T08:05:31.514Z",
-  "modified": "2023-08-25T08:05:31.514Z"
+  "modified": "2023-08-30T06:55:54.775Z"
 }
