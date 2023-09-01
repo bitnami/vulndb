@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-4478",
+  "details": "Mattermost fails to restrict which parameters' values it takes from the request during signup allowing an attacker to register users as inactive, thus blocking them from later accessing Mattermost without the system admin activating their accounts.",
+  "aliases": [
+    "CVE-2023-4478"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.8.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.9.0"
+            },
+            {
+              "fixed": "7.10.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:8.0.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2023-09-01T06:23:52.139Z",
+  "modified": "2023-09-01T06:53:19.217Z"
+}
