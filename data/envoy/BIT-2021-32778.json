@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "1.19.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -51,14 +54,6 @@
               "fixed": "1.18.4"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.19.0"
-            }
-          ]
         }
       ]
     }
@@ -80,6 +75,6 @@
       "url": "https://www.envoyproxy.io/docs/envoy/v1.19.0/version_history/version_history"
     }
   ],
-  "published": "2023-06-12T14:15:51.973Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:41:39.806Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

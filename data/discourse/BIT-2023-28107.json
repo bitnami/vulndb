@@ -18,6 +18,10 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "3.1.0-beta1",
+        "3.1.0-beta2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,22 +42,6 @@
             },
             {
               "fixed": "3.1.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.1.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.1.0-beta2"
             }
           ]
         }
@@ -91,6 +79,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-cp7c-fm4c-6xxx"
     }
   ],
-  "published": "2023-06-12T14:12:26.676Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:38:07.305Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

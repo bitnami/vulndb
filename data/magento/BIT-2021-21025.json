@@ -18,6 +18,12 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "2.3.6",
+        "2.4.0",
+        "2.4.0-p1",
+        "2.4.1"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,38 +33,6 @@
             },
             {
               "fixed": "2.3.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.3.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.0-p1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.1"
             }
           ]
         }
@@ -86,6 +60,6 @@
       "url": "https://helpx.adobe.com/security/products/magento/apsb21-08.html"
     }
   ],
-  "published": "2023-06-12T14:19:10.073Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:45:13.805Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

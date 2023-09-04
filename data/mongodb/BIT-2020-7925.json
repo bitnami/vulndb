@@ -18,6 +18,19 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "4.4.0-rc1",
+        "4.4.0-rc10",
+        "4.4.0-rc11",
+        "4.4.0-rc2",
+        "4.4.0-rc3",
+        "4.4.0-rc4",
+        "4.4.0-rc5",
+        "4.4.0-rc6",
+        "4.4.0-rc7",
+        "4.4.0-rc8",
+        "4.4.0-rc9"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,94 +40,6 @@
             },
             {
               "fixed": "4.2.9"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc10"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc11"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc8"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.4.0-rc9"
             }
           ]
         }
@@ -144,6 +69,6 @@
       "url": "https://jira.mongodb.org/browse/SERVER-49142"
     }
   ],
-  "published": "2023-06-12T14:18:57.067Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:44:32.907Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

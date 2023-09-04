@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "1.20.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "1.19.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.20.0"
             }
           ]
         }
@@ -66,6 +61,6 @@
       "url": "https://pkg.go.dev/vuln/GO-2023-1568"
     }
   ],
-  "published": "2023-06-12T14:14:34.769Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:39:28.810Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

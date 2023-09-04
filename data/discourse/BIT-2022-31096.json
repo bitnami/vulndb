@@ -18,6 +18,13 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "2.9.0-beta1",
+        "2.9.0-beta2",
+        "2.9.0-beta3",
+        "2.9.0-beta4",
+        "2.9.0-beta5"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,46 +34,6 @@
             },
             {
               "fixed": "2.8.4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta5"
             }
           ]
         }
@@ -90,6 +57,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-rvp8-459h-282r"
     }
   ],
-  "published": "2023-06-12T14:18:17.973Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:47:59.009Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

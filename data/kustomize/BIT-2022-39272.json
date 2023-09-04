@@ -18,6 +18,19 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
         }
       ],
+      "versions": [
+        "0.0.1-alpha1",
+        "0.0.1-alpha2",
+        "0.0.1-alpha3",
+        "0.0.1-alpha4",
+        "0.0.1-alpha5",
+        "0.0.1-alpha6",
+        "0.0.1-alpha7",
+        "0.0.1-alpha8",
+        "0.0.1-alpha9",
+        "0.0.1-beta1",
+        "0.0.1-beta2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,94 +40,6 @@
             },
             {
               "fixed": "0.29.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha8"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-alpha9"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0.0.1-beta2"
             }
           ]
         }
@@ -148,6 +73,6 @@
       "url": "https://github.com/kubernetes/apimachinery/issues/131"
     }
   ],
-  "published": "2023-06-12T14:15:23.478Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:38:34.507Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "3.10.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -62,14 +65,6 @@
               "fixed": "3.9.5"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0"
-            }
-          ]
         }
       ]
     }
@@ -104,17 +99,17 @@
     },
     {
       "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00039.html"
+    },
+    {
+      "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20220407-0001/"
     },
     {
       "type": "WEB",
       "url": "https://ubuntu.com/security/CVE-2021-3733"
-    },
-    {
-      "type": "WEB",
-      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00039.html"
     }
   ],
-  "published": "2023-06-12T14:23:59.868Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:54:49.108Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

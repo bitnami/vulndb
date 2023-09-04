@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
+      "versions": [
+        "7.2.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "7.1.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "7.2.0"
             }
           ]
         }
@@ -66,6 +61,6 @@
       "url": "https://varnish-cache.org/security/VSV00010.html"
     }
   ],
-  "published": "2023-06-12T14:26:14.378Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:56:21.914Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

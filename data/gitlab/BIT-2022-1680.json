@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "15.0.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,14 +41,6 @@
             },
             {
               "fixed": "14.10.4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "15.0.0"
             }
           ]
         }
@@ -69,6 +64,6 @@
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/363058"
     }
   ],
-  "published": "2023-06-12T14:30:31.786Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T16:04:44.647Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

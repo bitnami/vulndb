@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "1.9.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,14 +41,6 @@
             },
             {
               "fixed": "1.8.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.9.0"
             }
           ]
         }
@@ -75,6 +70,6 @@
       "url": "https://www.hashicorp.com/blog/category/vault"
     }
   ],
-  "published": "2023-06-12T14:27:37.871Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:59:22.910Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "6.4.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "5.7.11"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "6.4.0"
             }
           ]
         }
@@ -58,6 +53,6 @@
       "url": "https://github.com/jupyter/notebook/security/advisories/GHSA-hwvq-6gjx-j797"
     }
   ],
-  "published": "2023-06-12T14:14:42.766Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:37:39.108Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

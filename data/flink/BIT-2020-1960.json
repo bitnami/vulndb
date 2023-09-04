@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "1.10.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -117,14 +120,6 @@
               "fixed": "1.9.2"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.10.0"
-            }
-          ]
         }
       ]
     }
@@ -154,6 +149,6 @@
       "url": "https://lists.apache.org/thread.html/r663cf0d5c386bba2f562d45ad484d786151a84f0b95e45e2b0fb8e50@%3Cissues.flink.apache.org%3E"
     }
   ],
-  "published": "2023-06-12T14:12:07.370Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:33:38.509Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

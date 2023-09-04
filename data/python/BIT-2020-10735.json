@@ -18,6 +18,21 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "3.11.0-alpha1",
+        "3.11.0-alpha2",
+        "3.11.0-alpha3",
+        "3.11.0-alpha4",
+        "3.11.0-alpha5",
+        "3.11.0-alpha6",
+        "3.11.0-alpha7",
+        "3.11.0-beta1",
+        "3.11.0-beta2",
+        "3.11.0-beta3",
+        "3.11.0-beta4",
+        "3.11.0-beta5",
+        "3.11.0-rc1"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -60,110 +75,6 @@
             },
             {
               "fixed": "3.10.7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-alpha7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-beta2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-beta3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-beta4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-beta5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.11.0-rc1"
             }
           ]
         }
@@ -213,6 +124,10 @@
     {
       "type": "WEB",
       "url": "https://github.com/python/cpython/issues/95778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00039.html"
     },
     {
       "type": "WEB",
@@ -293,12 +208,8 @@
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZEOAJWGGY55QU35UM2OVZATBW5MX2OZD/"
-    },
-    {
-      "type": "WEB",
-      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00039.html"
     }
   ],
-  "published": "2023-06-12T14:26:10.870Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:58:34.810Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

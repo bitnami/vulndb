@@ -18,6 +18,12 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
         }
       ],
+      "versions": [
+        "1.23.0",
+        "1.23.1",
+        "r1",
+        "r2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,38 +44,6 @@
             },
             {
               "fixed": "r27"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.23.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.23.1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "r1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "r2"
             }
           ]
         }
@@ -117,6 +91,6 @@
       "url": "https://www.debian.org/security/2022/dsa-5281"
     }
   ],
-  "published": "2023-06-12T14:18:17.772Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:43:52.309Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

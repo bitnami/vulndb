@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "14.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -73,14 +76,6 @@
               "fixed": "13.5"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "14.0"
-            }
-          ]
         }
       ]
     }
@@ -114,6 +109,6 @@
       "url": "https://www.postgresql.org/support/security/CVE-2021-23214/"
     }
   ],
-  "published": "2023-06-12T14:23:30.074Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:53:00.608Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

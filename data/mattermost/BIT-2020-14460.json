@@ -18,6 +18,11 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
+      "versions": [
+        "5.19.0-rc1",
+        "5.19.0-rc2",
+        "5.19.0-rc3"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -62,30 +67,6 @@
               "fixed": "5.18.1"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "5.19.0-rc1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "5.19.0-rc2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "5.19.0-rc3"
-            }
-          ]
         }
       ]
     }
@@ -105,6 +86,6 @@
       "url": "https://mattermost.com/security-updates/"
     }
   ],
-  "published": "2023-06-12T14:19:35.271Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:49:11.207Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

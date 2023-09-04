@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
+      "versions": [
+        "5.4"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -205,14 +208,6 @@
               "fixed": "5.3.3"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "5.4"
-            }
-          ]
         }
       ]
     }
@@ -242,6 +237,6 @@
       "url": "https://www.debian.org/security/2020/dsa-4677"
     }
   ],
-  "published": "2023-06-12T14:29:27.074Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T16:01:48.409Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

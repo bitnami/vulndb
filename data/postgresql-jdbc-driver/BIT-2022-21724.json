@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "42.3.2-rc1"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,14 +41,6 @@
             },
             {
               "fixed": "42.3.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "42.3.2-rc1"
             }
           ]
         }
@@ -85,6 +80,6 @@
       "url": "https://www.debian.org/security/2022/dsa-5196"
     }
   ],
-  "published": "2023-06-12T14:22:04.968Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:49:38.311Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

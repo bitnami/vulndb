@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
+      "versions": [
+        "4.2.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -51,14 +54,6 @@
               "fixed": "4.1.4"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.2.0"
-            }
-          ]
         }
       ]
     }
@@ -73,17 +68,17 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://moodle.org/mod/forum/discuss.php?d=447829"
-    },
-    {
-      "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7A72KX4WU6GK2CX4TKYFGFASPKOEOJFC/"
     },
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I5QAEAGJ44NVXLAJFJXKARKC45OGEDXT/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=447829"
     }
   ],
-  "published": "2023-06-30T06:25:21.777Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:42:02.907Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

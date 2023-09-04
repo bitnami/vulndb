@@ -18,6 +18,12 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "1.19.0",
+        "1.19.0-beta1",
+        "1.19.0-rc1",
+        "1.19.0-rc2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,38 +33,6 @@
             },
             {
               "fixed": "1.18.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.19.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.19.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.19.0-rc1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.19.0-rc2"
             }
           ]
         }
@@ -93,6 +67,6 @@
       "url": "https://pkg.go.dev/vuln/GO-2022-0988"
     }
   ],
-  "published": "2023-06-12T14:15:19.568Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:40:52.408Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

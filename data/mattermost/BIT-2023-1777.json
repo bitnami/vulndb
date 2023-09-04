@@ -18,6 +18,10 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
+      "versions": [
+        "7.7.1",
+        "7.8.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,22 +31,6 @@
             },
             {
               "fixed": "7.1.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "7.7.1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "7.8.0"
             }
           ]
         }
@@ -63,6 +51,6 @@
       "url": "https://mattermost.com/security-updates/"
     }
   ],
-  "published": "2023-06-12T14:16:46.669Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:44:21.707Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

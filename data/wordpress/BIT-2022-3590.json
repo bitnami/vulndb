@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "4.1"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "6.1.1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "4.1"
             }
           ]
         }
@@ -58,6 +53,6 @@
       "url": "https://wpscan.com/vulnerability/c8814e6e-78b3-4f63-a1d3-6906a84c1f11"
     }
   ],
-  "published": "2023-06-12T14:27:41.968Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:58:44.207Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }
