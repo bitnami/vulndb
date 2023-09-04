@@ -18,6 +18,14 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
+      "versions": [
+        "3.10.0-alpha1",
+        "3.10.0-alpha2",
+        "3.10.0-alpha3",
+        "3.10.0-alpha4",
+        "3.10.0-alpha5",
+        "3.10.0-alpha6"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -62,54 +70,6 @@
               "fixed": "3.9.5"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.10.0-alpha6"
-            }
-          ]
         }
       ]
     }
@@ -152,6 +112,6 @@
       "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
     }
   ],
-  "published": "2023-06-12T14:23:31.973Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:53:58.115Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

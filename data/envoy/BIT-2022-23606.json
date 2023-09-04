@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "1.21.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "1.20.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "1.21.0"
             }
           ]
         }
@@ -58,6 +53,6 @@
       "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-9vp2-4cp7-vvxf"
     }
   ],
-  "published": "2023-06-12T14:13:43.772Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:37:49.109Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

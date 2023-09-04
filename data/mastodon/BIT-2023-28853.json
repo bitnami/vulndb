@@ -64,6 +64,10 @@
   "references": [
     {
       "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/07/06/6"
+    },
+    {
+      "type": "WEB",
       "url": "https://github.com/mastodon/mastodon/blob/94cbd808b5b3e7999c7e77dc724b7e8c9dd2bdec/app/models/concerns/ldap_authenticable.rb#L7-L14"
     },
     {
@@ -89,12 +93,8 @@
     {
       "type": "WEB",
       "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-38g9-pfm9-gfqv"
-    },
-    {
-      "type": "WEB",
-      "url": "http://www.openwall.com/lists/oss-security/2023/07/06/6"
     }
   ],
-  "published": "2023-06-12T14:15:47.371Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:40:20.906Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

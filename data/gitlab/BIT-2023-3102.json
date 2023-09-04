@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
+      "versions": [
+        "16.1.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "16.0.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "16.1.0"
             }
           ]
         }
@@ -58,6 +53,6 @@
       "url": "https://hackerone.com/reports/2012073"
     }
   ],
-  "published": "2023-08-01T18:20:24.439Z",
-  "modified": "2023-08-01T18:50:52.569Z"
+  "published": "2023-09-04T15:40:15.104Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

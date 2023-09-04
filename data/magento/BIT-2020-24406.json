@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
+      "versions": [
+        "2.4.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "2.3.4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.0"
             }
           ]
         }
@@ -56,6 +51,6 @@
       "url": "https://helpx.adobe.com/security/products/magento/apsb20-59.html"
     }
   ],
-  "published": "2023-06-12T14:25:49.667Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:56:50.004Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

@@ -18,6 +18,10 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "3.1.0-beta1",
+        "3.1.0-beta2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,22 +31,6 @@
             },
             {
               "fixed": "3.1.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.1.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.1.0-beta2"
             }
           ]
         }
@@ -71,6 +59,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-26h3-8ww8-v5fc"
     }
   ],
-  "published": "2023-06-12T14:12:17.270Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:37:49.110Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

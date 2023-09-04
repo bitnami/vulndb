@@ -18,6 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
+      "versions": [
+        "2.9.0-beta1",
+        "2.9.0-beta10",
+        "2.9.0-beta2",
+        "2.9.0-beta3",
+        "2.9.0-beta4",
+        "2.9.0-beta5",
+        "2.9.0-beta6",
+        "2.9.0-beta7",
+        "2.9.0-beta8",
+        "2.9.0-beta9"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,86 +39,6 @@
             },
             {
               "fixed": "2.8.10"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta10"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta8"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta9"
             }
           ]
         }
@@ -135,6 +67,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-rcc5-28r3-23rr"
     }
   ],
-  "published": "2023-06-12T14:17:00.067Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:45:50.105Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

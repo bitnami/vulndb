@@ -18,6 +18,14 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "10.0.0-milestone10",
+        "10.1.0-milestone1",
+        "10.1.0-milestone2",
+        "10.1.0-milestone3",
+        "10.1.0-milestone4",
+        "10.1.0-milestone5"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -49,54 +57,6 @@
             },
             {
               "fixed": "10.0.12"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.0.0-milestone10"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.1.0-milestone1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.1.0-milestone2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.1.0-milestone3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.1.0-milestone4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.1.0-milestone5"
             }
           ]
         }
@@ -153,6 +113,6 @@
       "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
     }
   ],
-  "published": "2023-06-12T14:27:02.769Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:58:38.713Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

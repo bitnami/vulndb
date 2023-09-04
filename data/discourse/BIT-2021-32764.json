@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
         }
       ],
+      "versions": [
+        "2.8.0-beta1"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "2.7.5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.8.0-beta1"
             }
           ]
         }
@@ -54,6 +49,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-9x4c-29xg-56hw"
     }
   ],
-  "published": "2023-06-12T14:22:51.169Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:56:14.503Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

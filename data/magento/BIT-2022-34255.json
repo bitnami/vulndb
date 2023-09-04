@@ -18,6 +18,16 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "2.3.7",
+        "2.3.7-p1",
+        "2.3.7-p2",
+        "2.3.7-p3",
+        "2.4.3",
+        "2.4.3-p1",
+        "2.4.3-p2",
+        "2.4.4"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,70 +48,6 @@
             },
             {
               "fixed": "2.4.3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.3.7"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.3.7-p1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.3.7-p2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.3.7-p3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.3-p1"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.3-p2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.4.4"
             }
           ]
         }
@@ -128,6 +74,6 @@
       "url": "https://helpx.adobe.com/security/products/magento/apsb22-38.html"
     }
   ],
-  "published": "2023-06-12T14:16:24.868Z",
-  "modified": "2023-08-24T18:53:58.934Z"
+  "published": "2023-09-04T15:40:34.506Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

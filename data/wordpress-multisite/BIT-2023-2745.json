@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
         }
       ],
+      "versions": [
+        "6.2"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -249,14 +252,6 @@
               "fixed": "6.1.2"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "6.2"
-            }
-          ]
         }
       ]
     }
@@ -279,17 +274,17 @@
     },
     {
       "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00024.html"
+    },
+    {
+      "type": "WEB",
       "url": "https://wordpress.org/news/2023/05/wordpress-6-2-1-maintenance-security-release/"
     },
     {
       "type": "WEB",
       "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/edcf46b6-368e-49c0-b2c3-99bf6e2d358f?source=cve"
-    },
-    {
-      "type": "WEB",
-      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00024.html"
     }
   ],
-  "published": "2023-06-12T14:26:49.071Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:56:50.003Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

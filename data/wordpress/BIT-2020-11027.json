@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         }
       ],
+      "versions": [
+        "5.4"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -205,14 +208,6 @@
               "fixed": "5.3.3"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "5.4"
-            }
-          ]
         }
       ]
     }
@@ -225,6 +220,10 @@
     ]
   },
   "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/173034/WordPress-Theme-Medic-1.0.0-Weak-Password-Recovery-Mechanism.html"
+    },
     {
       "type": "WEB",
       "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ww7v-jg8c-q6jw"
@@ -240,12 +239,8 @@
     {
       "type": "WEB",
       "url": "https://www.debian.org/security/2020/dsa-4677"
-    },
-    {
-      "type": "WEB",
-      "url": "http://packetstormsecurity.com/files/173034/WordPress-Theme-Medic-1.0.0-Weak-Password-Recovery-Mechanism.html"
     }
   ],
-  "published": "2023-06-12T14:29:29.796Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T16:01:55.114Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

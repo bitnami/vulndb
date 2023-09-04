@@ -18,6 +18,10 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
+      "versions": [
+        "18.12.0",
+        "19.0.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,22 +31,6 @@
             },
             {
               "fixed": "18.11.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "18.12.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "19.0.0"
             }
           ]
         }
@@ -67,6 +55,6 @@
       "url": "https://www.openssl.org/news/secadv/20221101.txt"
     }
   ],
-  "published": "2023-06-12T14:19:12.268Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:47:11.211Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

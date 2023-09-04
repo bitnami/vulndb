@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "8.1.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,14 +41,6 @@
             },
             {
               "fixed": "8.0.5"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "8.1.0"
             }
           ]
         }
@@ -69,6 +64,6 @@
       "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-gf46-prm4-56pc"
     }
   ],
-  "published": "2023-08-10T06:34:55.156Z",
-  "modified": "2023-08-10T06:54:20.303Z"
+  "published": "2023-09-04T15:50:02.504Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }

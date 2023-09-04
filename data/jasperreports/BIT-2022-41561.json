@@ -18,6 +18,9 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
+      "versions": [
+        "8.1.0"
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -27,14 +30,6 @@
             },
             {
               "fixed": "8.0.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "8.1.0"
             }
           ]
         }
@@ -64,6 +59,6 @@
       "url": "https://www.tibco.com/support/advisories/2022/12/tibco-security-advisory-december-13-2022-tibco-jasperreports-server-cve-2022-41561"
     }
   ],
-  "published": "2023-06-12T14:15:16.174Z",
-  "modified": "2023-07-27T06:48:49.626Z"
+  "published": "2023-09-04T15:38:33.209Z",
+  "modified": "2023-09-04T16:11:27.534Z"
 }
