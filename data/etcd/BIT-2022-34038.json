@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-2022-34038",
-  "details": "Etcd v3.5.4 allows remote attackers to cause a denial of service via function PageWriter.write in pagewriter.go",
+  "details": "** DISPUTED ** Etcd v3.5.4 allows remote attackers to cause a denial of service via function PageWriter.write in pagewriter.go. NOTE: the vendor's position is that this is not a vulnerability.",
   "aliases": [
     "CVE-2022-34038"
   ],
@@ -37,8 +37,20 @@
     {
       "type": "WEB",
       "url": "https://github.com/etcd-io/etcd/pull/14452"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/golang/vulndb/issues/2016#issuecomment-1698677762"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go-review.googlesource.com/c/vulndb/+/524456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go-review.googlesource.com/c/vulndb/+/524456/2/data/excluded/GO-2023-2016.yaml"
     }
   ],
   "published": "2023-09-04T15:33:51.505Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "modified": "2023-09-07T06:53:01.811Z"
 }
