@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-1279",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 4.1 before 16.1.5, all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1 where it was possible to create a URL that would redirect to a different project.",
+  "aliases": [
+    "CVE-2023-1279"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "16.3.0"
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "16.1.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2"
+            },
+            {
+              "fixed": "16.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/395437"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1889230"
+    }
+  ],
+  "published": "2023-09-08T18:18:57.346Z",
+  "modified": "2023-09-08T18:29:08.711Z"
+}

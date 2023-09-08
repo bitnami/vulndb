@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-4018",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1. Due to improper permission validation it was possible to create model experiments in public projects.",
+  "aliases": [
+    "CVE-2023-4018"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "versions": [
+        "16.3.0"
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2"
+            },
+            {
+              "fixed": "16.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/420301"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2083440"
+    }
+  ],
+  "published": "2023-09-08T18:16:52.617Z",
+  "modified": "2023-09-08T18:29:08.711Z"
+}
