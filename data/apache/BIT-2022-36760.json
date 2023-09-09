@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-2022-36760",
-  "details": "Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to. This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.54 and prior versions.",
+  "details": "Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to.  This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.54 and prior versions.",
   "aliases": [
     "CVE-2022-36760"
   ],
@@ -43,8 +43,12 @@
     {
       "type": "WEB",
       "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202309-01"
     }
   ],
   "published": "2023-09-04T15:32:48.207Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "modified": "2023-09-09T06:29:06.735Z"
 }
