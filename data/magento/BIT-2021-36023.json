@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-36023",
+  "details": "Magento Commerce versions 2.4.2 (and earlier), 2.4.2-p1 (and earlier) and 2.3.7 (and earlier) are affected by an XML Injection vulnerability in the Widgets Update Layout. An attacker with admin privileges can trigger a specially crafted script to achieve remote code execution.",
+  "aliases": [
+    "CVE-2021-36023"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "versions": [
+        "2.3.7",
+        "2.4.2",
+        "2.4.2-p1"
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.7:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.7:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:p1:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb21-64.html"
+    }
+  ],
+  "published": "2023-09-12T06:26:40.585Z",
+  "modified": "2023-09-12T06:55:50.716Z"
+}

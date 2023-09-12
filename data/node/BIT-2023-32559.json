@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -56,7 +56,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Critical",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*"
     ]
@@ -68,5 +68,5 @@
     }
   ],
   "published": "2023-09-04T15:43:55.805Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "modified": "2023-09-12T06:55:50.716Z"
 }
