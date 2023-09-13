@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-41053",
+  "details": "Redis is an in-memory database that persists on disk. Redis does not correctly identify keys accessed by `SORT_RO` and as a result may grant users executing this command access to keys that are not explicitly authorized by the ACL configuration. The problem exists in Redis 7.0 or newer and has been fixed in Redis 7.0.13 and 7.2.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-41053"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "versions": [
+        "7.2.0",
+        "7.2.0-rc1",
+        "7.2.0-rc2",
+        "7.2.0-rc3"
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0"
+            },
+            {
+              "fixed": "7.0.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:7.2.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:7.2.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:7.2.0:rc2:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:7.2.0:rc3:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/9e505e6cd842338424e05883521ca1fb7d0f47f6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc"
+    }
+  ],
+  "published": "2023-09-13T06:35:00.712Z",
+  "modified": "2023-09-13T06:55:01.741Z"
+}
