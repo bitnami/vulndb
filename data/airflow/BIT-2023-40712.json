@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-40712",
+  "details": "Apache Airflow, versions before 2.7.1, is affected by a vulnerability that allows authenticated users who have access to see the task/dag in the UI, to craft a URL, which could lead to unmasking the secret configuration of the task that otherwise would be masked in the UI.Users are strongly advised to upgrade to version 2.7.1 or later which has removed the vulnerability.",
+  "aliases": [
+    "CVE-2023-40712"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/33512"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/33516"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/jw1yv4lt6hpowqbb0x4o3tdp0jhx2bts"
+    }
+  ],
+  "published": "2023-09-14T06:16:10.265Z",
+  "modified": "2023-09-14T06:28:36.594Z"
+}
