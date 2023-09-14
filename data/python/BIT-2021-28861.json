@@ -18,18 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "3.11.0-alpha1",
-        "3.11.0-alpha2",
-        "3.11.0-alpha3",
-        "3.11.0-alpha4",
-        "3.11.0-alpha5",
-        "3.11.0-alpha6",
-        "3.11.0-alpha7",
-        "3.11.0-beta1",
-        "3.11.0-beta2",
-        "3.11.0-beta3"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -72,6 +60,116 @@
             },
             {
               "fixed": "3.10.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha1"
+            },
+            {
+              "last_affected": "3.11.0-alpha1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha2"
+            },
+            {
+              "last_affected": "3.11.0-alpha2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha3"
+            },
+            {
+              "last_affected": "3.11.0-alpha3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha4"
+            },
+            {
+              "last_affected": "3.11.0-alpha4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha5"
+            },
+            {
+              "last_affected": "3.11.0-alpha5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha6"
+            },
+            {
+              "last_affected": "3.11.0-alpha6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-alpha7"
+            },
+            {
+              "last_affected": "3.11.0-alpha7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-beta1"
+            },
+            {
+              "last_affected": "3.11.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-beta2"
+            },
+            {
+              "last_affected": "3.11.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0-beta3"
+            },
+            {
+              "last_affected": "3.11.0-beta3"
             }
           ]
         }
@@ -168,6 +266,6 @@
       "url": "https://security.gentoo.org/glsa/202305-02"
     }
   ],
-  "published": "2023-09-04T15:56:08.907Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:11.761Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

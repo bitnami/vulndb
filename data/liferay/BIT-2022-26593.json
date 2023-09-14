@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "7.3",
-        "7.3-fix"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -31,6 +27,28 @@
             },
             {
               "fixed": "7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3"
+            },
+            {
+              "last_affected": "7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
             }
           ]
         }
@@ -55,6 +73,6 @@
       "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-26593-stored-xss-with-category-name-in-asset-categories-selector"
     }
   ],
-  "published": "2023-09-04T15:46:24.808Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:18.504Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

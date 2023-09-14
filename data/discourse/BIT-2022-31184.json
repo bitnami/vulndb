@@ -18,15 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "2.9.0-beta1",
-        "2.9.0-beta2",
-        "2.9.0-beta3",
-        "2.9.0-beta4",
-        "2.9.0-beta5",
-        "2.9.0-beta6",
-        "2.9.0-beta7"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -36,6 +27,83 @@
             },
             {
               "fixed": "2.8.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta1"
+            },
+            {
+              "last_affected": "2.9.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta2"
+            },
+            {
+              "last_affected": "2.9.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta3"
+            },
+            {
+              "last_affected": "2.9.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta4"
+            },
+            {
+              "last_affected": "2.9.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
             }
           ]
         }
@@ -65,6 +133,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-m5w9-8gp8-2hrf"
     }
   ],
-  "published": "2023-09-04T15:47:26.903Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:24.667Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "18.12.0",
-        "19.0.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -77,6 +73,28 @@
               "fixed": "18.11.0"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.12.0"
+            },
+            {
+              "last_affected": "18.12.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "last_affected": "19.0.0"
+            }
+          ]
         }
       ]
     }
@@ -112,6 +130,6 @@
       "url": "https://www.debian.org/security/2023/dsa-5326"
     }
   ],
-  "published": "2023-09-04T15:46:54.607Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:21.722Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

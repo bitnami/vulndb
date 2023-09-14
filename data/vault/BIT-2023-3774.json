@@ -18,10 +18,40 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "1.12.8",
-        "1.13.4",
-        "1.14.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.12.8"
+            },
+            {
+              "last_affected": "1.12.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.13.4"
+            },
+            {
+              "last_affected": "1.13.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "last_affected": "1.14.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +69,6 @@
       "url": "https://discuss.hashicorp.com/t/hcsec-2023-23-vault-enterprise-namespace-creation-may-lead-to-denial-of-service/56617"
     }
   ],
-  "published": "2023-09-04T15:56:11.009Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:14.727Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

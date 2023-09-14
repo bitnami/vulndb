@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
         }
       ],
-      "versions": [
-        "3.2.8"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2.8"
+            },
+            {
+              "last_affected": "3.2.8"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://www.phpbb.com/community/viewtopic.php?f=14&t=2534536"
     }
   ],
-  "published": "2023-09-04T15:48:10.908Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:29.419Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

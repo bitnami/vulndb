@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
         }
       ],
-      "versions": [
-        "2.7.3"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.3"
+            },
+            {
+              "last_affected": "2.7.3"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://github.com/modxcms/revolution/issues/15237"
     }
   ],
-  "published": "2023-09-04T15:40:45.708Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:45.497Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

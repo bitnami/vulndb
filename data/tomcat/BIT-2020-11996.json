@@ -18,40 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "9.0.0-milestone1",
-        "9.0.0-milestone10",
-        "9.0.0-milestone11",
-        "9.0.0-milestone12",
-        "9.0.0-milestone13",
-        "9.0.0-milestone14",
-        "9.0.0-milestone15",
-        "9.0.0-milestone16",
-        "9.0.0-milestone17",
-        "9.0.0-milestone18",
-        "9.0.0-milestone19",
-        "9.0.0-milestone2",
-        "9.0.0-milestone20",
-        "9.0.0-milestone21",
-        "9.0.0-milestone22",
-        "9.0.0-milestone23",
-        "9.0.0-milestone24",
-        "9.0.0-milestone25",
-        "9.0.0-milestone26",
-        "9.0.0-milestone27",
-        "9.0.0-milestone3",
-        "9.0.0-milestone4",
-        "9.0.0-milestone5",
-        "9.0.0-milestone6",
-        "9.0.0-milestone7",
-        "9.0.0-milestone8",
-        "9.0.0-milestone9",
-        "10.0.0-milestone1",
-        "10.0.0-milestone2",
-        "10.0.0-milestone3",
-        "10.0.0-milestone4",
-        "10.0.0-milestone5"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -72,6 +38,358 @@
             },
             {
               "fixed": "9.0.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone1"
+            },
+            {
+              "last_affected": "9.0.0-milestone1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone10"
+            },
+            {
+              "last_affected": "9.0.0-milestone10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone11"
+            },
+            {
+              "last_affected": "9.0.0-milestone11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone12"
+            },
+            {
+              "last_affected": "9.0.0-milestone12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone13"
+            },
+            {
+              "last_affected": "9.0.0-milestone13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone14"
+            },
+            {
+              "last_affected": "9.0.0-milestone14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone15"
+            },
+            {
+              "last_affected": "9.0.0-milestone15"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone16"
+            },
+            {
+              "last_affected": "9.0.0-milestone16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone17"
+            },
+            {
+              "last_affected": "9.0.0-milestone17"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone18"
+            },
+            {
+              "last_affected": "9.0.0-milestone18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone19"
+            },
+            {
+              "last_affected": "9.0.0-milestone19"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone2"
+            },
+            {
+              "last_affected": "9.0.0-milestone2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone20"
+            },
+            {
+              "last_affected": "9.0.0-milestone20"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone21"
+            },
+            {
+              "last_affected": "9.0.0-milestone21"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone22"
+            },
+            {
+              "last_affected": "9.0.0-milestone22"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone23"
+            },
+            {
+              "last_affected": "9.0.0-milestone23"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone24"
+            },
+            {
+              "last_affected": "9.0.0-milestone24"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone25"
+            },
+            {
+              "last_affected": "9.0.0-milestone25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone26"
+            },
+            {
+              "last_affected": "9.0.0-milestone26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone27"
+            },
+            {
+              "last_affected": "9.0.0-milestone27"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone3"
+            },
+            {
+              "last_affected": "9.0.0-milestone3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone4"
+            },
+            {
+              "last_affected": "9.0.0-milestone4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone5"
+            },
+            {
+              "last_affected": "9.0.0-milestone5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone6"
+            },
+            {
+              "last_affected": "9.0.0-milestone6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone7"
+            },
+            {
+              "last_affected": "9.0.0-milestone7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone8"
+            },
+            {
+              "last_affected": "9.0.0-milestone8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone9"
+            },
+            {
+              "last_affected": "9.0.0-milestone9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone1"
+            },
+            {
+              "last_affected": "10.0.0-milestone1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone2"
+            },
+            {
+              "last_affected": "10.0.0-milestone2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone3"
+            },
+            {
+              "last_affected": "10.0.0-milestone3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone4"
+            },
+            {
+              "last_affected": "10.0.0-milestone4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone5"
+            },
+            {
+              "last_affected": "10.0.0-milestone5"
             }
           ]
         }
@@ -214,6 +532,6 @@
       "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
     }
   ],
-  "published": "2023-09-04T16:01:40.606Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:51.221Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

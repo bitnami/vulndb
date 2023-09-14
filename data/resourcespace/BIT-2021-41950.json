@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
         }
       ],
-      "versions": [
-        "9.6"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.6"
+            },
+            {
+              "last_affected": "9.6"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://www.horizon3.ai/multiple-vulnerabilities-in-resourcespace/"
     }
   ],
-  "published": "2023-09-04T15:51:16.507Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:49.356Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

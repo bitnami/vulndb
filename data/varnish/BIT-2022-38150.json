@@ -18,11 +18,51 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "7.0.0",
-        "7.0.1",
-        "7.0.2",
-        "7.1.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.1"
+            },
+            {
+              "last_affected": "7.0.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.2"
+            },
+            {
+              "last_affected": "7.0.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "last_affected": "7.1.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -53,6 +93,6 @@
       "url": "https://varnish-cache.org/security/VSV00009.html"
     }
   ],
-  "published": "2023-09-04T15:56:39.705Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:17.515Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

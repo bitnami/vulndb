@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "7.2.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -41,6 +38,17 @@
             },
             {
               "fixed": "7.1.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "last_affected": "7.2.0"
             }
           ]
         }
@@ -84,6 +92,6 @@
       "url": "https://www.debian.org/security/2023/dsa-5334"
     }
   ],
-  "published": "2023-09-04T15:56:03.407Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:14.243Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

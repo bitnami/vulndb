@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "5.4.4"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.4"
+            },
+            {
+              "last_affected": "5.4.4"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://brick-pamphlet-d24.notion.site/LimeSurvey-V5-4-4-background-update-php-SQL-injection-50e8fd6eba4644bb941b2c8d6fb7979a"
     }
   ],
-  "published": "2023-09-04T15:39:18.405Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:37.024Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

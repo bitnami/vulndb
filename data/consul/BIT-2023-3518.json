@@ -18,9 +18,29 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
         }
       ],
-      "versions": [
-        "1.16.0",
-        "1.16.0-rc1"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "last_affected": "1.16.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0-rc1"
+            },
+            {
+              "last_affected": "1.16.0-rc1"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -38,6 +58,6 @@
       "url": "https://discuss.hashicorp.com/t/hcsec-2023-25-consul-jwt-auth-in-l7-intentions-allow-for-mismatched-service-identity-and-jwt-providers/57004"
     }
   ],
-  "published": "2023-09-04T15:32:38.608Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:58.094Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

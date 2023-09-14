@@ -18,15 +18,95 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "2.6.0",
-        "2.6.0-rc1",
-        "2.6.0-rc2",
-        "2.6.0-rc3",
-        "2.6.0-rc4",
-        "2.6.0-rc5",
-        "2.6.0-rc6",
-        "2.6.0-rc7"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "last_affected": "2.6.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc2"
+            },
+            {
+              "last_affected": "2.6.0-rc2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc3"
+            },
+            {
+              "last_affected": "2.6.0-rc3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc4"
+            },
+            {
+              "last_affected": "2.6.0-rc4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc5"
+            },
+            {
+              "last_affected": "2.6.0-rc5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc6"
+            },
+            {
+              "last_affected": "2.6.0-rc6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc7"
+            },
+            {
+              "last_affected": "2.6.0-rc7"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -61,6 +141,6 @@
       "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-mv6w-j4xc-qpfw"
     }
   ],
-  "published": "2023-09-04T15:32:04.009Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:56.809Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

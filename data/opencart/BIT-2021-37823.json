@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "3.0.3.7"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.3.7"
+            },
+            {
+              "last_affected": "3.0.3.7"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://medium.com/%40nowczj/sql-injection-exists-in-the-background-of-opencart-d41b5c58e99e"
     }
   ],
-  "published": "2023-09-04T15:44:38.305Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:09.655Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

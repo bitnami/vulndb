@@ -18,8 +18,18 @@
           "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "5.9.4"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.9.4"
+            },
+            {
+              "last_affected": "5.9.4"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2022-1686"
     }
   ],
-  "published": "2023-09-04T15:36:08.505Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:17.858Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

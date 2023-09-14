@@ -18,12 +18,62 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
         }
       ],
-      "versions": [
-        "2.9.0-beta5",
-        "2.9.0-beta6",
-        "2.9.0-beta7",
-        "2.9.0-beta8",
-        "2.9.0-beta9"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta8"
+            },
+            {
+              "last_affected": "2.9.0-beta8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta9"
+            },
+            {
+              "last_affected": "2.9.0-beta9"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -51,6 +101,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-cv64-v73f-7wq5"
     }
   ],
-  "published": "2023-09-04T15:46:06.704Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:17.013Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

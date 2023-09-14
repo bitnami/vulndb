@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "1.35"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.35"
+            },
+            {
+              "last_affected": "1.35"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://phabricator.wikimedia.org/T240773"
     }
   ],
-  "published": "2023-09-04T16:02:05.418Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:52.162Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

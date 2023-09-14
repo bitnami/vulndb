@@ -18,12 +18,6 @@
           "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "4.0.0-rc1",
-        "4.0.0-rc2",
-        "4.0.0-rc3",
-        "4.0.0-rc4"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -33,6 +27,50 @@
             },
             {
               "fixed": "3.5.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0-rc1"
+            },
+            {
+              "last_affected": "4.0.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0-rc2"
+            },
+            {
+              "last_affected": "4.0.0-rc2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0-rc3"
+            },
+            {
+              "last_affected": "4.0.0-rc3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0-rc4"
+            },
+            {
+              "last_affected": "4.0.0-rc4"
             }
           ]
         }
@@ -59,6 +97,6 @@
       "url": "https://huntr.dev/bounties/2f96f990-01c2-44ea-ae47-58bdb3aa455b"
     }
   ],
-  "published": "2023-09-04T15:41:42.209Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:51.554Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "9.8"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -30,6 +27,17 @@
             },
             {
               "fixed": "9.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.8"
+            },
+            {
+              "last_affected": "9.8"
             }
           ]
         }
@@ -53,6 +61,6 @@
       "url": "https://www.resourcespace.com"
     }
   ],
-  "published": "2023-09-04T15:50:45.907Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:46.225Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

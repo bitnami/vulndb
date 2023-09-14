@@ -18,9 +18,29 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "2.4.49",
-        "2.4.50"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.49"
+            },
+            {
+              "last_affected": "2.4.49"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.50"
+            },
+            {
+              "last_affected": "2.4.50"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -153,6 +173,6 @@
       "url": "https://www.povilaika.com/apache-2-4-50-exploit/"
     }
   ],
-  "published": "2023-09-04T15:37:02.407Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:21.796Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

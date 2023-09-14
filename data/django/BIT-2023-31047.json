@@ -18,11 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "4.2",
-        "4.2-b1",
-        "4.2-rc1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -43,6 +38,39 @@
             },
             {
               "fixed": "4.1.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2"
+            },
+            {
+              "last_affected": "4.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2-b1"
+            },
+            {
+              "last_affected": "4.2-b1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2-rc1"
+            },
+            {
+              "last_affected": "4.2-rc1"
             }
           ]
         }
@@ -84,6 +112,6 @@
       "url": "https://www.djangoproject.com/weblog/2023/may/03/security-releases/"
     }
   ],
-  "published": "2023-09-04T15:33:08.505Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:01.357Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

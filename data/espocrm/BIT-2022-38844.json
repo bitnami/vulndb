@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "7.1.8"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1.8"
+            },
+            {
+              "last_affected": "7.1.8"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://medium.com/cybersecurity-valuelabs/espocrm-7-1-8-is-vulnerable-to-csv-injection-4c07494e2a76"
     }
   ],
-  "published": "2023-09-04T15:33:58.903Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:06.090Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "1.31.10"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -30,6 +27,17 @@
             },
             {
               "fixed": "1.34.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.31.10"
+            },
+            {
+              "last_affected": "1.31.10"
             }
           ]
         }
@@ -61,6 +69,6 @@
       "url": "https://lists.wikimedia.org/pipermail/mediawiki-l/2020-September/048488.html"
     }
   ],
-  "published": "2023-09-04T16:03:31.830Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:44:09.347Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

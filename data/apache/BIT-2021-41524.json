@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "2.4.49"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.49"
+            },
+            {
+              "last_affected": "2.4.49"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -63,6 +73,6 @@
       "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
     }
   ],
-  "published": "2023-09-04T15:37:35.304Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:25.087Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

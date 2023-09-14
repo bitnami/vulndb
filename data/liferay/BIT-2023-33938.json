@@ -18,10 +18,40 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "7.3",
-        "7.3-fix",
-        "7.3-fix"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3"
+            },
+            {
+              "last_affected": "7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +69,6 @@
       "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33938"
     }
   ],
-  "published": "2023-09-04T15:42:16.810Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:54.550Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

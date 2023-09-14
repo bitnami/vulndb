@@ -18,12 +18,62 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "19.0.0",
-        "19.1.0",
-        "20.0.0",
-        "20.0.1",
-        "21.0.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "last_affected": "19.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "last_affected": "19.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "last_affected": "20.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.1"
+            },
+            {
+              "last_affected": "20.0.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "last_affected": "21.0.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +93,6 @@
       "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1904060"
     }
   ],
-  "published": "2023-09-04T15:58:06.110Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:24.588Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "5.4.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "last_affected": "5.4.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://www.lua.org/bugs.html#5.4.0-12"
     }
   ],
-  "published": "2023-09-04T15:41:06.810Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:47.922Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "10.9.1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -87,6 +84,17 @@
               "fixed": "10.8.4"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.9.1"
+            },
+            {
+              "last_affected": "10.9.1"
+            }
+          ]
         }
       ]
     }
@@ -120,6 +128,6 @@
       "url": "https://security.netapp.com/advisory/ntap-20221104-0008/"
     }
   ],
-  "published": "2023-09-04T15:39:28.404Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:38.360Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

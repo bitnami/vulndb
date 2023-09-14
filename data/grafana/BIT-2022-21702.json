@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "2.0.0-beta1",
-        "2.0.0-beta3"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -42,6 +38,28 @@
             },
             {
               "fixed": "8.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0-beta1"
+            },
+            {
+              "last_affected": "2.0.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0-beta3"
+            },
+            {
+              "last_affected": "2.0.0-beta3"
             }
           ]
         }
@@ -86,6 +104,6 @@
       "url": "https://security.netapp.com/advisory/ntap-20220303-0005/"
     }
   ],
-  "published": "2023-09-04T15:43:18.503Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:00.788Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "5.2"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.2"
+            },
+            {
+              "last_affected": "5.2"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://www.cvedetails.com/vulnerability-list/vendor_id-13372/product_id-27784/opxss-1/Alfresco-Alfresco.html"
     }
   ],
-  "published": "2023-09-04T15:32:44.209Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:57.698Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

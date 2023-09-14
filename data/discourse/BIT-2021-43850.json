@@ -18,17 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "2.8.0-beta1",
-        "2.8.0-beta2",
-        "2.8.0-beta3",
-        "2.8.0-beta4",
-        "2.8.0-beta5",
-        "2.8.0-beta6",
-        "2.8.0-beta7",
-        "2.8.0-beta8",
-        "2.8.0-beta9"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -38,6 +27,105 @@
             },
             {
               "fixed": "2.7.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta1"
+            },
+            {
+              "last_affected": "2.8.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta2"
+            },
+            {
+              "last_affected": "2.8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta3"
+            },
+            {
+              "last_affected": "2.8.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta4"
+            },
+            {
+              "last_affected": "2.8.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta5"
+            },
+            {
+              "last_affected": "2.8.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta6"
+            },
+            {
+              "last_affected": "2.8.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta7"
+            },
+            {
+              "last_affected": "2.8.0-beta7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta8"
+            },
+            {
+              "last_affected": "2.8.0-beta8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta9"
+            },
+            {
+              "last_affected": "2.8.0-beta9"
             }
           ]
         }
@@ -69,6 +157,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-59jr-pj65-qmvr"
     }
   ],
-  "published": "2023-09-04T15:52:14.109Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:50.920Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

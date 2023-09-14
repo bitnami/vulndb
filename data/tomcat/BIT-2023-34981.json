@@ -18,11 +18,51 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "8.5.88",
-        "9.0.74",
-        "10.1.8",
-        "11.0.0-milestone5"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.88"
+            },
+            {
+              "last_affected": "8.5.88"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.74"
+            },
+            {
+              "last_affected": "9.0.74"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.8"
+            },
+            {
+              "last_affected": "10.1.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0-milestone5"
+            },
+            {
+              "last_affected": "11.0.0-milestone5"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -45,6 +85,6 @@
       "url": "https://security.netapp.com/advisory/ntap-20230714-0003/"
     }
   ],
-  "published": "2023-09-04T15:56:00.210Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:13.254Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

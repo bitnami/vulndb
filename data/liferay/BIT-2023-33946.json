@@ -18,11 +18,51 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "7.4",
-        "7.4-update1",
-        "7.4-update34",
-        "7.4-update36"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4"
+            },
+            {
+              "last_affected": "7.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update1"
+            },
+            {
+              "last_affected": "7.4-update1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update34"
+            },
+            {
+              "last_affected": "7.4-update34"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update36"
+            },
+            {
+              "last_affected": "7.4-update36"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -41,6 +81,6 @@
       "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33946"
     }
   ],
-  "published": "2023-09-04T15:40:03.009Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:41.819Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }
