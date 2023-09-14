@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "11.0.0-milestone1",
-        "11.0.0-milestone2"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -55,6 +51,28 @@
               "fixed": "10.1.6"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0-milestone1"
+            },
+            {
+              "last_affected": "11.0.0-milestone1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0-milestone2"
+            },
+            {
+              "last_affected": "11.0.0-milestone2"
+            }
+          ]
         }
       ]
     }
@@ -73,6 +91,6 @@
       "url": "https://lists.apache.org/thread/hdksc59z3s7tm39x0pp33mtwdrt8qr67"
     }
   ],
-  "published": "2023-09-04T15:56:36.405Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:16.064Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

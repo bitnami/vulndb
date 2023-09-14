@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "5.35.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.35.0"
+            },
+            {
+              "last_affected": "5.35.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +53,6 @@
       "url": "https://gist.github.com/yurahod/828d5e6a077c12f3f74c6485d1c7f0e7"
     }
   ],
-  "published": "2023-09-04T15:35:01.204Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:11.765Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

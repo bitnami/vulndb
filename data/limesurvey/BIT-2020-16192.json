@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "4.3.2"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.3.2"
+            },
+            {
+              "last_affected": "4.3.2"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://github.com/LimeSurvey/LimeSurvey/pull/1479/commits/4109a8d157e46c48ca34b995ef61a6e0f6905236"
     }
   ],
-  "published": "2023-09-04T15:41:43.804Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:51.728Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

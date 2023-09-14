@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "20.0.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "last_affected": "20.0.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://security.netapp.com/advisory/ntap-20230803-0008/"
     }
   ],
-  "published": "2023-09-04T15:45:33.703Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:14.214Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

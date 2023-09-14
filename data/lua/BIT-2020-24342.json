@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "5.4.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "last_affected": "5.4.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +53,6 @@
       "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QA5Q5MDQMTGXRQO3PAQ4EZFTYWJXZM5N/"
     }
   ],
-  "published": "2023-09-04T15:41:22.007Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:49.354Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

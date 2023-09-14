@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "4.39.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.39.0"
+            },
+            {
+              "last_affected": "4.39.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://youtu.be/FCqWEvir2wE"
     }
   ],
-  "published": "2023-09-04T15:37:14.906Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:24.384Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

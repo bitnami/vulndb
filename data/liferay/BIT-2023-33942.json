@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "7.4-update50"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update50"
+            },
+            {
+              "last_affected": "7.4-update50"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33942"
     }
   ],
-  "published": "2023-09-04T15:41:10.106Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:48.379Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

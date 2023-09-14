@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "3.6.5"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.5"
+            },
+            {
+              "last_affected": "3.6.5"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://github.com/sass/libsass/issues/3174"
     }
   ],
-  "published": "2023-09-04T15:51:55.011Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:51.410Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

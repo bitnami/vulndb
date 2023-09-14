@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "1.1.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.1.0"
+            },
+            {
+              "last_affected": "1.1.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://github.com/jupyterhub/jupyterhub/releases"
     }
   ],
-  "published": "2023-09-04T15:37:30.506Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:26.367Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

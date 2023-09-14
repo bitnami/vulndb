@@ -18,9 +18,6 @@
           "score": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "10.8.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -87,6 +84,17 @@
               "fixed": "10.7.2"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.8.0"
+            },
+            {
+              "last_affected": "10.8.0"
+            }
+          ]
         }
       ]
     }
@@ -124,6 +132,6 @@
       "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-363/"
     }
   ],
-  "published": "2023-09-04T15:50:58.506Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:43.101Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

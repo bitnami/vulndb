@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "1.8.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "last_affected": "1.8.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -35,6 +45,6 @@
       "url": "https://github.com/fluent/fluentd/issues/2722"
     }
   ],
-  "published": "2023-09-04T15:34:11.305Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:07.896Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

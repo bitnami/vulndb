@@ -18,12 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "8.0-beta",
-        "8.0-beta2",
-        "8.0-beta3",
-        "8.0-rc"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -44,6 +38,50 @@
             },
             {
               "fixed": "8.0.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta"
+            },
+            {
+              "last_affected": "8.0-beta"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta2"
+            },
+            {
+              "last_affected": "8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta3"
+            },
+            {
+              "last_affected": "8.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-rc"
+            },
+            {
+              "last_affected": "8.0-rc"
             }
           ]
         }
@@ -70,6 +108,6 @@
       "url": "https://docs.suitecrm.com/admin/releases/7.12.x/"
     }
   ],
-  "published": "2023-09-04T15:56:13.511Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:13.451Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

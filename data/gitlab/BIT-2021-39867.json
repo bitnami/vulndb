@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         }
       ],
-      "versions": [
-        "4.3.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -43,6 +40,17 @@
               "fixed": "14.2.5"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "last_affected": "4.3.0"
+            }
+          ]
         }
       ]
     }
@@ -62,6 +70,6 @@
       "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39867.json"
     }
   ],
-  "published": "2023-09-04T16:06:54.542Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:46:54.125Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

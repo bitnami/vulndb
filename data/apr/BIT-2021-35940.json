@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
         }
       ],
-      "versions": [
-        "1.7.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "last_affected": "1.7.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -99,6 +109,6 @@
       "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
     }
   ],
-  "published": "2023-09-04T15:32:33.010Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:56.851Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

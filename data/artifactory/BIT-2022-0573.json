@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "7.35.0",
-        "7.36.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -143,6 +139,28 @@
               "fixed": "7.34.4"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.35.0"
+            },
+            {
+              "last_affected": "7.35.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.36.0"
+            },
+            {
+              "last_affected": "7.36.0"
+            }
+          ]
         }
       ]
     }
@@ -165,6 +183,6 @@
       "url": "https://www.jfrog.com/confluence/display/JFROG/JFrog+Security+Advisories"
     }
   ],
-  "published": "2023-09-04T15:32:21.108Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:55.685Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

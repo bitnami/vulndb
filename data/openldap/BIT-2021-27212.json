@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "2.5.0-alpha",
-        "2.5.1-alpha"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -31,6 +27,28 @@
             },
             {
               "fixed": "2.4.57"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0-alpha"
+            },
+            {
+              "last_affected": "2.5.0-alpha"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.1-alpha"
+            },
+            {
+              "last_affected": "2.5.1-alpha"
             }
           ]
         }
@@ -79,6 +97,6 @@
       "url": "https://www.debian.org/security/2021/dsa-4860"
     }
   ],
-  "published": "2023-09-04T15:45:31.608Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:13.172Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

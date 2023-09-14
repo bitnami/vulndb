@@ -18,11 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "4.0.0",
-        "4.1.0",
-        "4.1.1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -32,6 +27,39 @@
             },
             {
               "fixed": "4.0.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "last_affected": "4.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "last_affected": "4.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.1"
+            },
+            {
+              "last_affected": "4.1.1"
             }
           ]
         }
@@ -53,6 +81,6 @@
       "url": "https://moodle.org/mod/forum/discuss.php?d=445066"
     }
   ],
-  "published": "2023-09-04T15:43:26.108Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:01.735Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

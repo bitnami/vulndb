@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "4.1.12",
-        "4.1.12-200324"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -31,6 +27,28 @@
             },
             {
               "fixed": "4.1.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.12"
+            },
+            {
+              "last_affected": "4.1.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.12-200324"
+            },
+            {
+              "last_affected": "4.1.12-200324"
             }
           ]
         }
@@ -59,6 +77,6 @@
       "url": "https://www.exploit-db.com/exploits/48297"
     }
   ],
-  "published": "2023-09-04T15:42:17.303Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:55.107Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,9 +18,29 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "6.0.0",
-        "7.0.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "last_affected": "6.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.0.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -37,6 +57,6 @@
       "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29331"
     }
   ],
-  "published": "2023-09-04T15:36:01.307Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:18.098Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

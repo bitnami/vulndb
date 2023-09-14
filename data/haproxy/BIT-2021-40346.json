@@ -18,15 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "2.5-dev0",
-        "2.5-dev1",
-        "2.5-dev2",
-        "2.5-dev3",
-        "2.5-dev4",
-        "2.5-dev5",
-        "2.5-dev6"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -69,6 +60,83 @@
             },
             {
               "fixed": "2.4.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev0"
+            },
+            {
+              "last_affected": "2.5-dev0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev1"
+            },
+            {
+              "last_affected": "2.5-dev1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev2"
+            },
+            {
+              "last_affected": "2.5-dev2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev3"
+            },
+            {
+              "last_affected": "2.5-dev3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev4"
+            },
+            {
+              "last_affected": "2.5-dev4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev5"
+            },
+            {
+              "last_affected": "2.5-dev5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5-dev6"
+            },
+            {
+              "last_affected": "2.5-dev6"
             }
           ]
         }
@@ -130,6 +198,6 @@
       "url": "https://www.mail-archive.com/haproxy@formilux.org/msg41114.html"
     }
   ],
-  "published": "2023-09-04T15:37:13.307Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:25.209Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

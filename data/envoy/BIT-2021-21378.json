@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
         }
       ],
-      "versions": [
-        "1.17.0"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "last_affected": "1.17.0"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +53,6 @@
       "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-4996-m8hf-hj27"
     }
   ],
-  "published": "2023-09-04T15:43:19.408Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:59.434Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "7.4"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4"
+            },
+            {
+              "last_affected": "7.4"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +53,6 @@
       "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-42128"
     }
   ],
-  "published": "2023-09-04T15:43:57.310Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:04.282Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

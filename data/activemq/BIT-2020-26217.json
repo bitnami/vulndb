@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "5.15.4"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.15.4"
+            },
+            {
+              "last_affected": "5.15.4"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -91,6 +101,6 @@
       "url": "https://x-stream.github.io/CVE-2020-26217.html"
     }
   ],
-  "published": "2023-09-04T15:32:11.604Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:40:54.317Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

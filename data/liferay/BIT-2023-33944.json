@@ -18,19 +18,139 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "7.3",
-        "7.3-fix",
-        "7.3-fix",
-        "7.4",
-        "7.4-update1",
-        "7.4-update21",
-        "7.4-update34",
-        "7.4-update36",
-        "7.4-update41",
-        "7.4-update50",
-        "7.4-update52",
-        "7.4-update62"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3"
+            },
+            {
+              "last_affected": "7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4"
+            },
+            {
+              "last_affected": "7.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update1"
+            },
+            {
+              "last_affected": "7.4-update1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update21"
+            },
+            {
+              "last_affected": "7.4-update21"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update34"
+            },
+            {
+              "last_affected": "7.4-update34"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update36"
+            },
+            {
+              "last_affected": "7.4-update36"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update41"
+            },
+            {
+              "last_affected": "7.4-update41"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update50"
+            },
+            {
+              "last_affected": "7.4-update50"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update52"
+            },
+            {
+              "last_affected": "7.4-update52"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update62"
+            },
+            {
+              "last_affected": "7.4-update62"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -57,6 +177,6 @@
       "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33944"
     }
   ],
-  "published": "2023-09-04T15:40:39.609Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:45.083Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

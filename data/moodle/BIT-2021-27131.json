@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "3.10.1"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.1"
+            },
+            {
+              "last_affected": "3.10.1"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -43,6 +53,6 @@
       "url": "https://github.com/p4nk4jv/CVEs-Assigned/blob/master/Moodle-3.10.1-CVE-2021-27131.md"
     }
   ],
-  "published": "2023-09-04T16:00:26.214Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:36.391Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

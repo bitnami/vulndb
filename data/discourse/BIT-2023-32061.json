@@ -18,12 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
         }
       ],
-      "versions": [
-        "3.1.0-beta1",
-        "3.1.0-beta2",
-        "3.1.0-beta3",
-        "3.1.0-beta4"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -33,6 +27,50 @@
             },
             {
               "fixed": "3.0.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0-beta1"
+            },
+            {
+              "last_affected": "3.1.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0-beta2"
+            },
+            {
+              "last_affected": "3.1.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0-beta3"
+            },
+            {
+              "last_affected": "3.1.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0-beta4"
+            },
+            {
+              "last_affected": "3.1.0-beta4"
             }
           ]
         }
@@ -55,6 +93,6 @@
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-prx4-49m8-874g"
     }
   ],
-  "published": "2023-09-04T15:35:51.510Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:17.353Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

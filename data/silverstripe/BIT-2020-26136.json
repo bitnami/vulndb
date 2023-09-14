@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "4.6.0-rc1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -30,6 +27,17 @@
             },
             {
               "fixed": "4.6.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.6.0-rc1"
+            },
+            {
+              "last_affected": "4.6.0-rc1"
             }
           ]
         }
@@ -61,6 +69,6 @@
       "url": "https://www.silverstripe.org/download/security-releases/cve-2020-26136"
     }
   ],
-  "published": "2023-09-04T15:55:32.807Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:10.290Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,9 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "4.5.0"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -30,6 +27,17 @@
             },
             {
               "fixed": "4.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "last_affected": "4.5.0"
             }
           ]
         }
@@ -61,6 +69,6 @@
       "url": "https://www.pascom.net/doc/en/release-notes/pascom19/"
     }
   ],
-  "published": "2023-09-04T15:45:14.803Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:11.769Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

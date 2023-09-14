@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "versions": [
-        "3.31.1"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.31.1"
+            },
+            {
+              "last_affected": "3.31.1"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -75,6 +85,6 @@
       "url": "https://www.sqlite.org/cgi/src/info/abc473fb8fb99900"
     }
   ],
-  "published": "2023-09-04T15:55:24.005Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:08.604Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

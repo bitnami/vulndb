@@ -18,14 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "5.0.0",
-        "5.0.0-beta1",
-        "5.0.0-beta2",
-        "5.0.0-beta3",
-        "5.0.0-beta4",
-        "5.0.0-beta5"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -46,6 +38,72 @@
             },
             {
               "fixed": "9.1.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "last_affected": "5.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0-beta1"
+            },
+            {
+              "last_affected": "5.0.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0-beta2"
+            },
+            {
+              "last_affected": "5.0.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0-beta3"
+            },
+            {
+              "last_affected": "5.0.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0-beta4"
+            },
+            {
+              "last_affected": "5.0.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0-beta5"
+            },
+            {
+              "last_affected": "5.0.0-beta5"
             }
           ]
         }
@@ -82,6 +140,6 @@
       "url": "https://github.com/grafana/grafana/security/advisories/GHSA-x744-mm8v-vpgr"
     }
   ],
-  "published": "2023-09-04T15:38:47.117Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:34.557Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

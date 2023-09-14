@@ -18,20 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "10.1.0-milestone1",
-        "10.1.0-milestone10",
-        "10.1.0-milestone11",
-        "10.1.0-milestone12",
-        "10.1.0-milestone2",
-        "10.1.0-milestone3",
-        "10.1.0-milestone4",
-        "10.1.0-milestone5",
-        "10.1.0-milestone6",
-        "10.1.0-milestone7",
-        "10.1.0-milestone8",
-        "10.1.0-milestone9"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -63,6 +49,138 @@
             },
             {
               "fixed": "10.0.18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone1"
+            },
+            {
+              "last_affected": "10.1.0-milestone1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone10"
+            },
+            {
+              "last_affected": "10.1.0-milestone10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone11"
+            },
+            {
+              "last_affected": "10.1.0-milestone11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone12"
+            },
+            {
+              "last_affected": "10.1.0-milestone12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone2"
+            },
+            {
+              "last_affected": "10.1.0-milestone2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone3"
+            },
+            {
+              "last_affected": "10.1.0-milestone3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone4"
+            },
+            {
+              "last_affected": "10.1.0-milestone4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone5"
+            },
+            {
+              "last_affected": "10.1.0-milestone5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone6"
+            },
+            {
+              "last_affected": "10.1.0-milestone6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone7"
+            },
+            {
+              "last_affected": "10.1.0-milestone7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone8"
+            },
+            {
+              "last_affected": "10.1.0-milestone8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone9"
+            },
+            {
+              "last_affected": "10.1.0-milestone9"
             }
           ]
         }
@@ -105,6 +223,6 @@
       "url": "https://www.debian.org/security/2022/dsa-5265"
     }
   ],
-  "published": "2023-09-04T15:58:28.310Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:25.927Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

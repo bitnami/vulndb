@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "15-beta1",
-        "15-beta2"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -77,6 +73,28 @@
               "fixed": "14.5"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15-beta1"
+            },
+            {
+              "last_affected": "15-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15-beta2"
+            },
+            {
+              "last_affected": "15-beta2"
+            }
+          ]
         }
       ]
     }
@@ -103,6 +121,6 @@
       "url": "https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/"
     }
   ],
-  "published": "2023-09-04T15:50:22.908Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:40.486Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

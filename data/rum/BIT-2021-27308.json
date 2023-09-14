@@ -18,8 +18,18 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "1.8"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8"
+            },
+            {
+              "last_affected": "1.8"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -39,6 +49,6 @@
       "url": "https://github.com/4images/4images/issues/3"
     }
   ],
-  "published": "2023-09-04T15:51:08.905Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:48.372Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,12 +18,6 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
-      "versions": [
-        "7.2.0",
-        "7.2.0-rc1",
-        "7.2.0-rc2",
-        "7.2.0-rc3"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -33,6 +27,50 @@
             },
             {
               "fixed": "7.0.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "last_affected": "7.2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0-rc1"
+            },
+            {
+              "last_affected": "7.2.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0-rc2"
+            },
+            {
+              "last_affected": "7.2.0-rc2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0-rc3"
+            },
+            {
+              "last_affected": "7.2.0-rc3"
             }
           ]
         }
@@ -59,6 +97,6 @@
       "url": "https://github.com/redis/redis/security/advisories/GHSA-q4jr-5p56-4xwc"
     }
   ],
-  "published": "2023-09-13T06:35:00.712Z",
-  "modified": "2023-09-13T06:55:01.741Z"
+  "published": "2023-09-14T13:42:43.915Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

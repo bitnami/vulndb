@@ -18,54 +18,524 @@
           "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "7.1",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.1-fix",
-        "7.2",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.2-fix",
-        "7.3",
-        "7.3-fix",
-        "7.3-fix"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1"
+            },
+            {
+              "last_affected": "7.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix"
+            },
+            {
+              "last_affected": "7.1-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2"
+            },
+            {
+              "last_affected": "7.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix"
+            },
+            {
+              "last_affected": "7.2-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3"
+            },
+            {
+              "last_affected": "7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix"
+            },
+            {
+              "last_affected": "7.3-fix"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -135,6 +605,6 @@
       "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-42131"
     }
   ],
-  "published": "2023-09-04T15:43:07.111Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:41:59.331Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

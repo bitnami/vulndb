@@ -18,22 +18,6 @@
           "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
-      "versions": [
-        "10.0.0-milestone10",
-        "10.0.0-milestone5",
-        "10.0.0-milestone6",
-        "10.0.0-milestone7",
-        "10.0.0-milestone8",
-        "10.0.0-milestone9",
-        "10.1.0-milestone1",
-        "10.1.0-milestone2",
-        "10.1.0-milestone3",
-        "10.1.0-milestone4",
-        "10.1.0-milestone5",
-        "10.1.0-milestone6",
-        "10.1.0-milestone7",
-        "10.1.0-milestone8"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -65,6 +49,160 @@
             },
             {
               "fixed": "10.0.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone10"
+            },
+            {
+              "last_affected": "10.0.0-milestone10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone5"
+            },
+            {
+              "last_affected": "10.0.0-milestone5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone6"
+            },
+            {
+              "last_affected": "10.0.0-milestone6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone7"
+            },
+            {
+              "last_affected": "10.0.0-milestone7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone8"
+            },
+            {
+              "last_affected": "10.0.0-milestone8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0-milestone9"
+            },
+            {
+              "last_affected": "10.0.0-milestone9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone1"
+            },
+            {
+              "last_affected": "10.1.0-milestone1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone2"
+            },
+            {
+              "last_affected": "10.1.0-milestone2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone3"
+            },
+            {
+              "last_affected": "10.1.0-milestone3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone4"
+            },
+            {
+              "last_affected": "10.1.0-milestone4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone5"
+            },
+            {
+              "last_affected": "10.1.0-milestone5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone6"
+            },
+            {
+              "last_affected": "10.1.0-milestone6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone7"
+            },
+            {
+              "last_affected": "10.1.0-milestone7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0-milestone8"
+            },
+            {
+              "last_affected": "10.1.0-milestone8"
             }
           ]
         }
@@ -117,6 +255,6 @@
       "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
     }
   ],
-  "published": "2023-09-04T15:58:16.609Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:43:24.750Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

@@ -18,11 +18,6 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
-      "versions": [
-        "1.39.0",
-        "1.39.0-rc0",
-        "1.39.0-rc1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -45,6 +40,39 @@
               "fixed": "1.38.5"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.39.0"
+            },
+            {
+              "last_affected": "1.39.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.39.0-rc0"
+            },
+            {
+              "last_affected": "1.39.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.39.0-rc1"
+            },
+            {
+              "last_affected": "1.39.0-rc1"
+            }
+          ]
         }
       ]
     }
@@ -64,6 +92,6 @@
       "url": "https://phabricator.wikimedia.org/T323592"
     }
   ],
-  "published": "2023-09-04T15:45:06.606Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:08.166Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

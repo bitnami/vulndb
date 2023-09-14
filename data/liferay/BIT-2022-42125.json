@@ -18,9 +18,29 @@
           "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
-      "versions": [
-        "7.4-update1",
-        "7.4-update34"
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update1"
+            },
+            {
+              "last_affected": "7.4-update1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update34"
+            },
+            {
+              "last_affected": "7.4-update34"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -45,6 +65,6 @@
       "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-42125"
     }
   ],
-  "published": "2023-09-04T15:44:48.305Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:08.854Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }

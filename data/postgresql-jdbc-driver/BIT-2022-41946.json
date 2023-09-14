@@ -18,10 +18,6 @@
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
-      "versions": [
-        "42.5.0",
-        "42.5.0-rc1"
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -55,6 +51,28 @@
               "fixed": "42.4.3"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "42.5.0"
+            },
+            {
+              "last_affected": "42.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "42.5.0-rc1"
+            },
+            {
+              "last_affected": "42.5.0-rc1"
+            }
+          ]
         }
       ]
     }
@@ -85,6 +103,6 @@
       "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/25TY2L3RMVNOC7VAHJEAO7PTT6M6JJAD/"
     }
   ],
-  "published": "2023-09-04T15:48:50.409Z",
-  "modified": "2023-09-04T16:11:27.534Z"
+  "published": "2023-09-14T13:42:32.993Z",
+  "modified": "2023-09-14T13:50:47.856Z"
 }
