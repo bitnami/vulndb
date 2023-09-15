@@ -8,7 +8,7 @@
   "affected": [
     {
       "package": {
-        "ecosystem": "bitnami",
+        "ecosystem": "Bitnami",
         "name": "postgresql",
         "purl": "pkg:bitnami/postgresql"
       },
@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "10.0"
+              "introduced": "10.0.0"
             },
             {
-              "fixed": "10.14"
+              "fixed": "10.14.0"
             }
           ]
         },
@@ -34,10 +34,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "11.0"
+              "introduced": "11.0.0"
             },
             {
-              "fixed": "11.9"
+              "fixed": "11.9.0"
             }
           ]
         },
@@ -45,10 +45,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "12.0"
+              "introduced": "12.0.0"
             },
             {
-              "fixed": "12.4"
+              "fixed": "12.4.0"
             }
           ]
         }
@@ -100,5 +100,5 @@
     }
   ],
   "published": "2023-09-14T13:43:07.407Z",
-  "modified": "2023-09-14T13:50:47.856Z"
+  "modified": "2023-09-15T11:46:12.144Z"
 }

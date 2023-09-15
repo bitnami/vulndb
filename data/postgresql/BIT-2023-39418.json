@@ -8,7 +8,7 @@
   "affected": [
     {
       "package": {
-        "ecosystem": "bitnami",
+        "ecosystem": "Bitnami",
         "name": "postgresql",
         "purl": "pkg:bitnami/postgresql"
       },
@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "15.0"
+              "introduced": "15.0.0"
             },
             {
-              "fixed": "15.4"
+              "fixed": "15.4.0"
             }
           ]
         }
@@ -58,5 +58,5 @@
     }
   ],
   "published": "2023-09-14T13:42:33.171Z",
-  "modified": "2023-09-14T13:50:47.856Z"
+  "modified": "2023-09-15T11:46:12.144Z"
 }
