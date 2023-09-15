@@ -8,7 +8,7 @@
   "affected": [
     {
       "package": {
-        "ecosystem": "bitnami",
+        "ecosystem": "Bitnami",
         "name": "django",
         "purl": "pkg:bitnami/django"
       },
@@ -23,7 +23,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "3.2"
+              "introduced": "3.2.0"
             },
             {
               "fixed": "3.2.19"
@@ -34,7 +34,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "4.0"
+              "introduced": "4.0.0"
             },
             {
               "fixed": "4.1.9"
@@ -45,10 +45,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "4.2"
+              "introduced": "4.2.0"
             },
             {
-              "last_affected": "4.2"
+              "last_affected": "4.2.0"
             }
           ]
         },
@@ -56,10 +56,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "4.2-b1"
+              "introduced": "4.2-b1.0"
             },
             {
-              "last_affected": "4.2-b1"
+              "last_affected": "4.2-b1.0"
             }
           ]
         },
@@ -67,10 +67,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "4.2-rc1"
+              "introduced": "4.2-rc1.0"
             },
             {
-              "last_affected": "4.2-rc1"
+              "last_affected": "4.2-rc1.0"
             }
           ]
         }
@@ -113,5 +113,5 @@
     }
   ],
   "published": "2023-09-14T13:41:01.357Z",
-  "modified": "2023-09-14T13:50:47.856Z"
+  "modified": "2023-09-15T11:46:12.144Z"
 }
