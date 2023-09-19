@@ -116,6 +116,11 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2023-09
+
+* Harbor Notary signer
+* Harbor Notary server
+
 ### 2023-08
 
 * Bitnami Shell
