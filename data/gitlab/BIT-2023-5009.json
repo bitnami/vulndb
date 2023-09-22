@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-5009",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 13.12 before 16.2.7, all versions starting from 16.3 before 16.3.4. It was possible for an attacker to run pipeline jobs as an arbitrary user via scheduled security scan policies. This was a bypass of [CVE-2023-3932](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3932) showing additional impact.",
+  "aliases": [
+    "CVE-2023-5009"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.12.0"
+            },
+            {
+              "fixed": "16.2.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "fixed": "16.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/425304"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2147126"
+    }
+  ],
+  "published": "2023-09-22T06:16:34.476Z",
+  "modified": "2023-09-22T06:27:27.121Z"
+}
