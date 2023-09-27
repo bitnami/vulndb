@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-3550",
+  "details": "Mediawiki v1.40.0 does not validate namespaces used in XML files.Therefore, if the instance administrator allows XML file uploads,a remote attacker with a low-privileged user account can use thisexploit to become an administrator by sending a malicious link tothe instance administrator.",
+  "aliases": [
+    "CVE-2023-3550"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.40.0"
+            },
+            {
+              "last_affected": "1.40.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/advisories/blondie/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mediawiki.org/wiki/MediaWiki/"
+    }
+  ],
+  "published": "2023-09-27T06:17:35.520Z",
+  "modified": "2023-09-27T06:28:28.305Z"
+}
