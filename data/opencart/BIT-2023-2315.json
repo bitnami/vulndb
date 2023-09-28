@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-2315",
+  "details": "Path Traversal in OpenCart versions 4.0.0.0 to 4.0.2.2 allows an authenticated user with access/modify privilege on the Log component to empty out arbitrary files on the server",
+  "aliases": [
+    "CVE-2023-2315"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "opencart",
+        "purl": "pkg:bitnami/opencart"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0.0"
+            },
+            {
+              "fixed": "4.0.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/opencart/opencart/commit/0a8dd91e385f70e42795380009fd644224c1bc97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://starlabs.sg/advisories/23/23-2315/"
+    }
+  ],
+  "published": "2023-09-28T06:17:40.579Z",
+  "modified": "2023-09-28T06:27:56.672Z"
+}
