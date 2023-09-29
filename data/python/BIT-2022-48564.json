@@ -23,10 +23,43 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "3.4.0"
+              "introduced": "0"
             },
             {
-              "fixed": "3.10.0"
+              "fixed": "3.7.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0-alpha1"
+            },
+            {
+              "last_affected": "3.10.0-alpha1"
             }
           ]
         }
@@ -36,7 +69,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.10.0:alpha1:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -46,5 +80,5 @@
     }
   ],
   "published": "2023-09-14T13:42:51.824Z",
-  "modified": "2023-09-15T11:46:12.144Z"
+  "modified": "2023-09-29T06:28:31.178Z"
 }
