@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-5353",
+  "details": "Improper Access Control in GitHub repository salesagility/suitecrm prior to 7.14.1.",
+  "aliases": [
+    "CVE-2023-5353"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.14.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/suitecrm/commit/c43eaa311fb010b7928983e6afc6f9075c3996aa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/3b3bb4f1-1aea-4134-99eb-157f245fa752"
+    }
+  ],
+  "published": "2023-10-05T06:18:53.195Z",
+  "modified": "2023-10-05T06:28:21.672Z"
+}
