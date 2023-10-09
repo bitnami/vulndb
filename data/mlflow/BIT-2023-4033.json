@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-4033",
+  "details": "OS Command Injection in GitHub repository mlflow/mlflow prior to 2.6.0.",
+  "aliases": [
+    "CVE-2023-4033"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/6dde93758d42455cb90ef324407919ed67668b9b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/5312d6f8-67a5-4607-bd47-5e19966fa321"
+    }
+  ],
+  "published": "2023-10-09T13:01:20.197Z",
+  "modified": "2023-10-09T13:13:23.479Z"
+}
