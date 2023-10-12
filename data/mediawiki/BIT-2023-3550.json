@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Critical",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*"
     ]
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://www.mediawiki.org/wiki/MediaWiki/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5520"
     }
   ],
   "published": "2023-09-27T06:17:35.520Z",
-  "modified": "2023-09-27T06:28:28.305Z"
+  "modified": "2023-10-12T06:28:15.611Z"
 }
