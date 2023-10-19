@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-45348",
+  "details": "Apache Airflow, versions 2.7.0 and 2.7.1, is affected by a vulnerability that allows an authenticated user to retrieve sensitive configuration information when the \"expose_config\" option is set to \"non-sensitive-only\". The `expose_config` option is False by default.It is recommended to upgrade to a version that is not affected.",
+  "aliases": [
+    "CVE-2023-45348"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/34712"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/sy4l5d6tn58hr8r61r2fkt1f0qock9z9"
+    }
+  ],
+  "published": "2023-10-19T06:17:15.370Z",
+  "modified": "2023-10-19T06:41:12.717Z"
+}
