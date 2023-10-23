@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-35958",
+  "details": "** DISPUTED ** TensorFlow through 2.5.0 allows attackers to overwrite arbitrary files via a crafted archive when tf.keras.utils.get_file is used with extract=True. NOTE: the vendor's position is that tf.keras.utils.get_file is not intended for untrusted archives.",
+  "aliases": [
+    "CVE-2021-35958"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.python.org/3/library/tarfile.html#tarfile.TarFile.extractall"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/b8cad4c631096a34461ff8a07840d5f4d123ce32/tensorflow/python/keras/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/b8cad4c631096a34461ff8a07840d5f4d123ce32/tensorflow/python/keras/utils/data_utils.py#L137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://keras.io/api/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuln.ryotak.me/advisories/52"
+    }
+  ],
+  "published": "2023-10-23T18:36:12.505Z",
+  "modified": "2023-10-23T18:41:18.796Z"
+}
