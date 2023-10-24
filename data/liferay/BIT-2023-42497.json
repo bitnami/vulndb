@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2023-42497",
+  "details": "Reflected cross-site scripting (XSS) vulnerability on the Export for Translation page in Liferay Portal 7.4.3.4 through 7.4.3.85, and Liferay DXP 7.4 before update 86 allows remote attackers to inject arbitrary web script or HTML via the `_com_liferay_translation_web_internal_portlet_TranslationPortlet_redirect` parameter.",
+  "aliases": [
+    "CVE-2023-42497"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "last_affected": "7.4.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update1.0"
+            },
+            {
+              "last_affected": "7.4-update1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update21.0"
+            },
+            {
+              "last_affected": "7.4-update21.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update34.0"
+            },
+            {
+              "last_affected": "7.4-update34.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update36.0"
+            },
+            {
+              "last_affected": "7.4-update36.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update41.0"
+            },
+            {
+              "last_affected": "7.4-update41.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update48.0"
+            },
+            {
+              "last_affected": "7.4-update48.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update50.0"
+            },
+            {
+              "last_affected": "7.4-update50.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update52.0"
+            },
+            {
+              "last_affected": "7.4-update52.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update62.0"
+            },
+            {
+              "last_affected": "7.4-update62.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update67.0"
+            },
+            {
+              "last_affected": "7.4-update67.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update76.0"
+            },
+            {
+              "last_affected": "7.4-update76.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update81.0"
+            },
+            {
+              "last_affected": "7.4-update81.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update82.0"
+            },
+            {
+              "last_affected": "7.4-update82.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update83.0"
+            },
+            {
+              "last_affected": "7.4-update83.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update84.0"
+            },
+            {
+              "last_affected": "7.4-update84.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update85.0"
+            },
+            {
+              "last_affected": "7.4-update85.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update21:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update34:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update36:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update41:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update48:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update50:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update52:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update62:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update67:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update76:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update81:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update82:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update83:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update84:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update85:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-42497"
+    }
+  ],
+  "published": "2023-10-24T18:19:58.066Z",
+  "modified": "2023-10-24T18:42:28.933Z"
+}
