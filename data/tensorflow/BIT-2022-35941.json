@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-35941",
+  "details": "TensorFlow is an open source platform for machine learning. The `AvgPoolOp` function takes an argument `ksize` that must be positive but is not checked. A negative `ksize` can trigger a `CHECK` failure and crash the program. We have patched the issue in GitHub commit 3a6ac52664c6c095aa2b114e742b0aa17fdce78f. The fix will be included in TensorFlow 2.10.0. We will also cherrypick this commit on TensorFlow 2.9.1, TensorFlow 2.8.1, and TensorFlow 2.7.2, as these are also affected and still in supported range. There are no known workarounds to this issue.",
+  "aliases": [
+    "CVE-2022-35941"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "fixed": "2.8.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc0.0"
+            },
+            {
+              "last_affected": "2.10-rc0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc1.0"
+            },
+            {
+              "last_affected": "2.10-rc1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc2.0"
+            },
+            {
+              "last_affected": "2.10-rc2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc3.0"
+            },
+            {
+              "last_affected": "2.10-rc3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc2:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc3:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/8d72537c6abf5a44103b57b9c2e22c14f5f49698/tensorflow/core/kernels/avgpooling_op.cc#L56-L98"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/3a6ac52664c6c095aa2b114e742b0aa17fdce78f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-mgmh-g2v6-mqw5"
+    }
+  ],
+  "published": "2023-10-23T18:33:04.058Z",
+  "modified": "2023-10-23T18:41:18.796Z"
+}

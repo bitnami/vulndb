@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2020-15192",
+  "details": "In Tensorflow before versions 2.2.1 and 2.3.1, if a user passes a list of strings to `dlpack.to_dlpack` there is a memory leak following an expected validation failure. The issue occurs because the `status` argument during validation failures is not properly checked. Since each of the above methods can return an error status, the `status` value must be checked before continuing. The issue is patched in commit 22e07fb204386768e5bcbea563641ea11f96ceb8 and is released in TensorFlow versions 2.2.1, or 2.3.1.",
+  "aliases": [
+    "CVE-2020-15192"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.2.0"
+            },
+            {
+              "last_affected": "2.2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "last_affected": "2.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:2.2.0:*:*:*:-:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00065.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/22e07fb204386768e5bcbea563641ea11f96ceb8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-8fxw-76px-3rxv"
+    }
+  ],
+  "published": "2023-10-23T18:38:39.005Z",
+  "modified": "2023-10-23T18:41:18.796Z"
+}

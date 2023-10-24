@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-29204",
+  "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, the implementation of `tf.raw_ops.UnsortedSegmentJoin` does not fully validate the input arguments. This results in a `CHECK`-failure which can be used to trigger a denial of service attack. The code assumes `num_segments` is a positive scalar but there is no validation. Since this value is used to allocate the output tensor, a negative value would result in a `CHECK`-failure (assertion failure), as per TFSA-2021-198. Versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4 contain a patch for this issue.",
+  "aliases": [
+    "CVE-2022-29204"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0-rc0"
+            },
+            {
+              "last_affected": "2.7.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0-rc1"
+            },
+            {
+              "last_affected": "2.7.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "last_affected": "2.8.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-rc0"
+            },
+            {
+              "last_affected": "2.8.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-rc1"
+            },
+            {
+              "last_affected": "2.8.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-rc0"
+            },
+            {
+              "last_affected": "2.9.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-rc1"
+            },
+            {
+              "last_affected": "2.9.0-rc1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.7.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.7.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.8.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.8.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.8.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.9.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.9.0:rc1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/f3b9bf4c3c0597563b289c0512e98d4ce81f886e/tensorflow/core/kernels/unsorted_segment_join_op.cc#L83-L14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/master/tensorflow/security/advisory/tfsa-2021-198.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/20cb18724b0bf6c09071a3f53434c4eec53cc147"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/84563f265f28b3c36a15335c8b005d405260e943"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.6.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.7.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.8.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.9.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-hx9q-2mx4-m4pg"
+    }
+  ],
+  "published": "2023-10-23T18:33:22.154Z",
+  "modified": "2023-10-23T18:41:18.796Z"
+}

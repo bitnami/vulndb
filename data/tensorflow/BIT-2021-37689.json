@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2021-37689",
+  "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions an attacker can craft a TFLite model that would trigger a null pointer dereference, which would result in a crash and denial of service. This is caused by the MLIR optimization of `L2NormalizeReduceAxis` operator. The [implementation](https://github.com/tensorflow/tensorflow/blob/149562d49faa709ea80df1d99fc41d005b81082a/tensorflow/compiler/mlir/lite/transforms/optimize.cc#L67-L70) unconditionally dereferences a pointer to an iterator to a vector without checking that the vector has elements. We have patched the issue in GitHub commit d6b57f461b39fd1aa8c1b870f1b974aac3554955. The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2021-37689"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "2.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc0"
+            },
+            {
+              "last_affected": "2.6.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc2"
+            },
+            {
+              "last_affected": "2.6.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/d6b57f461b39fd1aa8c1b870f1b974aac3554955"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-wf5p-c75w-w3wh"
+    }
+  ],
+  "published": "2023-10-23T18:35:14.547Z",
+  "modified": "2023-10-23T18:41:18.796Z"
+}
