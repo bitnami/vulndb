@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-2022-42344",
-  "details": "Adobe Commerce versions 2.4.3-p2 (and earlier), 2.3.7-p3 (and earlier) and 2.4.4 (and earlier) are affected by an improper input validation vulnerability. An authenticated attacker can trigger an insecure direct object reference in the `V1/customers/me` endpoint to achieve information exposure and privilege escalation.",
+  "details": "Adobe Commerce versions 2.4.3-p2 (and earlier), 2.3.7-p3 (and earlier) and 2.4.4 (and earlier) are affected by an Incorrect Authorization vulnerability. An authenticated attacker can exploit this vulnerability to achieve information exposure and privilege escalation.",
   "aliases": [
     "CVE-2022-42344"
   ],
@@ -153,5 +153,5 @@
     }
   ],
   "published": "2023-09-14T13:41:35.864Z",
-  "modified": "2023-09-15T11:46:12.144Z"
+  "modified": "2023-10-26T06:42:22.553Z"
 }
