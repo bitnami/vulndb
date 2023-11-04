@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-2022-27377",
+  "details": "MariaDB Server v10.6.3 and below was discovered to contain an use-after-free in the component Item_func_in::cleanup(), which is exploited via specially crafted SQL statements.",
+  "aliases": [
+    "CVE-2022-27377"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-client",
+        "purl": "pkg:bitnami/mysql-client"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.2.0"
+            },
+            {
+              "fixed": "10.2.44"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.7.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-26281"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/09/msg00023.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220526-0007/"
+    }
+  ],
+  "published": "2023-11-04T07:28:04.106Z",
+  "modified": "2023-11-04T07:43:32.399Z"
+}
