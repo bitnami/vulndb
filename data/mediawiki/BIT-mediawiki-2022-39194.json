@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2022-39194",
+  "details": "An issue was discovered in the MediaWiki through 1.38.2. The community configuration pages for the GrowthExperiments extension could cause a site to become unavailable due to insufficient validation when certain actions (including page moves) were performed.",
+  "aliases": [
+    "CVE-2022-39194"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.38.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T313205"
+    }
+  ],
+  "published": "2023-11-06T08:59:54.682Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

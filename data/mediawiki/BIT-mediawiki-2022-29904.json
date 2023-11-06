@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2022-29904",
+  "details": "The SemanticDrilldown extension for MediaWiki through 1.37.2 (before e688bdba6434591b5dff689a45e4d53459954773) allows SQL injection with certain '-' and '_' constraints.",
+  "aliases": [
+    "CVE-2022-29904"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.37.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/SemanticDrilldown/+/785213"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T306463"
+    }
+  ],
+  "published": "2023-11-06T09:01:06.266Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

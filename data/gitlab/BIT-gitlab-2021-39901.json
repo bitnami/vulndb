@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-39901",
+  "details": "In all versions of GitLab CE/EE since version 11.10, an admin of a group can see the SCIM token of that group by visiting a specific endpoint.",
+  "aliases": [
+    "CVE-2021-39901"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.10.0"
+            },
+            {
+              "fixed": "14.2.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.3.0"
+            },
+            {
+              "fixed": "14.3.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.4.0"
+            },
+            {
+              "last_affected": "14.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.4.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.4.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39901.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/11640"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/565884"
+    }
+  ],
+  "published": "2023-11-06T09:11:46.475Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

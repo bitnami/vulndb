@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-redis-2022-33105",
+  "details": "Redis v7.0 was discovered to contain a memory leak via the component streamGetEdgeID.",
+  "aliases": [
+    "CVE-2022-33105"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:7.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/4a7a4e42db8ff757cdf3f4a824f66426036034ef"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/pull/10753"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/pull/10829"
+    },
+    {
+      "type": "WEB",
+      "url": "https://raw.githubusercontent.com/redis/redis/7.0.1/00-RELEASENOTES"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202209-17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220729-0005/"
+    }
+  ],
+  "published": "2023-11-06T09:02:51.875Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

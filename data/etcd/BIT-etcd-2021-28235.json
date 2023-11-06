@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-etcd-2021-28235",
+  "details": "Authentication vulnerability found in Etcd-io v.3.4.10 allows remote attackers to escalate privileges via the debug function.",
+  "aliases": [
+    "CVE-2021-28235"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "etcd",
+        "purl": "pkg:bitnami/etcd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.4.10"
+            },
+            {
+              "last_affected": "3.4.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:etcd:etcd:3.4.10:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/etcd-io/etcd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/etcd-io/etcd/pull/15648"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lucyxss/etcd-3.4.10-test/blob/master/temp4cj.png"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lucyxss/etcd-3.4.10-test/blob/master/temp4cj_2.png"
+    }
+  ],
+  "published": "2023-11-06T08:51:46.863Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

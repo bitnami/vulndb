@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2020-8803",
+  "details": "SuiteCRM through 7.11.11 allows Directory Traversal to include arbitrary .php files within the webroot via add_to_prospect_list.",
+  "aliases": [
+    "CVE-2020-8803"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.11.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/156329/SuiteCRM-7.11.11-Broken-Access-Control-Local-File-Inclusion.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2020/Feb/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://suitecrm.com"
+    }
+  ],
+  "published": "2023-11-06T09:05:58.580Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

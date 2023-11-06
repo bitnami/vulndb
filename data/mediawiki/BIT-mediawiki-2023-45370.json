@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2023-45370",
+  "details": "An issue was discovered in the SportsTeams extension for MediaWiki before 1.35.12, 1.36.x through 1.39.x before 1.39.5, and 1.40.x before 1.40.1. SportsTeams: Special:SportsManagerLogo and Special:SportsTeamsManagerLogo do not check for the sportsteamsmanager user right, and thus an attacker may be able to affect pages that are concerned with sports teams.",
+  "aliases": [
+    "CVE-2023-45370"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.35.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.36.0"
+            },
+            {
+              "fixed": "1.39.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.40.0"
+            },
+            {
+              "last_affected": "1.40.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/SportsTeams/+/959699/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T345680"
+    }
+  ],
+  "published": "2023-11-06T08:55:26.393Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

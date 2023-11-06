@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-moodle-2020-1755",
+  "details": "In Moodle before 3.8.2, 3.7.5, 3.6.9 and 3.5.11, X-Forwarded-For headers could be used to spoof a user's IP, in order to bypass remote address checks.",
+  "aliases": [
+    "CVE-2020-1755"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=398351"
+    }
+  ],
+  "published": "2023-11-06T09:07:25.775Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

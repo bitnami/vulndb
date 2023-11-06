@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-12275",
+  "details": "GitLab 12.6 through 12.9 is vulnerable to a privilege escalation that allows an external user to create a personal snippet through the API.",
+  "aliases": [
+    "CVE-2020-12275"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.6.0"
+            },
+            {
+              "fixed": "12.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.8.0"
+            },
+            {
+              "fixed": "12.8.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.9.0"
+            },
+            {
+              "fixed": "12.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2020/03/26/security-release-12-dot-9-dot-1-released/"
+    }
+  ],
+  "published": "2023-11-06T09:16:22.343Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-silverstripe-2021-41559",
+  "details": "Silverstripe silverstripe/framework 4.8.1 has a quadratic blowup in Convert::xml2array() that enables a remote attack via a crafted XML document.",
+  "aliases": [
+    "CVE-2021-41559"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "silverstripe",
+        "purl": "pkg:bitnami/silverstripe"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.10.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:silverstripe:silverstripe:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/silverstripe/silverstripe-framework/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.silverstripe.org/download/security-releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.silverstripe.org/download/security-releases/cve-2021-41559"
+    }
+  ],
+  "published": "2023-11-06T09:02:16.855Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

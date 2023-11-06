@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2022-0755",
+  "details": "Missing Authorization in GitHub repository salesagility/suitecrm prior to 7.12.5.",
+  "aliases": [
+    "CVE-2022-0755"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/suitecrm/commit/e93b269f637de313f45b32c58cef5ec012a34f58"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/cc767dbc-c676-44c1-a9d1-cd17ae77ee7e"
+    }
+  ],
+  "published": "2023-11-06T09:03:52.281Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

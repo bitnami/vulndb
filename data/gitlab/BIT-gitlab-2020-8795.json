@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-8795",
+  "details": "In GitLab Enterprise Edition (EE) 12.5.0 through 12.7.5, sharing a group with a group could grant project access to unauthorized users.",
+  "aliases": [
+    "CVE-2020-8795"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.5.0"
+            },
+            {
+              "fixed": "12.7.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2020/02/13/critical-security-release-gitlab-12-dot-7-dot-6-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/categories/releases/"
+    }
+  ],
+  "published": "2023-11-06T09:14:03.196Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

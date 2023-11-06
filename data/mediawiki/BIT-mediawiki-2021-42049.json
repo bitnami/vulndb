@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2021-42049",
+  "details": "An issue was discovered in the Translate extension in MediaWiki through 1.36.2. Oversighters cannot undo revisions or oversight on pages where they suppressed information (such as PII). This allows oversighters to whitewash revisions.",
+  "aliases": [
+    "CVE-2021-42049"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I4d95220ef414337147235f7ebedc9b945c3348e3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T286884"
+    }
+  ],
+  "published": "2023-11-06T09:04:46.561Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

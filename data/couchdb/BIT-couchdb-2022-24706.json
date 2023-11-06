@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-couchdb-2022-24706",
+  "details": "In Apache CouchDB prior to 3.2.2, an attacker can access an improperly secured default installation without authenticating and gain admin privileges. The CouchDB documentation has always made recommendations for properly securing an installation, including recommending using a firewall in front of all CouchDB installations.",
+  "aliases": [
+    "CVE-2022-24706"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "couchdb",
+        "purl": "pkg:bitnami/couchdb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:couchdb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/167032/Apache-CouchDB-3.2.1-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/169702/Apache-CouchDB-Erlang-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/04/26/1"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/05/09/1"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/05/09/2"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/05/09/3"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/05/09/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.couchdb.org/en/3.2.2/setup/cluster.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/w24wo0h8nlctfps65txvk0oc5hdcnv00"
+    },
+    {
+      "type": "WEB",
+      "url": "https://medium.com/@_sadshade/couchdb-erlang-and-cookies-rce-on-default-settings-b1e9173a4bcd"
+    }
+  ],
+  "published": "2023-11-06T08:51:05.344Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

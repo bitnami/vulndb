@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-ejbca-2022-40711",
+  "details": "PrimeKey EJBCA 7.9.0.2 Community allows stored XSS in the End Entity section. A user with the RA Administrator role can inject an XSS payload to target higher-privilege users.",
+  "aliases": [
+    "CVE-2022-40711"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ejbca",
+        "purl": "pkg:bitnami/ejbca"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.9.0.2"
+            },
+            {
+              "last_affected": "7.9.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:primekey:ejbca:7.9.0.2:*:*:*:community:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://verneet.com/cve-2022-40711/"
+    }
+  ],
+  "published": "2023-11-06T08:51:10.585Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

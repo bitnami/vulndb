@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-lua-2020-15888",
+  "details": "Lua through 5.4.0 mishandles the interaction between stack resizes and garbage collection, leading to a heap-based buffer overflow, heap-based buffer over-read, or use-after-free.",
+  "aliases": [
+    "CVE-2020-15888"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "lua",
+        "purl": "pkg:bitnami/lua"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "last_affected": "5.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lua:lua:5.4.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00053.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00054.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00071.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00079.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lua/lua/commit/6298903e35217ab69c279056f925fb72900ce0b7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lua/lua/commit/eb41999461b6f428186c55abd95f4ce1a76217d5"
+    }
+  ],
+  "published": "2023-11-06T08:55:54.170Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

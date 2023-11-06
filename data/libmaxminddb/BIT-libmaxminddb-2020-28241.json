@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-libmaxminddb-2020-28241",
+  "details": "libmaxminddb before 1.4.3 has a heap-based buffer over-read in dump_entry_data_list in maxminddb.c.",
+  "aliases": [
+    "CVE-2020-28241"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libmaxminddb",
+        "purl": "pkg:bitnami/libmaxminddb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:maxmind:libmaxminddb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/maxmind/libmaxminddb/compare/1.4.2...1.4.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/maxmind/libmaxminddb/issues/236"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/maxmind/libmaxminddb/pull/237"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/11/msg00019.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6WUK4UCOB5FJVK36E22IRLEYGKMUWGBG/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ELTOHZBPO6XVUVADP4DPZBNQCPTYOQBV/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202011-15"
+    }
+  ],
+  "published": "2023-11-06T08:54:01.946Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

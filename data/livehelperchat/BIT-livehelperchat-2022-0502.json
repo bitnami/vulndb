@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-livehelperchat-2022-0502",
+  "details": "Cross-site Scripting (XSS) - Stored in Packagist remdex/livehelperchat prior to 3.93v.",
+  "aliases": [
+    "CVE-2022-0502"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "livehelperchat",
+        "purl": "pkg:bitnami/livehelperchat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.92.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/d3b107aaa8ec10816acc762d60e7321079c21706"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/34f2aa30-de7f-432a-8749-b43d2774140f"
+    }
+  ],
+  "published": "2023-11-06T08:55:10.650Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

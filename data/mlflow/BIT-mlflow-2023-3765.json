@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2023-3765",
+  "details": "Absolute Path Traversal in GitHub repository mlflow/mlflow prior to 2.5.0.",
+  "aliases": [
+    "CVE-2023-3765"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/6dde93758d42455cb90ef324407919ed67668b9b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/4be5fd63-8a0a-490d-9ee1-f33dc768ed76"
+    }
+  ],
+  "published": "2023-11-06T08:55:14.881Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

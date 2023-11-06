@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-aspnet-core-2021-43877",
+  "details": "ASP.NET Core and Visual Studio Elevation of Privilege Vulnerability",
+  "aliases": [
+    "CVE-2021-43877"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "aspnet-core",
+        "purl": "pkg:bitnami/aspnet-core"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "last_affected": "3.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "last_affected": "5.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "last_affected": "6.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:asp.net_core:3.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:6.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-43877"
+    }
+  ],
+  "published": "2023-11-06T08:51:09.658Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

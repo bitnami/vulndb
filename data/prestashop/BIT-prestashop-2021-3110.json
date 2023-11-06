@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2021-3110",
+  "details": "The store system in PrestaShop 1.7.7.0 allows time-based boolean SQL injection via the module=productcomments controller=CommentGrade id_products[] parameter.",
+  "aliases": [
+    "CVE-2021-3110"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.7.0"
+            },
+            {
+              "last_affected": "1.7.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:1.7.7.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://medium.com/@gondaliyajaimin797/cve-2021-3110-75a24943ca5e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49410"
+    }
+  ],
+  "published": "2023-11-06T09:02:32.464Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

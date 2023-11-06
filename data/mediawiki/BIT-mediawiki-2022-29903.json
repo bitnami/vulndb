@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2022-29903",
+  "details": "The Private Domains extension for MediaWiki through 1.37.2 (before 1ad65d4c1c199b375ea80988d99ab51ae068f766) allows CSRF for editing pages that store the extension's configuration. The attacker must trigger a POST request to Special:PrivateDomains.",
+  "aliases": [
+    "CVE-2022-29903"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.37.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/PrivateDomains/+/783416"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T306290"
+    }
+  ],
+  "published": "2023-11-06T09:01:13.880Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

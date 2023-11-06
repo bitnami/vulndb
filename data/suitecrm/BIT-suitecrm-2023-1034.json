@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2023-1034",
+  "details": "Path Traversal: '\\..\\filename' in GitHub repository salesagility/suitecrm prior to 7.12.9.",
+  "aliases": [
+    "CVE-2023-1034"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.12.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/suitecrm/commit/c19f221a41706efc8d73cef95c5e362c4f86bf06"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/0c1365bc-8d9a-4ae0-8b55-615d492b3730"
+    }
+  ],
+  "published": "2023-11-06T09:03:13.577Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

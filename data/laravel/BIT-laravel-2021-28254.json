@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-laravel-2021-28254",
+  "details": "A deserialization vulnerability in the destruct() function of Laravel v8.5.9 allows attackers to execute arbitrary commands.",
+  "aliases": [
+    "CVE-2021-28254"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "laravel",
+        "purl": "pkg:bitnami/laravel"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.9"
+            },
+            {
+              "last_affected": "8.5.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:laravel:laravel:8.5.9:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://s1mple-top.github.io/2021/03/09/Laravel8-new-pop-chain-mining-process/"
+    }
+  ],
+  "published": "2023-11-06T08:54:19.044Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

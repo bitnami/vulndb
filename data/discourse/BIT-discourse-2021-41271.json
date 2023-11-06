@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2021-41271",
+  "details": "Discourse is a platform for community discussion. In affected versions a maliciously crafted request could cause an error response to be cached by intermediate proxies. This could cause a loss of confidentiality for some content. This issue is patched in the latest stable, beta and tests-passed versions of Discourse.",
+  "aliases": [
+    "CVE-2021-41271"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta1"
+            },
+            {
+              "last_affected": "2.8.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta2"
+            },
+            {
+              "last_affected": "2.8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta3"
+            },
+            {
+              "last_affected": "2.8.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta4"
+            },
+            {
+              "last_affected": "2.8.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta5"
+            },
+            {
+              "last_affected": "2.8.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta6"
+            },
+            {
+              "last_affected": "2.8.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta7"
+            },
+            {
+              "last_affected": "2.8.0-beta7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta7:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/2da0001965c6d8632d723c46ea5df9f22a1a23f1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hf6r-mc9j-hf4p"
+    }
+  ],
+  "published": "2023-11-06T09:03:51.583Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

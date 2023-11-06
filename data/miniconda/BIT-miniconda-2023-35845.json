@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-miniconda-2023-35845",
+  "details": "Anaconda 3 2023.03-1-Linux allows local users to disrupt TLS certificate validation by modifying the cacert.pem file used by the installed pip program. This occurs because many files are installed as world-writable on Linux, ignoring umask, even when these files are installed as root. Miniconda is also affected.",
+  "aliases": [
+    "CVE-2023-35845"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "miniconda",
+        "purl": "pkg:bitnami/miniconda"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2023.03-1.0"
+            },
+            {
+              "last_affected": "2023.03-1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:anaconda:anaconda3:2023.03-1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://uponfurtherinvestigation.blogspot.com/2023/06/cve-2023-35845-anaconda3-creates.html"
+    }
+  ],
+  "published": "2023-11-06T08:55:01.160Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

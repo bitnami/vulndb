@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-phpmyadmin-2020-22278",
+  "details": "** DISPUTED ** phpMyAdmin through 5.0.2 allows CSV injection via Export Section. NOTE: the vendor disputes this because \"the CSV file is accurately generated based on the database contents.\"",
+  "aliases": [
+    "CVE-2020-22278"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmyadmin",
+        "purl": "pkg:bitnami/phpmyadmin"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cert.ikiu.ac.ir/public-files/news/document/CVE-99/CVE-2020-22278.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mega.nz/file/ySQnlQSR#vXzY46mgf0CE2ysYpWpbE4O6T_g37--rtaL8pqdHcQs"
+    }
+  ],
+  "published": "2023-11-06T09:00:19.482Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

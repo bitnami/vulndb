@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-laravel-2021-21263",
+  "details": "Laravel is a web application framework. Versions of Laravel before 6.20.11, 7.30.2 and 8.22.1 contain a query binding exploitation. This same exploit applies to the illuminate/database package which is used by Laravel. If a request is crafted where a field that is normally a non-array value is an array, and that input is not validated or cast to its expected type before being passed to the query builder, an unexpected number of query bindings can be added to the query. In some situations, this will simply lead to no results being returned by the query builder; however, it is possible certain queries could be affected in a way that causes the query to return unexpected results.",
+  "aliases": [
+    "CVE-2021-21263"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "laravel",
+        "purl": "pkg:bitnami/laravel"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.20.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.30.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.22.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.laravel.com/security-laravel-62011-7302-8221-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/laravel/framework/pull/35865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/laravel/framework/security/advisories/GHSA-3p32-j457-pg5x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/illuminate/database"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/laravel/framework"
+    }
+  ],
+  "published": "2023-11-06T08:54:28.787Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rabbitmq-2021-22116",
+  "details": "RabbitMQ all versions prior to 3.8.16 are prone to a denial of service vulnerability due to improper input validation in AMQP 1.0 client connection endpoint. A malicious user can exploit the vulnerability by sending malicious AMQP messages to the target RabbitMQ instance having the AMQP 1.0 plugin enabled.",
+  "aliases": [
+    "CVE-2021-22116"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.8.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/07/msg00011.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tanzu.vmware.com/security/cve-2021-22116"
+    }
+  ],
+  "published": "2023-11-06T09:01:15.987Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-postgresql-2020-21469",
+  "details": "** DISPUTED ** An issue was discovered in PostgreSQL 12.2 allows attackers to cause a denial of service via repeatedly sending SIGHUP signals. NOTE: this is disputed by the vendor because untrusted users cannot send SIGHUP signals; they can only be sent by a PostgreSQL superuser, a user with pg_reload_conf access, or a user with sufficient privileges at the OS level (the postgres account or the root account).",
+  "aliases": [
+    "CVE-2020-21469"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "last_affected": "12.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:12.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/message-id/CAA8ZSMqAHDCgo07hqKoM5XJaoQy6Vv76O7966agez4ffyQktkA%40mail.gmail.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/message-id/flat/CAA8ZSMqAHDCgo07hqKoM5XJaoQy6Vv76O7966agez4ffyQktkA%40mail.gmail.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/"
+    }
+  ],
+  "published": "2023-11-06T09:02:41.690Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

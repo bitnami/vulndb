@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-3363",
+  "details": "An information disclosure issue in Gitlab CE/EE affecting all versions from 13.6 prior to 15.11.10, all versions from 16.0 prior to 16.0.6, all versions from 16.1 prior to 16.1.1, resulted in the Sidekiq log including webhook tokens when the log format was set to `default`.",
+  "aliases": [
+    "CVE-2023-3363"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.6.0"
+            },
+            {
+              "fixed": "15.11.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.0.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.1.0"
+            },
+            {
+              "fixed": "16.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/409034"
+    }
+  ],
+  "published": "2023-11-06T08:56:58.157Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

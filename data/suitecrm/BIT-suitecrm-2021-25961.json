@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2021-25961",
+  "details": "In “SuiteCRM” application, v7.1.7 through v7.10.31 and v7.11-beta through v7.11.20 fail to properly invalidate password reset links that is associated with a deleted user id, which makes it possible for account takeover of any newly created user with the same user id.",
+  "aliases": [
+    "CVE-2021-25961"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1.7"
+            },
+            {
+              "fixed": "7.10.32"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.11.0"
+            },
+            {
+              "fixed": "7.11.21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM/commit/7124482fe07ee164923d974456ed31e45f65e513"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM/commit/f463031bee59676d7d5be53bb32d551cd70a5648"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.whitesourcesoftware.com/vulnerability-database/CVE-2021-25961"
+    }
+  ],
+  "published": "2023-11-06T09:05:43.190Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2020-8165",
+  "details": "A deserialization of untrusted data vulnernerability exists in rails < 5.2.4.3, rails < 6.0.3.1 that can allow an attacker to unmarshal user-provided objects in MemCacheStore and RedisCacheStore potentially resulting in an RCE.",
+  "aliases": [
+    "CVE-2020-8165"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00031.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00034.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/bv6fW4S0Y1c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/413388"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/06/msg00022.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00013.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://weblog.rubyonrails.org/2020/5/18/Rails-5-2-4-3-and-6-0-3-1-have-been-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4766"
+    }
+  ],
+  "published": "2023-11-06T09:03:20.451Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-liferay-2023-33950",
+  "details": "Pattern Redirects in Liferay Portal 7.4.3.48 through 7.4.3.76, and Liferay DXP 7.4 update 48 through 76 allows regular expressions that are vulnerable to ReDoS attacks to be used as patterns, which allows remote attackers to consume an excessive amount of server resources via crafted request URLs.",
+  "aliases": [
+    "CVE-2023-33950"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update48.0"
+            },
+            {
+              "last_affected": "7.4-update48.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update76.0"
+            },
+            {
+              "last_affected": "7.4-update76.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update48:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update76:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33950"
+    }
+  ],
+  "published": "2023-11-06T08:55:17.073Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2023-30151",
+  "details": "A SQL injection vulnerability in the Boxtal (envoimoinscher) module for PrestaShop, after version 3.1.10, allows remote attackers to execute arbitrary SQL commands via the `key` GET parameter.",
+  "aliases": [
+    "CVE-2023-30151"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://addons.prestashop.com/en/shipping-carriers/1755-boxtal-connect-turnkey-shipping-solution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://help.boxtal.com/hc/fr/articles/360001342977-J-ai-besoin-du-module-PrestaShop-ancienne-version-Boxtal-Envoimoinscher-pour-mon-site"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.friendsofpresta.org/module/2023/06/20/envoimoinscher.html"
+    }
+  ],
+  "published": "2023-11-06T09:01:41.273Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

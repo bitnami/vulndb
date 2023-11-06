@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2021-42041",
+  "details": "An issue was discovered in CentralAuth in MediaWiki through 1.36.2. The rightsnone MediaWiki message was not being properly sanitized and allowed for the injection and execution of HTML and JavaScript via the setchange log.",
+  "aliases": [
+    "CVE-2021-42041"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I7aeaa6e4de5ccaa5eeb6bf4fb00c96b01d5fea35"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T291696"
+    }
+  ],
+  "published": "2023-11-06T09:05:39.780Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

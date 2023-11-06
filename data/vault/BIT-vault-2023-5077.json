@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2023-5077",
+  "details": "The Vault and Vault Enterprise (\"Vault\") Google Cloud secrets engine did not preserve existing Google Cloud IAM Conditions upon creating or updating rolesets. Fixed in Vault 1.13.0.",
+  "aliases": [
+    "CVE-2023-5077"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.10.0"
+            },
+            {
+              "fixed": "1.13.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2023-30-vault-s-google-cloud-secrets-engine-removed-existing-iam-conditions-when-creating-updating-rolesets/58654"
+    }
+  ],
+  "published": "2023-11-06T09:04:09.484Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-alfresco-2020-18327",
+  "details": "Cross Site Scripting (XSS) vulnerability exists in Alfresco Alfresco Community Edition v5.2.0 via the action parameter in the alfresco/s/admin/admin-nodebrowser API. Fixed in v6.2",
+  "aliases": [
+    "CVE-2020-18327"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "alfresco",
+        "purl": "pkg:bitnami/alfresco"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "last_affected": "5.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:alfresco:alfresco:5.2:*:*:*:community:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/paatui/a3c7ca8cf12594b437d3854f13d76cb8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cvedetails.com/vulnerability-list/vendor_id-13372/product_id-27784/opxss-1/Alfresco-Alfresco.html"
+    }
+  ],
+  "published": "2023-11-06T08:50:53.749Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-miniconda-2021-42969",
+  "details": "Certain Anaconda3 2021.05 are affected by OS command injection. When a user installs Anaconda, an attacker can create a new file and write something in usercustomize.py. When the user opens the terminal or activates Anaconda, the command will be executed.",
+  "aliases": [
+    "CVE-2021-42969"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "miniconda",
+        "purl": "pkg:bitnami/miniconda"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2021.05.0"
+            },
+            {
+              "last_affected": "2021.05.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:anaconda:anaconda3:2021.05:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://yuaneuro.cn/anaconda/anaconda_command_execution.docx"
+    }
+  ],
+  "published": "2023-11-06T08:55:17.365Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

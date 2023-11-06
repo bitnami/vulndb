@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2023-32002",
+  "details": "The use of `Module._load()` can bypass the policy mechanism and require modules outside of the policy.json definition for a given module.This vulnerability affects all users using the experimental policy mechanism in all active release lines: 16.x, 18.x and, 20.x.Please note that at the time this CVE was issued, the policy is an experimental feature of Node.js.",
+  "aliases": [
+    "CVE-2023-32002"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.20.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.17.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1960870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230915-0009/"
+    }
+  ],
+  "published": "2023-11-06T08:58:40.362Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

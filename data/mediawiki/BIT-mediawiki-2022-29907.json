@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2022-29907",
+  "details": "The Nimbus skin for MediaWiki through 1.37.2 (before 6f9c8fb868345701d9544a54d9752515aace39df) allows XSS in Advertise link messages.",
+  "aliases": [
+    "CVE-2022-29907"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.37.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/786959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T306815"
+    }
+  ],
+  "published": "2023-11-06T09:00:41.781Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

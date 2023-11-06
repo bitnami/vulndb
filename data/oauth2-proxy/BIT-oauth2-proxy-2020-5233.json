@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-oauth2-proxy-2020-5233",
+  "details": "OAuth2 Proxy before 5.0 has an open redirect vulnerability. Authentication tokens could be silently harvested by an attacker. This has been patched in version 5.0.",
+  "aliases": [
+    "CVE-2020-5233"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "oauth2-proxy",
+        "purl": "pkg:bitnami/oauth2-proxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oauth2_proxy_project:oauth2_proxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pusher/oauth2_proxy/commit/a316f8a06f3c0ca2b5fc5fa18a91781b313607b2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pusher/oauth2_proxy/releases/tag/v5.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pusher/oauth2_proxy/security/advisories/GHSA-qqxw-m5fj-f7gv"
+    }
+  ],
+  "published": "2023-11-06T08:57:35.464Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2021-37691",
+  "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions an attacker can craft a TFLite model that would trigger a division by zero error in LSH [implementation](https://github.com/tensorflow/tensorflow/blob/149562d49faa709ea80df1d99fc41d005b81082a/tensorflow/lite/kernels/lsh_projection.cc#L118). We have patched the issue in GitHub commit 0575b640091680cfb70f4dd93e70658de43b94f9. The fix will be included in TensorFlow 2.6.0. We will also cherrypick thiscommit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2021-37691"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "2.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc0"
+            },
+            {
+              "last_affected": "2.6.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc2"
+            },
+            {
+              "last_affected": "2.6.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/0575b640091680cfb70f4dd93e70658de43b94f9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-27qf-jwm8-g7f3"
+    }
+  ],
+  "published": "2023-11-06T09:11:18.858Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

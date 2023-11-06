@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2021-32779",
+  "details": "Envoy is an open source L7 proxy and communication bus designed for large modern service oriented architectures. In affected versions envoy incorrectly handled a URI '#fragment' element as part of the path element. Envoy is configured with an RBAC filter for authorization or similar mechanism with an explicit case of a final \"/admin\" path element, or is using a negative assertion with final path element of \"/admin\". The client sends request to \"/app1/admin#foo\". In Envoy prior to 1.18.0, or 1.18.0+ configured with path_normalization=false. Envoy treats fragment as a suffix of the query string when present, or as a suffix of the path when query string is absent, so it evaluates the final path element as \"/admin#foo\" and mismatches with the configured \"/admin\" path element. In Envoy 1.18.0+ configured with path_normalization=true. Envoy transforms this to /app1/admin%23foo and mismatches with the configured /admin prefix. The resulting URI is sent to the next server-agent with the offending \"#foo\" fragment which violates RFC3986 or with the nonsensical \"%23foo\" text appended. A specifically constructed request with URI containing '#fragment' element delivered by an untrusted client in the presence of path based request authorization resulting in escalation of Privileges when path based request authorization extensions. Envoy versions 1.19.1, 1.18.4, 1.17.4, 1.16.5 contain fixes that removes fragment from URI path in incoming requests.",
+  "aliases": [
+    "CVE-2021-32779"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "fixed": "1.17.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "1.18.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "last_affected": "1.19.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:1.19.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-r222-74fw-jqr9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.envoyproxy.io/docs/envoy/v1.19.0/version_history/version_history"
+    }
+  ],
+  "published": "2023-11-06T08:55:43.658Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

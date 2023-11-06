@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2021-3860",
+  "details": "JFrog Artifactory before 7.25.4 (Enterprise+ deployments only), is vulnerable to Blind SQL Injection by a low privileged authenticated user due to incomplete validation when performing an SQL query.",
+  "aliases": [
+    "CVE-2021-3860"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.23.30"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.11.0"
+            },
+            {
+              "fixed": "7.11.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.12.0"
+            },
+            {
+              "fixed": "7.12.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.0"
+            },
+            {
+              "fixed": "7.17.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.18.0"
+            },
+            {
+              "fixed": "7.18.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.19.0"
+            },
+            {
+              "fixed": "7.19.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.21.0"
+            },
+            {
+              "fixed": "7.21.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.23.0"
+            },
+            {
+              "fixed": "7.23.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.24.0"
+            },
+            {
+              "fixed": "7.24.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.25.0"
+            },
+            {
+              "fixed": "7.25.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:enterprise\\+:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jfrog.com/confluence/display/JFROG/CVE-2021-3860%3A+Artifactory+Low+Privileged+Blind+SQL+Injection"
+    }
+  ],
+  "published": "2023-11-06T08:51:59.265Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

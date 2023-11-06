@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-resourcespace-2021-41951",
+  "details": "ResourceSpace before 9.6 rev 18290 is affected by a reflected Cross-Site Scripting vulnerability in plugins/wordpress_sso/pages/index.php via the wordpress_user parameter. If an attacker is able to persuade a victim to visit a crafted URL, malicious JavaScript content may be executed within the context of the victim's browser.",
+  "aliases": [
+    "CVE-2021-41951"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "resourcespace",
+        "purl": "pkg:bitnami/resourcespace"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.6.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.6.0"
+            },
+            {
+              "last_affected": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:montala:resourcespace:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:montala:resourcespace:9.6:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.horizon3.ai/multiple-vulnerabilities-in-resourcespace/"
+    }
+  ],
+  "published": "2023-11-06T09:01:16.666Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

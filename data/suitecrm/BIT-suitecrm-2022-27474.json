@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2022-27474",
+  "details": "SuiteCRM v7.11.23 was discovered to allow remote code execution via a crafted payload injected into the FirstName text field.",
+  "aliases": [
+    "CVE-2022-27474"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.11.23"
+            },
+            {
+              "last_affected": "7.11.23"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:7.11.23:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Mount4in/Mount4in.github.io/blob/master/poc.py"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Mount4in/Mount4in.github.io/blob/master/suitecrm.docx"
+    }
+  ],
+  "published": "2023-11-06T09:03:24.586Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

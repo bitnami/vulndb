@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2022-36002",
+  "details": "TensorFlow is an open source platform for machine learning. When `Unbatch` receives a nonscalar input `id`, it gives a `CHECK` fail that can trigger a denial of service attack. We have patched the issue in GitHub commit 4419d10d576adefa36b0e0a9425d2569f7c0189f. The fix will be included in TensorFlow 2.10.0. We will also cherrypick this commit on TensorFlow 2.9.1, TensorFlow 2.8.1, and TensorFlow 2.7.2, as these are also affected and still in supported range. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2022-36002"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "fixed": "2.8.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc0.0"
+            },
+            {
+              "last_affected": "2.10-rc0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc1.0"
+            },
+            {
+              "last_affected": "2.10-rc1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc2.0"
+            },
+            {
+              "last_affected": "2.10-rc2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10-rc3.0"
+            },
+            {
+              "last_affected": "2.10-rc3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc2:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.10:rc3:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/4419d10d576adefa36b0e0a9425d2569f7c0189f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-mh3m-62v7-68xg"
+    }
+  ],
+  "published": "2023-11-06T09:08:09.077Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

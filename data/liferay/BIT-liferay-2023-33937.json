@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-liferay-2023-33937",
+  "details": "Stored cross-site scripting (XSS) vulnerability in Form widget configuration in Liferay Portal 7.1.0 through 7.3.0, and Liferay DXP 7.1 before fix pack 18, and 7.2 before fix pack 5 allows remote attackers to inject arbitrary web script or HTML via a crafted payload injected into a form's `name` field.",
+  "aliases": [
+    "CVE-2023-33937"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "last_affected": "7.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.1-fix.0"
+            },
+            {
+              "last_affected": "7.1-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "last_affected": "7.2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_10:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_11:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_12:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_13:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_14:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_15:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_16:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_17:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_20:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_21:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_22:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_23:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_24:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_25:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_26:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_3:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_4:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_5:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_6:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_7:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_8:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.1:fix_pack_9:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_3:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_4:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33937"
+    }
+  ],
+  "published": "2023-11-06T08:57:13.956Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-redmine-2020-36306",
+  "details": "Redmine before 4.0.7 and 4.1.x before 4.1.1 has XSS via the back_url field.",
+  "aliases": [
+    "CVE-2020-36306"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redmine",
+        "purl": "pkg:bitnami/redmine"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.0.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redmine:redmine:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00013.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+    }
+  ],
+  "published": "2023-11-06T09:03:04.942Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

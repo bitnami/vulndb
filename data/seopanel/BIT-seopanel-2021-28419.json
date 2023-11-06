@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-seopanel-2021-28419",
+  "details": "The \"order_col\" parameter in archive.php of SEO Panel 4.8.0 is vulnerable to time-based blind SQL injection, which leads to the ability to retrieve all databases.",
+  "aliases": [
+    "CVE-2021-28419"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "seopanel",
+        "purl": "pkg:bitnami/seopanel"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.8.0"
+            },
+            {
+              "last_affected": "4.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:seopanel:seo_panel:4.8.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/162322/SEO-Panel-4.8.0-SQL-Injection.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seopanel/Seo-Panel/issues/209"
+    }
+  ],
+  "published": "2023-11-06T09:02:44.855Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

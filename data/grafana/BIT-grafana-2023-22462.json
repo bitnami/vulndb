@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2023-22462",
+  "details": "Grafana is an open-source platform for monitoring and observability. On 2023-01-01 during an internal audit of Grafana, a member of the security team found a stored XSS vulnerability affecting the core plugin \"Text\". The stored XSS vulnerability requires several user interactions in order to be fully exploited. The vulnerability was possible due to React's render cycle that will pass though the unsanitized HTML code, but in the next cycle the HTML is cleaned up and saved in Grafana's database. An attacker needs to have the Editor role in order to change a Text panel to include JavaScript. Another user needs to edit the same Text panel, and click on \"Markdown\" or \"HTML\" for the code to be executed. This means that vertical privilege escalation is possible, where a user with Editor role can change to a known password for a user having Admin role if the user with Admin role executes malicious JavaScript viewing a dashboard. This issue has been patched in versions 9.2.10 and 9.3.4.",
+  "aliases": [
+    "CVE-2023-22462"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "9.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/commit/db83d5f398caffe35c5846cfa7727d1a2a414165"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-7rqg-hjwc-6mjf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/blog/2023/02/28/grafana-security-release-new-versions-with-security-fixes-for-cve-2023-0594-cve-2023-0507-and-cve-2023-22462/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230413-0004/"
+    }
+  ],
+  "published": "2023-11-06T08:52:55.444Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

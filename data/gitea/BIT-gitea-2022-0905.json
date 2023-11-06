@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitea-2022-0905",
+  "details": "Missing Authorization in GitHub repository go-gitea/gitea prior to 1.16.4.",
+  "aliases": [
+    "CVE-2022-0905"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.16.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/commit/1314f38b59748397b3429fb9bc9f9d6bac85d2f2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/8d221f92-b2b1-4878-bc31-66ff272e5ceb"
+    }
+  ],
+  "published": "2023-11-06T08:53:07.257Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

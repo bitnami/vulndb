@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitea-2021-45327",
+  "details": "Gitea before 1.11.2 is affected by Trusting HTTP Permission Methods on the Server Side when referencing the vulnerable admin or user API. which could let a remote malisious user execute arbitrary code.",
+  "aliases": [
+    "CVE-2021-45327"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.11.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.gitea.io/2020/03/gitea-1.11.2-is-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/10462"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/10465"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/10582"
+    }
+  ],
+  "published": "2023-11-06T08:53:52.855Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

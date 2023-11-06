@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-civicrm-2023-25440",
+  "details": "Stored Cross Site Scripting (XSS) vulnerability in the add contact function CiviCRM 5.59.alpha1, allows attackers to execute arbitrary code in first/second name field.",
+  "aliases": [
+    "CVE-2023-25440"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "civicrm",
+        "purl": "pkg:bitnami/civicrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.59-alpha1.0"
+            },
+            {
+              "last_affected": "5.59-alpha1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:civicrm:civicrm:5.59:alpha1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://civicrm.org/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packetstormsecurity.com/files/172470/CiviCRM-5.59.alpha1-Cross-Site-Scripting.html"
+    }
+  ],
+  "published": "2023-11-06T08:50:44.093Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

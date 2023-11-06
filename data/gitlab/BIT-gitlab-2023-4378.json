@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-4378",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 11.8 before 16.1.5, all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1. A malicious Maintainer can, under specific circumstances, leak the sentry token by changing the configured URL in the Sentry error tracking settings page. This was as a result of an incomplete fix for CVE-2022-4365.",
+  "aliases": [
+    "CVE-2023-4378"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.8.0"
+            },
+            {
+              "fixed": "16.1.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2.0"
+            },
+            {
+              "fixed": "16.2.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "last_affected": "16.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.3.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/422134"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2104591"
+    }
+  ],
+  "published": "2023-11-06T08:53:07.568Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

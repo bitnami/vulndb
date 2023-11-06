@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2021-36128",
+  "details": "An issue was discovered in the CentralAuth extension in MediaWiki through 1.36. Autoblocks for CentralAuth-issued suppression blocks are not properly implemented.",
+  "aliases": [
+    "CVE-2021-36128"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I15d14c88a1e30df92c470bc191c4ee573172d4d1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I3e65690695313380c798b62edfda726b6e374f89"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T281972"
+    }
+  ],
+  "published": "2023-11-06T09:06:23.057Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

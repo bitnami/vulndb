@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2023-39525",
+  "details": "PrestaShop is an open source e-commerce web application. Prior to version 8.1.1, in the back office, files can be compromised using path traversal by replaying the import file deletion query with a specified file path that uses the traversal path. Version 8.1.1 contains a patch for this issue. There are no known workarounds.",
+  "aliases": [
+    "CVE-2023-39525"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/c7c9a5110421bb2856f4d312ecce192d079b5ec7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-m9r4-3fg7-pqm2"
+    }
+  ],
+  "published": "2023-11-06T09:00:51.047Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

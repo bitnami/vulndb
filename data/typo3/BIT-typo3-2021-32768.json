@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2021-32768",
+  "details": "TYPO3 is an open source PHP based web content management system released under the GNU GPL. In affected versions failing to properly parse, sanitize and encode malicious rich-text content, the content rendering process in the website frontend is vulnerable to cross-site scripting. Corresponding rendering instructions via TypoScript functionality HTMLparser does not consider all potentially malicious HTML tag & attribute combinations per default. In default scenarios, a valid backend user account is needed to exploit this vulnerability. In case custom plugins used in the website frontend accept and reflect rich-text content submitted by users, no authentication is required. Update to TYPO3 versions 7.6.53 ELTS, 8.7.42 ELTS, 9.5.29, 10.4.19, 11.3.2 that fix the problem described.",
+  "aliases": [
+    "CVE-2021-32768"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.6.52"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.7.41"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.28"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.18"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-c5c9-8c6m-727v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2021-013"
+    }
+  ],
+  "published": "2023-11-06T09:06:09.453Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

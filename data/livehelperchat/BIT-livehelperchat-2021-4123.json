@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-livehelperchat-2021-4123",
+  "details": "livehelperchat is vulnerable to Cross-Site Request Forgery (CSRF)",
+  "aliases": [
+    "CVE-2021-4123"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "livehelperchat",
+        "purl": "pkg:bitnami/livehelperchat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/2a98c69cf8899afb9a76d737527abb1dd96fa106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/52182545-fdd6-4d4f-9fba-25010f7f8cba"
+    }
+  ],
+  "published": "2023-11-06T08:57:39.769Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

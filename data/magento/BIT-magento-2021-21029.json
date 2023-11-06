@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-magento-2021-21029",
+  "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) are affected by a Reflected Cross-site Scripting vulnerability via 'file' parameter. Successful exploitation could lead to arbitrary JavaScript execution in the victim's browser. Access to the admin console is required for successful exploitation.",
+  "aliases": [
+    "CVE-2021-21029"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.6"
+            },
+            {
+              "last_affected": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "last_affected": "2.4.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0-p1"
+            },
+            {
+              "last_affected": "2.4.0-p1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.1"
+            },
+            {
+              "last_affected": "2.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.0:p1:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb21-08.html"
+    }
+  ],
+  "published": "2023-11-06T08:57:31.776Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-fluent-bit-2021-27186",
+  "details": "Fluent Bit 1.6.10 has a NULL pointer dereference when an flb_malloc return value is not validated by flb_avro.c or http_server/api/v1/metrics.c.",
+  "aliases": [
+    "CVE-2021-27186"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluent-bit",
+        "purl": "pkg:bitnami/fluent-bit"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.6.10"
+            },
+            {
+              "last_affected": "1.6.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:treasuredata:fluent_bit:1.6.10:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluent-bit/issues/3044"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluent-bit/pull/3045"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluent-bit/pull/3047"
+    }
+  ],
+  "published": "2023-11-06T08:51:58.253Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

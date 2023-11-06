@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2022-31049",
+  "details": "TYPO3 is an open source web content management system. Prior to versions 9.5.34 ELTS, 10.4.29, and 11.5.11, user submitted content was used without being properly encoded in HTML emails sent to users. The actually affected components were mail clients used to view those messages. TYPO3 versions 9.5.34 ELTS, 10.4.29, and 11.5.11 contain a fix for the problem.",
+  "aliases": [
+    "CVE-2022-31049"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.29"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/da611775f92102d7602713003f4c79606c8a445d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/security/advisories/GHSA-h4mx-xv96-2jgm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2022-004"
+    }
+  ],
+  "published": "2023-11-06T09:05:11.788Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

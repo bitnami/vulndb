@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2020-35475",
+  "details": "In MediaWiki before 1.35.1, the messages userrights-expiry-current and userrights-expiry-none can contain raw HTML. XSS can happen when a user visits Special:UserRights but does not have rights to change all userrights, and the table on the left side has unchangeable groups in it. (The right column with the changeable groups is not affected and is escaped correctly.)",
+  "aliases": [
+    "CVE-2020-35475"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.35.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/STT5Z4A3BCXVH3WIPICWU2FP4IPIMUPC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.wikimedia.org/pipermail/mediawiki-announce/2020-December/000268.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T268917"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4816"
+    }
+  ],
+  "published": "2023-11-06T09:08:11.688Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2020-15523",
+  "details": "In Python 3.6 through 3.6.10, 3.7 through 3.7.8, 3.8 through 3.8.4rc1, and 3.9 through 3.9.0b4 on Windows, a Trojan horse python3.dll might be used in cases where CPython is embedded in a native application. This occurs because python3X.dll may use an invalid search path for python3.dll loading (after Py_SetPath has been used). NOTE: this issue CANNOT occur when using python.exe from a standard (non-embedded) Python installation on Windows.",
+  "aliases": [
+    "CVE-2020-15523"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.4-rc1"
+            },
+            {
+              "last_affected": "3.8.4-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha1"
+            },
+            {
+              "last_affected": "3.9.0-alpha1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha2"
+            },
+            {
+              "last_affected": "3.9.0-alpha2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha3"
+            },
+            {
+              "last_affected": "3.9.0-alpha3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha4"
+            },
+            {
+              "last_affected": "3.9.0-alpha4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha5"
+            },
+            {
+              "last_affected": "3.9.0-alpha5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-alpha6"
+            },
+            {
+              "last_affected": "3.9.0-alpha6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-beta1"
+            },
+            {
+              "last_affected": "3.9.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-beta2"
+            },
+            {
+              "last_affected": "3.9.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-beta3"
+            },
+            {
+              "last_affected": "3.9.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0-beta4"
+            },
+            {
+              "last_affected": "3.9.0-beta4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.8.4:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha1:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha2:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha3:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha4:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha5:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:alpha6:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:python:python:3.9.0:beta4:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.python.org/issue29778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/21297"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210312-0004/"
+    }
+  ],
+  "published": "2023-11-06T09:04:35.554Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-magento-2021-28583",
+  "details": "Magento versions 2.4.2 (and earlier), 2.4.1-p1 (and earlier) and 2.3.6-p1 (and earlier) are affected by a Violation of Secure Design Principles vulnerability in RMA PDF filename formats. Successful exploitation could allow an attacker to get unauthorized access to restricted resources.",
+  "aliases": [
+    "CVE-2021-28583"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.6"
+            },
+            {
+              "last_affected": "2.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.6-p1"
+            },
+            {
+              "last_affected": "2.3.6-p1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.1"
+            },
+            {
+              "last_affected": "2.4.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.1-p1"
+            },
+            {
+              "last_affected": "2.4.1-p1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.2"
+            },
+            {
+              "last_affected": "2.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.6:p1:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.1:p1:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.4.2:*:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb21-30.html"
+    }
+  ],
+  "published": "2023-11-06T08:56:16.143Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

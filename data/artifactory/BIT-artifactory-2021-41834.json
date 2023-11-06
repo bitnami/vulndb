@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2021-41834",
+  "details": "JFrog Artifactory prior to version 7.28.0 and 6.23.38, is vulnerable to Broken Access Control, the copy functionality can be used by a low-privileged user to read and copy any artifact that exists in the Artifactory deployment due to improper permissions validation.",
+  "aliases": [
+    "CVE-2021-41834"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.23.38"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.28.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jfrog.com/confluence/display/JFROG/CVE-2021-41834%3A+Artifactory+Broken+Access+Control+on+Copy+Artifact"
+    }
+  ],
+  "published": "2023-11-06T08:51:50.563Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

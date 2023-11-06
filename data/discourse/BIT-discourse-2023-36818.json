@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2023-36818",
+  "details": "Discourse is an open source discussion platform. In affected versions a request to create or update custom sidebar section can cause a denial of service. This issue has been patched in commit `52b003d915`. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-36818"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0-beta5"
+            },
+            {
+              "last_affected": "3.1.0-beta5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta5:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/52b003d915761f1581ae2d105f3cbe76df7bf1ff"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-gxqx-3q2p-37gm"
+    }
+  ],
+  "published": "2023-11-06T08:53:27.183Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

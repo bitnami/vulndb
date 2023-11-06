@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2020-11063",
+  "details": "In TYPO3 CMS versions 10.4.0 and 10.4.1, it has been discovered that time-based attacks can be used with the password reset functionality for backend users. This allows an attacker to mount user enumeration based on email addresses assigned to backend user accounts. This has been fixed in 10.4.2.",
+  "aliases": [
+    "CVE-2020-11063"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "last_affected": "10.4.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.1"
+            },
+            {
+              "last_affected": "10.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:10.4.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:10.4.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-347x-877p-hcwx"
+    }
+  ],
+  "published": "2023-11-06T09:07:36.962Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

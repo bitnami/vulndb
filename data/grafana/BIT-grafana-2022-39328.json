@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2022-39328",
+  "details": "Grafana is an open-source platform for monitoring and observability. Versions starting with 9.2.0 and less than 9.2.4 contain a race condition in the authentication middlewares logic which may allow an unauthenticated user to query an administration endpoint under heavy load. This issue is patched in 9.2.4. There are no known workarounds.",
+  "aliases": [
+    "CVE-2022-39328"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-vqc4-mpj8-jxch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20221215-0003/"
+    }
+  ],
+  "published": "2023-11-06T08:53:53.183Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

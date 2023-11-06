@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-drupal-2022-25277",
+  "details": "Drupal core sanitizes filenames with dangerous extensions upon upload (reference: SA-CORE-2020-012) and strips leading and trailing dots from filenames to prevent uploading server configuration files (reference: SA-CORE-2019-010). However, the protections for these two vulnerabilities previously did not work correctly together. As a result, if the site were configured to allow the upload of files with an htaccess extension, these files' filenames would not be properly sanitized. This could allow bypassing the protections provided by Drupal core's default .htaccess files and possible remote code execution on Apache web servers. This issue is mitigated by the fact that it requires a field administrator to explicitly configure a file field to allow htaccess as an extension (a restricted permission), or a contributed module or custom code that overrides allowed file uploads.",
+  "aliases": [
+    "CVE-2022-25277"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "9.3.19"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2022-014"
+    }
+  ],
+  "published": "2023-11-06T08:52:13.188Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

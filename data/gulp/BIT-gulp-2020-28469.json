@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gulp-2020-28469",
+  "details": "This affects the package glob-parent before 5.1.2. The enclosure regex used to check for strings ending in enclosure containing path separator.",
+  "aliases": [
+    "CVE-2020-28469"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gulp",
+        "purl": "pkg:bitnami/gulp"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gulpjs:glob-parent:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/gulpjs/glob-parent/blob/6ce8d11f2f1ed8e80a9526b1dc8cf3aa71f43474/index.js%23L9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gulpjs/glob-parent/pull/36"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gulpjs/glob-parent/releases/tag/v5.1.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBES128-1059093"
+    },
+    {
+      "type": "WEB",
+      "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1059092"
+    },
+    {
+      "type": "WEB",
+      "url": "https://snyk.io/vuln/SNYK-JS-GLOBPARENT-1016905"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+    }
+  ],
+  "published": "2023-11-06T08:52:34.544Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

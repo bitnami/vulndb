@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-liferay-2022-42124",
+  "details": "ReDoS vulnerability in LayoutPageTemplateEntryUpgradeProcess in Liferay Portal 7.3.2 through 7.4.3.4 and Liferay DXP 7.2 fix pack 9 through fix pack 18, 7.3 before update 4, and DXP 7.4 GA allows remote attackers to consume an excessive amount of server resources via a crafted payload injected into the 'name' field of a layout prototype.",
+  "aliases": [
+    "CVE-2022-42124"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2-fix.0"
+            },
+            {
+              "last_affected": "7.2-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "last_affected": "7.3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "last_affected": "7.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_10:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_11:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_12:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_13:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_14:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_15:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_16:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.2:fix_pack_9:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://liferay.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.liferay.com/browse/LPE-17435"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.liferay.com/browse/LPE-17535"
+    },
+    {
+      "type": "WEB",
+      "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-42124"
+    }
+  ],
+  "published": "2023-11-06T08:58:45.552Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

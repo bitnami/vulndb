@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gradle-2023-44387",
+  "details": "Gradle is a build tool with a focus on build automation and support for multi-language development. When copying or archiving symlinked files, Gradle resolves them but applies the permissions of the symlink itself instead of the permissions of the linked file to the resulting file. This leads to files having too much permissions given that symlinks usually are world readable and writeable. While it is unlikely this results in a direct vulnerability for the impacted build, it may open up attack vectors depending on where build artifacts end up being copied to or un-archived. In versions 7.6.3, 8.4 and above, Gradle will now properly use the permissions of the file pointed at by the symlink to set permissions of the copied or archived file.",
+  "aliases": [
+    "CVE-2023-44387"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gradle",
+        "purl": "pkg:bitnami/gradle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.6.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gradle:gradle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/gradle/gradle/commit/3b406191e24d69e7e42dc3f3b5cc50625aa930b7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gradle/gradle/releases/tag/v7.6.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gradle/gradle/releases/tag/v8.4.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/gradle/gradle/security/advisories/GHSA-43r3-pqhv-f7h9"
+    }
+  ],
+  "published": "2023-11-06T08:52:05.861Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}
