@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-10090",
+  "details": "GitLab 11.7 through 12.8.1 allows Information Disclosure. Under certain group conditions, group epic information was unintentionally being disclosed.",
+  "aliases": [
+    "CVE-2020-10090"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.7.0"
+            },
+            {
+              "fixed": "12.8.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2020/03/04/gitlab-12-dot-8-dot-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2020/03/04/gitlab-12-dot-8-dot-2-released/index.html"
+    }
+  ],
+  "published": "2023-11-06T09:16:43.086Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

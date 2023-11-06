@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-phpmyadmin-2020-22452",
+  "details": "SQL Injection vulnerability in function getTableCreationQuery in CreateAddField.php in phpMyAdmin 5.x before 5.2.0 via the tbl_storage_engine or tbl_collation parameters to tbl_create.php.",
+  "aliases": [
+    "CVE-2020-22452"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmyadmin",
+        "purl": "pkg:bitnami/phpmyadmin"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://phpmyadmin.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/blob/master/ChangeLog"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/issues/15898"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/pull/16004"
+    }
+  ],
+  "published": "2023-11-06T09:00:12.090Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

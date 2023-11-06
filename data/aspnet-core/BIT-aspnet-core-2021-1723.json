@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-aspnet-core-2021-1723",
+  "details": "ASP.NET Core and Visual Studio Denial of Service Vulnerability",
+  "aliases": [
+    "CVE-2021-1723"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "aspnet-core",
+        "purl": "pkg:bitnami/aspnet-core"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-1723"
+    }
+  ],
+  "published": "2023-11-06T08:51:29.057Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2023-46288",
+  "details": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Airflow.This issue affects Apache Airflow from 2.4.0 to 2.7.0.Sensitive configuration information has been exposed to authenticated users with the ability to read configuration via Airflow REST API for configuration even when the expose_config option is set to non-sensitive-only. The expose_config option is False by default. It is recommended to upgrade to a version that is not affected if you set expose_config to non-sensitive-only configuration. This is a different error than CVE-2023-45348 which allows authenticated user to retrieve individual configuration values in 2.7.* by specially crafting their request (solved in 2.7.2).Users are recommended to upgrade to version 2.7.2, which fixes the issue and additionally fixes CVE-2023-45348.",
+  "aliases": [
+    "CVE-2023-46288"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/32261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/yw4vzm0c5lqkwm0bxv6qy03yfd1od4nw"
+    }
+  ],
+  "published": "2023-11-06T08:50:27.156Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2022-3411",
+  "details": "A lack of length validation in GitLab CE/EE affecting all versions from 12.4 before 15.6.7, 15.7 before 15.7.6, and 15.8 before 15.8.1 allows an authenticated attacker to create a large Issue description via GraphQL which, when repeatedly requested, saturates CPU usage.",
+  "aliases": [
+    "CVE-2022-3411"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "15.6.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.7.0"
+            },
+            {
+              "fixed": "15.7.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.8.0"
+            },
+            {
+              "fixed": "15.8.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-3411.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/376247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1685995"
+    }
+  ],
+  "published": "2023-11-06T09:08:21.295Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

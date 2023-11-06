@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2020-10960",
+  "details": "In MediaWiki before 1.34.1, users can add various Cascading Style Sheets (CSS) classes (which can affect what content is shown or hidden in the user interface) to arbitrary DOM nodes via HTML content within a MediaWiki page. This occurs because jquery.makeCollapsible allows applying an event handler to any Cascading Style Sheets (CSS) selector. There is no known way to exploit this for cross-site scripting (XSS).",
+  "aliases": [
+    "CVE-2020-10960"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.34.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.wikimedia.org/pipermail/wikitech-l/2020-March/093243.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T246602"
+    }
+  ],
+  "published": "2023-11-06T09:08:46.138Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

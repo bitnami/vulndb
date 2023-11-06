@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitea-2020-14144",
+  "details": "** DISPUTED ** The git hook feature in Gitea 1.1.0 through 1.12.5 might allow for authenticated remote code execution in customer environments where the documentation was not understood (e.g., one viewpoint is that the dangerousness of this feature should be documented immediately above the ENABLE_GIT_HOOKS line in the config file). NOTE: The vendor has indicated this is not a vulnerability and states \"This is a functionality of the software that is limited to a very limited subset of accounts. If you give someone the privilege to execute arbitrary code on your server, they can execute arbitrary code on your server. We provide very clear warnings to users around this functionality and what it provides.\"",
+  "aliases": [
+    "CVE-2020-14144"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.1.0"
+            },
+            {
+              "fixed": "1.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/162122/Gitea-Git-Hooks-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.github.com/en/enterprise-server@2.19/admin/policies/creating-a-pre-receive-hook-script"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/ee/administration/server_hooks.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PandatiX/CVE-2021-28378"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PandatiX/CVE-2021-28378#notes"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/13058"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.fzi.de/en/news/news/detail-en/artikel/fsa-2020-3-schwachstelle-in-gitea-1125-und-gogs-0122-ermoeglicht-ausfuehrung-von-code-nach-authent/"
+    }
+  ],
+  "published": "2023-11-06T08:54:59.543Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

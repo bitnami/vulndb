@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2021-36126",
+  "details": "An issue was discovered in the AbuseFilter extension in MediaWiki through 1.36. If the MediaWiki:Abusefilter-blocker message is invalid within the content language, the filter user falls back to the English version, but that English version could also be invalid on a wiki. This would result in a fatal error, and potentially fail to block or restrict a potentially nefarious user.",
+  "aliases": [
+    "CVE-2021-36126"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.36.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I9e9f44b7663e810de70fb9ac7f6760f83dd4895b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T284364"
+    }
+  ],
+  "published": "2023-11-06T09:06:30.272Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

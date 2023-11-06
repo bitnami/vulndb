@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2021-37693",
+  "details": "Discourse is an open-source platform for community discussion. In Discourse before versions 2.7.8 and 2.8.0.beta4, when adding additional email addresses to an existing account on a Discourse site an email token is generated as part of the email verification process. Deleting the additional email address does not invalidate an unused token which can then be used in other contexts, including reseting a password.",
+  "aliases": [
+    "CVE-2021-37693"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta1"
+            },
+            {
+              "last_affected": "2.8.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta2"
+            },
+            {
+              "last_affected": "2.8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta3"
+            },
+            {
+              "last_affected": "2.8.0-beta3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/fb14e50741a4880cda22244eded8858e2f5336ef"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-9377-96f4-cww4"
+    }
+  ],
+  "published": "2023-11-06T09:04:44.262Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

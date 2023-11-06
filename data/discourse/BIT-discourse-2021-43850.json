@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2021-43850",
+  "details": "Discourse is an open source platform for community discussion. In affected versions admins users can trigger a Denial of Service attack via the `/message-bus/_diagnostics` path. The impact of this vulnerability is greater on multisite Discourse instances (where multiple forums are served from a single application server) where any admin user on any of the forums are able to visit the `/message-bus/_diagnostics` path. The problem has been patched. Please upgrade to 2.8.0.beta10 or 2.7.12. No workarounds for this issue exist.",
+  "aliases": [
+    "CVE-2021-43850"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta1"
+            },
+            {
+              "last_affected": "2.8.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta2"
+            },
+            {
+              "last_affected": "2.8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta3"
+            },
+            {
+              "last_affected": "2.8.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta4"
+            },
+            {
+              "last_affected": "2.8.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta5"
+            },
+            {
+              "last_affected": "2.8.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta6"
+            },
+            {
+              "last_affected": "2.8.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta7"
+            },
+            {
+              "last_affected": "2.8.0-beta7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta8"
+            },
+            {
+              "last_affected": "2.8.0-beta8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta9"
+            },
+            {
+              "last_affected": "2.8.0-beta9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta7:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta8:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta9:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/7a8ec129fb54f188b2da6588c9d24d3a36eb0d39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-59jr-pj65-qmvr"
+    }
+  ],
+  "published": "2023-11-06T09:03:16.077Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

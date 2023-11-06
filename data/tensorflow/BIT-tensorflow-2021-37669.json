@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2021-37669",
+  "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions an attacker can cause denial of service in applications serving models using `tf.raw_ops.NonMaxSuppressionV5` by triggering a division by 0. The [implementation](https://github.com/tensorflow/tensorflow/blob/460e000de3a83278fb00b61a16d161b1964f15f4/tensorflow/core/kernels/image/non_max_suppression_op.cc#L170-L271) uses a user controlled argument to resize a `std::vector`. However, as `std::vector::resize` takes the size argument as a `size_t` and `output_size` is an `int`, there is an implicit conversion to unsigned. If the attacker supplies a negative value, this conversion results in a crash. A similar issue occurs in `CombinedNonMaxSuppression`. We have patched the issue in GitHub commit 3a7362750d5c372420aa8f0caf7bf5b5c3d0f52d and commit [b5cdbf12ffcaaffecf98f22a6be5a64bb96e4f58. The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2021-37669"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "2.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc0"
+            },
+            {
+              "last_affected": "2.6.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc2"
+            },
+            {
+              "last_affected": "2.6.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/3a7362750d5c372420aa8f0caf7bf5b5c3d0f52d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/b5cdbf12ffcaaffecf98f22a6be5a64bb96e4f58"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-vmjw-c2vp-p33c"
+    }
+  ],
+  "published": "2023-11-06T09:11:42.718Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

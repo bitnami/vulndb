@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-2015",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.8 before 15.10.8, all versions starting from 15.11 before 15.11.7, all versions starting from 16.0 before 16.0.2. A reflected XSS was possible when creating new abuse reports which allows attackers to perform arbitrary actions on behalf of victims.",
+  "aliases": [
+    "CVE-2023-2015"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.8.0"
+            },
+            {
+              "fixed": "15.10.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.11.0"
+            },
+            {
+              "fixed": "15.11.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-2015.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/407137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1941091"
+    }
+  ],
+  "published": "2023-11-06T09:00:40.986Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

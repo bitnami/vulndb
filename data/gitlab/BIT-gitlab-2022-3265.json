@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2022-3265",
+  "details": "A cross-site scripting issue has been discovered in GitLab CE/EE affecting all versions prior to 15.3.5, 15.4 prior to 15.4.4, and 15.5 prior to 15.5.2. It was possible to exploit a vulnerability in setting the labels colour feature which could lead to a stored XSS that allowed attackers to perform arbitrary actions on behalf of victims at client side.",
+  "aliases": [
+    "CVE-2022-3265"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "15.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.4.0"
+            },
+            {
+              "fixed": "15.4.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.5.0"
+            },
+            {
+              "fixed": "15.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-3265.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/374976"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1693150"
+    }
+  ],
+  "published": "2023-11-06T09:08:46.112Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

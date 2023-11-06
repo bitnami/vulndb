@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2022-23580",
+  "details": "Tensorflow is an Open Source Machine Learning Framework. During shape inference, TensorFlow can allocate a large vector based on a value from a tensor controlled by the user. The fix will be included in TensorFlow 2.8.0. We will also cherrypick this commit on TensorFlow 2.7.1, TensorFlow 2.6.3, and TensorFlow 2.5.3, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2022-23580"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "last_affected": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.7.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/blob/a1320ec1eac186da1d03f033109191f715b2b130/tensorflow/core/framework/shape_inference.cc#L788-L790"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/1361fb7e29449629e1df94d44e0427ebec8c83c7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-627q-g293-49q7"
+    }
+  ],
+  "published": "2023-11-06T09:09:56.154Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

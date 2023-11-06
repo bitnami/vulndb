@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2022-2366",
+  "details": "Incorrect default configuration for trusted IP header in Mattermost version 6.7.0 and earlier allows attacker to bypass some of the rate limitations in place or use manipulated IPs for audit logging via manipulating the request headers.",
+  "aliases": [
+    "CVE-2022-2366"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.3.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.5.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.6.0"
+            },
+            {
+              "fixed": "6.6.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.7.0"
+            },
+            {
+              "last_affected": "6.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:6.7.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-11-06T08:58:57.756Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

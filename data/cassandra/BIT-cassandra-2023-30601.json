@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-cassandra-2023-30601",
+  "details": "Privilege escalation when enabling FQL/Audit logs allows user with JMX access to run arbitrary commands as the user running Apache CassandraThis issue affects Apache Cassandra: from 4.0.0 through 4.0.9, from 4.1.0 through 4.1.1.WORKAROUNDThe vulnerability requires nodetool/JMX access to be exploitable, disable access for any non-trusted users.MITIGATIONUpgrade to 4.0.10 or 4.1.2 and leave the new FQL/Auditlog configuration property allow_nodetool_archive_command as false.",
+  "aliases": [
+    "CVE-2023-30601"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cassandra",
+        "purl": "pkg:bitnami/cassandra"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/f74p9jdhmmp7vtrqd8lgm8bq3dhxl8vn"
+    }
+  ],
+  "published": "2023-11-06T08:50:43.381Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

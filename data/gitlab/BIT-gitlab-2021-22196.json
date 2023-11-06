@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-22196",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 13.4. It was possible to exploit a stored cross-site-scripting in merge request via a specifically crafted branch name.",
+  "aliases": [
+    "CVE-2021-22196"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22196.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/254710"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/977697"
+    }
+  ],
+  "published": "2023-11-06T09:13:34.132Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

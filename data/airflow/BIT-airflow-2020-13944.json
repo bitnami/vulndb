@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2020-13944",
+  "details": "In Apache Airflow < 1.10.12, the \"origin\" parameter passed to some of the endpoints like '/trigger' was vulnerable to XSS exploit.",
+  "aliases": [
+    "CVE-2020-13944"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.10.15"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2020/12/11/2"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2021/05/01/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r2892ef594dbbf54d0939b808626f52f7c2d1584f8aa1d81570847d2a@%3Cannounce.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r2892ef594dbbf54d0939b808626f52f7c2d1584f8aa1d81570847d2a@%3Cdev.airflow.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r2892ef594dbbf54d0939b808626f52f7c2d1584f8aa1d81570847d2a@%3Cusers.airflow.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r4656959c8ed06c1f6202d89aa4e67b35ad7bdba5a666caff3fea888e@%3Cusers.airflow.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r97e1b60ca508a86be58c43f405c0c8ff00ba467ba0bee68704ae7e3e%40%3Cdev.airflow.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/ra8ce70088ba291f358e077cafdb14d174b7a1ce9a9d86d1b332d6367@%3Cusers.airflow.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/rc005f4de9d9b0ba943ceb8ff5a21a5c6ff8a9df52632476698d99432@%3Cannounce.apache.org%3E"
+    }
+  ],
+  "published": "2023-11-06T08:57:31.168Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

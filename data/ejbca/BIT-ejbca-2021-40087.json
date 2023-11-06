@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-ejbca-2021-40087",
+  "details": "An issue was discovered in PrimeKey EJBCA before 7.6.0. When audit logging changes to the alias configurations of various protocols that use an enrollment secret, any modifications to the secret were logged in cleartext in the audit log (that can only be viewed by an administrator). This affects use of any of the following protocols: SCEP, CMP, or EST.",
+  "aliases": [
+    "CVE-2021-40087"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ejbca",
+        "purl": "pkg:bitnami/ejbca"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:primekey:ejbca:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://support.primekey.com/news/posts/53"
+    }
+  ],
+  "published": "2023-11-06T08:51:45.260Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

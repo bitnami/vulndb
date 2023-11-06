@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2022-37454",
+  "details": "The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface.",
+  "aliases": [
+    "CVE-2022-37454"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.7.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://csrc.nist.gov/projects/hash-functions/sha-3-project"
+    },
+    {
+      "type": "WEB",
+      "url": "https://eprint.iacr.org/2023/331"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/XKCP/XKCP/security/advisories/GHSA-6w4m-2xhg-2658"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00041.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/11/msg00000.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3ALQ6BDDPX5HU5YBQOBMDVAA2TSGDKIJ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CMIEXLMTW5GO36HTFFWIPB3OHZXCT3G4/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mouha.be/sha-3-buffer-overflow/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=33281106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=35050307"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202305-02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5269"
+    }
+  ],
+  "published": "2023-11-06T09:02:12.575Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

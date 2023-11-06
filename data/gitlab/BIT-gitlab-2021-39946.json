@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-39946",
+  "details": "Improper neutralization of user input in GitLab CE/EE versions 14.3 to 14.3.6, 14.4 to 14.4.4, and 14.5 to 14.5.2 allowed an attacker to exploit XSS by abusing the generation of the HTML code related to emojis",
+  "aliases": [
+    "CVE-2021-39946"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.3.0"
+            },
+            {
+              "fixed": "14.3.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.4.0"
+            },
+            {
+              "fixed": "14.4.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.5.0"
+            },
+            {
+              "fixed": "14.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39946.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/345657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1398305"
+    }
+  ],
+  "published": "2023-11-06T09:11:00.967Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

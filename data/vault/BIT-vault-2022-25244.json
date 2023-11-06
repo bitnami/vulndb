@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2022-25244",
+  "details": "Vault Enterprise clusters using the tokenization transform feature can expose the tokenization key through the tokenization key configuration endpoint to authorized operators with `read` permissions on this endpoint. Fixed in Vault Enterprise 1.9.4, 1.8.9 and 1.7.10.",
+  "aliases": [
+    "CVE-2022-25244"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "fixed": "1.7.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "fixed": "1.8.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "1.9.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2022-08-vault-enterprise-s-tokenization-transform-configuration-endpoint-may-expose-transform-key/36599"
+    }
+  ],
+  "published": "2023-11-06T09:05:52.774Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

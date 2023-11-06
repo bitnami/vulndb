@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-livehelperchat-2021-4177",
+  "details": "livehelperchat is vulnerable to Generation of Error Message Containing Sensitive Information",
+  "aliases": [
+    "CVE-2021-4177"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "livehelperchat",
+        "purl": "pkg:bitnami/livehelperchat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.91.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/b280beae2e0de37b9e998c31c5d1839852724fc1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/ac641425-1c64-4874-95e7-c7805c72074e"
+    }
+  ],
+  "published": "2023-11-06T08:56:43.384Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

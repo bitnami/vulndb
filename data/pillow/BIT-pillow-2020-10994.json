@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-pillow-2020-10994",
+  "details": "In libImaging/Jpeg2KDecode.c in Pillow before 7.1.0, there are multiple out-of-bounds reads via a crafted JP2 file.",
+  "aliases": [
+    "CVE-2020-10994"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commits/master/src/libImaging/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/pull/4505"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/pull/4538"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BEBCPE4F2VHTIT6EZA2YZQZLPVDEBJGD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HOKHNWV2VS5GESY7IBD237E7C6T3I427/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/7.1.0.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4430-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4430-2/"
+    }
+  ],
+  "published": "2023-11-06T09:03:40.544Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

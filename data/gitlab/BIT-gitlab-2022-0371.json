@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2022-0371",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 11.4 before 14.5.4, all versions starting from 14.6 before 14.6.4, all versions starting from 14.7 before 14.7.1. GitLab search may allow authenticated users to search other users by their respective private emails even if a user set their email to private.",
+  "aliases": [
+    "CVE-2022-0371"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.4.0"
+            },
+            {
+              "fixed": "14.5.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.6.0"
+            },
+            {
+              "fixed": "14.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.7.0"
+            },
+            {
+              "fixed": "14.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-0371.json"
+    }
+  ],
+  "published": "2023-11-06T09:10:42.632Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

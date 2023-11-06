@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2021-45041",
+  "details": "SuiteCRM before 7.12.2 and 8.x before 8.0.1 allows authenticated SQL injection via the Tooltips action in the Project module, involving resource_id and start_date.",
+  "aliases": [
+    "CVE-2021-45041"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.12.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta.0"
+            },
+            {
+              "last_affected": "8.0-beta.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta2.0"
+            },
+            {
+              "last_affected": "8.0-beta2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-beta3.0"
+            },
+            {
+              "last_affected": "8.0-beta3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0-rc.0"
+            },
+            {
+              "last_affected": "8.0-rc.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "last_affected": "8.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:beta:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.0:rc:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/8.x/admin/releases/8.0/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.12.x/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/manuelz120/CVE-2021-45041"
+    }
+  ],
+  "published": "2023-11-06T09:04:44.255Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

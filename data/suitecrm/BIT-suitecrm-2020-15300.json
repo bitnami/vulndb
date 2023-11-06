@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2020-15300",
+  "details": "SuiteCRM through 7.11.13 has an Open Redirect in the Documents module via a crafted SVG document.",
+  "aliases": [
+    "CVE-2020-15300"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.11.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.wizlynxgroup.com/security-research-advisories/vuln/WLX-2020-009"
+    }
+  ],
+  "published": "2023-11-06T09:06:38.575Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

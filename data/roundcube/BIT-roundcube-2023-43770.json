@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-roundcube-2023-43770",
+  "details": "Roundcube before 1.4.14, 1.5.x before 1.5.4, and 1.6.x before 1.6.3 allows XSS via text/plain e-mail messages with crafted links because of program/lib/Roundcube/rcube_string_replacer.php behavior.",
+  "aliases": [
+    "CVE-2023-43770"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "roundcube",
+        "purl": "pkg:bitnami/roundcube"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.5.0"
+            },
+            {
+              "fixed": "1.5.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.6.0"
+            },
+            {
+              "fixed": "1.6.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/roundcube/roundcubemail/commit/e92ec206a886461245e1672d8530cc93c618a49b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00024.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://roundcube.net/news/2023/09/15/security-update-1.6.3-released"
+    }
+  ],
+  "published": "2023-11-06T09:01:17.290Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

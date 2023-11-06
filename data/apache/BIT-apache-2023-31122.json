@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-apache-2023-31122",
+  "details": "Out-of-bounds Read vulnerability in mod_macro of Apache HTTP Server.This issue affects Apache HTTP Server: through 2.4.57.",
+  "aliases": [
+    "CVE-2023-31122"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.57"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TI3V2YCEUM65QDYPGGNUZ7UONIM5OEXC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VZJTT5TEFNSBWVMKCLS6EZ7PI6EJYBCO/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20231027-0011/"
+    }
+  ],
+  "published": "2023-11-06T08:50:52.580Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

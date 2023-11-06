@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2022-3147",
+  "details": "Mattermost version 7.0.x and earlier fails to sufficiently limit the in-memory sizes of concurrently uploaded JPEG images, which allows authenticated users to cause resource exhaustion on specific system configurations, resulting in server-side Denial of Service.",
+  "aliases": [
+    "CVE-2022-3147"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1549513"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-11-06T08:58:38.374Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

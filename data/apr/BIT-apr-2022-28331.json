@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-apr-2022-28331",
+  "details": "On Windows, Apache Portable Runtime 1.7.0 and earlier may write beyond the end of a stack based buffer in apr_socket_sendv(). This is a result of integer overflow.",
+  "aliases": [
+    "CVE-2022-28331"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr",
+        "purl": "pkg:bitnami/apr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:portable_runtime:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/5pfdfn7h0vsdo5xzjn97vghp0x42jj2r"
+    }
+  ],
+  "published": "2023-11-06T08:50:33.050Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

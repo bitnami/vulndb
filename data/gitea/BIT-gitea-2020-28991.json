@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitea-2020-28991",
+  "details": "Gitea 0.9.99 through 1.12.x before 1.12.6 does not prevent a git protocol path that specifies a TCP port number and also contains newlines (with URL encoding) in ParseRemoteAddr in modules/auth/repo_form.go.",
+  "aliases": [
+    "CVE-2020-28991"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.9.99"
+            },
+            {
+              "fixed": "1.12.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/13525"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v1.12.6"
+    }
+  ],
+  "published": "2023-11-06T08:54:47.849Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

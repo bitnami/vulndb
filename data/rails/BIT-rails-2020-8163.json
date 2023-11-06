@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2020-8163",
+  "details": "The is a code injection vulnerability in versions of Rails prior to 5.0.1 that wouldallow an attacker who controlled the `locals` argument of a `render` call to perform a RCE.",
+  "aliases": [
+    "CVE-2020-8163"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/158604/Ruby-On-Rails-5.0.1-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/hWuKcHyoKh0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/304805"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00013.html"
+    }
+  ],
+  "published": "2023-11-06T09:03:36.847Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

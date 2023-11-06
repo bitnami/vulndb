@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-ruby-2021-28966",
+  "details": "In Ruby through 3.0 on Windows, a remote attacker can submit a crafted path when a Web application handles a parameter with TmpDir.",
+  "aliases": [
+    "CVE-2021-28966"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ruby",
+        "purl": "pkg:bitnami/ruby"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1131465"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210902-0004/"
+    }
+  ],
+  "published": "2023-11-06T09:02:25.481Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

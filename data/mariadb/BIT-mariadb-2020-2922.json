@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mariadb-2020-2922",
+  "details": "Vulnerability in the MySQL Client product of Oracle MySQL (component: C API). Supported versions that are affected are 5.6.47 and prior, 5.7.29 and prior and 8.0.18 and prior. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise MySQL Client. Successful attacks of this vulnerability can result in unauthorized read access to a subset of MySQL Client accessible data. CVSS 3.0 Base Score 3.7 (Confidentiality impacts). CVSS Vector: (CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N).",
+  "aliases": [
+    "CVE-2020-2922"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.5.0"
+            },
+            {
+              "fixed": "5.5.65"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.41"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.2.0"
+            },
+            {
+              "fixed": "10.2.26"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.17"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202105-27"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200416-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4350-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+    }
+  ],
+  "published": "2023-11-06T09:05:28.381Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

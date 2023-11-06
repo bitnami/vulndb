@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-golang-2022-41722",
+  "details": "A path traversal vulnerability exists in filepath.Clean on Windows. On Windows, the filepath.Clean function could transform an invalid path such as \"a/../c:/b\" into the valid path \"c:\\b\". This transformation of a relative (if invalid) path into an absolute path could enable a directory traversal attack. After fix, the filepath.Clean function transforms this path into the relative (but still invalid) path \".\\c:\\b\".",
+  "aliases": [
+    "CVE-2022-41722"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "last_affected": "1.20.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:golang:go:1.20.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/468123"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/57274"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/V0aBFqaFs_E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2023-1568"
+    }
+  ],
+  "published": "2023-11-06T08:55:48.653Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

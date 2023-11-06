@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-sqlite-2020-35527",
+  "details": "In SQLite 3.31.1, there is an out of bounds access problem through ALTER TABLE for views that have a nested FROM clause.",
+  "aliases": [
+    "CVE-2020-35527"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.31.1"
+            },
+            {
+              "last_affected": "3.31.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:3.31.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20221111-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sqlite.org/src/info/c431b3fd8fd0f6a6"
+    }
+  ],
+  "published": "2023-11-06T09:03:33.476Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

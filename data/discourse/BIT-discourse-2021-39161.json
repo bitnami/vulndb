@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2021-39161",
+  "details": "Discourse is an open source platform for community discussion. In affected versions category names can be used for Cross-site scripting(XSS) attacks. This is mitigated by Discourse's default Content Security Policy and this vulnerability only affects sites which have modified or disabled or changed Discourse's default Content Security Policy have allowed for moderators to modify categories. This issue is patched in the latest stable, beta and tests-passed versions of Discourse. Users are advised to ensure that the Content Security Policy is enabled, and has not been modified in a way which would make it more vulnerable to XSS attacks.",
+  "aliases": [
+    "CVE-2021-39161"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta1"
+            },
+            {
+              "last_affected": "2.8.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta2"
+            },
+            {
+              "last_affected": "2.8.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta3"
+            },
+            {
+              "last_affected": "2.8.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0-beta4"
+            },
+            {
+              "last_affected": "2.8.0-beta4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.8.0:beta4:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-xhmc-9jwm-wqph"
+    }
+  ],
+  "published": "2023-11-06T09:04:27.665Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

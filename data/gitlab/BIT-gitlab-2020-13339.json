@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13339",
+  "details": "An issue has been discovered in GitLab affecting all versions before 13.2.10, 13.3.7 and 13.4.2: XSS in SVG File Preview. Overall impact is limited due to the current user only being impacted.",
+  "aliases": [
+    "CVE-2020-13339"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.2.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.4.0"
+            },
+            {
+              "fixed": "13.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13339.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/758653"
+    }
+  ],
+  "published": "2023-11-06T09:14:58.329Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

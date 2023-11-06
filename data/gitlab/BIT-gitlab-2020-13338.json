@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13338",
+  "details": "An issue has been discovered in GitLab affecting versions prior to 12.10.13, 13.0.8, 13.1.2. A stored cross-site scripting vulnerability was discovered when editing references.",
+  "aliases": [
+    "CVE-2020-13338"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.10.0"
+            },
+            {
+              "fixed": "12.10.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13338.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/213273"
+    }
+  ],
+  "published": "2023-11-06T09:14:59.434Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

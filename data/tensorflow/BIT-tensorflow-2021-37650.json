@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2021-37650",
+  "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions the implementation for `tf.raw_ops.ExperimentalDatasetToTFRecord` and `tf.raw_ops.DatasetToTFRecord` can trigger heap buffer overflow and segmentation fault. The [implementation](https://github.com/tensorflow/tensorflow/blob/f24faa153ad31a4b51578f8181d3aaab77a1ddeb/tensorflow/core/kernels/data/experimental/to_tf_record_op.cc#L93-L102) assumes that all records in the dataset are of string type. However, there is no check for that, and the example given above uses numeric types. We have patched the issue in GitHub commit e0b6e58c328059829c3eb968136f17aa72b6c876. The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2021-37650"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "2.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc0"
+            },
+            {
+              "last_affected": "2.6.0-rc0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc2"
+            },
+            {
+              "last_affected": "2.6.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc0:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:2.6.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/e0b6e58c328059829c3eb968136f17aa72b6c876"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-f8h4-7rgh-q2gm"
+    }
+  ],
+  "published": "2023-11-06T09:12:03.497Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

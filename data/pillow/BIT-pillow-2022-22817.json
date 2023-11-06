@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-pillow-2022-22817",
+  "details": "PIL.ImageMath.eval in Pillow before 9.0.0 allows evaluation of arbitrary expressions, such as ones that use the Python exec method. A lambda expression could also be used,",
+  "aliases": [
+    "CVE-2022-22817"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/01/msg00018.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#restrict-builtins-available-to-imagemath-eval"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/9.0.1.html#security"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202211-10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5053"
+    }
+  ],
+  "published": "2023-11-06T08:59:42.689Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

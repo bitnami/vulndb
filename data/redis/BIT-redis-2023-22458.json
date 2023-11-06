@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-redis-2023-22458",
+  "details": "Redis is an in-memory database that persists on disk. Authenticated users can issue a `HRANDFIELD` or `ZRANDMEMBER` command with specially crafted arguments to trigger a denial-of-service by crashing Redis with an assertion failure. This problem affects Redis versions 6.2 or newer up to but not including 6.2.9 as well as versions 7.0 up to but not including 7.0.8. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-22458"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/16f408b1a0121cacd44cbf8aee275d69dc627f02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/6.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/7.0.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-r8w2-2m53-gprj"
+    }
+  ],
+  "published": "2023-11-06T09:01:55.272Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

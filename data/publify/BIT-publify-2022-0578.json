@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-publify-2022-0578",
+  "details": "Code Injection in GitHub repository publify/publify prior to 9.2.8.",
+  "aliases": [
+    "CVE-2022-0578"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "publify",
+        "purl": "pkg:bitnami/publify"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.2.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:publify_project:publify:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/publify/publify/commit/b50df050c593cc532b2c516792989bcfce2d73f7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/02c81928-eb47-476f-8000-e93dc796dbcc"
+    }
+  ],
+  "published": "2023-11-06T09:01:26.560Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

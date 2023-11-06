@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2020-8663",
+  "details": "Envoy version 1.14.2, 1.13.2, 1.12.4 or earlier may exhaust file descriptors and/or memory when accepting too many connections.",
+  "aliases": [
+    "CVE-2020-8663"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.12.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.13.0"
+            },
+            {
+              "fixed": "1.13.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "fixed": "1.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-v8q7-fq78-4997"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.envoyproxy.io/docs/envoy/v1.13.1/intro/version_history"
+    }
+  ],
+  "published": "2023-11-06T08:56:53.567Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-publify-2022-2815",
+  "details": "Insecure Storage of Sensitive Information in GitHub repository publify/publify prior to 9.2.10.",
+  "aliases": [
+    "CVE-2022-2815"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "publify",
+        "purl": "pkg:bitnami/publify"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.2.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:publify_project:publify:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/publify/publify/commit/af69097d349f4c00f244c51cd3c3e937fd3387cd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/22fdcc39-8c1a-4e4c-8eae-be3fd764f8b4"
+    }
+  ],
+  "published": "2023-11-06T09:00:37.062Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

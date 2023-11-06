@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-limesurvey-2020-25799",
+  "details": "LimeSurvey 3.21.1 is affected by cross-site scripting (XSS) in the Quota component of the Survey page. When the survey quota being viewed, e.g. by an administrative user, the JavaScript code will be executed in the browser.",
+  "aliases": [
+    "CVE-2020-25799"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "limesurvey",
+        "purl": "pkg:bitnami/limesurvey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.21.1"
+            },
+            {
+              "last_affected": "3.21.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:3.21.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.limesurvey.org/view.php?id=15681"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/commit/a5f317817da4577d9ff457fea9c96482b3d1df23"
+    }
+  ],
+  "published": "2023-11-06T08:55:00.548Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

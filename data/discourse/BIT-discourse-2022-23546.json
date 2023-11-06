@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2022-23546",
+  "details": "In version 2.9.0.beta14 of Discourse, an open-source discussion platform, maliciously embedded urls can leak an admin's digest of recent topics, possibly exposing private information. A patch is available for version 2.9.0.beta15. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2022-23546"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta1"
+            },
+            {
+              "last_affected": "2.9.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta10"
+            },
+            {
+              "last_affected": "2.9.0-beta10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta11"
+            },
+            {
+              "last_affected": "2.9.0-beta11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta12"
+            },
+            {
+              "last_affected": "2.9.0-beta12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta13"
+            },
+            {
+              "last_affected": "2.9.0-beta13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta14"
+            },
+            {
+              "last_affected": "2.9.0-beta14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta2"
+            },
+            {
+              "last_affected": "2.9.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta3"
+            },
+            {
+              "last_affected": "2.9.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta4"
+            },
+            {
+              "last_affected": "2.9.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta8"
+            },
+            {
+              "last_affected": "2.9.0-beta8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta10:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta11:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta12:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta13:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta14:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/cf862e736565c6fa905c12b5dbe63d0bd056efb8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-q9jp-xv4g-328f"
+    }
+  ],
+  "published": "2023-11-06T09:02:34.488Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

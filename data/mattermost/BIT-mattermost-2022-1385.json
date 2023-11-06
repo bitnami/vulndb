@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2022-1385",
+  "details": "Mattermost 6.4.x and earlier fails to properly invalidate pending email invitations when the action is performed from the system console, which allows accidentally invited users to join the workspace and access information from the public teams and channels.",
+  "aliases": [
+    "CVE-2022-1385"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1486820"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-11-06T08:59:15.887Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

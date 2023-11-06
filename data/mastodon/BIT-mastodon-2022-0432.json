@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2022-0432",
+  "details": "Prototype Pollution in GitHub repository mastodon/mastodon prior to 3.5.0.",
+  "aliases": [
+    "CVE-2022-0432"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/4d6d4b43c6186a13e67b92eaf70fe1b70ea24a09"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/d06da292-7716-4d74-a129-dd04773398d7"
+    }
+  ],
+  "published": "2023-11-06T08:56:32.475Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

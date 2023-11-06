@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13317",
+  "details": "A vulnerability was discovered in GitLab versions before 13.1.10, 13.2.8, and 13.3.4. An insufficient check in the GraphQL api allowed a maintainer to delete a repository.",
+  "aliases": [
+    "CVE-2020-13317"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13317.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/858671"
+    }
+  ],
+  "published": "2023-11-06T09:15:19.999Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-silverstripe-2020-26138",
+  "details": "In SilverStripe through 4.6.0-rc1, a FormField with square brackets in the field name skips validation.",
+  "aliases": [
+    "CVE-2020-26138"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "silverstripe",
+        "purl": "pkg:bitnami/silverstripe"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.6.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.6.0-rc1"
+            },
+            {
+              "last_affected": "4.6.0-rc1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:silverstripe:silverstripe:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:silverstripe:silverstripe:4.6.0:rc1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://forum.silverstripe.org/c/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.silverstripe.org/blog/tag/release"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.silverstripe.org/download/security-releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.silverstripe.org/download/security-releases/cve-2020-26138"
+    }
+  ],
+  "published": "2023-11-06T09:03:18.364Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

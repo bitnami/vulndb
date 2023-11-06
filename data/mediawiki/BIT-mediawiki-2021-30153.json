@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2021-30153",
+  "details": "An issue was discovered in the VisualEditor extension in MediaWiki before 1.31.13, and 1.32.x through 1.35.x before 1.35.2. . When using VisualEditor to edit a MediaWiki user page belonging to an existing, but hidden, user, VisualEditor will disclose that the user exists. (It shouldn't because they are hidden.) This is related to ApiVisualEditor.",
+  "aliases": [
+    "CVE-2021-30153"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.31.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.32.0"
+            },
+            {
+              "fixed": "1.35.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.wikimedia.org/hyperkitty/list/wikitech-l@lists.wikimedia.org/message/XYBF5RSTJRMVCP7QBYK7643W75A3KCIY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.wikimedia.org/pipermail/wikitech-l/2021-April/094418.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T270453"
+    }
+  ],
+  "published": "2023-11-06T09:07:38.054Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

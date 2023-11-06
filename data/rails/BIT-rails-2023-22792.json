@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2023-22792",
+  "details": "A regular expression based DoS vulnerability in Action Dispatch <6.0.6.1,< 6.1.7.1, and <7.0.4.1. Specially crafted cookies, in combination with a specially crafted X_FORWARDED_HOST header can cause the regular expression engine to enter a state of catastrophic backtracking. This can cause the process to use large amounts of CPU and memory, leading to a possible DoS vulnerability All users running an affected release should either upgrade or use one of the workarounds immediately.",
+  "aliases": [
+    "CVE-2023-22792"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "6.0.6.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.7.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.rubyonrails.org/t/cve-2023-22792-possible-redos-based-dos-vulnerability-in-action-dispatch/82115"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5372"
+    }
+  ],
+  "published": "2023-11-06T09:00:55.680Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

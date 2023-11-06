@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2020-14453",
+  "details": "An issue was discovered in Mattermost Server before 5.21.0. Socket read operations are not appropriately restricted, which allows attackers to cause a denial of service, aka MMSA-2020-0005.",
+  "aliases": [
+    "CVE-2020-14453"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.21.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates/"
+    }
+  ],
+  "published": "2023-11-06T09:01:03.586Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2021-29598",
+  "details": "TensorFlow is an end-to-end open source platform for machine learning. The implementation of the `SVDF` TFLite operator is vulnerable to a division by zero error(https://github.com/tensorflow/tensorflow/blob/7f283ff806b2031f407db64c4d3edcda8fb9f9f5/tensorflow/lite/kernels/svdf.cc#L99-L102). An attacker can craft a model such that `params->rank` would be 0. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2, TensorFlow 2.3.3, TensorFlow 2.2.3 and TensorFlow 2.1.4, as these are also affected and still in supported range.",
+  "aliases": [
+    "CVE-2021-29598"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.1.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.2.0"
+            },
+            {
+              "fixed": "2.2.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/6841e522a3e7d48706a02e8819836e809f738682"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-pmpr-55fj-r229"
+    }
+  ],
+  "published": "2023-11-06T09:12:44.624Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

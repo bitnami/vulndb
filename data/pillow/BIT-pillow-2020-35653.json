@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-pillow-2020-35653",
+  "details": "In Pillow before 8.1.0, PcxDecode has a buffer over-read when decoding a crafted PCX file because the user-supplied stride value is trusted for buffer calculations.",
+  "aliases": [
+    "CVE-2020-35653"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/07/msg00018.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6BYVI5G44MRIPERKYDQEL3S3YQCZTVHE/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BF553AMNNNBW7SH4IM4MNE4M6GNZQ7YD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html"
+    }
+  ],
+  "published": "2023-11-06T09:03:23.782Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-liferay-2023-33945",
+  "details": "SQL injection vulnerability in the upgrade process for SQL Server in Liferay Portal 7.3.1 through 7.4.3.17, and Liferay DXP 7.3 before update 6, and 7.4 before update 18 allows attackers to execute arbitrary SQL commands via the name of a database table's primary key index. This vulnerability is only exploitable when chained with other attacks. To exploit this vulnerability, the attacker must modify the database and wait for the application to be upgraded.",
+  "aliases": [
+    "CVE-2023-33945"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "liferay",
+        "purl": "pkg:bitnami/liferay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "last_affected": "7.3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix.0"
+            },
+            {
+              "last_affected": "7.3-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3-fix.0"
+            },
+            {
+              "last_affected": "7.3-fix.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "last_affected": "7.4.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4-update1.0"
+            },
+            {
+              "last_affected": "7.4-update1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:fix_pack_1:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.3:fix_pack_2:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:-:*:*:*:*:*:*",
+      "cpe:2.3:a:liferay:digital_experience_platform:7.4:update1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2023-33945"
+    }
+  ],
+  "published": "2023-11-06T08:56:00.881Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

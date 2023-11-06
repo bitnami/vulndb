@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2021-39203",
+  "details": "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database. In affected versions authenticated users who don't have permission to view private post types/data can bypass restrictions in the block editor under certain conditions. This affected WordPress 5.8 beta during the testing period. It's fixed in the final 5.8 release.",
+  "aliases": [
+    "CVE-2021-39203"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.8-beta1.0"
+            },
+            {
+              "last_affected": "5.8-beta1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:5.8:beta1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-qxvw-qxm9-qvg6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1225282"
+    }
+  ],
+  "published": "2023-11-06T09:06:18.758Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

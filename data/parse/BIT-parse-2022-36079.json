@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-parse-2022-36079",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Internal fields (keys used internally by Parse Server, prefixed by `_`) and protected fields (user defined) can be used as query constraints. Internal and protected fields are removed by Parse Server and are only returned to the client using a valid master key. However, using query constraints, these fields can be guessed by enumerating until Parse Server, prior to versions 4.10.14 or 5.2.5, returns a response object. The patch available in versions 4.10.14 and 5.2.5 requires the maser key to use internal and protected fields as query constraints. As a workaround, implement a Parse Cloud Trigger `beforeFind` and manually remove the query constraints.",
+  "aliases": [
+    "CVE-2022-36079"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.10.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/634c44acd18f6ee6ec60fac89a2b602d92799bec"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/e39d51bd329cd978589983bd659db46e1d45aad4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/issues/8143"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/issues/8144"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/4.10.14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/5.2.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-2m6g-crv8-p3c6"
+    }
+  ],
+  "published": "2023-11-06T08:59:52.677Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

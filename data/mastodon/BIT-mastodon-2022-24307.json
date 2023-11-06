@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2022-24307",
+  "details": "Mastodon before 3.3.2 and 3.4.x before 3.4.6 has incorrect access control because it does not compact incoming signed JSON-LD activities. (JSON-LD signing has been supported since version 1.6.0.)",
+  "aliases": [
+    "CVE-2022-24307"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.4.0"
+            },
+            {
+              "fixed": "3.4.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v3.3.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v3.4.6"
+    }
+  ],
+  "published": "2023-11-06T08:56:12.385Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

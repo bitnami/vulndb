@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-concourse-2022-31683",
+  "details": "Concourse (7.x.y prior to 7.8.3 and 6.x.y prior to 6.7.9) contains an authorization bypass issue. A Concourse user can send a request with body including :team_name=team2 to bypass team scope check to gain access to certain resources belong to any other team.",
+  "aliases": [
+    "CVE-2022-31683"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "concourse",
+        "purl": "pkg:bitnami/concourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.7.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.8.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:pivotal_software:concourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/concourse/concourse/security/advisories/GHSA-5jp2-vwrj-99rf"
+    }
+  ],
+  "published": "2023-11-06T08:50:47.189Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

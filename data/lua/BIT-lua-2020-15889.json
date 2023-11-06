@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-lua-2020-15889",
+  "details": "Lua 5.4.0 has a getobjname heap-based buffer over-read because youngcollection in lgc.c uses markold for an insufficient number of list members.",
+  "aliases": [
+    "CVE-2020-15889"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "lua",
+        "purl": "pkg:bitnami/lua"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "last_affected": "5.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lua:lua:5.4.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-07/msg00078.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lua-users.org/lists/lua-l/2020-12/msg00157.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lua/lua/commit/127e7a6c8942b362aa3c6627f44d660a4fb75312"
+    }
+  ],
+  "published": "2023-11-06T08:55:46.063Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

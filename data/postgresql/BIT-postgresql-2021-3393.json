@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-postgresql-2021-3393",
+  "details": "An information leak was discovered in postgresql in versions before 13.2, before 12.6 and before 11.11. A user having UPDATE permission but not SELECT permission to a particular column could craft queries which, under some circumstances, might disclose values from that column in error messages. An attacker could use this flaw to obtain information stored in a column they are allowed to write but not read.",
+  "aliases": [
+    "CVE-2021-3393"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "11.11.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.6.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1924005"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202105-32"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210507-0006/"
+    }
+  ],
+  "published": "2023-11-06T09:01:13.982Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

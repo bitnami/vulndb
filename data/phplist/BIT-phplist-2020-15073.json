@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-phplist-2020-15073",
+  "details": "An issue was discovered in phpList through 3.5.4. An XSS vulnerability occurs within the Import Administrators section via upload of an edited text document. This also affects the Subscriber Lists section.",
+  "aliases": [
+    "CVE-2020-15073"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phplist",
+        "purl": "pkg:bitnami/phplist"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.telspace.co.za/2020/07/phplist-cve-2020-15072-cve-2020-15073.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://discuss.phplist.org/t/phplist-3-5-5-has-been-released/6377"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.phplist.org/newslist/phplist-3-5-5-release-notes/"
+    }
+  ],
+  "published": "2023-11-06T09:01:30.877Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-publify-2022-1812",
+  "details": "Integer Overflow or Wraparound in GitHub repository publify/publify prior to 9.2.10.",
+  "aliases": [
+    "CVE-2022-1812"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "publify",
+        "purl": "pkg:bitnami/publify"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.2.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:publify_project:publify:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/publify/publify/commit/29a5837c29620e33857d7a5afce01384e3f8e41a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/17d86a50-265c-4ec8-9592-0bd909ddc8f3"
+    }
+  ],
+  "published": "2023-11-06T09:00:47.471Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

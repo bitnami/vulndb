@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-multisite-2020-25286",
+  "details": "In wp-includes/comment-template.php in WordPress before 5.4.2, comments from a post or page could sometimes be seen in the latest comments even if the post or page was not public.",
+  "aliases": [
+    "CVE-2020-25286"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/47984"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2020/06/wordpress-5-4-2-security-and-maintenance-release/"
+    }
+  ],
+  "published": "2023-11-06T09:07:15.187Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

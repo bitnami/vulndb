@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2022-34175",
+  "details": "Jenkins 2.335 through 2.355 (both inclusive) allows attackers in some cases to bypass a protection mechanism, thereby directly accessing some view fragments containing sensitive information, bypassing any permission checks in the corresponding view.",
+  "aliases": [
+    "CVE-2022-34175"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.335.0"
+            },
+            {
+              "fixed": "2.355.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2022-06-22/#SECURITY-2777"
+    }
+  ],
+  "published": "2023-11-06T08:55:30.675Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-openldap-2022-29155",
+  "details": "In OpenLDAP 2.x before 2.5.12 and 2.6.x before 2.6.2, a SQL injection vulnerability exists in the experimental back-sql backend to slapd, via a SQL statement within an LDAP query. This can occur during an LDAP search operation when the search filter is processed, due to a lack of proper escaping.",
+  "aliases": [
+    "CVE-2022-29155"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openldap",
+        "purl": "pkg:bitnami/openldap"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.5.12"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:openldap:openldap:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.openldap.org/show_bug.cgi?id=9815"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00032.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220609-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5140"
+    }
+  ],
+  "published": "2023-11-06T08:57:55.183Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

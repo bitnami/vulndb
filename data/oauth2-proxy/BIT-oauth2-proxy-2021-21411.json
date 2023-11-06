@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-oauth2-proxy-2021-21411",
+  "details": "OAuth2-Proxy is an open source reverse proxy that provides authentication with Google, Github or other providers. The `--gitlab-group` flag for group-based authorization in the GitLab provider stopped working in the v7.0.0 release. Regardless of the flag settings, authorization wasn't restricted. Additionally, any authenticated users had whichever groups were set in `--gitlab-group` added to the new `X-Forwarded-Groups` header to the upstream application. While adding GitLab project based authorization support in #630, a bug was introduced where the user session's groups field was populated with the `--gitlab-group` config entries instead of pulling the individual user's group membership from the GitLab Userinfo endpoint. When the session groups where compared against the allowed groups for authorization, they matched improperly (since both lists were populated with the same data) so authorization was allowed. This impacts GitLab Provider users who relies on group membership for authorization restrictions. Any authenticated users in your GitLab environment can access your applications regardless of `--gitlab-group` membership restrictions. This is patched in v7.1.0. There is no workaround for the Group membership bug. But `--gitlab-project` can be set to use Project membership as the authorization checks instead of groups; it is not broken.",
+  "aliases": [
+    "CVE-2021-21411"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "oauth2-proxy",
+        "purl": "pkg:bitnami/oauth2-proxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oauth2_proxy_project:oauth2_proxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/ee/user/group/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/commit/0279fa7dff1752f1710707dbd1ffac839de8bbfc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/releases/tag/v7.1.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/security/advisories/GHSA-652x-m2gr-hppm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/github.com/oauth2-proxy/oauth2-proxy/v7"
+    }
+  ],
+  "published": "2023-11-06T08:57:17.247Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

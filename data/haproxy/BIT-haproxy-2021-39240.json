@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-haproxy-2021-39240",
+  "details": "An issue was discovered in HAProxy 2.2 before 2.2.16, 2.3 before 2.3.13, and 2.4 before 2.4.3. It does not ensure that the scheme and path portions of a URI have the expected characters. For example, the authority field (as observed on a target HTTP/2 server) might differ from what the routing rules were intended to achieve.",
+  "aliases": [
+    "CVE-2021-39240"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.2.0"
+            },
+            {
+              "fixed": "2.2.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.3.13"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy.git;a=commit;h=4b8852c70d8c4b7e225e24eb58258a15eb54c26e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy.git;a=commit;h=a495e0d94876c9d39763db319f609351907a31e8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4ALECUZDIMT5FYGP6V6PVSI4BKVZTZWN/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RPNY4WZIQUAUOCLIMUPC37AQWNXTWIQM/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2021/dsa-4960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mail-archive.com/haproxy@formilux.org/msg41041.html"
+    }
+  ],
+  "published": "2023-11-06T08:53:57.591Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

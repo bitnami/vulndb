@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-livehelperchat-2022-1176",
+  "details": "Loose comparison causes IDOR on multiple endpoints in GitHub repository livehelperchat/livehelperchat prior to 3.96.",
+  "aliases": [
+    "CVE-2022-1176"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "livehelperchat",
+        "purl": "pkg:bitnami/livehelperchat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.96.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/72c0df160bfe9838c618652facef29af99392ce3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/3e30171b-c9bf-415c-82f1-6f55a44d09d3"
+    }
+  ],
+  "published": "2023-11-06T08:54:44.681Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

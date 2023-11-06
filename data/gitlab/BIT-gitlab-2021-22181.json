@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-22181",
+  "details": "A denial of service vulnerability in GitLab CE/EE affecting all versions since 11.8 allows an attacker to create a recursive pipeline relationship and exhaust resources.",
+  "aliases": [
+    "CVE-2021-22181"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.8.0"
+            },
+            {
+              "fixed": "13.10.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.11.0"
+            },
+            {
+              "fixed": "13.11.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.12.0"
+            },
+            {
+              "fixed": "13.12.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22181.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/249100"
+    }
+  ],
+  "published": "2023-11-06T09:13:48.074Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

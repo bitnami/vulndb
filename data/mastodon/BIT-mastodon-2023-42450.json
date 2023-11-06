@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2023-42450",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. Starting in version 4.2.0-beta1 and prior to version 4.2.0-rc2, by crafting specific input, attackers can inject arbitrary data into HTTP requests issued by Mastodon. This can be used to perform confused deputy attacks if the server configuration includes `ALLOWED_PRIVATE_ADDRESSES` to allow access to local exploitable services. Version 4.2.0-rc2 has a patch for the issue.",
+  "aliases": [
+    "CVE-2023-42450"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0-beta1"
+            },
+            {
+              "last_affected": "4.2.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0-beta2"
+            },
+            {
+              "last_affected": "4.2.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0-beta3"
+            },
+            {
+              "last_affected": "4.2.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0-rc1"
+            },
+            {
+              "last_affected": "4.2.0-rc1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:4.2.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:joinmastodon:mastodon:4.2.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:joinmastodon:mastodon:4.2.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:joinmastodon:mastodon:4.2.0:rc1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/94893cf24fc95b32cc7a756262acbe008c20a9d2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-hcqf-fw2r-52g4"
+    }
+  ],
+  "published": "2023-11-06T08:54:48.467Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

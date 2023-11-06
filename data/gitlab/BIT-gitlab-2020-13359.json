@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13359",
+  "details": "The Terraform API in GitLab CE/EE 12.10+ exposed the object storage signed URL on the delete operation allowing a malicious project maintainer to overwrite the Terraform state, bypassing audit and other business controls. Affected versions are >=12.10, <13.3.9,>=13.4, <13.4.5,>=13.5, <13.5.2.",
+  "aliases": [
+    "CVE-2020-13359"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.10.0"
+            },
+            {
+              "fixed": "13.3.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.4.0"
+            },
+            {
+              "fixed": "13.4.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.5.0"
+            },
+            {
+              "fixed": "13.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13359.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/250266"
+    }
+  ],
+  "published": "2023-11-06T09:14:37.621Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

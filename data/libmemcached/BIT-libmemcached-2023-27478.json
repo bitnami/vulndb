@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-libmemcached-2023-27478",
+  "details": "libmemcached-awesome is an open source C/C++ client library and tools for the memcached server. `libmemcached` could return data for a previously requested key, if that previous request timed out due to a low `POLL_TIMEOUT`. This issue has been addressed in version 1.1.4. Users are advised to upgrade. There are several ways to workaround or lower the probability of this bug affecting a given deployment. 1: use a reasonably high `POLL_TIMEOUT` setting, like the default. 2: use separate libmemcached connections for unrelated data. 3: do not re-use libmemcached connections in an unknown state.",
+  "aliases": [
+    "CVE-2023-27478"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libmemcached",
+        "purl": "pkg:bitnami/libmemcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.18"
+            },
+            {
+              "fixed": "1.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:awesome:libmemcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/awesomized/libmemcached/commit/48dcc61a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/awesomized/libmemcached/releases/tag/1.1.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/awesomized/libmemcached/security/advisories/GHSA-wwmh-39wj-fx59"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/php-memcached-dev/php-memcached/issues/531"
+    }
+  ],
+  "published": "2023-11-06T08:54:01.942Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

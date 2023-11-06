@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-0921",
+  "details": "A lack of length validation in GitLab CE/EE affecting all versions from 8.3 before 15.10.8, 15.11 before 15.11.7, and 16.0 before 16.0.2 allows an authenticated attacker to create a large Issue description via GraphQL which, when repeatedly requested, saturates CPU usage.",
+  "aliases": [
+    "CVE-2023-0921"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "15.10.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.11.0"
+            },
+            {
+              "fixed": "15.11.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-0921.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/392433"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1869839"
+    }
+  ],
+  "published": "2023-11-06T09:04:24.351Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

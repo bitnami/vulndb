@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-limesurvey-2022-43279",
+  "details": "LimeSurvey v5.4.4 was discovered to contain a SQL injection vulnerability via the component /application/views/themeOptions/update.php.",
+  "aliases": [
+    "CVE-2022-43279"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "limesurvey",
+        "purl": "pkg:bitnami/limesurvey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.4"
+            },
+            {
+              "last_affected": "5.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:5.4.4:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://brick-pamphlet-d24.notion.site/LimeSurvey-V5-4-4-background-update-php-SQL-injection-50e8fd6eba4644bb941b2c8d6fb7979a"
+    }
+  ],
+  "published": "2023-11-06T08:54:25.076Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

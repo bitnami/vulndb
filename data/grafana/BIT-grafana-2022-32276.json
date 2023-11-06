@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2022-32276",
+  "details": "** DISPUTED ** Grafana 8.4.3 allows unauthenticated access via (for example) a /dashboard/snapshot/*?orgId=0 URI. NOTE: the vendor considers this a UI bug, not a vulnerability.",
+  "aliases": [
+    "CVE-2022-32276"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.4.3"
+            },
+            {
+              "last_affected": "8.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:8.4.3:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/BrotherOfJhonny/grafana/blob/main/README.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana/issues/50336"
+    }
+  ],
+  "published": "2023-11-06T08:55:04.362Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

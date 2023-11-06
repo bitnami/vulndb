@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2022-43985",
+  "details": "In Apache Airflow versions prior to 2.4.2, there was an open redirect in the webserver's `/confirm` endpoint.",
+  "aliases": [
+    "CVE-2022-43985"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/27143"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/m13y9s5kw92fw9l8j4qd85h0txp4kfcq"
+    }
+  ],
+  "published": "2023-11-06T08:53:44.052Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

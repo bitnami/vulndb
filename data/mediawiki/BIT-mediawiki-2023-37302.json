@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2023-37302",
+  "details": "An issue was discovered in SiteLinksView.php in Wikibase in MediaWiki through 1.39.3. There is XSS via a crafted badge title attribute. This is also related to lack of escaping in wbTemplate (from resources/wikibase/templates.js) for quotes (which can be in a title attribute).",
+  "aliases": [
+    "CVE-2023-37302"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.39.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/Wikibase/+/933649"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/Wikibase/+/933650"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T339111"
+    }
+  ],
+  "published": "2023-11-06T08:56:31.988Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

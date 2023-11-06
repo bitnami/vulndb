@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-git-lfs-2020-27955",
+  "details": "Git LFS 2.12.0 allows Remote Code Execution.",
+  "aliases": [
+    "CVE-2020-27955"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git-lfs",
+        "purl": "pkg:bitnami/git-lfs"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "last_affected": "2.12.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:git_large_file_storage_project:git_large_file_storage:2.12.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/159923/git-lfs-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/164180/Git-git-lfs-Remote-Code-Execution.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2020/Nov/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://exploitbox.io"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git-lfs/git-lfs/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://legalhackers.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://legalhackers.com/advisories/Git-LFS-RCE-Exploit-CVE-2020-27955.html"
+    }
+  ],
+  "published": "2023-11-06T08:52:00.053Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

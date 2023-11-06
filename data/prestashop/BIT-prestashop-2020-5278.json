@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2020-5278",
+  "details": "In PrestaShop between versions 1.5.4.0 and 1.7.6.5, there is a reflected XSS on Exception page The problem is fixed in 1.7.6.5",
+  "aliases": [
+    "CVE-2020-5278"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.5.4.0"
+            },
+            {
+              "fixed": "1.7.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/ea85210d6e5d81f058b55764bc4608cdb0b36c5d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-mrpj-67mq-3fr5"
+    }
+  ],
+  "published": "2023-11-06T09:04:06.081Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

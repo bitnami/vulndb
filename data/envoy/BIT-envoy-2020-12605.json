@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2020-12605",
+  "details": "Envoy version 1.14.2, 1.13.2, 1.12.4 or earlier may consume excessive amounts of memory when processing HTTP/1.1 headers with long field names or requests with long URLs.",
+  "aliases": [
+    "CVE-2020-12605"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.12.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.13.2"
+            },
+            {
+              "last_affected": "1.13.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.2"
+            },
+            {
+              "last_affected": "1.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:1.13.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:1.14.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy-setec/issues/137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-fjxc-jj43-f777"
+    }
+  ],
+  "published": "2023-11-06T08:57:57.566Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

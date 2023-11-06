@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2022-39385",
+  "details": "Discourse is the an open source discussion platform. In some rare cases users redeeming an invitation can be added as a participant to several private message topics that they should not be added to. They are not notified of this, it happens transparently in the background. This issue has been resolved in commit `a414520742` and will be included in future releases. Users are advised to upgrade. Users are also advised to set `SiteSetting.max_invites_per_day` to 0 until the patch is installed.",
+  "aliases": [
+    "CVE-2022-39385"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta1"
+            },
+            {
+              "last_affected": "2.9.0-beta1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta10"
+            },
+            {
+              "last_affected": "2.9.0-beta10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta2"
+            },
+            {
+              "last_affected": "2.9.0-beta2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta3"
+            },
+            {
+              "last_affected": "2.9.0-beta3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta4"
+            },
+            {
+              "last_affected": "2.9.0-beta4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-beta8"
+            },
+            {
+              "last_affected": "2.9.0-beta8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta10:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/a414520742da8dc9dc976d4fb7b72dbd445813bb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-gh5r-j595-qx48"
+    }
+  ],
+  "published": "2023-11-06T08:59:22.556Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

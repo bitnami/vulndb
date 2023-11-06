@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2023-3550",
+  "details": "Mediawiki v1.40.0 does not validate namespaces used in XML files.Therefore, if the instance administrator allows XML file uploads,a remote attacker with a low-privileged user account can use thisexploit to become an administrator by sending a malicious link tothe instance administrator.",
+  "aliases": [
+    "CVE-2023-3550"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.40.0"
+            },
+            {
+              "last_affected": "1.40.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/advisories/blondie/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5520"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mediawiki.org/wiki/MediaWiki/"
+    }
+  ],
+  "published": "2023-11-06T08:57:52.944Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-ejbca-2021-40088",
+  "details": "An issue was discovered in PrimeKey EJBCA before 7.6.0. CMP RA Mode can be configured to use a known client certificate to authenticate enrolling clients. The same RA client certificate is used for revocation requests as well. While enrollment enforces multi tenancy constraints (by verifying that the client certificate has access to the CA and Profiles being enrolled against), this check was not performed when authenticating revocation operations, allowing a known tenant to revoke a certificate belonging to another tenant.",
+  "aliases": [
+    "CVE-2021-40088"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ejbca",
+        "purl": "pkg:bitnami/ejbca"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:primekey:ejbca:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://support.primekey.com/news/posts/51"
+    }
+  ],
+  "published": "2023-11-06T08:51:36.269Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

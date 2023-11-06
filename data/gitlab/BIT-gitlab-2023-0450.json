@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-0450",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 8.1 to 15.8.5, and from 15.9 to 15.9.4, and from 15.10 to 15.10.1. It was possible to add a branch with an ambiguous name that could be used to social engineer users.",
+  "aliases": [
+    "CVE-2023-0450"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "15.8.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "15.9.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10.0"
+            },
+            {
+              "last_affected": "15.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:15.10.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2023/CVE-2023-0450.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1831547"
+    }
+  ],
+  "published": "2023-11-06T09:05:37.077Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

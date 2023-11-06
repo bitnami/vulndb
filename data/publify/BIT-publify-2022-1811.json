@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-publify-2022-1811",
+  "details": "Unrestricted Upload of File with Dangerous Type in GitHub repository publify/publify prior to 9.2.9.",
+  "aliases": [
+    "CVE-2022-1811"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "publify",
+        "purl": "pkg:bitnami/publify"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.2.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:publify_project:publify:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/publify/publify/commit/0fb6b027fbaf17f6a6551f2148482a03eac12927"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/4d97f665-c9f1-4c38-b774-692255a7c44c"
+    }
+  ],
+  "published": "2023-11-06T09:00:55.776Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

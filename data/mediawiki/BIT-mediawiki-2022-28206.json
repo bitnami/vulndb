@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2022-28206",
+  "details": "An issue was discovered in MediaWiki through 1.37.1. ImportPlanValidator.php in the FileImporter extension mishandles the check for edit rights.",
+  "aliases": [
+    "CVE-2022-28206"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.37.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/q/I84be9cd3639b8ab0e037a4ec2d3f2f478f0989c5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T294256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202305-24"
+    }
+  ],
+  "published": "2023-11-06T09:01:41.254Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-livehelperchat-2022-1191",
+  "details": "SSRF on index.php/cobrowse/proxycss/ in GitHub repository livehelperchat/livehelperchat prior to 3.96.",
+  "aliases": [
+    "CVE-2022-1191"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "livehelperchat",
+        "purl": "pkg:bitnami/livehelperchat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.96.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:livehelperchat:live_helper_chat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/livehelperchat/livehelperchat/commit/c41f283a2c1b46c42dd2af16ecbeaedd2fe1f5df"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/7264a2e1-17e7-4244-93e4-49ec14f282b3"
+    }
+  ],
+  "published": "2023-11-06T08:54:35.375Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

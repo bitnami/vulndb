@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-azure-cli-2022-39327",
+  "details": "Azure CLI is the command-line interface for Microsoft Azure. In versions previous to 2.40.0, Azure CLI contains a vulnerability for potential code injection. Critical scenarios are where a hosting machine runs an Azure CLI command where parameter values have been provided by an external source. The vulnerability is only applicable when the Azure CLI command is run on a Windows machine and with any version of PowerShell and when the parameter value contains the `&` or `|` symbols. If any of these prerequisites are not met, this vulnerability is not applicable. Users should upgrade to version 2.40.0 or greater to receive a a mitigation for the vulnerability.",
+  "aliases": [
+    "CVE-2022-39327"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "azure-cli",
+        "purl": "pkg:bitnami/azure-cli"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.40.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:microsoft:azure_command-line_interface:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Azure/azure-cli/pull/23514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Azure/azure-cli/pull/24015"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Azure/azure-cli/security/advisories/GHSA-47xc-9rr2-q7p4"
+    }
+  ],
+  "published": "2023-11-06T08:50:37.662Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tensorflow-2020-15197",
+  "details": "In Tensorflow before version 2.3.1, the `SparseCountSparseOutput` implementation does not validate that the input arguments form a valid sparse tensor. In particular, there is no validation that the `indices` tensor has rank 2. This tensor must be a matrix because code assumes its elements are accessed as elements of a matrix. However, malicious users can pass in tensors of different rank, resulting in a `CHECK` assertion failure and a crash. This can be used to cause denial of service in serving installations, if users are allowed to control the components of the input sparse tensor. The issue is patched in commit 3cbb917b4714766030b28eba9fb41bb97ce9ee02 and is released in TensorFlow version 2.3.1.",
+  "aliases": [
+    "CVE-2020-15197"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "last_affected": "2.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/commit/3cbb917b4714766030b28eba9fb41bb97ce9ee02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/releases/tag/v2.3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-qc53-44cj-vfvx"
+    }
+  ],
+  "published": "2023-11-06T09:14:46.717Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

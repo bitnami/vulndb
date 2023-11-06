@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2022-31048",
+  "details": "TYPO3 is an open source web content management system. Prior to versions 8.7.47 ELTS, 9.5.34 ELTS, 10.4.29, and 11.5.11, the Form Designer backend module of the Form Framework is vulnerable to cross-site scripting. A valid backend user account with access to the form module is needed to exploit this vulnerability. TYPO3 versions 8.7.47 ELTS, 9.5.34 ELTS, 10.4.29, and 11.5.11 contain a fix for the problem.",
+  "aliases": [
+    "CVE-2022-31048"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.7.47"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.29"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/6f2554dc4ea0b670fd5599c54fd788d4db96c4a0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/security/advisories/GHSA-3r95-23jp-mhvg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2022-003"
+    }
+  ],
+  "published": "2023-11-06T09:05:18.474Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

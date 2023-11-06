@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2020-35453",
+  "details": "HashiCorp Vault Enterprise’s Sentinel EGP policy feature incorrectly allowed requests to be processed in parent and sibling namespaces. Fixed in 1.5.6 and 1.6.1.",
+  "aliases": [
+    "CVE-2020-35453"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.5.0"
+            },
+            {
+              "fixed": "1.5.6"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.6.0"
+            },
+            {
+              "fixed": "1.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2020-24-vault-enterprise-s-sentinel-egp-policies-may-impact-parent-or-sibling-namespaces/18983"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/vault/blob/master/CHANGELOG.md#161"
+    }
+  ],
+  "published": "2023-11-06T09:06:48.950Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13341",
+  "details": "An issue has been discovered in GitLab affecting all versions prior to 13.2.10, 13.3.7 and 13.4.2. Insufficient permission check allows attacker with developer role to perform various deletions.",
+  "aliases": [
+    "CVE-2020-13341"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.2.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.4.0"
+            },
+            {
+              "fixed": "13.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13341.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/239348"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/960244"
+    }
+  ],
+  "published": "2023-11-06T09:14:56.142Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

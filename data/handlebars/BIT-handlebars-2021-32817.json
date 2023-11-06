@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-handlebars-2021-32817",
+  "details": "express-hbs is an Express handlebars template engine. express-hbs mixes pure template data with engine configuration options through the Express render API. More specifically, the layout parameter may trigger file disclosure vulnerabilities in downstream applications. This potential vulnerability is somewhat restricted in that only files with existing extentions (i.e. file.extension) can be included, files that lack an extension will have .hbs appended to them. For complete details refer to the referenced GHSL-2021-019 report. Notes in documentation have been added to help users of express-hbs avoid this potential information exposure vulnerability.",
+  "aliases": [
+    "CVE-2021-32817"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "handlebars",
+        "purl": "pkg:bitnami/handlebars"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:express_handlebars_project:express_handlebars:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/express-hbs#%EF%B8%8F-this-creates-a-potential-security-vulnerability"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/express-hbs/commit/ff6fad6e357699412d4e916273314e5e7af1500e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://securitylab.github.com/advisories/GHSL-2021-019-express-hbs/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.npmjs.com/package/express-hbs"
+    }
+  ],
+  "published": "2023-11-06T08:52:34.982Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

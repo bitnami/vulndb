@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2023-2515",
+  "details": "Mattermost fails to restrict a user with permissions to edit other users and to create personal access tokens from elevating their privileges to system admin",
+  "aliases": [
+    "CVE-2023-2515"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.7.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.8.0"
+            },
+            {
+              "fixed": "7.8.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.9.0"
+            },
+            {
+              "fixed": "7.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2023-11-06T08:57:22.773Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

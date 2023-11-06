@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2023-3293",
+  "details": "Cross-site Scripting (XSS) - Stored in GitHub repository salesagility/suitecrm-core prior to 8.3.0.",
+  "aliases": [
+    "CVE-2023-3293"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/suitecrm-core/commit/1f949f1ac2b7fe82f3c2c6071f842b804ba91929"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/22cb0ee3-e5da-40e0-9d2c-ace9b759f171"
+    }
+  ],
+  "published": "2023-11-06T09:03:05.568Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

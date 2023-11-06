@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-phplist-2020-23361",
+  "details": "phpList 3.5.3 allows type juggling for login bypass because == is used instead of === for password hashes, which mishandles hashes that begin with 0e followed by exclusively numerical characters.",
+  "aliases": [
+    "CVE-2020-23361"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phplist",
+        "purl": "pkg:bitnami/phplist"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.5.3"
+            },
+            {
+              "last_affected": "3.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:phplist:phplist:3.5.3:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpList/phplist3/issues/668"
+    }
+  ],
+  "published": "2023-11-06T08:59:54.165Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

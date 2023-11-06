@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mariadb-2022-27448",
+  "details": "There is an Assertion failure in MariaDB Server v10.9 and below via 'node->pcur->rel_pos == BTR_PCUR_ON' at /row/row0mysql.cc.",
+  "aliases": [
+    "CVE-2022-27448"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.35"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.16"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.7.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-28095"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/09/msg00023.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220526-0006/"
+    }
+  ],
+  "published": "2023-11-06T08:57:57.350Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

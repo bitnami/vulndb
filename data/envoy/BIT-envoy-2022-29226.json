@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2022-29226",
+  "details": "Envoy is a cloud-native high-performance proxy. In versions prior to 1.22.1 the OAuth filter implementation does not include a mechanism for validating access tokens, so by design when the HMAC signed cookie is missing a full authentication flow should be triggered. However, the current implementation assumes that access tokens are always validated thus allowing access in the presence of any access token attached to the request. Users are advised to upgrade. There is no known workaround for this issue.",
+  "aliases": [
+    "CVE-2022-29226"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.22.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/7ffda4e809dec74449ebc330cebb9d2f4ab61360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-h45c-2f94-prxh"
+    }
+  ],
+  "published": "2023-11-06T08:53:25.970Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

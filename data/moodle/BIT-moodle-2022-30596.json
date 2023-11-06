@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-moodle-2022-30596",
+  "details": "A flaw was found in moodle where ID numbers displayed when bulk allocating markers to assignments required additional sanitizing to prevent a stored XSS risk.",
+  "aliases": [
+    "CVE-2022-30596"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.11"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "last_affected": "4.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:4.0.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://git.moodle.org/gw?p=moodle.git&a=search&h=HEAD&st=commit&s=MDL-74204"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2083583"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OGF35EN5K2R6X3NTY3XPZSJ3UDASMXI6/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PIMSIRKCFLIC646K4GMUSZU7THOUVPAJ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCTWSE3JDMSYL7DPCMXMMJEXZSS6VIA5/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=434578"
+    }
+  ],
+  "published": "2023-11-06T09:00:54.650Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

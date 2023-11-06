@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mybb-2023-41362",
+  "details": "MyBB before 1.8.36 allows Code Injection by users with certain high privileges. Templates in Admin CP intentionally use eval, and there was some validation of the input to eval, but type juggling interfered with this when using PCRE within PHP.",
+  "aliases": [
+    "CVE-2023-41362"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mybb",
+        "purl": "pkg:bitnami/mybb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.36"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mybb:mybb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.sorcery.ie/posts/mybb_acp_rce/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mybb/mybb/commit/a43a6f22944e769a6eabc58c39e7bc18c1cab4ca.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mybb/mybb/security/advisories/GHSA-pr74-wvp3-q6f5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mybb.com/versions/1.8.36/"
+    }
+  ],
+  "published": "2023-11-06T08:56:04.987Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

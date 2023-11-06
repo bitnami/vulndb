@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jasperreports-2020-9409",
+  "details": "The administrative UI component of TIBCO Software Inc.'s TIBCO JasperReports Server, TIBCO JasperReports Server for AWS Marketplace, and TIBCO JasperReports Server for ActiveMatrix BPM contains a vulnerability that theoretically allows an unauthenticated attacker to obtain the permissions of a JasperReports Server \"superuser\" for the affected systems. The attacker can theoretically exploit the vulnerability consistently, remotely, and without authenticating. Affected releases are TIBCO Software Inc.'s TIBCO JasperReports Server: versions 7.1.1 and below, TIBCO JasperReports Server for AWS Marketplace: versions 7.1.1 and below, and TIBCO JasperReports Server for ActiveMatrix BPM: versions 7.1.1 and below.",
+  "aliases": [
+    "CVE-2020-9409"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jasperreports",
+        "purl": "pkg:bitnami/jasperreports"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:*:-:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:*:activematrix_bpm:*:*",
+      "cpe:2.3:a:tibco:jasperreports_server:*:*:*:*:*:aws_marketplace:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.tibco.com/services/support/advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+    }
+  ],
+  "published": "2023-11-06T08:58:45.891Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

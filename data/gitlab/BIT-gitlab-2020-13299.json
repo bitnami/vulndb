@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13299",
+  "details": "A vulnerability was discovered in GitLab versions before 13.1.10, 13.2.8 and 13.3.4. The revocation feature was not revoking all session tokens and one could re-use it to obtain a valid session.",
+  "aliases": [
+    "CVE-2020-13299"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.10"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13299.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/896225"
+    }
+  ],
+  "published": "2023-11-06T09:15:39.602Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

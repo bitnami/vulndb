@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2021-22918",
+  "details": "Node.js before 16.4.1, 14.17.2, 12.22.2 is vulnerable to an out-of-bounds read when uv__idna_toascii() is used to convert strings to ASCII. The pointer p is read and increased without checking whether it is beyond pe, with the latter holding a pointer to the end of the buffer. This can lead to information disclosures or crashes. This function can be triggered via uv_getaddrinfo().",
+  "aliases": [
+    "CVE-2021-22918"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.22.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.17.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1209681"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/july-2021-security-releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210805-0003/"
+    }
+  ],
+  "published": "2023-11-06T09:03:35.574Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

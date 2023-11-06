@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-magento-2020-9691",
+  "details": "Magento versions 2.3.5-p1 and earlier, and 2.3.5-p1 and earlier have a dom-based cross-site scripting vulnerability. Successful exploitation could lead to arbitrary code execution.",
+  "aliases": [
+    "CVE-2020-9691"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.5"
+            },
+            {
+              "last_affected": "2.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.5-p1"
+            },
+            {
+              "last_affected": "2.3.5-p1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.5:-:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.5:-:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.5:p1:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:2.3.5:p1:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb20-47.html"
+    }
+  ],
+  "published": "2023-11-06T08:59:39.071Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

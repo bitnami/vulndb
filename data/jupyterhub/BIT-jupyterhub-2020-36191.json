@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jupyterhub-2020-36191",
+  "details": "JupyterHub 1.1.0 allows CSRF in the admin panel via a request that lacks an _xsrf field, as demonstrated by a /hub/api/user request (to add or remove a user account).",
+  "aliases": [
+    "CVE-2020-36191"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyterhub",
+        "purl": "pkg:bitnami/jupyterhub"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.1.0"
+            },
+            {
+              "last_affected": "1.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jupyter:jupyterhub:1.1.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/issues/3304"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/releases"
+    }
+  ],
+  "published": "2023-11-06T08:53:27.774Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

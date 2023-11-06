@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-drupal-2023-31250",
+  "details": "The file download facility doesn't sufficiently sanitize file paths in certain situations. This may result in users gaining access to private files that they should not have access to. Some sites may require configuration changes following this security release. Review the release notes for your Drupal version if you have issues accessing private files after updating.",
+  "aliases": [
+    "CVE-2023-31250"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.96.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2023-005"
+    }
+  ],
+  "published": "2023-11-06T08:51:18.750Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

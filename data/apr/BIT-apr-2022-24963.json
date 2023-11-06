@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-apr-2022-24963",
+  "details": "Integer Overflow or Wraparound vulnerability in apr_encode functions of Apache Portable Runtime (APR) allows an attacker to write beyond bounds of a buffer.This issue affects Apache Portable Runtime (APR) version 1.7.0.",
+  "aliases": [
+    "CVE-2022-24963"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr",
+        "purl": "pkg:bitnami/apr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "last_affected": "1.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:portable_runtime:1.7.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/fw9p6sdncwsjkstwc066vz57xqzfksq9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230908-0008/"
+    }
+  ],
+  "published": "2023-11-06T08:50:42.675Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

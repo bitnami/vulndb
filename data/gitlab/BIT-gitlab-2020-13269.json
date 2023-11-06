@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13269",
+  "details": "A Reflected Cross-Site Scripting vulnerability allowed the execution of arbitrary Javascript code on the Static Site Editor in GitLab CE/EE 12.10 and later through 13.0.1",
+  "aliases": [
+    "CVE-2020-13269"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.10.0"
+            },
+            {
+              "fixed": "12.10.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13269.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/216528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/864356"
+    }
+  ],
+  "published": "2023-11-06T09:16:09.170Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

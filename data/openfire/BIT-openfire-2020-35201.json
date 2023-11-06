@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-openfire-2020-35201",
+  "details": "Ignite Realtime Openfire 4.6.0 has create-bookmark.jsp users Stored XSS.",
+  "aliases": [
+    "CVE-2020-35201"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openfire",
+        "purl": "pkg:bitnami/openfire"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.6.0"
+            },
+            {
+              "last_affected": "4.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:igniterealtime:openfire:4.6.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/49234"
+    }
+  ],
+  "published": "2023-11-06T08:57:56.581Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

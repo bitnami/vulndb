@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-nginx-ingress-controller-2021-23055",
+  "details": "On version 2.x before 2.0.3 and 1.x before 1.12.3, the command line restriction that controls snippet use with NGINX Ingress Controller does not apply to Ingress objects. Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+  "aliases": [
+    "CVE-2021-23055"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nginx-ingress-controller",
+        "purl": "pkg:bitnami/nginx-ingress-controller"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.12.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:f5:nginx_ingress_controller:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://support.f5.com/csp/article/K01051452"
+    }
+  ],
+  "published": "2023-11-06T08:57:29.961Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

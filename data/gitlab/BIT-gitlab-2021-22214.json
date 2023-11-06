@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-22214",
+  "details": "When requests to the internal network for webhooks are enabled, a server-side request forgery vulnerability in GitLab CE/EE affecting all versions starting from 10.5 was possible to exploit for an unauthenticated attacker even on a GitLab instance where registration is limited",
+  "aliases": [
+    "CVE-2021-22214"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "13.10.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.11.0"
+            },
+            {
+              "fixed": "13.11.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.12.0"
+            },
+            {
+              "fixed": "13.12.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22214.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/322926"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1110131"
+    }
+  ],
+  "published": "2023-11-06T09:13:17.911Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

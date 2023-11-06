@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2021-39890",
+  "details": "It was possible to bypass 2FA for LDAP users and access some specific pages with Basic Authentication in GitLab 14.1.1 and above.",
+  "aliases": [
+    "CVE-2021-39890"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.1.1"
+            },
+            {
+              "fixed": "14.1.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.2.0"
+            },
+            {
+              "fixed": "14.2.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.3.0"
+            },
+            {
+              "last_affected": "14.3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.3.1"
+            },
+            {
+              "last_affected": "14.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.1:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:14.3.1:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-39890.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/341522"
+    }
+  ],
+  "published": "2023-11-06T09:11:58.657Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

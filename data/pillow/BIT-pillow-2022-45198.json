@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-pillow-2022-45198",
+  "details": "Pillow before 9.2.0 performs Improper Handling of Highly Compressed GIF Data (Data Amplification).",
+  "aliases": [
+    "CVE-2022-45198"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.gentoo.org/855683"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cwe.mitre.org/data/definitions/409.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/11918eac0628ec8ac0812670d9838361ead2d6a4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/pull/6402"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/9.2.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202211-10"
+    }
+  ],
+  "published": "2023-11-06T08:59:16.286Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

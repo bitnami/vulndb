@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2020-8185",
+  "details": "A denial of service vulnerability exists in Rails <6.0.3.2 that allowed an untrusted user to run any pending migrations on a Rails app running in production.",
+  "aliases": [
+    "CVE-2020-8185"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/pAe9EV8gbM0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/899069"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJ7NUWXAEVRQCROIIBV4C6WXO6IR3KSB/"
+    }
+  ],
+  "published": "2023-11-06T09:02:52.772Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

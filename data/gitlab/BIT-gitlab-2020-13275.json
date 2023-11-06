@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2020-13275",
+  "details": "A user with an unverified email address could request an access to domain restricted groups in GitLab EE 12.2 and later through 13.0.1",
+  "aliases": [
+    "CVE-2020-13275"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "fixed": "12.9.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.10.0"
+            },
+            {
+              "fixed": "12.10.7"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "last_affected": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:13.0.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:13.0.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13275.json"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/209254"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/806255"
+    }
+  ],
+  "published": "2023-11-06T09:16:02.530Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

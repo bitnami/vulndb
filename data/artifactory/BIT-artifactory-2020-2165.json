@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2020-2165",
+  "details": "Jenkins Artifactory Plugin 3.6.0 and earlier transmits configured passwords in plain text as part of its global Jenkins configuration form, potentially resulting in their exposure.",
+  "aliases": [
+    "CVE-2020-2165"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:jenkins:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2020/03/25/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jenkins.io/security/advisory/2020-03-25/#SECURITY-1542%20%282%29"
+    }
+  ],
+  "published": "2023-11-06T08:52:37.781Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-phpmailer-2021-3603",
+  "details": "PHPMailer 6.4.1 and earlier contain a vulnerability that can result in untrusted code being called (if such code is injected into the host project's scope by other means). If the $patternselect parameter to validateAddress() is set to 'php' (the default, defined by PHPMailer::$validator), and the global namespace contains a function called php, it will be called in preference to the built-in validator of the same name. Mitigated in PHPMailer 6.5.0 by denying the use of simple strings as validator function names.",
+  "aliases": [
+    "CVE-2021-3603"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmailer",
+        "purl": "pkg:bitnami/phpmailer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:phpmailer_project:phpmailer:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PHPMailer/PHPMailer/commit/45f3c18dc6a2de1cb1bf49b9b249a9ee36a5f7f3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3YRMWGA4VTMXFB22KICMB7YMFZNFV3EJ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FJYSOFCUBS67J3TKR74SD3C454N7VTYM/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.huntr.dev/bounties/1-PHPMailer/PHPMailer/"
+    }
+  ],
+  "published": "2023-11-06T08:59:04.848Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

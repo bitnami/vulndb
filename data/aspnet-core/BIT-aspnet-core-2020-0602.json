@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-aspnet-core-2020-0602",
+  "details": "A denial of service vulnerability exists when ASP.NET Core improperly handles web requests, aka 'ASP.NET Core Denial of Service Vulnerability'.",
+  "aliases": [
+    "CVE-2020-0602"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "aspnet-core",
+        "purl": "pkg:bitnami/aspnet-core"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.1.0"
+            },
+            {
+              "last_affected": "2.1.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "last_affected": "3.0.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "last_affected": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:asp.net_core:2.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:3.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:3.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2020:0130"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2020:0134"
+    },
+    {
+      "type": "WEB",
+      "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0602"
+    }
+  ],
+  "published": "2023-11-06T08:52:08.484Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

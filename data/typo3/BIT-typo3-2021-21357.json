@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2021-21357",
+  "details": "TYPO3 is an open source PHP based web content management system. In TYPO3 before versions 8.7.40, 9.5.25, 10.4.14, 11.1.1 due to improper input validation, attackers can by-pass restrictions of predefined options and submit arbitrary data in the Form Designer backend module of the Form Framework. In the default configuration of the Form Framework this allows attackers to explicitly allow arbitrary mime-types for file uploads - however, default _fileDenyPattern_ successfully blocked files like _.htaccess_ or _malicious.php_. Besides that, attackers can persist those files in any writable directory of the corresponding TYPO3 installation. A valid backend user account with access to the form module is needed to exploit this vulnerability. This is fixed in versions 8.7.40, 9.5.25, 10.4.14, 11.1.1.",
+  "aliases": [
+    "CVE-2021-21357"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.7.40"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.25"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/TYPO3.CMS/security/advisories/GHSA-3vg7-jw9m-pc3f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packagist.org/packages/typo3/cms-form"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2021-003"
+    }
+  ],
+  "published": "2023-11-06T09:06:42.475Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

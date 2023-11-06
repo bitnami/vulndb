@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-3922",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 8.15 before 16.2.8, all versions starting from 16.3 before 16.3.5, all versions starting from 16.4 before 16.4.1. It was possible to hijack some links and buttons on the GitLab UI to a malicious page.",
+  "aliases": [
+    "CVE-2023-3922"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.15.0"
+            },
+            {
+              "fixed": "16.2.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "fixed": "16.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.4.0"
+            },
+            {
+              "last_affected": "16.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.4.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.4.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/394770"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1887323"
+    }
+  ],
+  "published": "2023-11-06T08:54:40.883Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

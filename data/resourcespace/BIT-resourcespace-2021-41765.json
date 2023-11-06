@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-resourcespace-2021-41765",
+  "details": "A SQL injection issue in pages/edit_fields/9_ajax/add_keyword.php of ResourceSpace 9.5 and 9.6 < rev 18274 allows remote unauthenticated attackers to execute arbitrary SQL commands via the k parameter. This allows attackers to uncover the full contents of the ResourceSpace database, including user session cookies. An attacker who gets an admin user session cookie can use the session cookie to execute arbitrary code on the server.",
+  "aliases": [
+    "CVE-2021-41765"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "resourcespace",
+        "purl": "pkg:bitnami/resourcespace"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "last_affected": "9.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.6.0"
+            },
+            {
+              "last_affected": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:montala:resourcespace:9.5:*:*:*:*:*:*:*",
+      "cpe:2.3:a:montala:resourcespace:9.6:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://svn.resourcespace.com/svn/rs/releases/9.6/pages/edit_fields/9_ajax/add_keyword.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.horizon3.ai/multiple-vulnerabilities-in-resourcespace/"
+    }
+  ],
+  "published": "2023-11-06T09:01:31.076Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}

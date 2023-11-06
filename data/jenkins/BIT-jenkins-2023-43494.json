@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2023-43494",
+  "details": "Jenkins 2.50 through 2.423 (both inclusive), LTS 2.60.1 through 2.414.1 (both inclusive) does not exclude sensitive build variables (e.g., password parameter values) from the search in the build history widget, allowing attackers with Item/Read permission to obtain values of sensitive variables used in builds by iteratively testing different characters until the correct sequence is discovered.",
+  "aliases": [
+    "CVE-2023-43494"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.50.0"
+            },
+            {
+              "fixed": "2.424.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.60.1"
+            },
+            {
+              "fixed": "2.414.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/09/20/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2023-09-20/#SECURITY-3261"
+    }
+  ],
+  "published": "2023-11-06T08:53:48.850Z",
+  "modified": "2023-11-06T09:17:33.630Z"
+}
