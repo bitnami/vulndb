@@ -8,15 +8,12 @@ Please note that this database is populated with information from the year 2020 
 
 ## Table of contents
 
-- [The Bitnami Vulnerability Database](#the-bitnami-vulnerability-database)
-  - [Table of contents](#table-of-contents)
-  - [How the database is created](#how-the-database-is-created)
-    - [Available fields in config files](#available-fields-in-config-files)
-  - [Deprecation policy](#deprecation-policy)
-  - [How to consume this CVE feed](#how-to-consume-this-cve-feed)
-  - [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
-  - [Deprecation notes](#deprecation-notes)
-  - [License](#license)
+- [How the database is created](#how-the-database-is-created)
+- [Deprecation policy](#deprecation-policy)
+- [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
+- [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+- [Deprecation notes](#deprecation-notes)
+- [License](#license)
 
 ## How the database is created
 
