@@ -8,12 +8,19 @@ Please note that this database is populated with information from the year 2020 
 
 ## Table of contents
 
-* [How the database is created](#how-the-database-is-created)
-* [Deprecation policy](#deprecation-policy)
-* [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
-* [How to consume this CVE feed](#how-to-consume-this-cve-feed)
-* [Deprecation notes](#deprecation-notes)
-* [License](#license)
+- [The Bitnami Vulnerability Database](#the-bitnami-vulnerability-database)
+  - [Table of contents](#table-of-contents)
+  - [How the database is created](#how-the-database-is-created)
+    - [Available fields in config files](#available-fields-in-config-files)
+  - [Deprecation policy](#deprecation-policy)
+  - [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+  - [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
+  - [Deprecation notes](#deprecation-notes)
+    - [2023-11](#2023-11)
+    - [2023-09](#2023-09)
+    - [2023-08](#2023-08)
+    - [2023-07](#2023-07)
+  - [License](#license)
 
 ## How the database is created
 
@@ -33,14 +40,14 @@ Additionally, a `to-be-deprecated: <date>` value may be present in those compone
 
 From time to time, one or more assets may be deprecated. In that situation, we will continue generating the related CVE information for at least one month, or after the expiration date is met. Notice the expiration date is present in the format `yyyymmdd` (i.e. `20231231` stands for Dec. 31st 2023). The procedure of deprecation and deletion is done by:
 
-* Annotate components with the `to-be-deprecated: <date>` field in their config file setting the date when it will be removed. Add a deprecation notice in this `README.md` file as well.
-* Delete the config file and the associated `data/${name}` folder once the retention period has expired.
+- Annotate components with the `to-be-deprecated: <date>` field in their config file setting the date when it will be removed. Add a deprecation notice in this `README.md` file as well.
+- Delete the config file and the associated `data/${name}` folder once the retention period has expired.
 
 ## How to consume this CVE feed
 
 This database includes CVE information **only** for Bitnami packages installed on top of the operating system for all distributed solutions (containers, Helm charts, OVAs, cloud images, etc.). The procedure to consume this information is shown below:
 
-* Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` directory and named with the pattern `.spdx-<component>.spdx`
+- Find the SPDX file in your solution. They are located under the `/opt/bitnami/<component>` directory and named with the pattern `.spdx-<component>.spdx`
 
 For instance, in the case of a container:
 
@@ -55,7 +62,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
     ...
 ```
 
-* Get the packages included in the SPDX file under the `packages` section.
+- Get the packages included in the SPDX file under the `packages` section.
 
 For instance, in the case of a container image:
 
@@ -108,7 +115,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
   "...": "...",
 ```
 
-* Finally, verify the version of your components against the affected versions of the different CVEs located under the `data/<name>/` directory (lowercase) to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
+- Finally, verify the version of your components against the affected versions of the different CVEs located under the `data/<name>/` directory (lowercase) to get the number of CVEs that affect it. Notice the CVE files honor the [OSV format](https://ossf.github.io/osv-schema).
 
 ## Reporting a vulnerability or feedback
 
@@ -116,21 +123,25 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2023-11
+
+- Apache MXNet
+
 ### 2023-09
 
-* Harbor Notary signer
-* Harbor Notary server
+- Harbor Notary signer
+- Harbor Notary server
 
 ### 2023-08
 
-* Bitnami Shell
+- Bitnami Shell
 
 ### 2023-07
 
-* Wavefront
-* Wavefront Proxy
-* Wavefront Prometheus Adapter
-* Wavefront HPA Adapter
+- Wavefront
+- Wavefront Proxy
+- Wavefront Prometheus Adapter
+- Wavefront HPA Adapter
 
 ## License
 
