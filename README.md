@@ -16,10 +16,6 @@ Please note that this database is populated with information from the year 2020 
   - [How to consume this CVE feed](#how-to-consume-this-cve-feed)
   - [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
   - [Deprecation notes](#deprecation-notes)
-    - [2023-11](#2023-11)
-    - [2023-09](#2023-09)
-    - [2023-08](#2023-08)
-    - [2023-07](#2023-07)
   - [License](#license)
 
 ## How the database is created
