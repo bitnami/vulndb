@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-phpmyadmin-2020-11441",
-  "details": "** DISPUTED ** phpMyAdmin 5.0.2 allows CRLF injection, as demonstrated by %0D%0Astring%0D%0A inputs to login form fields causing CRLF sequences to be reflected on an error page. NOTE: the vendor states \"I don't see anything specifically exploitable.\"",
+  "details": "phpMyAdmin 5.0.2 allows CRLF injection, as demonstrated by %0D%0Astring%0D%0A inputs to login form fields causing CRLF sequences to be reflected on an error page. NOTE: the vendor states \"I don't see anything specifically exploitable.",
   "aliases": [
     "CVE-2020-11441"
   ],
@@ -46,5 +46,5 @@
     }
   ],
   "published": "2023-11-06T09:00:30.361Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

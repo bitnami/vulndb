@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mattermost-2023-27266",
-  "details": "Mattermost fails to honor the ShowEmailAddress setting when constructing a response to the /api/v4/users/me/teams API endpoint, allowing an attacker with team admin privileges to learn the team owner's email address in the response.",
+  "details": "Mattermost fails to honor the ShowEmailAddress setting when constructing a response to the /api/v4/users/me/teams  API endpoint, allowing an attacker with team admin privileges to learn the team owner's email address in the response.",
   "aliases": [
     "CVE-2023-27266"
   ],
@@ -46,5 +46,5 @@
     }
   ],
   "published": "2023-11-06T08:57:05.953Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

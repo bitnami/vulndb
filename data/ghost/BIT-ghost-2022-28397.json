@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-ghost-2022-28397",
-  "details": "** DISPUTED ** An arbitrary file upload vulnerability in the file upload module of Ghost CMS v4.42.0 allows attackers to execute arbitrary code via a crafted file. NOTE: Vendor states as detailed in Ghost's security documentation, files can only be uploaded and published by trusted users, this is intentional.",
+  "details": "An arbitrary file upload vulnerability in the file upload module of Ghost CMS v4.42.0 allows attackers to execute arbitrary code via a crafted file. NOTE: Vendor states as detailed in Ghost's security documentation, files can only be uploaded and published by trusted users, this is intentional",
   "aliases": [
     "CVE-2022-28397"
   ],
@@ -66,5 +66,5 @@
     }
   ],
   "published": "2023-11-06T08:53:09.770Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2021-27131",
-  "details": "** DISPUTED ** Moodle 3.10.1 is vulnerable to persistent/stored cross-site scripting (XSS) due to the improper input sanitization on the \"Additional HTML Section\" via \"Header and Footer\" parameter in /admin/settings.php. This vulnerability is leading an attacker to steal admin and all user account cookies by storing the malicious XSS payload in Header and Footer. NOTE: this is disputed by the vendor because the \"Additional HTML Section\" for \"Header and Footer\" can only be supplied by an administrator, who is intentionally allowed to enter unsanitized input (e.g., site-specific JavaScript).",
+  "details": "Moodle 3.10.1 is vulnerable to persistent/stored cross-site scripting (XSS) due to the improper input sanitization on the \"Additional HTML Section\" via \"Header and Footer\" parameter in /admin/settings.php. This vulnerability is leading an attacker to steal admin and all user account cookies by storing the malicious XSS payload in Header and Footer. NOTE: this is disputed by the vendor because the \"Additional HTML Section\" for \"Header and Footer\" can only be supplied by an administrator, who is intentionally allowed to enter unsanitized input (e.g., site-specific JavaScript).",
   "aliases": [
     "CVE-2021-27131"
   ],
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2023-11-06T09:06:03.076Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-akeneo-2022-46157",
-  "details": "Akeneo PIM is an open source Product Information Management (PIM). Akeneo PIM Community Edition versions before v5.0.119 and v6.0.53 allows remote authenticated users to execute arbitrary PHP code on the server by uploading a crafted image. Akeneo PIM Community Edition after the versions aforementioned provides patched Apache HTTP server configuration file, for docker setup and in documentation sample, to fix this vulnerability. Community Edition users must change their Apache HTTP server configuration accordingly to be protected. The patch for Cloud Based Akeneo PIM Services customers has been applied since 30th October 2022. Users are advised to upgrade. Users unable to upgrade may Replace any reference to `<FilesMatch \\.php$>` in their apache httpd configurations with: `<Location \"/index.php\">`.",
+  "details": "Akeneo PIM is an open source Product Information Management (PIM). Akeneo PIM Community Edition versions before v5.0.119 and v6.0.53 allows remote authenticated users to execute arbitrary PHP code on the server by uploading a crafted image. Akeneo PIM Community Edition after the versions aforementioned provides patched Apache HTTP server configuration file, for docker setup and in documentation sample, to fix this vulnerability.   Community Edition users must change their Apache HTTP server configuration accordingly to be protected. The patch for Cloud Based Akeneo PIM Services customers has been applied since 30th October 2022. Users are advised to upgrade. Users unable to upgrade may  Replace any reference to `<FilesMatch \\.php$>` in their apache httpd configurations with: `<Location \"/index.php\">`.",
   "aliases": [
     "CVE-2022-46157"
   ],
@@ -56,5 +56,5 @@
     }
   ],
   "published": "2023-11-06T08:50:26.659Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

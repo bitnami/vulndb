@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-rails-2022-3704",
-  "details": "** DISPUTED ** A vulnerability classified as problematic has been found in Ruby on Rails. This affects an unknown part of the file actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. The real existence of this vulnerability is still doubted at the moment. The name of the patch is be177e4566747b73ff63fd5f529fab564e475ed4. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-212319. NOTE: Maintainer declares that there isn’t a valid attack vector. The issue was wrongly reported as a security vulnerability by a non-member of the Rails team.",
+  "details": "A vulnerability classified as problematic has been found in Ruby on Rails. This affects an unknown part of the file actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. The real existence of this vulnerability is still doubted at the moment. The name of the patch is be177e4566747b73ff63fd5f529fab564e475ed4. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-212319. NOTE: Maintainer declares that there isn’t a valid attack vector. The issue was wrongly reported as a security vulnerability by a non-member of the Rails team.",
   "aliases": [
     "CVE-2022-3704"
   ],
@@ -41,5 +41,5 @@
     }
   ],
   "published": "2023-11-06T09:01:04.669Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

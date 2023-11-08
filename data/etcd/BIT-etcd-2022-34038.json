@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-etcd-2022-34038",
-  "details": "** DISPUTED ** Etcd v3.5.4 allows remote attackers to cause a denial of service via function PageWriter.write in pagewriter.go. NOTE: the vendor's position is that this is not a vulnerability.",
+  "details": "Etcd v3.5.4 allows remote attackers to cause a denial of service via function PageWriter.write in pagewriter.go. NOTE: the vendor's position is that this is not a vulnerability.",
   "aliases": [
     "CVE-2022-34038"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2023-11-06T08:51:36.681Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }
