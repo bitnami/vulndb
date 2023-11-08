@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-typo3-2022-23501",
-  "details": "TYPO3 is an open source PHP based web content management system. In versions prior to 8.7.49, 9.5.38, 10.4.33, 11.5.20, and 12.1.1 TYPO3 is vulnerable to Improper Authentication. Restricting frontend login to specific users, organized in different storage folders (partitions), can be bypassed. A potential attacker might use this ambiguity in usernames to get access to a different account - however, credentials must be known to the adversary. This issue is patched in versions 8.7.49 ELTS, 9.5.38 ELTS, 10.4.33, 11.5.20, 12.1.1.",
+  "details": "TYPO3 is an open source PHP based web content management system. In versions prior to 8.7.49, 9.5.38, 10.4.33, 11.5.20, and 12.1.1 TYPO3 is vulnerable to Improper Authentication. Restricting frontend login to specific users, organized in different storage folders (partitions), can be bypassed. A potential attacker might use this ambiguity in usernames to get access to a different account - however, credentials must be known to the adversary.  This issue is patched in versions 8.7.49 ELTS, 9.5.38 ELTS, 10.4.33, 11.5.20, 12.1.1.",
   "aliases": [
     "CVE-2022-23501"
   ],
@@ -70,5 +70,5 @@
     }
   ],
   "published": "2023-11-06T09:05:51.346Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

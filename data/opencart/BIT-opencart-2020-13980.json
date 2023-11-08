@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-opencart-2020-13980",
-  "details": "** DISPUTED ** OpenCart 3.0.3.3 allows remote authenticated users to conduct XSS attacks via a crafted filename in the users' image upload section because of a lack of entity encoding. NOTE: this issue exists because of an incomplete fix for CVE-2020-10596. The vendor states \"this is not a massive issue as you are still required to be logged into the admin.\"",
+  "details": "OpenCart 3.0.3.3 allows remote authenticated users to conduct XSS attacks via a crafted filename in the users' image upload section because of a lack of entity encoding. NOTE: this issue exists because of an incomplete fix for CVE-2020-10596. The vendor states \"this is not a massive issue as you are still required to be logged into the admin.",
   "aliases": [
     "CVE-2020-13980"
   ],
@@ -46,5 +46,5 @@
     }
   ],
   "published": "2023-11-06T08:58:24.667Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

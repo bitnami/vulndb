@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mybb-2022-39265",
-  "details": "MyBB is a free and open source forum software. The _Mail Settings_ ? Additional Parameters for PHP's mail() function mail_parameters setting value, in connection with the configured mail program's options and behavior, may allow access to sensitive information and Remote Code Execution (RCE). The vulnerable module requires Admin CP access with the `_Can manage settings?_` permission and may depend on configured file permissions. MyBB 1.8.31 resolves this issue with the commit `0cd318136a`. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "details": "MyBB is a free and open source forum software. The _Mail Settings_ → Additional Parameters for PHP's mail() function mail_parameters setting value, in connection with the configured mail program's options and behavior, may allow access to sensitive information and Remote Code Execution (RCE). The vulnerable module requires Admin CP access with the `_Can manage settings?_` permission and may depend on configured file permissions. MyBB 1.8.31 resolves this issue with the commit `0cd318136a`. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2022-39265"
   ],
@@ -58,5 +58,5 @@
     }
   ],
   "published": "2023-11-06T08:56:59.670Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

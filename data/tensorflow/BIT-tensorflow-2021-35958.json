@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-35958",
-  "details": "** DISPUTED ** TensorFlow through 2.5.0 allows attackers to overwrite arbitrary files via a crafted archive when tf.keras.utils.get_file is used with extract=True. NOTE: the vendor's position is that tf.keras.utils.get_file is not intended for untrusted archives.",
+  "details": "TensorFlow through 2.5.0 allows attackers to overwrite arbitrary files via a crafted archive when tf.keras.utils.get_file is used with extract=True. NOTE: the vendor's position is that tf.keras.utils.get_file is not intended for untrusted archives",
   "aliases": [
     "CVE-2021-35958"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2023-11-06T09:12:20.900Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

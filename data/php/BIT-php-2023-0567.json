@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2023-0567",
-  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid.",
+  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid. ",
   "aliases": [
     "CVE-2023-0567"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2023-11-06T08:59:45.786Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

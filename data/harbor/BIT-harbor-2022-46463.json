@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-46463",
-  "details": "** DISPUTED ** An access control issue in Harbor v1.X.X to v2.5.3 allows attackers to access public and private image repositories without authentication. NOTE: the vendor's position is that this \"is clearly described in the documentation as a feature.\"",
+  "details": "An access control issue in Harbor v1.X.X to v2.5.3 allows attackers to access public and private image repositories without authentication. NOTE: the vendor's position is that this \"is clearly described in the documentation as a feature.\"",
   "aliases": [
     "CVE-2022-46463"
   ],
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2023-11-06T08:52:36.784Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }

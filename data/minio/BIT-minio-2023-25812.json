@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-minio-2023-25812",
-  "details": "Minio is a Multi-Cloud Object Storage framework. Affected versions do not correctly honor a `Deny` policy on ByPassGoverance. Ideally, minio should return \"Access Denied\" to all users attempting to DELETE a versionId with the special header `X-Amz-Bypass-Governance-Retention: true`. However, this was not honored instead the request will be honored and an object under governance would be incorrectly deleted. All users are advised to upgrade. There are no known workarounds for this issue.",
+  "details": "Minio is a Multi-Cloud Object Storage framework. Affected versions do not correctly honor a `Deny` policy on ByPassGoverance. Ideally, minio should return \"Access Denied\" to all users attempting to DELETE a versionId  with the special header `X-Amz-Bypass-Governance-Retention: true`.  However, this was not honored instead the request will be honored and an object under governance would be incorrectly deleted.  All users are advised to upgrade. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2023-25812"
   ],
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2023-11-06T08:55:40.088Z",
-  "modified": "2023-11-06T09:17:33.630Z"
+  "modified": "2023-11-08T07:44:02.038Z"
 }
