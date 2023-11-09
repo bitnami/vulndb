@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-activemq-2023-46604",
+  "details": "Apache ActiveMQ is vulnerable to Remote Code Execution.The vulnerability may allow a remote attacker with network access to a broker to run arbitrary shell commands by manipulating serialized class types in the OpenWire protocol to cause the broker to instantiate any class on the classpath. Users are recommended to upgrade to version 5.15.16, 5.16.7, 5.17.6, or 5.18.3, which fixes this issue.",
+  "aliases": [
+    "CVE-2023-46604"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.15.16"
+            },
+            {
+              "introduced": "5.16.0"
+            },
+            {
+              "fixed": "5.16.7"
+            },
+            {
+              "introduced": "5.17.0"
+            },
+            {
+              "fixed": "5.17.6"
+            },
+            {
+              "introduced": "5.18.0"
+            },
+            {
+              "fixed": "5.18.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/10/27/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://activemq.apache.org/security-advisories.data/CVE-2023-46604-announcement.txt"
+    }
+  ],
+  "published": "2023-11-09T07:18:02.366Z",
+  "modified": "2023-11-09T07:45:16.355Z"
+}
