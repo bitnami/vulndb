@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-multisite-2023-5561",
-  "details": "The Popup Builder WordPress plugin through 4.1.15 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).",
+  "details": "WordPress does not properly restrict which user fields are searchable via the REST API, allowing unauthenticated attackers to discern the email addresses of users who have published public posts on an affected website via an Oracle style attack",
   "aliases": [
     "CVE-2023-5561"
   ],
@@ -146,5 +146,5 @@
     }
   ],
   "published": "2023-11-06T09:04:38.143Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2023-11-09T07:45:16.355Z"
 }
