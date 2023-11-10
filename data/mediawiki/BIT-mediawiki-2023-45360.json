@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mediawiki-2023-45360",
+  "details": "An issue was discovered in MediaWiki before 1.35.12, 1.36.x through 1.39.x before 1.39.5, and 1.40.x before 1.40.1. There is XSS in youhavenewmessagesmanyusers and youhavenewmessages i18n messages. This is related to MediaWiki:Youhavenewmessagesfromusers.",
+  "aliases": [
+    "CVE-2023-45360"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.35.12"
+            },
+            {
+              "introduced": "1.39.0"
+            },
+            {
+              "fixed": "1.39.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.40.0"
+            },
+            {
+              "last_affected": "1.40.0"
+            },
+            {
+              "introduced": "1.40.0-rc0"
+            },
+            {
+              "last_affected": "1.40.0-rc0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:rc0:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T340221"
+    }
+  ],
+  "published": "2023-11-10T07:23:49.881Z",
+  "modified": "2023-11-10T07:45:33.796Z"
+}
