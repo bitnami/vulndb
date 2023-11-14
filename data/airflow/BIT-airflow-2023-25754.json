@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2023-25754",
+  "details": "Privilege Context Switching Error vulnerability in Apache Software Foundation Apache Airflow.This issue affects Apache Airflow: before 2.6.0.",
+  "aliases": [
+    "CVE-2023-25754"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/05/08/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/29506"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/3y83gr0qb8t49ppfk4fb2yk7md8ltq4v"
+    }
+  ],
+  "published": "2023-11-14T19:19:00.183Z",
+  "modified": "2023-11-14T19:43:35.445Z"
+}
