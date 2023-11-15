@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-5825",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.2 before 16.3.6, all versions starting from 16.4 before 16.4.2, all versions starting from 16.5 before 16.5.1. A low-privileged attacker can point a CI/CD Component to an incorrect path and cause the server to exhaust all available memory through an infinite loop and cause Denial of Service.",
+  "aliases": [
+    "CVE-2023-5825"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2.0"
+            },
+            {
+              "fixed": "16.3.6"
+            },
+            {
+              "introduced": "16.4.0"
+            },
+            {
+              "fixed": "16.4.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "last_affected": "16.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.5.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.5.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/428984"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2218566"
+    }
+  ],
+  "published": "2023-11-15T07:18:23.273Z",
+  "modified": "2023-11-15T07:44:50.774Z"
+}
