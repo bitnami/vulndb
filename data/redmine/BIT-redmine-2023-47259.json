@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-redmine-2023-47259",
+  "details": "Redmine before 4.2.11 and 5.0.x before 5.0.6 allows XSS in the Textile formatter.",
+  "aliases": [
+    "CVE-2023-47259"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redmine",
+        "purl": "pkg:bitnami/redmine"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.11"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redmine:redmine:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+    }
+  ],
+  "published": "2023-11-15T07:27:37.179Z",
+  "modified": "2023-11-15T07:44:50.774Z"
+}
