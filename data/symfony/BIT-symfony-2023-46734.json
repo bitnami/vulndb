@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-symfony-2023-46734",
+  "details": "Symfony is a PHP framework for web and console applications and a set of reusable PHP components. Starting in versions 2.0.0, 5.0.0, and 6.0.0 and prior to versions 4.4.51, 5.4.31, and 6.3.8, some Twig filters in CodeExtension use `is_safe=html` but don't actually ensure their input is safe. As of versions 4.4.51, 5.4.31, and 6.3.8, Symfony now escapes the output of the affected filters.",
+  "aliases": [
+    "CVE-2023-46734"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "symfony",
+        "purl": "pkg:bitnami/symfony"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "4.4.51"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.4.31"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sensiolabs:symfony:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/commit/5d095d5feb1322b16450284a04d6bb48d1198f54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/commit/9da9a145ce57e4585031ad4bee37c497353eec7c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-q847-2q57-wmr3"
+    }
+  ],
+  "published": "2023-11-17T07:29:46.395Z",
+  "modified": "2023-11-17T07:44:35.810Z"
+}

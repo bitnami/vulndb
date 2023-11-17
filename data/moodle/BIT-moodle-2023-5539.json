@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-moodle-2023-5539",
+  "details": "A remote code execution risk was identified in the Lesson activity. By default this was only available to teachers and managers.",
+  "aliases": [
+    "CVE-2023-5539"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.9.24"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.17"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.11"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.6"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://git.moodle.org/gw?p=moodle.git&a=search&h=HEAD&st=commit&s=MDL-79408"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2243352"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=451580"
+    }
+  ],
+  "published": "2023-11-17T07:23:02.888Z",
+  "modified": "2023-11-17T07:44:35.810Z"
+}
