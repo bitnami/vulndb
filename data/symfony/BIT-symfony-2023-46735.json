@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-symfony-2023-46735",
+  "details": "Symfony is a PHP framework for web and console applications and a set of reusable PHP components. Starting in version 6.0.0 and prior to version 6.3.8, the error message in `WebhookController` returns unescaped user-submitted input. As of version 6.3.8, `WebhookController` now doesn't return any user-submitted input in its response.",
+  "aliases": [
+    "CVE-2023-46735"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "symfony",
+        "purl": "pkg:bitnami/symfony"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sensiolabs:symfony:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/commit/8128c302430394f639e818a7103b3f6815d8d962"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-72x2-5c85-6wmr"
+    }
+  ],
+  "published": "2023-11-17T07:29:38.490Z",
+  "modified": "2023-11-17T07:44:35.810Z"
+}
