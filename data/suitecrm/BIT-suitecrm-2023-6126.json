@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2023-6126",
+  "details": " Code Injection in GitHub repository salesagility/suitecrm prior to 7.14.2, 7.12.14, 8.4.2.",
+  "aliases": [
+    "CVE-2023-6126"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.12.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.14.0"
+            },
+            {
+              "last_affected": "7.14.0"
+            },
+            {
+              "introduced": "7.14.1"
+            },
+            {
+              "last_affected": "7.14.1"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "last_affected": "8.4.0"
+            },
+            {
+              "introduced": "8.4.1"
+            },
+            {
+              "last_affected": "8.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:7.14.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:7.14.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.4.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:8.4.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/suitecrm/commit/54bc56c3bd9f1db75408db1c1d7d652c3f5f71e9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/e22a9be3-3273-42cb-bfcc-c67a1025684e"
+    }
+  ],
+  "published": "2023-11-18T07:29:34.810Z",
+  "modified": "2023-11-18T07:45:08.909Z"
+}
