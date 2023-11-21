@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-opencart-2023-47444",
+  "details": "An issue discovered in OpenCart 4.0.0.0 to 4.0.2.3 allows authenticated backend users having common/security write privilege can write arbitrary untrusted data inside config.php and admin/config.php, resulting in remote code execution on the underlying server.",
+  "aliases": [
+    "CVE-2023-47444"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "opencart",
+        "purl": "pkg:bitnami/opencart"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0.0"
+            },
+            {
+              "fixed": "4.0.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://0xbro.red/disclosures/disclosed-vulnerabilities/opencart-cve-2023-47444/"
+    }
+  ],
+  "published": "2023-11-21T07:23:48.889Z",
+  "modified": "2023-11-21T07:45:11.251Z"
+}
