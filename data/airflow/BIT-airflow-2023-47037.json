@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2023-47037",
+  "details": "We failed to apply CVE-2023-40611 in 2.7.1 and this vulnerability was marked as fixed then. Apache Airflow, versions before 2.7.3, is affected by a vulnerability that allows authenticated and DAG-view authorized Users to modify some DAG run detail values when submitting notes. This could have them alter details such as configuration parameters, start date, etc. Users should upgrade to version 2.7.3 or later which has removed the vulnerability.",
+  "aliases": [
+    "CVE-2023-47037"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/11/12/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/33413"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/04y4vrw1t2xl030gswtctc4nt1w90cb0"
+    }
+  ],
+  "published": "2023-11-21T07:16:26.961Z",
+  "modified": "2023-11-21T07:45:11.251Z"
+}
