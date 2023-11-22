@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dotnet-sdk-2023-36049",
+  "details": ".NET, .NET Framework, and Visual Studio Elevation of Privilege Vulnerability",
+  "aliases": [
+    "CVE-2023-36049"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.25"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.14"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0-rc1"
+            },
+            {
+              "last_affected": "8.0.0-rc1"
+            },
+            {
+              "introduced": "8.0.0-rc2"
+            },
+            {
+              "last_affected": "8.0.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:8.0.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:8.0.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36049"
+    }
+  ],
+  "published": "2023-11-22T07:18:47.481Z",
+  "modified": "2023-11-22T07:45:03.610Z"
+}

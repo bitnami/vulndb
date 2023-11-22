@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2023-47125",
+  "details": "TYPO3 is an open source PHP based web content management system released under the GNU GPL. In affected versions DOM processing instructions are not handled correctly. This allows bypassing the cross-site scripting mechanism of typo3/html-sanitizer. This vulnerability has been addressed in versions 1.5.3 and 2.1.4. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-47125"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.7.42"
+            },
+            {
+              "fixed": "8.7.55"
+            },
+            {
+              "introduced": "9.5.29"
+            },
+            {
+              "fixed": "9.5.44"
+            },
+            {
+              "introduced": "10.4.19"
+            },
+            {
+              "fixed": "10.4.41"
+            },
+            {
+              "introduced": "11.3.2"
+            },
+            {
+              "fixed": "11.5.33"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.4.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/html-sanitizer/commit/b8f90717251d968c49dc77f8c1e5912e2fbe0dff"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/html-sanitizer/security/advisories/GHSA-mm79-jhqm-9j54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2023-007"
+    }
+  ],
+  "published": "2023-11-22T07:30:55.856Z",
+  "modified": "2023-11-22T07:45:03.610Z"
+}
