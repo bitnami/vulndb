@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-typo3-2023-47127",
+  "details": "TYPO3 is an open source PHP based web content management system released under the GNU GPL. In typo3 installations there are always at least two different sites. Eg. first.example.org and second.example.com. In affected versions a session cookie generated for the first site can be reused on the second site without requiring additional authentication. This vulnerability has been addressed in versions 8.7.55, 9.5.44, 10.4.41, 11.5.33, and 12.4.8. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-47127"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "typo3",
+        "purl": "pkg:bitnami/typo3"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.7.55"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.44"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.4.41"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.5.33"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.4.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:typo3:typo3:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/commit/535dfbdc54fd5362e0bc08d911db44eac7f64019"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TYPO3/typo3/security/advisories/GHSA-3vmm-7h4j-69rm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://typo3.org/security/advisory/typo3-core-sa-2023-006"
+    }
+  ],
+  "published": "2023-11-22T07:30:35.853Z",
+  "modified": "2023-11-22T07:45:03.610Z"
+}
