@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-limesurvey-2023-44796",
+  "details": "Cross Site Scripting (XSS) vulnerability in LimeSurvey before version 6.2.9-230925 allows a remote attacker to escalate privileges via a crafted script to the _generaloptions_panel.php component.",
+  "aliases": [
+    "CVE-2023-44796"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "limesurvey",
+        "purl": "pkg:bitnami/limesurvey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.2.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Hebing123/CVE-2023-44796/issues/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/pull/3483"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/limesurvey/limesurvey/commit/135511073c51c332613dd7fad9a8ca0aad34a3fe"
+    }
+  ],
+  "published": "2023-11-25T07:20:23.391Z",
+  "modified": "2023-11-25T07:45:46.605Z"
+}
