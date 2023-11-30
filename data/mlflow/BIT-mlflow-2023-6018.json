@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2023-6018",
+  "details": "An attacker can overwrite any file on the server hosting MLflow without any authentication.",
+  "aliases": [
+    "CVE-2023-6018"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:-:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/7cf918b5-43f4-48c0-a371-4d963ce69b30"
+    }
+  ],
+  "published": "2023-11-30T07:21:41.887Z",
+  "modified": "2023-11-30T07:46:07.685Z"
+}
