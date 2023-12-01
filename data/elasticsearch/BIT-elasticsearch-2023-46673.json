@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-elasticsearch-2023-31418",
-  "details": "An issue has been identified with how Elasticsearch handled incoming requests on the HTTP layer. An unauthenticated user could force an Elasticsearch node to exit with an OutOfMemory error by sending a moderate number of malformed HTTP requests. The issue was identified by Elastic Engineering and we have no indication that the issue is known or that it is being exploited in the wild.",
+  "id": "BIT-elasticsearch-2023-46673",
+  "details": "It was identified that malformed scripts used in the script processor of an Ingest Pipeline could cause an Elasticsearch node to crash when calling the Simulate Pipeline API.",
   "aliases": [
-    "CVE-2023-31418"
+    "CVE-2023-46673"
   ],
   "affected": [
     {
@@ -23,16 +23,16 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "7.0.0"
             },
             {
-              "fixed": "7.17.12"
+              "fixed": "7.17.14"
             },
             {
               "introduced": "8.0.0"
             },
             {
-              "fixed": "8.8.2"
+              "fixed": "8.10.3"
             }
           ]
         }
@@ -48,17 +48,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://discuss.elastic.co/t/elasticsearch-8-9-0-7-17-13-security-update/343616"
+      "url": "https://discuss.elastic.co/t/elasticsearch-7-17-14-8-10-3-security-update-esa-2023-24/347708"
     },
     {
       "type": "WEB",
       "url": "https://www.elastic.co/community/security"
-    },
-    {
-      "type": "WEB",
-      "url": "https://security.netapp.com/advisory/ntap-20231130-0005/"
     }
   ],
-  "published": "2023-11-07T07:17:24.371Z",
+  "published": "2023-12-01T07:17:17.613Z",
   "modified": "2023-12-01T07:45:35.345Z"
 }
