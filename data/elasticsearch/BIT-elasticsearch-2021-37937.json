@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2021-37937",
+  "details": "An issue was found with how API keys are created with the Fleet-Server service account. When an API key is created with a service account, it is possible that the API key could be created with higher privileges than intended. Using this vulnerability, a compromised Fleet-Server service account could escalate themselves to a super-user.",
+  "aliases": [
+    "CVE-2021-37937"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.13.0"
+            },
+            {
+              "fixed": "7.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elastic-stack-7-14-1-security-update/283077"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.elastic.co/community/security"
+    }
+  ],
+  "published": "2023-12-01T07:18:13.210Z",
+  "modified": "2023-12-01T07:45:35.345Z"
+}
