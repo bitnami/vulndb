@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-haproxy-2023-45539",
+  "details": "HAProxy before 2.8.2 accepts # as part of the URI component, which might allow remote attackers to obtain sensitive information or have unspecified other impact upon misinterpretation of a path_end rule, such as routing index.html#.png to a static server.",
+  "aliases": [
+    "CVE-2023-45539"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy.git%3Ba=commit%3Bh=2eab6d354322932cfec2ed54de261e4347eca9a6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.w3.org/Archives/Public/ietf-http-wg/2023JulSep/0070.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mail-archive.com/haproxy%40formilux.org/msg43861.html"
+    }
+  ],
+  "published": "2023-12-05T07:18:35.014Z",
+  "modified": "2023-12-05T07:44:20.796Z"
+}
