@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-5995",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 16.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to abuse the policy bot to gain access to internal projects.",
+  "aliases": [
+    "CVE-2023-5995"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.2.0"
+            },
+            {
+              "fixed": "16.4.3"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "last_affected": "16.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/425361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2138880"
+    }
+  ],
+  "published": "2023-12-07T07:18:21.089Z",
+  "modified": "2023-12-07T07:45:32.815Z"
+}

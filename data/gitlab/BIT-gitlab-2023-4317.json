@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-4317",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 9.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for a user with the Developer role to update a pipeline schedule from an unprotected branch to a protected branch.",
+  "aliases": [
+    "CVE-2023-4317"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "16.4.3"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "last_affected": "16.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/421846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2089517"
+    }
+  ],
+  "published": "2023-12-07T07:21:12.162Z",
+  "modified": "2023-12-07T07:45:32.815Z"
+}
