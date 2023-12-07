@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-3964",
+  "details": "An issue has been discovered in GitLab affecting all versions starting from 13.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for users to access composer packages on public projects that have package registry disabled in the project settings.",
+  "aliases": [
+    "CVE-2023-3964"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "16.4.3"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "last_affected": "16.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/419857"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2037316"
+    }
+  ],
+  "published": "2023-12-07T07:22:19.507Z",
+  "modified": "2023-12-07T07:45:32.815Z"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-4658",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 8.13 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to abuse the `Allowed to merge` permission as a guest user, when granted the permission through a group.",
+  "aliases": [
+    "CVE-2023-4658"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.13.0"
+            },
+            {
+              "fixed": "16.4.3"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.3"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "last_affected": "16.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/423835"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2104540"
+    }
+  ],
+  "published": "2023-12-07T07:20:04.279Z",
+  "modified": "2023-12-07T07:45:32.815Z"
+}

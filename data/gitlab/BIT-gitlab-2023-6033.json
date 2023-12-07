@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-6033",
+  "details": "Improper neutralization of input in Jira integration configuration in GitLab CE/EE, affecting all versions from 15.10 prior to 16.6.1, 16.5 prior to 16.5.3, and 16.4 prior to 16.4.3 allows attacker to execute javascript in victim's browser.",
+  "aliases": [
+    "CVE-2023-6033"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10.0"
+            },
+            {
+              "fixed": "16.6.1"
+            },
+            {
+              "introduced": "16.4.0"
+            },
+            {
+              "fixed": "16.4.3"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/431201"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2236039"
+    }
+  ],
+  "published": "2023-12-07T07:18:12.893Z",
+  "modified": "2023-12-07T07:45:32.815Z"
+}
