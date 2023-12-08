@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-5332",
+  "details": "Patch in third party library Consul requires 'enable-script-checks' to be set to False. This was required to enable a patch by the vendor. Without this setting the patch could be bypassed. This only affects GitLab-EE.",
+  "aliases": [
+    "CVE-2023-5332"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "16.2.8"
+            },
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "fixed": "16.3.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.4.0"
+            },
+            {
+              "last_affected": "16.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.4.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/omnibus-gitlab/-/issues/8171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.hashicorp.com/blog/protecting-consul-from-rce-risk-in-specific-configurations"
+    }
+  ],
+  "published": "2023-12-08T07:19:00.588Z",
+  "modified": "2023-12-08T07:45:10.176Z"
+}
