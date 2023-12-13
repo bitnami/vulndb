@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2023-6458",
+  "details": "Mattermost webapp fails to validate route parameters in/<TEAM_NAME>/channels/<CHANNEL_NAME> allowing an attacker to perform a client-side path traversal.",
+  "aliases": [
+    "CVE-2023-6458"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.8.14"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.1.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.3"
+            },
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2023-12-13T07:21:27.775Z",
+  "modified": "2023-12-13T07:45:09.151Z"
+}

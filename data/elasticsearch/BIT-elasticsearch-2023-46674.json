@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2023-46674",
+  "details": "An issue was identified that allowed the unsafe deserialization of java objects from hadoop or spark configuration properties that could have been modified by authenticated users. Elastic would like to thank Yakov Shafranovich, with Amazon Web Services for reporting this issue.",
+  "aliases": [
+    "CVE-2023-46674"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.17.11"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-hadoop-7-17-11-8-9-0-security-update-esa-2023-28/348663"
+    }
+  ],
+  "published": "2023-12-13T07:17:46.689Z",
+  "modified": "2023-12-13T07:45:09.151Z"
+}

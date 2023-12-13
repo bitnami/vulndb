@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-golang-2023-45285",
+  "details": "Using go get to fetch a module with the \".git\" suffix may unexpectedly fallback to the insecure \"git://\" protocol if the module is unavailable via the secure \"https://\" and \"git+ssh://\" protocols, even if GOINSECURE is not set for said module. This only affects users who are not using the module proxy and are fetching modules directly (i.e. GOPROXY=off).",
+  "aliases": [
+    "CVE-2023-45285"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.20.12"
+            },
+            {
+              "introduced": "1.21.0-0"
+            },
+            {
+              "fixed": "1.21.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/540257"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/63845"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2023-2383"
+    }
+  ],
+  "published": "2023-12-13T07:18:35.685Z",
+  "modified": "2023-12-13T07:45:09.151Z"
+}
