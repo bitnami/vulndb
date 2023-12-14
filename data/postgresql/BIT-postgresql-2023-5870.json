@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-postgresql-2023-39417",
-  "details": "IN THE EXTENSION SCRIPT, a SQL Injection vulnerability was found in PostgreSQL if it uses @extowner@, @extschema@, or @extschema:...@ inside a quoting construct (dollar quoting, '', or \"\"). If an administrator has installed files of a vulnerable, trusted, non-bundled extension, an attacker with database-level CREATE privilege can execute arbitrary code as the bootstrap superuser.",
+  "id": "BIT-postgresql-2023-5870",
+  "details": "A flaw was found in PostgreSQL involving the pg_cancel_backend role that signals background workers, including the logical replication launcher, autovacuum workers, and the autovacuum launcher. Successful exploitation requires a non-core extension with a less-resilient background worker and would affect that specific background worker only. This issue may allow a remote high privileged user to launch a denial of service (DoS) attack.",
   "aliases": [
-    "CVE-2023-39417"
+    "CVE-2023-5870"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -26,31 +26,42 @@
               "introduced": "11.0.0"
             },
             {
-              "fixed": "11.21.0"
+              "fixed": "11.22.0"
             },
             {
               "introduced": "12.0.0"
             },
             {
-              "fixed": "12.16.0"
+              "fixed": "12.17.0"
             },
             {
               "introduced": "13.0.0"
             },
             {
-              "fixed": "13.12.0"
+              "fixed": "13.13.0"
             },
             {
               "introduced": "14.0.0"
             },
             {
-              "fixed": "14.9.0"
+              "fixed": "14.10.0"
             },
             {
               "introduced": "15.0.0"
             },
             {
-              "fixed": "15.4.0"
+              "fixed": "15.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "last_affected": "16.0.0"
             }
           ]
         }
@@ -58,40 +69,13 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:postgresql:postgresql:16.0:*:*:*:*:*:*:*"
     ]
   },
   "references": [
-    {
-      "type": "WEB",
-      "url": "https://access.redhat.com/security/cve/CVE-2023-39417"
-    },
-    {
-      "type": "WEB",
-      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2228111"
-    },
-    {
-      "type": "WEB",
-      "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00003.html"
-    },
-    {
-      "type": "WEB",
-      "url": "https://security.netapp.com/advisory/ntap-20230915-0002/"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.postgresql.org/support/security/CVE-2023-39417"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.debian.org/security/2023/dsa-5553"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.debian.org/security/2023/dsa-5554"
-    },
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2023:7545"
@@ -151,8 +135,24 @@
     {
       "type": "WEB",
       "url": "https://access.redhat.com/errata/RHSA-2023:7785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2023-5870"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2247170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/about/news/postgresql-161-155-1410-1313-1217-and-1122-released-2749/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2023-5870/"
     }
   ],
-  "published": "2023-11-06T08:59:59.278Z",
+  "published": "2023-12-14T07:27:17.875Z",
   "modified": "2023-12-14T07:45:59.314Z"
 }
