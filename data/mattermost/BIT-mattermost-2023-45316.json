@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2023-45316",
+  "details": "Mattermost fails to validate if a relative path is passed in /plugins/playbooks/api/v0/telemetry/run/<telem_run_id> as a telemetry run ID, allowing an attacker to use a path traversal payload that points to a different endpoint leading to a CSRF attack.",
+  "aliases": [
+    "CVE-2023-45316"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.8.14"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.1.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.3"
+            },
+            {
+              "introduced": "9.1.1"
+            },
+            {
+              "fixed": "9.1.2"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2023-12-15T07:23:08.775Z",
+  "modified": "2023-12-15T07:45:13.493Z"
+}

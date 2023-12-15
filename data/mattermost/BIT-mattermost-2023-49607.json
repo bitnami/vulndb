@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2023-49607",
+  "details": "Mattermost fails to validate the type of the \"reminder\" body request parameter allowing an attacker to crash the Playbook Plugin when updating the status dialog.",
+  "aliases": [
+    "CVE-2023-49607"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.8.14"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.1.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.3"
+            },
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.2"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.1"
+            },
+            {
+              "last_affected": "9.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:9.1.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2023-12-15T07:22:43.058Z",
+  "modified": "2023-12-15T07:45:13.493Z"
+}
