@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-3511",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 8.17 before 16.4.4, all versions starting from 16.5 before 16.5.4, all versions starting from 16.6 before 16.6.2. It was possible for auditor users to fork and submit merge requests to private projects they're not a member of.",
+  "aliases": [
+    "CVE-2023-3511"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.17.0"
+            },
+            {
+              "fixed": "16.4.4"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.4"
+            },
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "16.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/416961"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2046752"
+    }
+  ],
+  "published": "2023-12-20T07:24:50.596Z",
+  "modified": "2023-12-20T07:44:57.018Z"
+}
