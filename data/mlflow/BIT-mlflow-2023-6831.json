@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2023-6831",
+  "details": "Path Traversal: '\\..\\filename' in GitHub repository mlflow/mlflow prior to 2.9.2.",
+  "aliases": [
+    "CVE-2023-6831"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/1da75dfcecd4d169e34809ade55748384e8af6c1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/0acdd745-0167-4912-9d5c-02035fe5b314"
+    }
+  ],
+  "published": "2023-12-22T07:21:37.804Z",
+  "modified": "2023-12-22T07:44:55.602Z"
+}

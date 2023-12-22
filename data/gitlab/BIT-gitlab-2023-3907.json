@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-3907",
+  "details": "A privilege escalation vulnerability in GitLab EE affecting all versions from 16.0 prior to 16.4.4, 16.5 prior to 16.5.4, and 16.6 prior to 16.6.2 allows a project Maintainer to use a Project Access Token to escalate their role to Owner",
+  "aliases": [
+    "CVE-2023-3907"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.4.4"
+            },
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.5.4"
+            },
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "16.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/418878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2058934"
+    }
+  ],
+  "published": "2023-12-22T07:24:21.491Z",
+  "modified": "2023-12-22T07:44:55.602Z"
+}
