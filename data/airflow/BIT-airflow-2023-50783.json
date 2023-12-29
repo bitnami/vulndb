@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2023-50783",
+  "details": "Apache Airflow, versions before 2.8.0, is affected by a vulnerability that allows an authenticated user without the variable edit permission, to update a variable.This flaw compromises the integrity of variable management, potentially leading to unauthorized data modification.Users are recommended to upgrade to 2.8.0, which fixes this issue",
+  "aliases": [
+    "CVE-2023-50783"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/12/21/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/33932"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/rs7cr3yp726mb89s1m844hy9pq7frgcn"
+    }
+  ],
+  "published": "2023-12-29T07:16:14.466Z",
+  "modified": "2023-12-29T07:44:27.508Z"
+}
