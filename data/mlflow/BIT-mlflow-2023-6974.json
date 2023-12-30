@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2023-6974",
+  "details": "A malicious user could use this issue to access internal HTTP(s) servers and in the worst case (ie: aws instance) it could be abuse to get a remote code execution on the victim machine.",
+  "aliases": [
+    "CVE-2023-6974"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/8174250f83352a04c2d42079f414759060458555"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/438b0524-da0e-4d08-976a-6f270c688393"
+    }
+  ],
+  "published": "2023-12-30T07:21:41.689Z",
+  "modified": "2023-12-30T07:45:13.782Z"
+}

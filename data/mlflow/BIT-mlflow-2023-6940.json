@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2023-6940",
+  "details": "with only one user interaction(download a malicious config), attackers can gain full command execution on the victim system.",
+  "aliases": [
+    "CVE-2023-6940"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/5139b1087d686fa52e2b087e09da66aff86297b1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/c6f59480-ce47-4f78-a3dc-4bd8ca15029c"
+    }
+  ],
+  "published": "2023-12-30T07:21:53.565Z",
+  "modified": "2023-12-30T07:45:13.782Z"
+}
