@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-aspnet-core-2020-1597",
-  "details": "A denial of service vulnerability exists when ASP.NET Core improperly handles web requests, aka 'ASP.NET Core Denial of Service Vulnerability'.",
+  "details": "<p>A denial of service vulnerability exists when ASP.NET Core improperly handles web requests. An attacker who successfully exploited this vulnerability could cause a denial of service against an ASP.NET Core web application. The vulnerability can be exploited remotely, without authentication.</p><p>A remote unauthenticated attacker could exploit this vulnerability by issuing specially crafted requests to the ASP.NET Core application.</p><p>The update addresses the vulnerability by correcting how the ASP.NET Core web application handles web requests.</p>",
   "aliases": [
     "CVE-2020-1597"
   ],
@@ -69,5 +69,5 @@
     }
   ],
   "published": "2023-11-06T08:51:36.480Z",
-  "modified": "2023-11-08T07:44:02.038Z"
+  "modified": "2024-01-05T07:44:59.702Z"
 }
