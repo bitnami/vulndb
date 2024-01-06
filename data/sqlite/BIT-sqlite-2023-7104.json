@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-sqlite-2023-7104",
+  "details": "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
+  "aliases": [
+    "CVE-2023-7104"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.43.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D6C2HN4T2S6GYNTAUXLH45LQZHK7QPHP/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/forum/forumpost/5bcbf4571c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/src/info/0e4e7a05c4204b47"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.248999"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.248999"
+    }
+  ],
+  "published": "2024-01-06T07:29:11.558Z",
+  "modified": "2024-01-06T07:45:08.159Z"
+}
