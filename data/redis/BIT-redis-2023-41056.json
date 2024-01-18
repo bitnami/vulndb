@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-redis-2023-41056",
+  "details": "Redis is an in-memory database that persists on disk. Redis incorrectly handles resizing of memory buffers which can result in integer overflow that leads to heap overflow and potential remote code execution. This issue has been patched in version 7.0.15 and 7.2.4.",
+  "aliases": [
+    "CVE-2023-41056"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.9"
+            },
+            {
+              "fixed": "7.0.15"
+            },
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/7.0.15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/7.2.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-xr47-pcmx-fq2m"
+    }
+  ],
+  "published": "2024-01-18T07:27:45.724Z",
+  "modified": "2024-01-18T07:45:16.116Z"
+}
