@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-5356",
+  "details": "Incorrect authorization checks in GitLab CE/EE from all versions starting from 8.13 before 16.5.6, all versions starting from 16.6 before 16.6.4, all versions starting from 16.7 before 16.7.2, allows a user to abuse slack/mattermost integrations to execute slash commands as another user.",
+  "aliases": [
+    "CVE-2023-5356"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.13.0"
+            },
+            {
+              "fixed": "16.5.6"
+            },
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "16.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.7.0"
+            },
+            {
+              "last_affected": "16.7.0"
+            },
+            {
+              "introduced": "16.7.1"
+            },
+            {
+              "last_affected": "16.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/427154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2188868"
+    }
+  ],
+  "published": "2024-01-19T07:19:42.488Z",
+  "modified": "2024-01-19T07:45:23.882Z"
+}

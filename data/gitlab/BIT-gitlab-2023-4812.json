@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-4812",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 15.3 before 16.5.6, all versions starting from 16.6 before 16.6.4, all versions starting from 16.7 before 16.7.2. The required CODEOWNERS approval could be bypassed by adding changes to a previously approved merge request.",
+  "aliases": [
+    "CVE-2023-4812"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.3.0"
+            },
+            {
+              "fixed": "16.5.5"
+            },
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "16.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.7.0"
+            },
+            {
+              "last_affected": "16.7.0"
+            },
+            {
+              "introduced": "16.7.1"
+            },
+            {
+              "last_affected": "16.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/424398"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2115574"
+    }
+  ],
+  "published": "2024-01-19T07:21:08.087Z",
+  "modified": "2024-01-19T07:45:23.882Z"
+}
