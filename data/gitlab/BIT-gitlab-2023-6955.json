@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-6955",
+  "details": "An improper access control vulnerability exists in GitLab Remote Development affecting all versions prior to 16.5.6, 16.6 prior to 16.6.4 and 16.7 prior to 16.7.2. This condition allows an attacker to create a workspace in one group that is associated with an agent from another group. ",
+  "aliases": [
+    "CVE-2023-6955"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.5.6"
+            },
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "16.6.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.7.0"
+            },
+            {
+              "last_affected": "16.7.0"
+            },
+            {
+              "introduced": "16.7.1"
+            },
+            {
+              "last_affected": "16.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/432188"
+    }
+  ],
+  "published": "2024-01-19T07:18:20.107Z",
+  "modified": "2024-01-19T07:45:23.882Z"
+}
