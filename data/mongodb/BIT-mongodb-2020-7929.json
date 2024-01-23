@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2020-7929",
-  "details": "A user authorized to perform database queries may trigger denial of service by issuing specially crafted query contain a type of regex. This issue affects: MongoDB Inc. MongoDB Server v3.6 versions prior to 3.6.21 and MongoDB Server v4.0 versions prior to 4.0.20.",
+  "details": "A user authorized to perform database queries may trigger denial of service by issuing specially crafted query contain a type of regex. This issue affects MongoDB Server v3.6 versions prior to 3.6.21 and MongoDB Server v4.0 versions prior to 4.0.20.",
   "aliases": [
     "CVE-2020-7929"
   ],
@@ -52,5 +52,5 @@
     }
   ],
   "published": "2023-11-06T08:56:52.982Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2024-01-23T19:45:33.333Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2020-7928",
-  "details": "A user authorized to perform database queries may trigger a read overrun and access arbitrary memory by issuing specially crafted queries. This issue affects: MongoDB Inc. MongoDB Server v4.4 versions prior to 4.4.1; v4.2 versions prior to 4.2.9; v4.0 versions prior to 4.0.20; v3.6 versions prior to 3.6.20.",
+  "details": "A user authorized to perform database queries may trigger a read overrun and access arbitrary memory by issuing specially crafted queries. This issue affects MongoDB Server v4.4 versions prior to 4.4.1; MongoDB Server v4.2 versions prior to 4.2.9; MongoDB Server v4.0 versions prior to 4.0.20 and MongoDB Server v3.6 versions prior to 3.6.20.",
   "aliases": [
     "CVE-2020-7928"
   ],
@@ -70,5 +70,5 @@
     }
   ],
   "published": "2023-11-06T08:57:03.268Z",
-  "modified": "2023-11-07T16:28:29.749Z"
+  "modified": "2024-01-23T19:45:33.333Z"
 }
