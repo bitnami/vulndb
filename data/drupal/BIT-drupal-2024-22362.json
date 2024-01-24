@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-drupal-2024-22362",
+  "details": "Drupal contains a vulnerability with improper handling of structural elements. If this vulnerability is exploited, an attacker may be able to cause a denial-of-service (DoS) condition.",
+  "aliases": [
+    "CVE-2024-22362"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.6"
+            },
+            {
+              "last_affected": "9.3.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:9.3.6:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/drupal/drupal"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/en/jp/JVN63383723/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/about/core/policies/core-release-cycles/schedule"
+    }
+  ],
+  "published": "2024-01-24T07:17:18.184Z",
+  "modified": "2024-01-24T07:45:16.025Z"
+}
