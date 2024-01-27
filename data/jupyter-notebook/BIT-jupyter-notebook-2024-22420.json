@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jupyter-notebook-2024-22420",
+  "details": "JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture. This vulnerability depends on user interaction by opening a malicious Markdown file using JupyterLab preview feature. A malicious user can access any data that the attacked user has access to as well as perform arbitrary requests acting as the attacked user. JupyterLab version 4.0.11 has been patched. Users are advised to upgrade. Users unable to upgrade should disable the table of contents extension.",
+  "aliases": [
+    "CVE-2024-22420"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyter-notebook",
+        "purl": "pkg:bitnami/jupyter-notebook"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jupyter:notebook:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/commit/e1b3aabab603878e46add445a3114e838411d2df"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-4m77-cmpx-vjc4"
+    }
+  ],
+  "published": "2024-01-27T07:19:50.015Z",
+  "modified": "2024-01-27T07:45:12.347Z"
+}

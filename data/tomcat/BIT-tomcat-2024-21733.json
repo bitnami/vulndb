@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tomcat-2024-21733",
+  "details": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Tomcat.This issue affects Apache Tomcat: from 8.5.7 through 8.5.63, from 9.0.0-M11 through 9.0.43.Users are recommended to upgrade to version 8.5.64 onwards or 9.0.44 onwards, which contain a fix for the issue.",
+  "aliases": [
+    "CVE-2024-21733"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.7"
+            },
+            {
+              "fixed": "8.5.64"
+            },
+            {
+              "introduced": "9.0.1"
+            },
+            {
+              "fixed": "9.0.44"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0-milestone11"
+            },
+            {
+              "last_affected": "9.0.0-milestone11"
+            },
+            {
+              "introduced": "9.0.0-milestone12"
+            },
+            {
+              "last_affected": "9.0.0-milestone12"
+            },
+            {
+              "introduced": "9.0.0-milestone13"
+            },
+            {
+              "last_affected": "9.0.0-milestone13"
+            },
+            {
+              "introduced": "9.0.0-milestone14"
+            },
+            {
+              "last_affected": "9.0.0-milestone14"
+            },
+            {
+              "introduced": "9.0.0-milestone15"
+            },
+            {
+              "last_affected": "9.0.0-milestone15"
+            },
+            {
+              "introduced": "9.0.0-milestone16"
+            },
+            {
+              "last_affected": "9.0.0-milestone16"
+            },
+            {
+              "introduced": "9.0.0-milestone17"
+            },
+            {
+              "last_affected": "9.0.0-milestone17"
+            },
+            {
+              "introduced": "9.0.0-milestone18"
+            },
+            {
+              "last_affected": "9.0.0-milestone18"
+            },
+            {
+              "introduced": "9.0.0-milestone19"
+            },
+            {
+              "last_affected": "9.0.0-milestone19"
+            },
+            {
+              "introduced": "9.0.0-milestone20"
+            },
+            {
+              "last_affected": "9.0.0-milestone20"
+            },
+            {
+              "introduced": "9.0.0-milestone21"
+            },
+            {
+              "last_affected": "9.0.0-milestone21"
+            },
+            {
+              "introduced": "9.0.0-milestone22"
+            },
+            {
+              "last_affected": "9.0.0-milestone22"
+            },
+            {
+              "introduced": "9.0.0-milestone23"
+            },
+            {
+              "last_affected": "9.0.0-milestone23"
+            },
+            {
+              "introduced": "9.0.0-milestone24"
+            },
+            {
+              "last_affected": "9.0.0-milestone24"
+            },
+            {
+              "introduced": "9.0.0-milestone25"
+            },
+            {
+              "last_affected": "9.0.0-milestone25"
+            },
+            {
+              "introduced": "9.0.0-milestone26"
+            },
+            {
+              "last_affected": "9.0.0-milestone26"
+            },
+            {
+              "introduced": "9.0.0-milestone27"
+            },
+            {
+              "last_affected": "9.0.0-milestone27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone11:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone12:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone13:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone14:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone15:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone16:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone17:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone18:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone19:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone20:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone21:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone22:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone23:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone24:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone25:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone26:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:9.0.0:milestone27:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/01/19/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/h9bjqdd0odj6lhs2o96qgowcc6hb0cfz"
+    }
+  ],
+  "published": "2024-01-27T07:30:53.467Z",
+  "modified": "2024-01-27T07:45:12.347Z"
+}
