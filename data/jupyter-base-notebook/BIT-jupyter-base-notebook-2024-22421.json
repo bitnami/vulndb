@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jupyter-base-notebook-2024-22421",
+  "details": "JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture. Users of JupyterLab who click on a malicious link may get their `Authorization` and `XSRFToken` tokens exposed to a third party when running an older `jupyter-server` version. JupyterLab versions 4.1.0b2, 4.0.11, and 3.6.7 are patched. No workaround has been identified, however users should ensure to upgrade `jupyter-server` to version 2.7.2 or newer which includes a redirect vulnerability fix.",
+  "aliases": [
+    "CVE-2024-22421"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyter-base-notebook",
+        "purl": "pkg:bitnami/jupyter-base-notebook"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jupyter:notebook:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/commit/19bd9b96cb2e77170a67e43121637d0b5619e8c6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-44cc-43rp-5947"
+    }
+  ],
+  "published": "2024-01-27T07:19:36.807Z",
+  "modified": "2024-01-27T07:45:12.347Z"
+}
