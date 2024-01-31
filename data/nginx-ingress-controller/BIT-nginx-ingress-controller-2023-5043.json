@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-nginx-ingress-controller-2023-5043",
+  "details": "Ingress nginx annotation injection causes arbitrary command execution.",
+  "aliases": [
+    "CVE-2023-5043"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nginx-ingress-controller",
+        "purl": "pkg:bitnami/nginx-ingress-controller"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kubernetes:ingress-nginx:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/10/25/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kubernetes/ingress-nginx/issues/10571"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/kubernetes-security-announce/c/pVsXsOpxYZo"
+    }
+  ],
+  "published": "2024-01-31T13:19:57.392Z",
+  "modified": "2024-01-31T13:41:17.039Z"
+}
