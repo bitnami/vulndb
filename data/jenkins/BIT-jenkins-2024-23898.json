@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2024-23898",
+  "details": "Jenkins 2.217 through 2.441 (both inclusive), LTS 2.222.1 through 2.426.2 (both inclusive) does not perform origin validation of requests made through the CLI WebSocket endpoint, resulting in a cross-site WebSocket hijacking (CSWSH) vulnerability, allowing attackers to execute CLI commands on the Jenkins controller.",
+  "aliases": [
+    "CVE-2024-23898"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.217.0"
+            },
+            {
+              "fixed": "2.441.0"
+            },
+            {
+              "introduced": "2.222.1"
+            },
+            {
+              "fixed": "2.426.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2024-01-24/#SECURITY-3315"
+    }
+  ],
+  "published": "2024-02-01T07:19:10.357Z",
+  "modified": "2024-02-01T07:45:39.673Z"
+}

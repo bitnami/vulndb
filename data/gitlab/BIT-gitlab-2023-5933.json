@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-5933",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions after 13.7 before 16.6.6, 16.7 prior to 16.7.4, and 16.8 prior to 16.8.1. Improper input sanitization of user name allows arbitrary API PUT requests.",
+  "aliases": [
+    "CVE-2023-5933"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.7.0"
+            },
+            {
+              "fixed": "16.6.6"
+            },
+            {
+              "introduced": "16.7.0"
+            },
+            {
+              "fixed": "16.7.4"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.8.0"
+            },
+            {
+              "last_affected": "16.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.8.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.8.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/01/25/critical-security-release-gitlab-16-8-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/430236"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2225710"
+    }
+  ],
+  "published": "2024-02-01T07:19:22.257Z",
+  "modified": "2024-02-01T07:45:39.673Z"
+}
