@@ -116,6 +116,11 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2024-03
+
+- Tinytinyrss
+- ttrss-mailer-smtp
+
 ### 2024-01
 
 - ProcessMaker
