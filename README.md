@@ -121,6 +121,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Canvas LMS
 - Canvas RCE API
 - Concrete5
+- Neos
 - OpenProject
 - Tinytinyrss
 - ttrss-mailer-smtp
