@@ -124,6 +124,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - OpenProject
 - Tinytinyrss
 - ttrss-mailer-smtp
+- Weblate
 
 ### 2024-01
 
