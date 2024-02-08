@@ -123,6 +123,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Concrete5
 - Neos
 - OpenProject
+- ReportServer
 - Tinytinyrss
 - ttrss-mailer-smtp
 - Weblate
