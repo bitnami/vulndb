@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-23834",
+  "details": "Discourse is an open-source discussion platform. Improperly sanitized user input could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. The vulnerability is patched in 3.1.5 and 3.2.0.beta5.  As a workaround, ensure Content Security Policy is enabled and does not include `unsafe-inline`.",
+  "aliases": [
+    "CVE-2024-23834"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.5"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2.0-beta1"
+            },
+            {
+              "last_affected": "3.2.0-beta1"
+            },
+            {
+              "introduced": "3.2.0-beta2"
+            },
+            {
+              "last_affected": "3.2.0-beta2"
+            },
+            {
+              "introduced": "3.2.0-beta3"
+            },
+            {
+              "last_affected": "3.2.0-beta3"
+            },
+            {
+              "introduced": "3.2.0-beta4"
+            },
+            {
+              "last_affected": "3.2.0-beta4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.2.0:beta1:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.2.0:beta2:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.2.0:beta3:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:3.2.0:beta4:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/568d704a94c528b7c2cb0f3512a7b7b606bc3000"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-rj3g-8q6p-63pc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://meta.discourse.org/t/3-1-5-security-and-bug-fix-release/293094"
+    },
+    {
+      "type": "WEB",
+      "url": "https://meta.discourse.org/t/3-2-0-beta5-add-groups-to-dms-mobile-chat-footer-redesign-passkeys-enabled-by-default-and-more/293093"
+    }
+  ],
+  "published": "2024-02-09T07:17:00.880Z",
+  "modified": "2024-02-09T07:45:15.419Z"
+}
