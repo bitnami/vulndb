@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2024-23832",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub Mastodon allows configuration of LDAP for authentication. Due to insufficient origin validation in all Mastodon, attackers can impersonate and take over any remote account. Every Mastodon version prior to 3.5.17 is vulnerable, as well as 4.0.x versions prior to 4.0.13, 4.1.x version prior to 4.1.13, and 4.2.x versions prior to 4.2.5.",
+  "aliases": [
+    "CVE-2024-23832"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.17"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.13"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.13"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/02/02/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/1726085db5cd73dd30953da858f9887bcc90b958"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-3fjr-858r-92rw"
+    }
+  ],
+  "published": "2024-02-10T07:20:53.536Z",
+  "modified": "2024-02-10T07:45:49.191Z"
+}
