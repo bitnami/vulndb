@@ -128,6 +128,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Neos
 - OpenProject
 - OroCRM
+- Osclass
 - phpList
 - ReportServer
 - Roundcube
