@@ -130,6 +130,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - phpList
 - ReportServer
 - Roundcube
+- SEO Panel
 - Tinytinyrss
 - ttrss-mailer-smtp
 - Weblate
