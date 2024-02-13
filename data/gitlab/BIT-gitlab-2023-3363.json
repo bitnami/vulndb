@@ -23,19 +23,24 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "13.6.0"
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.0.6"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
+              "introduced": "13.6"
             },
             {
               "fixed": "15.11.10"
             },
             {
-              "introduced": "16.0.0"
-            },
-            {
-              "fixed": "16.0.6"
-            },
-            {
-              "introduced": "16.1.0"
+              "introduced": "16.1"
             },
             {
               "fixed": "16.1.1"
@@ -59,5 +64,5 @@
     }
   ],
   "published": "2024-01-31T15:22:51.364Z",
-  "modified": "2024-01-31T15:40:39.817Z"
+  "modified": "2024-02-13T12:50:08.429Z"
 }
