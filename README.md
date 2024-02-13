@@ -122,6 +122,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Canvas LMS
 - Canvas RCE API
 - CiviCRM
+- Codeigniter
 - Concrete5
 - Mantis
 - MyBB
@@ -133,6 +134,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - ReportServer
 - Roundcube
 - SEO Panel
+- Symfony
 - Tinytinyrss
 - ttrss-mailer-smtp
 - Weblate
