@@ -23,6 +23,17 @@
           "type": "SEMVER",
           "events": [
             {
+              "introduced": "7.0.0-rc2"
+            },
+            {
+              "last_affected": "7.0.0-rc2"
+            }
+          ]
+        },
+        {
+          "type": "ECOSYSTEM",
+          "events": [
+            {
               "introduced": "6.0.4.2"
             },
             {
@@ -33,12 +44,6 @@
             },
             {
               "last_affected": "6.1.4.2"
-            },
-            {
-              "introduced": "7.0.0-rc2"
-            },
-            {
-              "last_affected": "7.0.0-rc2"
             }
           ]
         }
@@ -68,5 +73,5 @@
     }
   ],
   "published": "2024-01-31T15:23:32.477Z",
-  "modified": "2024-02-09T07:45:15.419Z"
+  "modified": "2024-02-13T12:50:08.429Z"
 }
