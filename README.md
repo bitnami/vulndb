@@ -126,6 +126,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Concrete5
 - Kapacitor
 - Mantis
+- MODX
 - MyBB
 - Neos
 - OpenProject
