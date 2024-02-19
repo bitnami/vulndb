@@ -124,12 +124,14 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - CiviCRM
 - Codeigniter
 - Concrete5
+- Kapacitor
 - Mantis
 - MyBB
 - Neos
 - OpenProject
 - OroCRM
 - Osclass
+- Percona XtraBacup
 - phpList
 - ReportServer
 - Roundcube
