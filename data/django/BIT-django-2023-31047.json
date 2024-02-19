@@ -20,16 +20,16 @@
       ],
       "ranges": [
         {
-          "type": "ECOSYSTEM",
+          "type": "SEMVER",
           "events": [
             {
-              "introduced": "3.2"
+              "introduced": "3.2.0"
             },
             {
               "fixed": "3.2.19"
             },
             {
-              "introduced": "4.0"
+              "introduced": "4.0.0"
             },
             {
               "fixed": "4.1.9"
@@ -37,25 +37,30 @@
           ]
         },
         {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "last_affected": "4.2.0"
+            }
+          ]
+        },
+        {
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "4.2"
+              "introduced": "4.2-b1.0"
             },
             {
-              "last_affected": "4.2"
+              "last_affected": "4.2-b1.0"
             },
             {
-              "introduced": "4.2-b1"
+              "introduced": "4.2-rc1.0"
             },
             {
-              "last_affected": "4.2-b1"
-            },
-            {
-              "introduced": "4.2-rc1"
-            },
-            {
-              "last_affected": "4.2-rc1"
+              "last_affected": "4.2-rc1.0"
             }
           ]
         }
@@ -98,5 +103,5 @@
     }
   ],
   "published": "2024-01-31T15:13:12.291Z",
-  "modified": "2024-02-13T12:50:08.429Z"
+  "modified": "2024-02-19T10:36:29.170Z"
 }

@@ -20,31 +20,36 @@
       ],
       "ranges": [
         {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "last_affected": "7.4.0"
+            }
+          ]
+        },
+        {
           "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "7.4"
+              "introduced": "7.4-update1.0"
             },
             {
-              "last_affected": "7.4"
+              "last_affected": "7.4-update1.0"
             },
             {
-              "introduced": "7.4-update1"
+              "introduced": "7.4-update34.0"
             },
             {
-              "last_affected": "7.4-update1"
+              "last_affected": "7.4-update34.0"
             },
             {
-              "introduced": "7.4-update34"
+              "introduced": "7.4-update36.0"
             },
             {
-              "last_affected": "7.4-update34"
-            },
-            {
-              "introduced": "7.4-update36"
-            },
-            {
-              "last_affected": "7.4-update36"
+              "last_affected": "7.4-update36.0"
             }
           ]
         }
@@ -67,5 +72,5 @@
     }
   ],
   "published": "2024-01-31T15:17:53.303Z",
-  "modified": "2024-02-13T12:50:08.429Z"
+  "modified": "2024-02-19T10:36:29.170Z"
 }
