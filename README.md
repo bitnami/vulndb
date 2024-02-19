@@ -135,6 +135,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Percona XtraBackup
 - phpList
 - ReportServer
+- ReviewBoard
 - Roundcube
 - SEO Panel
 - Symfony
