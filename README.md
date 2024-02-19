@@ -131,7 +131,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - OpenProject
 - OroCRM
 - Osclass
-- Percona XtraBacup
+- Percona XtraBackup
 - phpList
 - ReportServer
 - Roundcube
