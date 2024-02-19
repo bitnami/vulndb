@@ -23,6 +23,12 @@
           "type": "SEMVER",
           "events": [
             {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.86.0"
+            },
+            {
               "introduced": "9.2.0"
             },
             {
@@ -33,17 +39,6 @@
             },
             {
               "fixed": "9.3.3"
-            }
-          ]
-        },
-        {
-          "type": "ECOSYSTEM",
-          "events": [
-            {
-              "introduced": "7.0"
-            },
-            {
-              "fixed": "7.86"
             }
           ]
         }
@@ -131,5 +126,5 @@
     }
   ],
   "published": "2024-01-31T15:15:44.697Z",
-  "modified": "2024-02-13T12:50:08.429Z"
+  "modified": "2024-02-19T10:36:29.170Z"
 }
