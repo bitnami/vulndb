@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-6564",
+  "details": "An issue has been discovered in GitLab EE Premium and Ultimate affecting versions 16.4.3, 16.5.3, and 16.6.1. In projects using subgroups to define who can push and/or merge to protected branches, there may have been instances in which subgroup members with the Developer role were able to push or merge to protected branches.",
+  "aliases": [
+    "CVE-2023-6564"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.4.3"
+            },
+            {
+              "last_affected": "16.4.3"
+            },
+            {
+              "introduced": "16.5.3"
+            },
+            {
+              "last_affected": "16.5.3"
+            },
+            {
+              "introduced": "16.6.1"
+            },
+            {
+              "last_affected": "16.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:16.4.3:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.5.3:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:16.6.1:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-com/gl-infra/production/-/issues/17213"
+    }
+  ],
+  "published": "2024-03-05T19:20:31.083Z",
+  "modified": "2024-03-05T19:49:23.247Z"
+}
