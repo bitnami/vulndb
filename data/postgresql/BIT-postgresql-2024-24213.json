@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2024-24213",
-  "details": "Supabase PostgreSQL v15.1 was discovered to contain a SQL injection vulnerability via the component /pg_meta/default/query.",
+  "details": "Supabase PostgreSQL v15.1 was discovered to contain a SQL injection vulnerability via the component /pg_meta/default/query. NOTE: the vendor's position is that this is an intended feature; also, it exists in the Supabase dashboard product, not the Supabase PostgreSQL product. Specifically, /pg_meta/default/query is for SQL queries that are entered in an intended UI by an authorized user. Nothing is injected.",
   "aliases": [
     "CVE-2024-24213"
   ],
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://reference1.example.com/project/default/logs/explorer%2C"
+    },
+    {
+      "type": "WEB",
+      "url": "https://supabase.com/docs/guides/database/overview#the-sql-editor"
     }
   ],
   "published": "2024-02-16T07:28:44.539Z",
-  "modified": "2024-02-19T10:36:29.170Z"
+  "modified": "2024-03-06T07:47:40.205Z"
 }
