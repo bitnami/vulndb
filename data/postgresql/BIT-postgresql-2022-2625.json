@@ -53,23 +53,6 @@
               "fixed": "14.5.0"
             }
           ]
-        },
-        {
-          "type": "ECOSYSTEM",
-          "events": [
-            {
-              "introduced": "15-beta1.0.0"
-            },
-            {
-              "last_affected": "15-beta1.0.0"
-            },
-            {
-              "introduced": "15-beta2.0.0"
-            },
-            {
-              "last_affected": "15-beta2.0.0"
-            }
-          ]
         }
       ]
     }
@@ -77,9 +60,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:postgresql:postgresql:15:beta1:*:*:*:*:*:*",
-      "cpe:2.3:a:postgresql:postgresql:15:beta2:*:*:*:*:*:*"
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -96,6 +77,6 @@
       "url": "https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/"
     }
   ],
-  "published": "2024-01-31T15:23:11.370Z",
-  "modified": "2024-02-19T10:36:29.170Z"
+  "published": "2024-03-06T11:03:55.074Z",
+  "modified": "2024-03-06T11:25:28.861Z"
 }

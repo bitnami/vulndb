@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-miniconda-2022-26526",
-  "details": "Anaconda Anaconda3 (Anaconda Distribution) through 2021.11.0.0 and Miniconda3 through 4.11.0.0 can create a world-writable directory under %PROGRAMDATA% and place that directory into the system PATH environment variable. Thus, for example, local users can gain privileges by placing a Trojan horse file into that directory. (This problem can only happen in a non-default installation. The person who installs the product must specify that it is being installed for all users. Also, the person who installs the product must specify that the system PATH should be changed.",
+  "details": "Anaconda Anaconda3 (Anaconda Distribution) through 2021.11.0.0 and Miniconda3 through 4.11.0 can create a world-writable directory under %PROGRAMDATA% and place that directory into the system PATH environment variable. Thus, for example, local users can gain privileges by placing a Trojan horse file into that directory. (This problem can only happen in a non-default installation. The person who installs the product must specify that it is being installed for all users. Also, the person who installs the product must specify that the system PATH should be changed.",
   "aliases": [
     "CVE-2022-26526"
   ],
@@ -20,13 +20,13 @@
       ],
       "ranges": [
         {
-          "type": "ECOSYSTEM",
+          "type": "SEMVER",
           "events": [
             {
               "introduced": "0"
             },
             {
-              "fixed": "2021.11.0.0"
+              "fixed": "4.11.0"
             }
           ]
         }
@@ -36,7 +36,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:anaconda:anaconda3:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:conda:miniconda3:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -57,6 +57,6 @@
       "url": "https://repo.anaconda.com/miniconda/"
     }
   ],
-  "published": "2024-01-31T15:17:02.494Z",
-  "modified": "2024-02-13T12:50:08.429Z"
+  "published": "2024-03-06T10:56:02.285Z",
+  "modified": "2024-03-06T11:25:28.861Z"
 }

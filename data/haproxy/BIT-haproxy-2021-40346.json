@@ -47,53 +47,6 @@
               "fixed": "2.4.4"
             }
           ]
-        },
-        {
-          "type": "ECOSYSTEM",
-          "events": [
-            {
-              "introduced": "2.5-dev0.0"
-            },
-            {
-              "last_affected": "2.5-dev0.0"
-            },
-            {
-              "introduced": "2.5-dev1.0"
-            },
-            {
-              "last_affected": "2.5-dev1.0"
-            },
-            {
-              "introduced": "2.5-dev2.0"
-            },
-            {
-              "last_affected": "2.5-dev2.0"
-            },
-            {
-              "introduced": "2.5-dev3.0"
-            },
-            {
-              "last_affected": "2.5-dev3.0"
-            },
-            {
-              "introduced": "2.5-dev4.0"
-            },
-            {
-              "last_affected": "2.5-dev4.0"
-            },
-            {
-              "introduced": "2.5-dev5.0"
-            },
-            {
-              "last_affected": "2.5-dev5.0"
-            },
-            {
-              "introduced": "2.5-dev6.0"
-            },
-            {
-              "last_affected": "2.5-dev6.0"
-            }
-          ]
         }
       ]
     }
@@ -101,14 +54,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev0:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev1:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev2:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev3:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev4:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev5:*:*:*:*:*:*",
-      "cpe:2.3:a:haproxy:haproxy:2.5:dev6:*:*:*:*:*:*"
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -153,6 +99,6 @@
       "url": "https://www.mail-archive.com/haproxy%40formilux.org/msg41114.html"
     }
   ],
-  "published": "2024-01-31T15:15:06.764Z",
-  "modified": "2024-02-19T10:36:29.170Z"
+  "published": "2024-03-06T10:54:15.896Z",
+  "modified": "2024-03-06T11:25:28.861Z"
 }
