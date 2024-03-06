@@ -20,13 +20,13 @@
       ],
       "ranges": [
         {
-          "type": "ECOSYSTEM",
+          "type": "SEMVER",
           "events": [
             {
-              "introduced": "2020-07-29.0.0"
+              "introduced": "20200729.1.0"
             },
             {
-              "last_affected": "2020-07-29.0.0"
+              "last_affected": "20200729.1.0"
             }
           ]
         }
@@ -36,7 +36,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:dokuwiki:dokuwiki:2020-07-29:*:*:*:*:*:*:*"
+      "cpe:2.3:a:dokuwiki:dokuwiki:20200729.1.0:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -57,6 +57,6 @@
       "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZGKXK6TK27URC76FTX46Z6OLTKYIQK7E/"
     }
   ],
-  "published": "2024-01-31T15:12:56.785Z",
-  "modified": "2024-02-19T10:36:29.170Z"
+  "published": "2024-03-06T11:29:28.171Z",
+  "modified": "2024-03-06T12:03:00.577Z"
 }

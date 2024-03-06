@@ -46,23 +46,6 @@
               "last_affected": "4.2.0"
             }
           ]
-        },
-        {
-          "type": "ECOSYSTEM",
-          "events": [
-            {
-              "introduced": "4.2-b1.0"
-            },
-            {
-              "last_affected": "4.2-b1.0"
-            },
-            {
-              "introduced": "4.2-rc1.0"
-            },
-            {
-              "last_affected": "4.2-rc1.0"
-            }
-          ]
         }
       ]
     }
@@ -71,9 +54,7 @@
     "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:djangoproject:django:4.2:-:*:*:*:*:*:*",
-      "cpe:2.3:a:djangoproject:django:4.2:b1:*:*:*:*:*:*",
-      "cpe:2.3:a:djangoproject:django:4.2:rc1:*:*:*:*:*:*"
+      "cpe:2.3:a:djangoproject:django:4.2:-:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -102,6 +83,6 @@
       "url": "https://www.djangoproject.com/weblog/2023/may/03/security-releases/"
     }
   ],
-  "published": "2024-01-31T15:13:12.291Z",
-  "modified": "2024-02-19T10:36:29.170Z"
+  "published": "2024-03-06T11:29:57.395Z",
+  "modified": "2024-03-06T12:03:00.577Z"
 }
