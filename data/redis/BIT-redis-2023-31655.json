@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-redis-2023-31655",
-  "details": "redis-7.0.10 was discovered to contain a segmentation violation.",
+  "details": "redis v7.0.10 was discovered to contain a segmentation violation. This vulnerability allows attackers to cause a Denial of Service (DoS) via unspecified vectors.",
   "aliases": [
     "CVE-2023-31655"
   ],
@@ -50,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:04:04.601Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-03-08T07:52:11.676Z"
 }
