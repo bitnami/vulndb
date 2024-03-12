@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2024-1442",
+  "details": " A user with the permissions to create a data source can use Grafana API to create a data source with UID set to *.Doing this will grant the user access to read, query, edit and delete all data sources within the organization.",
+  "aliases": [
+    "CVE-2024-1442"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "9.5.7"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.12"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.8"
+            },
+            {
+              "introduced": "10.2.0"
+            },
+            {
+              "fixed": "10.2.5"
+            },
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2024-1442/"
+    }
+  ],
+  "published": "2024-03-12T08:24:28.608Z",
+  "modified": "2024-03-12T08:58:38.758Z"
+}
