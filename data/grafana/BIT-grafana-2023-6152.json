@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2023-6152",
+  "details": "A user changing their email after signing up and verifying it can change it without verification in profile settings.The configuration option \"verify_email_enabled\" will only validate email only on sign up.",
+  "aliases": [
+    "CVE-2023-6152"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "9.5.16"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.11"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.7"
+            },
+            {
+              "introduced": "10.2.0"
+            },
+            {
+              "fixed": "10.2.4"
+            },
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/bugbounty/security/advisories/GHSA-3hv4-r2fm-h27f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2023-6152/"
+    }
+  ],
+  "published": "2024-03-12T08:24:38.577Z",
+  "modified": "2024-03-12T08:58:38.758Z"
+}
