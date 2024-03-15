@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2024-2247",
+  "details": "JFrog Artifactory versions below 7.77.7, 7.82.1, are vulnerable to DOM-based cross-site scripting due to improper handling of the import override mechanism.",
+  "aliases": [
+    "CVE-2024-2247"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0"
+            },
+            {
+              "fixed": "7.77.7"
+            },
+            {
+              "introduced": "7.78.0"
+            },
+            {
+              "fixed": "7.82.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jfrog.com/help/r/jfrog-release-information/jfrog-security-advisories"
+    }
+  ],
+  "published": "2024-03-15T07:17:23.945Z",
+  "modified": "2024-03-15T07:49:51.283Z"
+}
