@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-cd-2024-28175",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Due to the improper URL protocols filtering of links specified in the `link.argocd.argoproj.io` annotations in the application summary component, an attacker can achieve cross-site scripting with elevated permissions. All unpatched versions of Argo CD starting with v1.0.0 are vulnerable to a cross-site scripting (XSS) bug allowing a malicious user to inject a javascript: link in the UI. When clicked by a victim user, the script will execute with the victim's permissions (up to and including admin). This vulnerability allows an attacker to perform arbitrary actions on behalf of the victim via the API, such as creating, modifying, and deleting Kubernetes resources. A patch for this vulnerability has been released in Argo CD versions v2.10.3 v2.9.8, and v2.8.12. There are no completely-safe workarounds besides upgrading. The safest alternative, if upgrading is not possible, would be to create a Kubernetes admission controller to reject any resources with an annotation starting with link.argocd.argoproj.io or reject the resource if the value use an improper URL protocol. This validation will need to be applied in all clusters managed by ArgoCD.",
+  "aliases": [
+    "CVE-2024-28175"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "2.8.12"
+            },
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.8"
+            },
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.10.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/479b5544b57dc9ef767d49f7003f39602c480b71"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-jwv5-8mqv-g387"
+    }
+  ],
+  "published": "2024-03-15T07:17:23.947Z",
+  "modified": "2024-03-15T07:49:51.283Z"
+}
