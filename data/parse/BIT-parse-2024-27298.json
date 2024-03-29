@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-parse-2024-27298",
+  "details": "parse-server is a Parse Server for Node.js / Express. This vulnerability allows SQL injection when Parse Server is configured to use the PostgreSQL database. The vulnerability has been fixed in 6.5.0 and 7.0.0-alpha.20.",
+  "aliases": [
+    "CVE-2024-27298"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.5.0"
+            },
+            {
+              "introduced": "7.0.0-alpha.1"
+            },
+            {
+              "fixed": "7.0.0-alpha.20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/a6e654943536932904a69b51e513507fcf90a504"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/cbefe770a7260b54748a058b8a7389937dc35833"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/6.5.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/7.0.0-alpha.20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-6927-3vr9-fxf2"
+    }
+  ],
+  "published": "2024-03-29T19:24:51.880Z",
+  "modified": "2024-03-29T19:49:52.738Z"
+}
