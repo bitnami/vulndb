@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2023-42661",
+  "details": "JFrog Artifactory prior to version 7.76.2 is vulnerable to Arbitrary File Write of untrusted data, which may lead to DoS or Remote Code Execution when a specially crafted series of requests is sent by an authenticated user. This is due to insufficient validation of artifacts.",
+  "aliases": [
+    "CVE-2023-42661"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0"
+            },
+            {
+              "fixed": "7.76.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jfrog.com/help/r/jfrog-release-information/jfrog-security-advisories"
+    }
+  ],
+  "published": "2024-03-30T07:17:27.629Z",
+  "modified": "2024-03-30T07:50:49.895Z"
+}
