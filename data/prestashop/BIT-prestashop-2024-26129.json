@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2024-26129",
+  "details": "PrestaShop is an open-source e-commerce platform. Starting in version 8.1.0 and prior to version 8.1.4, PrestaShop is vulnerable to path disclosure in a JavaScript variable. A patch is available in version 8.1.4.",
+  "aliases": [
+    "CVE-2024-26129"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/commit/444bd0dea581659918fe2067541b9863cf099dd5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-3366-9287-7qpr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://owasp.org/www-community/attacks/Full_Path_Disclosure"
+    }
+  ],
+  "published": "2024-03-31T18:26:56.335Z",
+  "modified": "2024-03-31T18:49:30.537Z"
+}
