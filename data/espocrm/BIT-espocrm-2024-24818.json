@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-espocrm-2024-24818",
+  "details": "EspoCRM is an Open Source Customer Relationship Management software. An attacker can inject arbitrary IP or domain in \"Password Change\" page and redirect victim to malicious page that could lead to  credential stealing or another attack. This vulnerability is fixed in 8.1.2.",
+  "aliases": [
+    "CVE-2024-24818"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "espocrm",
+        "purl": "pkg:bitnami/espocrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:espocrm:espocrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/espocrm/espocrm/commit/3babdfa3399e328fb1bd83a1b4ed03d509f4c8e7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/espocrm/espocrm/security/advisories/GHSA-8gv6-8r33-fm7j"
+    }
+  ],
+  "published": "2024-03-31T18:17:26.122Z",
+  "modified": "2024-03-31T18:49:30.537Z"
+}
