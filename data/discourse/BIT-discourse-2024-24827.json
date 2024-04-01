@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-24827",
+  "details": "Discourse is an open source platform for community discussion. Without a rate limit on the POST /uploads endpoint, it makes it easier for an attacker to carry out a DoS attack on the server since creating an upload can be a resource intensive process. Do note that the impact varies from site to site as various site settings like `max_image_size_kb`, `max_attachment_size_kb` and `max_image_megapixels` will determine the amount of resources used when creating an upload. The issue is patched in the latest stable, beta and tests-passed version of Discourse. Users are advised to upgrade. Users unable to upgrade should reduce `max_image_size_kb`, `max_attachment_size_kb` and `max_image_megapixels` as smaller uploads require less resources to process. Alternatively, `client_max_body_size` can be reduced in Nginx to prevent large uploads from reaching the server.",
+  "aliases": [
+    "CVE-2024-24827"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/003b80e62f97cd8c0114d6b9d3f93c10443e6fae"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-58vw-246g-fjj4"
+    }
+  ],
+  "published": "2024-04-01T14:04:36.691Z",
+  "modified": "2024-04-01T14:37:26.940Z"
+}
