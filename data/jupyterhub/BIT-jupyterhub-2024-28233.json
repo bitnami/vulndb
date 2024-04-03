@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jupyterhub-2024-28233",
+  "details": "JupyterHub is an open source multi-user server for Jupyter notebooks. By tricking a user into visiting a malicious subdomain, the attacker can achieve an XSS directly affecting the former's session. More precisely, in the context of JupyterHub, this XSS could achieve full access to JupyterHub API and user's single-user server. The affected configurations are single-origin JupyterHub deployments and JupyterHub deployments with user-controlled applications running on subdomains or peer subdomains of either the Hub or a single-user server. This vulnerability is fixed in 4.1.0.",
+  "aliases": [
+    "CVE-2024-28233"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyterhub",
+        "purl": "pkg:bitnami/jupyterhub"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jupyter:jupyterhub:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/commit/e2798a088f5ad45340fe79cdf1386198e664f77f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/security/advisories/GHSA-7r3h-4ph8-w38g"
+    }
+  ],
+  "published": "2024-04-03T14:55:26.839Z",
+  "modified": "2024-04-03T15:26:26.621Z"
+}
