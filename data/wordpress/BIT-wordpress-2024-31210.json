@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2024-31210",
+  "details": "WordPress is an open publishing platform for the Web. It's possible for a file of a type other than a zip file to be submitted as a new plugin by an administrative user on the Plugins -> Add New -> Upload Plugin screen in WordPress. If FTP credentials are requested for installation (in order to move the file into place outside of the `uploads` directory) then the uploaded file remains temporary available in the Media Library despite it not being allowed. If the `DISALLOW_FILE_EDIT` constant is set to `true` on the site _and_ FTP credentials are required when uploading a new theme or plugin, then this technically allows an RCE when the user would otherwise have no means of executing arbitrary PHP code. This issue _only_ affects Administrator level users on single site installations, and Super Admin level users on Multisite installations where it's otherwise expected that the user does not have permission to upload or execute arbitrary PHP code. Lower level users are not affected. Sites where the `DISALLOW_FILE_MODS` constant is set to `true` are not affected. Sites where an administrative user either does not need to enter FTP credentials or they have access to the valid FTP credentials, are not affected. The issue was fixed in WordPress 6.4.3 on January 30, 2024 and backported to versions 6.3.3, 6.2.4, 6.1.5, 6.0.7, 5.9.9, 5.8.9, 5.7.11, 5.6.13, 5.5.14, 5.4.15, 5.3.17, 5.2.20, 5.1.18, 5.0.21, 4.9.25, 2.8.24, 4.7.28, 4.6.28, 4.5.31, 4.4.32, 4.3.33, 4.2.37, and 4.1.40. A workaround is available. If the `DISALLOW_FILE_MODS` constant is defined as `true` then it will not be possible for any user to upload a plugin and therefore this issue will not be exploitable.",
+  "aliases": [
+    "CVE-2024-31210"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.4.3"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.3"
+            },
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.4"
+            },
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.5"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.7"
+            },
+            {
+              "introduced": "5.9.0"
+            },
+            {
+              "fixed": "5.9.9"
+            },
+            {
+              "introduced": "5.8.0"
+            },
+            {
+              "fixed": "5.8.9"
+            },
+            {
+              "introduced": "5.7.0"
+            },
+            {
+              "fixed": "5.7.11"
+            },
+            {
+              "introduced": "5.6.0"
+            },
+            {
+              "fixed": "5.6.13"
+            },
+            {
+              "introduced": "5.5.0"
+            },
+            {
+              "fixed": "5.5.14"
+            },
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "fixed": "5.4.15"
+            },
+            {
+              "introduced": "5.3.0"
+            },
+            {
+              "fixed": "5.3.17"
+            },
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "fixed": "5.2.20"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.18"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.21"
+            },
+            {
+              "introduced": "4.9.0"
+            },
+            {
+              "fixed": "4.9.25"
+            },
+            {
+              "introduced": "4.8.0"
+            },
+            {
+              "fixed": "4.8.24"
+            },
+            {
+              "introduced": "4.7.0"
+            },
+            {
+              "fixed": "4.7.28"
+            },
+            {
+              "introduced": "4.6.0"
+            },
+            {
+              "fixed": "4.6.28"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.31"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.32"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.33"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.37"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.40"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-x79f-xrjv-jx5r"
+    }
+  ],
+  "published": "2024-04-06T18:33:59.181Z",
+  "modified": "2024-04-06T18:51:13.710Z"
+}
