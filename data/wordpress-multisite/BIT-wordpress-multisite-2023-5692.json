@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-multisite-2023-5692",
+  "details": "WordPress Core is vulnerable to Sensitive Information Exposure in versions up to, and including,  6.4.3 via the redirect_guess_404_permalink function. This can allow unauthenticated attackers to expose the slug of a custom post whose 'publicly_queryable' post status has been set to 'false'.",
+  "aliases": [
+    "CVE-2023-5692"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/57645"
+    },
+    {
+      "type": "WEB",
+      "url": "https://developer.wordpress.org/reference/functions/is_post_publicly_viewable/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://developer.wordpress.org/reference/functions/is_post_type_viewable/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/WordPress/wordpress-develop/blob/6.3/src/wp-includes/canonical.php#L763"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6e6f993b-ce09-4050-84a1-cbe9953f36b1?source=cve"
+    }
+  ],
+  "published": "2024-04-09T10:58:38.759Z",
+  "modified": "2024-04-09T11:16:05.684Z"
+}
