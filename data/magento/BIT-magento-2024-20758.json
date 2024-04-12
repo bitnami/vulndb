@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-magento-2024-20758",
+  "details": "Adobe Commerce versions 2.4.6-p4, 2.4.5-p6, 2.4.4-p7, 2.4.7-beta3 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction, but the attack complexity is high.",
+  "aliases": [
+    "CVE-2024-20758"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0"
+            },
+            {
+              "fixed": "2.4.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb24-18.html"
+    }
+  ],
+  "published": "2024-04-12T07:21:28.949Z",
+  "modified": "2024-04-12T07:50:32.242Z"
+}
