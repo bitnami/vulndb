@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-kafka-2024-27309",
+  "details": "While an Apache Kafka cluster is being migrated from ZooKeeper mode to KRaft mode, in some cases ACLs will not be correctly enforced.Two preconditions are needed to trigger the bug:1. The administrator decides to remove an ACL2. The resource associated with the removed ACL continues to have two or more other ACLs associated with it after the removal.When those two preconditions are met, Kafka will treat the resource as if it had only one ACL associated with it after the removal, rather than the two or more that would be correct.The incorrect condition is cleared by removing all brokers in ZK mode, or by adding a new ACL to the affected resource. Once the migration is completed, there is no metadata loss (the ACLs all remain).The full impact depends on the ACLs in use. If only ALLOW ACLs were configured during the migration, the impact would be limited to availability impact. if DENY ACLs were configured, the impact could include confidentiality and integrity impact depending on the ACLs configured, as the DENY ACLs might be ignored due to this vulnerability during the migration period.",
+  "aliases": [
+    "CVE-2024-27309"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kafka",
+        "purl": "pkg:bitnami/kafka"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.2"
+            },
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:kafka:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/6536rmzyg076lzzdw2xdktvnz163mjpy"
+    }
+  ],
+  "published": "2024-04-16T07:20:25.284Z",
+  "modified": "2024-04-16T07:51:01.692Z"
+}
