@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-cd-2024-31990",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. The API server does not enforce project sourceNamespaces which allows attackers to use the UI to edit resources which should only be mutable via gitops. This vulenrability is fixed in 2.10.7, 2.9.12, and 2.8.16.",
+  "aliases": [
+    "CVE-2024-31990"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.10.7"
+            },
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.12"
+            },
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.8.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/c514105af739eebedb9dbe89d8a6dd8dfc30bb2c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/c5a252c4cc260e240e2074794aedb861d07e9ca5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/e0ff56d89fbd7d066e9c862b30337f6520f13f17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-2gvw-w6fj-7m3c"
+    }
+  ],
+  "published": "2024-04-17T07:16:36.280Z",
+  "modified": "2024-04-17T07:49:36.668Z"
+}
