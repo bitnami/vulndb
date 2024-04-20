@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2024-31869",
+  "details": "Airflow versions 2.7.0 through 2.8.4 have a vulnerability that allows an authenticated user to see sensitive provider configuration via the \"configuration\" UI page when \"non-sensitive-only\" was set as \"webserver.expose_config\" configuration (The celery provider is the only community provider currently that has sensitive configurations). You should migrate to Airflow 2.9 or change your \"expose_config\" configuration to False as a workaround. This is similar, but different to  CVE-2023-46288 https://github.com/advisories/GHSA-9qqg-mh7c-chfq  which concerned API, not UI configuration page.",
+  "aliases": [
+    "CVE-2024-31869"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.8.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/38795"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/pz6vg7wcjk901rmsgt86h76g6kfcgtk3"
+    }
+  ],
+  "published": "2024-04-20T07:16:43.969Z",
+  "modified": "2024-04-20T07:49:38.167Z"
+}
