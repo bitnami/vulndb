@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2434",
+  "details": "An issue has been discovered in GitLab affecting all versions of GitLab CE/EE  16.9 prior to 16.9.6, 16.10 prior to 16.10.4, and 16.11 prior to 16.11.1 where path traversal could lead to DoS and restricted file read.",
+  "aliases": [
+    "CVE-2024-2434"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.9.0"
+            },
+            {
+              "fixed": "16.9.6"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.4"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/450303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2401952"
+    }
+  ],
+  "published": "2024-04-27T07:20:41.642Z",
+  "modified": "2024-04-27T07:52:18.830Z"
+}

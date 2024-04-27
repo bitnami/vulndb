@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2829",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 12.5 before 16.9.6, all versions starting from 16.10 before 16.10.4, all versions starting from 16.11 before 16.11.1. A crafted wildcard filter in FileFinder may lead to a denial of service.",
+  "aliases": [
+    "CVE-2024-2829"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.5.0"
+            },
+            {
+              "fixed": "16.9.6"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.4"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2416728"
+    }
+  ],
+  "published": "2024-04-27T07:19:44.538Z",
+  "modified": "2024-04-27T07:52:18.830Z"
+}
