@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-1347",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 16.9.6, all versions starting from 16.10 before 16.10.4, all versions starting from 16.11 before 16.11.1. Under certain conditions, an attacker through a crafted email address may be able to bypass domain based restrictions on an instance or a group.",
+  "aliases": [
+    "CVE-2024-1347"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.0"
+            },
+            {
+              "fixed": "16.9.6"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.4"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/441093"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2355565"
+    }
+  ],
+  "published": "2024-04-27T07:22:08.128Z",
+  "modified": "2024-04-27T07:52:18.830Z"
+}
