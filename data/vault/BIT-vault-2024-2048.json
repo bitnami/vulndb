@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-2048",
+  "details": "Vault and Vault Enterprise (“Vault”) TLS certificate auth method did not correctly validate client certificates when configured with a non-CA certificate as trusted certificate. In this configuration, an attacker may be able to craft a malicious certificate that could be used to bypass authentication. Fixed in Vault 1.15.5 and 1.14.10.",
+  "aliases": [
+    "CVE-2024-2048"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.15.5"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.14.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382"
+    }
+  ],
+  "published": "2024-05-01T07:38:21.819Z",
+  "modified": "2024-05-01T07:53:35.982Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-2660",
+  "details": "Vault and Vault Enterprise TLS certificates auth method did not correctly validate OCSP responses when one or more OCSP sources were configured. Fixed in Vault 1.16.0 and Vault Enterprise 1.16.1, 1.15.7, and 1.14.11.",
+  "aliases": [
+    "CVE-2024-2660"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "fixed": "1.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-07-vault-tls-cert-auth-method-did-not-correctly-validate-ocsp-responses/64573"
+    }
+  ],
+  "published": "2024-05-01T07:38:05.608Z",
+  "modified": "2024-05-01T07:53:35.982Z"
+}
