@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-2877",
+  "details": "Vault Enterprise, when configured with performance standby nodes and a configured audit device, will inadvertently log request headers on the standby node. These logs may have included sensitive HTTP request information in cleartext.This vulnerability, CVE-2024-2877, was fixed in Vault Enterprise 1.15.8.",
+  "aliases": [
+    "CVE-2024-2877"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.15.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hsec-2024-10-vault-enterprise-leaks-sensitive-http-request-headers-in-audit-log-when-deployed-with-a-performance-standby-node"
+    }
+  ],
+  "published": "2024-05-02T07:37:52.117Z",
+  "modified": "2024-05-02T07:52:56.618Z"
+}
