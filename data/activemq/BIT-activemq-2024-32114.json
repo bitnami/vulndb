@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-activemq-2024-32114",
+  "details": "In Apache ActiveMQ 6.x, the default configuration doesn't secure the API web context (where the Jolokia JMX REST API and the Message REST API are located).It means that anyone can use these layers without any required authentication. Potentially, anyone can interact with the broker (using Jolokia JMX REST API) and/or produce/consume messages or purge/delete destinations (using the Message REST API).To mitigate, users can update the default conf/jetty.xml configuration file to add authentication requirement:<bean id=\"securityConstraintMapping\" class=\"org.eclipse.jetty.security.ConstraintMapping\">  <property name=\"constraint\" ref=\"securityConstraint\" />  <property name=\"pathSpec\" value=\"/\" /></bean>Or we encourage users to upgrade to Apache ActiveMQ 6.1.2 where the default configuration has been updated with authentication by default.",
+  "aliases": [
+    "CVE-2024-32114"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://activemq.apache.org/security-advisories.data/CVE-2024-32114-announcement.txt"
+    }
+  ],
+  "published": "2024-05-04T07:16:13.914Z",
+  "modified": "2024-05-04T07:52:53.696Z"
+}
