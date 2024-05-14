@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-4030",
+  "details": "On Windows a directory returned by tempfile.mkdtemp() would not always have permissions set to restrict reading and writing to the temporary directory by other users, instead usually inheriting the correct permissions from the default location. Alternate configurations or users without a profile directory may not have the intended permissions.If you’re not using Windows or haven’t changed the temporary directory location then you aren’t affected by this vulnerability. On other platforms the returned directory is consistently readable and writable only by the current user.This issue was caused by Python not supporting Unix permissions on Windows. The fix adds support for Unix “700” for the mkdir function on Windows which is used by mkdtemp() to ensure the newly created directory has the proper permissions.",
+  "aliases": [
+    "CVE-2024-4030"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.12.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/81939dad77001556c527485d31a2d0f4a759033e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/8ed546679524140d8282175411fd141fe7df070d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/118486"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/PRGS5OR3N3PNPT4BMV2VAGN5GMUI5636/"
+    }
+  ],
+  "published": "2024-05-14T10:33:45.509Z",
+  "modified": "2024-05-14T10:54:25.635Z"
+}
