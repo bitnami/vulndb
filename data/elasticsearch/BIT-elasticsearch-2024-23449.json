@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2024-23449",
+  "details": "An uncaught exception in Elasticsearch >= 8.4.0 and < 8.11.1 occurs when an encrypted PDF is passed to an attachment processor through the REST API. The Elasticsearch ingest node that attempts to parse the PDF file will crash. This does not happen with password-protected PDF files or with unencrypted PDF files.",
+  "aliases": [
+    "CVE-2024-23449"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-11-1-security-update-esa-2024-05/356458"
+    }
+  ],
+  "published": "2024-05-14T07:17:25.293Z",
+  "modified": "2024-05-14T07:51:42.639Z"
+}

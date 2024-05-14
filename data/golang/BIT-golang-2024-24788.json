@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-golang-2024-24788",
+  "details": "A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.",
+  "aliases": [
+    "CVE-2024-24788"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.22.0-0"
+            },
+            {
+              "fixed": "1.22.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/578375"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/66754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/wkkO4P9stm0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2024-2824"
+    }
+  ],
+  "published": "2024-05-14T07:18:19.682Z",
+  "modified": "2024-05-14T07:51:42.639Z"
+}

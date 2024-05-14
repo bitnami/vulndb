@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-multisite-2024-4439",
+  "details": "WordPress Core is vulnerable to Stored Cross-Site Scripting via user display names in the Avatar block in various versions up to 6.5.2 due to insufficient output escaping on the display name. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. In addition, it also makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that have the comment block present and display the comment author's avatar.",
+  "aliases": [
+    "CVE-2024-4439"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.8"
+            },
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.6"
+            },
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.5"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.4"
+            },
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.4.4"
+            },
+            {
+              "introduced": "6.5.0"
+            },
+            {
+              "fixed": "6.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/57951/branches/6.4/src/wp-includes/blocks/avatar.php"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=57950%40%2F&new=57950%40%2F&sfp_email=&sfph_mail=#file3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2024/04/wordpress-6-5-2-maintenance-and-security-release/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/blog/2024/04/unauthenticated-stored-cross-site-scripting-vulnerability-patched-in-wordpress-core/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e363c09a-4381-4b3a-951c-9a0ff5669016?source=cve"
+    }
+  ],
+  "published": "2024-05-14T07:37:35.694Z",
+  "modified": "2024-05-14T07:51:42.639Z"
+}
