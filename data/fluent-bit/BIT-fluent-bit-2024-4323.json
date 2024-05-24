@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-fluent-bit-2021-36088",
-  "details": "Fluent Bit (aka fluent-bit) 1.7.0 through 1.7.4 has a double free in flb_free (called from flb_parser_json_do and flb_parser_do).",
+  "id": "BIT-fluent-bit-2024-4323",
+  "details": "A memory corruption vulnerability in Fluent Bit versions 2.0.7 thru 3.0.3. This issue lies in the embedded http server’s parsing of trace requests and may result in denial of service conditions, information disclosure, or remote code execution.",
   "aliases": [
-    "CVE-2021-36088"
+    "CVE-2024-4323"
   ],
   "affected": [
     {
@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.7.0"
+              "introduced": "2.0.7"
             },
             {
-              "fixed": "1.7.4"
+              "fixed": "3.0.4"
             }
           ]
         }
@@ -42,21 +42,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=33750"
+      "url": "https://github.com/fluent/fluent-bit/commit/9311b43a258352797af40749ab31a63c32acfd04"
     },
     {
       "type": "WEB",
-      "url": "https://github.com/fluent/fluent-bit/commit/22346a74c07ceb90296be872be2d53eb92252a54"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/fluent/fluent-bit/pull/3453"
-    },
-    {
-      "type": "WEB",
-      "url": "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/fluent-bit/OSV-2021-702.yaml"
+      "url": "https://tenable.com/security/research/tra-2024-17"
     }
   ],
-  "published": "2024-03-06T10:52:12.289Z",
+  "published": "2024-05-24T07:17:42.946Z",
   "modified": "2024-05-24T07:53:33.063Z"
 }

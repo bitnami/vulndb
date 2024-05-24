@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-cd-2024-32476",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. There is a Denial of Service (DoS) vulnerability via OOM using jq in ignoreDifferences. This vulnerability has been patched in version(s) 2.10.7, 2.9.12 and 2.8.16.",
+  "aliases": [
+    "CVE-2024-32476"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.10.8"
+            },
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.13"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.8.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/7893979a1e78d59cedd0ba790ded24e30bb40657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/9e5cc5a26ff0920a01816231d59fdb5eae032b5a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/e2df7315fb7d96652186bf7435773a27be330cac"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-9m6p-x4h2-6frq"
+    }
+  ],
+  "published": "2024-05-24T07:16:04.154Z",
+  "modified": "2024-05-24T07:53:33.063Z"
+}

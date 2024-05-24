@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2024-32077",
+  "details": "Apache Airflow version 2.9.0 has a vulnerability that allows an authenticated attacker to inject malicious data into the task instance logs. Users are recommended to upgrade to version 2.9.1, which fixes this issue.",
+  "aliases": [
+    "CVE-2024-32077"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/38882"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/gsjmnrqb3m5fzp0vgpty1jxcywo91v77"
+    }
+  ],
+  "published": "2024-05-24T07:15:55.746Z",
+  "modified": "2024-05-24T07:53:33.063Z"
+}
