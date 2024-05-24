@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-git-2024-32021",
+  "details": "Git is a revision control system. Prior to versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4, when cloning a local source repository that contains symlinks via the filesystem, Git may create hardlinks to arbitrary user-readable files on the same filesystem as the target repository in the `objects/` directory. Cloning a local repository over the filesystem may creating hardlinks to arbitrary user-owned files on the same filesystem in the target Git repository's `objects/` directory. When cloning a repository over the filesystem (without explicitly specifying the `file://` protocol or `--no-local`), the optimizations for local cloningwill be used, which include attempting to hard link the object files instead of copying them. While the code includes checks against symbolic links in the source repository, which were added during the fix for CVE-2022-39253, these checks can still be raced because the hard link operation ultimately follows symlinks. If the object on the filesystem appears as a file during the check, and then a symlink during the operation, this will allow the adversary to bypass the check and create hardlinks in the destination objects directory to arbitrary, user-readable files. The problem has been patched in versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4.",
+  "aliases": [
+    "CVE-2024-32021"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git",
+        "purl": "pkg:bitnami/git"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.45.0"
+            },
+            {
+              "fixed": "2.45.1"
+            },
+            {
+              "introduced": "2.44.0"
+            },
+            {
+              "fixed": "2.44.1"
+            },
+            {
+              "introduced": "2.43.0"
+            },
+            {
+              "fixed": "2.43.4"
+            },
+            {
+              "introduced": "2.42.0"
+            },
+            {
+              "fixed": "2.42.2"
+            },
+            {
+              "introduced": "2.41.0"
+            },
+            {
+              "fixed": "2.41.1"
+            },
+            {
+              "introduced": "2.40.0"
+            },
+            {
+              "fixed": "2.40.2"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.39.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:git:git:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/git/git/security/advisories/GHSA-mvxm-9j2h-qjx7"
+    }
+  ],
+  "published": "2024-05-24T07:18:34.045Z",
+  "modified": "2024-05-24T07:53:33.063Z"
+}

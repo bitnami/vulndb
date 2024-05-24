@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-git-2024-32004",
+  "details": "Git is a revision control system. Prior to versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4, an attacker can prepare a local repository in such a way that, when cloned, will execute arbitrary code during the operation. The problem has been patched in versions 2.45.1, 2.44.1, 2.43.4, 2.42.2, 2.41.1, 2.40.2, and 2.39.4. As a workaround, avoid cloning repositories from untrusted sources.",
+  "aliases": [
+    "CVE-2024-32004"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git",
+        "purl": "pkg:bitnami/git"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.45.0"
+            },
+            {
+              "fixed": "2.45.1"
+            },
+            {
+              "introduced": "2.44.0"
+            },
+            {
+              "fixed": "2.44.1"
+            },
+            {
+              "introduced": "2.43.0"
+            },
+            {
+              "fixed": "2.43.4"
+            },
+            {
+              "introduced": "2.42.0"
+            },
+            {
+              "fixed": "2.42.2"
+            },
+            {
+              "introduced": "2.41.0"
+            },
+            {
+              "fixed": "2.41.1"
+            },
+            {
+              "introduced": "2.40.0"
+            },
+            {
+              "fixed": "2.40.2"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.39.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:git:git:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git-scm.com/docs/git-clone"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git/git/commit/f4aa8c8bb11dae6e769cd930565173808cbb69c8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git/git/security/advisories/GHSA-xfc6-vwr8-r389"
+    }
+  ],
+  "published": "2024-05-24T07:19:02.349Z",
+  "modified": "2024-05-24T07:53:33.063Z"
+}

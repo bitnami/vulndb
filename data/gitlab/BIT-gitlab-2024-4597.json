@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2024-1347",
-  "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 16.9.6, all versions starting from 16.10 before 16.10.4, all versions starting from 16.11 before 16.11.1. Under certain conditions, an attacker through a crafted email address may be able to bypass domain based restrictions on an instance or a group.",
+  "id": "BIT-gitlab-2024-4597",
+  "details": "An issue has been discovered in GitLab EE affecting all versions from 16.7 before 16.9.7, all versions starting from 16.10 before 16.10.5, all versions starting from 16.11 before 16.11.2. An attacker could force a user with an active SAML session to approve an MR via CSRF.",
   "aliases": [
-    "CVE-2024-1347"
+    "CVE-2024-4597"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -23,22 +23,22 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "16.7.0"
             },
             {
-              "fixed": "16.9.6"
+              "fixed": "16.9.7"
             },
             {
               "introduced": "16.10.0"
             },
             {
-              "fixed": "16.10.4"
+              "fixed": "16.10.5"
             },
             {
               "introduced": "16.11.0"
             },
             {
-              "fixed": "16.11.1"
+              "fixed": "16.11.2"
             }
           ]
         }
@@ -55,13 +55,9 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/441093"
-    },
-    {
-      "type": "WEB",
-      "url": "https://hackerone.com/reports/2355565"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/438686"
     }
   ],
-  "published": "2024-04-27T07:22:08.128Z",
+  "published": "2024-05-24T07:18:32.743Z",
   "modified": "2024-05-24T07:53:33.063Z"
 }

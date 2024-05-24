@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-prestashop-2024-34717",
+  "details": "PrestaShop is an open source e-commerce web application. In PrestaShop 8.1.5, any invoice can be downloaded from front-office in anonymous mode, by supplying a random secure_key parameter in the url. This issue is patched in version 8.1.6. No known workarounds are available.",
+  "aliases": [
+    "CVE-2024-34717"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.5"
+            },
+            {
+              "fixed": "8.1.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/releases/tag/8.1.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-7pjr-2rgh-fc5g"
+    }
+  ],
+  "published": "2024-05-24T07:31:26.248Z",
+  "modified": "2024-05-24T07:53:33.063Z"
+}
