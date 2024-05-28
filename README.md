@@ -137,6 +137,8 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Kafka Exporter
 - Openfire
 - Simple Machines Forum
+- Publify
+- Redash
 
 ### 2024-03
 
