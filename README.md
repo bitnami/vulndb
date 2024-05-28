@@ -135,6 +135,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - alfresco-search-services
 - alfresco-transform-core
 - Kafka Exporter
+- Openfire
 - Simple Machines Forum
 
 ### 2024-03
