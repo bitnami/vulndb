@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-1947",
+  "details": "A denial of service (DoS) condition was discovered in GitLab CE/EE affecting all versions from 13.2.4 before 16.10.6, 16.11 before 16.11.3, and 17.0 before 17.0.1. By leveraging this vulnerability an attacker could create a DoS condition by sending crafted API calls.",
+  "aliases": [
+    "CVE-2024-1947"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.2.4"
+            },
+            {
+              "fixed": "16.10.6"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.3"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/443559"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2380264"
+    }
+  ],
+  "published": "2024-05-29T07:25:38.659Z",
+  "modified": "2024-05-29T07:52:43.862Z"
+}
