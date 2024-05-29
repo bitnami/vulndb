@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-fluent-bit-2024-23722",
+  "details": "In Fluent Bit 2.1.8 through 2.2.1, a NULL pointer dereference can be caused via an invalid HTTP payload with the content type of x-www-form-urlencoded. It crashes and does not restart. This could result in logs not being delivered properly.",
+  "aliases": [
+    "CVE-2024-23722"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluent-bit",
+        "purl": "pkg:bitnami/fluent-bit"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.1.8"
+            },
+            {
+              "fixed": "2.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:treasuredata:fluent_bit:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluent-bit/compare/v2.2.1...v2.2.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://medium.com/%40adurands82/fluent-bit-dos-vulnerability-cve-2024-23722-4e3e74af9d00"
+    }
+  ],
+  "published": "2024-05-29T07:18:00.870Z",
+  "modified": "2024-05-29T07:52:43.862Z"
+}
