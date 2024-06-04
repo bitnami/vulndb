@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-minio-2024-36107",
+  "details": "MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. `If-Modified-Since` and `If-Unmodified-Since` headers when used with anonymous requests by sending a random object name requests can be used to determine if an object exists or not on the server on a specific bucket and also gain access to some amount ofinformation such as  `Last-Modified (of the latest version)`, `Etag (of the latest version)`, `x-amz-version-id (of the latest version)`, `Expires (metadata value of the latest version)`, `Cache-Control (metadata value of the latest version)`. This conditional check was being honored before validating if the anonymous access is indeed allowed on the metadata of an object. This issue has been addressed in commit `e0fe7cc3917`. Users must upgrade to RELEASE.2024-05-27T19-17-46Z for the fix. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2024-36107"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "minio",
+        "purl": "pkg:bitnami/minio"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2024.05.27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:minio:minio:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since"
+    },
+    {
+      "type": "WEB",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/commit/e0fe7cc391724fc5baa85b45508f425020fe4272"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/pull/19810"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/security/advisories/GHSA-95fr-cm4m-q5p9"
+    }
+  ],
+  "published": "2024-06-04T09:46:16.011Z",
+  "modified": "2024-06-04T10:17:29.592Z"
+}

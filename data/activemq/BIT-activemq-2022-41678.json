@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-activemq-2022-41678",
-  "details": "Once an user is authenticated on Jolokia, he can potentially trigger arbitrary code execution. In details, in ActiveMQ configurations, jetty allowsorg.jolokia.http.AgentServlet to handler request to /api/jolokiaorg.jolokia.http.HttpRequestHandler#handlePostRequest is able tocreate JmxRequest through JSONObject. And calls toorg.jolokia.http.HttpRequestHandler#executeRequest.Into deeper calling stacks,org.jolokia.handler.ExecHandler#doHandleRequest is able to invokethrough refection.And then, RCE is able to be achieved viajdk.management.jfr.FlightRecorderMXBeanImpl which exists on Java version above 11.1 Call newRecording.2 Call setConfiguration. And a webshell data hides in it.3 Call startRecording.4 Call copyTo method. The webshell will be written to a .jsp file.The mitigation is to restrict (by default) the actions authorized on Jolokia, or disable Jolokia.A more restrictive Jolokia configuration has been defined in default ActiveMQ distribution. We encourage users to upgrade to ActiveMQ distributions version including updated Jolokia configuration: 5.16.6, 5.17.4, 5.18.0, 6.0.0.",
+  "details": "Once an user is authenticated on Jolokia, he can potentially trigger arbitrary code execution. In details, in ActiveMQ configurations, jetty allowsorg.jolokia.http.AgentServlet to handler request to /api/jolokiaorg.jolokia.http.HttpRequestHandler#handlePostRequest is able tocreate JmxRequest through JSONObject. And calls toorg.jolokia.http.HttpRequestHandler#executeRequest.Into deeper calling stacks,org.jolokia.handler.ExecHandler#doHandleRequest can be invokedthrough refection. This could lead to RCE through viavarious mbeans. One example is unrestricted deserialization in jdk.management.jfr.FlightRecorderMXBeanImpl which exists on Java version above 11.1 Call newRecording.2 Call setConfiguration. And a webshell data hides in it.3 Call startRecording.4 Call copyTo method. The webshell will be written to a .jsp file.The mitigation is to restrict (by default) the actions authorized on Jolokia, or disable Jolokia.A more restrictive Jolokia configuration has been defined in default ActiveMQ distribution. We encourage users to upgrade to ActiveMQ distributions version including updated Jolokia configuration: 5.16.6, 5.17.4, 5.18.0, 6.0.0.",
   "aliases": [
     "CVE-2022-41678"
   ],
@@ -61,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240216-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.openwall.com/lists/oss-security/2023/11/28/1"
     }
   ],
   "published": "2024-03-06T10:50:42.571Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-06-04T10:17:29.592Z"
 }
