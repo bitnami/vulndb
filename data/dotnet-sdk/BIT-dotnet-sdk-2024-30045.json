@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dotnet-sdk-2024-30045",
+  "details": ".NET and Visual Studio Remote Code Execution Vulnerability",
+  "aliases": [
+    "CVE-2024-30045"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.5"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.19"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30045"
+    }
+  ],
+  "published": "2024-06-04T09:39:01.903Z",
+  "modified": "2024-06-04T10:17:29.592Z"
+}

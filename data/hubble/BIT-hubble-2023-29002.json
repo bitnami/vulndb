@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hubble-2023-29002",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. When run in debug mode, Cilium will log the contents of the `cilium-secrets` namespace. This could include data such as TLS private keys for Ingress and GatewayAPI resources. An attacker with access to debug output from the Cilium containers could use the resulting output to intercept and modify traffic to and from the affected cluster. Output of the sensitive information would occur at Cilium agent restart, when secrets in the namespace are modified, and on creation of Ingress or GatewayAPI resources. This vulnerability is fixed in Cilium releases 1.11.16, 1.12.9, and 1.13.2. Users unable to upgrade should disable debug mode.",
+  "aliases": [
+    "CVE-2023-29002"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hubble",
+        "purl": "pkg:bitnami/hubble"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "fixed": "1.11.16"
+            },
+            {
+              "introduced": "1.12.0"
+            },
+            {
+              "fixed": "1.12.9"
+            },
+            {
+              "introduced": "1.13.0"
+            },
+            {
+              "fixed": "1.13.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-pg5p-wwp8-97g8"
+    }
+  ],
+  "published": "2024-06-04T09:45:00.110Z",
+  "modified": "2024-06-04T10:17:29.592Z"
+}

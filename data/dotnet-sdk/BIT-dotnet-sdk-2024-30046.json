@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dotnet-sdk-2024-30046",
+  "details": "Visual Studio Denial of Service Vulnerability",
+  "aliases": [
+    "CVE-2024-30046"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.19"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30046"
+    }
+  ],
+  "published": "2024-06-04T09:38:49.004Z",
+  "modified": "2024-06-04T10:17:29.592Z"
+}

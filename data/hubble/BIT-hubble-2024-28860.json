@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hubble-2024-28860",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Users of IPsec transparent encryption in Cilium may be vulnerable to cryptographic attacks that render the transparent encryption ineffective. In particular, Cilium is vulnerable to chosen plaintext, key recovery, replay attacks by a man-in-the-middle attacker. These attacks are possible due to an ESP sequence number collision when multiple nodes are configured with the same key. Fixed versions of Cilium use unique keys for each IPsec tunnel established between nodes, resolving all of the above attacks. This vulnerability is fixed in 1.13.13, 1.14.9, and 1.15.3.",
+  "aliases": [
+    "CVE-2024-28860"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hubble",
+        "purl": "pkg:bitnami/hubble"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.4.0"
+            },
+            {
+              "fixed": "1.13.14"
+            },
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "fixed": "1.14.9"
+            },
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.15.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/security/network/encryption-ipsec"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/311fbce5280491cddceab178d83b06fa23688c72"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/a1742b478306fa256cd27df1039dfae0537b4149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/a652c123331852cca90c74202f993d4170fd37fa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-pwqm-x5x6-5586"
+    }
+  ],
+  "published": "2024-06-04T09:42:23.803Z",
+  "modified": "2024-06-04T10:17:29.592Z"
+}

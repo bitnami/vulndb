@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mattermost-2024-1402",
-  "details": "Mattermost fails to check if a custom emoji reaction exists when sending it to a post and to limit the amount of custom emojis allowed to be added in a post, allowing an attacker sending a huge amount of non-existent custom emojis in a post to crash the mobile app of a user seeing the post. ",
+  "details": "Mattermost fails to check if a custom emoji reaction exists when sending it to a post and to limit the amount of custom emojis allowed to be added in a post, allowing an attacker sending a huge amount of non-existent custom emojis in a post to crash the mobile app of a user seeing the post and to crash the server due to overloading when clients attempt to retrive the aforementioned post. ",
   "aliases": [
     "CVE-2024-1402"
   ],
@@ -58,5 +58,5 @@
     }
   ],
   "published": "2024-03-06T10:56:11.998Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-06-04T10:17:29.592Z"
 }
