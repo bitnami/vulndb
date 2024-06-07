@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-golang-2024-24789",
+  "details": "The archive/zip package's handling of certain types of invalid zip files differs from the behavior of most zip implementations. This misalignment could be exploited to create an zip file with contents that vary depending on the implementation reading the file. The archive/zip package now rejects files containing these errors.",
+  "aliases": [
+    "CVE-2024-24789"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.21.11"
+            },
+            {
+              "introduced": "1.22.0-0"
+            },
+            {
+              "fixed": "1.22.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/585397"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/66869"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/XbxouI9gY7k/m/TuoGEhxIEwAJ"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2024-2888"
+    }
+  ],
+  "published": "2024-06-07T07:19:15.112Z",
+  "modified": "2024-06-07T07:57:25.084Z"
+}
