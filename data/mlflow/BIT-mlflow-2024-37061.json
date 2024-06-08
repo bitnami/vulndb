@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2024-37061",
+  "details": "Remote Code Execution can occur in versions of the MLflow platform running version 1.11.0 or newer, enabling a maliciously crafted MLproject to execute arbitrary code on an end user’s system when run.",
+  "aliases": [
+    "CVE-2024-37061"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.11.0"
+            },
+            {
+              "fixed": "2.13.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hiddenlayer.com/sai-security-advisory/mlflow-june2024"
+    }
+  ],
+  "published": "2024-06-08T07:24:39.817Z",
+  "modified": "2024-06-08T07:56:08.348Z"
+}
