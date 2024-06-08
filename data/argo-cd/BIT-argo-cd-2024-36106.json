@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-cd-2024-36106",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It’s possible for authenticated users to enumerate clusters by name by inspecting error messages. It’s also possible to enumerate the names of projects with project-scoped clusters if you know the names of the clusters. This vulnerability is fixed in 2.11.3, 2.10.12, and 2.9.17.",
+  "aliases": [
+    "CVE-2024-36106"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.10.12"
+            },
+            {
+              "introduced": "2.11.0"
+            },
+            {
+              "fixed": "2.11.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/c2647055c261a550e5da075793260f6524e65ad9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-3cqf-953p-h5cp"
+    }
+  ],
+  "published": "2024-06-08T07:16:17.211Z",
+  "modified": "2024-06-08T07:56:08.348Z"
+}
