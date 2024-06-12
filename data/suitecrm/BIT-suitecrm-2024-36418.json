@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2024-36418",
+  "details": "SuiteCRM is an open-source Customer Relationship Management (CRM) software application. Prior to versions 7.14.4 and 8.6.1, a vulnerability in connectors allows an authenticated user to perform a remote code execution attack. Versions 7.14.4 and 8.6.1 contain a fix for this issue.",
+  "aliases": [
+    "CVE-2024-36418"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.14.4"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-mfj5-37v4-vh5w"
+    }
+  ],
+  "published": "2024-06-12T07:36:41.004Z",
+  "modified": "2024-06-12T07:54:49.981Z"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-composer-2024-35242",
+  "details": "Composer is a dependency manager for PHP. On the 2.x branch prior to versions 2.2.24 and 2.7.7, the `composer install` command running inside a git/hg repository which has specially crafted branch names can lead to command injection. This requires cloning untrusted repositories. Patches are available in version 2.2.24 for 2.2 LTS or 2.7.7 for mainline. As a workaround, avoid cloning potentially compromised repositories.",
+  "aliases": [
+    "CVE-2024-35242"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "composer",
+        "purl": "pkg:bitnami/composer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.2.24"
+            },
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "fixed": "2.7.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:getcomposer:composer:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/composer/composer/commit/6bd43dff859c597c09bd03a7e7d6443822d0a396"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/composer/composer/commit/fc57b93603d7d90b71ca8ec77b1c8a9171fdb467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/composer/composer/security/advisories/GHSA-v9qv-c7wm-wgmf"
+    }
+  ],
+  "published": "2024-06-12T07:16:23.898Z",
+  "modified": "2024-06-12T07:54:49.981Z"
+}
