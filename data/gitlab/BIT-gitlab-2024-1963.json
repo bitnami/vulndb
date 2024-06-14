@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2024-2874",
-  "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 16.10.6, version 16.11 before 16.11.3, and 17.0 before 17.0.1. A runner registered with a crafted description has the potential to disrupt the loading of targeted GitLab web resources.",
+  "id": "BIT-gitlab-2024-1963",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 8.4 prior to 16.10.7, starting from 16.11 prior to 16.11.4, and starting from 17.0 prior to 17.0.2. A vulnerability in GitLab's Asana integration allowed an attacker to potentially cause a regular expression denial of service by sending specially crafted requests.",
   "aliases": [
-    "CVE-2024-2874"
+    "CVE-2024-1963"
   ],
   "affected": [
     {
@@ -23,22 +23,22 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "8.4.0"
             },
             {
-              "fixed": "16.10.6"
+              "fixed": "16.10.7"
             },
             {
               "introduced": "16.11.0"
             },
             {
-              "fixed": "16.11.3"
+              "fixed": "16.11.4"
             },
             {
               "introduced": "17.0.0"
             },
             {
-              "fixed": "17.0.1"
+              "fixed": "17.0.2"
             }
           ]
         }
@@ -48,21 +48,23 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451911"
+      "url": "https://about.gitlab.com/releases/2024/06/12/patch-release-gitlab-17-0-2-released/#redos-in-asana-integration-issue-mapping-when-webhook-is-called"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2426166"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/443577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2376482"
     }
   ],
-  "published": "2024-05-29T07:22:20.064Z",
+  "published": "2024-06-14T07:23:46.990Z",
   "modified": "2024-06-14T07:57:17.947Z"
 }
