@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-5798",
+  "details": "Vault and Vault Enterprise did not properly validate the JSON Web Token (JWT) role-bound audience claim when using the Vault JWT auth method. This may have resulted in Vault validating a JWT the audience and role-bound claims do not match, allowing an invalid login to succeed when it should have been rejected.This vulnerability, CVE-2024-5798, was fixed in Vault and Vault Enterprise 1.17.0, 1.16.3, and 1.15.9",
+  "aliases": [
+    "CVE-2024-5798"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.11.0"
+            },
+            {
+              "fixed": "1.16.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-11-vault-incorrectly-validated-json-web-tokens-jwt-audience-claims/67770"
+    }
+  ],
+  "published": "2024-06-14T19:40:47.770Z",
+  "modified": "2024-06-14T19:57:04.997Z"
+}
