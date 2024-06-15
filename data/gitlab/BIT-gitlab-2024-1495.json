@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2023-7045",
-  "details": "A CSRF vulnerability exists within GitLab CE/EE from versions 13.11 before 16.10.6, from 16.11 before 16.11.3, from 17.0 before 17.0.1. By leveraging this vulnerability, an attacker could exfiltrate anti-CSRF tokens via the Kubernetes Agent Server (KAS).",
+  "id": "BIT-gitlab-2024-1495",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 13.1 prior to 16.10.7, starting from 16.11 prior to 16.11.4, and starting from 17.0 prior to 17.0.2. It was possible for an attacker to cause a denial of service using maliciously crafted file.",
   "aliases": [
-    "CVE-2023-7045"
+    "CVE-2024-1495"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -23,22 +23,22 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "13.11.0"
+              "introduced": "13.1.0"
             },
             {
-              "fixed": "16.10.6"
+              "fixed": "16.10.7"
             },
             {
               "introduced": "16.11.0"
             },
             {
-              "fixed": "16.11.3"
+              "fixed": "16.11.4"
             },
             {
               "introduced": "17.0.0"
             },
             {
-              "fixed": "17.0.1"
+              "fixed": "17.0.2"
             }
           ]
         }
@@ -48,21 +48,23 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:community:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:enterprise:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/436358"
+      "url": "https://about.gitlab.com/releases/2024/06/12/patch-release-gitlab-17-0-2-released/#redos-in-gomod-dependency-linker"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2286823"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/441807"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2359528"
     }
   ],
-  "published": "2024-05-29T07:29:24.176Z",
+  "published": "2024-06-15T19:24:19.670Z",
   "modified": "2024-06-15T19:57:02.410Z"
 }
