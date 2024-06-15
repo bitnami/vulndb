@@ -30,7 +30,8 @@
   "database_specific": {
     "severity": "Unknown",
     "cpes": [
-      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
     ]
   },
   "references": [
@@ -48,5 +49,5 @@
     }
   ],
   "published": "2024-05-24T07:15:55.746Z",
-  "modified": "2024-06-12T07:54:49.981Z"
+  "modified": "2024-06-15T07:56:18.251Z"
 }
