@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-magento-2024-34105",
+  "details": "Adobe Commerce versions 2.4.7, 2.4.6-p5, 2.4.5-p7, 2.4.4-p8 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an admin attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field.",
+  "aliases": [
+    "CVE-2024-34105"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "magento",
+        "purl": "pkg:bitnami/magento"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.7-alpha0"
+            },
+            {
+              "fixed": "2.4.7-p1"
+            },
+            {
+              "introduced": "2.4.6-alpha0"
+            },
+            {
+              "fixed": "2.4.6-p6"
+            },
+            {
+              "introduced": "2.4.5-alpha0"
+            },
+            {
+              "fixed": "2.4.5-p8"
+            },
+            {
+              "introduced": "2.4.4-alpha0"
+            },
+            {
+              "fixed": "2.4.4-p9"
+            },
+            {
+              "introduced": "2.4.3-alpha0"
+            },
+            {
+              "fixed": "2.4.3-ext-8"
+            },
+            {
+              "introduced": "2.4.2-alpha0"
+            },
+            {
+              "fixed": "2.4.2-ext-8"
+            },
+            {
+              "introduced": "2.4.1-alpha0"
+            },
+            {
+              "fixed": "2.4.1-ext-8"
+            },
+            {
+              "introduced": "2.4.0-alpha0"
+            },
+            {
+              "fixed": "2.4.0-ext-8"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.3.4-p4-ext-8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://helpx.adobe.com/security/products/magento/apsb24-40.html"
+    }
+  ],
+  "published": "2024-06-16T07:26:16.561Z",
+  "modified": "2024-06-16T07:56:09.166Z"
+}
