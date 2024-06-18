@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2024-25142",
+  "details": "Use of Web Browser Cache Containing Sensitive Information vulnerability in Apache Airflow. Airflow did not return \"Cache-Control\" header for dynamic content, which in case of some browsers could result in potentially storing sensitive data in local cache of the browser.This issue affects Apache Airflow: before 2.9.2.Users are recommended to upgrade to version 2.9.2, which fixes the issue.",
+  "aliases": [
+    "CVE-2024-25142"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/39550"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/cg1j28lk0fhzthk0of1g7vy7p2n1j7nr"
+    }
+  ],
+  "published": "2024-06-18T07:17:29.631Z",
+  "modified": "2024-06-18T07:56:13.190Z"
+}
