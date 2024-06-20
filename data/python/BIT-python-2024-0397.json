@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-0397",
+  "details": "A defect was discovered in the Python “ssl” module where there is a memoryrace condition with the ssl.SSLContext methods “cert_store_stats()” and“get_ca_certs()”. The race condition can be triggered if the methods arecalled at the same time as certificates are loaded into the SSLContext,such as during the TLS handshake with a certificate directory configured.This issue is fixed in CPython 3.10.14, 3.11.9, and 3.12.3.",
+  "aliases": [
+    "CVE-2024-0397"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.3"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.9"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.10.14"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/06/17/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/01c37f1d0714f5822d34063ca7180b595abf589d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/29c97287d205bf2f410f4895ebce3f43b5160524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/37324b421b72b7bc9934e27aba85d48d4773002e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/542f3272f56f31ed04e74c40635a913fbc12d286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b228655c227b2ca298a8ffac44d14ce3d22f6faa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/bce693111bff906ccf9281c22371331aaff766ab"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/114572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/114573"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/BMAK5BCGKYWNJOACVUSLUF6SFGBIM4VP/"
+    }
+  ],
+  "published": "2024-06-20T11:18:14.556Z",
+  "modified": "2024-06-20T11:39:31.904Z"
+}
