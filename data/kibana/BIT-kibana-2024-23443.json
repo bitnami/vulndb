@@ -1,21 +1,21 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-elk-2024-37279",
-  "details": "A flaw was discovered in Kibana, allowing view-only users of alerting to use the run_soon API making the alerting rule run continuously, potentially affecting the system availability if the alerting rule is running complex queries.",
+  "id": "BIT-kibana-2024-23443",
+  "details": "A high-privileged user, allowed to create custom osquery packs 17 could affect the availability of Kibana by uploading a maliciously crafted osquery pack.",
   "aliases": [
-    "CVE-2024-37279"
+    "CVE-2024-23443"
   ],
   "affected": [
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "elk",
-        "purl": "pkg:bitnami/elk"
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
       },
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -23,10 +23,16 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "8.6.3"
+              "introduced": "0"
             },
             {
               "fixed": "8.14.0"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.17.22"
             }
           ]
         }
@@ -36,16 +42,15 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
-      "url": "https://discuss.elastic.co/t/kibana-8-14-0-security-update-esa-2024-15/360887"
+      "url": "https://discuss.elastic.co/t/kibana-8-14-0-7-17-22-security-update-esa-2024-11/361460"
     }
   ],
-  "published": "2024-06-17T07:17:38.239Z",
+  "published": "2024-06-21T07:23:02.593Z",
   "modified": "2024-06-21T07:57:23.406Z"
 }
