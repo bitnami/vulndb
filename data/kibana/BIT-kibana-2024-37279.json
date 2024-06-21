@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
     ]
   },
   "references": [
@@ -46,5 +47,5 @@
     }
   ],
   "published": "2024-06-17T07:22:48.633Z",
-  "modified": "2024-06-17T07:56:05.360Z"
+  "modified": "2024-06-21T07:57:23.406Z"
 }
