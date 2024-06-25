@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-opencart-2024-21518",
+  "details": "This affects versions of the package opencart/opencart from 4.0.0-0. A Zip Slip issue was identified via the marketplace installer due to improper sanitization of the target path, allowing files within a malicious archive to traverse the filesystem and be extracted to arbitrary locations. An attacker can create arbitrary files in the web root of the application and overwrite other existing files by exploiting this vulnerability.",
+  "aliases": [
+    "CVE-2024-21518"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "opencart",
+        "purl": "pkg:bitnami/opencart"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/opencart/opencart/blob/04c1724370ab02967d3b4f668c1b67771ecf1ff4/upload/admin/controller/marketplace/installer.php%23L383C1-L383C1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.snyk.io/vuln/SNYK-PHP-OPENCARTOPENCART-7266578"
+    }
+  ],
+  "published": "2024-06-25T11:57:47.671Z",
+  "modified": "2024-06-25T12:26:02.400Z"
+}
