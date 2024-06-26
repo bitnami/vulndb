@@ -1,16 +1,16 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2024-28250",
-  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Starting in version 1.14.0 and prior to versions 1.14.8 and 1.15.2, In Cilium clusters with WireGuard enabled and traffic matching Layer 7 policies Wireguard-eligible traffic that is sent between a node's Envoy proxy and pods on other nodes is sent unencrypted and Wireguard-eligible traffic that is sent between a node's DNS proxy and pods on other nodes is sent unencrypted. This issue has been resolved in Cilium 1.14.8 and 1.15.2 in in native routing mode (`routingMode=native`) and in Cilium 1.14.4 in tunneling mode (`routingMode=tunnel`). Not that in tunneling mode, `encryption.wireguard.encapsulate` must be set to `true`. There is no known workaround for this issue.",
+  "id": "BIT-hubble-relay-2024-28249",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Prior to versions 1.13.13, 1.14.8, and 1.15.2, in Cilium clusters with IPsec enabled and traffic matching Layer 7 policies, IPsec-eligible traffic between a node's Envoy proxy and pods on other nodes is sent unencrypted and IPsec-eligible traffic between a node's DNS proxy and pods on other nodes is sent unencrypted. This issue has been resolved in Cilium 1.15.2, 1.14.8, and 1.13.13. There is no known workaround for this issue.",
   "aliases": [
-    "CVE-2024-28250"
+    "CVE-2024-28249"
   ],
   "affected": [
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -22,6 +22,12 @@
         {
           "type": "SEMVER",
           "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.13.13"
+            },
             {
               "introduced": "1.14.0"
             },
@@ -60,9 +66,9 @@
     },
     {
       "type": "WEB",
-      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-v6q2-4qr3-5cw6"
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-j89h-qrvr-xc36"
     }
   ],
-  "published": "2024-06-04T09:42:36.406Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:20:54.285Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }

@@ -1,16 +1,16 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2022-29178",
-  "details": "Cilium is open source software for providing and securing network connectivity and loadbalancing between application workloads. Cilium prior to versions 1.9.16, 1.10.11, and 1.11.15 contains an incorrect default permissions vulnerability. Operating Systems with users belonging to the group ID 1000 can access the API of Cilium via Unix domain socket available on the host where Cilium is running. This could allow malicious users to compromise integrity as well as system availability on that host. The problem has been fixed and the patch is available in versions 1.9.16, 1.10.11, and 1.11.5. A potential workaround is to modify Cilium's DaemonSet to run with a certain command, which can be found in the GitHub Security Advisory for this vulnerability.",
+  "id": "BIT-hubble-relay-2022-29179",
+  "details": "Cilium is open source software for providing and securing network connectivity and loadbalancing between application workloads. Prior to versions 1.9.16, 1.10.11, and 1.11.15, if an attacker is able to perform a container escape of a container running as root on a host where Cilium is installed, the attacker can escalate privileges to cluster admin by using Cilium's Kubernetes service account. The problem has been fixed and the patch is available in versions 1.9.16, 1.10.11, and 1.11.5. There are no known workarounds available.",
   "aliases": [
-    "CVE-2022-29178"
+    "CVE-2022-29179"
   ],
   "affected": [
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -66,9 +66,9 @@
     },
     {
       "type": "WEB",
-      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-6p8v-8cq8-v2r3"
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-fmrf-gvjp-5j5g"
     }
   ],
-  "published": "2024-06-04T09:46:09.709Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:23:58.191Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }

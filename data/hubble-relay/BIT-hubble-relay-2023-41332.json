@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2023-41332",
+  "id": "BIT-hubble-relay-2023-41332",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. In Cilium clusters where Cilium's Layer 7 proxy has been disabled, creating workloads with `policy.cilium.io/proxy-visibility` annotations (in Cilium >= v1.13) or `io.cilium.proxy-visibility` annotations (in Cilium <= v1.12) causes the Cilium agent to segfault on the node to which the workload is assigned. Existing traffic on the affected node will continue to flow, but the Cilium agent on the node will not able to process changes to workloads running on the node. This will also prevent workloads from being able to start on the affected node. The denial of service will be limited to the node on which the workload is scheduled, however an attacker may be able to schedule workloads on the node of their choosing, which could lead to targeted attacks. This issue has been resolved in Cilium versions 1.14.2, 1.13.7, and 1.12.14. Users unable to upgrade can avoid this denial of service attack by enabling the Layer 7 proxy.",
   "aliases": [
     "CVE-2023-41332"
@@ -9,8 +9,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -61,6 +61,6 @@
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-24m5-r6hv-ccgp"
     }
   ],
-  "published": "2024-06-04T09:44:04.815Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:22:07.685Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }

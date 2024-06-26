@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2024-25631",
+  "id": "BIT-hubble-relay-2024-25631",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. For Cilium users who have enabled an external kvstore and Wireguard transparent encryption, traffic between pods in the affected cluster is not encrypted. This issue affects Cilium v1.14 before v1.14.7 and has been patched in Cilium v1.14.7. There is no workaround to this issue.",
   "aliases": [
     "CVE-2024-25631"
@@ -9,8 +9,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -57,6 +57,6 @@
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-x989-52fc-4vr4"
     }
   ],
-  "published": "2024-06-04T09:43:19.506Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:21:23.185Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }

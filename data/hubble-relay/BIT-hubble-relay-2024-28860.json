@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2024-28860",
+  "id": "BIT-hubble-relay-2024-28860",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Users of IPsec transparent encryption in Cilium may be vulnerable to cryptographic attacks that render the transparent encryption ineffective. In particular, Cilium is vulnerable to chosen plaintext, key recovery, replay attacks by a man-in-the-middle attacker. These attacks are possible due to an ESP sequence number collision when multiple nodes are configured with the same key. Fixed versions of Cilium use unique keys for each IPsec tunnel established between nodes, resolving all of the above attacks. This vulnerability is fixed in 1.13.13, 1.14.9, and 1.15.3.",
   "aliases": [
     "CVE-2024-28860"
@@ -9,8 +9,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -73,6 +73,6 @@
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-pwqm-x5x6-5586"
     }
   ],
-  "published": "2024-06-04T09:42:23.803Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:20:22.490Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-hubble-2023-30851",
+  "id": "BIT-hubble-relay-2023-30851",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. This issue only impacts users who have a HTTP policy that applies to multiple `toEndpoints` AND have an allow-all rule in place that affects only one of those endpoints. In such cases, a wildcard rule will be appended to the set of HTTP rules, which could cause bypass of HTTP policies. This issue has been patched in Cilium 1.11.16, 1.12.9, and 1.13.2.",
   "aliases": [
     "CVE-2023-30851"
@@ -9,8 +9,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "hubble",
-        "purl": "pkg:bitnami/hubble"
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
       },
       "severity": [
         {
@@ -69,6 +69,6 @@
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-2h44-x2wx-49f4"
     }
   ],
-  "published": "2024-06-04T09:44:47.605Z",
-  "modified": "2024-06-04T10:17:29.592Z"
+  "published": "2024-05-24T19:22:48.082Z",
+  "modified": "2024-05-24T19:52:49.448Z"
 }
