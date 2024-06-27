@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-multisite-2024-6307",
+  "details": "WordPress Core is vulnerable to Stored Cross-Site Scripting via the HTML API in various versions up to 6.5.5 due to insufficient input sanitization and output escaping on URLs. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "aliases": [
+    "CVE-2024-6307"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.9.0"
+            },
+            {
+              "fixed": "5.9.10"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.9"
+            },
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.7"
+            },
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.5"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.5"
+            },
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.4.5"
+            },
+            {
+              "introduced": "6.5.0"
+            },
+            {
+              "fixed": "6.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/58472"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/58473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2024/06/wordpress-6-5-5/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/bc0d36f8-6569-49a1-b722-5cf57c4bb32a?source=cve"
+    }
+  ],
+  "published": "2024-06-27T07:41:23.454Z",
+  "modified": "2024-06-27T07:56:59.386Z"
+}
