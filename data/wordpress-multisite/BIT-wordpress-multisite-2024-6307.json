@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-multisite-2024-6307",
-  "details": "WordPress Core is vulnerable to Stored Cross-Site Scripting via the HTML API in various versions up to 6.5.5 due to insufficient input sanitization and output escaping on URLs. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+  "details": "WordPress Core is vulnerable to Stored Cross-Site Scripting via the HTML API in various versions prior to 6.5.5 due to insufficient input sanitization and output escaping on URLs. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
   "aliases": [
     "CVE-2024-6307"
   ],
@@ -94,5 +94,5 @@
     }
   ],
   "published": "2024-06-27T07:41:23.454Z",
-  "modified": "2024-06-27T07:56:59.386Z"
+  "modified": "2024-06-29T07:56:49.137Z"
 }
