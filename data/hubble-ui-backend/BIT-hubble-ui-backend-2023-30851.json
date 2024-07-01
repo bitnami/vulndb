@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hubble-ui-backend-2023-30851",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. This issue only impacts users who have a HTTP policy that applies to multiple `toEndpoints` AND have an allow-all rule in place that affects only one of those endpoints. In such cases, a wildcard rule will be appended to the set of HTTP rules, which could cause bypass of HTTP policies. This issue has been patched in Cilium 1.11.16, 1.12.9, and 1.13.2.",
+  "aliases": [
+    "CVE-2023-30851"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hubble-ui-backend",
+        "purl": "pkg:bitnami/hubble-ui-backend"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.11.16"
+            },
+            {
+              "introduced": "1.12.0"
+            },
+            {
+              "fixed": "1.12.9"
+            },
+            {
+              "introduced": "1.13.0"
+            },
+            {
+              "fixed": "1.13.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.11.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.12.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.13.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-2h44-x2wx-49f4"
+    }
+  ],
+  "published": "2024-07-01T11:17:52.600Z",
+  "modified": "2024-07-01T11:50:10.808Z"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-bpftool-2021-45941",
+  "details": "libbpf 0.6.0 and 0.6.1 has a heap-based buffer overflow (8 bytes) in __bpf_object__open (called from bpf_object__open_mem and bpf-object-fuzzer.c).",
+  "aliases": [
+    "CVE-2021-45941"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "bpftool",
+        "purl": "pkg:bitnami/bpftool"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.6.0"
+            },
+            {
+              "last_affected": "0.6.0"
+            },
+            {
+              "introduced": "0.6.1"
+            },
+            {
+              "last_affected": "0.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:libbpf_project:libbpf:0.6.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:libbpf_project:libbpf:0.6.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=40957"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/google/oss-fuzz-vulns/blob/main/vulns/libbpf/OSV-2021-1576.yaml"
+    }
+  ],
+  "published": "2024-07-01T11:09:54.505Z",
+  "modified": "2024-07-01T11:50:10.808Z"
+}

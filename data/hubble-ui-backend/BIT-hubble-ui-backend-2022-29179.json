@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hubble-ui-backend-2022-29179",
+  "details": "Cilium is open source software for providing and securing network connectivity and loadbalancing between application workloads. Prior to versions 1.9.16, 1.10.11, and 1.11.15, if an attacker is able to perform a container escape of a container running as root on a host where Cilium is installed, the attacker can escalate privileges to cluster admin by using Cilium's Kubernetes service account. The problem has been fixed and the patch is available in versions 1.9.16, 1.10.11, and 1.11.5. There are no known workarounds available.",
+  "aliases": [
+    "CVE-2022-29179"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hubble-ui-backend",
+        "purl": "pkg:bitnami/hubble-ui-backend"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.9.16"
+            },
+            {
+              "introduced": "1.10.0"
+            },
+            {
+              "fixed": "1.10.11"
+            },
+            {
+              "introduced": "1.11.0"
+            },
+            {
+              "fixed": "1.11.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.10.11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.11.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.9.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-fmrf-gvjp-5j5g"
+    }
+  ],
+  "published": "2024-07-01T11:19:04.806Z",
+  "modified": "2024-07-01T11:50:10.808Z"
+}
