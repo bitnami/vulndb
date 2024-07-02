@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-05-01T07:38:05.608Z",
-  "modified": "2024-06-12T07:54:49.981Z"
+  "modified": "2024-07-02T07:56:01.842Z"
 }
