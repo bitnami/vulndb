@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-apache-2024-36387",
+  "details": "Serving WebSocket protocol upgrades over a HTTP/2 connection could result in a Null Pointer dereference, leading to a crash of the server process, degrading performance.",
+  "aliases": [
+    "CVE-2024-36387"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.55"
+            },
+            {
+              "fixed": "2.4.60"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    }
+  ],
+  "published": "2024-07-03T07:18:02.756Z",
+  "modified": "2024-07-03T07:56:51.895Z"
+}

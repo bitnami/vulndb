@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2024-39305",
+  "details": "Envoy is a cloud-native, open source edge and service proxy. Prior to versions 1.30.4, 1.29.7, 1.28.5, and 1.27.7. Envoy references already freed memory when route hash policy is configured with cookie attributes. Note that this vulnerability has been fixed in the open as the effect would be immediately apparent if it was configured. Memory allocated for holding attribute values is freed after configuration was parsed. During request processing Envoy will attempt to copy content of de-allocated memory into request cookie header. This can lead to arbitrary content of Envoy's memory to be sent to the upstream service or abnormal process termination. This vulnerability is fixed in Envoy versions v1.30.4, v1.29.7, v1.28.5, and v1.27.7. As a workaround, do not use cookie attributes in route action hash policy.",
+  "aliases": [
+    "CVE-2024-39305"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.30.0"
+            },
+            {
+              "fixed": "1.30.4"
+            },
+            {
+              "introduced": "1.29.0"
+            },
+            {
+              "fixed": "1.29.7"
+            },
+            {
+              "introduced": "1.28.0"
+            },
+            {
+              "fixed": "1.28.5"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.27.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/02a06681fbe0e039b1c7a9215257a7537eddb518"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/50b384cb203a1f2894324cbae64b6d9bc44cce45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/99b6e525fb9f6f6f19a0425f779bc776f121c7e5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/b7f509607ad860fd6a63cde4f7d6f0197f9f63bb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-fp35-g349-h66f"
+    }
+  ],
+  "published": "2024-07-03T07:17:43.459Z",
+  "modified": "2024-07-03T07:56:51.895Z"
+}
