@@ -12,6 +12,12 @@
         "name": "python",
         "purl": "pkg:bitnami/python"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -28,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
     ]
@@ -92,5 +98,5 @@
     }
   ],
   "published": "2024-05-14T10:33:45.509Z",
-  "modified": "2024-06-17T07:56:05.360Z"
+  "modified": "2024-07-04T07:59:09.439Z"
 }
