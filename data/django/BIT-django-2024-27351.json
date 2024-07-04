@@ -12,6 +12,12 @@
         "name": "django",
         "purl": "pkg:bitnami/django"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -40,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:djangoproject:django:*:*:*:*:*:python:*:*"
     ]
@@ -76,5 +82,5 @@
     }
   ],
   "published": "2024-07-02T07:16:49.319Z",
-  "modified": "2024-07-02T07:56:01.842Z"
+  "modified": "2024-07-04T07:59:09.439Z"
 }
