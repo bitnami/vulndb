@@ -128,6 +128,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2024-08
+
+- Akeneo
+
 ### 2024-06
 
 - Alfresco
