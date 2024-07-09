@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-36113",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch, version 3.3.0.beta3 on the `beta` branch, and version 3.3.0.beta4-dev on the `tests-passed` branch, a rogue staff user could suspend other staff users preventing them from logging in to the site. The issue is patched in version 3.2.3 on the `stable` branch, version 3.3.0.beta3 on the `beta` branch, and version 3.3.0.beta4-dev on the `tests-passed` branch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2024-36113"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/8470546f59b04bd82ce9b711406758fd5439936d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/9c4a5f39d3ad351410a1453ff5e5f7ffce17cd7e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-3w3f-76p7-3c4g"
+    }
+  ],
+  "published": "2024-07-09T08:43:25.553Z",
+  "modified": "2024-07-09T09:22:43.691Z"
+}
