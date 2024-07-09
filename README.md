@@ -132,6 +132,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 - Akeneo
 
+### 2024-07
+
+- Live Helper Chat
+
 ### 2024-06
 
 - Alfresco
