@@ -128,9 +128,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
-### 2024-08
+### 2024-07
 
 - Akeneo
+- Live Helper Chat
 
 ### 2024-06
 
