@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-37157",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch and version 3.3.0.beta4 on the `beta` and `tests-passed` branches, a malicious actor could get the FastImage library to redirect requests to an internal Discourse IP. This issue is patched in version 3.2.3 on the `stable` branch and version 3.3.0.beta4 on the `beta` and `tests-passed` branches. No known workarounds are available.",
+  "aliases": [
+    "CVE-2024-37157"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/5b8cf11b69e05d5c058c1148ec69ec309491fa6e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/67e78086035cec494b15ce79342a0cb9052c2d95"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-46pq-7958-fc68"
+    }
+  ],
+  "published": "2024-07-09T08:42:49.752Z",
+  "modified": "2024-07-09T09:22:43.691Z"
+}

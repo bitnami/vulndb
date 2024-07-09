@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-35234",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch, an attacker can execute arbitrary JavaScript on users’ browsers by posting a specific URL containing maliciously crafted meta tags. This issue only affects sites with Content Security Polic (CSP) disabled. The problem has been patched in version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch. As a workaround, ensure CSP is enabled on the forum.",
+  "aliases": [
+    "CVE-2024-35234"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/26aef0c288839378b9de5819e96eac8cf4ea60fd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/311b737c910cf0a69f61e1b8bc0b78374b6619d2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-5chg-hm8c-wc58"
+    }
+  ],
+  "published": "2024-07-09T08:43:42.054Z",
+  "modified": "2024-07-09T09:22:43.691Z"
+}
