@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2024-37903",
+  "details": "Mastodon is a self-hosted, federated microblogging platform. Starting in version 2.6.0 and prior to versions 4.1.18 and 4.2.10, by crafting specific activities, an attacker can extend the audience of a post they do not own to other Mastodon users on a target server, thus gaining access to the contents of a post not intended for them. Versions 4.1.18 and 4.2.10 contain a patch for this issue.",
+  "aliases": [
+    "CVE-2024-37903"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "4.1.18"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/a1c7aae28aecf06659c5b18cfa131b37cd1512a3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/d4bf22b632ea8b1174375c4966a6768ab66393b6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.1.18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.2.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-xjvf-fm67-4qc3"
+    }
+  ],
+  "published": "2024-07-09T07:24:52.373Z",
+  "modified": "2024-07-09T07:56:40.436Z"
+}
