@@ -133,6 +133,8 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - ActiveMQ
 - Akeneo
 - EspoCRM
+- Guacamole
+- Guacamole Auth JDBC extension
 - Live Helper Chat
 
 ### 2024-06
