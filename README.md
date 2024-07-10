@@ -134,6 +134,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Akeneo
 - EspoCRM
 - Live Helper Chat
+- ResourceSpace
 
 ### 2024-06
 
