@@ -133,6 +133,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - ActiveMQ
 - Akeneo
 - Live Helper Chat
+- ResourceSpace
 
 ### 2024-06
 
