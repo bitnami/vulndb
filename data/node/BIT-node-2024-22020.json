@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2024-22020",
+  "details": "A security flaw in Node.js  allows a bypass of network import restrictions.By embedding non-network imports in data URLs, an attacker can execute arbitrary code, compromising system security.Verified on various platforms, the vulnerability is mitigated by forbidding data URLs in network imports.Exploiting this flaw can violate network import security, posing a risk to developers and servers.",
+  "aliases": [
+    "CVE-2024-22020"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.15.1"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "18.20.4"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2092749"
+    }
+  ],
+  "published": "2024-07-11T07:28:44.706Z",
+  "modified": "2024-07-11T07:55:39.457Z"
+}

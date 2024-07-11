@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2177",
+  "details": "A Cross Window Forgery vulnerability exists within GitLab CE/EE affecting all versions from 16.3 prior to 16.11.5, 17.0 prior to 17.0.3, and 17.1 prior to 17.1.1. This condition allows for an attacker to abuse the OAuth authentication flow via a crafted payload.",
+  "aliases": [
+    "CVE-2024-2177"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "fixed": "16.11.5"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.0.3"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/444467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2383443"
+    }
+  ],
+  "published": "2024-07-11T07:25:19.401Z",
+  "modified": "2024-07-11T07:55:39.457Z"
+}
