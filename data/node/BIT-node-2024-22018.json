@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2024-22018",
+  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.This flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
+  "aliases": [
+    "CVE-2024-22018"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.15.1"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/07/11/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2145862"
+    }
+  ],
+  "published": "2024-07-12T07:29:02.117Z",
+  "modified": "2024-07-12T07:57:17.943Z"
+}
