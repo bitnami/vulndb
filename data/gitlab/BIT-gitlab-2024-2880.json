@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2880",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.5 prior to 16.11.6, starting from 17.0 prior to 17.0.4, and starting from 17.1 prior to 17.1.2 in which a user with `admin_group_member` custom role permission could ban group members.",
+  "aliases": [
+    "CVE-2024-2880"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "16.11.6"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.0.4"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451921"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2431597"
+    }
+  ],
+  "published": "2024-07-13T07:23:46.684Z",
+  "modified": "2024-07-13T07:54:56.240Z"
+}
