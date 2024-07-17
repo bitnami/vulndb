@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-38360",
+  "details": "Discourse is an open source platform for community discussion. In affected versions by creating replacement words with an almost unlimited number of characters, a moderator can reduce the availability of a Discourse instance. This issue has been addressed in stable version 3.2.3. Users are advised to upgrade. Users unable to upgrade may manually remove the long watched words either via SQL or Rails console.",
+  "aliases": [
+    "CVE-2024-38360"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/7b53e610c17e38be982dffefa4e5b5a709a3b990"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-68pm-hm8x-pq2p"
+    }
+  ],
+  "published": "2024-07-17T09:56:10.359Z",
+  "modified": "2024-07-17T10:35:35.441Z"
+}
