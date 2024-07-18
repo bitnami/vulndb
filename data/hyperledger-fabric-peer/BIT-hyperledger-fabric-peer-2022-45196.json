@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hyperledger-fabric-peer-2022-45196",
+  "details": "Hyperledger Fabric 2.3 allows attackers to cause a denial of service (orderer crash) by repeatedly sending a crafted channel tx with the same Channel name. NOTE: the official Fabric with Raft prevents exploitation via a locking mechanism and a check for names that already exist.",
+  "aliases": [
+    "CVE-2022-45196"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hyperledger-fabric-peer",
+        "purl": "pkg:bitnami/hyperledger-fabric-peer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.3.0"
+            },
+            {
+              "last_affected": "2.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hyperledger:fabric:2.3:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/SmartBFT-Go/fabric/issues/286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/pull/2934"
+    }
+  ],
+  "published": "2024-07-18T19:21:42.058Z",
+  "modified": "2024-07-18T19:57:51.439Z"
+}
