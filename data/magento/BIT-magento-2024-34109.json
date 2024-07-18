@@ -45,36 +45,6 @@
             },
             {
               "fixed": "2.4.4-p9"
-            },
-            {
-              "introduced": "2.4.3-alpha0"
-            },
-            {
-              "fixed": "2.4.3-ext-8"
-            },
-            {
-              "introduced": "2.4.2-alpha0"
-            },
-            {
-              "fixed": "2.4.2-ext-8"
-            },
-            {
-              "introduced": "2.4.1-alpha0"
-            },
-            {
-              "fixed": "2.4.1-ext-8"
-            },
-            {
-              "introduced": "2.4.0-alpha0"
-            },
-            {
-              "fixed": "2.4.0-ext-8"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.3.4-p4-ext-8"
             }
           ]
         }
@@ -85,7 +55,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
-      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*"
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
+      "cpe:2.3:a:magento:magento:*:*:*:*:open_source:php:*:*"
     ]
   },
   "references": [
@@ -95,5 +66,5 @@
     }
   ],
   "published": "2024-06-17T07:24:37.139Z",
-  "modified": "2024-06-17T07:56:05.360Z"
+  "modified": "2024-07-18T07:56:34.499Z"
 }

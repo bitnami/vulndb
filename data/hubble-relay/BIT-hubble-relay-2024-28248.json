@@ -48,7 +48,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-05-24T19:21:07.186Z",
-  "modified": "2024-05-24T19:52:49.448Z"
+  "modified": "2024-07-18T07:56:34.499Z"
 }
