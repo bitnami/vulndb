@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:sigstore:cosign:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:sigstore:cosign:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:sigstore:cosign:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-04-12T07:17:20.659Z",
-  "modified": "2024-04-12T07:50:32.242Z"
+  "modified": "2024-07-18T07:56:34.499Z"
 }

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2023-51474",
+  "details": "Cross-Site Request Forgery (CSRF) vulnerability in Pixelemu TerraClassifieds.This issue affects TerraClassifieds: from n/a through 2.0.3.",
+  "aliases": [
+    "CVE-2023-51474"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:pixelemu:terraclassifieds:*:*:*:*:wordpress:wordpress:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/vulnerability/terraclassifieds/wordpress-terraclassifieds-plugin-2-0-3-cross-site-request-forgery-csrf-to-account-takeover-vulnerability?_s_id=cve"
+    }
+  ],
+  "published": "2024-07-18T07:43:55.364Z",
+  "modified": "2024-07-18T07:56:34.499Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-multisite-2024-3755",
+  "details": "The MF Gig Calendar WordPress plugin through 1.2.1 does not sanitise and escape some of its settings, which could allow high privilege users such as editor to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)",
+  "aliases": [
+    "CVE-2024-3755"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:mf_gig_calendar_project:mf_gig_calendar:*:*:*:*:wordpress:wordpress:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://wpscan.com/vulnerability/d34caeaf-2ecf-44a2-b308-e940bafd402c/"
+    }
+  ],
+  "published": "2024-07-18T07:40:52.471Z",
+  "modified": "2024-07-18T07:56:34.499Z"
+}
