@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-hyperledger-fabric-tools-2022-36023",
+  "details": "Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. If a gateway client application sends a malformed request to a gateway peer it may crash the peer node. Version 2.4.6 checks for the malformed gateway request and returns an error to the gateway client. There are no known workarounds, users must upgrade to version 2.4.6.",
+  "aliases": [
+    "CVE-2022-36023"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hyperledger-fabric-tools",
+        "purl": "pkg:bitnami/hyperledger-fabric-tools"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hyperledger:fabric:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/pull/3572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/pull/3576"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/pull/3577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/releases/tag/v2.4.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/security/advisories/GHSA-qj6r-fhrc-jj5r"
+    }
+  ],
+  "published": "2024-07-18T19:21:58.651Z",
+  "modified": "2024-07-18T19:57:51.439Z"
+}
