@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2024-39863",
+  "details": "Apache Airflow versions before 2.9.3 have a vulnerability that allows an authenticated attacker to inject a malicious link when installing a provider. Users are recommended to upgrade to version 2.9.3, which fixes this issue.",
+  "aliases": [
+    "CVE-2024-39863"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/40475"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/gxkvs279f1mbvckv5q65worr6how20o3"
+    }
+  ],
+  "published": "2024-07-19T07:16:29.237Z",
+  "modified": "2024-07-19T07:55:55.560Z"
+}
