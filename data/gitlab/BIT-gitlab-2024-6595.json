@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-6595",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.8 prior to 16.11.6, starting from 17.0 prior to 17.0.4, and starting from 17.1 prior to 17.1.2 where it was possible to upload an NPM package with conflicting package data.",
+  "aliases": [
+    "CVE-2024-6595"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.8.0"
+            },
+            {
+              "fixed": "16.11.6"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.0.4"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.vlt.sh/blog/the-massive-hole-in-the-npm-ecosystem"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/417975"
+    }
+  ],
+  "published": "2024-07-19T07:19:00.729Z",
+  "modified": "2024-07-19T07:55:55.560Z"
+}
