@@ -23,28 +23,28 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.24.10"
+              "introduced": "0"
             },
             {
-              "last_affected": "1.24.10"
+              "fixed": "1.24.12"
             },
             {
-              "introduced": "1.25.9"
+              "introduced": "1.25.0"
             },
             {
-              "last_affected": "1.25.9"
+              "fixed": "1.25.11"
             },
             {
-              "introduced": "1.26.4"
+              "introduced": "1.26.0"
             },
             {
-              "last_affected": "1.26.4"
+              "fixed": "1.26.6"
             },
             {
               "introduced": "1.27.0"
             },
             {
-              "last_affected": "1.27.0"
+              "fixed": "1.27.2"
             }
           ]
         }
@@ -57,7 +57,8 @@
       "cpe:2.3:a:envoyproxy:envoy:1.24.10:*:*:*:*:*:*:*",
       "cpe:2.3:a:envoyproxy:envoy:1.25.9:*:*:*:*:*:*:*",
       "cpe:2.3:a:envoyproxy:envoy:1.26.4:*:*:*:*:*:*:*",
-      "cpe:2.3:a:envoyproxy:envoy:1.27.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:envoyproxy:envoy:1.27.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -623,5 +624,5 @@
     }
   ],
   "published": "2024-03-06T10:52:27.702Z",
-  "modified": "2024-06-23T19:56:34.118Z"
+  "modified": "2024-07-26T07:57:37.529Z"
 }

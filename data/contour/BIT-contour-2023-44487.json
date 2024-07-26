@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:projectcontour:contour:*:*:*:*:*:kubernetes:*:*"
+      "cpe:2.3:a:projectcontour:contour:*:*:*:*:*:kubernetes:*:*",
+      "cpe:2.3:a:projectcontour:contour:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -602,5 +603,5 @@
     }
   ],
   "published": "2024-03-06T10:50:58.800Z",
-  "modified": "2024-06-23T19:56:34.118Z"
+  "modified": "2024-07-26T07:57:37.529Z"
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-node-2023-44487",
+  "id": "BIT-nginx-ingress-controller-2023-44487",
   "details": "The HTTP/2 protocol allows a denial of service (server resource consumption) because request cancellation can reset many streams quickly, as exploited in the wild in August through October 2023.",
   "aliases": [
     "CVE-2023-44487"
@@ -9,8 +9,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "node",
-        "purl": "pkg:bitnami/node"
+        "name": "nginx-ingress-controller",
+        "purl": "pkg:bitnami/nginx-ingress-controller"
       },
       "severity": [
         {
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "18.18.2"
-            },
-            {
-              "introduced": "19.0.0"
-            },
-            {
-              "fixed": "20.8.1"
+              "fixed": "1.9.3"
             }
           ]
         }
@@ -42,8 +36,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:nodejs:node.js:*:*:*:*:lts:*:*:*"
+      "cpe:2.3:a:kubernetes:ingress-nginx:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -525,6 +518,18 @@
     },
     {
       "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240426-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240621-0006/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240621-0007/"
+    },
+    {
+      "type": "WEB",
       "url": "https://security.paloaltonetworks.com/CVE-2023-44487"
     },
     {
@@ -594,20 +599,8 @@
     {
       "type": "WEB",
       "url": "https://www.theregister.com/2023/10/10/http2_rapid_reset_zeroday/"
-    },
-    {
-      "type": "WEB",
-      "url": "https://security.netapp.com/advisory/ntap-20240426-0007/"
-    },
-    {
-      "type": "WEB",
-      "url": "https://security.netapp.com/advisory/ntap-20240621-0006/"
-    },
-    {
-      "type": "WEB",
-      "url": "https://security.netapp.com/advisory/ntap-20240621-0007/"
     }
   ],
-  "published": "2024-03-06T10:58:56.877Z",
+  "published": "2024-07-26T07:28:26.350Z",
   "modified": "2024-07-26T07:57:37.529Z"
 }
