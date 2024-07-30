@@ -136,6 +136,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Guacamole
 - Guacamole Auth JDBC extension
 - Live Helper Chat
+- Pimcore
 - ResourceSpace
 
 ### 2024-06
