@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2023-49921",
+  "details": "An issue was discovered by Elastic whereby Watcher search input logged the search query results on DEBUG log level. This could lead to raw contents of documents stored in Elasticsearch to be printed in logs. Elastic has released 8.11.2 and 7.17.16 that resolves this issue by removing this excessive logging. This issue only affects users that use Watcher and have a Watch defined that uses the search input and additionally have set the search input’s logger to DEBUG or finer, for example using: org.elasticsearch.xpack.watcher.input.search, org.elasticsearch.xpack.watcher.input, org.elasticsearch.xpack.watcher, or wider, since the loggers are hierarchical.",
+  "aliases": [
+    "CVE-2023-49921"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.17.16"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.11.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-11-2-7-17-16-security-update-esa-2023-29/349179"
+    }
+  ],
+  "published": "2024-07-31T07:18:47.750Z",
+  "modified": "2024-07-31T07:56:17.906Z"
+}
