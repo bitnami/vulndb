@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-37165",
+  "details": "Discourse is an open source discussion platform. Prior to 3.2.3, improperly sanitized Onebox data could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. This vulnerability is fixed in 3.2.3",
+  "aliases": [
+    "CVE-2024-37165"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/26aef0c288839378b9de5819e96eac8cf4ea60fd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/311b737c910cf0a69f61e1b8bc0b78374b6619d2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-cx83-5p6x-9qh9"
+    }
+  ],
+  "published": "2024-08-01T11:18:49.407Z",
+  "modified": "2024-08-01T11:57:26.809Z"
+}

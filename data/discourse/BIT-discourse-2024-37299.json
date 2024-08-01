@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-37299",
+  "details": "Discourse is an open source discussion platform. Prior to 3.2.5 and 3.3.0.beta5, crafting requests to submit very long tag group names can reduce the availability of a Discourse instance. This vulnerability is fixed in 3.2.5",
+  "aliases": [
+    "CVE-2024-37299"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/188cb58daa833839c54c266ce22db150a3f3a210"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/76f06f6b1491db6bd09a4017d2c5591431b3b16e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-4j6h-9pjp-5476"
+    }
+  ],
+  "published": "2024-08-01T11:18:31.703Z",
+  "modified": "2024-08-01T11:57:26.809Z"
+}
