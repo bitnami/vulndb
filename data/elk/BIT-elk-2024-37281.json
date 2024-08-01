@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elk-2024-37281",
+  "details": "An issue was discovered in Kibana where a user with Viewer role could cause a Kibana instance to crash by sending a large number of maliciously crafted requests to a specific endpoint.",
+  "aliases": [
+    "CVE-2024-37281"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.17.23"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-7-17-23-8-14-0-security-update-esa-2024-16/364094"
+    }
+  ],
+  "published": "2024-08-01T07:17:29.618Z",
+  "modified": "2024-08-01T07:56:31.592Z"
+}
