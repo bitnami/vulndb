@@ -12,6 +12,12 @@
         "name": "apache",
         "purl": "pkg:bitnami/apache"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -28,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
     ]
@@ -44,5 +50,5 @@
     }
   ],
   "published": "2024-07-03T07:17:33.455Z",
-  "modified": "2024-07-13T07:54:56.240Z"
+  "modified": "2024-08-02T07:56:46.980Z"
 }
