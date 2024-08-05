@@ -128,6 +128,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2024-08
+
+- OpenCart
+
 ### 2024-07
 
 - ActiveMQ
