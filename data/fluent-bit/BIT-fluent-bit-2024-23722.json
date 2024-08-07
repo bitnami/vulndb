@@ -12,6 +12,12 @@
         "name": "fluent-bit",
         "purl": "pkg:bitnami/fluent-bit"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -28,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:treasuredata:fluent_bit:*:*:*:*:*:*:*:*"
     ]
@@ -44,5 +50,5 @@
     }
   ],
   "published": "2024-05-29T07:18:00.870Z",
-  "modified": "2024-05-29T07:52:43.862Z"
+  "modified": "2024-08-07T07:58:01.019Z"
 }

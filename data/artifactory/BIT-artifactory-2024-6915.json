@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-artifactory-2024-6915",
+  "details": "JFrog Artifactory versions below 7.90.6, 7.84.20, 7.77.14, 7.71.23, 7.68.22, 7.63.22, 7.59.23, 7.55.18 are vulnerable to Improper Input Validation that could potentially lead to cache poisoning.",
+  "aliases": [
+    "CVE-2024-6915"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "artifactory",
+        "purl": "pkg:bitnami/artifactory"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.85.0"
+            },
+            {
+              "fixed": "7.90.6"
+            },
+            {
+              "introduced": "7.78.0"
+            },
+            {
+              "fixed": "7.84.20"
+            },
+            {
+              "introduced": "7.72.0"
+            },
+            {
+              "fixed": "7.77.14"
+            },
+            {
+              "introduced": "7.69.0"
+            },
+            {
+              "fixed": "7.71.23"
+            },
+            {
+              "introduced": "7.64.0"
+            },
+            {
+              "fixed": "7.68.22"
+            },
+            {
+              "introduced": "7.60.0"
+            },
+            {
+              "fixed": "7.63.22"
+            },
+            {
+              "introduced": "7.56.0"
+            },
+            {
+              "fixed": "7.59.23"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.55.18"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:jfrog:artifactory:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jfrog.com/help/r/jfrog-release-information/jfrog-security-advisories"
+    }
+  ],
+  "published": "2024-08-07T07:16:20.699Z",
+  "modified": "2024-08-07T07:58:01.019Z"
+}
