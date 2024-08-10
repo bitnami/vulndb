@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2800",
+  "details": "ReDoS flaw in RefMatcher when matching branch names using wildcards in GitLab EE/CE affecting all versions from 11.3 prior to 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2 allows denial of service via Regex backtracking.",
+  "aliases": [
+    "CVE-2024-2800"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.3.0"
+            },
+            {
+              "fixed": "17.0.6"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.4"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451293"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2416332"
+    }
+  ],
+  "published": "2024-08-10T07:28:58.601Z",
+  "modified": "2024-08-10T07:56:17.932Z"
+}

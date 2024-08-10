@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-7610",
+  "details": "A Denial of Service (DoS) condition has been discovered in GitLab CE/EE affecting all versions starting with 15.9 before 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2. It is possible for an attacker to cause catastrophic backtracking while parsing results from Elasticsearch.",
+  "aliases": [
+    "CVE-2024-7610"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "17.0.6"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.4"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/468917"
+    }
+  ],
+  "published": "2024-08-10T07:18:42.094Z",
+  "modified": "2024-08-10T07:56:17.932Z"
+}

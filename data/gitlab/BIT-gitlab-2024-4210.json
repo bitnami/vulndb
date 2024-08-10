@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-4210",
+  "details": "A Denial of Service (DoS) condition has been discovered in GitLab CE/EE affecting all versions starting with 12.6 before 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2. It is possible for an attacker to cause a denial of service using crafted adoc files.",
+  "aliases": [
+    "CVE-2024-4210"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.6.0"
+            },
+            {
+              "fixed": "17.0.6"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.4"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/458245"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2431562"
+    }
+  ],
+  "published": "2024-08-10T07:24:57.497Z",
+  "modified": "2024-08-10T07:56:17.932Z"
+}

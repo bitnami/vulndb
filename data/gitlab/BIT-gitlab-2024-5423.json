@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-5423",
+  "details": "Multiple Denial of Service (DoS) conditions has been discovered in GitLab CE/EE affecting all versions starting from 1.0 prior to 17.0.6, starting from 17.1 prior to 17.1.4, and starting from 17.2 prior to 17.2.2 which allowed an attacker to cause resource exhaustion via banzai pipeline.",
+  "aliases": [
+    "CVE-2024-5423"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "17.0.6"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.4"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/463807"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2518563"
+    }
+  ],
+  "published": "2024-08-10T07:22:13.593Z",
+  "modified": "2024-08-10T07:56:17.932Z"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-3114",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.10 prior to 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2, with the processing logic for parsing invalid commits can lead to a regular expression DoS attack on the server.",
+  "aliases": [
+    "CVE-2024-3114"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.10.0"
+            },
+            {
+              "fixed": "17.0.6"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.4"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/452547"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2416630"
+    }
+  ],
+  "published": "2024-08-10T07:27:12.594Z",
+  "modified": "2024-08-10T07:56:17.932Z"
+}
