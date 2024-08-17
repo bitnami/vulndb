@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-cilium-2024-42487",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. In the 1.15 branch prior to 1.15.8 and the 1.16 branch prior to 1.16.1, Gateway API HTTPRoutes and GRPCRoutes do not follow the match precedence specified in the Gateway API specification. In particular, request headers are matched before request methods, when the specification describes that the request methods must be respected before headers are matched. This could result in unexpected behaviour with security This issue is fixed in Cilium v1.15.8 and v1.16.1. There is no workaround for this issue.",
+  "aliases": [
+    "CVE-2024-42487"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium",
+        "purl": "pkg:bitnami/cilium"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.1"
+            },
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.15.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/a3510fe4a92305822aa1a5e08cb6d6c873c8699a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/34109"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-qcm3-7879-xcww"
+    }
+  ],
+  "published": "2024-08-17T07:16:43.256Z",
+  "modified": "2024-08-17T07:57:20.988Z"
+}
