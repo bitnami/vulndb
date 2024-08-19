@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-6923",
+  "details": "There is a MEDIUM severity vulnerability affecting CPython.The email module didn’t properly quote newlines for email headers when serializing an email message allowing for header injection when an email is serialized.",
+  "aliases": [
+    "CVE-2024-6923"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4766d1200fdf8b6728137aa2927a297e224d5fa7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4aaa4259b5a6e664b7316a4d60bdec7ee0f124d0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/121650"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/122233"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/QH3BUOE2DYQBWP7NAQ7UNHPPOELKISRW/"
+    }
+  ],
+  "published": "2024-08-19T09:33:54.548Z",
+  "modified": "2024-08-19T09:56:59.285Z"
+}
