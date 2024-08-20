@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-valkey-2022-0543",
+  "details": "It was discovered, that redis, a persistent key-value database, due to a packaging issue, is prone to a (Debian-specific) Lua sandbox escape, which could result in remote code execution.",
+  "aliases": [
+    "CVE-2022-0543"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "valkey",
+        "purl": "pkg:bitnami/valkey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:-:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://packetstormsecurity.com/files/166885/Redis-Lua-Sandbox-Escape.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.debian.org/1005787"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-security-announce/2022/msg00048.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220331-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2022/dsa-5081"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ubercomp.com/posts/2022-01-20_redis_on_debian_rce"
+    }
+  ],
+  "published": "2024-08-20T19:44:42.103Z",
+  "modified": "2024-08-20T19:58:20.076Z"
+}

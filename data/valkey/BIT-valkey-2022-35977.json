@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-valkey-2022-35977",
+  "details": "Redis is an in-memory database that persists on disk. Authenticated users issuing specially crafted `SETRANGE` and `SORT(_RO)` commands can trigger an integer overflow, resulting with Redis attempting to allocate impossible amounts of memory and abort with an out-of-memory (OOM) panic. The problem is fixed in Redis versions 7.0.8, 6.2.9 and 6.0.17. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2022-35977"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "valkey",
+        "purl": "pkg:bitnami/valkey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.17"
+            },
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.9"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/1ec82e6e97e1db06a72ca505f9fbf6b981f31ef7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/6.0.17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/6.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/7.0.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-mrcw-fhw9-fj8j"
+    }
+  ],
+  "published": "2024-08-20T19:43:21.196Z",
+  "modified": "2024-08-20T19:58:20.076Z"
+}
