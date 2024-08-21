@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-7592",
+  "details": "There is a LOW severity vulnerability affecting CPython, specifically the'http.cookies' standard library module.When parsing cookies that contained backslashes for quoted characters inthe cookie value, the parser would use an algorithm with quadraticcomplexity, resulting in excess CPU resources being used while parsing thevalue.",
+  "aliases": [
+    "CVE-2024-7592"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.13.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/123067"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/123075"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/HXJAAAALNUNGCQUS2W7WR6GFIZIHFOOK/"
+    }
+  ],
+  "published": "2024-08-21T07:35:24.805Z",
+  "modified": "2024-08-21T07:58:37.072Z"
+}
