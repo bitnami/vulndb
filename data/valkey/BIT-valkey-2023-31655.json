@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-valkey-2023-31655",
+  "details": "redis v7.0.10 was discovered to contain a segmentation violation. This vulnerability allows attackers to cause a Denial of Service (DoS) via unspecified vectors.",
+  "aliases": [
+    "CVE-2023-31655"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "valkey",
+        "purl": "pkg:bitnami/valkey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.10"
+            },
+            {
+              "last_affected": "7.0.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:7.0.10:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/RedisLabs/redisraft/issues/608"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230616-0005/"
+    }
+  ],
+  "published": "2024-08-21T19:41:48.850Z",
+  "modified": "2024-08-21T19:58:33.335Z"
+}

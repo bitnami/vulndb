@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-valkey-2023-45145",
+  "details": "Redis is an in-memory database that persists on disk. On startup, Redis begins listening on a Unix socket before adjusting its permissions to the user-provided configuration. If a permissive umask(2) is used, this creates a race condition that enables, during a short period of time, another process to establish an otherwise unauthorized connection. This problem has existed since Redis 2.6.0-RC1. This issue has been addressed in Redis versions 7.2.2, 7.0.14 and 6.2.14. Users are advised to upgrade. For users unable to upgrade, it is possible to work around the problem by disabling Unix sockets, starting Redis with a restrictive umask, or storing the Unix socket file in a protected directory.",
+  "aliases": [
+    "CVE-2023-45145"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "valkey",
+        "purl": "pkg:bitnami/valkey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "6.2.14"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.14"
+            },
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0-rc1"
+            },
+            {
+              "last_affected": "2.6.0-rc1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:2.6.0:rc1:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/03345ddc7faf7af079485f2cbe5d17a1611cbce1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-ghmp-889m-7cvx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00032.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/464JPNBWE433ZGYXO3KN72VR3KJPWHAW/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BNEK2K4IE7MPKRD6H36JXZMJKYS6I5GQ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DZMGTTV5XM4LA66FSIJSETNBBRRPJYOQ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20231116-0014/"
+    }
+  ],
+  "published": "2024-08-21T19:40:44.559Z",
+  "modified": "2024-08-21T19:58:33.335Z"
+}
