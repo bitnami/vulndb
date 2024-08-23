@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-ghost-2024-43409",
+  "details": "Ghost is a Node.js content management system. Improper authentication on some endpoints used for member actions would allow an attacker to perform member-only actions, and read member information. This security vulnerability is present in Ghost v4.46.0-v5.89.4. v5.89.5 contains a fix for this issue.",
+  "aliases": [
+    "CVE-2024-43409"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.46.0"
+            },
+            {
+              "fixed": "5.89.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/dac25612520b571f58679764ecc27109e641d1db"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-78x2-cwp9-5j42"
+    }
+  ],
+  "published": "2024-08-23T07:18:19.005Z",
+  "modified": "2024-08-23T07:57:36.787Z"
+}
