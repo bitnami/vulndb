@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-8088",
+  "details": "There is a HIGH severity vulnerability affecting the CPython \"zipfile\"module.When iterating over names of entries in a zip archive (for example, methodsof \"zipfile.ZipFile\" like \"namelist()\", \"iterdir()\", \"extractall()\", etc)the process can be put into an infinite loop with a maliciously craftedzip archive. This defect applies when reading only metadata or extractingthe contents of the zip archive. Programs that are not handlinguser-controlled zip archives are not affected.",
+  "aliases": [
+    "CVE-2024-8088"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.13.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/795f2597a4be988e2bb19b69ff9958e981cb894e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/8c7348939d8a3ecd79d630075f6be1b0c5b41f64"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/dcc5182f27c1500006a1ef78e10613bb45788dea"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e0264a61119d551658d9445af38323ba94fc16db"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/122905"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/122906"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/GNFCKVI4TCATKQLALJ5SN4L4CSPSMILU/"
+    }
+  ],
+  "published": "2024-08-26T08:35:36.505Z",
+  "modified": "2024-08-26T08:55:25.134Z"
+}
