@@ -12,6 +12,12 @@
         "name": "airflow",
         "purl": "pkg:bitnami/airflow"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -28,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
     ]
@@ -44,5 +50,5 @@
     }
   ],
   "published": "2024-08-23T07:16:07.397Z",
-  "modified": "2024-08-23T07:57:36.787Z"
+  "modified": "2024-08-26T08:55:25.134Z"
 }

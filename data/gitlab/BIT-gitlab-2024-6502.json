@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2024-2800",
-  "details": "ReDoS flaw in RefMatcher when matching branch names using wildcards in GitLab EE/CE affecting all versions from 11.3 prior to 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2 allows denial of service via Regex backtracking.",
+  "id": "BIT-gitlab-2024-6502",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 8.2 prior to 17.1.6 starting from 17.2 prior to 17.2.4, and starting from 17.3 prior to 17.3.1, which allows an attacker to create a branch with the same name as a deleted tag.",
   "aliases": [
-    "CVE-2024-2800"
+    "CVE-2024-6502"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -23,22 +23,22 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "11.3.0"
+              "introduced": "8.2.0"
             },
             {
-              "fixed": "17.0.6"
-            },
-            {
-              "introduced": "17.1.0"
-            },
-            {
-              "fixed": "17.1.4"
+              "fixed": "17.1.6"
             },
             {
               "introduced": "17.2.0"
             },
             {
-              "fixed": "17.2.2"
+              "fixed": "17.2.4"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.1"
             }
           ]
         }
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
@@ -54,13 +54,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451293"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/470647"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2416332"
+      "url": "https://hackerone.com/reports/2574561"
     }
   ],
-  "published": "2024-08-10T07:28:58.601Z",
+  "published": "2024-08-26T08:29:33.838Z",
   "modified": "2024-08-26T08:55:25.134Z"
 }
