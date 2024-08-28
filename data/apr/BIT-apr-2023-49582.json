@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-apr-2023-49582",
+  "details": "Lax permissions set by the Apache Portable Runtime library on Unix platforms would allow local users read access to named shared memory segments, potentially revealing sensitive application data. This issue does not affect non-Unix platforms, or builds with APR_USE_SHMEM_SHMGET=1 (apr.h)Users are recommended to upgrade to APR version 1.7.5, which fixes this issue.",
+  "aliases": [
+    "CVE-2023-49582"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr",
+        "purl": "pkg:bitnami/apr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.9.0"
+            },
+            {
+              "fixed": "1.7.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:portable_runtime:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/sntjc04t1rvjhdzz2tzmtz2zdnmv7dc4"
+    }
+  ],
+  "published": "2024-08-28T07:08:33.525Z",
+  "modified": "2024-08-28T07:48:53.613Z"
+}
