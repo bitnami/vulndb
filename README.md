@@ -128,6 +128,17 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2024-09
+
+- supabase
+- supabase-pljava
+- supabase-postgres-meta
+- supabase-postgres
+- supabase-realtime
+- supabase-storage
+- supabase-vault
+- supabase-wrappers
+
 ### 2024-07
 
 - ActiveMQ
