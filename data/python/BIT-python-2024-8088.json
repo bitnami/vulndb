@@ -12,12 +12,6 @@
         "name": "python",
         "purl": "pkg:bitnami/python"
       },
-      "severity": [
-        {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
-        }
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -34,7 +28,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Unknown",
     "cpes": [
       "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
     ]
@@ -67,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/GNFCKVI4TCATKQLALJ5SN4L4CSPSMILU/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/123270"
     }
   ],
   "published": "2024-08-26T08:35:36.505Z",
-  "modified": "2024-08-27T13:02:17.764Z"
+  "modified": "2024-08-29T07:55:14.602Z"
 }
