@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-8365",
+  "details": "Vault Community Edition and Vault Enterprise experienced a regression where functionality that HMAC’d sensitive headers in the configured audit device, specifically client tokens and token accessors, was removed. This resulted in the plaintext values of client tokens and token accessors being stored in the audit log. This vulnerability, CVE-2024-8365, was fixed in Vault Community Edition and Vault Enterprise 1.17.5 and Vault Enterprise 1.16.9.",
+  "aliases": [
+    "CVE-2024-8365"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.3"
+            },
+            {
+              "fixed": "1.17.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-18-vault-leaks-client-token-and-token-accessor-in-audit-devices/"
+    }
+  ],
+  "published": "2024-09-04T07:26:12.647Z",
+  "modified": "2024-09-04T07:47:50.338Z"
+}
