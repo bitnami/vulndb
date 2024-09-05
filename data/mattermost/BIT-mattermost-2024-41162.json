@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mattermost-2024-41162",
+  "details": "Mattermost versions 9.9.x <= 9.9.0, 9.5.x <= 9.5.6, 9.7.x <= 9.7.5 and 9.8.x <= 9.8.1 fail to disallow the modification of local channels by a remote, when shared channels are enabled, which allows a malicious remote to make an arbitrary local channel read-only.",
+  "aliases": [
+    "CVE-2024-41162"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mattermost",
+        "purl": "pkg:bitnami/mattermost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.7"
+            },
+            {
+              "introduced": "9.7.0"
+            },
+            {
+              "fixed": "9.7.6"
+            },
+            {
+              "introduced": "9.8.0"
+            },
+            {
+              "fixed": "9.8.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.9.0"
+            },
+            {
+              "last_affected": "9.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mattermost:mattermost_server:9.9.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://mattermost.com/security-updates"
+    }
+  ],
+  "published": "2024-09-05T19:14:11.857Z",
+  "modified": "2024-09-05T19:47:50.461Z"
+}
