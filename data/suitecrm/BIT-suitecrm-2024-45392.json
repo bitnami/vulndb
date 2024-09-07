@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2024-45392",
+  "details": "SuiteCRM is an open-source customer relationship management (CRM) system. Prior to version 7.14.5 and 8.6.2, insufficient access control checks allow a threat actor to delete records via the API. Versions 7.14.5 and 8.6.2 contain a patch for the issue.",
+  "aliases": [
+    "CVE-2024-45392"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.14.5"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.14.x/#_7_14_5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM/security/advisories/GHSA-8qfx-h7pm-2587"
+    }
+  ],
+  "published": "2024-09-07T07:24:03.320Z",
+  "modified": "2024-09-07T07:48:00.706Z"
+}
