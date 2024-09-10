@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2024-36137",
+  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.\r\rNode.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a \"read-only\" file descriptor to change the owner and permissions of a file.",
+  "aliases": [
+    "CVE-2024-36137"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.15.1"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/july-2024-security-releases"
+    }
+  ],
+  "published": "2024-09-10T07:13:50.127Z",
+  "modified": "2024-09-10T07:46:00.844Z"
+}
