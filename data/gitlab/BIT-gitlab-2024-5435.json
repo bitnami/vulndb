@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-5435",
+  "details": "An issue has been discovered discovered in GitLab EE/CE affecting all versions starting from 15.10 before 17.1.7, all versions starting from 17.2 before 17.2.5, all versions starting from 17.3 before 17.3.2 will disclose user password from repository mirror configuration.",
+  "aliases": [
+    "CVE-2024-5435"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.10.0"
+            },
+            {
+              "fixed": "17.1.7"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.5"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/464044"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2520722"
+    }
+  ],
+  "published": "2024-09-14T07:10:53.429Z",
+  "modified": "2024-09-14T07:47:34.001Z"
+}

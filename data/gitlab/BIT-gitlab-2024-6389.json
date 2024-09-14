@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-6389",
+  "details": "An issue was discovered in GitLab-CE/EE affecting all versions starting with 17.0 before 17.1.7, 17.2 before 17.2.5, and 17.3 before 17.3.2. An attacker as a guest user was able to access commit information via the release Atom endpoint, contrary to permissions.",
+  "aliases": [
+    "CVE-2024-6389"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.7"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.5"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/469367"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2573397"
+    }
+  ],
+  "published": "2024-09-14T07:09:28.429Z",
+  "modified": "2024-09-14T07:47:34.001Z"
+}
