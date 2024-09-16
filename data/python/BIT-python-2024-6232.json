@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-6232",
+  "details": "There is a MEDIUM severity vulnerability affecting CPython.Regular expressions that allowed excessive backtracking during tarfile.TarFile header parsing are vulnerable to ReDoS via specifically-crafted tar archives.",
+  "aliases": [
+    "CVE-2024-6232"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.6"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.10"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.15"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.20"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.8.20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4eaf4891c12589e3c7bdad5f5b076e4c8392dd06"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/743acbe872485dc18df4d8ab2dc7895187f062c4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/7d1f50cd92ff7e10a1c15a8f591dde8a6843a64d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b4225ca91547aa97ed3aca391614afbb255bc877"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/d449caf8a179e3b954268b3a88eb9170be3c8fbf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/ed3a49ea734ada357ff4442996fd4ae71d253373"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/121285"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/121286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/JRYFTPRHZRTLMZLWQEUHZSJXNHM4ACTY/"
+    }
+  ],
+  "published": "2024-09-16T12:04:20.671Z",
+  "modified": "2024-09-16T12:30:26.795Z"
+}
