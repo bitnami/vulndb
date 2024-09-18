@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2024-8124",
-  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.4 prior to 17.1.7, starting from 17.2 prior to 17.2.5, starting from 17.3 prior to 17.3.2  which could cause Denial of Service via sending a specific POST request.",
+  "id": "BIT-gitlab-2024-6685",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.7 prior to 17.1.7, 17.2 prior to 17.2.5, and 17.3 prior to 17.3.2,  where group runners information was disclosed to unauthorised group members.",
   "aliases": [
-    "CVE-2024-8124"
+    "CVE-2024-6685"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -23,13 +23,13 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "16.4.0"
+              "introduced": "16.7.0"
             },
             {
               "fixed": "17.1.7"
             },
             {
-              "introduced": "17.2.0"
+              "introduced": "17.3.0"
             },
             {
               "fixed": "17.2.5"
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
@@ -54,13 +54,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480533"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/472012"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2634880"
+      "url": "https://hackerone.com/reports/2584372"
     }
   ],
-  "published": "2024-09-14T07:06:46.628Z",
+  "published": "2024-09-18T07:17:55.746Z",
   "modified": "2024-09-18T07:54:44.479Z"
 }

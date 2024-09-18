@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2024-8124",
-  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.4 prior to 17.1.7, starting from 17.2 prior to 17.2.5, starting from 17.3 prior to 17.3.2  which could cause Denial of Service via sending a specific POST request.",
+  "id": "BIT-gitlab-2024-4283",
+  "details": "An issue has been discovered in GitLab EE affecting all versions starting from 11.1 before 17.1.7, 17.2 before 17.2.5, and 17.3 before 17.3.2. Under certain conditions an open redirect vulnerability could allow for an account takeover by breaking the OAuth flow.",
   "aliases": [
-    "CVE-2024-8124"
+    "CVE-2024-4283"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -23,7 +23,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "16.4.0"
+              "introduced": "11.1.0"
             },
             {
               "fixed": "17.1.7"
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
@@ -54,13 +54,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480533"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/458502"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2634880"
+      "url": "https://hackerone.com/reports/2474286"
     }
   ],
-  "published": "2024-09-14T07:06:46.628Z",
+  "published": "2024-09-18T07:23:19.137Z",
   "modified": "2024-09-18T07:54:44.479Z"
 }
