@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-45409",
+  "details": "The Ruby SAML library is for implementing the client side of a SAML authorization. Ruby-SAML in <= 12.2 and 1.13.0 <= 1.16.0 does not properly verify the signature of the SAML Response. An unauthenticated attacker with access to any signed saml document (by the IdP) can thus forge a SAML Response/Assertion with arbitrary contents. This would allow the attacker to log in as arbitrary user within the vulnerable system. This vulnerability is fixed in 1.17.0 and 1.12.3.",
+  "aliases": [
+    "CVE-2024-45409"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.11.10"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.0.8"
+            },
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "17.1.8"
+            },
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.2.7"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/commit/1ec5392bc506fe43a02dbb66b68741051c5ffeae"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/commit/4865d030cae9705ee5cdb12415c654c634093ae7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/security/advisories/GHSA-jw9c-mfg7-9rx2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/omniauth/omniauth-saml/security/advisories/GHSA-cvp8-5r8g-fhvq"
+    }
+  ],
+  "published": "2024-09-21T07:19:08.053Z",
+  "modified": "2024-09-21T07:51:35.919Z"
+}
