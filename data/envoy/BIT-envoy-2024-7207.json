@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2024-7207",
+  "details": "A flaw was found in Envoy. It is possible to modify or manipulate headers from external clients when pass-through routes are used for the ingress gateway. This issue could allow a malicious user to forge what is logged by Envoy as a requested path and cause the Envoy proxy to make requests to internal-only services or arbitrary external systems. This is a regression of the fix for CVE-2023-27487.",
+  "aliases": [
+    "CVE-2024-7207"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.28.7"
+            },
+            {
+              "introduced": "1.29.0"
+            },
+            {
+              "fixed": "1.29.9"
+            },
+            {
+              "introduced": "1.30.0"
+            },
+            {
+              "fixed": "1.30.6"
+            },
+            {
+              "introduced": "1.31.0"
+            },
+            {
+              "fixed": "1.31.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2024-7207"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2300352"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-ffhv-fvxq-r6mf"
+    }
+  ],
+  "published": "2024-09-26T07:10:09.460Z",
+  "modified": "2024-09-26T07:51:02.528Z"
+}
