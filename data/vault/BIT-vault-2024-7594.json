@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-7594",
+  "details": "Vault’s SSH secrets engine did not require the valid_principals list to contain a value by default. If the valid_principals and default_user fields of the SSH secrets engine configuration are not set, an SSH certificate requested by an authorized user to Vault’s SSH secrets engine could be used to authenticate as any user on the host. Fixed in Vault Community Edition 1.17.6, and in Vault Enterprise 1.17.6, 1.16.10, and 1.15.15.",
+  "aliases": [
+    "CVE-2024-7594"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.7"
+            },
+            {
+              "fixed": "1.17.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-20-vault-ssh-secrets-engine-configuration-did-not-restrict-valid-principals-by-default/70251"
+    }
+  ],
+  "published": "2024-09-29T07:29:47.029Z",
+  "modified": "2024-09-29T07:52:20.939Z"
+}
