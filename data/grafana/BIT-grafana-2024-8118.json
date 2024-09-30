@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2024-8118",
+  "details": "In Grafana, the wrong permission is applied to the alert rule write API endpoint, allowing users with permission to write external alert instances to also write alert rules.",
+  "aliases": [
+    "CVE-2024-8118"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "10.3.10"
+            },
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.9"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.5"
+            },
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "11.1.6"
+            },
+            {
+              "introduced": "11.2.0"
+            },
+            {
+              "fixed": "11.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2024-8118/"
+    }
+  ],
+  "published": "2024-09-30T08:53:49.537Z",
+  "modified": "2024-09-30T09:34:51.259Z"
+}
