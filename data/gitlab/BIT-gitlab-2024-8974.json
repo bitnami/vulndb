@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8974",
+  "details": "Information disclosure in Gitlab EE/CE affecting all versions from 15.6 prior to 17.2.8, 17.3 prior to 17.3.4, and 17.4 prior to 17.4.1 in specific conditions it was possible to disclose to an unauthorised user the path of a private project.\"",
+  "aliases": [
+    "CVE-2024-8974"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "17.2.8"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.4"
+            },
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/482843"
+    }
+  ],
+  "published": "2024-09-30T07:13:56.956Z",
+  "modified": "2024-09-30T07:53:48.346Z"
+}
