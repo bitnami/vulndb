@@ -26,7 +26,7 @@
               "introduced": "2.4.53"
             },
             {
-              "last_affected": "2.4.53"
+              "fixed": "2.4.54"
             }
           ]
         }
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:http_server:2.4.53:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:http_server:2.4.53:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T10:52:17.872Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-10-02T07:52:37.481Z"
 }
