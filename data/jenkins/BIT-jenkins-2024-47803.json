@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2024-47803",
+  "details": "Jenkins 2.478 and earlier, LTS 2.462.2 and earlier does not redact multi-line secret values in error messages generated for form submissions involving the `secretTextarea` form field.",
+  "aliases": [
+    "CVE-2024-47803"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.462.3"
+            },
+            {
+              "introduced": "2.463.0"
+            },
+            {
+              "fixed": "2.479.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2024-10-02/#SECURITY-3451"
+    }
+  ],
+  "published": "2024-10-04T07:09:20.135Z",
+  "modified": "2024-10-04T07:48:29.820Z"
+}

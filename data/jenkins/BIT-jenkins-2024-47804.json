@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2024-47804",
+  "details": "If an attempt is made to create an item of a type prohibited by `ACL#hasCreatePermission2` or `TopLevelItemDescriptor#isApplicableIn(ItemGroup)` through the Jenkins CLI or the REST API and either of these checks fail, Jenkins 2.478 and earlier, LTS 2.462.2 and earlier creates the item in memory, only deleting it from disk, allowing attackers with Item/Configure permission to save the item to persist it, effectively bypassing the item creation restriction.",
+  "aliases": [
+    "CVE-2024-47804"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.462.3"
+            },
+            {
+              "introduced": "2.463.0"
+            },
+            {
+              "fixed": "2.479.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2024-10-02/#SECURITY-3448"
+    }
+  ],
+  "published": "2024-10-04T07:09:09.019Z",
+  "modified": "2024-10-04T07:48:29.820Z"
+}
