@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mysql-client-2023-22084",
+  "details": "Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB).  Supported versions that are affected are 5.7.43 and prior, 8.0.34 and prior and  8.1.0. Easily exploitable vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server.  Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.9 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H).",
+  "aliases": [
+    "CVE-2023-22084"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-client",
+        "purl": "pkg:bitnami/mysql-client"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.4.32"
+            },
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.23"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.16"
+            },
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.10.7"
+            },
+            {
+              "introduced": "10.11.0"
+            },
+            {
+              "fixed": "10.11.6"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.4"
+            },
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "11.1.3"
+            },
+            {
+              "introduced": "11.2.0"
+            },
+            {
+              "fixed": "11.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00017.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OR7GNQAJZ7NMHT4HRDNROR3DS272KKET/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UCGSAQFWYIJRIYLZLHPS3MRUS4AQ5JQH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YZL2AT2ZUKB6K22UTISHEZ4JKG4VZ3VO/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20231027-0009/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2023.html"
+    }
+  ],
+  "published": "2024-10-05T07:11:17.535Z",
+  "modified": "2024-10-05T07:47:01.402Z"
+}
