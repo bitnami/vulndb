@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2024-41651",
-  "details": "An issue in Prestashop v.8.1.7 and before allows a remote attacker to execute arbitrary code via the module upgrade functionality.",
+  "details": "An issue in Prestashop v.8.1.7 and before allows a remote attacker to execute arbitrary code via the module upgrade functionality. NOTE: this is disputed by multiple parties, who report that exploitation requires that an attacker be able to hijack network requests made by an admin user (who, by design, is allowed to change the code that is running on the server).",
   "aliases": [
     "CVE-2024-41651"
   ],
@@ -46,5 +46,5 @@
     }
   ],
   "published": "2024-10-04T07:18:17.936Z",
-  "modified": "2024-10-04T07:48:29.820Z"
+  "modified": "2024-10-10T07:34:21.319Z"
 }
