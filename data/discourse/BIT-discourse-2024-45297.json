@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-45297",
+  "details": "Discourse is an open source platform for community discussion. Users can see topics with a hidden tag if they know the label/name of that tag. This issue has been patched in the latest stable, beta and tests-passed version of Discourse. All users area are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2024-45297"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-58xw-3qr3-53gp"
+    }
+  ],
+  "published": "2024-10-11T10:50:59.674Z",
+  "modified": "2024-10-11T11:30:10.758Z"
+}
