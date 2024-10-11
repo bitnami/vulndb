@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-subversion-2024-45720",
+  "details": "On Windows platforms, a \"best fit\" character encoding conversion of command line arguments to Subversion's executables (e.g., svn.exe, etc.) may lead to unexpected command line argument interpretation, including argument injection and execution of other programs, if a specially crafted command line argument string is processed.All versions of Subversion up to and including Subversion 1.14.3 are affected on Windows platforms only. Users are recommended to upgrade to version Subversion 1.14.4, which fixes this issue.Subversion is not affected on UNIX-like platforms.",
+  "aliases": [
+    "CVE-2024-45720"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "subversion",
+        "purl": "pkg:bitnami/subversion"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "1.14.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:subversion:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://subversion.apache.org/security/CVE-2024-45720-advisory.txt"
+    }
+  ],
+  "published": "2024-10-11T07:16:51.013Z",
+  "modified": "2024-10-11T07:34:07.152Z"
+}
