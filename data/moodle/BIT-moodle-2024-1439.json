@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-moodle-2024-1439",
+  "details": "Inadequate access control in Moodle LMS. This vulnerability could allow a local user with a student role to create arbitrary events intended for users with higher roles. It could also allow the attacker to add events to the calendar of all users without their prior consent.",
+  "aliases": [
+    "CVE-2024-1439"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/inadequate-access-control-vulnerability-moodle"
+    }
+  ],
+  "published": "2024-10-11T07:11:50.099Z",
+  "modified": "2024-10-11T07:34:07.152Z"
+}
