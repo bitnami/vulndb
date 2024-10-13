@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-vault-2024-9180",
+  "details": "A privileged Vault operator with write permissions to the root namespace’s identity endpoint could escalate their privileges to Vault’s root policy. Fixed in Vault Community Edition 1.18.0 and Vault Enterprise 1.18.0, 1.17.7, 1.16.11, and 1.15.16.",
+  "aliases": [
+    "CVE-2024-9180"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.7"
+            },
+            {
+              "fixed": "1.18.0"
+            },
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "fixed": "1.17.7"
+            },
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.11"
+            },
+            {
+              "introduced": "1.7.7"
+            },
+            {
+              "fixed": "1.15.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-21-vault-operators-in-root-namespace-may-elevate-their-privileges/70565"
+    }
+  ],
+  "published": "2024-10-13T07:18:02.220Z",
+  "modified": "2024-10-13T07:34:32.876Z"
+}
