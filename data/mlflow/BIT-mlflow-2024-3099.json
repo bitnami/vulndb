@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2024-3099",
+  "details": "A vulnerability in mlflow/mlflow version 2.11.1 allows attackers to create multiple models with the same name by exploiting URL encoding. This flaw can lead to Denial of Service (DoS) as an authenticated user might not be able to use the intended model, as it will open a different model each time. Additionally, an attacker can exploit this vulnerability to perform data model poisoning by creating a model with the same name, potentially causing an authenticated user to become a victim by using the poisoned model. The issue stems from inadequate validation of model names, allowing for the creation of models with URL-encoded names that are treated as distinct from their URL-decoded counterparts.",
+  "aliases": [
+    "CVE-2024-3099"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:-:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/8d96374a-ce8d-480e-9cb0-0a7e5165c24a"
+    }
+  ],
+  "published": "2024-10-13T19:12:05.301Z",
+  "modified": "2024-10-13T19:34:09.700Z"
+}
