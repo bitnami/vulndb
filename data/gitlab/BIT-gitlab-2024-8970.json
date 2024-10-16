@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8970",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.6 prior to 17.2.9, starting from 17.3 prior to 17.3.5, and starting from 17.4 prior to 17.4.2, which allows an attacker to trigger a pipeline as another user under certain circumstances.",
+  "aliases": [
+    "CVE-2024-8970"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.6.0"
+            },
+            {
+              "fixed": "17.2.9"
+            },
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.5"
+            },
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/490916"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2724948"
+    }
+  ],
+  "published": "2024-10-16T07:10:29.374Z",
+  "modified": "2024-10-16T07:38:45.754Z"
+}
