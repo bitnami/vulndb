@@ -22,11 +22,11 @@ jobs:
       allow_auto_merge: ${{ steps.lint.outputs.allow_auto_merge }}
     steps:
       - name: Install system deps
-        run: sudo apt-get install -y jq python3
+        run: sudo apt-get install -y jq python3 pipx
       - name: Install markdownlint
         run: npm install -g markdownlint-cli@0.33.0
       - name: Install check-jsonschema
-        run: python3 -m pip install check-jsonschema
+        run: pipx install check-jsonschema
       - uses: actions/checkout@v3
         name: Checkout Repository
       - id: lint
