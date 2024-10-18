@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2022-4973",
+  "details": "WordPress Core, in versions up to 6.0.2, is vulnerable to Authenticated Stored Cross-Site Scripting that can be exploited by users with access to the WordPress post and page editor, typically consisting of Authors, Contributors, and Editors making it possible to inject arbitrary web scripts into posts and pages that execute if the the_meta(); function is called on that page.",
+  "aliases": [
+    "CVE-2022-4973"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.2"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.39"
+            },
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.39"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.37"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.36"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.36"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.33"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.29"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.28"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.27"
+            },
+            {
+              "introduced": "4.6.0"
+            },
+            {
+              "fixed": "4.6.24"
+            },
+            {
+              "introduced": "4.7.0"
+            },
+            {
+              "fixed": "4.7.24"
+            },
+            {
+              "introduced": "4.8.0"
+            },
+            {
+              "fixed": "4.8.20"
+            },
+            {
+              "introduced": "4.9.0"
+            },
+            {
+              "fixed": "4.9.21"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.17"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.14"
+            },
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "fixed": "5.2.16"
+            },
+            {
+              "introduced": "5.3.0"
+            },
+            {
+              "fixed": "5.3.13"
+            },
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "fixed": "5.4.11"
+            },
+            {
+              "introduced": "5.5.0"
+            },
+            {
+              "fixed": "5.5.10"
+            },
+            {
+              "introduced": "5.6.0"
+            },
+            {
+              "fixed": "5.6.9"
+            },
+            {
+              "introduced": "5.7.0"
+            },
+            {
+              "fixed": "5.7.7"
+            },
+            {
+              "introduced": "5.8.0"
+            },
+            {
+              "fixed": "5.8.5"
+            },
+            {
+              "introduced": "5.9.0"
+            },
+            {
+              "fixed": "5.9.4"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/53961"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2022/08/wordpress-6-0-2-security-and-maintenance-release/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/blog/2022/08/wordpress-core-6-0-2-security-maintenance-release-what-you-need-to-know/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b5582e89-83e6-4898-b9fe-09eddeb5f7ae?source=cve"
+    }
+  ],
+  "published": "2024-10-18T07:22:50.306Z",
+  "modified": "2024-10-18T07:36:38.807Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-solr-2024-45217",
+  "details": "Insecure Default Initialization of Resource vulnerability in Apache Solr.New ConfigSets that are created via a Restore command, which copy a configSet from the backup and give it a new name, are created without setting the \"trusted\" metadata.ConfigSets that do not contain the flag are trusted implicitly if the metadata is missing, therefore this leads to \"trusted\" ConfigSets that may not have been created with an Authenticated request.\"trusted\" ConfigSets are able to load custom code into classloaders, therefore the flag is supposed to only be set when the request that uploads the ConfigSet is Authenticated & Authorized.This issue affects Apache Solr: from 6.6.0 before 8.11.4, from 9.0.0 before 9.7.0. This issue does not affect Solr instances that are secured via Authentication/Authorization.Users are primarily recommended to use Authentication and Authorization when running Solr. However, upgrading to version 9.7.0, or 8.11.4 will mitigate this issue otherwise.",
+  "aliases": [
+    "CVE-2024-45217"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "solr",
+        "purl": "pkg:bitnami/solr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.6.0"
+            },
+            {
+              "fixed": "8.11.4"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:solr:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://solr.apache.org/security.html#cve-2024-45217-apache-solr-configsets-created-during-a-backup-restore-command-are-trusted-implicitly"
+    }
+  ],
+  "published": "2024-10-18T07:18:24.823Z",
+  "modified": "2024-10-18T07:36:38.807Z"
+}
