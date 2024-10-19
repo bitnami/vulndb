@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-django-2024-45230",
+  "details": "An issue was discovered in Django 5.1 before 5.1.1, 5.0 before 5.0.9, and 4.2 before 4.2.16. The urlize() and urlizetrunc() template filters are subject to a potential denial-of-service attack via very large inputs with a specific sequence of characters.",
+  "aliases": [
+    "CVE-2024-45230"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.16"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "last_affected": "5.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:djangoproject:django:5.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/forum/#%21forum/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2024/sep/03/security-releases/"
+    }
+  ],
+  "published": "2024-10-19T07:08:51.488Z",
+  "modified": "2024-10-19T07:38:41.658Z"
+}

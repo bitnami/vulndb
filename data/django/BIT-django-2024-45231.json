@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-django-2024-45231",
+  "details": "An issue was discovered in Django v5.1.1, v5.0.9, and v4.2.16. The django.contrib.auth.forms.PasswordResetForm class, when used in a view implementing password reset flows, allows remote attackers to enumerate user e-mail addresses by sending password reset requests and observing the outcome (only when e-mail sending is consistently failing).",
+  "aliases": [
+    "CVE-2024-45231"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.16"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.9"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "last_affected": "5.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:djangoproject:django:5.1:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/forum/#%21forum/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2024/sep/03/security-releases/"
+    }
+  ],
+  "published": "2024-10-19T07:08:43.877Z",
+  "modified": "2024-10-19T07:38:41.658Z"
+}
