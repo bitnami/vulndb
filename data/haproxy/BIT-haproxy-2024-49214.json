@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-haproxy-2024-49214",
+  "details": "QUIC in HAProxy 3.1.x before 3.1-dev7, 3.0.x before 3.0.5, and 2.9.x before 2.9.11 allows opening a 0-RTT session with a spoofed IP address. This can bypass the IP allow/block list functionality.",
+  "aliases": [
+    "CVE-2024-49214"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.5"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/haproxy/haproxy/commit/f627b9272bd8ffca6f2f898bfafc6bf0b84b7d46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org/download/2.9/src/CHANGELOG"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org/download/3.0/src/CHANGELOG"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org/download/3.1/src/CHANGELOG"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mail-archive.com/haproxy%40formilux.org/msg45291.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mail-archive.com/haproxy%40formilux.org/msg45314.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mail-archive.com/haproxy%40formilux.org/msg45315.html"
+    }
+  ],
+  "published": "2024-10-22T11:56:51.321Z",
+  "modified": "2024-10-22T12:23:25.488Z"
+}
