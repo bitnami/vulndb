@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-workflows-2024-47827",
+  "details": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Due to a race condition in a global variable in 3.6.0-rc1, the argo workflows controller can be made to crash on-command by any user with access to execute a workflow. This vulnerability is fixed in 3.6.0-rc2.",
+  "aliases": [
+    "CVE-2024-47827"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-workflows",
+        "purl": "pkg:bitnami/argo-workflows"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0-rc1"
+            },
+            {
+              "fixed": "3.6.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:argo_workflows_project:argo_workflows:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/blob/ce7f9bfb9b45f009b3e85fabe5e6410de23c7c5f/workflow/metrics/metrics_k8s_request.go#L75"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/524406451f4dfa57bf3371fb85becdb56a2b309a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/pull/13641"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-ghjw-32xw-ffwr"
+    }
+  ],
+  "published": "2024-10-30T07:08:04.074Z",
+  "modified": "2024-10-30T07:37:44.365Z"
+}
