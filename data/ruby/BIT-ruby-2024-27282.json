@@ -12,6 +12,12 @@
         "name": "ruby",
         "purl": "pkg:bitnami/ruby"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:L"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -46,7 +52,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:ruby:*:*"
@@ -63,5 +69,5 @@
     }
   ],
   "published": "2024-06-04T09:56:49.809Z",
-  "modified": "2024-07-18T07:56:34.499Z"
+  "modified": "2024-11-02T07:36:38.597Z"
 }

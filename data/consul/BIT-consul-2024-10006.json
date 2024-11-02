@@ -27,6 +27,30 @@
             },
             {
               "fixed": "1.20.1"
+            },
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "fixed": "1.20.1"
+            },
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.3"
+            },
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.18.5"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "1.15.15"
             }
           ]
         }
@@ -37,7 +61,9 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:go:*:*"
     ]
   },
   "references": [
@@ -47,5 +73,5 @@
     }
   ],
   "published": "2024-11-01T07:07:54.503Z",
-  "modified": "2024-11-01T07:35:50.546Z"
+  "modified": "2024-11-02T07:36:38.597Z"
 }
