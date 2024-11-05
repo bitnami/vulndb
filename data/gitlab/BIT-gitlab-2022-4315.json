@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2020-13330",
-  "details": "An issue has been discovered in GitLab affecting versions prior to 12.10.13. GitLab was vulnerable to a stored XSS in import the Bitbucket project feature.",
+  "id": "BIT-gitlab-2022-4315",
+  "details": "An issue has been discovered in GitLab DAST analyzer affecting all versions starting from 2.0 before 3.0.55, which sends custom request headers with every request on the authentication page.",
   "aliases": [
-    "CVE-2020-13330"
+    "CVE-2022-4315"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "11.2.0"
+              "introduced": "2.0.0"
             },
             {
-              "fixed": "12.10.13"
+              "fixed": "3.0.55"
             }
           ]
         }
@@ -43,13 +43,17 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2020/CVE-2020-13330.json"
+      "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2022/CVE-2022-4315.json"
     },
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/issues/30017"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/384995"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1767525"
     }
   ],
-  "published": "2024-03-06T11:21:59.823Z",
+  "published": "2024-11-05T07:26:59.363Z",
   "modified": "2024-11-05T07:36:31.248Z"
 }

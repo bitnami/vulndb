@@ -26,19 +26,19 @@
               "introduced": "16.4.3"
             },
             {
-              "last_affected": "16.4.3"
+              "fixed": "16.4.4"
             },
             {
               "introduced": "16.5.3"
             },
             {
-              "last_affected": "16.5.3"
+              "fixed": "16.5.4"
             },
             {
               "introduced": "16.6.1"
             },
             {
-              "last_affected": "16.6.1"
+              "fixed": "16.6.2"
             }
           ]
         }
@@ -50,7 +50,9 @@
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:16.4.3:*:*:*:enterprise:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:16.5.3:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:16.6.1:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:16.6.1:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -60,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T10:54:37.083Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }

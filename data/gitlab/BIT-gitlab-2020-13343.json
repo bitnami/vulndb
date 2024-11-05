@@ -26,7 +26,19 @@
               "introduced": "11.2.0"
             },
             {
-              "fixed": "13.4.3"
+              "fixed": "13.2.10"
+            },
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.7"
+            },
+            {
+              "introduced": "13.4.0"
+            },
+            {
+              "fixed": "13.4.2"
             }
           ]
         }
@@ -37,7 +49,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -55,5 +68,5 @@
     }
   ],
   "published": "2024-03-06T11:21:44.793Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }
