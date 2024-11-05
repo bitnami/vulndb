@@ -33,17 +33,12 @@
             },
             {
               "fixed": "14.6.4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "14.7.0"
             },
             {
-              "last_affected": "14.7.0"
+              "fixed": "14.7.1"
             }
           ]
         }
@@ -54,7 +49,8 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:14.7.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:14.7.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -68,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:16:45.995Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }

@@ -26,30 +26,19 @@
               "introduced": "15.3.0"
             },
             {
-              "fixed": "16.5.5"
+              "fixed": "16.5.6"
             },
             {
               "introduced": "16.6.0"
             },
             {
               "fixed": "16.6.4"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "16.7.0"
             },
             {
-              "last_affected": "16.7.0"
-            },
-            {
-              "introduced": "16.7.1"
-            },
-            {
-              "last_affected": "16.7.1"
+              "fixed": "16.7.2"
             }
           ]
         }
@@ -62,7 +51,8 @@
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:16.7.0:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:16.7.1:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -76,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:58:30.571Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }

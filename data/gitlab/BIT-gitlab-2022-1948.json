@@ -26,7 +26,7 @@
               "introduced": "15.0.0"
             },
             {
-              "last_affected": "15.0.0"
+              "fixed": "15.0.1"
             }
           ]
         }
@@ -37,7 +37,9 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:15.0.0:*:*:*:community:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:15.0.0:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:15.0.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -55,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T11:15:44.294Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }

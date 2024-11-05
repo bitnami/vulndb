@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "13.3.0"
             },
             {
-              "fixed": "13.1.10"
+              "fixed": "13.3.4"
             },
             {
               "introduced": "13.2.0"
@@ -35,10 +35,10 @@
               "fixed": "13.2.8"
             },
             {
-              "introduced": "13.3.0"
+              "introduced": "13.1.0"
             },
             {
-              "fixed": "13.3.4"
+              "fixed": "13.1.10"
             }
           ]
         }
@@ -48,7 +48,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T11:22:38.789Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-05T07:36:31.248Z"
 }
