@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-alertmanager-2023-40577",
+  "details": "Alertmanager handles alerts sent by client applications such as the Prometheus server. An attacker with the permission to perform POST requests on the /api/v1/alerts endpoint could be able to execute arbitrary JavaScript code on the users of Prometheus Alertmanager. This issue has been fixed in Alertmanager version 0.2.51.",
+  "aliases": [
+    "CVE-2023-40577"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "alertmanager",
+        "purl": "pkg:bitnami/alertmanager"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.25.0"
+            },
+            {
+              "last_affected": "0.25.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prometheus:alertmanager:0.25.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/prometheus/alertmanager/security/advisories/GHSA-v86x-5fm3-5p7j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00011.html"
+    }
+  ],
+  "published": "2024-11-08T19:09:34.789Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}

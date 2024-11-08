@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-memcached-2021-37519",
+  "details": "Buffer Overflow vulnerability in authfile.c memcached 1.6.9 allows attackers to cause a denial of service via crafted authenticattion file.",
+  "aliases": [
+    "CVE-2021-37519"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/issues/805"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/pull/806/commits/264722ae4e248b453be00e97197dadc685b60fd0"
+    }
+  ],
+  "published": "2024-11-08T19:14:19.674Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}

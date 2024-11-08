@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-memcached-2020-10931",
+  "details": "Memcached 1.6.x before 1.6.2 allows remote attackers to cause a denial of service (daemon crash) via a crafted binary protocol header to try_read_command_binary in memcached.c.",
+  "aliases": [
+    "CVE-2020-10931"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.6.0"
+            },
+            {
+              "fixed": "1.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/commit/02c6a2b62ddcb6fa4569a591d3461a156a636305"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/issues/629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/wiki/ReleaseNotes162"
+    }
+  ],
+  "published": "2024-11-08T19:14:34.485Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}
