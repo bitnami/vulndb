@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-memcached-2023-46852",
+  "details": "In Memcached before 1.6.22, a buffer overflow exists when processing multiget requests in proxy mode, if there are many spaces after the \"get\" substring.",
+  "aliases": [
+    "CVE-2023-46852"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.22"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/commit/76a6c363c18cfe7b6a1524ae64202ac9db330767"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/compare/1.6.21...1.6.22"
+    }
+  ],
+  "published": "2024-11-08T19:14:04.774Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-memcached-2023-46853",
+  "details": "In Memcached before 1.6.22, an off-by-one error exists when processing proxy requests in proxy mode, if \\n is used instead of \\r\\n.",
+  "aliases": [
+    "CVE-2023-46853"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.22"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/commit/6987918e9a3094ec4fc8976f01f769f624d790fa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/compare/1.6.21...1.6.22"
+    }
+  ],
+  "published": "2024-11-08T19:13:57.572Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}

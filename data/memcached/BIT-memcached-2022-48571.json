@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-memcached-2022-48571",
+  "details": "memcached 1.6.7 allows a Denial of Service via multi-packet uploads in UDP.",
+  "aliases": [
+    "CVE-2022-48571"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/commit/6b319c8c7a29e9c353dec83dc92f01905f6c8966"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/09/msg00004.html"
+    }
+  ],
+  "published": "2024-11-08T19:14:12.282Z",
+  "modified": "2024-11-08T19:39:36.071Z"
+}
