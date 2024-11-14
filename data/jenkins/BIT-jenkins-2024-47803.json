@@ -12,6 +12,12 @@
         "name": "jenkins",
         "purl": "pkg:bitnami/jenkins"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -34,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
     ]
@@ -46,5 +52,5 @@
     }
   ],
   "published": "2024-10-04T07:09:20.135Z",
-  "modified": "2024-10-04T07:48:29.820Z"
+  "modified": "2024-11-14T07:37:52.787Z"
 }
