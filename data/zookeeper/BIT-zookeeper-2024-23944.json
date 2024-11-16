@@ -12,6 +12,12 @@
         "name": "zookeeper",
         "purl": "pkg:bitnami/zookeeper"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -34,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:apache:zookeeper:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:apache:zookeeper:*:*:*:*:*:maven:*:*"
@@ -51,5 +57,5 @@
     }
   ],
   "published": "2024-03-31T18:32:55.925Z",
-  "modified": "2024-07-18T07:56:34.499Z"
+  "modified": "2024-11-16T07:36:37.319Z"
 }
