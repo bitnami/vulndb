@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8180",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.3 before 17.3.7, 17.4 before 17.4.4, and 17.5 before 17.5.2. Improper output encoding could lead to XSS if CSP is not enabled.",
+  "aliases": [
+    "CVE-2024-8180"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "17.3.7"
+            },
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.4.4"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/11/13/patch-release-gitlab-17-5-2-released/#html-injection-in-vulnerability-code-flow-could-lead-to-xss-on-self-hosted-instances"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2654010"
+    }
+  ],
+  "published": "2024-11-16T07:11:28.184Z",
+  "modified": "2024-11-16T07:36:37.319Z"
+}

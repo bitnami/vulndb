@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-9633",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.3 before 17.3.7, all versions starting from 17.4 before 17.4.4, all versions starting from 17.5 before 17.5.2. This issue allows an attacker to create a group with a name matching an existing unique Pages domain, potentially leading to domain confusion attacks.",
+  "aliases": [
+    "CVE-2024-9633"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.3.0"
+            },
+            {
+              "fixed": "17.3.7"
+            },
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.4.4"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/498257"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2759470"
+    }
+  ],
+  "published": "2024-11-16T07:09:30.396Z",
+  "modified": "2024-11-16T07:36:37.319Z"
+}
