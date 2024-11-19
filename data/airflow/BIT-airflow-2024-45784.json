@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-airflow-2024-45784",
+  "details": "Apache Airflow versions before 2.10.3 contain a vulnerability that could expose sensitive configuration variables in task logs. This vulnerability allows DAG authors to unintentionally or intentionally log sensitive configuration variables. Unauthorized users could access these logs, potentially exposing critical data that could be exploited to compromise the security of the Airflow deployment. In version 2.10.3, secrets are now masked in task logs to prevent sensitive configuration variables from being exposed in the logging output. Users should upgrade to Airflow 2.10.3 or the latest version to eliminate this vulnerability. If you suspect that DAG authors could have logged the secret values to the logs and that your logs are not additionally protected, it is also recommended that you update those secrets.",
+  "aliases": [
+    "CVE-2024-45784"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.10.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/43040"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/k2jm55jztlbmk4zrlh10syvq3n57hl4h"
+    }
+  ],
+  "published": "2024-11-19T07:07:53.214Z",
+  "modified": "2024-11-19T07:38:41.912Z"
+}
