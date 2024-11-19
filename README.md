@@ -20,12 +20,25 @@ Please note that this database is populated with information from the year 2020 
 
 ## Table of contents
 
-- [How the database is created](#how-the-database-is-created)
-- [Deprecation policy](#deprecation-policy)
-- [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
-- [How to consume this CVE feed](#how-to-consume-this-cve-feed)
-- [Deprecation notes](#deprecation-notes)
-- [License](#license)
+- [The Bitnami Vulnerability Database](#the-bitnami-vulnerability-database)
+  - [Table of contents](#table-of-contents)
+  - [How the database is created](#how-the-database-is-created)
+    - [Available fields in config files](#available-fields-in-config-files)
+  - [Deprecation policy](#deprecation-policy)
+  - [How to consume this CVE feed](#how-to-consume-this-cve-feed)
+  - [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
+  - [Deprecation notes](#deprecation-notes)
+    - [2024-11](#2024-11)
+    - [2024-09](#2024-09)
+    - [2024-07](#2024-07)
+    - [2024-06](#2024-06)
+    - [2024-03](#2024-03)
+    - [2024-01](#2024-01)
+    - [2023-11](#2023-11)
+    - [2023-09](#2023-09)
+    - [2023-08](#2023-08)
+    - [2023-07](#2023-07)
+  - [License](#license)
 
 ## How the database is created
 
@@ -127,6 +140,12 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 [Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
 
 ## Deprecation notes
+
+### 2024-11
+
+- Airflow Exporter
+- Airflow Scheduler
+- Airflow Worker
 
 ### 2024-09
 
