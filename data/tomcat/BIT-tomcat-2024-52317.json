@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-tomcat-2024-52317",
+  "details": "Incorrect object re-cycling and re-use vulnerability in Apache Tomcat. Incorrect recycling of the request and response used by HTTP/2 requests could lead to request and/or response mix-up between users.This issue affects Apache Tomcat: from 11.0.0-M23 through 11.0.0-M26, from 10.1.27 through 10.1.30, from 9.0.92 through 9.0.95.Users are recommended to upgrade to version 11.0.0, 10.1.31 or 9.0.96, which fixes the issue.",
+  "aliases": [
+    "CVE-2024-52317"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0-m23"
+            },
+            {
+              "fixed": "11.0.0"
+            },
+            {
+              "introduced": "10.1.27"
+            },
+            {
+              "fixed": "10.1.31"
+            },
+            {
+              "introduced": "9.0.92"
+            },
+            {
+              "fixed": "9.0.96"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/ty376mrxy1mmxtw3ogo53nc9l3co3dfs"
+    }
+  ],
+  "published": "2024-11-20T07:20:06.896Z",
+  "modified": "2024-11-20T07:37:11.267Z"
+}
