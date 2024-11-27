@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -52,7 +52,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Critical",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
       "cpe:2.3:a:magento:magento:*:*:*:*:open_source:*:*:*",
@@ -66,5 +66,5 @@
     }
   ],
   "published": "2024-06-17T07:25:09.240Z",
-  "modified": "2024-08-08T07:57:19.922Z"
+  "modified": "2024-11-27T07:37:50.072Z"
 }

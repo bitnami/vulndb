@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -79,8 +79,12 @@
     {
       "type": "WEB",
       "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-020/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vicarius.io/vsociety/posts/understanding-the-wordpress-sql-injection-vulnerability-cve-2022-21661"
     }
   ],
   "published": "2024-03-06T11:10:19.099Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-27T07:37:50.072Z"
 }

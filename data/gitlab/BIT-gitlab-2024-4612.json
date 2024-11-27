@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -60,8 +60,12 @@
     {
       "type": "WEB",
       "url": "https://hackerone.com/reports/2479857"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/09/11/patch-release-gitlab-17-3-2-released/"
     }
   ],
   "published": "2024-09-14T07:13:08.316Z",
-  "modified": "2024-09-30T09:34:51.259Z"
+  "modified": "2024-11-27T07:37:50.072Z"
 }

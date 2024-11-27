@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2023-22474",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Parse Server uses the request header `x-forwarded-for` to determine the client IP address. If Parse Server doesn't run behind a proxy server, then a client can set this header and Parse Server will trust the value of the header. The incorrect client IP address will be used by various features in Parse Server. This allows to circumvent the security mechanism of the Parse Server option `masterKeyIps` by setting an allowed IP address as the `x-forwarded-for` header value. This issue has been patched in version 5.4.1. The mechanism to determine the client IP address has been rewritten. The correct IP address determination now requires to set the Parse Server option `trustProxy`.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Parse Server uses the request header `x-forwarded-for` to determine the client IP address. If Parse Server doesn't run behind a proxy server, then a client can set this header and Parse Server will trust the value of the header. The incorrect client IP address will be used by various features in Parse Server. This allows to circumvent the security mechanism of the Parse Server option `masterKeyIps` by setting an allowed IP address as the `x-forwarded-for` header value. This issue has been patched in version 5.4.1. The mechanism to determine the client IP address has been rewritten. The correct IP address determination now requires to set the Parse Server option `trustProxy`. ",
   "aliases": [
     "CVE-2023-22474"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-vm5r-c87r-pf6x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230309-0005/"
     }
   ],
   "published": "2024-03-06T11:01:03.891Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-27T07:37:50.072Z"
 }
