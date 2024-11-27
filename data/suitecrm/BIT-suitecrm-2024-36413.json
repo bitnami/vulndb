@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L"
         }
       ],
       "ranges": [
@@ -40,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
     ]
@@ -52,5 +52,5 @@
     }
   ],
   "published": "2024-06-12T07:37:52.608Z",
-  "modified": "2024-06-13T07:56:36.653Z"
+  "modified": "2024-11-27T19:40:48.342Z"
 }

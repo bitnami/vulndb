@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -67,8 +67,16 @@
     {
       "type": "WEB",
       "url": "https://www.postgresql.org/support/security/CVE-2024-7348/"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/08/11/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240822-0002/"
     }
   ],
   "published": "2024-08-10T07:32:17.691Z",
-  "modified": "2024-08-12T19:58:00.944Z"
+  "modified": "2024-11-27T19:40:48.342Z"
 }
