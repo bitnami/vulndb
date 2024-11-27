@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:C/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
     ]
@@ -70,5 +70,5 @@
     }
   ],
   "published": "2024-05-24T19:22:48.082Z",
-  "modified": "2024-05-24T19:52:49.448Z"
+  "modified": "2024-11-27T07:37:50.072Z"
 }
