@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:N"
         }
       ],
       "ranges": [
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
@@ -60,8 +60,12 @@
     {
       "type": "WEB",
       "url": "https://hackerone.com/reports/2478469"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/09/11/patch-release-gitlab-17-3-2-released/"
     }
   ],
   "published": "2024-09-14T07:06:22.032Z",
-  "modified": "2024-09-30T09:34:51.259Z"
+  "modified": "2024-11-27T19:40:48.342Z"
 }

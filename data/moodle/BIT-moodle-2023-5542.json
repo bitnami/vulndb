@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:moodle:moodle:4.2.2:*:*:*:*:*:*:*"
     ]
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2024-03-06T10:58:09.570Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-27T19:40:48.342Z"
 }

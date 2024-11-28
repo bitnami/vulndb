@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-cilium-2024-52529",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. For users with the following configuration: 1. An allow policy that selects a Layer 3 destination and a port range `AND` 2. A Layer 7 allow policy that selects a specific port within the first policy's range the Layer 7 enforcement would not occur for the traffic selected by the Layer 7 policy. This issue only affects users who use Cilium's port range functionality, which was introduced in Cilium v1.16. This issue is patched in PR #35150. This issue affects Cilium v1.16 between v1.16.0 and v1.16.3 inclusive. This issue is patched in Cilium v1.16.4. Users are advised to upgrade. Users with network policies that match the pattern described above can work around the issue by rewriting any policies that use port ranges to individually specify the ports permitted for traffic.",
+  "aliases": [
+    "CVE-2024-52529"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium",
+        "purl": "pkg:bitnami/cilium"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/35150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-xg58-75qf-9r67"
+    }
+  ],
+  "published": "2024-11-27T19:10:35.180Z",
+  "modified": "2024-11-27T19:40:48.342Z"
+}

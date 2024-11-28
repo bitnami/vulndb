@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -79,8 +79,24 @@
     {
       "type": "WEB",
       "url": "https://github.com/omniauth/omniauth-saml/security/advisories/GHSA-cvp8-5r8g-fhvq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2024/11/msg00006.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=41586031"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240926-0008/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ssoready.com/blog/engineering/ruby-saml-pwned-by-xml-signature-wrapping-attacks/"
     }
   ],
   "published": "2024-09-21T07:19:08.053Z",
-  "modified": "2024-09-21T07:51:35.919Z"
+  "modified": "2024-11-27T19:40:48.342Z"
 }
