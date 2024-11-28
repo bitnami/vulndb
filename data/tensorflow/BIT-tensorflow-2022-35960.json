@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -51,7 +51,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:google:tensorflow:2.8.0:*:*:*:*:*:*:*",
@@ -77,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:13:59.882Z",
-  "modified": "2024-03-06T17:05:41.420Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }

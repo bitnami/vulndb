@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:mattermost:mattermost_server:*:*:*:*:*:*:*:*"
     ]
@@ -46,5 +46,5 @@
     }
   ],
   "published": "2024-03-06T11:00:08.789Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }

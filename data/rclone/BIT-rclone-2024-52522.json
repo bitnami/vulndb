@@ -12,12 +12,6 @@
         "name": "rclone",
         "purl": "pkg:bitnami/rclone"
       },
-      "severity": [
-        {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
-        }
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -34,7 +28,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Unknown",
     "cpes": [
       "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
     ]
@@ -50,5 +44,5 @@
     }
   ],
   "published": "2024-11-19T07:18:21.819Z",
-  "modified": "2024-11-19T07:38:41.912Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }

@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L"
         }
       ],
       "ranges": [
@@ -40,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:hyperledger:fabric:*:*:*:*:*:*:*:*"
     ]
@@ -52,5 +52,5 @@
     }
   ],
   "published": "2024-07-18T19:21:26.059Z",
-  "modified": "2024-07-18T19:57:51.439Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }

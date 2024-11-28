@@ -12,6 +12,12 @@
         "name": "apache",
         "purl": "pkg:bitnami/apache"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -28,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
     ]
@@ -41,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240712-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/07/01/4"
     }
   ],
   "published": "2024-07-03T07:18:02.756Z",
-  "modified": "2024-07-13T07:54:56.240Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }
