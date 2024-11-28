@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8114",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 8.12 before 17.4.5, 17.5 before 17.5.3, and 17.6 before 17.6.1. This issue allows an attacker with access to a victim's Personal Access Token (PAT) to escalate privileges.",
+  "aliases": [
+    "CVE-2024-8114"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.12.0"
+            },
+            {
+              "fixed": "17.4.5"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.3"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480494"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2649822"
+    }
+  ],
+  "published": "2024-11-28T07:12:26.728Z",
+  "modified": "2024-11-28T07:40:31.384Z"
+}

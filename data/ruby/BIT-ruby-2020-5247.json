@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
         }
       ],
       "ranges": [
@@ -63,7 +63,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:ruby-lang:ruby:2.7.0:preview1:*:*:*:*:*:*"
@@ -100,5 +100,5 @@
     }
   ],
   "published": "2024-03-06T11:05:50.672Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2024-11-28T07:40:31.384Z"
 }

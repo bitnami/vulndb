@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8237",
+  "details": "A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting all versions prior to 12.6 prior to 17.4.5, 17.5 prior to 17.5.3, and 17.6 prior to 17.6.1. An attacker could cause a denial of service with a crafted cargo.toml file.",
+  "aliases": [
+    "CVE-2024-8237"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.6.0"
+            },
+            {
+              "fixed": "17.4.5"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.3"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480900"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2648665"
+    }
+  ],
+  "published": "2024-11-28T07:11:51.921Z",
+  "modified": "2024-11-28T07:40:31.384Z"
+}
