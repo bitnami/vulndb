@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2024-22017",
+  "details": "setuid() does not affect libuv's internal io_uring operations if initialized before the call to setuid().This allows the process to perform privileged operations despite presumably having dropped such privileges through a call to setuid().This vulnerability affects all users using version greater or equal than Node.js 18.18.0, Node.js 20.4.0 and Node.js 21.",
+  "aliases": [
+    "CVE-2024-22017"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.11.1"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "21.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/03/11/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2170226"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240517-0007/"
+    }
+  ],
+  "published": "2024-11-29T14:03:41.826Z",
+  "modified": "2024-11-29T14:28:10.495Z"
+}
