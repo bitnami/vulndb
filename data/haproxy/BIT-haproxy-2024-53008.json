@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-haproxy-2024-53008",
+  "details": "Inconsistent interpretation of HTTP requests ('HTTP Request/Response Smuggling') issue exists in HAProxy. If this vulnerability is exploited,  a remote attacker may access a path that is restricted by ACL (Access Control List) set on the product. As a result, the attacker may obtain sensitive information.",
+  "aliases": [
+    "CVE-2024-53008"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.19"
+            },
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.8.11"
+            },
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.10"
+            },
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy-2.6.git;a=commit;h=1afca10150ac3e4e2224055cc31b6f1e4a70efe2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy-2.8.git;a=commit;h=01c1056a44823c5ffb8f74660b32c099d9b5355b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy-2.9.git;a=commit;h=4bcaece344c8738dac1ab5bd8cc81e2a22701d71"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy-3.0.git;a=commit;h=95a607c4b3af09be2a495b9c2872ea252ccff603"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jvn.jp/en/jp/JVN88385716/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org/"
+    }
+  ],
+  "published": "2024-12-05T07:06:43.292Z",
+  "modified": "2024-12-05T07:34:22.895Z"
+}
