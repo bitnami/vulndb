@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9633",
-  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.3 before 17.3.7, all versions starting from 17.4 before 17.4.4, all versions starting from 17.5 before 17.5.2. This issue allows an attacker to create a group with a name matching an existing unique Pages domain, potentially leading to domain confusion attacks.",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.3 before 17.4.2, all versions starting from 17.5 before 17.5.4, all versions starting from 17.6 before 17.6.2. This issue allows an attacker to create a group with a name matching an existing unique Pages domain, potentially leading to domain confusion attacks.",
   "aliases": [
     "CVE-2024-9633"
   ],
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2024-11-16T07:09:30.396Z",
-  "modified": "2024-11-16T07:36:37.319Z"
+  "modified": "2024-12-07T07:33:31.069Z"
 }
