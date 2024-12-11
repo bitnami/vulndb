@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2023-23814",
+  "details": "Missing Authorization vulnerability in CodePeople CP Multi View Event Calendar  allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects CP Multi View Event Calendar : from n/a through 1.4.13.",
+  "aliases": [
+    "CVE-2023-23814"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:cp_multi_view_event_calendar_project:cp_multi_view_event_calendar:*:*:*:*:wordpress:wordpress:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/plugin/cp-multi-view-calendar/vulnerability/wordpress-calendar-event-multi-view-plugin-1-4-13-broken-access-control-vulnerability?_s_id=cve"
+    }
+  ],
+  "published": "2024-12-11T07:22:41.801Z",
+  "modified": "2024-12-11T07:36:45.271Z"
+}
