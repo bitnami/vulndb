@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2024-9287",
+  "details": "A vulnerability has been found in the CPython `venv` module and CLI where path names provided when creating a virtual environment were not quoted properly, allowing the creator to inject commands into virtual environment \"activation\" scripts (ie \"source venv/bin/activate\"). This means that attacker-controlled virtual environments are able to run commands when the virtual environment is activated. Virtual environments which are not created by an attacker or which aren't activated before being used (ie \"./venv/bin/python\") are not affected.",
+  "aliases": [
+    "CVE-2024-9287"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.9.21"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.16"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.11"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.8"
+            },
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/633555735a023d3e4d92ba31da35b1205f9ecbd7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/8450b2482586857d689b6658f08de9c8179af7db"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/9286ab3a107ea41bd3f3c3682ce2512692bdded8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/ae961ae94bf19c8f8c7fbea3d1c25cc55ce8ae97"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e52095a0c1005a87eed2276af7a1f2f66e2b6483"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/124651"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/124712"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/RSPJ2B5JL22FG3TKUJ7D7DQ4N5JRRBZL/"
+    }
+  ],
+  "published": "2024-12-13T12:39:42.210Z",
+  "modified": "2024-12-13T12:59:30.377Z"
+}
