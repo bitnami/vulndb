@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2024-45149",
-  "details": "Adobe Commerce versions 2.4.7-p2, 2.4.6-p7, 2.4.5-p9, 2.4.4-p10 and earlier are affected by an Improper Access Control vulnerability that could result in a Security feature bypass. A low-privileged attacker could leverage this vulnerability to bypass security measures and have a low impact on confidentiality. Exploitation of this issue does not require user interaction.",
+  "details": "Adobe Commerce versions 2.4.7-p2, 2.4.6-p7, 2.4.5-p9, 2.4.4-p10 and earlier are affected by an Improper Access Control vulnerability that could result in a Security feature bypass. A high-privileged attacker could leverage this vulnerability to bypass security measures and have a low impact on confidentiality. Exploitation of this issue does not require user interaction.",
   "aliases": [
     "CVE-2024-45149"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -52,7 +52,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:magento:magento:*:*:*:*:commerce:*:*:*",
       "cpe:2.3:a:magento:magento:*:*:*:*:open_source:php:*:*"
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2024-10-13T19:10:19.100Z",
-  "modified": "2024-10-13T19:34:09.700Z"
+  "modified": "2024-12-13T07:37:03.143Z"
 }
