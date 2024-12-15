@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-12292",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.0 prior to 17.4.6, starting from 17.5 prior to 17.5.4, and starting from 17.6 prior to 17.6.2, where sensitive information passed in GraphQL mutations may have been retained in GraphQL logs.",
+  "aliases": [
+    "CVE-2024-12292"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "17.4.6"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.4"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/475211"
+    }
+  ],
+  "published": "2024-12-15T19:21:20.800Z",
+  "modified": "2024-12-15T19:36:19.581Z"
+}

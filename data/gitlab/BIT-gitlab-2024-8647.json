@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8647",
+  "details": "An issue was discovered in GitLab affecting all versions starting 15.2 to 17.4.6, 17.5 prior to 17.5.4, and 17.6 prior to 17.6.2. On self hosted installs, it was possible to leak the anti-CSRF-token to an external site while the Harbor integration was enabled.",
+  "aliases": [
+    "CVE-2024-8647"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.2.0"
+            },
+            {
+              "fixed": "17.4.6"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.4"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/486051"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2666341"
+    }
+  ],
+  "published": "2024-12-15T19:09:27.207Z",
+  "modified": "2024-12-15T19:36:19.581Z"
+}
