@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-min-2023-23919",
+  "details": "A cryptographic vulnerability exists in Node.js <19.2.0, <18.14.1, <16.19.1, <14.21.3 that in some cases did does not clear the OpenSSL error stack after operations that may set it. This may lead to false positive errors during subsequent cryptographic operations that happen to be on the same thread. This in turn could be used to cause a denial of service.",
+  "aliases": [
+    "CVE-2023-23919"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.14.0"
+            },
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.21.3"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.12.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.19.1"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.11.0"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.14.1"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1808596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/february-2023-security-releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20230316-0008/"
+    }
+  ],
+  "published": "2024-12-16T14:00:33.620Z",
+  "modified": "2024-12-16T14:26:30.868Z"
+}

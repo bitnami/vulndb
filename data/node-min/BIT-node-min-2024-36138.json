@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-min-2024-36138",
+  "details": "Bypass incomplete fix of CVE-2024-27980, that arises from improper handling of batch files with all possible extensions on Windows via child_process.spawn / child_process.spawnSync. A malicious command line argument can inject arbitrary commands and achieve code execution even if the shell option is not enabled.",
+  "aliases": [
+    "CVE-2024-36138"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "18.20.4"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.15.1"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/july-2024-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20241108-0010/"
+    }
+  ],
+  "published": "2024-12-16T13:53:33.818Z",
+  "modified": "2024-12-16T14:26:30.868Z"
+}
