@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-min-2023-46809",
+  "details": "Node.js versions which bundle an unpatched version of OpenSSL or run against a dynamically linked version of OpenSSL which are unpatched are vulnerable to the Marvin Attack - https://people.redhat.com/~hkario/marvin/, if PCKS #1 v1.5 padding is allowed when performing RSA descryption using a private key.",
+  "aliases": [
+    "CVE-2023-46809"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "21.6.1"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.11.1"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "18.19.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/february-2024-security-releases"
+    }
+  ],
+  "published": "2024-12-16T13:56:00.211Z",
+  "modified": "2024-12-16T14:26:30.868Z"
+}

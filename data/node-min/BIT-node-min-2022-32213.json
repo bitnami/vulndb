@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-min-2022-32213",
+  "details": "The llhttp parser <v14.20.1, <v16.17.1 and <v18.9.1 in the http module in Node.js does not correctly parse and validate Transfer-Encoding headers and can lead to HTTP Request Smuggling (HRS).",
+  "aliases": [
+    "CVE-2022-32213"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.14.0"
+            },
+            {
+              "introduced": "14.15.0"
+            },
+            {
+              "fixed": "14.20.1"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.12.0"
+            },
+            {
+              "introduced": "16.13.0"
+            },
+            {
+              "fixed": "16.17.1"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:lts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-332410.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1524555"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/2ICG6CSIB3GUWH5DUSQEVX53MOJW7LYK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QCNN3YG2BCLS4ZEKJ3CLSUT6AS7AXTH3/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VMQK5L5SBYD47QQZ67LEMHNQ662GH3OY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/july-2022-security-releases/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5326"
+    }
+  ],
+  "published": "2024-12-16T14:02:40.134Z",
+  "modified": "2024-12-16T14:26:30.868Z"
+}
