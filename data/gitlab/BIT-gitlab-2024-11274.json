@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-11274",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.1 prior to 17.4.6, starting from 17.5 prior to 17.5.4, and starting from 17.6 prior to 17.6.2, injection of NEL headers in k8s proxy response could lead to session data exfiltration.",
+  "aliases": [
+    "CVE-2024-11274"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.1.0"
+            },
+            {
+              "fixed": "17.4.6"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.4"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/504707"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2813673"
+    }
+  ],
+  "published": "2024-12-16T07:24:08.091Z",
+  "modified": "2024-12-16T07:39:10.890Z"
+}
