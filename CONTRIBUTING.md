@@ -19,7 +19,7 @@ When submitting a PR make sure that:
 
 #### Sign Your Work
 
-The sign-off is a simple line at the end of the explanation for a commit. All commits needs to be signed. Your signature certifies that you wrote the patch or otherwise have the right to contribute the material. The rules are pretty simple, you only need to certify the guidelines from [developercertificate.org](https://developercertificate.org/).
+The sign-off is a simple line at the end of the explanation for a commit. All commits need to be signed. Your signature certifies that you wrote the patch or otherwise have the right to contribute the material. The rules are pretty simple, you only need to certify the guidelines from [developercertificate.org](https://developercertificate.org/).
 
 Then you just add a line to every git commit message:
 
@@ -49,7 +49,7 @@ Notice the `Author` and `Signed-off-by` lines match. If they don't your PR will 
 1. Changes are manually reviewed by Bitnami team members usually within a business day.
 2. Once the changes are accepted, the PR is tested (if needed) into the Bitnami CI pipeline.
 3. The PR is merged by the reviewer(s) in the GitHub `main` branch.
-4. Then our CI/CD system is going refresh the vulnerability database.
+4. Then our CI/CD system is going to refresh the vulnerability database.
 
-***NOTE***: Please note that, in terms of time, may be a slight difference between the appearance of the code in GitHub and the data processed after that code execution.
-
+> [!NOTE]
+> Please note that, in terms of time, there may be a slight difference between the appearance of the code in GitHub and the data processed after that code execution.
