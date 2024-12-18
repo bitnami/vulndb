@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-8116",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.9 before 17.4.6, 17.5 before 17.5.4, and 17.6 before 17.6.2. By using a specific GraphQL query, under specific conditions an unauthorized user can retrieve branch names.",
+  "aliases": [
+    "CVE-2024-8116"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.9.0"
+            },
+            {
+              "fixed": "17.4.6"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.4"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480509"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2666216"
+    }
+  ],
+  "published": "2024-12-18T07:12:29.491Z",
+  "modified": "2024-12-18T07:38:23.089Z"
+}
