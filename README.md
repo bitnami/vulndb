@@ -12,7 +12,8 @@
 
 # The Bitnami Vulnerability Database
 
-> ALPHA: we continue evolving this repository to be adopted by the most popular vulnerability scanners. This repository would have to break changes during this stage.
+> [!CAUTION]
+> ALPHA: We continue evolving this repository to be adopted by the most popular vulnerability scanners. This repository would have to break changes during this stage.
 
 This repository contains the data and configuration provided by [Bitnami](https://bitnami.com) to generate its vulnerability database.
 
