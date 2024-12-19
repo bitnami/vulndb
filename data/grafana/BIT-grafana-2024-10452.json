@@ -23,10 +23,34 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "10.4.0"
+              "introduced": "0"
             },
             {
-              "last_affected": "10.4.0"
+              "fixed": "10.4.13"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.8"
+            },
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "11.1.9"
+            },
+            {
+              "introduced": "11.2.0"
+            },
+            {
+              "fixed": "11.2.4"
+            },
+            {
+              "introduced": "11.3.0"
+            },
+            {
+              "fixed": "11.3.1"
             }
           ]
         }
@@ -36,7 +60,8 @@
   "database_specific": {
     "severity": "Low",
     "cpes": [
-      "cpe:2.3:a:grafana:grafana:10.4.0:*:*:*:*:go:*:*"
+      "cpe:2.3:a:grafana:grafana:10.4.0:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -46,5 +71,5 @@
     }
   ],
   "published": "2024-10-31T07:09:47.399Z",
-  "modified": "2024-11-09T07:38:29.950Z"
+  "modified": "2024-12-19T07:37:38.534Z"
 }
