@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2024-54133",
+  "details": "Action Pack is a framework for handling and responding to web requests. There is a possible Cross Site Scripting (XSS) vulnerability  in the `content_security_policy` helper starting in version 5.2.0 of Action Pack and prior to versions 7.0.8.7, 7.1.5.1, 7.2.2.1, and 8.0.0.1. Applications which set Content-Security-Policy (CSP) headers dynamically from untrusted user input may be vulnerable to carefully crafted inputs being able to inject new directives into the CSP. This could lead to a bypass of the CSP and its protection against XSS and other attacks. Versions 7.0.8.7, 7.1.5.1, 7.2.2.1, and 8.0.0.1 contain a fix. As a workaround, applications can avoid setting CSP headers dynamically from untrusted input, or can validate/sanitize that input.",
+  "aliases": [
+    "CVE-2024-54133"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "last_affected": "7.0.8"
+            },
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "last_affected": "7.1.3"
+            },
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "last_affected": "7.2.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:ruby:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/2e3f41e4538b9ca1044357f6644f037bbb7c6c49"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/3da2479cfe1e00177114b17e496213c40d286b3a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/5558e72f22fc69c1c407b31ac5fb3b4ce087b542"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/cb16a3bb515b5d769f73926d9757270ace691f1d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/security/advisories/GHSA-vfm5-rmrh-j26v"
+    }
+  ],
+  "published": "2024-12-20T09:49:12.115Z",
+  "modified": "2024-12-20T10:08:40.461Z"
+}

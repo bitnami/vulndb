@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2024-26144",
+  "details": "Rails is a web-application framework. Starting with version 5.2.0, there is a possible sensitive session information leak in Active Storage. By default, Active Storage sends a Set-Cookie header along with the user's session cookie when serving blobs. It also sets Cache-Control to public. Certain proxies may cache the Set-Cookie, leading to an information leak. The vulnerability is fixed in 7.0.8.1 and 6.1.7.7.",
+  "aliases": [
+    "CVE-2024-26144"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "last_affected": "6.1.7"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:ruby:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.rubyonrails.org/t/possible-sensitive-session-information-leak-in-active-storage/84945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/723f54566023e91060a67b03353e7c03e7436433"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/78fe149509fac5b05e54187aaaef216fbb5fd0d3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/security/advisories/GHSA-8h22-8cf7-hq6g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/CVE-2024-26144.yml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240510-0013/"
+    }
+  ],
+  "published": "2024-12-20T09:50:06.835Z",
+  "modified": "2024-12-20T10:08:40.461Z"
+}

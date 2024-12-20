@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-rails-2024-26143",
+  "details": "Rails is a web-application framework. There is a possible XSS vulnerability when using the translation helpers in Action Controller. Applications using translation methods like translate, or t on a controller, with a key ending in \"_html\", a :default key which contains untrusted user input, and the resulting string is used in a view, may be susceptible to an XSS vulnerability. The vulnerability is fixed in 7.1.3.1 and 7.0.8.1.",
+  "aliases": [
+    "CVE-2024-26143"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rails",
+        "purl": "pkg:bitnami/rails"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.0.8"
+            },
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "last_affected": "7.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rubyonrails:rails:*:*:*:*:*:ruby:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.rubyonrails.org/t/possible-xss-vulnerability-in-action-controller/84947"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/4c83b331092a79d58e4adffe4be5f250fa5782cc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/commit/5187a9ef51980ad1b8e81945ebe0462d28f84f9e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rails/rails/security/advisories/GHSA-9822-6m93-xqf4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionpack/CVE-2024-26143.yml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240510-0004/"
+    }
+  ],
+  "published": "2024-12-20T09:50:15.432Z",
+  "modified": "2024-12-20T10:08:40.461Z"
+}
