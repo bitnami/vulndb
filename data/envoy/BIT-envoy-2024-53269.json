@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2024-53269",
+  "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. When additional address are not ip addresses, then the Happy Eyeballs sorting algorithm will crash in data plane. This issue has been addressed in releases 1.32.2, 1.31.4, and 1.30.8. Users are advised to upgrade. Users unable to upgrade may disable Happy Eyeballs and/or change the IP configuration.",
+  "aliases": [
+    "CVE-2024-53269"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.32.0"
+            },
+            {
+              "fixed": "1.32.2"
+            },
+            {
+              "introduced": "1.31.0"
+            },
+            {
+              "fixed": "1.31.4"
+            },
+            {
+              "introduced": "1.30.0"
+            },
+            {
+              "fixed": "1.30.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/pull/37743/commits/3f62168d86aceb90f743f63b50cc711710b1c401"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-mfqp-7mmj-rm53"
+    }
+  ],
+  "published": "2024-12-20T07:08:41.110Z",
+  "modified": "2024-12-20T07:38:05.581Z"
+}

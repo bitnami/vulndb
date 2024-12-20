@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2024-53271",
+  "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. In affected versions envoy  does not properly handle http 1.1 non-101 1xx responses. This can lead to downstream failures in networked devices. This issue has been addressed in versions 1.31.5 and 1.32.3. Users are advised to upgrade. There are no known workarounds for this issue.",
+  "aliases": [
+    "CVE-2024-53271"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.31.0"
+            },
+            {
+              "fixed": "1.31.5"
+            },
+            {
+              "introduced": "1.32.0"
+            },
+            {
+              "fixed": "1.32.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/da56f6da63079baecef9183436ee5f4141a59af8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-rmm5-h2wv-mg4f"
+    }
+  ],
+  "published": "2024-12-20T07:08:24.205Z",
+  "modified": "2024-12-20T07:38:05.581Z"
+}
