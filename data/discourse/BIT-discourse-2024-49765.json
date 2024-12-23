@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-49765",
+  "details": "Discourse is an open source platform for community discussion. Sites that are using discourse connect but still have local logins enabled could allow attackers to bypass discourse connect to create accounts and login. This problem is patched in the latest version of Discourse. Users unable to upgrade who are using discourse connect may disable all other login methods as a workaround.",
+  "aliases": [
+    "CVE-2024-49765"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-v8rf-pvgm-xxf2"
+    }
+  ],
+  "published": "2024-12-23T19:10:38.115Z",
+  "modified": "2024-12-23T19:39:01.994Z"
+}

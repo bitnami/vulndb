@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-52794",
+  "details": "Discourse is an open source platform for community discussion. Users clicking on the lightbox thumbnails could be affected. This problem is patched in the latest version of Discourse. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2024-52794"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-m3v4-v2rp-hfm9"
+    }
+  ],
+  "published": "2024-12-23T19:10:22.128Z",
+  "modified": "2024-12-23T19:39:01.994Z"
+}
