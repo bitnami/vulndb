@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-suitecrm-2024-1644",
+  "details": "Suite CRM version 7.14.2 allows including local php files. This is possiblebecause the application is vulnerable to LFI.",
+  "aliases": [
+    "CVE-2024-1644"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.14.2"
+            },
+            {
+              "last_affected": "7.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:7.14.2:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://fluidattacks.com/advisories/silva/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/salesagility/SuiteCRM/"
+    }
+  ],
+  "published": "2025-01-01T07:18:59.119Z",
+  "modified": "2025-01-01T07:34:43.854Z"
+}
