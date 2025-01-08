@@ -98,7 +98,7 @@ jobs:
             Please check the related [action_run#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more information and the changes in the final files (too many files updated at the same time?).
       - name: Assign to a person to work on it
         if: ${{ always() && (needs.lint.result != 'success' || steps.merge.outcome != 'success' ) }}
-        uses: pozil/auto-assign-issue@v1.11.0
+        uses: pozil/auto-assign-issue@v2.1.2
         with:
           numOfAssignee: 1
           teams: ${{ secrets.SUPPORT_TEAM }}
