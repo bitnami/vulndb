@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Notify in Slack channel
         if: ${{ needs.s3-upload.result != 'success' }}
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v2.0.0
         with:
           channel-id: ${{ secrets.CD_SLACK_CHANNEL_ID }}
           payload: |
