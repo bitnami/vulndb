@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-0194",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 17.4 prior to 17.5.5, starting from 17.6 prior to 17.6.3, and starting from 17.7 prior to 17.7.1. Under certain conditions, access tokens may have been logged when API requests were made in a specific manner.",
+  "aliases": [
+    "CVE-2025-0194"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.5.5"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.3"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#possible-access-token-exposure-in-gitlab-logs"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/489459"
+    }
+  ],
+  "published": "2025-01-10T19:11:23.175Z",
+  "modified": "2025-01-10T19:39:30.875Z"
+}

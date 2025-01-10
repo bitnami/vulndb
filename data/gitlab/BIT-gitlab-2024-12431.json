@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-12431",
+  "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 15.5 before 17.5.5, 17.6 before 17.6.3, and 17.7 before 17.7.1, in which unauthorized users could manipulate the status of issues in public projects.",
+  "aliases": [
+    "CVE-2024-12431"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.5.0"
+            },
+            {
+              "fixed": "17.5.5"
+            },
+            {
+              "introduced": "17.6.0"
+            },
+            {
+              "fixed": "17.6.3"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/01/08/patch-release-gitlab-17-7-1-released/#unauthorized-user-can-manipulate-status-of-issues-in-public-projects"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/508742"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2877710"
+    }
+  ],
+  "published": "2025-01-10T19:24:59.289Z",
+  "modified": "2025-01-10T19:39:30.875Z"
+}
