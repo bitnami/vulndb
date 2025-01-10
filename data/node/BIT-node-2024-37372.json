@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2024-37372",
+  "details": "The Permission Model assumes that any path starting with two backslashes \\ has a four-character prefix that can be ignored, which is not always true. This subtle bug leads to vulnerable edge cases.",
+  "aliases": [
+    "CVE-2024-37372"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.15.1"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/07/11/6"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/07/19/3"
+    }
+  ],
+  "published": "2025-01-10T19:16:12.087Z",
+  "modified": "2025-01-10T19:39:30.875Z"
+}
