@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -58,7 +58,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
@@ -70,8 +70,12 @@
     {
       "type": "WEB",
       "url": "https://discuss.hashicorp.com/t/hcsec-2024-22-consul-l7-intentions-vulnerable-to-url-path-bypass"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250110-0004/"
     }
   ],
   "published": "2024-11-01T07:08:02.109Z",
-  "modified": "2024-11-09T07:38:29.950Z"
+  "modified": "2025-01-11T07:38:25.737Z"
 }
