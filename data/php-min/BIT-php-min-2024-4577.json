@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-php-min-2024-4577",
+  "details": "In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, when using Apache and PHP-CGI on Windows, if the system is set up to use certain code pages, Windows may use \"Best-Fit\" behavior to replace characters in command line given to Win32 API functions. PHP CGI module may misinterpret those characters as PHP options, which may allow a malicious user to pass options to PHP binary being run, and thus reveal the source code of scripts, run arbitrary PHP code on the server, etc.",
+  "aliases": [
+    "CVE-2024-4577"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.29"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.20"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/06/07/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://arstechnica.com/security/2024/06/php-vulnerability-allows-attackers-to-run-malicious-code-on-windows-servers/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://blog.orange.tw/2024/06/cve-2024-4577-yet-another-php-rce.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert.be/en/advisory/warning-php-remote-code-execution-patch-immediately"
+    },
+    {
+      "type": "WEB",
+      "url": "https://devco.re/blog/2024/06/06/security-alert-cve-2024-4577-php-cgi-argument-injection-vulnerability-en/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/11whoami99/CVE-2024-4577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rapid7/metasploit-framework/pull/19247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/watchtowrlabs/CVE-2024-4577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/xcanwin/CVE-2024-4577-PHP-RCE"
+    },
+    {
+      "type": "WEB",
+      "url": "https://isc.sans.edu/diary/30994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://labs.watchtowr.com/no-way-php-strikes-again-cve-2024-4577/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PKGTQUOA2NTZ3RXN22CSAUJPIRUYRB4B/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W45DBOH56NQDRTOM2DN2LNA2FZIMC3PK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240621-0008/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.imperva.com/blog/imperva-protects-against-critical-php-vulnerability-cve-2024-4577/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.php.net/ChangeLog-8.php#8.1.29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.php.net/ChangeLog-8.php#8.2.20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.php.net/ChangeLog-8.php#8.3.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vicarius.io/vsociety/posts/php-cgi-argument-injection-to-rce-cve-2024-4577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vicarius.io/vsociety/posts/php-cgi-os-command-injection-vulnerability-cve-2024-4577"
+    }
+  ],
+  "published": "2025-01-14T19:19:35.322Z",
+  "modified": "2025-01-14T19:40:59.218Z"
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-php-min-2020-7071",
+  "details": "In PHP versions 7.3.x below 7.3.26, 7.4.x below 7.4.14 and 8.0.0, when validating URL with functions like filter_var($url, FILTER_VALIDATE_URL), PHP will accept an URL with invalid password as valid URL. This may lead to functions that rely on URL being valid to mis-parse the URL and produce wrong data as components of the URL.",
+  "aliases": [
+    "CVE-2020-7071"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.26"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.14"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=77423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/07/msg00008.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202105-23"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210312-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2021/dsa-4856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/tns-2021-14"
+    }
+  ],
+  "published": "2025-01-14T19:23:03.501Z",
+  "modified": "2025-01-14T19:40:59.218Z"
+}

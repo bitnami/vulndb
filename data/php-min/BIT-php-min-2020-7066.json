@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-php-min-2020-7066",
+  "details": "In PHP versions 7.2.x below 7.2.29, 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using get_headers() with user-supplied URL, if the URL contains zero (\\0) character, the URL will be silently truncated at it. This may cause some software to make incorrect assumptions about the target of the get_headers() and possibly send some information to a wrong server.",
+  "aliases": [
+    "CVE-2020-7066"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.29"
+            },
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.16"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=79329"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/04/msg00021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200403-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4330-2/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4717"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4719"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/tns-2021-14"
+    }
+  ],
+  "published": "2025-01-14T19:23:37.002Z",
+  "modified": "2025-01-14T19:40:59.218Z"
+}
