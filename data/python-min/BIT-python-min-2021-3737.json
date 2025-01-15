@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-min-2021-3737",
+  "details": "A flaw was found in python. An improperly handled HTTP response in the HTTP client code of python may allow a remote attacker, who controls the HTTP server, to make the client script enter an infinite loop, consuming CPU time. The highest threat from this vulnerability is to system availability.",
+  "aliases": [
+    "CVE-2021-3737"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.14"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.11"
+            },
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.11"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.python.org/issue44022"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1995162"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/25916"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/26503"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/05/msg00024.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00039.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://python-security.readthedocs.io/vuln/urllib-100-continue-loop.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220407-0009/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ubuntu.com/security/CVE-2021-3737"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+    }
+  ],
+  "published": "2025-01-15T19:25:40.912Z",
+  "modified": "2025-01-15T19:42:48.672Z"
+}
