@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-php-min-2020-7061",
+  "details": "In PHP versions 7.3.x below 7.3.15 and 7.4.x below 7.4.3, while extracting PHAR files on Windows using phar extension, certain content inside PHAR file could lead to one-byte read past the allocated buffer. This could potentially lead to information disclosure or crash.",
+  "aliases": [
+    "CVE-2020-7061"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.27"
+            },
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.14"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=79171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202003-57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/tns-2021-14"
+    }
+  ],
+  "published": "2025-01-14T19:24:09.708Z",
+  "modified": "2025-01-14T19:40:59.218Z"
+}
