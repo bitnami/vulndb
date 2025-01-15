@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-php-min-2020-7070",
+  "details": "In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when PHP is processing incoming HTTP cookie values, the cookie names are url-decoded. This may lead to cookies with prefixes like __Host confused with cookies that decode to such prefix, thus leading to an attacker being able to forge cookie which is supposed to be secure. See also CVE-2020-8184 for more information.",
+  "aliases": [
+    "CVE-2020-7070"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.34"
+            },
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.23"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://cve.circl.lu/cve/CVE-2020-8184"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00045.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00067.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=79699"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/895727"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/10/msg00008.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7EVDN7D3IB4EAI4D3ZOM2OJKQ5SD7K4E/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/P2J3ZZDHCSX65T5QWV4AHBN7MOJXBEKG/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/RRU57N3OSYZPOMFWPRDNVH7EMYOTSZ66/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202012-16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20201016-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4583-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2021/dsa-4856"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/tns-2021-14"
+    }
+  ],
+  "published": "2025-01-15T07:20:46.087Z",
+  "modified": "2025-01-15T07:39:31.878Z"
+}
