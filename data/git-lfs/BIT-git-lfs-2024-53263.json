@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-git-lfs-2024-53263",
+  "details": "Git LFS is a Git extension for versioning large files. When Git LFS requests credentials from Git for a remote host, it passes portions of the host's URL to the `git-credential(1)` command without checking for embedded line-ending control characters, and then sends any credentials it receives back from the Git credential helper to the remote host. By inserting URL-encoded control characters such as line feed (LF) or carriage return (CR) characters into the URL, an attacker may be able to retrieve a user's Git credentials. This problem exists in all previous versions and is patched in v3.6.1. All users should upgrade to v3.6.1. There are no workarounds known at this time.",
+  "aliases": [
+    "CVE-2024-53263"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git-lfs",
+        "purl": "pkg:bitnami/git-lfs"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.1.0"
+            },
+            {
+              "fixed": "3.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:git_large_file_storage_project:git_large_file_storage:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/git-lfs/git-lfs/commit/0345b6f816e611d050c0df67b61f0022916a1c90"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git-lfs/git-lfs/releases/tag/v3.6.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git-lfs/git-lfs/security/advisories/GHSA-q6r2-x2cc-vrp7"
+    }
+  ],
+  "published": "2025-01-16T07:10:05.387Z",
+  "modified": "2025-01-16T07:39:35.925Z"
+}
