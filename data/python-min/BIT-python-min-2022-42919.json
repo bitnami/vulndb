@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-min-2022-42919",
+  "details": "Python 3.9.x before 3.9.16 and 3.10.x before 3.10.9 on Linux allows local privilege escalation in a non-default configuration. The Python multiprocessing library, when used with the forkserver start method on Linux, allows pickles to be deserialized from any user in the same machine local network namespace, which in many system configurations means any user on the same machine. Pickles can execute arbitrary code. Thus, this allows for local user privilege escalation to the user that any forkserver process is running as. Setting multiprocessing.util.abstract_sockets_supported to False is a workaround. The forkserver start method for multiprocessing is not the default start method. This issue is Linux specific because only Linux supports abstract namespace sockets. CPython before 3.9 does not make use of Linux abstract namespace sockets by default. Support for users manually specifying an abstract namespace socket was added as a bugfix in 3.7.8 and 3.8.3, but users would need to make specific uncommon API calls in order to do that in CPython before 3.9.",
+  "aliases": [
+    "CVE-2022-42919"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.3"
+            },
+            {
+              "fixed": "3.7.15"
+            },
+            {
+              "introduced": "3.8.3"
+            },
+            {
+              "fixed": "3.8.15"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.16"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/compare/v3.10.8...v3.10.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/compare/v3.9.15...v3.9.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/97514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/97514#issuecomment-1310277840"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FKGCQPIVHEAIJ77R3RSNSQWYBUDVWDKU/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/P2LHWWEI5OBQ6RELULMVU6KMDYG4WZXH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PI5DYIED6U26BGX5IRZWNCP6TY4M2ZGZ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QLUGZSEAO3MBWGKCUSMKQIRYJZKJCIOB/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/R6KGIRHSENZ4QAB234Z36HVIDTRJ3MFI/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/RDK3ZZBRYFO47ET3N4BNTKVXN47U6ICY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VCRKBB5Y5EWTJUNC7LK665WO64DDXSTN/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XX6LLAXGZVZ327REY6MDZRMMP47LJ53P/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202305-02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20221209-0006/"
+    }
+  ],
+  "published": "2025-01-16T07:22:21.502Z",
+  "modified": "2025-01-16T07:39:35.925Z"
+}
