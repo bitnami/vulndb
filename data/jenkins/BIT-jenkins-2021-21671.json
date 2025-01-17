@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21671",
-  "details": "Jenkins 2.299 and earlier, LTS 2.289.1 and earlier does not invalidate the previous session on login.",
+  "details": "Jenkins LTS 2.289.1 and earlier does not invalidate the previous session on login.",
   "aliases": [
     "CVE-2021-21671"
   ],
@@ -23,12 +23,6 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2.266.0"
-            },
-            {
-              "fixed": "2.300.0"
-            },
-            {
               "introduced": "2.277.1"
             },
             {
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -57,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:01:41.703Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-24804",
-  "details": "Discourse is an open source platform for community discussion. In stable versions prior to 2.8.3 and beta versions prior 2.9.0.beta4 erroneously expose groups. When a group with restricted visibility has been used to set the permissions of a category, the name of the group is leaked to any user that is able to see the category. To workaround the problem, a site administrator can remove groups with restricted visibility from any category's permissions setting.",
+  "details": "Discourse is an open source platform for community discussion. In stable versions prior to 2.8.3 erroneously expose groups. When a group with restricted visibility has been used to set the permissions of a category, the name of the group is leaked to any user that is able to see the category. To workaround the problem, a site administrator can remove groups with restricted visibility from any category's permissions setting.",
   "aliases": [
     "CVE-2022-24804"
   ],
@@ -29,29 +29,6 @@
               "fixed": "2.8.3"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta1"
-            },
-            {
-              "last_affected": "2.9.0-beta1"
-            },
-            {
-              "introduced": "2.9.0-beta2"
-            },
-            {
-              "last_affected": "2.9.0-beta2"
-            },
-            {
-              "introduced": "2.9.0-beta3"
-            },
-            {
-              "last_affected": "2.9.0-beta3"
-            }
-          ]
         }
       ]
     }
@@ -59,10 +36,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -76,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:06:36.976Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

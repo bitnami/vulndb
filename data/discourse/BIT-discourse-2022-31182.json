@@ -29,17 +29,6 @@
               "fixed": "2.8.7"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta7"
-            },
-            {
-              "last_affected": "2.9.0-beta7"
-            }
-          ]
         }
       ]
     }
@@ -47,8 +36,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -62,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:05:29.482Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21693",
-  "details": "When creating temporary files, agent-to-controller access to create those files is only checked after they've been created in Jenkins 2.318 and earlier, LTS 2.303.2 and earlier.",
+  "details": "When creating temporary files, agent-to-controller access to create those files is only checked after they've been created in Jenkins LTS 2.303.2 and earlier.",
   "aliases": [
     "CVE-2021-21693"
   ],
@@ -27,12 +27,6 @@
             },
             {
               "fixed": "2.303.3"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.319.0"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -53,5 +46,5 @@
     }
   ],
   "published": "2024-03-06T10:59:45.309Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

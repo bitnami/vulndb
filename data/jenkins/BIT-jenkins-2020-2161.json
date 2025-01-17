@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2020-2161",
-  "details": "Jenkins 2.227 and earlier, LTS 2.204.5 and earlier does not properly escape node labels that are shown in the form validation for label expressions on job configuration pages, resulting in a stored XSS vulnerability exploitable by users able to define node labels.",
+  "details": "Jenkins LTS 2.204.5 and earlier does not properly escape node labels that are shown in the form validation for label expressions on job configuration pages, resulting in a stored XSS vulnerability exploitable by users able to define node labels.",
   "aliases": [
     "CVE-2020-2161"
   ],
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.204.5"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.227.0"
+              "last_affected": "2.204.5"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -57,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:05:51.785Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

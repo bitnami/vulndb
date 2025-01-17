@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-24824",
-  "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can poison the cache for anonymous (i.e. not logged in) users, such that the users are shown the crawler view of the site instead of the HTML page. This can lead to a partial denial-of-service. This issue is patched in the latest stable, beta and tests-passed versions of Discourse. There are no known workarounds for this issue.",
+  "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can poison the cache for anonymous (i.e. not logged in) users, such that the users are shown the crawler view of the site instead of the HTML page. This can lead to a partial denial-of-service. This issue is patched in the latest stable version of Discourse. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-24824"
   ],
@@ -29,29 +29,6 @@
               "fixed": "2.8.3"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.9.0-beta1"
-            },
-            {
-              "last_affected": "2.9.0-beta1"
-            },
-            {
-              "introduced": "2.9.0-beta2"
-            },
-            {
-              "last_affected": "2.9.0-beta2"
-            },
-            {
-              "introduced": "2.9.0-beta3"
-            },
-            {
-              "last_affected": "2.9.0-beta3"
-            }
-          ]
         }
       ]
     }
@@ -59,10 +36,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -76,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:06:25.697Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

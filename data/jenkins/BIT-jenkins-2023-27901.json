@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2023-27901",
-  "details": "Jenkins 2.393 and earlier, LTS 2.375.3 and earlier uses the Apache Commons FileUpload library without specifying limits for the number of request parts introduced in version 1.5 for CVE-2023-24998 in org.kohsuke.stapler.RequestImpl, allowing attackers to trigger a denial of service.",
+  "details": "Jenkins LTS 2.375.3 and earlier uses the Apache Commons FileUpload library without specifying limits for the number of request parts introduced in version 1.5 for CVE-2023-24998 in org.kohsuke.stapler.RequestImpl, allowing attackers to trigger a denial of service.",
   "aliases": [
     "CVE-2023-27901"
   ],
@@ -27,12 +27,6 @@
             },
             {
               "fixed": "2.375.4"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.394.0"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -53,5 +46,5 @@
     }
   ],
   "published": "2024-03-06T10:56:20.197Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

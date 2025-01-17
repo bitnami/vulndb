@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21639",
-  "details": "Jenkins 2.286 and earlier, LTS 2.277.1 and earlier does not validate the type of object created after loading the data submitted to the `config.xml` REST API endpoint of a node, allowing attackers with Computer/Configure permission to replace a node with one of a different type.",
+  "details": "Jenkins LTS 2.277.1 and earlier does not validate the type of object created after loading the data submitted to the `config.xml` REST API endpoint of a node, allowing attackers with Computer/Configure permission to replace a node with one of a different type.",
   "aliases": [
     "CVE-2021-21639"
   ],
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.277.1"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.286.0"
+              "last_affected": "2.277.1"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -57,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:02:13.788Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2022-34171",
-  "details": "In Jenkins 2.321 through 2.355 (both inclusive) and LTS 2.332.1 through LTS 2.332.3 (both inclusive) the HTML output generated for new symbol-based SVG icons includes the 'title' attribute of 'l:ionicon' (until Jenkins 2.334) and 'alt' attribute of 'l:icon' (since Jenkins 2.335) without further escaping, resulting in a cross-site scripting (XSS) vulnerability.",
+  "details": "In Jenkins LTS 2.332.1 through LTS 2.332.3 (both inclusive) the HTML output generated for new symbol-based SVG icons includes the 'title' attribute of 'l:ionicon' (until Jenkins 2.334) and 'alt' attribute of 'l:icon' (since Jenkins 2.335) without further escaping, resulting in a cross-site scripting (XSS) vulnerability.",
   "aliases": [
     "CVE-2022-34171"
   ],
@@ -23,16 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2.321.0"
-            },
-            {
-              "fixed": "2.355.0"
-            },
-            {
               "introduced": "2.332.1"
             },
             {
-              "fixed": "2.332.3"
+              "last_affected": "2.332.3"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -53,5 +46,5 @@
     }
   ],
   "published": "2024-03-06T10:57:51.992Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

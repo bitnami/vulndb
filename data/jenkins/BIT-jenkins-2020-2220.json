@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2020-2220",
-  "details": "Jenkins 2.244 and earlier, LTS 2.235.1 and earlier does not escape the agent name in the build time trend page, resulting in a stored cross-site scripting vulnerability.",
+  "details": "Jenkins LTS 2.235.1 and earlier does not escape the agent name in the build time trend page, resulting in a stored cross-site scripting vulnerability.",
   "aliases": [
     "CVE-2020-2220"
   ],
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.235.1"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.244.0"
+              "last_affected": "2.235.1"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -57,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:05:25.108Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

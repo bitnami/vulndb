@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2023-39151",
-  "details": "Jenkins 2.415 and earlier, LTS 2.401.2 and earlier does not sanitize or properly encode URLs in build logs when transforming them into hyperlinks, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers able to control build log contents.",
+  "details": "Jenkins LTS 2.401.2 and earlier does not sanitize or properly encode URLs in build logs when transforming them into hyperlinks, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers able to control build log contents.",
   "aliases": [
     "CVE-2023-39151"
   ],
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.415.0"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.401.2"
+              "fixed": "2.401.3"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -57,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T10:55:13.466Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

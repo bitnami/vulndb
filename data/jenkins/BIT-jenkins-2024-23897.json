@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2024-23897",
-  "details": "Jenkins 2.441 and earlier, LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents, allowing unauthenticated attackers to read arbitrary files on the Jenkins controller file system.",
+  "details": "Jenkins LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents, allowing unauthenticated attackers to read arbitrary files on the Jenkins controller file system.",
   "aliases": [
     "CVE-2024-23897"
   ],
@@ -27,12 +27,6 @@
             },
             {
               "fixed": "2.426.3"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.442.0"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -73,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:53:54.098Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

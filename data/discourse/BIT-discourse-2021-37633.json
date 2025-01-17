@@ -29,23 +29,6 @@
               "fixed": "2.7.8"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.8.0-beta2"
-            },
-            {
-              "last_affected": "2.8.0-beta2"
-            },
-            {
-              "introduced": "2.8.0-beta3"
-            },
-            {
-              "last_affected": "2.8.0-beta3"
-            }
-          ]
         }
       ]
     }
@@ -53,9 +36,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.8.0:beta2:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:2.8.0:beta3:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -69,5 +50,5 @@
     }
   ],
   "published": "2024-03-06T11:09:55.961Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

@@ -23,34 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "10.0.0"
-            },
-            {
-              "fixed": "10.12.0"
-            },
-            {
-              "introduced": "10.13.0"
-            },
-            {
-              "fixed": "10.24.0"
-            },
-            {
-              "introduced": "12.0.0"
-            },
-            {
-              "fixed": "12.12.0"
-            },
-            {
               "introduced": "12.13.0"
             },
             {
               "fixed": "12.22.1"
-            },
-            {
-              "introduced": "14.0.0"
-            },
-            {
-              "fixed": "14.14.0"
             },
             {
               "introduced": "14.15.0"
@@ -63,6 +39,35 @@
             },
             {
               "fixed": "15.14.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "last_affected": "10.12.0"
+            },
+            {
+              "introduced": "10.13.0"
+            },
+            {
+              "last_affected": "10.24.0"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "last_affected": "12.12.0"
+            },
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "last_affected": "14.14.0"
             }
           ]
         }
@@ -195,5 +200,5 @@
     }
   ],
   "published": "2024-03-06T11:05:44.892Z",
-  "modified": "2024-06-23T19:56:34.118Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }
