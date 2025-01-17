@@ -26,12 +26,6 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.0.1"
-            },
-            {
-              "introduced": "0"
-            },
-            {
               "fixed": "3.1.0"
             }
           ]
@@ -40,16 +34,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "3.1.0-beta1"
+              "introduced": "0"
             },
             {
-              "last_affected": "3.1.0-beta1"
-            },
-            {
-              "introduced": "3.1.0-beta2"
-            },
-            {
-              "last_affected": "3.1.0-beta2"
+              "last_affected": "3.0.1"
             }
           ]
         }
@@ -59,10 +47,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.1.0:beta1:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.1.0:beta2:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -88,5 +74,5 @@
     }
   ],
   "published": "2024-03-06T10:58:39.576Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

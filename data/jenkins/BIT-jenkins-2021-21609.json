@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21609",
-  "details": "Jenkins 2.274 and earlier, LTS 2.263.1 and earlier does not correctly match requested URLs to the list of always accessible paths, allowing attackers without Overall/Read permission to access some URLs as if they did have Overall/Read permission.",
+  "details": "Jenkins LTS 2.263.1 and earlier does not correctly match requested URLs to the list of always accessible paths, allowing attackers without Overall/Read permission to access some URLs as if they did have Overall/Read permission.",
   "aliases": [
     "CVE-2021-21609"
   ],
@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.263.1"
-            },
-            {
-              "introduced": "0"
-            },
-            {
-              "fixed": "2.274.0"
+              "last_affected": "2.263.1"
             }
           ]
         }
@@ -42,7 +36,6 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
@@ -53,5 +46,5 @@
     }
   ],
   "published": "2024-03-06T11:02:54.589Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

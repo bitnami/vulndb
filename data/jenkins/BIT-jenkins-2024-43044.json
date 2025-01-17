@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2024-43044",
-  "details": "Jenkins 2.470 and earlier, LTS 2.452.3 and earlier allows agent processes to read arbitrary files from the Jenkins controller file system by using the `ClassLoaderProxy#fetchJar` method in the Remoting library.",
+  "details": "Jenkins LTS 2.452.3 and earlier allows agent processes to read arbitrary files from the Jenkins controller file system by using the `ClassLoaderProxy#fetchJar` method in the Remoting library.",
   "aliases": [
     "CVE-2024-43044"
   ],
@@ -33,12 +33,6 @@
             },
             {
               "fixed": "2.462.1"
-            },
-            {
-              "introduced": "2.463.0"
-            },
-            {
-              "fixed": "2.471.0"
             }
           ]
         }
@@ -48,7 +42,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
   "references": [
@@ -58,5 +52,5 @@
     }
   ],
   "published": "2024-08-09T07:23:05.050Z",
-  "modified": "2024-09-30T09:34:51.259Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

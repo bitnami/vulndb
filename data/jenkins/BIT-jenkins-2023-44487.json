@@ -23,12 +23,6 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2.415.0"
-            },
-            {
-              "fixed": "2.428.0"
-            },
-            {
               "introduced": "0"
             },
             {
@@ -42,9 +36,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
     ]
   },
   "references": [
@@ -614,5 +606,5 @@
     }
   ],
   "published": "2024-03-06T10:54:03.578Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-01-17T15:26:01.971Z"
 }

@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-min-2024-6923",
+  "details": "There is a MEDIUM severity vulnerability affecting CPython.The email module didn’t properly quote newlines for email headers when serializing an email message allowing for header injection when an email is serialized.",
+  "aliases": [
+    "CVE-2024-6923"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.8.20"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.20"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.15"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.10"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/06f28dc236708f72871c64d4bc4b4ea144c50147"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4766d1200fdf8b6728137aa2927a297e224d5fa7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4aaa4259b5a6e664b7316a4d60bdec7ee0f124d0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b158a76ce094897c870fb6b3de62887b7ccc33f1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f7be505d137a22528cb0fc004422c0081d5d90e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f7c0f09e69e950cf3c5ada9dbde93898eb975533"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/121650"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/122233"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/QH3BUOE2DYQBWP7NAQ7UNHPPOELKISRW/"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/08/01/3"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/08/02/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00005.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240926-0003/"
+    }
+  ],
+  "published": "2025-01-17T15:05:30.197Z",
+  "modified": "2025-01-17T15:26:01.971Z"
+}
