@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-wordpress-2024-12028",
+  "details": "The Friends plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on several REST API endpoints in all versions up to, and including, 3.2.1. This makes it possible for unauthenticated attackers to send arbitrary friend requests on behalf of another website, accept the friend request for the targeted website, and then communicate with the site as an accepted friend.",
+  "aliases": [
+    "CVE-2024-12028"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:alex.kirk:friends:*:*:*:*:wordpress:wordpress:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/plugins/friends/#developers"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/980b16d4-3c4a-4ed1-af46-f39f3ec6dd19?source=cve"
+    }
+  ],
+  "published": "2025-01-18T07:24:49.716Z",
+  "modified": "2025-01-18T07:39:36.580Z"
+}

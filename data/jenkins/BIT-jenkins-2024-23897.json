@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T10:53:54.098Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-01-18T07:39:36.580Z"
 }
