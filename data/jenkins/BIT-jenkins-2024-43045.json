@@ -42,7 +42,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -52,5 +53,5 @@
     }
   ],
   "published": "2024-08-09T07:22:49.547Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-01-19T07:40:20.493Z"
 }
