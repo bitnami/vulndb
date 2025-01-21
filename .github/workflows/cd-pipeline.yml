@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Upload modified files to s3'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 2 # to be able to obtain files changed in the latest commit
       - name: Install and configure s3cmd
@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Notify in Slack channel
         if: ${{ needs.s3-upload.result != 'success' }}
-        uses: slackapi/slack-github-action@v2.0.0
+        uses: slackapi/slack-github-action@485a9d42d3a73031f12ec201c457e2162c45d02d # v2.0.0
         with:
           channel-id: ${{ secrets.CD_SLACK_CHANNEL_ID }}
           payload: |
