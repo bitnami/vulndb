@@ -27,7 +27,7 @@ jobs:
         run: npm install -g markdownlint-cli@0.33.0
       - name: Install check-jsonschema
         run: pipx install check-jsonschema
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         name: Checkout Repository
       - id: lint
         name: Lint modified files
@@ -65,7 +65,7 @@ jobs:
         if: |
           needs.lint.result == 'success' &&
           needs.lint.outputs.allow_auto_merge == 'true'
-        uses: hmarr/auto-approve-action@v4.0.0
+        uses: hmarr/auto-approve-action@f0939ea97e9205ef24d872e76833fa908a770363 # v4.0.0
         with:
           pull-request-number: ${{ github.event.number }}
       - name: Merge
@@ -73,7 +73,7 @@ jobs:
         if: |
           needs.lint.result == 'success' &&
           needs.lint.outputs.allow_auto_merge == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           result-encoding: string
           retries: 3
@@ -89,7 +89,7 @@ jobs:
       # post a comment on the PR and assign a maintainer agent to review it
       - name: Manual review required
         if: ${{ always() && (needs.lint.result != 'success' || steps.merge.outcome != 'success' ) }}
-        uses: peter-evans/create-or-update-comment@v4.0.0
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
         with:
           issue-number: ${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -98,7 +98,7 @@ jobs:
             Please check the related [action_run#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more information and the changes in the final files (too many files updated at the same time?).
       - name: Assign to a person to work on it
         if: ${{ always() && (needs.lint.result != 'success' || steps.merge.outcome != 'success' ) }}
-        uses: pozil/auto-assign-issue@v2.1.2
+        uses: pozil/auto-assign-issue@c015a6a3f410f12f58255c3d085fd774312f7a2f # v2.1.2
         with:
           numOfAssignee: 1
           teams: ${{ secrets.SUPPORT_TEAM }}
