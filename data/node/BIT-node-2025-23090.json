@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2025-23090",
+  "details": "With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage.This vulnerability affects Permission Model users (--permission) on Node.js v20, v22, and v23.",
+  "aliases": [
+    "CVE-2025-23090"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.18.2"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.13.1"
+            },
+            {
+              "introduced": "23.0.0"
+            },
+            {
+              "fixed": "23.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2575105"
+    }
+  ],
+  "published": "2025-01-25T19:13:41.210Z",
+  "modified": "2025-01-25T19:38:28.549Z"
+}
