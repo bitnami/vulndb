@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2025-23088",
+  "details": "This CVE has been issued to inform users that they are using End-of-Life (EOL) versions of Node.js. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components).\r\rUsers are advised to upgrade to actively supported versions of Node.js to ensure continued security updates and support.",
+  "aliases": [
+    "CVE-2025-23088"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "last_affected": "19.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/january-2025-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://endoflife.date/nodejs"
+    }
+  ],
+  "published": "2025-01-25T07:15:34.705Z",
+  "modified": "2025-01-25T07:40:30.012Z"
+}
