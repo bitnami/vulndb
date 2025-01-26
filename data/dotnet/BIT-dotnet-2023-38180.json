@@ -26,13 +26,13 @@
               "introduced": "6.0.0"
             },
             {
-              "last_affected": "6.0.0"
+              "fixed": "6.0.21"
             },
             {
               "introduced": "7.0.0"
             },
             {
-              "last_affected": "7.0.0"
+              "fixed": "7.0.10"
             }
           ]
         }
@@ -43,7 +43,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:microsoft:.net:6.0.0:-:*:*:*:*:*:*",
-      "cpe:2.3:a:microsoft:.net:7.0.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:microsoft:.net:7.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -61,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T10:52:18.075Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-26T19:37:55.934Z"
 }

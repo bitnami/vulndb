@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2025-23087",
+  "details": "This CVE has been issued to inform users that they are using End-of-Life (EOL) versions of Node.js. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components).\r\rUsers are advised to upgrade to actively supported versions of Node.js to ensure continued security updates and support.",
+  "aliases": [
+    "CVE-2025-23087"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "last_affected": "17.9.1"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "last_affected": "16.20.2"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "last_affected": "15.14.0"
+            },
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "last_affected": "14.21.3"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "last_affected": "13.14.0"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "last_affected": "12.22.12"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "last_affected": "11.15.0"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "last_affected": "10.24.1"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "last_affected": "9.11.2"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "last_affected": "8.17.0"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "last_affected": "7.10.1"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "last_affected": "6.17.1"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "last_affected": "5.12.0"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "last_affected": "4.9.1"
+            },
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "last_affected": "3.3.1"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "last_affected": "2.13.2"
+            },
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "last_affected": "1.8.4"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "0.12.18"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/january-2025-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://endoflife.date/nodejs"
+    }
+  ],
+  "published": "2025-01-26T19:13:59.600Z",
+  "modified": "2025-01-26T19:37:55.934Z"
+}

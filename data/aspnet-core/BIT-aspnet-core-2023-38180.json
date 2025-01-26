@@ -26,7 +26,7 @@
               "introduced": "2.1.0"
             },
             {
-              "last_affected": "2.1.0"
+              "fixed": "2.1.40"
             }
           ]
         }
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:microsoft:asp.net_core:2.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:microsoft:asp.net_core:2.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:51:11.502Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-01-26T19:37:55.934Z"
 }
