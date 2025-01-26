@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-cilium-2025-23047",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. An insecure default `Access-Control-Allow-Origin` header value could lead to sensitive data exposure for users of Cilium versions 1.14.0 through 1.14.7, 1.15.0 through 1.15.11, and 1.16.0 through 1.16.4 who deploy Hubble UI using either Cilium CLI or via the Cilium Helm chart. A user with access to a Hubble UI instance affected by this issue could leak configuration details about the Kubernetes cluster which Hubble UI is monitoring, including node names, IP addresses, and other metadata about workloads and the cluster networking configuration. In order for this vulnerability to be exploited, a victim would have to first visit a malicious page. This issue is fixed in Cilium v1.14.18, v1.15.12, and v1.16.5. As a workaround, users who deploy Hubble UI using the Cilium Helm chart directly can remove the CORS headers from the Helm template as shown in the patch from commit a3489f190ba6e87b5336ee685fb6c80b1270d06d.",
+  "aliases": [
+    "CVE-2025-23047"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium",
+        "purl": "pkg:bitnami/cilium"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "fixed": "1.14.18"
+            },
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.15.12"
+            },
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/a3489f190ba6e87b5336ee685fb6c80b1270d06d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-h78m-j95m-5356"
+    }
+  ],
+  "published": "2025-01-26T07:08:49.599Z",
+  "modified": "2025-01-26T07:39:23.514Z"
+}
