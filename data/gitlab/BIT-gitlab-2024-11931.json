@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-11931",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 17.0 prior to 17.6.4, from 17.7 prior to 17.7.3, and from 17.8 prior to 17.8.1. Under certain conditions, it may have been possible for users with developer role to exfiltrate protected CI variables via CI lint.",
+  "aliases": [
+    "CVE-2024-11931"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.6.4"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.3"
+            },
+            {
+              "introduced": "17.8.0"
+            },
+            {
+              "fixed": "17.8.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/480901"
+    }
+  ],
+  "published": "2025-01-28T07:25:07.907Z",
+  "modified": "2025-01-28T07:40:16.829Z"
+}
