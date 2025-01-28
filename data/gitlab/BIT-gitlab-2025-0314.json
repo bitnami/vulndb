@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-0314",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.2 before 17.6.4, 17.7 before 17.7.3, and 17.8 before 17.8.1. Improper rendering of certain file types lead to cross-site scripting.",
+  "aliases": [
+    "CVE-2025-0314"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.2.0"
+            },
+            {
+              "fixed": "17.6.4"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.3"
+            },
+            {
+              "introduced": "17.8.0"
+            },
+            {
+              "fixed": "17.8.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/512118"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2922313"
+    }
+  ],
+  "published": "2025-01-28T07:10:14.614Z",
+  "modified": "2025-01-28T07:40:16.829Z"
+}
