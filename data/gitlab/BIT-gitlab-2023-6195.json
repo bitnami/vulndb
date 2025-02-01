@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2023-6195",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.5 prior to 16.9.7, starting from 16.10 prior to 16.10.5, and starting from 16.11 prior to 16.11.2. GitLab was vulnerable to Server Side Request Forgery when an attacker uses a malicious URL in the markdown  image value when importing a GitHub repository.",
+  "aliases": [
+    "CVE-2023-6195"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.5.0"
+            },
+            {
+              "fixed": "16.9.7"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.5"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/432276"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2249268"
+    }
+  ],
+  "published": "2025-02-01T07:29:24.815Z",
+  "modified": "2025-02-01T07:43:18.500Z"
+}
