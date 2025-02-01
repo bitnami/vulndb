@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-argo-cd-2025-23216",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. A vulnerability was discovered in Argo CD that exposed secret values in error messages and the diff view when an invalid Kubernetes Secret resource was synced from a repository. The vulnerability assumes the user has write access to the repository and can exploit it, either intentionally or unintentionally, by committing an invalid Secret to repository and triggering a Sync. Once exploited, any user with read access to Argo CD can view the exposed secret data. The vulnerability is fixed in v2.13.4, v2.12.10, and v2.11.13.",
+  "aliases": [
+    "CVE-2025-23216"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.13.0"
+            },
+            {
+              "fixed": "2.13.4"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.10"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/6f5537bdf15ddbaa0f27a1a678632ff0743e4107"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-47g2-qmh2-749v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/gitops-engine/commit/7e21b91e9d0f64104c8a661f3f390c5e6d73ddca"
+    }
+  ],
+  "published": "2025-02-01T07:09:00.719Z",
+  "modified": "2025-02-01T07:43:18.500Z"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2024-43709",
+  "details": "An allocation of resources without limits or throttling in Elasticsearch can lead to an OutOfMemoryError exception resulting in a crash via a specially crafted query using an SQL function.",
+  "aliases": [
+    "CVE-2024-43709"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.0"
+            },
+            {
+              "fixed": "7.17.21"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.13.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-7-17-21-and-8-13-3-security-update-esa-2024-25/373442"
+    }
+  ],
+  "published": "2025-02-01T07:09:48.913Z",
+  "modified": "2025-02-01T07:43:18.500Z"
+}
