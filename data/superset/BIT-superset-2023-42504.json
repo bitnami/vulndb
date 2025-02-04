@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2023-42504",
+  "details": "An authenticated malicious user could initiate multiple concurrent requests, each requesting multiple dashboard exports, leading to a possible denial of service.This issue affects Apache Superset: before 3.0.0",
+  "aliases": [
+    "CVE-2023-42504"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/11/28/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/yzq5gk1y9lyw6nxwd3xdkxg1djqw1h6l"
+    }
+  ],
+  "published": "2025-02-04T19:25:08.295Z",
+  "modified": "2025-02-04T19:41:14.399Z"
+}

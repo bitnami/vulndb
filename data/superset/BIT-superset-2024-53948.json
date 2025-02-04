@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2024-53948",
+  "details": "Generation of Error Message Containing analytics metadata Information in Apache Superset.This issue affects Apache Superset: before 4.1.0.Users are recommended to upgrade to version 4.1.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2024-53948"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/8howpf3png0wrgpls46ggk441oczlfvf"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/12/09/3"
+    }
+  ],
+  "published": "2025-02-04T19:23:07.403Z",
+  "modified": "2025-02-04T19:41:14.399Z"
+}

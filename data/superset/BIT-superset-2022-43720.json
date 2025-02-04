@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2022-43720",
+  "details": "An authenticated attacker with write CSS template permissions can create a record with specific HTML tags that will not get properly escaped by the toast message displayed when a user deletes that specific CSS template record. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
+  "aliases": [
+    "CVE-2022-43720"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.5.2"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "last_affected": "2.0.0"
+            },
+            {
+              "introduced": "2.0.0-rc1"
+            },
+            {
+              "last_affected": "2.0.0-rc1"
+            },
+            {
+              "introduced": "2.0.0-rc2"
+            },
+            {
+              "last_affected": "2.0.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/jts6x56kghr9mbowb653bk70pl81jp8l"
+    }
+  ],
+  "published": "2025-02-04T19:26:48.906Z",
+  "modified": "2025-02-04T19:41:14.399Z"
+}

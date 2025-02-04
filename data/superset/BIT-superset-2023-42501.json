@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2023-42501",
+  "details": "Unnecessary read permissions within the Gamma role would allow authenticated users to read configured CSS templates and annotations.This issue affects Apache Superset: before 2.1.2.Users should upgrade to version or above 2.1.2 and run `superset init` to reconstruct the Gamma role or remove `can_read` permission from the mentioned resources.",
+  "aliases": [
+    "CVE-2023-42501"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/11/27/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/vk1rmrh9kz0chjmc9tk7o3md6zpz4ygh"
+    }
+  ],
+  "published": "2025-02-04T19:25:21.205Z",
+  "modified": "2025-02-04T19:41:14.399Z"
+}

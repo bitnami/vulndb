@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2024-53949",
+  "details": "Improper Authorization vulnerability in Apache Superset when FAB_ADD_SECURITY_API is enabled (disabled by default). Allows for lower privilege users to use this API. issue affects Apache Superset: from 2.0.0 before 4.1.0.Users are recommended to upgrade to version 4.1.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2024-53949"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "4.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/d3scbwmfpzbpm6npnzdw5y4owtqqyq8d"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/12/09/4"
+    }
+  ],
+  "published": "2025-02-04T19:23:00.899Z",
+  "modified": "2025-02-04T19:41:14.399Z"
+}
