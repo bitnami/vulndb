@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2024-1594",
+  "details": "A path traversal vulnerability exists in the mlflow/mlflow repository, specifically within the handling of the `artifact_location` parameter when creating an experiment. Attackers can exploit this vulnerability by using a fragment component `#` in the artifact location URI to read arbitrary files on the server in the context of the server's process. This issue is similar to CVE-2023-6909 but utilizes a different component of the URI to achieve the same effect. ",
+  "aliases": [
+    "CVE-2024-1594"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/424b6f6b-e778-4a2b-b860-39730d396f3e"
+    }
+  ],
+  "published": "2025-02-04T07:21:32.028Z",
+  "modified": "2025-02-04T07:56:27.986Z"
+}

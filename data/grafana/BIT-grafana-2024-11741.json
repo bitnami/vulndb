@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-grafana-2024-11741",
+  "details": "Grafana is an open-source platform for monitoring and observability. The Grafana Alerting VictorOps integration was not properly protected and could be exposed to users with Viewer permission. Fixed in versions 11.5.0, 11.4.1, 11.3.3,  11.2.6, 11.1.11, 11.0.11 and 10.4.15",
+  "aliases": [
+    "CVE-2024-11741"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.4.0"
+            },
+            {
+              "fixed": "11.4.1"
+            },
+            {
+              "introduced": "11.3.0"
+            },
+            {
+              "fixed": "11.3.3"
+            },
+            {
+              "introduced": "11.2.0"
+            },
+            {
+              "fixed": "11.2.6"
+            },
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "11.1.11"
+            },
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2024-11741/"
+    }
+  ],
+  "published": "2025-02-04T07:14:17.715Z",
+  "modified": "2025-02-04T07:56:27.986Z"
+}
