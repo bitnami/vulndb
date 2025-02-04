@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mlflow-2024-1558",
+  "details": "A path traversal vulnerability exists in the `_create_model_version()` function within `server/handlers.py` of the mlflow/mlflow repository, due to improper validation of the `source` parameter. Attackers can exploit this vulnerability by crafting a `source` parameter that bypasses the `_validate_non_local_source_contains_relative_paths(source)` function's checks, allowing for arbitrary file read access on the server. The issue arises from the handling of unquoted URL characters and the subsequent misuse of the original `source` value for model version creation, leading to the exposure of sensitive files when interacting with the `/model-versions/get-artifact` handler.",
+  "aliases": [
+    "CVE-2024-1558"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.12.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/7f4dbcc5-b6b3-43dd-b310-e2d0556a8081"
+    }
+  ],
+  "published": "2025-02-04T07:22:09.430Z",
+  "modified": "2025-02-04T07:56:27.986Z"
+}
