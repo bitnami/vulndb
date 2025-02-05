@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2022-43721",
+  "details": "An authenticated attacker with update datasets permission could change a dataset link to an untrusted site, users could be redirected to this site when clicking on that specific dataset. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
+  "aliases": [
+    "CVE-2022-43721"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.5.2"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "last_affected": "2.0.0"
+            },
+            {
+              "introduced": "2.0.0-rc1"
+            },
+            {
+              "last_affected": "2.0.0-rc1"
+            },
+            {
+              "introduced": "2.0.0-rc2"
+            },
+            {
+              "last_affected": "2.0.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/s6sqt5jmcv6qxtvdot1t5tpt57v439kg"
+    }
+  ],
+  "published": "2025-02-05T07:28:53.604Z",
+  "modified": "2025-02-05T07:44:02.943Z"
+}

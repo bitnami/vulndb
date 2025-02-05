@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2022-43719",
+  "details": "Two legacy REST API endpoints for approval and request access are vulnerable to cross site request forgery. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
+  "aliases": [
+    "CVE-2022-43719"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.5.2"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "last_affected": "2.0.0"
+            },
+            {
+              "introduced": "2.0.0-rc1"
+            },
+            {
+              "last_affected": "2.0.0-rc1"
+            },
+            {
+              "introduced": "2.0.0-rc2"
+            },
+            {
+              "last_affected": "2.0.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc1:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:2.0.0:rc2:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/xc309h2dphrkg33154djf3nqlh2xc1c0"
+    }
+  ],
+  "published": "2025-02-05T07:29:05.011Z",
+  "modified": "2025-02-05T07:44:02.943Z"
+}

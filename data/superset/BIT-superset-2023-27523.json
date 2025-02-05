@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-superset-2023-27523",
+  "details": "Improper data authorization check on Jinja templated queries in Apache Superset up to and including 2.1.0 allows for an authenticated user to issue queries on database tables they may not have access to.",
+  "aliases": [
+    "CVE-2023-27523"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/3y97nmwm956b6zg3l8dh9oj0w7dj945h"
+    }
+  ],
+  "published": "2025-02-05T07:28:36.910Z",
+  "modified": "2025-02-05T07:44:02.943Z"
+}
