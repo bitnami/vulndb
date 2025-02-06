@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dotnet-2025-21173",
+  "details": ".NET Elevation of Privilege Vulnerability",
+  "aliases": [
+    "CVE-2025-21173"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet",
+        "purl": "pkg:bitnami/dotnet"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "last_affected": "8.0.0"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "last_affected": "9.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:8.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:9.0.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-21173"
+    }
+  ],
+  "published": "2025-02-06T07:09:40.090Z",
+  "modified": "2025-02-06T07:42:16.889Z"
+}
