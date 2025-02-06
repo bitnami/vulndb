@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dotnet-sdk-2025-21172",
+  "details": ".NET and Visual Studio Remote Code Execution Vulnerability",
+  "aliases": [
+    "CVE-2025-21172"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "last_affected": "8.0.0"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "last_affected": "9.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:8.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:9.0.0:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-21172"
+    }
+  ],
+  "published": "2025-02-06T07:09:48.183Z",
+  "modified": "2025-02-06T07:42:16.889Z"
+}
