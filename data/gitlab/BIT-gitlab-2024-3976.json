@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-3976",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 14.0 prior to 16.9.7, starting from 16.10 prior to 16.10.5, and starting from 16.11 prior to 16.11.2. It was possible to disclose via the UI the confidential issues title and description from a public project to unauthorised instance users.",
+  "aliases": [
+    "CVE-2024-3976"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "16.9.7"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.5"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/457140"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2470939"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/"
+    }
+  ],
+  "published": "2025-02-07T07:21:27.185Z",
+  "modified": "2025-02-07T07:41:28.471Z"
+}
