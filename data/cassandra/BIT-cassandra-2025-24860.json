@@ -12,6 +12,12 @@
         "name": "cassandra",
         "purl": "pkg:bitnami/cassandra"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -40,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:apache:cassandra:*:*:*:*:*:maven:*:*"
     ]
@@ -56,5 +62,5 @@
     }
   ],
   "published": "2025-02-06T07:08:57.983Z",
-  "modified": "2025-02-06T07:42:16.889Z"
+  "modified": "2025-02-07T07:41:28.471Z"
 }

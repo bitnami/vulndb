@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-2878",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.7 prior to 16.9.7, starting from 16.10 prior to 16.10.5, and starting from 16.11 prior to 16.11.2. It was possible for an attacker to cause a denial of service by crafting unusual search terms for branch names.",
+  "aliases": [
+    "CVE-2024-2878"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.7.0"
+            },
+            {
+              "fixed": "16.9.7"
+            },
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "16.10.5"
+            },
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "16.11.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/451918"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2416356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/05/08/patch-release-gitlab-16-11-2-released/"
+    }
+  ],
+  "published": "2025-02-07T07:22:41.794Z",
+  "modified": "2025-02-07T07:41:28.471Z"
+}
