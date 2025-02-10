@@ -40,42 +40,14 @@ jobs:
             fi
           done
   # If the CD Pipeline does not succeed we should notify the interested agents
-  slack-notif:
-    runs-on: ubuntu-latest
+  notify:
+    name: Send notification
     needs:
       - s3-upload
-    if: always()
-    name: Notify unsuccessful CD run
-    steps:
-      - name: Notify in Slack channel
-        if: ${{ needs.s3-upload.result != 'success' }}
-        uses: slackapi/slack-github-action@485a9d42d3a73031f12ec201c457e2162c45d02d # v2.0.0
-        with:
-          channel-id: ${{ secrets.CD_SLACK_CHANNEL_ID }}
-          payload: |
-            {
-              "attachments": [
-                {
-                  "color": "#CC0000",
-                  "fallback": "Unsuccessful bitnami/vulndb CD pipeline",
-                  "blocks": [
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "*Unsuccessful `bitnami/vulndb` CD pipeline*"
-                      }
-                    },
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "The CD pipeline for <${{ github.event.head_commit.url }}|bitnami/vulndb@${{ github.event.head_commit.id }}> did not succeed. Check the related <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|action run> for more information."
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.CD_SLACK_BOT_TOKEN }}
+    if: ${{ always() && (needs.s3-upload.result != 'success') }}
+    uses: bitnami/support/.github/workflows/gchat-notification.yml@main
+    with:
+      workflow: ${{ github.workflow }}
+      job-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    secrets:
+      webhook-url: ${{ secrets.GCHAT_CONTENT_ALERTS_WEBHOOK_URL }}
