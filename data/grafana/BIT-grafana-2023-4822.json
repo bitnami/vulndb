@@ -47,6 +47,17 @@
               "fixed": "10.1.3"
             }
           ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.4"
+            },
+            {
+              "last_affected": "10.1.4"
+            }
+          ]
         }
       ]
     }
@@ -54,7 +65,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:10.1.4:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -68,5 +80,5 @@
     }
   ],
   "published": "2024-03-06T10:52:46.989Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-02-11T07:41:15.055Z"
 }
