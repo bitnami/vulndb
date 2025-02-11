@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-1072",
+  "details": "A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting all versions starting from 7.14.1 prior to 17.3.7, 17.4 prior to 17.4.4, and 17.5 prior to 17.5.2. A denial of service could occur upon importing maliciously crafted content using the Fogbugz importer.",
+  "aliases": [
+    "CVE-2025-1072"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.14.1"
+            },
+            {
+              "fixed": "17.3.7"
+            },
+            {
+              "introduced": "17.4.0"
+            },
+            {
+              "fixed": "17.4.4"
+            },
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "17.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2024/11/13/patch-release-gitlab-17-5-2-released/#denial-of-service-by-importing-malicious-crafted-fogbugz-import-payload"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/463093"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2504059"
+    }
+  ],
+  "published": "2025-02-11T07:10:10.109Z",
+  "modified": "2025-02-11T07:41:15.055Z"
+}
