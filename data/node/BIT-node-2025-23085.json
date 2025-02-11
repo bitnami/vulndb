@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-node-2025-23085",
+  "details": "A memory leak could occur when a remote peer abruptly closes the socket without sending a GOAWAY notification. Additionally, if an invalid header was detected by nghttp2, causing the connection to be terminated by the peer, the same leak was triggered. This flaw could lead to increased memory consumption and potential denial of service under certain conditions.\r\rThis vulnerability affects HTTP/2 Server users on Node.js v18.x, v20.x, v22.x and v23.x.",
+  "aliases": [
+    "CVE-2025-23085"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "18.20.6"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "20.18.2"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.13.1"
+            },
+            {
+              "introduced": "23.0.0"
+            },
+            {
+              "fixed": "23.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/january-2025-security-releases"
+    }
+  ],
+  "published": "2025-02-11T07:16:03.298Z",
+  "modified": "2025-02-11T07:41:15.055Z"
+}

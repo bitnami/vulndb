@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-10383",
+  "details": "An issue has been discovered in the gitlab-web-ide-vscode-fork component distributed over CDN affecting all versions prior to 1.89.1-1.0.0-dev-20241118094343and used by all versions of GitLab CE/EE starting from 15.11 prior to 17.3 and which also temporarily affected versions 17.4, 17.5 and 17.6, where a XSS attack was possible when loading .ipynb files in the web IDE",
+  "aliases": [
+    "CVE-2024-10383"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.11.0"
+            },
+            {
+              "fixed": "17.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/500785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2765778"
+    }
+  ],
+  "published": "2025-02-11T07:26:57.802Z",
+  "modified": "2025-02-11T07:41:15.055Z"
+}
