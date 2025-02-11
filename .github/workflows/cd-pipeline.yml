@@ -13,6 +13,7 @@ jobs:
   s3-upload:
     runs-on: ubuntu-latest
     name: 'Upload modified files to s3'
+    if: ${{ github.repository_owner == 'bitnami' }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
