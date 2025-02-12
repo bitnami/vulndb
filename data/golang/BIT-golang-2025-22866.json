@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -46,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
     ]
@@ -70,5 +70,5 @@
     }
   ],
   "published": "2025-02-08T07:13:28.235Z",
-  "modified": "2025-02-11T07:41:15.055Z"
+  "modified": "2025-02-12T07:43:48.785Z"
 }
