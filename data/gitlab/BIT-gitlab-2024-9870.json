@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-9870",
+  "details": "An external service interaction vulnerability in GitLab EE affecting all versions from 15.11 prior to 17.6.5, 17.7 prior to 17.7.4, and 17.8 prior to 17.8.2 allows an attacker to send requests from the GitLab server to unintended services.",
+  "aliases": [
+    "CVE-2024-9870"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.11.0"
+            },
+            {
+              "fixed": "17.6.5"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.4"
+            },
+            {
+              "introduced": "17.8.0"
+            },
+            {
+              "fixed": "17.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/498911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2734142"
+    }
+  ],
+  "published": "2025-02-14T19:11:31.401Z",
+  "modified": "2025-02-14T19:43:45.853Z"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2023-0662",
-  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, excessive number of parts in HTTP form upload can cause high resource consumption and excessive number of log entries. This can cause denial of service on the affected server by exhausting CPU resources or disk space. ",
+  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, excessive number of parts in HTTP form upload can cause high resource consumption and excessive number of log entries. This can cause denial of service on the affected server by exhausting CPU resources or disk space.",
   "aliases": [
     "CVE-2023-0662"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2025-01-14T19:20:52.604Z",
-  "modified": "2025-01-14T19:40:59.218Z"
+  "modified": "2025-02-14T19:43:45.853Z"
 }
