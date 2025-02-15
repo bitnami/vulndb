@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-postgresql-2025-1094",
+  "details": "Improper neutralization of quoting syntax in PostgreSQL libpq functions PQescapeLiteral(), PQescapeIdentifier(), PQescapeString(), and PQescapeStringConn() allows a database input provider to achieve SQL injection in certain usage patterns.  Specifically, SQL injection requires the application to use the function result to construct input to psql, the PostgreSQL interactive terminal.  Similarly, improper neutralization of quoting syntax in PostgreSQL command line utility programs allows a source of command line arguments to achieve SQL injection when client_encoding is BIG5 and server_encoding is one of EUC_TW or MULE_INTERNAL.  Versions before PostgreSQL 17.3, 16.7, 15.11, 14.16, and 13.19 are affected.",
+  "aliases": [
+    "CVE-2025-1094"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.3.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.7.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.11.0"
+            },
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.16.0"
+            },
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.19.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2025-1094/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00015.html"
+    }
+  ],
+  "published": "2025-02-15T07:18:29.601Z",
+  "modified": "2025-02-15T07:41:15.776Z"
+}
