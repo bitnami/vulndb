@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-0507",
-  "details": "Grafana is an open-source platform for monitoring and observability. Starting with the 8.1 branch, Grafana had a stored XSS vulnerability affecting the core plugin GeoMap. The stored XSS vulnerability was possible due to map attributions weren't properly sanitized and allowed arbitrary JavaScript to be executed in the context of the currently authorized user of the Grafana instance. An attacker needs to have the Editor role in order to change a panel to include a map attribution containing JavaScript. This means that vertical privilege escalation is possible, where a user with Editor role can change to a known password for a user having Admin role if the user with Admin role executes malicious JavaScript viewing a dashboard. Users may upgrade to version 8.5.21, 9.2.13 and 9.3.8 to receive a fix. ",
+  "details": "Grafana is an open-source platform for monitoring and observability. Starting with the 8.1 branch, Grafana had a stored XSS vulnerability affecting the core plugin GeoMap. The stored XSS vulnerability was possible due to map attributions weren't properly sanitized and allowed arbitrary JavaScript to be executed in the context of the currently authorized user of the Grafana instance. An attacker needs to have the Editor role in order to change a panel to include a map attribution containing JavaScript. This means that vertical privilege escalation is possible, where a user with Editor role can change to a known password for a user having Admin role if the user with Admin role executes malicious JavaScript viewing a dashboard. Users may upgrade to version 8.5.21, 9.2.13 and 9.3.8 to receive a fix.",
   "aliases": [
     "CVE-2023-0507"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T10:54:19.173Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-02-16T07:41:05.202Z"
 }
