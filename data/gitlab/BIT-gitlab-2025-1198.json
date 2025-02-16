@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-1198",
+  "details": "An issue discovered in GitLab CE/EE affecting all versions from 16.11 prior to 17.6.5, 17.7 prior to 17.7.4, and 17.8 prior to 17.8.2 meant that long-lived connections in ActionCable potentially allowed revoked Personal Access Tokens access to streaming results.",
+  "aliases": [
+    "CVE-2025-1198"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "17.6.5"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.4"
+            },
+            {
+              "introduced": "17.8.0"
+            },
+            {
+              "fixed": "17.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/511477"
+    }
+  ],
+  "published": "2025-02-16T19:09:01.918Z",
+  "modified": "2025-02-16T19:40:53.175Z"
+}
