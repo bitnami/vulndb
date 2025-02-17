@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2023-0568",
-  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, core path resolution function allocate buffer one byte too small. When resolving paths with lengths close to system MAXPATHLEN setting, this may lead to the byte after the allocated buffer being overwritten with NUL value, which might lead to unauthorized data access or modification. ",
+  "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, core path resolution function allocate buffer one byte too small. When resolving paths with lengths close to system MAXPATHLEN setting, this may lead to the byte after the allocated buffer being overwritten with NUL value, which might lead to unauthorized data access or modification.",
   "aliases": [
     "CVE-2023-0568"
   ],
@@ -62,5 +62,5 @@
     }
   ],
   "published": "2025-01-14T19:20:59.903Z",
-  "modified": "2025-01-14T19:40:59.218Z"
+  "modified": "2025-02-17T19:41:46.561Z"
 }
