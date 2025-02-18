@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-3303",
+  "details": "An issue was discovered in GitLab EE affecting all versions starting from 16.0 prior to 17.6.5, starting from 17.7 prior to 17.7.4, and starting from 17.8 prior to 17.8.2, which allows an attacker to exfiltrate contents of a private issue using prompt injection.",
+  "aliases": [
+    "CVE-2024-3303"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "17.6.5"
+            },
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.7.4"
+            },
+            {
+              "introduced": "17.8.0"
+            },
+            {
+              "fixed": "17.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/454460"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2418620"
+    }
+  ],
+  "published": "2025-02-17T19:23:31.736Z",
+  "modified": "2025-02-17T19:41:46.561Z"
+}
