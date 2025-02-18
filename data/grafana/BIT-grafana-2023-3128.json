@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-3128",
-  "details": "Grafana is validating Azure AD accounts based on the email claim. On Azure AD, the profile email field is not unique and can be easily modified. This leads to account takeover and authentication bypass when Azure AD OAuth is configured with a multi-tenant app. ",
+  "details": "Grafana is validating Azure AD accounts based on the email claim. On Azure AD, the profile email field is not unique and can be easily modified. This leads to account takeover and authentication bypass when Azure AD OAuth is configured with a multi-tenant app.",
   "aliases": [
     "CVE-2023-3128"
   ],
@@ -79,5 +79,5 @@
     }
   ],
   "published": "2024-03-06T10:53:06.974Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-02-18T07:42:21.199Z"
 }
