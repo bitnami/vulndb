@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-56197",
+  "details": "Discourse is an open source platform for community discussion. PM titles and metadata can be read by other users when the \"PM tags allowed for groups\" option is enabled, the other user is a member of a group added to this option, and the PM has been tagged. This issue has been patched in the latest `stable`, `beta` and `tests-passed` versions of Discourse. Users are advised to upgrade. Users unable to upgrade should remove all groups from the the \"PM tags allowed for groups\" option.",
+  "aliases": [
+    "CVE-2024-56197"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-xmgr-g9cp-v239"
+    }
+  ],
+  "published": "2025-02-20T10:31:38.504Z",
+  "modified": "2025-02-20T11:05:15.631Z"
+}

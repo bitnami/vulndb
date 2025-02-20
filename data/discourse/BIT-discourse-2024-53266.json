@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2024-53266",
+  "details": "Discourse is an open source platform for community discussion. In affected versions with some combinations of plugins, and with CSP disabled, activity streams in the user's profile page may be vulnerable to XSS. This has been patched in the latest version of Discourse core. Users are advised to upgrade. Users unable to upgrade should ensure CSP is enabled.",
+  "aliases": [
+    "CVE-2024-53266"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hw4j-4hg7-22h2"
+    }
+  ],
+  "published": "2025-02-20T10:32:23.108Z",
+  "modified": "2025-02-20T11:05:15.631Z"
+}

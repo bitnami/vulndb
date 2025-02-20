@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-discourse-2025-22602",
+  "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can execute arbitrary JavaScript on users' browsers by posting a malicious video placeholder html element. This issue only affects sites with CSP disabled. This problem has been patched in the latest version of Discourse. Users are advised to upgrade. Users unable to upgrade should enable CSP.",
+  "aliases": [
+    "CVE-2025-22602"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-jcjx-694p-c5m3"
+    }
+  ],
+  "published": "2025-02-20T10:31:17.404Z",
+  "modified": "2025-02-20T11:05:15.631Z"
+}
