@@ -36,7 +36,9 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:go:*:*"
     ]
   },
   "references": [
@@ -50,5 +52,5 @@
     }
   ],
   "published": "2024-11-01T07:08:02.109Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-02-26T19:46:05.874Z"
 }
