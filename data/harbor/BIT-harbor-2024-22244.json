@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-harbor-2024-22244",
+  "details": "Open Redirect in Harbor  <=v2.8.4, <=v2.9.2, and <=v2.10.0 may redirect a user to a malicious site.",
+  "aliases": [
+    "CVE-2024-22244"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "harbor",
+        "purl": "pkg:bitnami/harbor"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "fixed": "2.10.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "last_affected": "2.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:linuxfoundation:harbor:2.10.0:-:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-5757-v49g-f6r7"
+    }
+  ],
+  "published": "2025-02-27T07:09:50.441Z",
+  "modified": "2025-02-27T07:45:54.275Z"
+}
