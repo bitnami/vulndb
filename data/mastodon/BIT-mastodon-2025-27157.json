@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mastodon-2025-27157",
+  "details": "Mastodon is a self-hosted, federated microblogging platform. Starting in version 4.2.0 and prior to versions 4.2.16 and 4.3.4, the rate limits are missing on `/auth/setup`. Without those rate limits, an attacker can craft requests that will send an email to an arbitrary addresses. Versions 4.2.16 and 4.3.4 fix the issue.",
+  "aliases": [
+    "CVE-2025-27157"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/06f879ce9bea195344ac9f71e6799eea500628ec"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-v39f-c9jj-8w7h"
+    }
+  ],
+  "published": "2025-03-02T07:13:08.797Z",
+  "modified": "2025-03-02T07:44:48.340Z"
+}
