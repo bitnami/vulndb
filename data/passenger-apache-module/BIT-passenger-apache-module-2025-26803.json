@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-passenger-apache-module-2025-26803",
+  "details": "The http parser in Phusion Passenger 6.0.21 through 6.0.25 before 6.0.26 allows a denial of service during parsing of a request with an invalid HTTP method.",
+  "aliases": [
+    "CVE-2025-26803"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "passenger-apache-module",
+        "purl": "pkg:bitnami/passenger-apache-module"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.21"
+            },
+            {
+              "fixed": "6.0.26"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:phusion:passenger:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.phusion.nl/2025/02/19/passenger-6-0-26/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phusion/passenger/commit/bb15591646687064ab2d578d5f9660b2a4168017"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phusion/passenger/compare/release-6.0.25...release-6.0.26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phusion/passenger/releases/tag/release-6.0.26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.phusionpassenger.com/support"
+    }
+  ],
+  "published": "2025-03-02T07:16:39.193Z",
+  "modified": "2025-03-02T07:44:48.340Z"
+}

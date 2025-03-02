@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-odoo-2024-12368",
+  "details": "Improper access control in the auth_oauth module of Odoo Community 15.0 and Odoo Enterprise 15.0 allows an internal user to export the OAuth tokens of other users.",
+  "aliases": [
+    "CVE-2024-12368"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "odoo",
+        "purl": "pkg:bitnami/odoo"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "last_affected": "15.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:odoo:odoo:15.0:*:*:*:community:*:*:*",
+      "cpe:2.3:a:odoo:odoo:15.0:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/odoo/odoo/issues/193854"
+    }
+  ],
+  "published": "2025-03-02T07:16:14.895Z",
+  "modified": "2025-03-02T07:44:48.340Z"
+}

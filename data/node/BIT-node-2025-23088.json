@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2025-23088",
-  "details": "NOTE: use of the CVE List to report that a product is unsupported, without reference to a specific defect, is novel and the CVE Program is actively assessing both the validity and potential value of this approach.\r\rThis CVE has been issued to inform users that they are using End-of-Life (EOL) versions of Node.js. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components).\r\rUsers are advised to upgrade to actively supported versions of Node.js to ensure continued security updates and support.",
+  "details": "Rejected reason: This Record was REJECTED after determining it is not in compliance with CVE Program requirements regarding assignment for vulnerabilities",
   "aliases": [
     "CVE-2025-23088"
   ],
@@ -12,12 +12,6 @@
         "name": "node",
         "purl": "pkg:bitnami/node"
       },
-      "severity": [
-        {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
-        }
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -34,7 +28,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Unknown",
     "cpes": [
       "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
     ]
@@ -50,5 +44,5 @@
     }
   ],
   "published": "2025-01-27T07:15:29.521Z",
-  "modified": "2025-02-06T07:42:16.889Z"
+  "modified": "2025-03-02T07:44:48.340Z"
 }
