@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-python-2025-1795",
+  "details": "During an address list folding when a separating comma ends up on a folded line and that line is to be unicode-encoded then the separator itself is also unicode-encoded. Expected behavior is that the separating comma remains a plan comma. This can result in the address header being misinterpreted by some mail servers.",
+  "aliases": [
+    "CVE-2025-1795"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.9"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/09fab93c3d857496c0bd162797fab816c311ee48"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/70754d21c288535e86070ca7a6e90dcb670b8593"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/9148b77e0af91cdacaa7fe3dfac09635c3fe9a74"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/100884"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/100885"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/119099"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/MB62IZMEC3UM6SGHP5LET5JX2Y7H4ZUR/"
+    }
+  ],
+  "published": "2025-03-04T09:38:05.130Z",
+  "modified": "2025-03-04T10:04:34.345Z"
+}
