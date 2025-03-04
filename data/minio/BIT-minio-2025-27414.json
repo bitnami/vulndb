@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-minio-2025-27414",
+  "details": "MinIO is a high performance object storage. Starting in version 2024.6.6 and prior to 2025.2.28, a bug in evaluating the trust of the SSH key used in an SFTP connection to MinIO allows authentication bypass and unauthorized data access. On a MinIO server with SFTP access configured and using LDAP as an external identity provider, MinIO supports SSH key based authentication for SFTP connections when the user has the `sshPublicKey` attribute set in their LDAP server. The server trusts the client's key only when the public key is the same as the `sshPublicKey` attribute. Due to the bug, when the user has no `sshPublicKey` property in LDAP, the server ends up trusting the key allowing the client to perform any FTP operations allowed by the MinIO access policies associated with the LDAP user (or any of their groups). Three requirements must be met in order to exploit the vulnerability. First, the MinIO server must be configured to allow SFTP access and use LDAP as an external identity provider. Second, the attacker must have knowledge of an LDAP username that does not have the `sshPublicKey` property set. Third, such an LDAP username or one of their groups must also have some MinIO access policy configured. When this bug is successfully exploited, the attacker can perform any FTP operations (i.e. reading, writing, deleting and listing objects) allowed by the access policy associated with the LDAP user account (and their groups).",
+  "aliases": [
+    "CVE-2025-27414"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "minio",
+        "purl": "pkg:bitnami/minio"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2024.6.6"
+            },
+            {
+              "fixed": "2025.2.28"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:minio:minio:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/commit/4c71f1b4ec0fb2a473ddaac18c20ec9e63f267ec"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/commit/91e1487de45720753c9e9e4c02b1bd16b7e452fa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/security/advisories/GHSA-wc79-7x8x-2p58"
+    }
+  ],
+  "published": "2025-03-04T09:32:02.627Z",
+  "modified": "2025-03-04T10:04:34.345Z"
+}
