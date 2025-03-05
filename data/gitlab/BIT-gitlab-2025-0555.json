@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-0555",
+  "details": "A Cross Site Scripting (XSS) vulnerability in GitLab-EE affecting all versions from 16.6 prior to 17.7.6, 17.8 prior to 17.8.4, and 17.9 prior to 17.9.1 allows an attacker to bypass security controls and execute arbitrary scripts in a users browser under specific conditions.",
+  "aliases": [
+    "CVE-2025-0555"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "17.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/514004"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2939833"
+    }
+  ],
+  "published": "2025-03-05T07:09:06.942Z",
+  "modified": "2025-03-05T07:49:34.982Z"
+}
