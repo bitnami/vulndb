@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elk-2025-25015",
+  "details": "Prototype pollution in Kibana leads to arbitrary code execution via a crafted file upload and specifically crafted HTTP requests.In Kibana versions >= 8.15.0 and < 8.17.1, this is exploitable by users with the Viewer role. In Kibana versions 8.17.1 and 8.17.2 , this is only exploitable by users that have roles that contain all the following privileges: fleet-all, integrations-all, actions:execute-advanced-connectors",
+  "aliases": [
+    "CVE-2025-25015"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-17-3-security-update-esa-2025-06/375441"
+    }
+  ],
+  "published": "2025-03-07T20:52:06.865Z",
+  "modified": "2025-03-07T21:29:28.283Z"
+}
