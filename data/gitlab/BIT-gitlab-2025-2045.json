@@ -1,9 +1,9 @@
 {
   "schema_version": "1.5.0",
-  "id": "BIT-gitlab-2025-0475",
-  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 15.10 prior to 17.7.6, 17.8 prior to 17.8.4, and 17.9 prior to 17.9.1. A proxy feature could potentially allow unintended content rendering leading to XSS under specific circumstances.",
+  "id": "BIT-gitlab-2025-2045",
+  "details": "Improper authorization in GitLab EE affecting all versions from 17.7 prior to 17.7.6, 17.8 prior to 17.8.4, 17.9 prior to 17.9.1  allow users with limited permissions to access to potentially sensitive project analytics data.",
   "aliases": [
-    "CVE-2025-0475"
+    "CVE-2025-2045"
   ],
   "affected": [
     {
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -23,7 +23,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "15.10.0"
+              "introduced": "17.7.0"
             },
             {
               "fixed": "17.9.1"
@@ -36,20 +36,19 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/513142"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/512050"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/2932309"
+      "url": "https://hackerone.com/reports/2921111"
     }
   ],
-  "published": "2025-03-05T07:09:22.656Z",
+  "published": "2025-03-10T07:11:14.598Z",
   "modified": "2025-03-10T08:09:47.485Z"
 }
