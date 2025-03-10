@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-django-2024-39329",
+  "details": "An issue was discovered in Django 5.0 before 5.0.7 and 4.2 before 4.2.14. The django.contrib.auth.backends.ModelBackend.authenticate() method allows remote attackers to enumerate users via a timing attack involving login requests for users with an unusable password.",
+  "aliases": [
+    "CVE-2024-39329"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.14"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/forum/#%21forum/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/"
+    }
+  ],
+  "published": "2025-03-10T08:15:20.473Z",
+  "modified": "2025-03-10T08:55:52.634Z"
+}

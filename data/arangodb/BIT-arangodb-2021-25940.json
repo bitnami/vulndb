@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-arangodb-2021-25940",
+  "details": "In ArangoDB, versions v3.7.6 through v3.8.3 are vulnerable to Insufficient Session Expiration. When a user’s password is changed by the administrator, the session isn’t invalidated, allowing a malicious user to still be logged in and perform arbitrary actions within the system.",
+  "aliases": [
+    "CVE-2021-25940"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "arangodb",
+        "purl": "pkg:bitnami/arangodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.6"
+            },
+            {
+              "last_affected": "3.8.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:arangodb:arangodb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/arangodb/arangodb/commit/e9c6ee9dcca7b9b4fbcd02a0b323d205bee838d3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.whitesourcesoftware.com/vulnerability-database/CVE-2021-25940"
+    }
+  ],
+  "published": "2025-03-10T08:12:14.779Z",
+  "modified": "2025-03-10T08:55:52.634Z"
+}
