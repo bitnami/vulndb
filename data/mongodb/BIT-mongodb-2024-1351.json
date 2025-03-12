@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mongodb-2024-1351",
+  "details": "Under certain configurations of --tlsCAFile and tls.CAFile, MongoDB Server may skip peer certificate validation which may result in untrusted connections to succeed. This may effectively reduce the security guarantees provided by TLS and open connections  that should have been closed due to failing certificate validation. This issue affects MongoDB Server v7.0 versions prior to and including 7.0.5, MongoDB Server v6.0 versions prior to and including 6.0.13, MongoDB Server v5.0 versions prior to and including 5.0.24 and MongoDB Server v4.4 versions prior to and including 4.4.28.Required Configuration : A server process will allow incoming connections to skip peer certificate validation if the server process was started with TLS enabled (net.tls.mode set to allowTLS, preferTLS, or requireTLS) and without a net.tls.CAFile configured.",
+  "aliases": [
+    "CVE-2024-1351"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "5.0.26"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.14"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-72839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240524-0010/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mongodb.com/docs/manual/release-notes/4.4/#4.4.29---february-28--2024"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mongodb.com/docs/manual/release-notes/7.0/#7.0.6---feb-28--2024"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mongodb.com/docs/v5.0/release-notes/5.0/#5.0.25---february-28--2024"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.mongodb.com/docs/v6.0/release-notes/6.0/#6.0.14---feb-28--2024"
+    }
+  ],
+  "published": "2025-03-12T07:18:10.164Z",
+  "modified": "2025-03-12T07:46:07.376Z"
+}
