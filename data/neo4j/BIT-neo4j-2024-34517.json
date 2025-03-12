@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-neo4j-2024-34517",
+  "details": "The Cypher component in Neo4j between v.5.0.0 and v.5.19.0 mishandles IMMUTABLE",
+  "aliases": [
+    "CVE-2024-34517"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "neo4j",
+        "purl": "pkg:bitnami/neo4j"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.20.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:neo4j:neo4j:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/advisories/GHSA-p343-9qwp-pqxv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/neo4j/neo4j/wiki/Neo4j-5-changelog#cypher"
+    },
+    {
+      "type": "WEB",
+      "url": "https://neo4j.com/security/cve-2024-34517/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trust.neo4j.com"
+    }
+  ],
+  "published": "2025-03-12T07:15:48.750Z",
+  "modified": "2025-03-12T07:46:07.376Z"
+}
