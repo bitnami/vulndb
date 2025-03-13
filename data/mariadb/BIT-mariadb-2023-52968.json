@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-mariadb-2023-52968",
+  "details": "MariaDB Server 10.4 before 10.4.33, 10.5 before 10.5.24, 10.6 before 10.6.17, 10.7 through 10.11 before 10.11.7, 11.0 before 11.0.5, and 11.1 before 11.1.4 calls fix_fields_if_needed under mysql_derived_prepare when derived is not yet prepared, leading to a find_field_in_table crash.",
+  "aliases": [
+    "CVE-2023-52968"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.33"
+            },
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.24"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.17"
+            },
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.11.7"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.5"
+            },
+            {
+              "introduced": "11.1.0"
+            },
+            {
+              "fixed": "11.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-32082"
+    }
+  ],
+  "published": "2025-03-13T07:14:21.149Z",
+  "modified": "2025-03-13T07:47:15.001Z"
+}
