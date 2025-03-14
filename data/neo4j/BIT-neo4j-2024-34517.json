@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-neo4j-2024-34517",
-  "details": "The Cypher component in Neo4j between v.5.0.0 and v.5.19.0 mishandles IMMUTABLE",
+  "details": "The Cypher component in Neo4j 5.0.0 through 5.18 mishandles IMMUTABLE privileges in some situations where an attacker already has admin access.",
   "aliases": [
     "CVE-2024-34517"
   ],
@@ -58,5 +58,5 @@
     }
   ],
   "published": "2025-03-12T07:15:48.750Z",
-  "modified": "2025-03-12T07:46:07.376Z"
+  "modified": "2025-03-14T08:11:05.873Z"
 }
