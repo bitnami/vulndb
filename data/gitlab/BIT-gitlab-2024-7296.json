@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-7296",
+  "details": "An issue was discovered in GitLab EE affecting all versions from 16.5 prior to 17.7.7, 17.8 prior to 17.8.5, and 17.9 prior to 17.9.2  which allowed a user with a custom permission to approve pending membership requests beyond the maximum number of allowed users.",
+  "aliases": [
+    "CVE-2024-7296"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.5.0"
+            },
+            {
+              "fixed": "17.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/475056"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2602274"
+    }
+  ],
+  "published": "2025-03-15T07:19:42.794Z",
+  "modified": "2025-03-15T08:06:41.538Z"
+}
