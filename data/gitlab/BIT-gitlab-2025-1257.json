@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-1257",
+  "details": "An issue was discovered in GitLab EE affecting all versions starting with 12.3 before 17.7.7, 17.8 prior to 17.8.5, and 17.9 prior to 17.9.2. A vulnerability in certain GitLab instances could allow an attacker to cause a denial of service condition by manipulating specific API inputs.",
+  "aliases": [
+    "CVE-2025-1257"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "17.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/519348"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2984218"
+    }
+  ],
+  "published": "2025-03-15T07:11:11.910Z",
+  "modified": "2025-03-15T08:06:41.538Z"
+}
