@@ -12,12 +12,6 @@
         "name": "tomcat",
         "purl": "pkg:bitnami/tomcat"
       },
-      "severity": [
-        {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
-        }
-      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -43,7 +37,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Unknown",
     "cpes": [
       "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
     ]
@@ -56,8 +50,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2025/03/10/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/absholi7ly/POC-CVE-2025-24813/blob/main/README.md"
     }
   ],
   "published": "2025-03-12T10:46:53.652Z",
-  "modified": "2025-03-13T07:47:15.001Z"
+  "modified": "2025-03-18T07:47:59.953Z"
 }
