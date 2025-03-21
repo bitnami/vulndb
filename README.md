@@ -147,6 +147,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 - Mattermost
 - ERPNext
+- JFrog Artifactory Open Source
 
 ### 2024-11
 
