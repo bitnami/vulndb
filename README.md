@@ -146,6 +146,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ### 2025-03
 
 - Mattermost
+- ERPNext
 
 ### 2024-11
 
