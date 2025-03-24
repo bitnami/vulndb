@@ -33,17 +33,12 @@
             },
             {
               "fixed": "12.6.6"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "12.7.0"
             },
             {
-              "last_affected": "12.7.2"
+              "fixed": "12.7.3"
             }
           ]
         }
@@ -53,8 +48,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*"
     ]
   },
   "references": [
@@ -72,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T11:20:56.018Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

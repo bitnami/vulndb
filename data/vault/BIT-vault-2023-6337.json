@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-6337",
-  "details": "HashiCorp Vault and Vault Enterprise 1.12.0 and newer are vulnerable to a denial of service through memory exhaustion of the host when handling large unauthenticated and authenticated HTTP requests from a client. Vault will attempt to map the request to memory, resulting in the exhaustion of available memory on the host, which may cause Vault to crash.Fixed in Vault 1.15.4, 1.14.8, 1.13.12.",
+  "details": "HashiCorp Vault and Vault Enterprise 1.12.0 and newer are vulnerable to a denial of service through memory exhaustion of the host when handling large unauthenticated and authenticated HTTP requests from a client. Vault will attempt to map the request to memory, resulting in the exhaustion of available memory on the host, which may cause Vault to crash.Fixed in Vault 1.15.4, 1.14.8, 1.13.12.",
   "aliases": [
     "CVE-2023-6337"
   ],
@@ -41,17 +41,6 @@
               "fixed": "1.15.4"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "0"
-            },
-            {
-              "last_affected": "1.12.0"
-            }
-          ]
         }
       ]
     }
@@ -59,8 +48,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -74,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T11:08:02.584Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

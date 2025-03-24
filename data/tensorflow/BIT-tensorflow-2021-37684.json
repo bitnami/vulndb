@@ -33,35 +33,12 @@
             },
             {
               "fixed": "2.4.3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "2.5.0"
             },
             {
-              "last_affected": "2.5.0"
-            },
-            {
-              "introduced": "2.6.0-rc0"
-            },
-            {
-              "last_affected": "2.6.0-rc0"
-            },
-            {
-              "introduced": "2.6.0-rc1"
-            },
-            {
-              "last_affected": "2.6.0-rc1"
-            },
-            {
-              "introduced": "2.6.0-rc2"
-            },
-            {
-              "last_affected": "2.6.0-rc2"
+              "fixed": "2.5.1"
             }
           ]
         }
@@ -71,11 +48,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.5.0:*:*:*:*:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.6.0:rc0:*:*:*:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.6.0:rc1:*:*:*:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.6.0:rc2:*:*:*:*:*:*"
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -85,5 +58,5 @@
     }
   ],
   "published": "2024-03-06T11:16:50.661Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

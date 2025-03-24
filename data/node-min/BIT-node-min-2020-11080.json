@@ -23,39 +23,34 @@
           "type": "SEMVER",
           "events": [
             {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.12.1"
+            },
+            {
               "introduced": "10.13.0"
             },
             {
               "fixed": "10.21.0"
             },
             {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.12.1"
+            },
+            {
               "introduced": "12.13.0"
             },
             {
               "fixed": "12.18.0"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "10.0.0"
-            },
-            {
-              "last_affected": "10.12.0"
-            },
-            {
-              "introduced": "12.0.0"
-            },
-            {
-              "last_affected": "12.12.0"
             },
             {
               "introduced": "14.0.0"
             },
             {
-              "last_affected": "14.4.0"
+              "fixed": "14.4.1"
             }
           ]
         }
@@ -128,5 +123,5 @@
     }
   ],
   "published": "2024-12-16T14:07:31.129Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

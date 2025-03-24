@@ -41,17 +41,6 @@
               "fixed": "7.2.2"
             }
           ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "2.6.0-rc1"
-            },
-            {
-              "last_affected": "2.6.0-rc1"
-            }
-          ]
         }
       ]
     }
@@ -59,8 +48,7 @@
   "database_specific": {
     "severity": "Low",
     "cpes": [
-      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:redis:redis:2.6.0:rc1:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -94,5 +82,5 @@
     }
   ],
   "published": "2024-08-22T19:40:22.448Z",
-  "modified": "2024-08-22T19:58:07.809Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

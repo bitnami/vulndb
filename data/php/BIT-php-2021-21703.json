@@ -23,6 +23,12 @@
           "type": "SEMVER",
           "events": [
             {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.32"
+            },
+            {
               "introduced": "7.4.0"
             },
             {
@@ -33,17 +39,6 @@
             },
             {
               "fixed": "8.0.12"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "7.3.0"
-            },
-            {
-              "last_affected": "7.3.31"
             }
           ]
         }
@@ -107,5 +102,5 @@
     }
   ],
   "published": "2024-03-06T11:05:23.578Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

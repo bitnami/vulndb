@@ -26,7 +26,7 @@
               "introduced": "9.0.0"
             },
             {
-              "last_affected": "9.0.0"
+              "fixed": "9.0.1"
             }
           ]
         }
@@ -36,6 +36,7 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:microsoft:.net:9.0.0:*:*:*:*:*:*:*"
     ]
   },
@@ -46,5 +47,5 @@
     }
   ],
   "published": "2024-11-20T07:09:17.692Z",
-  "modified": "2024-11-20T07:37:11.267Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

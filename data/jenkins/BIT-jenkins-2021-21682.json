@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21682",
-  "details": "Jenkins LTS 2.303.1 and earlier accepts names of jobs and other entities with a trailing dot character, potentially replacing the configuration and data of other entities on Windows.",
+  "details": "Jenkins 2.314 and earlier, LTS 2.303.1 and earlier accepts names of jobs and other entities with a trailing dot character, potentially replacing the configuration and data of other entities on Windows.",
   "aliases": [
     "CVE-2021-21682"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.314.0"
+              "fixed": "2.314.1"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T11:01:30.901Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

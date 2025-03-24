@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-41944",
-  "details": "Discourse is an open-source discussion platform. In stable versions prior to 2.8.12, under certain conditions, a user can see notifications for topics they no longer have access to. If there is sensitive information in the topic title, it will therefore have been exposed. This issue is patched in stable version 2.8.12. There are no workarounds available.",
+  "details": "Discourse is an open-source discussion platform. In stable versions prior to 2.8.12 and beta or tests-passed versions prior to 2.9.0.beta.13, under certain conditions, a user can see notifications for topics they no longer have access to. If there is sensitive information in the topic title, it will therefore have been exposed. This issue is patched in stable version 2.8.12, beta version 2.9.0.beta13, and tests-passed version 2.9.0.beta13. There are no workarounds available.",
   "aliases": [
     "CVE-2022-41944"
   ],
@@ -27,6 +27,78 @@
             },
             {
               "last_affected": "2.8.11"
+            },
+            {
+              "introduced": "2.9.0-beta1"
+            },
+            {
+              "last_affected": "2.9.0-beta1"
+            },
+            {
+              "introduced": "2.9.0-beta10"
+            },
+            {
+              "last_affected": "2.9.0-beta10"
+            },
+            {
+              "introduced": "2.9.0-beta11"
+            },
+            {
+              "last_affected": "2.9.0-beta11"
+            },
+            {
+              "introduced": "2.9.0-beta12"
+            },
+            {
+              "last_affected": "2.9.0-beta12"
+            },
+            {
+              "introduced": "2.9.0-beta2"
+            },
+            {
+              "last_affected": "2.9.0-beta2"
+            },
+            {
+              "introduced": "2.9.0-beta3"
+            },
+            {
+              "last_affected": "2.9.0-beta3"
+            },
+            {
+              "introduced": "2.9.0-beta4"
+            },
+            {
+              "last_affected": "2.9.0-beta4"
+            },
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            },
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            },
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
+            },
+            {
+              "introduced": "2.9.0-beta8"
+            },
+            {
+              "last_affected": "2.9.0-beta8"
+            },
+            {
+              "introduced": "2.9.0-beta9"
+            },
+            {
+              "last_affected": "2.9.0-beta9"
             }
           ]
         }
@@ -36,7 +108,19 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta10:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta11:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta12:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta9:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -50,5 +134,5 @@
     }
   ],
   "published": "2024-03-06T11:03:09.082Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }
