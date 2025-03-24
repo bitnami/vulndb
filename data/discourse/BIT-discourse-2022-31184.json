@@ -27,6 +27,48 @@
             },
             {
               "last_affected": "2.8.6"
+            },
+            {
+              "introduced": "2.9.0-beta1"
+            },
+            {
+              "last_affected": "2.9.0-beta1"
+            },
+            {
+              "introduced": "2.9.0-beta2"
+            },
+            {
+              "last_affected": "2.9.0-beta2"
+            },
+            {
+              "introduced": "2.9.0-beta3"
+            },
+            {
+              "last_affected": "2.9.0-beta3"
+            },
+            {
+              "introduced": "2.9.0-beta4"
+            },
+            {
+              "last_affected": "2.9.0-beta4"
+            },
+            {
+              "introduced": "2.9.0-beta5"
+            },
+            {
+              "last_affected": "2.9.0-beta5"
+            },
+            {
+              "introduced": "2.9.0-beta6"
+            },
+            {
+              "last_affected": "2.9.0-beta6"
+            },
+            {
+              "introduced": "2.9.0-beta7"
+            },
+            {
+              "last_affected": "2.9.0-beta7"
             }
           ]
         }
@@ -36,7 +78,14 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta1:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta3:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta4:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta5:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta6:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -50,5 +99,5 @@
     }
   ],
   "published": "2024-03-06T11:05:15.202Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

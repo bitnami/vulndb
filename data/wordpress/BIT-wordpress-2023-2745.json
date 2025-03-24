@@ -147,17 +147,12 @@
             },
             {
               "fixed": "6.1.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "6.2.0"
             },
             {
-              "last_affected": "6.2.0"
+              "fixed": "6.2.1"
             }
           ]
         }
@@ -168,7 +163,7 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:wordpress:wordpress:6.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:wordpress:wordpress:6.2.0:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -194,5 +189,5 @@
     }
   ],
   "published": "2024-03-06T11:09:15.187Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

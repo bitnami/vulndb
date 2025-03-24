@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-24782",
-  "details": "Discourse is an open source discussion platform. Versions 2.8.2 and prior in the `stable` branch are vulnerable to a data leak. Users can request an export of their own activity. Sometimes, due to category settings, they may have category membership for a secure category. The name of this secure category is shown to the user in the export. The same thing occurs when the user's post has been moved to a secure category. A patch for this issue is available in the `main` branch of Discourse's GitHub repository and is anticipated to be part of future releases.",
+  "details": "Discourse is an open source discussion platform. Versions 2.8.2 and prior in the `stable` branch, 2.9.0.beta3 and prior in the `beta` branch, and 2.9.0.beta3 and prior in the `tests-passed` branch are vulnerable to a data leak. Users can request an export of their own activity. Sometimes, due to category settings, they may have category membership for a secure category. The name of this secure category is shown to the user in the export. The same thing occurs when the user's post has been moved to a secure category. A patch for this issue is available in the `main` branch of Discourse's GitHub repository and is anticipated to be part of future releases.",
   "aliases": [
     "CVE-2022-24782"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.8.2"
+              "fixed": "2.8.3"
             }
           ]
         }
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2024-03-06T11:06:48.469Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

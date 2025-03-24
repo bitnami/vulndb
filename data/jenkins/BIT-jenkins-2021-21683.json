@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21683",
-  "details": "The file browser in Jenkins LTS 2.303.1 and earlier may interpret some paths to files as absolute on Windows, resulting in a path traversal vulnerability allowing attackers with Overall/Read permission (Windows controller) or Job/Workspace permission (Windows agents) to obtain the contents of arbitrary files.",
+  "details": "The file browser in Jenkins 2.314 and earlier, LTS 2.303.1 and earlier may interpret some paths to files as absolute on Windows, resulting in a path traversal vulnerability allowing attackers with Overall/Read permission (Windows controller) or Job/Workspace permission (Windows agents) to obtain the contents of arbitrary files.",
   "aliases": [
     "CVE-2021-21683"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.314.0"
+              "fixed": "2.314.1"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T11:01:19.568Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

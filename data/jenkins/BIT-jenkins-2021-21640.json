@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21640",
-  "details": "Jenkins LTS 2.277.1 and earlier does not properly check that a newly created view has an allowed name, allowing attackers with View/Create permission to create views with invalid or already-used names.",
+  "details": "Jenkins 2.286 and earlier, LTS 2.277.1 and earlier does not properly check that a newly created view has an allowed name, allowing attackers with View/Create permission to create views with invalid or already-used names.",
   "aliases": [
     "CVE-2021-21640"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.286.0"
+              "fixed": "2.286.1"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T11:02:02.876Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "20200729.1.0"
+              "introduced": "2020-07-29.0.0"
             },
             {
-              "last_affected": "20200729.1.0"
+              "fixed": "2022-07-31.0.0"
             }
           ]
         }
@@ -36,8 +36,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:dokuwiki:dokuwiki:20200729.1.0:*:*:*:*:*:*:*",
-      "cpe:2.3:a:dokuwiki:dokuwiki:2020-07-29:*:*:*:*:*:*:*"
+      "cpe:2.3:a:dokuwiki:dokuwiki:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -59,5 +58,5 @@
     }
   ],
   "published": "2024-03-06T10:51:37.680Z",
-  "modified": "2024-03-06T17:05:41.420Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

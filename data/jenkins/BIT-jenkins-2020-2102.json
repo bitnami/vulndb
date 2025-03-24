@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2020-2102",
-  "details": "Jenkins LTS 2.204.1 and earlier used a non-constant time comparison function when validating an HMAC.",
+  "details": "Jenkins 2.218 and earlier, LTS 2.204.1 and earlier used a non-constant time comparison function when validating an HMAC.",
   "aliases": [
     "CVE-2020-2102"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.218.0"
+              "fixed": "2.218.1"
             }
           ]
         }
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T11:06:42.392Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

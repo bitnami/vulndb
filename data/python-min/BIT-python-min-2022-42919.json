@@ -23,6 +23,18 @@
           "type": "SEMVER",
           "events": [
             {
+              "introduced": "3.7.3"
+            },
+            {
+              "fixed": "3.7.16"
+            },
+            {
+              "introduced": "3.8.3"
+            },
+            {
+              "fixed": "3.8.16"
+            },
+            {
               "introduced": "3.9.0"
             },
             {
@@ -33,23 +45,6 @@
             },
             {
               "fixed": "3.10.9"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
-              "introduced": "3.7.3"
-            },
-            {
-              "last_affected": "3.7.15"
-            },
-            {
-              "introduced": "3.8.3"
-            },
-            {
-              "last_affected": "3.8.15"
             }
           ]
         }
@@ -121,5 +116,5 @@
     }
   ],
   "published": "2025-01-16T07:22:21.502Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

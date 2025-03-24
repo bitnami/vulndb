@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-multisite-2023-39999",
-  "details": "Exposure of Sensitive Information to an Unauthorized Actor in WordPress from 6.3 through 6.3.1, from 6.2 through 6.2.2, from 6.1 through 6.13, from 6.0 through 6.0.5, from 5.9 through 5.9.7, from 5.8 through 5.8.7, from 5.7 through 5.7.9, from 5.6 through 5.6.11, from 5.5 through 5.5.12, from 5.4 through 5.4.13, from 5.3 through 5.3.15, from 5.2 through 5.2.18, from 5.1 through 5.1.16, from 5.0 through 5.0.19, from 4.9 through 4.9.23, from 4.8 through 4.8.22, from 4.7 through 4.7.26, from 4.6 through 4.6.26, from 4.5 through 4.5.29, from 4.4 through 4.4.30, from 4.3 through 4.3.31, from 4.2 through 4.2.35, from 4.1 through 4.1.38.",
+  "details": "Exposure of Sensitive Information to an Unauthorized Actor in WordPress from 6.3 through 6.3.1, from 6.2 through 6.2.2, from 6.1 through 6.13, from 6.0 through 6.0.5, from 5.9 through 5.9.7, from 5.8 through 5.8.7, from 5.7 through 5.7.9, from 5.6 through 5.6.11, from 5.5 through 5.5.12, from 5.4 through 5.4.13, from 5.3 through 5.3.15, from 5.2 through 5.2.18, from 5.1 through 5.1.16, from 5.0 through 5.0.19, from 4.9 through 4.9.23, from 4.8 through 4.8.22, from 4.7 through 4.7.26, from 4.6 through 4.6.26, from 4.5 through 4.5.29, from 4.4 through 4.4.30, from 4.3 through 4.3.31, from 4.2 through 4.2.35, from 4.1 through 4.1.38.",
   "aliases": [
     "CVE-2023-39999"
   ],
@@ -23,147 +23,142 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "6.3.0"
-            },
-            {
-              "fixed": "6.3.2"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
-            {
               "introduced": "4.1.0"
             },
             {
-              "last_affected": "4.1.38"
+              "fixed": "4.1.39"
             },
             {
               "introduced": "4.2.0"
             },
             {
-              "last_affected": "4.2.35"
+              "fixed": "4.2.36"
             },
             {
               "introduced": "4.3.0"
             },
             {
-              "last_affected": "4.3.31"
+              "fixed": "4.3.32"
             },
             {
               "introduced": "4.4.0"
             },
             {
-              "last_affected": "4.4.30"
+              "fixed": "4.4.31"
             },
             {
               "introduced": "4.5.0"
             },
             {
-              "last_affected": "4.5.29"
+              "fixed": "4.5.30"
             },
             {
               "introduced": "4.6.0"
             },
             {
-              "last_affected": "4.6.26"
+              "fixed": "4.6.27"
             },
             {
               "introduced": "4.7.0"
             },
             {
-              "last_affected": "4.7.26"
+              "fixed": "4.7.27"
             },
             {
               "introduced": "4.8.0"
             },
             {
-              "last_affected": "4.8.22"
+              "fixed": "4.8.23"
             },
             {
               "introduced": "4.9.0"
             },
             {
-              "last_affected": "4.9.23"
+              "fixed": "4.9.24"
             },
             {
               "introduced": "5.0.0"
             },
             {
-              "last_affected": "5.0.19"
+              "fixed": "5.0.20"
             },
             {
               "introduced": "5.1.0"
             },
             {
-              "last_affected": "5.1.16"
+              "fixed": "5.1.17"
             },
             {
               "introduced": "5.2.0"
             },
             {
-              "last_affected": "5.2.18"
+              "fixed": "5.2.19"
             },
             {
               "introduced": "5.3.0"
             },
             {
-              "last_affected": "5.3.15"
+              "fixed": "5.3.16"
             },
             {
               "introduced": "5.4.0"
             },
             {
-              "last_affected": "5.4.13"
+              "fixed": "5.4.14"
             },
             {
               "introduced": "5.5.0"
             },
             {
-              "last_affected": "5.5.12"
+              "fixed": "5.5.13"
             },
             {
               "introduced": "5.6.0"
             },
             {
-              "last_affected": "5.6.11"
+              "fixed": "5.6.12"
             },
             {
               "introduced": "5.7.0"
             },
             {
-              "last_affected": "5.7.9"
+              "fixed": "5.7.10"
             },
             {
               "introduced": "5.8.0"
             },
             {
-              "last_affected": "5.8.7"
+              "fixed": "5.8.8"
             },
             {
               "introduced": "5.9.0"
             },
             {
-              "last_affected": "5.9.7"
+              "fixed": "5.9.8"
             },
             {
               "introduced": "6.0.0"
             },
             {
-              "last_affected": "6.0.5"
+              "fixed": "6.0.6"
             },
             {
               "introduced": "6.1.0"
             },
             {
-              "last_affected": "6.1.3"
+              "fixed": "6.1.4"
             },
             {
               "introduced": "6.2.0"
             },
             {
-              "last_affected": "6.2.2"
+              "fixed": "6.2.3"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.2"
             }
           ]
         }
@@ -203,5 +198,5 @@
     }
   ],
   "published": "2024-03-06T11:08:35.892Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

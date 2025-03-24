@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21603",
-  "details": "Jenkins LTS 2.263.1 and earlier does not escape notification bar response contents, resulting in a cross-site scripting (XSS) vulnerability.",
+  "details": "Jenkins 2.274 and earlier, LTS 2.263.1 and earlier does not escape notification bar response contents, resulting in a cross-site scripting (XSS) vulnerability.",
   "aliases": [
     "CVE-2021-21603"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.274.0"
+              "fixed": "2.274.1"
             }
           ]
         }
@@ -47,5 +47,5 @@
     }
   ],
   "published": "2024-03-06T11:03:58.168Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

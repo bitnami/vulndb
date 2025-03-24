@@ -27,17 +27,12 @@
             },
             {
               "fixed": "2.9.3"
-            }
-          ]
-        },
-        {
-          "type": "SEMVER",
-          "events": [
+            },
             {
               "introduced": "2.10.0"
             },
             {
-              "last_affected": "2.10.0"
+              "fixed": "2.10.1"
             }
           ]
         }
@@ -47,8 +42,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.10.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -70,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:11:21.716Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }

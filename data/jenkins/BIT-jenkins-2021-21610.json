@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jenkins-2021-21610",
-  "details": "Jenkins LTS 2.263.1 and earlier does not implement any restrictions for the URL rendering a formatted preview of markup passed as a query parameter, resulting in a reflected cross-site scripting (XSS) vulnerability if the configured markup formatter does not prohibit unsafe elements (JavaScript) in markup.",
+  "details": "Jenkins 2.274 and earlier, LTS 2.263.1 and earlier does not implement any restrictions for the URL rendering a formatted preview of markup passed as a query parameter, resulting in a reflected cross-site scripting (XSS) vulnerability if the configured markup formatter does not prohibit unsafe elements (JavaScript) in markup.",
   "aliases": [
     "CVE-2021-21610"
   ],
@@ -26,7 +26,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "2.274.0"
+              "fixed": "2.274.1"
             }
           ]
         }
@@ -47,5 +47,5 @@
     }
   ],
   "published": "2024-03-06T11:02:44.288Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-03-24T17:31:38.612Z"
 }
