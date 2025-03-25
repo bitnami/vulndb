@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-unixodbc-2024-1013",
+  "details": "An out-of-bounds stack write flaw was found in unixODBC on 64-bit architectures where the caller has 4 bytes and callee writes 8 bytes. This issue may go unnoticed on little-endian architectures, while big-endian architectures can be broken.",
+  "aliases": [
+    "CVE-2024-1013"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "unixodbc",
+        "purl": "pkg:bitnami/unixodbc"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:unixodbc:unixodbc:-:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2024-1013"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2260823"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/lurcher/unixODBC/pull/157"
+    }
+  ],
+  "published": "2025-03-25T07:44:21.848Z",
+  "modified": "2025-03-25T08:14:48.446Z"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-envoy-2025-30157",
+  "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. Prior to 1.33.1, 1.32.4, 1.31.6, and 1.30.10, Envoy's ext_proc HTTP filter is at risk of crashing if a local reply is sent to the external server due to the filter's life time issue. A known situation is the failure of a websocket handshake will trigger a local reply leading to the crash of Envoy. This vulnerability is fixed in 1.33.1, 1.32.4, 1.31.6, and 1.30.10.",
+  "aliases": [
+    "CVE-2025-30157"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.30.10"
+            },
+            {
+              "introduced": "1.31.0"
+            },
+            {
+              "fixed": "1.31.6"
+            },
+            {
+              "introduced": "1.32.0"
+            },
+            {
+              "fixed": "1.32.4"
+            },
+            {
+              "introduced": "1.33.0"
+            },
+            {
+              "fixed": "1.33.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/commit/8eda1b8ef5ba8663d16a737ab99458c039a9b53c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-cf3q-gqg7-3fm9"
+    }
+  ],
+  "published": "2025-03-25T07:10:09.552Z",
+  "modified": "2025-03-25T08:14:48.446Z"
+}
