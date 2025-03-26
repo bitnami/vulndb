@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-cilium-2025-30163",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Node based network policies (`fromNodes` and `toNodes`) will incorrectly permit traffic to/from non-node endpoints that share the labels specified in `fromNodes` and `toNodes` sections of network policies. Node based network policy is disabled by default in Cilium. This issue affects: Cilium v1.16 between v1.16.0 and v1.16.7 inclusive and v1.17 between v1.17.0 and v1.17.1 inclusive. This issue is fixed in Cilium v1.16.8 and v1.17.2. Users can work around this issue by ensuring that the labels used in `fromNodes` and `toNodes` fields are used exclusively by nodes and not by other endpoints.",
+  "aliases": [
+    "CVE-2025-30163"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium",
+        "purl": "pkg:bitnami/cilium"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.17.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/security/policy/language/#node-based"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/36657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-c6pf-2v8j-96mc"
+    }
+  ],
+  "published": "2025-03-26T07:07:58.967Z",
+  "modified": "2025-03-26T08:13:09.035Z"
+}
