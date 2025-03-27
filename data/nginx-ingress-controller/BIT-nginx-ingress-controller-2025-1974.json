@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:kubernetes:ingress-nginx:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:kubernetes:ingress-nginx:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:kubernetes:ingress-nginx:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -46,5 +47,5 @@
     }
   ],
   "published": "2025-03-26T07:24:38.747Z",
-  "modified": "2025-03-26T08:13:09.035Z"
+  "modified": "2025-03-27T08:19:50.923Z"
 }
