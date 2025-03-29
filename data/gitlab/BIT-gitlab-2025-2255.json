@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-2255",
+  "details": "An issue has been discovered in Gitlab EE/CE for AppSec affecting all versions from 13.5.0 before 17.8.6, 17.9 before 17.9.3, and 17.10 before 17.10.1. Certain error messages could allow Cross-Site Scripting attacks (XSS). for AppSec.",
+  "aliases": [
+    "CVE-2025-2255"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.5.0"
+            },
+            {
+              "fixed": "17.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/524635"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2994150"
+    }
+  ],
+  "published": "2025-03-29T07:10:19.692Z",
+  "modified": "2025-03-29T07:49:59.137Z"
+}

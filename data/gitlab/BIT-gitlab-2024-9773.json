@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2024-9773",
+  "details": "An issue was discovered in GitLab EE affecting all versions starting from 14.9 before 17.8.6, all versions starting from 17.9 before 17.8.3, all versions starting from 17.10 before 17.10.1. An input validation issue in the Harbor registry integration could have allowed a maintainer to add malicious code to the CLI commands shown in the UI.",
+  "aliases": [
+    "CVE-2024-9773"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.9.0"
+            },
+            {
+              "fixed": "17.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/498557"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2671808"
+    }
+  ],
+  "published": "2025-03-29T07:12:34.592Z",
+  "modified": "2025-03-29T07:49:59.137Z"
+}
