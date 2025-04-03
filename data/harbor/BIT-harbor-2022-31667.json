@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-31667",
-  "details": "Harbor fails to validate the user permissions when updating a robot account that belongs to a project that the authenticated user doesn’t have access to. By sending a request that attempts to update a robot account, and specifying a robot account id and robot account name that belongs to a different project that the user doesn’t have access to, it was possible to revoke the robot account permissions.",
+  "details": "Harbor fails to validate the user permissions when updating a robot account that belongs to a project that the authenticated user doesn’t have access to. \n\nBy sending a request that attempts to update a robot account, and specifying a robot account id and robot account name that belongs to a different project that the user doesn’t have access to, it was possible to revoke the robot account permissions.",
   "aliases": [
     "CVE-2022-31667"
   ],
@@ -49,8 +49,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-xx9w-464f-7h6f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31667"
     }
   ],
   "published": "2024-11-20T07:11:07.078Z",
-  "modified": "2024-11-20T07:37:11.267Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -43,8 +43,12 @@
     {
       "type": "WEB",
       "url": "https://jfrog.com/help/r/jfrog-release-information/jfrog-security-advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42509"
     }
   ],
   "published": "2024-03-31T18:17:13.826Z",
-  "modified": "2025-03-12T07:46:07.376Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

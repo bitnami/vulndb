@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-42505",
-  "details": "An authenticated user with read permissions on database connections metadata could potentially access sensitive information such as the connection's username.This issue affects Apache Superset before 3.0.0.",
+  "details": "An authenticated user with read permissions on database connections metadata could potentially access sensitive information such as the connection's username.\n\nThis issue affects Apache Superset before 3.0.0.",
   "aliases": [
     "CVE-2023-42505"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/bd0fhtfzrtgo1q8x35tpm8ms144d1t2y"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42505"
     }
   ],
   "published": "2025-02-05T07:27:12.602Z",
-  "modified": "2025-02-05T07:44:02.943Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

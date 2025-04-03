@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-minio-2023-28432",
-  "details": "Minio is a Multi-Cloud Object Storage framework. In a cluster deployment starting with RELEASE.2019-12-17T23-16-33Z and prior to RELEASE.2023-03-20T20-16-18Z, MinIO returns all environment variables, including `MINIO_SECRET_KEY`and `MINIO_ROOT_PASSWORD`, resulting in information disclosure. All users of distributed deployment are impacted. All users are advised to upgrade to RELEASE.2023-03-20T20-16-18Z.",
+  "details": "Minio is a Multi-Cloud Object Storage framework. In a cluster deployment starting with RELEASE.2019-12-17T23-16-33Z and prior to RELEASE.2023-03-20T20-16-18Z, MinIO returns all environment variables, including `MINIO_SECRET_KEY`\nand `MINIO_ROOT_PASSWORD`, resulting in information disclosure. All users of distributed deployment are impacted. All users are advised to upgrade to RELEASE.2023-03-20T20-16-18Z.",
   "aliases": [
     "CVE-2023-28432"
   ],
@@ -59,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://www.greynoise.io/blog/openai-minio-and-why-you-should-always-use-docker-cli-scan-to-keep-your-supply-chain-clean"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28432"
     }
   ],
   "published": "2024-03-06T10:56:38.283Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

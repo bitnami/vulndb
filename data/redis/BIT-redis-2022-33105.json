@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:redis:redis:7.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:7.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -63,8 +64,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20220729-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-33105"
     }
   ],
   "published": "2024-03-06T11:05:46.767Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

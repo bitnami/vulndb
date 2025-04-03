@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-26016",
-  "details": "A low privilege authenticated user could import an existing dashboard or chart that they do not have access to and then modify its metadata, thereby gaining ownership of the object. However, it's important to note that access to the analytical data of these charts and dashboards would still be subject to validation based on data access privileges.This issue affects Apache Superset: before 3.0.4, from 3.1.0 before 3.1.1.Users are recommended to upgrade to version 3.1.1, which fixes the issue.",
+  "details": "A low privilege authenticated user could import an existing dashboard or chart that they do not have access to and then modify its metadata, thereby gaining ownership of the object. However, it's important to note that access to the analytical data of these charts and dashboards would still be subject to validation based on data access privileges.\n\nThis issue affects Apache Superset: before 3.0.4, from 3.1.0 before 3.1.1.Users are recommended to upgrade to version 3.1.1, which fixes the issue.",
   "aliases": [
     "CVE-2024-26016"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/76v1jjcylgk4p3m0258qr359ook3vl8s"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-26016"
     }
   ],
   "published": "2025-02-05T07:25:54.594Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

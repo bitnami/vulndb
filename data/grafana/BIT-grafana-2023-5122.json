@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240503-0002/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5122"
     }
   ],
   "published": "2024-10-24T07:10:55.187Z",
-  "modified": "2025-02-17T19:41:46.561Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

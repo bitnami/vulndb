@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2020-11891",
+  "details": "An issue was discovered in Joomla! before 3.9.17. Incorrect ACL checks in the access level section of com_users allow the unauthorized editing of usergroups.",
+  "aliases": [
+    "CVE-2020-11891"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.8"
+            },
+            {
+              "fixed": "3.9.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/809-20200401-core-incorrect-access-control-in-com-users-access-level-editing-function.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11891"
+    }
+  ],
+  "published": "2025-04-03T14:10:00.912Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

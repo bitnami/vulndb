@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2024-8207",
-  "details": "In certain highly specific configurations of the host system and MongoDB server binary installation on Linux Operating Systems, it may be possible for a unintended actor with host-level access to cause the MongoDB Server binary to load unintended actor-controlled shared libraries when the server binary is started, potentially resulting in the unintended actor gaining full control over the MongoDB server process. This issue affects MongoDB Server v5.0 versions prior to 5.0.14 and MongoDB Server v6.0 versions prior to 6.0.3.Required Configuration: Only environments with Linux as the underlying operating system is affected by this issue",
+  "details": "In certain highly specific configurations of the host system and MongoDB server binary installation on Linux Operating Systems, it may be possible for a unintended actor with host-level access to cause the MongoDB Server binary to load unintended actor-controlled shared libraries when the server binary is started, potentially resulting in the unintended actor gaining full control over the MongoDB server process. This issue affects MongoDB Server v5.0 versions prior to 5.0.14 and MongoDB Server v6.0 versions prior to 6.0.3.\n\nRequired Configuration: Only environments with Linux as the underlying operating system is affected by this issue",
   "aliases": [
     "CVE-2024-8207"
   ],
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://jira.mongodb.org/browse/SERVER-69507"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8207"
     }
   ],
   "published": "2024-08-31T07:15:12.317Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

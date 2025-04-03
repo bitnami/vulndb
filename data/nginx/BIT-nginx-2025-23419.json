@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-2025-23419",
-  "details": "When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers. This vulnerability arises when  TLS Session Tickets https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_ticket_key  are used and/or the  SSL session cache https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_cache  are used in the default server and the default server is performing client certificate authentication.  Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+  "details": "When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers. This vulnerability arises when  TLS Session Tickets https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_ticket_key  are used and/or the  SSL session cache https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_cache  are used in the default server and the default server is performing client certificate authentication.  \n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
   "aliases": [
     "CVE-2025-23419"
   ],
@@ -53,8 +53,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2025/02/05/8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23419"
     }
   ],
   "published": "2025-02-07T07:15:11.088Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -43,7 +43,8 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:google:tensorflow:2.2.0:*:*:*:-:*:*:*",
-      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*"
+      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*",
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -62,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-q8qj-fc9q-cphr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15191"
     }
   ],
   "published": "2024-03-06T11:20:51.213Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

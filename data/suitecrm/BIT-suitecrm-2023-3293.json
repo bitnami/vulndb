@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://huntr.dev/bounties/22cb0ee3-e5da-40e0-9d2c-ace9b759f171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3293"
     }
   ],
   "published": "2024-03-06T11:07:37.704Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

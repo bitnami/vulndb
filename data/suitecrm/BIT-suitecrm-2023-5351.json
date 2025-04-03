@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://huntr.dev/bounties/f7c7fcbc-5421-4a29-9385-346a1caa485b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5351"
     }
   ],
   "published": "2024-03-06T11:06:55.509Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

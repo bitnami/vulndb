@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2024-7553",
-  "details": "Incorrect validation of files loaded from a local untrusted directory may allow local privilege escalation if the underlying operating systems is Windows. This may result in the application executing arbitrary behaviour determined by the contents of untrusted files. This issue affects MongoDB Server v5.0 versions prior to 5.0.27, MongoDB Server v6.0 versions prior to 6.0.16, MongoDB Server v7.0 versions prior to 7.0.12, MongoDB Server v7.3 versions prior 7.3.3, MongoDB C Driver versions prior to 1.26.2 and MongoDB PHP Driver versions prior to 1.18.1.Required Configuration:Only environments with Windows as the underlying operating system is affected by this issue",
+  "details": "Incorrect validation of files loaded from a local untrusted directory may allow local privilege escalation if the underlying operating systems is Windows. This may result in the application executing arbitrary behaviour determined by the contents of untrusted files. This issue affects MongoDB Server v5.0 versions prior to 5.0.27, MongoDB Server v6.0 versions prior to 6.0.16, MongoDB Server v7.0 versions prior to 7.0.12, MongoDB Server v7.3 versions prior 7.3.3, MongoDB C Driver versions prior to 1.26.2 and MongoDB PHP Driver versions prior to 1.18.1.\n\nRequired Configuration:\n\nOnly environments with Windows as the underlying operating system is affected by this issue",
   "aliases": [
     "CVE-2024-7553"
   ],
@@ -22,6 +22,18 @@
         {
           "type": "SEMVER",
           "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.27"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.16"
+            },
             {
               "introduced": "7.0.0"
             },
@@ -51,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://jira.mongodb.org/browse/SERVER-93211"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7553"
     }
   ],
   "published": "2024-09-20T07:17:59.251Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

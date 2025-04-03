@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://huntr.com/bounties/93e470d7-b6f0-409b-af63-49d3e2a26dbc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0520"
     }
   ],
   "published": "2024-10-13T19:12:37.607Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

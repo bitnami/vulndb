@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2021-3991",
+  "details": "An Improper Authorization vulnerability exists in Dolibarr versions prior to the 'develop' branch. A user with restricted permissions in the 'Reception' section is able to access specific reception details via direct URL access, bypassing the intended permission restrictions.",
+  "aliases": [
+    "CVE-2021-3991"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "20.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/dolibarr/dolibarr/commit/63cd06394f39d60784d6e6a0ccf4867a71a6568f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/58ddbd8a-0faf-4b3f-aec9-5850bb19ab67"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3991"
+    }
+  ],
+  "published": "2025-04-03T14:05:18.001Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-artifactory-2024-4142",
-  "details": "An Improper input validation vulnerability that could potentially lead to privilege escalation was discovered in JFrog Artifactory.Due to this vulnerability, users with low privileges may gain administrative access to the system.This issue can also be exploited in Artifactory platforms with anonymous access enabled.",
+  "details": "An Improper input validation vulnerability that could potentially lead to privilege escalation was discovered in JFrog Artifactory.\n\nDue to this vulnerability, users with low privileges may gain administrative access to the system.\n\nThis issue can also be exploited in Artifactory platforms with anonymous access enabled.",
   "aliases": [
     "CVE-2024-4142"
   ],
@@ -79,8 +79,12 @@
     {
       "type": "WEB",
       "url": "https://jfrog.com/help/r/jfrog-release-information/jfrog-security-advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4142"
     }
   ],
   "published": "2024-05-03T07:16:08.288Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

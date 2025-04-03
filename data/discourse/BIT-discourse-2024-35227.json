@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-35227",
-  "details": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch, Oneboxing against a carefully crafted malicious URL can reduce the availability of a Discourse instance. The problem has been patched in version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch. There are no known workarounds available for this vulnerability. ",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch, Oneboxing against a carefully crafted malicious URL can reduce the availability of a Discourse instance. The problem has been patched in version 3.2.3 on the `stable` branch and version 3.3.0.beta3 on the `tests-passed` branch. There are no known workarounds available for this vulnerability.",
   "aliases": [
     "CVE-2024-35227"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-664f-xwjw-752c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35227"
     }
   ],
   "published": "2024-07-09T08:44:00.861Z",
-  "modified": "2024-07-09T09:22:43.691Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

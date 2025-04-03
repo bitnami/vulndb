@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2021-23125",
+  "details": "An issue was discovered in Joomla! 3.1.0 through 3.9.23. The lack of escaping of image-related parameters in multiple com_tags views cause lead to XSS attack vectors.",
+  "aliases": [
+    "CVE-2021-23125"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "last_affected": "3.9.23"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/838-20210103-core-xss-in-com-tags-image-parameters.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23125"
+    }
+  ],
+  "published": "2025-04-03T14:12:05.496Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

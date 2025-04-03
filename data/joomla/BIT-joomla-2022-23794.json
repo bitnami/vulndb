@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2022-23794",
+  "details": "An issue was discovered in Joomla! 3.0.0 through 3.10.6 & 4.0.0 through 4.1.0. Uploading a file name of an excess length causes the error. This error brings up the screen with the path of the source code of the web application.",
+  "aliases": [
+    "CVE-2022-23794"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "last_affected": "3.10.6"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "last_affected": "4.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/871-20220302-core-path-disclosure-within-filesystem-error-messages.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23794"
+    }
+  ],
+  "published": "2025-04-03T14:14:18.591Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

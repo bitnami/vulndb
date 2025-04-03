@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:moodle:moodle:4.3.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:moodle:moodle:4.3.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://packetstormsecurity.com/files/175277/Moodle-4.3-Cross-Site-Scripting.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-46858"
     }
   ],
   "published": "2024-03-06T10:58:47.260Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

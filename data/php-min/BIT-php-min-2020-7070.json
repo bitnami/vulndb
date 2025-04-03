@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
         }
       ],
       "ranges": [
@@ -111,8 +111,12 @@
     {
       "type": "WEB",
       "url": "https://www.tenable.com/security/tns-2021-14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7070"
     }
   ],
   "published": "2025-01-14T19:23:10.221Z",
-  "modified": "2025-01-14T19:40:59.218Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

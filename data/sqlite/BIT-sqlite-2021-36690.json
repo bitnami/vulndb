@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:sqlite:sqlite:3.36.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:sqlite:sqlite:3.36.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -79,8 +80,12 @@
     {
       "type": "WEB",
       "url": "https://www.sqlite.org/forum/forumpost/718c0a8d17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-36690"
     }
   ],
   "published": "2024-03-06T11:06:24.567Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

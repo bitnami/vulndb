@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -57,8 +57,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-2693-xr3m-jhqr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42452"
     }
   ],
   "published": "2024-03-06T10:55:46.292Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

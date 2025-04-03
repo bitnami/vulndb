@@ -58,7 +58,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
     ]
@@ -83,8 +83,12 @@
     {
       "type": "WEB",
       "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-2007"
     }
   ],
   "published": "2024-03-06T11:09:34.388Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

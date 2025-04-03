@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
         }
       ],
       "ranges": [
@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:lfprojects:mlflow:2.13.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:lfprojects:mlflow:2.13.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://huntr.com/bounties/8ad52cb2-2cda-4eb0-aec9-586060ee43e0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6838"
     }
   ],
   "published": "2025-04-02T07:17:05.688Z",
-  "modified": "2025-04-02T07:51:18.344Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

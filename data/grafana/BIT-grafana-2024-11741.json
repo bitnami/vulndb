@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2024-11741",
-  "details": "Grafana is an open-source platform for monitoring and observability. The Grafana Alerting VictorOps integration was not properly protected and could be exposed to users with Viewer permission. Fixed in versions 11.5.0, 11.4.1, 11.3.3,  11.2.6, 11.1.11, 11.0.11 and 10.4.15",
+  "details": "Grafana is an open-source platform for monitoring and observability. \nThe Grafana Alerting VictorOps integration was not properly protected and could be exposed to users with Viewer permission. \nFixed in versions 11.5.0, 11.4.1, 11.3.3,  11.2.6, 11.1.11, 11.0.11 and 10.4.15",
   "aliases": [
     "CVE-2024-11741"
   ],
@@ -49,8 +49,12 @@
     {
       "type": "WEB",
       "url": "https://grafana.com/security/security-advisories/cve-2024-11741/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11741"
     }
   ],
   "published": "2025-02-04T07:14:17.715Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2020-11889",
+  "details": "An issue was discovered in Joomla! before 3.9.17. Incorrect ACL checks in the access level section of com_users allow the unauthorized deletion of usergroups.",
+  "aliases": [
+    "CVE-2020-11889"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "3.9.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/811-20200403-core-incorrect-access-control-in-com-users-access-level-deletion-function"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11889"
+    }
+  ],
+  "published": "2025-04-03T14:09:52.491Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

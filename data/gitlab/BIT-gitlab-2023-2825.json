@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -38,7 +38,9 @@
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:community:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:16.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -53,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://hackerone.com/reports/1994725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2825"
     }
   ],
   "published": "2024-03-06T11:07:04.975Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

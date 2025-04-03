@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -75,8 +75,12 @@
     {
       "type": "WEB",
       "url": "https://patchstack.com/database/vulnerability/wordpress/wordpress-core-6-3-2-contributor-stored-xss-in-navigation-links-block-vulnerability?_s_id=cve"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38000"
     }
   ],
   "published": "2024-03-06T11:09:07.064Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

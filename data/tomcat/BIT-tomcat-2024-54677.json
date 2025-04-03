@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2024-54677",
-  "details": "Uncontrolled Resource Consumption vulnerability in the examples web application provided with Apache Tomcat leads to denial of service.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.9.97.Users are recommended to upgrade to version 11.0.2, 10.1.34 or 9.0.98, which fixes the issue.",
+  "details": "Uncontrolled Resource Consumption vulnerability in the examples web application provided with Apache Tomcat leads to denial of service.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.1, from 10.1.0-M1 through 10.1.33, from 9.0.0.M1 through 9.9.97.\n\nUsers are recommended to upgrade to version 11.0.2, 10.1.34 or 9.0.98, which fixes the issue.",
   "aliases": [
     "CVE-2024-54677"
   ],
@@ -65,8 +65,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20250131-0006/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-54677"
     }
   ],
   "published": "2025-02-27T10:38:32.546Z",
-  "modified": "2025-02-27T10:59:59.819Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

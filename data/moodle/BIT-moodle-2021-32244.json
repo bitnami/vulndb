@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:moodle:moodle:3.10.3:*:*:*:*:*:*:*"
+      "cpe:2.3:a:moodle:moodle:3.10.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/langkexiansheng/Images/blob/master/moodle_xss.gif"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32244"
     }
   ],
   "published": "2024-03-06T11:10:29.416Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

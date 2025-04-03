@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-37379",
-  "details": "Apache Airflow, in versions prior to 2.7.0, contains a security vulnerability that can be exploited by an authenticated user possessing Connection edit privileges. This vulnerability allows the user to access connection information and exploit the test connection feature by sending many requests, leading to a denial of service (DoS) condition on the server. Furthermore, malicious actors can leverage this vulnerability to establish harmful connections with the server.Users of Apache Airflow are strongly advised to upgrade to version 2.7.0 or newer to mitigate the risk associated with this vulnerability. Additionally, administrators are encouraged to review and adjust user permissions to restrict access to sensitive functionalities, reducing the attack surface.",
+  "details": "Apache Airflow, in versions prior to 2.7.0, contains a security vulnerability that can be exploited by an authenticated user possessing Connection edit privileges. This vulnerability allows the user to access connection information and exploit the test connection feature by sending many requests, leading to a denial of service (DoS) condition on the server. Furthermore, malicious actors can leverage this vulnerability to establish harmful connections with the server.\n\nUsers of Apache Airflow are strongly advised to upgrade to version 2.7.0 or newer to mitigate the risk associated with this vulnerability. Additionally, administrators are encouraged to review and adjust user permissions to restrict access to sensitive functionalities, reducing the attack surface.",
   "aliases": [
     "CVE-2023-37379"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/g5c9vcn27lr14go48thrjpo6f4vw571r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37379"
     }
   ],
   "published": "2024-03-06T10:54:08.760Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

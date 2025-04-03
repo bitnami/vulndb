@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2025-24814",
-  "details": "Core creation allows users to replace \"trusted\" configset files with arbitrary configurationSolr instances that (1) use the \"FileSystemConfigSetService\" component (the default in \"standalone\" or \"user-managed\" mode), and (2) are running without authentication and authorization are vulnerable to a sort of privilege escalation wherein individual \"trusted\" configset files can be ignored in favor of potentially-untrusted replacements available elsewhere on the filesystem.  These replacement config files are treated as \"trusted\" and can use \"<lib>\" tags to add to Solr's classpath, which an attacker might use to load malicious code as a searchComponent or other plugin.This issue affects all Apache Solr versions up through Solr 9.7.  Users can protect against the vulnerability by enabling authentication and authorization on their Solr clusters or switching to SolrCloud (and away from \"FileSystemConfigSetService\").  Users are also recommended to upgrade to Solr 9.8.0, which mitigates this issue by disabling use of \"<lib>\" tags by default.",
+  "details": "Core creation allows users to replace \"trusted\" configset files with arbitrary configuration\n\nSolr instances that (1) use the \"FileSystemConfigSetService\" component (the default in \"standalone\" or \"user-managed\" mode), and (2) are running without authentication and authorization are vulnerable to a sort of privilege escalation wherein individual \"trusted\" configset files can be ignored in favor of potentially-untrusted replacements available elsewhere on the filesystem.  These replacement config files are treated as \"trusted\" and can use \"<lib>\" tags to add to Solr's classpath, which an attacker might use to load malicious code as a searchComponent or other plugin.\n\nThis issue affects all Apache Solr versions up through Solr 9.7.  Users can protect against the vulnerability by enabling authentication and authorization on their Solr clusters or switching to SolrCloud (and away from \"FileSystemConfigSetService\").  Users are also recommended to upgrade to Solr 9.8.0, which mitigates this issue by disabling use of \"<lib>\" tags by default.",
   "aliases": [
     "CVE-2025-24814"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20250214-0002/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24814"
     }
   ],
   "published": "2025-01-29T07:20:22.315Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

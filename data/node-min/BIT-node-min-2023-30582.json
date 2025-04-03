@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-min-2023-30582",
-  "details": "A vulnerability has been identified in Node.js version 20, affecting users of the experimental permission model when the --allow-fs-read flag is used with a non-* argument. This flaw arises from an inadequate permission model that fails to restrict file watching through the fs.watchFile API. As a result, malicious actors can monitor files that they do not have explicit read access to.Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
+  "details": "A vulnerability has been identified in Node.js version 20, affecting users of the experimental permission model when the --allow-fs-read flag is used with a non-* argument. This flaw arises from an inadequate permission model that fails to restrict file watching through the fs.watchFile API. As a result, malicious actors can monitor files that they do not have explicit read access to.\n\nPlease note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2023-30582"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240926-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-30582"
     }
   ],
   "published": "2024-12-16T13:59:51.129Z",
-  "modified": "2024-12-16T14:26:30.868Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

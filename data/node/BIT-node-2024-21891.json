@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2024-21891",
-  "details": "Node.js depends on multiple built-in utility functions to normalize paths provided to node:fs functions, which can be overwitten with user-defined implementations leading to filesystem permission model bypass through path traversal attack.This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
+  "details": "Node.js depends on multiple built-in utility functions to normalize paths provided to node:fs functions, which can be overwitten with user-defined implementations leading to filesystem permission model bypass through path traversal attack.\nThis vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.\nPlease note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2024-21891"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -57,8 +57,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240315-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21891"
     }
   ],
   "published": "2024-06-04T09:50:51.602Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

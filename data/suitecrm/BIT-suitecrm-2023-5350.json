@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2023-5350",
-  "details": " SQL Injection in GitHub repository salesagility/suitecrm prior to 7.14.1.",
+  "details": "SQL Injection in GitHub repository salesagility/suitecrm prior to 7.14.1.",
   "aliases": [
     "CVE-2023-5350"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://huntr.dev/bounties/c56563cb-b74e-4174-a09a-cd07689d6736"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5350"
     }
   ],
   "published": "2024-03-06T11:07:06.670Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

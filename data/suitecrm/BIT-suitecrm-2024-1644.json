@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2024-1644",
-  "details": "Suite CRM version 7.14.2 allows including local php files. This is possiblebecause the application is vulnerable to LFI.",
+  "details": "Suite CRM version 7.14.2 allows including local php files. This is possible\n\nbecause the application is vulnerable to LFI.",
   "aliases": [
     "CVE-2024-1644"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:salesagility:suitecrm:7.14.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:salesagility:suitecrm:7.14.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -47,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/salesagility/SuiteCRM/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1644"
     }
   ],
   "published": "2025-01-01T07:18:59.119Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2021-32040",
-  "details": "It may be possible to have an extremely long aggregation pipeline in conjunction with a specific stage/operator and cause a stack overflow due to the size of the stack frames used by that stage. If an attacker could cause such an aggregation to occur, they could maliciously crash MongoDB in a DoS attack. This vulnerability affects MongoDB Server v4.4 versions prior to and including 4.4.28, MongoDB Server v5.0 versions prior to 5.0.4 and MongoDB Server v4.2 versions prior to 4.2.16.Workaround: >= v4.2.16 users and all v4.4 users can add the --setParameter internalPipelineLengthLimit=50 instead of the default 1000 to mongod at startup to prevent a crash.",
+  "details": "It may be possible to have an extremely long aggregation pipeline in conjunction with a specific stage/operator and cause a stack overflow due to the size of the stack frames used by that stage. If an attacker could cause such an aggregation to occur, they could maliciously crash MongoDB in a DoS attack. This vulnerability affects MongoDB Server v4.4 versions prior to and including 4.4.28, MongoDB Server v5.0 versions prior to 5.0.4 and MongoDB Server v4.2 versions prior to 4.2.16.\n\nWorkaround: >= v4.2.16 users and all v4.4 users can add the --setParameter internalPipelineLengthLimit=50 instead of the default 1000 to mongod at startup to prevent a crash.",
   "aliases": [
     "CVE-2021-32040"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -67,8 +67,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20220609-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32040"
     }
   ],
   "published": "2024-03-06T10:57:09.971Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

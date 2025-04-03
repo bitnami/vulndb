@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2023-32558",
-  "details": "The use of the deprecated API `process.binding()` can bypass the permission model through path traversal. This vulnerability affects all users using the experimental permission model in Node.js 20.x.Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
+  "details": "The use of the deprecated API `process.binding()` can bypass the permission model through path traversal. \n\nThis vulnerability affects all users using the experimental permission model in Node.js 20.x.\n\nPlease note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2023-32558"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241025-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32558"
     }
   ],
   "published": "2024-03-06T10:59:45.565Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hp24-94qf-8cgc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47121"
     }
   ],
   "published": "2024-03-06T10:51:53.707Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

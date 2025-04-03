@@ -40,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
     ]
@@ -53,8 +53,12 @@
     {
       "type": "WEB",
       "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1723"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1723"
     }
   ],
   "published": "2024-03-06T10:53:35.905Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

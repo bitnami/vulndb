@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2020-13763",
+  "details": "In Joomla! before 3.9.19, the default settings of the global textfilter configuration do not block HTML inputs for Guest users.",
+  "aliases": [
+    "CVE-2020-13763"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.1"
+            },
+            {
+              "fixed": "3.9.19"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0-beta1"
+            },
+            {
+              "last_affected": "2.5.0-beta1"
+            },
+            {
+              "introduced": "2.5.0-beta2"
+            },
+            {
+              "last_affected": "2.5.0-beta2"
+            },
+            {
+              "introduced": "2.5.0-rc1"
+            },
+            {
+              "last_affected": "2.5.0-rc1"
+            },
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "2.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/814-20200602-core-inconsistent-default-textfilter-settings"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13763"
+    }
+  ],
+  "published": "2025-04-03T14:10:16.806Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

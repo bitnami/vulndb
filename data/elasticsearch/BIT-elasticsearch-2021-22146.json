@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:elastic:elasticsearch:7.13.3:*:*:*:*:*:*:*"
+      "cpe:2.3:a:elastic:elasticsearch:7.13.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20210819-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-22146"
     }
   ],
   "published": "2024-03-06T10:53:02.276Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

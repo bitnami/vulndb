@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -75,8 +75,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20220303-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21702"
     }
   ],
   "published": "2024-03-06T10:58:26.283Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

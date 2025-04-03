@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-2024-6232",
-  "details": "There is a MEDIUM severity vulnerability affecting CPython.Regular expressions that allowed excessive backtracking during tarfile.TarFile header parsing are vulnerable to ReDoS via specifically-crafted tar archives.",
+  "details": "There is a MEDIUM severity vulnerability affecting CPython.\n\n\n\n\n\nRegular expressions that allowed excessive backtracking during tarfile.TarFile header parsing are vulnerable to ReDoS via specifically-crafted tar archives.",
   "aliases": [
     "CVE-2024-6232"
   ],
@@ -111,8 +111,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/python/cpython/commit/34ddb64d088dd7ccc321f6103d23153256caa5d4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6232"
     }
   ],
   "published": "2024-09-16T12:04:20.671Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-40611",
-  "details": "Apache Airflow, versions before 2.7.1, is affected by a vulnerability that allows authenticated and DAG-view authorized Users to modify some DAG run detail values when submitting notes. This could have them alter details such as configuration parameters, start date, etc.Users should upgrade to version 2.7.1 or later which has removed the vulnerability.",
+  "details": "Apache Airflow, versions before 2.7.1, is affected by a vulnerability that allows authenticated and DAG-view authorized Users to modify some DAG run detail values when submitting notes. This could have them alter details such as configuration parameters, start date, etc.\n\nUsers should upgrade to version 2.7.1 or later which has removed the vulnerability.",
   "aliases": [
     "CVE-2023-40611"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/8y9xk1s3j4qr36yzqn8ogbn9fl7pxrn0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-40611"
     }
   ],
   "published": "2024-03-06T10:53:28.968Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

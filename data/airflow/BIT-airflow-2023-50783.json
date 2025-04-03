@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-50783",
-  "details": "Apache Airflow, versions before 2.8.0, is affected by a vulnerability that allows an authenticated user without the variable edit permission, to update a variable.This flaw compromises the integrity of variable management, potentially leading to unauthorized data modification.Users are recommended to upgrade to 2.8.0, which fixes this issue",
+  "details": "Apache Airflow, versions before 2.8.0, is affected by a vulnerability that allows an authenticated user without the variable edit permission, to update a variable.\nThis flaw compromises the integrity of variable management, potentially leading to unauthorized data modification.\nUsers are recommended to upgrade to 2.8.0, which fixes this issue",
   "aliases": [
     "CVE-2023-50783"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/rs7cr3yp726mb89s1m844hy9pq7frgcn"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50783"
     }
   ],
   "published": "2024-03-06T10:51:04.280Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

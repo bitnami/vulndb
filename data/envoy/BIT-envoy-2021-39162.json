@@ -40,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:envoyproxy:envoy:1.19.0:*:*:*:*:*:*:*"
@@ -58,8 +58,12 @@
     {
       "type": "WEB",
       "url": "https://groups.google.com/g/envoy-announce/c/5xBpsEZZDfE/m/wD05NZBbAgAJ"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-39162"
     }
   ],
   "published": "2024-03-06T10:57:33.498Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

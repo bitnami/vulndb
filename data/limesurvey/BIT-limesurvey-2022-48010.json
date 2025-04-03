@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:limesurvey:limesurvey:5.4.15:*:*:*:*:*:*:*"
+      "cpe:2.3:a:limesurvey:limesurvey:5.4.15:*:*:*:*:*:*:*",
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/Sakura-501/LimeSurvey-5.4.15-Stored-XSS-in-surveytexts"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48010"
     }
   ],
   "published": "2024-03-06T10:55:29.278Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

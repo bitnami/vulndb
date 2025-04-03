@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-2183",
-  "details": "Grafana is an open-source platform for monitoring and observability. The option to send a test alert is not available from the user panel UI for users having the Viewer role. It is still possible for a user with the Viewer role to send a test alert using the API as the API does not check access to this function.This might enable malicious users to abuse the functionality by sending multiple alert messages to e-mail and Slack, spamming users, prepare Phishing attack or block SMTP server.Users may upgrade to version 9.5.3, 9.4.12, 9.3.15, 9.2.19 and 8.5.26 to receive a fix.",
+  "details": "Grafana is an open-source platform for monitoring and observability. \n\nThe option to send a test alert is not available from the user panel UI for users having the Viewer role. It is still possible for a user with the Viewer role to send a test alert using the API as the API does not check access to this function.\n\nThis might enable malicious users to abuse the functionality by sending multiple alert messages to e-mail and Slack, spamming users, prepare Phishing attack or block SMTP server.\n\nUsers may upgrade to version 9.5.3, 9.4.12, 9.3.15, 9.2.19 and 8.5.26 to receive a fix.",
   "aliases": [
     "CVE-2023-2183"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -75,8 +75,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230706-0002/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2183"
     }
   ],
   "published": "2024-03-06T10:53:35.301Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

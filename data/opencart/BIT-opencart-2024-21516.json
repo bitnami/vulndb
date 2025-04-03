@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -44,8 +44,12 @@
     {
       "type": "WEB",
       "url": "https://security.snyk.io/vuln/SNYK-PHP-OPENCARTOPENCART-7266576"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21516"
     }
   ],
   "published": "2024-06-25T11:58:23.174Z",
-  "modified": "2025-01-16T07:39:35.925Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:microsoft:.net:6.0.0:-:*:*:*:*:*:*"
+      "cpe:2.3:a:microsoft:.net:6.0.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -67,8 +68,12 @@
     {
       "type": "WEB",
       "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38013"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-38013"
     }
   ],
   "published": "2024-03-06T10:57:24.899Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

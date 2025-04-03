@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-min-2024-8088",
-  "details": "There is a HIGH severity vulnerability affecting the CPython \"zipfile\"module affecting \"zipfile.Path\". Note that the more common API \"zipfile.ZipFile\" class is unaffected.When iterating over names of entries in a zip archive (for example, methodsof \"zipfile.Path\" like \"namelist()\", \"iterdir()\", etc)the process can be put into an infinite loop with a maliciously craftedzip archive. This defect applies when reading only metadata or extractingthe contents of the zip archive. Programs that are not handlinguser-controlled zip archives are not affected.",
+  "details": "There is a HIGH severity vulnerability affecting the CPython \"zipfile\"\nmodule affecting \"zipfile.Path\". Note that the more common API \"zipfile.ZipFile\" class is unaffected.\n\n\n\n\n\nWhen iterating over names of entries in a zip archive (for example, methods\nof \"zipfile.Path\" like \"namelist()\", \"iterdir()\", etc)\nthe process can be put into an infinite loop with a maliciously crafted\nzip archive. This defect applies when reading only metadata or extracting\nthe contents of the zip archive. Programs that are not handling\nuser-controlled zip archives are not affected.",
   "aliases": [
     "CVE-2024-8088"
   ],
@@ -137,8 +137,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241011-0010/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8088"
     }
   ],
   "published": "2025-01-17T15:05:13.901Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

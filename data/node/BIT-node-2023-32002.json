@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2023-32002",
-  "details": "The use of `Module._load()` can bypass the policy mechanism and require modules outside of the policy.json definition for a given module.This vulnerability affects all users using the experimental policy mechanism in all active release lines: 16.x, 18.x and, 20.x.Please note that at the time this CVE was issued, the policy is an experimental feature of Node.js.",
+  "details": "The use of `Module._load()` can bypass the policy mechanism and require modules outside of the policy.json definition for a given module.\n\nThis vulnerability affects all users using the experimental policy mechanism in all active release lines: 16.x, 18.x and, 20.x.\n\nPlease note that at the time this CVE was issued, the policy is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2023-32002"
   ],
@@ -59,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230915-0009/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32002"
     }
   ],
   "published": "2024-03-06T11:00:35.364Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

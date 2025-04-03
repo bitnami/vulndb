@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2023-43622",
-  "details": "An attacker, opening a HTTP/2 connection with an initial window size of 0, was able to block handling of that connection indefinitely in Apache HTTP Server. This could be used to exhaust worker resources in the server, similar to the well known \"slow loris\" attack pattern.This has been fixed in version 2.4.58, so that such connection are terminated properly after the configured connection timeout.This issue affects Apache HTTP Server: from 2.4.55 through 2.4.57.Users are recommended to upgrade to version 2.4.58, which fixes the issue.",
+  "details": "An attacker, opening a HTTP/2 connection with an initial window size of 0, was able to block handling of that connection indefinitely in Apache HTTP Server. This could be used to exhaust worker resources in the server, similar to the well known \"slow loris\" attack pattern.\nThis has been fixed in version 2.4.58, so that such connection are terminated properly after the configured connection timeout.\n\nThis issue affects Apache HTTP Server: from 2.4.55 through 2.4.57.\n\nUsers are recommended to upgrade to version 2.4.58, which fixes the issue.",
   "aliases": [
     "CVE-2023-43622"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20231027-0011/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-43622"
     }
   ],
   "published": "2024-03-06T10:50:43.363Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:etcd:etcd:3.4.10:*:*:*:*:*:*:*"
+      "cpe:2.3:a:etcd:etcd:3.4.10:*:*:*:*:*:*:*",
+      "cpe:2.3:a:etcd:etcd:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -59,8 +60,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/lucyxss/etcd-3.4.10-test/blob/master/temp4cj_2.png"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28235"
     }
   ],
   "published": "2024-03-06T10:52:10.197Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

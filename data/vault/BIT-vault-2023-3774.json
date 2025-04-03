@@ -50,15 +50,20 @@
     "cpes": [
       "cpe:2.3:a:hashicorp:vault:1.12.8:*:*:*:enterprise:*:*:*",
       "cpe:2.3:a:hashicorp:vault:1.13.4:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:hashicorp:vault:1.14.0:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:hashicorp:vault:1.14.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://discuss.hashicorp.com/t/hcsec-2023-23-vault-enterprise-namespace-creation-may-lead-to-denial-of-service/56617"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3774"
     }
   ],
   "published": "2024-03-06T11:08:50.391Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-37941",
-  "details": "If an attacker gains write access to the Apache Superset metadata database, they could persist a specifically crafted Python object that may lead to remote code execution on Superset's web backend.The Superset metadata db is an 'internal' component that is typically only accessible directly by the system administrator and the superset process itself. Gaining access to that database should be difficult and require significant privileges.This vulnerability impacts Apache Superset versions 1.5.0 up to and including 2.1.0. Users are recommended to upgrade to version 2.1.1 or later.",
+  "details": "If an attacker gains write access to the Apache Superset metadata database, they could persist a specifically crafted Python object that may lead to remote code execution on Superset's web backend.\n\nThe Superset metadata db is an 'internal' component that is typically \nonly accessible directly by the system administrator and the superset \nprocess itself. Gaining access to that database should\n be difficult and require significant privileges.\n\nThis vulnerability impacts Apache Superset versions 1.5.0 up to and including 2.1.0. Users are recommended to upgrade to version 2.1.1 or later.",
   "aliases": [
     "CVE-2023-37941"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/6qk1zscc06yogxxfgz2bh2bvz6vh9g7h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-37941"
     }
   ],
   "published": "2025-02-05T07:27:54.294Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

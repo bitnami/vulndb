@@ -43,7 +43,8 @@
     "severity": "Low",
     "cpes": [
       "cpe:2.3:a:redhat:wildfly:16.0.0:-:*:*:*:*:*:*",
-      "cpe:2.3:a:redhat:wildfly:17.0.0:beta2:*:*:*:*:*:*"
+      "cpe:2.3:a:redhat:wildfly:17.0.0:beta2:*:*:*:*:*:*",
+      "cpe:2.3:a:redhat:wildfly:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -70,8 +71,12 @@
     {
       "type": "WEB",
       "url": "https://issues.redhat.com/browse/WFCORE-5511"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3644"
     }
   ],
   "published": "2024-03-06T11:08:38.390Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

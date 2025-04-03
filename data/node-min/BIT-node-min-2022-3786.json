@@ -50,7 +50,8 @@
     "cpes": [
       "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*",
       "cpe:2.3:a:nodejs:node.js:18.12.0:*:*:*:lts:*:*:*",
-      "cpe:2.3:a:nodejs:node.js:19.0.0:*:*:*:-:*:*:*"
+      "cpe:2.3:a:nodejs:node.js:19.0.0:*:*:*:-:*:*:*",
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:lts:*:*:*"
     ]
   },
   "references": [
@@ -61,8 +62,12 @@
     {
       "type": "WEB",
       "url": "https://www.openssl.org/news/secadv/20221101.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3786"
     }
   ],
   "published": "2024-12-16T14:01:09.418Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

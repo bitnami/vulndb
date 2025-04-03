@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -61,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/336802"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-39937"
     }
   ],
   "published": "2024-03-06T11:17:25.967Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

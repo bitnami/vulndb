@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -64,8 +64,12 @@
     {
       "type": "WEB",
       "url": "https://about.gitlab.com/releases/2024/09/11/patch-release-gitlab-17-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4612"
     }
   ],
   "published": "2024-09-14T07:13:08.316Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

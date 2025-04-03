@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:ghost:ghost:5.35.0:*:*:*:*:node.js:*:*"
+      "cpe:2.3:a:ghost:ghost:5.35.0:*:*:*:*:node.js:*:*",
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://gist.github.com/yurahod/828d5e6a077c12f3f74c6485d1c7f0e7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26510"
     }
   ],
   "published": "2024-03-06T10:52:39.807Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

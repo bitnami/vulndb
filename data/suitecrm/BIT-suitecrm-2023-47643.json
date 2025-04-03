@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:salesagility:suitecrm:8.4.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:salesagility:suitecrm:8.4.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://www.apollographql.com/blog/graphql/security/why-you-should-disable-graphql-introspection-in-production/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47643"
     }
   ],
   "published": "2024-03-06T11:07:17.301Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

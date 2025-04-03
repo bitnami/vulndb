@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -53,8 +53,12 @@
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/L6B6R43Y7M3DCHWK3L3UVGE2K6WWECMP/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15113"
     }
   ],
   "published": "2024-03-06T10:52:21.172Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

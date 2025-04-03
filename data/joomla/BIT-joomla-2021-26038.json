@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2021-26038",
+  "details": "An issue was discovered in Joomla! 2.5.0 through 3.9.27. Install action in com_installer lack the required hardcoded ACL checks for superusers. A default system is not affected cause the default ACL for com_installer is limited to super users already.",
+  "aliases": [
+    "CVE-2021-26038"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "last_affected": "3.9.27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/859-20210704-core-privilege-escalation-through-com-installer.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26038"
+    }
+  ],
+  "published": "2025-04-03T14:13:51.791Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

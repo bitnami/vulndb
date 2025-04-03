@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-2801",
-  "details": "Grafana is an open-source platform for monitoring and observability. Using public dashboards users can query multiple distinct data sources using mixed queries. However such query has a possibility of crashing a Grafana instance.The only feature that uses mixed queries at the moment is public dashboards, but it's also possible to cause this by calling the query API directly.This might enable malicious users to crash Grafana instances through that endpoint.Users may upgrade to version 9.4.12 and 9.5.3 to receive a fix.",
+  "details": "Grafana is an open-source platform for monitoring and observability. \n\nUsing public dashboards users can query multiple distinct data sources using mixed queries. However such query has a possibility of crashing a Grafana instance.\n\nThe only feature that uses mixed queries at the moment is public dashboards, but it's also possible to cause this by calling the query API directly.\n\nThis might enable malicious users to crash Grafana instances through that endpoint.\n\nUsers may upgrade to version 9.4.12 and 9.5.3 to receive a fix.",
   "aliases": [
     "CVE-2023-2801"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -53,8 +53,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230706-0002/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2801"
     }
   ],
   "published": "2024-03-06T10:53:15.069Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

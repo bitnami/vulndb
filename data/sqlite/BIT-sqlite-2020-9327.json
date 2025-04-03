@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:sqlite:sqlite:3.31.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:sqlite:sqlite:3.31.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -83,8 +84,12 @@
     {
       "type": "WEB",
       "url": "https://www.sqlite.org/cgi/src/info/abc473fb8fb99900"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-9327"
     }
   ],
   "published": "2024-03-06T11:06:54.207Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

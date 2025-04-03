@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
     ]
@@ -43,8 +43,12 @@
     {
       "type": "WEB",
       "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-24112"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-24112"
     }
   ],
   "published": "2024-03-06T11:00:21.997Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

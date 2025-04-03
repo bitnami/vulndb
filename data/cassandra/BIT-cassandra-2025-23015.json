@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cassandra-2025-23015",
-  "details": "Privilege Defined With Unsafe Actions vulnerability in Apache Cassandra. An user with MODIFY permission ON ALL KEYSPACES can escalate privileges to superuser within a targeted Cassandra cluster via unsafe actions to a system resource. Operators granting data MODIFY permission on all keyspaces on affected versions should review data access rules for potential breaches.This issue affects Apache Cassandra through 3.0.30, 3.11.17, 4.0.15, 4.1.7, 5.0.2.Users are recommended to upgrade to versions 3.0.31, 3.11.18, 4.0.16, 4.1.8, 5.0.3, which fixes the issue.",
+  "details": "Privilege Defined With Unsafe Actions vulnerability in Apache Cassandra. An user with MODIFY permission ON ALL KEYSPACES can escalate privileges to superuser within a targeted Cassandra cluster via unsafe actions to a system resource. Operators granting data MODIFY permission on all keyspaces on affected versions should review data access rules for potential breaches.\n\nThis issue affects Apache Cassandra through 3.0.30, 3.11.17, 4.0.15, 4.1.7, 5.0.2.\n\nUsers are recommended to upgrade to versions 3.0.31, 3.11.18, 4.0.16, 4.1.8, 5.0.3, which fixes the issue.",
   "aliases": [
     "CVE-2025-23015"
   ],
@@ -79,8 +79,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20250214-0006/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23015"
     }
   ],
   "published": "2025-02-06T07:09:06.498Z",
-  "modified": "2025-02-17T19:41:46.561Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

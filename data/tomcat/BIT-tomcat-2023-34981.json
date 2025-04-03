@@ -57,7 +57,8 @@
       "cpe:2.3:a:apache:tomcat:10.1.8:*:*:*:*:*:*:*",
       "cpe:2.3:a:apache:tomcat:11.0.0:milestone5:*:*:*:*:*:*",
       "cpe:2.3:a:apache:tomcat:8.5.88:*:*:*:*:*:*:*",
-      "cpe:2.3:a:apache:tomcat:9.0.74:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:tomcat:9.0.74:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -68,8 +69,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230714-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-34981"
     }
   ],
   "published": "2024-03-06T11:08:35.200Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

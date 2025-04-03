@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-53949",
-  "details": "Improper Authorization vulnerability in Apache Superset when FAB_ADD_SECURITY_API is enabled (disabled by default). Allows for lower privilege users to use this API. issue affects Apache Superset: from 2.0.0 before 4.1.0.Users are recommended to upgrade to version 4.1.0, which fixes the issue.",
+  "details": "Improper Authorization vulnerability in Apache Superset when FAB_ADD_SECURITY_API is enabled (disabled by default). Allows for lower privilege users to use this API.\n\n issue affects Apache Superset: from 2.0.0 before 4.1.0.\n\nUsers are recommended to upgrade to version 4.1.0, which fixes the issue.",
   "aliases": [
     "CVE-2024-53949"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2024/12/09/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-53949"
     }
   ],
   "published": "2025-02-05T07:24:59.693Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

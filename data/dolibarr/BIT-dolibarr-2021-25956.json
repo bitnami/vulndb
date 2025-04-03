@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2021-25956",
+  "details": "In “Dolibarr” application, v3.3.beta1_20121221 to v13.0.2 have “Modify” access for admin level users to change other user’s details but fails to validate already existing “Login” name, while renaming the user “Login”. This leads to complete account takeover of the victim user. This happens since the password gets overwritten for the victim user having a similar login name.",
+  "aliases": [
+    "CVE-2021-25956"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.3.0-beta1"
+            },
+            {
+              "last_affected": "3.3.0-beta1"
+            },
+            {
+              "introduced": "3.3.0-beta2"
+            },
+            {
+              "last_affected": "3.3.0-beta2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Dolibarr/dolibarr/commit/c4cba43bade736ab89e31013a6ccee59a6e077ee"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-25956"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.whitesourcesoftware.com/vulnerability-database/CVE-2021-25956"
+    }
+  ],
+  "published": "2025-04-03T14:04:55.593Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

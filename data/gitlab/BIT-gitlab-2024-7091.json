@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -56,8 +56,12 @@
     {
       "type": "WEB",
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/408469"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7091"
     }
   ],
   "published": "2024-07-26T07:18:49.551Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-subversion-2024-46901",
-  "details": "Insufficient validation of filenames against control characters in Apache Subversion repositories served via mod_dav_svn allows authenticated users with commit access to commit a corrupted revision, leading to disruption for users of the repository.All versions of Subversion up to and including Subversion 1.14.4 are affected if serving repositories via mod_dav_svn. Users are recommended to upgrade to version 1.14.5, which fixes this issue.Repositories served via other access methods are not affected.",
+  "details": "Insufficient validation of filenames against control characters in Apache Subversion repositories served via mod_dav_svn allows authenticated users with commit access to commit a corrupted revision, leading to disruption for users of the repository.\n\nAll versions of Subversion up to and including Subversion 1.14.4 are affected if serving repositories via mod_dav_svn. Users are recommended to upgrade to version 1.14.5, which fixes this issue.\n\nRepositories served via other access methods are not affected.",
   "aliases": [
     "CVE-2024-46901"
   ],
@@ -43,8 +43,12 @@
     {
       "type": "WEB",
       "url": "https://subversion.apache.org/security/CVE-2024-46901-advisory.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-46901"
     }
   ],
   "published": "2024-12-11T07:18:54.504Z",
-  "modified": "2024-12-11T07:36:45.271Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

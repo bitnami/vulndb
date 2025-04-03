@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2021-33816",
+  "details": "The website builder module in Dolibarr 13.0.2 allows remote PHP code execution because of an incomplete protection mechanism in which system, exec, and shell_exec are blocked but backticks are not blocked.",
+  "aliases": [
+    "CVE-2021-33816"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.2"
+            },
+            {
+              "last_affected": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2021/Nov/39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33816"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trovent.github.io/security-advisories/TRSA-2106-01/TRSA-2106-01.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://trovent.io/security-advisory-2106-01"
+    }
+  ],
+  "published": "2025-04-03T14:05:04.907Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

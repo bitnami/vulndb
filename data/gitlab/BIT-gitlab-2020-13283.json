@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -39,7 +39,8 @@
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:10.8:*:*:*:*:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:10.8:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:10.8:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -54,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://hackerone.com/reports/877065"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13283"
     }
   ],
   "published": "2024-03-06T11:22:56.484Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }
