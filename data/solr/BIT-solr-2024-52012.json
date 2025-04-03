@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2024-52012",
-  "details": "Relative Path Traversal vulnerability in Apache Solr.Solr instances running on Windows are vulnerable to arbitrary filepath write-access, due to a lack of input-sanitation in the \"configset upload\" API.  Commonly known as a \"zipslip\", maliciously constructed ZIP files can use relative filepaths to write data to unanticipated parts of the filesystem.  This issue affects Apache Solr: from 6.6 through 9.7.0.Users are recommended to upgrade to version 9.8.0, which fixes the issue.  Users unable to upgrade may also safely prevent the issue by using Solr's \"Rule-Based Authentication Plugin\" to restrict access to the configset upload API, so that it can only be accessed by a trusted set of administrators/users.",
+  "details": "Relative Path Traversal vulnerability in Apache Solr.\n\nSolr instances running on Windows are vulnerable to arbitrary filepath write-access, due to a lack of input-sanitation in the \"configset upload\" API.  Commonly known as a \"zipslip\", maliciously constructed ZIP files can use relative filepaths to write data to unanticipated parts of the filesystem.  \nThis issue affects Apache Solr: from 6.6 through 9.7.0.\n\nUsers are recommended to upgrade to version 9.8.0, which fixes the issue.  Users unable to upgrade may also safely prevent the issue by using Solr's \"Rule-Based Authentication Plugin\" to restrict access to the configset upload API, so that it can only be accessed by a trusted set of administrators/users.",
   "aliases": [
     "CVE-2024-52012"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2025/01/26/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52012"
     }
   ],
   "published": "2025-01-29T07:20:30.008Z",
-  "modified": "2025-02-07T07:41:28.471Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

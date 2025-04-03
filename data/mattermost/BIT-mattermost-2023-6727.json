@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mattermost-2023-6727",
-  "details": "Mattermost fails to perform correct authorization checks when creating a playbook action, allowing users without access to the playbook to create playbook actions. If the playbook action created is to post a message in a channel based on specific keywords in a post, some playbook information, like the name, can be leaked. ",
+  "details": "Mattermost fails to perform correct authorization checks when creating a playbook action, allowing users without access to the playbook to create playbook actions. If the playbook action created is to post a message in a channel based on specific keywords in a post, some playbook information, like the name, can be leaked.",
   "aliases": [
     "CVE-2023-6727"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -49,8 +49,12 @@
     {
       "type": "WEB",
       "url": "https://mattermost.com/security-updates"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6727"
     }
   ],
   "published": "2024-03-06T10:56:33.283Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

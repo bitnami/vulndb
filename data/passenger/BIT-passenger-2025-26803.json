@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -59,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://www.phusionpassenger.com/support"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26803"
     }
   ],
   "published": "2025-03-02T07:16:46.292Z",
-  "modified": "2025-03-02T07:44:48.340Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

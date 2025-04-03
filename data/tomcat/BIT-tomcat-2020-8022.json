@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -63,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread.html/rf50d02409e5732c4ee37f19a193af171251a25a652599ce3c2bc69e7%40%3Cusers.tomcat.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8022"
     }
   ],
   "published": "2024-03-06T11:10:37.975Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

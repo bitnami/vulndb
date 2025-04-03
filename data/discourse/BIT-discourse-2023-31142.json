@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
         }
       ],
       "ranges": [
@@ -41,15 +41,20 @@
       "cpe:2.3:a:discourse:discourse:3.1.0:beta1:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:3.1.0:beta2:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:3.1.0:beta3:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.1.0:beta4:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta4:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-286w-97m2-78x2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-31142"
     }
   ],
   "published": "2024-03-06T10:57:22.997Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2025-23085",
-  "details": "A memory leak could occur when a remote peer abruptly closes the socket without sending a GOAWAY notification. Additionally, if an invalid header was detected by nghttp2, causing the connection to be terminated by the peer, the same leak was triggered. This flaw could lead to increased memory consumption and potential denial of service under certain conditions.\r\rThis vulnerability affects HTTP/2 Server users on Node.js v18.x, v20.x, v22.x and v23.x.",
+  "details": "A memory leak could occur when a remote peer abruptly closes the socket without sending a GOAWAY notification. Additionally, if an invalid header was detected by nghttp2, causing the connection to be terminated by the peer, the same leak was triggered. This flaw could lead to increased memory consumption and potential denial of service under certain conditions.\r\n\r\nThis vulnerability affects HTTP/2 Server users on Node.js v18.x, v20.x, v22.x and v23.x.",
   "aliases": [
     "CVE-2025-23085"
   ],
@@ -65,8 +65,12 @@
     {
       "type": "WEB",
       "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00031.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23085"
     }
   ],
   "published": "2025-02-11T07:16:03.298Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

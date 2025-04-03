@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mattermost-2024-23493",
-  "details": "Mattermost fails to properly authorize the requests fetching team associated AD/LDAP groups, allowing a user to fetch details of AD/LDAP groups of a team that they are not a member of. ",
+  "details": "Mattermost fails to properly authorize the requests fetching team associated AD/LDAP groups, allowing a user to fetch details of AD/LDAP groups of a team that they are not a member of.",
   "aliases": [
     "CVE-2024-23493"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -81,8 +81,12 @@
     {
       "type": "WEB",
       "url": "https://mattermost.com/security-updates"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23493"
     }
   ],
   "published": "2025-01-11T07:15:39.107Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

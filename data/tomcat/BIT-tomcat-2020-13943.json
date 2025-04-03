@@ -904,7 +904,8 @@
       "cpe:2.3:a:apache:tomcat:9.0.6:*:*:*:*:*:*:*",
       "cpe:2.3:a:apache:tomcat:9.0.7:*:*:*:*:*:*:*",
       "cpe:2.3:a:apache:tomcat:9.0.8:*:*:*:*:*:*:*",
-      "cpe:2.3:a:apache:tomcat:9.0.9:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:tomcat:9.0.9:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -935,8 +936,12 @@
     {
       "type": "WEB",
       "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13943"
     }
   ],
   "published": "2024-03-06T11:11:40.396Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

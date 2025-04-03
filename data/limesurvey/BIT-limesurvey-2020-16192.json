@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:limesurvey:limesurvey:4.3.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:limesurvey:limesurvey:4.3.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/LimeSurvey/LimeSurvey/pull/1479/commits/4109a8d157e46c48ca34b995ef61a6e0f6905236"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-16192"
     }
   ],
   "published": "2024-03-06T10:57:17.667Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

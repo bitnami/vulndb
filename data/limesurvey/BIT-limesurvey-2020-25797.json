@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:limesurvey:limesurvey:3.21.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:limesurvey:limesurvey:3.21.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -47,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/LimeSurvey/LimeSurvey/commit/0a7bdfa1c166f734d11a1528c8d9a7d61b670ad7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-25797"
     }
   ],
   "published": "2024-03-06T10:56:49.775Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

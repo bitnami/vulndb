@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2025-23084",
-  "details": "A vulnerability has been identified in Node.js, specifically affecting the handling of drive names in the Windows environment. Certain Node.js functions do not treat drive names as special on Windows. As a result, although Node.js assumes a relative path, it actually refers to the root directory.\r\rOn Windows, a path that does not start with the file separator is treated as relative to the current directory. \r\rThis vulnerability affects Windows users of `path.join` API.",
+  "details": "A vulnerability has been identified in Node.js, specifically affecting the handling of drive names in the Windows environment. Certain Node.js functions do not treat drive names as special on Windows. As a result, although Node.js assumes a relative path, it actually refers to the root directory.\r\n\r\nOn Windows, a path that does not start with the file separator is treated as relative to the current directory. \r\n\r\nThis vulnerability affects Windows users of `path.join` API.",
   "aliases": [
     "CVE-2025-23084"
   ],
@@ -61,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://nodejs.org/en/blog/vulnerability/january-2025-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23084"
     }
   ],
   "published": "2025-01-30T19:20:24.038Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

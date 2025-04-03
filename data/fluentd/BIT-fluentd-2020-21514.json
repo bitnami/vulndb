@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:fluentd:fluentd:1.8.0:-:*:*:*:*:*:*"
+      "cpe:2.3:a:fluentd:fluentd:1.8.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:fluentd:fluentd:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/fluent/fluentd/issues/2722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-21514"
     }
   ],
   "published": "2024-03-06T10:52:13.870Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

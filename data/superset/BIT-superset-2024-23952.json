@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-23952",
-  "details": "This is a duplicate for CVE-2023-46104. With correct CVE version ranges for affected Apache Superset. Uncontrolled resource consumption can be triggered by authenticated attacker that uploads a malicious ZIP to import database, dashboards or datasets.  This vulnerability exists in Apache Superset versions up to and including 2.1.2 and versions 3.0.0, 3.0.1.",
+  "details": "This is a duplicate for CVE-2023-46104. With correct CVE version ranges for affected Apache Superset.\n \nUncontrolled resource consumption can be triggered by authenticated attacker that uploads a malicious ZIP to import database, dashboards or datasets.  \nThis vulnerability exists in Apache Superset versions up to and including 2.1.2 and versions 3.0.0, 3.0.1.",
   "aliases": [
     "CVE-2024-23952"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/zc58zvm4414molqn2m4d4vkrbrsxdksx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23952"
     }
   ],
   "published": "2025-02-05T07:26:25.704Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

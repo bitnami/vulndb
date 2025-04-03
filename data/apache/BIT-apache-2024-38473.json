@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2024-38473",
-  "details": "Encoding problem in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows request URLs with incorrect encoding to be sent to backend services, potentially bypassing authentication via crafted requests.Users are recommended to upgrade to version 2.4.60, which fixes this issue.",
+  "details": "Encoding problem in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows request URLs with incorrect encoding to be sent to backend services, potentially bypassing authentication via crafted requests.\nUsers are recommended to upgrade to version 2.4.60, which fixes this issue.",
   "aliases": [
     "CVE-2024-38473"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2024/07/01/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38473"
     }
   ],
   "published": "2024-07-03T07:17:33.455Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

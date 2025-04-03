@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2023-38887",
+  "details": "File Upload vulnerability in Dolibarr ERP CRM v.17.0.1 and before allows a remote attacker to execute arbitrary code and obtain sensitive information via the extension filtering and renaming functions.",
+  "aliases": [
+    "CVE-2023-38887"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "17.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://dolibarr.com"
+    },
+    {
+      "type": "WEB",
+      "url": "https://akerva.com/wp-content/uploads/2023/09/AKERVA_Security-Advisory_CVE-2023-38887_Dolibarr_AFU.pdf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38887"
+    }
+  ],
+  "published": "2025-04-03T14:06:30.396Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

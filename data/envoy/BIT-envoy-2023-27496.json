@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2023-27496",
-  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9, the OAuth filter assumes that a `state` query param is present on any response that looks like an OAuth redirect response. Sending it a request with the URI path equivalent to the redirect path, without the `state` parameter, will lead to abnormal termination of Envoy process. Versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9 contain a patch. The issue can also be mitigated by locking down OAuth traffic, disabling the filter, or by filtering traffic before it reaches the OAuth filter (e.g. via a lua script). ",
+  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9, the OAuth filter assumes that a `state` query param is present on any response that looks like an OAuth redirect response. Sending it a request with the URI path equivalent to the redirect path, without the `state` parameter, will lead to abnormal termination of Envoy process. Versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9 contain a patch. The issue can also be mitigated by locking down OAuth traffic, disabling the filter, or by filtering traffic before it reaches the OAuth filter (e.g. via a lua script).",
   "aliases": [
     "CVE-2023-27496"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -61,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-j79q-2g66-2xv5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-27496"
     }
   ],
   "published": "2024-03-06T10:53:33.396Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

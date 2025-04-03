@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -56,8 +56,12 @@
     {
       "type": "WEB",
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/497449"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9693"
     }
   ],
   "published": "2024-11-16T07:09:22.299Z",
-  "modified": "2024-11-16T07:36:37.319Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

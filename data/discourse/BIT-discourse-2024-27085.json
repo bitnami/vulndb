@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-27085",
-  "details": "Discourse is an open source platform for community discussion. In affected versions users that are allowed to invite others can inject arbitrarily large data in parameters used in the invite route. The problem has been patched in the latest version of Discourse. Users are advised to upgrade. Users unable to upgrade should disable invites or restrict access to them using the `invite allowed groups` site setting. ",
+  "details": "Discourse is an open source platform for community discussion. In affected versions users that are allowed to invite others can inject arbitrarily large data in parameters used in the invite route. The problem has been patched in the latest version of Discourse. Users are advised to upgrade. Users unable to upgrade should disable invites or restrict access to them using the `invite allowed groups` site setting.",
   "aliases": [
     "CVE-2024-27085"
   ],
@@ -48,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-cvp5-h7p8-mjj6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27085"
     }
   ],
   "published": "2024-04-01T14:04:24.759Z",
-  "modified": "2025-01-17T15:26:01.971Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

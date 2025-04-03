@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:apache:spark:3.1.1:-:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:spark:3.1.1:-:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:spark:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -303,8 +304,12 @@
     {
       "type": "WEB",
       "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-27223"
     }
   ],
   "published": "2024-03-06T11:06:09.866Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

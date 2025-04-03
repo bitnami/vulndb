@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -37,15 +37,21 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:odoo:odoo:17.0:*:*:*:community:*:*:*",
-      "cpe:2.3:a:odoo:odoo:17.0:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:odoo:odoo:17.0:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:odoo:odoo:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:odoo:odoo:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/odoo/odoo/issues/199330"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36259"
     }
   ],
   "published": "2025-03-02T07:16:07.290Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

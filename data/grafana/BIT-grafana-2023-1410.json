@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-1410",
-  "details": "Grafana is an open-source platform for monitoring and observability. Grafana had a stored XSS vulnerability in the Graphite FunctionDescription tooltip. The stored XSS vulnerability was possible due the value of the Function Description was not properly sanitized.An attacker needs to have control over the Graphite data source in order to manipulate a function description and a Grafana admin needs to configure the data source, later a Grafana user needs to select a tampered function and hover over the description.   Users may upgrade to version 8.5.22, 9.2.15 and 9.3.11 to receive a fix.",
+  "details": "Grafana is an open-source platform for monitoring and observability. \n\nGrafana had a stored XSS vulnerability in the Graphite FunctionDescription tooltip. \n\nThe stored XSS vulnerability was possible due the value of the Function Description was not properly sanitized.\n\nAn attacker needs to have control over the Graphite data source in order to manipulate a function description and a Grafana admin needs to configure the data source, later a Grafana user needs to select a tampered function and hover over the description. \n\n  Users may upgrade to version 8.5.22, 9.2.15 and 9.3.11 to receive a fix.",
   "aliases": [
     "CVE-2023-1410"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -63,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230420-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1410"
     }
   ],
   "published": "2024-03-06T10:53:49.160Z",
-  "modified": "2025-02-17T19:41:46.561Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

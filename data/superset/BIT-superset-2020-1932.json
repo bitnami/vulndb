@@ -57,15 +57,20 @@
       "cpe:2.3:a:apache:superset:0.34.0:-:*:*:*:*:*:*",
       "cpe:2.3:a:apache:superset:0.34.1:*:*:*:*:*:*:*",
       "cpe:2.3:a:apache:superset:0.35.0:*:*:*:*:*:*:*",
-      "cpe:2.3:a:apache:superset:0.35.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:superset:0.35.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread.html/r4e5323c3bc786005495311a6ff53ac6d990b2c7eb52941a1a13ce227%40%3Cdev.superset.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1932"
     }
   ],
   "published": "2025-02-05T07:30:01.600Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

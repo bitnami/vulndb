@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -250,15 +250,20 @@
       "cpe:2.3:a:discourse:discourse:3.1.0:beta5:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:3.1.0:beta6:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:3.1.0:beta7:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.1.0:beta8:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.1.0:beta8:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-2fq5-x3mm-v254"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41042"
     }
   ],
   "published": "2024-03-06T10:54:27.492Z",
-  "modified": "2025-01-20T07:55:28.351Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

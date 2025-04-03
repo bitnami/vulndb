@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-2024-0397",
-  "details": "A defect was discovered in the Python “ssl” module where there is a memoryrace condition with the ssl.SSLContext methods “cert_store_stats()” and“get_ca_certs()”. The race condition can be triggered if the methods arecalled at the same time as certificates are loaded into the SSLContext,such as during the TLS handshake with a certificate directory configured.This issue is fixed in CPython 3.10.14, 3.11.9, and 3.12.3.",
+  "details": "A defect was discovered in the Python “ssl” module where there is a memory\nrace condition with the ssl.SSLContext methods “cert_store_stats()” and\n“get_ca_certs()”. The race condition can be triggered if the methods are\ncalled at the same time as certificates are loaded into the SSLContext,\nsuch as during the TLS handshake with a certificate directory configured.\nThis issue is fixed in CPython 3.10.14, 3.11.9, 3.12.3, and 3.13.0a5.",
   "aliases": [
     "CVE-2024-0397"
   ],
@@ -103,8 +103,12 @@
     {
       "type": "WEB",
       "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/BMAK5BCGKYWNJOACVUSLUF6SFGBIM4VP/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0397"
     }
   ],
   "published": "2024-06-20T11:18:14.556Z",
-  "modified": "2024-12-12T07:36:17.144Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

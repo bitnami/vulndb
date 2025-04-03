@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:gitea:gitea:1.16.3:*:*:*:*:*:*:*"
+      "cpe:2.3:a:gitea:gitea:1.16.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://github.com/go-gitea/gitea/pull/19072"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-27313"
     }
   ],
   "published": "2024-03-06T10:53:12.361Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

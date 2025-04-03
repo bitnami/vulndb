@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-aspnet-core-2020-1597",
-  "details": "A denial of service vulnerability exists when ASP.NET Core improperly handles web requests. An attacker who successfully exploited this vulnerability could cause a denial of service against an ASP.NET Core web application. The vulnerability can be exploited remotely, without authentication.A remote unauthenticated attacker could exploit this vulnerability by issuing specially crafted requests to the ASP.NET Core application.The update addresses the vulnerability by correcting how the ASP.NET Core web application handles web requests.",
+  "details": "A denial of service vulnerability exists when ASP.NET Core improperly handles web requests. An attacker who successfully exploited this vulnerability could cause a denial of service against an ASP.NET Core web application. The vulnerability can be exploited remotely, without authentication.\nA remote unauthenticated attacker could exploit this vulnerability by issuing specially crafted requests to the ASP.NET Core application.\nThe update addresses the vulnerability by correcting how the ASP.NET Core web application handles web requests.",
   "aliases": [
     "CVE-2020-1597"
   ],
@@ -43,7 +43,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:microsoft:asp.net_core:2.1:*:*:*:*:*:*:*",
-      "cpe:2.3:a:microsoft:asp.net_core:3.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:microsoft:asp.net_core:3.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -58,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1597"
     }
   ],
   "published": "2024-03-06T10:53:47.493Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

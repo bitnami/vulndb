@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -65,8 +65,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-jhrq-qvrm-qr36"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25623"
     }
   ],
   "published": "2024-03-31T18:20:59.562Z",
-  "modified": "2024-04-01T14:37:26.940Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

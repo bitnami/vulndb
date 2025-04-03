@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-joomla-2021-23127",
+  "details": "An issue was discovered in Joomla! 3.2.0 through 3.9.24. Usage of an insufficient length for the 2FA secret accoring to RFC 4226 of 10 bytes vs 20 bytes.",
+  "aliases": [
+    "CVE-2021-23127"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "fixed": "3.9.25"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/841-20210301-core-insecure-randomness-within-2fa-secret-generation.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23127"
+    }
+  ],
+  "published": "2025-04-03T14:12:18.004Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

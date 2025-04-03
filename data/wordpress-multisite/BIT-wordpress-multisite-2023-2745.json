@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -187,8 +187,12 @@
     {
       "type": "WEB",
       "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/edcf46b6-368e-49c0-b2c3-99bf6e2d358f?source=cve"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2745"
     }
   ],
   "published": "2024-03-06T11:08:57.692Z",
-  "modified": "2025-03-24T19:47:26.085Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

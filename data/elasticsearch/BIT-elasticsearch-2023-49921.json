@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -49,8 +49,12 @@
     {
       "type": "WEB",
       "url": "https://discuss.elastic.co/t/elasticsearch-8-11-2-7-17-16-security-update-esa-2023-29/349179"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49921"
     }
   ],
   "published": "2024-07-31T07:18:47.750Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

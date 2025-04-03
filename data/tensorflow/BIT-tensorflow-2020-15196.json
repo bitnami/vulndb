@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*"
+      "cpe:2.3:a:google:tensorflow:2.3.0:*:*:*:-:*:*:*",
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/tensorflow/tensorflow/security/advisories/GHSA-pg59-2f92-5cph"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15196"
     }
   ],
   "published": "2024-03-06T11:20:44.959Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

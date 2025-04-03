@@ -29,28 +29,28 @@
               "fixed": "3.7.16"
             },
             {
-              "introduced": "3.11.0"
-            },
-            {
-              "fixed": "3.11.1"
-            },
-            {
               "introduced": "3.10.0"
             },
             {
               "fixed": "3.10.9"
             },
             {
-              "introduced": "3.9.0"
+              "introduced": "3.11.0"
             },
             {
-              "fixed": "3.9.16"
+              "fixed": "3.11.1"
             },
             {
               "introduced": "3.8.0"
             },
             {
               "fixed": "3.8.16"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.16"
             }
           ]
         }
@@ -199,8 +199,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20221209-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-45061"
     }
   ],
   "published": "2024-10-04T16:38:13.524Z",
-  "modified": "2024-10-04T17:02:25.936Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

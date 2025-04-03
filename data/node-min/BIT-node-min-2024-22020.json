@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-min-2024-22020",
-  "details": "A security flaw in Node.js  allows a bypass of network import restrictions.By embedding non-network imports in data URLs, an attacker can execute arbitrary code, compromising system security.Verified on various platforms, the vulnerability is mitigated by forbidding data URLs in network imports.Exploiting this flaw can violate network import security, posing a risk to developers and servers.",
+  "details": "A security flaw in Node.js  allows a bypass of network import restrictions.\nBy embedding non-network imports in data URLs, an attacker can execute arbitrary code, compromising system security.\nVerified on various platforms, the vulnerability is mitigated by forbidding data URLs in network imports.\nExploiting this flaw can violate network import security, posing a risk to developers and servers.",
   "aliases": [
     "CVE-2024-22020"
   ],
@@ -67,8 +67,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241122-0006/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22020"
     }
   ],
   "published": "2024-12-16T13:54:32.928Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

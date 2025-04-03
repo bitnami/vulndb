@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2023-4198",
+  "details": "Improper Access Control in Dolibarr ERP CRM <= v17.0.3 allows an unauthorized authenticated user to read a database table containing customer data",
+  "aliases": [
+    "CVE-2023-4198"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "17.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Dolibarr/dolibarr/commit/3065b9ca6ade988e8d7a8a8550415c0abb56b9cb#diff-7d68365a708c954051853ade884c7e97c6ff13150ee92657d6ffc8603e0f947b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://starlabs.sg/advisories/23/23-4198"
+    }
+  ],
+  "published": "2025-04-03T14:06:44.507Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

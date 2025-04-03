@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-2023-6507",
-  "details": "An issue was found in CPython 3.12.0 `subprocess` module on POSIX platforms. The issue was fixed in CPython 3.12.1 and does not affect other stable releases.When using the `extra_groups=` parameter with an empty list as a value (ie `extra_groups=[]`) the logic regressed to not call `setgroups(0, NULL)` before calling `exec()`, thus not dropping the original processes' groups before starting the new process. There is no issue when the parameter isn't used or when any value is used besides an empty list.This issue only impacts CPython processes run with sufficient privilege to make the `setgroups` system call (typically `root`).",
+  "details": "An issue was found in CPython 3.12.0 `subprocess` module on POSIX platforms. The issue was fixed in CPython 3.12.1 and does not affect other stable releases.\n\nWhen using the `extra_groups=` parameter with an empty list as a value (ie `extra_groups=[]`) the logic regressed to not call `setgroups(0, NULL)` before calling `exec()`, thus not dropping the original processes' groups before starting the new process. There is no issue when the parameter isn't used or when any value is used besides an empty list.\n\nThis issue only impacts CPython processes run with sufficient privilege to make the `setgroups` system call (typically `root`).",
   "aliases": [
     "CVE-2023-6507"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -59,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/AUL7QFHBLILGISS7U63B47AYSSGJJQZD/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6507"
     }
   ],
   "published": "2024-10-04T16:35:46.829Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

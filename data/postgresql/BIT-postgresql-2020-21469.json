@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:postgresql:postgresql:12.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:postgresql:postgresql:12.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://www.postgresql.org/support/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-21469"
     }
   ],
   "published": "2024-03-06T11:06:22.810Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

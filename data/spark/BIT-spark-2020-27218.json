@@ -43,7 +43,8 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:apache:spark:2.4.8:*:*:*:*:*:*:*",
-      "cpe:2.3:a:apache:spark:3.0.3:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:spark:3.0.3:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:spark:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -514,8 +515,12 @@
     {
       "type": "WEB",
       "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-27218"
     }
   ],
   "published": "2024-03-06T11:06:19.374Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

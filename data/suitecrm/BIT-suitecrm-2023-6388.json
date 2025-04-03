@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2023-6388",
-  "details": "Suite CRM version 7.14.2 allows making arbitrary HTTP requests throughthe vulnerable server. This is possible because the application is vulnerableto SSRF.",
+  "details": "Suite CRM version 7.14.2 allows making arbitrary HTTP requests through\n\nthe vulnerable server. This is possible because the application is vulnerable\n\nto SSRF.",
   "aliases": [
     "CVE-2023-6388"
   ],
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:salesagility:suitecrm:7.14.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:salesagility:suitecrm:7.14.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -47,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/salesagility/SuiteCRM/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6388"
     }
   ],
   "published": "2024-03-06T11:05:33.593Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

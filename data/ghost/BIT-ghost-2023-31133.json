@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-ghost-2023-31133",
-  "details": "Ghost is an app for new-media creators with tools to build a website, publish content, send newsletters, and offer paid subscriptions to members. Prior to version 5.46.1, due to a lack of validation when filtering on the public API endpoints, it is possible to reveal private fields via a brute force attack.Ghost(Pro) has already been patched. Maintainers can find no evidence that the issue was exploited on Ghost(Pro) prior to the patch being added. Self-hosters are impacted if running Ghost a version below v5.46.1. v5.46.1 contains a fix for this issue. As a workaround, add a block for requests to `/ghost/api/content/*` where the `filter` query parameter contains `password` or `email`.",
+  "details": "Ghost is an app for new-media creators with tools to build a website, publish content, send newsletters, and offer paid subscriptions to members. Prior to version 5.46.1, due to a lack of validation when filtering on the public API endpoints, it is possible to reveal private fields via a brute force attack.\n\nGhost(Pro) has already been patched. Maintainers can find no evidence that the issue was exploited on Ghost(Pro) prior to the patch being added. Self-hosters are impacted if running Ghost a version below v5.46.1. v5.46.1 contains a fix for this issue. As a workaround, add a block for requests to `/ghost/api/content/*` where the `filter` query parameter contains `password` or `email`.",
   "aliases": [
     "CVE-2023-31133"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-r97q-ghch-82j9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-31133"
     }
   ],
   "published": "2024-03-06T10:52:29.977Z",
-  "modified": "2024-03-06T11:25:28.861Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

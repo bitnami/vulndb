@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2024-32077",
-  "details": "Apache Airflow version 2.9.0 has a vulnerability that allows an authenticated attacker to inject malicious data into the task instance logs. Users are recommended to upgrade to version 2.9.1, which fixes this issue.",
+  "details": "Apache Airflow version 2.9.0 has a vulnerability that allows an authenticated attacker to inject malicious data into the task instance logs. \nUsers are recommended to upgrade to version 2.9.1, which fixes this issue.",
   "aliases": [
     "CVE-2024-32077"
   ],
@@ -52,8 +52,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2024/05/14/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-32077"
     }
   ],
   "published": "2024-05-24T07:15:55.746Z",
-  "modified": "2024-12-12T07:36:17.144Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2025-23090",
-  "details": "With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage.This vulnerability affects Permission Model users (--permission) on Node.js v20, v22, and v23.",
+  "details": "With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers\n but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage.\n\nThis vulnerability affects Permission Model users (--permission) on Node.js v20, v22, and v23.",
   "aliases": [
     "CVE-2025-23090"
   ],
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://hackerone.com/reports/2575105"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23090"
     }
   ],
   "published": "2025-01-27T07:15:14.518Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

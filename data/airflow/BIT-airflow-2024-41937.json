@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2024-41937",
-  "details": "Apache Airflow, versions before 2.10.0, have a vulnerability that allows the developer of a malicious provider to execute a cross-site scripting attack when clicking on a provider documentation link. This would require the provider to be installed on the web server and the user to click the provider link.Users should upgrade to 2.10.0 or later, which fixes this vulnerability.",
+  "details": "Apache Airflow, versions before 2.10.0, have a vulnerability that allows the developer of a malicious provider to execute a cross-site scripting attack when clicking on a provider documentation link. This would require the provider to be installed on the web server and the user to click the provider link.\nUsers should upgrade to 2.10.0 or later, which fixes this vulnerability.",
   "aliases": [
     "CVE-2024-41937"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2024/08/21/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41937"
     }
   ],
   "published": "2024-08-23T07:16:07.397Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

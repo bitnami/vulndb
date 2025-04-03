@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apr-2023-49582",
-  "details": "Lax permissions set by the Apache Portable Runtime library on Unix platforms would allow local users read access to named shared memory segments, potentially revealing sensitive application data. This issue does not affect non-Unix platforms, or builds with APR_USE_SHMEM_SHMGET=1 (apr.h)Users are recommended to upgrade to APR version 1.7.5, which fixes this issue.",
+  "details": "Lax permissions set by the Apache Portable Runtime library on Unix platforms would allow local users read access to named shared memory segments, potentially revealing sensitive application data. \n\nThis issue does not affect non-Unix platforms, or builds with APR_USE_SHMEM_SHMGET=1 (apr.h)\n\nUsers are recommended to upgrade to APR version 1.7.5, which fixes this issue.",
   "aliases": [
     "CVE-2023-49582"
   ],
@@ -51,8 +51,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241101-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49582"
     }
   ],
   "published": "2024-08-28T07:08:33.525Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

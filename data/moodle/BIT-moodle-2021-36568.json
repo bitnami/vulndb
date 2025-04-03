@@ -50,7 +50,8 @@
     "cpes": [
       "cpe:2.3:a:moodle:moodle:3.10.4:*:*:*:*:*:*:*",
       "cpe:2.3:a:moodle:moodle:3.11.0:*:*:*:*:*:*:*",
-      "cpe:2.3:a:moodle:moodle:3.9.7:*:*:*:*:*:*:*"
+      "cpe:2.3:a:moodle:moodle:3.9.7:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -69,8 +70,12 @@
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/PRI4ETMQ4DJR3TZUOOGPBQ32RBD5LNGC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-36568"
     }
   ],
   "published": "2024-03-06T11:08:05.686Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

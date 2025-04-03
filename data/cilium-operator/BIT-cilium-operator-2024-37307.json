@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -68,8 +68,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-wh78-7948-358j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37307"
     }
   ],
   "published": "2024-06-17T07:16:41.433Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

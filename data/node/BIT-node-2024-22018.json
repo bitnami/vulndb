@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2024-22018",
-  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.This flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.This vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.Please note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
+  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-read flag is used.\nThis flaw arises from an inadequate permission model that fails to restrict file stats through the fs.lstat API. As a result, malicious actors can retrieve stats from files that they do not have explicit read access to.\nThis vulnerability affects all users using the experimental permission model in Node.js 20 and Node.js 21.\nPlease note that at the time this CVE was issued, the permission model is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2024-22018"
   ],
@@ -61,8 +61,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20240816-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22018"
     }
   ],
   "published": "2024-07-12T07:29:02.117Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

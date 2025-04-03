@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2022-43138",
+  "details": "Dolibarr Open Source ERP & CRM for Business before v14.0.1 allows attackers to escalate privileges via a crafted API.",
+  "aliases": [
+    "CVE-2022-43138"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-43138"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/50248"
+    }
+  ],
+  "published": "2025-04-03T14:06:11.801Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

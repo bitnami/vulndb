@@ -148,7 +148,8 @@
       "cpe:2.3:a:lua:lua:5.3.4:*:*:*:*:*:*:*",
       "cpe:2.3:a:lua:lua:5.3.5:*:*:*:*:*:*:*",
       "cpe:2.3:a:lua:lua:5.4.0:alpha:*:*:*:*:*:*",
-      "cpe:2.3:a:lua:lua:5.4.0:beta:*:*:*:*:*:*"
+      "cpe:2.3:a:lua:lua:5.4.0:beta:*:*:*:*:*:*",
+      "cpe:2.3:a:lua:lua:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -175,8 +176,12 @@
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QXYMCIUNGK26VHAYHGP5LPW56G2KWOHQ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-24370"
     }
   ],
   "published": "2024-03-06T10:56:50.799Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

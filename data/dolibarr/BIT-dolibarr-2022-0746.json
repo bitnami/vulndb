@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-dolibarr-2022-0746",
+  "details": "Business Logic Errors in GitHub repository dolibarr/dolibarr prior to 16.0.",
+  "aliases": [
+    "CVE-2022-0746"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dolibarr",
+        "purl": "pkg:bitnami/dolibarr"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "16.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:dolibarr:dolibarr_erp/crm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/dolibarr/dolibarr/commit/4973019630d51ad76b7c1a4141ec7a33053a7d21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.dev/bounties/b812ea22-0c02-46fe-b89f-04519dfb1ebd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0746"
+    }
+  ],
+  "published": "2025-04-03T14:05:39.006Z",
+  "modified": "2025-04-03T14:40:37.652Z"
+}

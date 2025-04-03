@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2023-1409",
-  "details": "If the MongoDB Server running on Windows or macOS is configured to use TLS with a specific set of configuration options that are already known to work securely in other platforms (e.g. Linux), it is possible that client certificate validation may not be in effect, potentially allowing client to establish a TLS connection with the server that supplies any certificate.This issue affect all MongoDB Server v6.3 versions, MongoDB Server v5.0 versions v5.0.0 to v5.0.14 and all MongoDB Server v4.4 versions.",
+  "details": "If the MongoDB Server running on Windows or macOS is configured to use TLS with a specific set of configuration options that are already known to work securely in other platforms (e.g. Linux), it is possible that client certificate validation may not be in effect, potentially allowing client to establish a TLS connection with the server that supplies any certificate.\n\nThis issue affect all MongoDB Server v6.3 versions, MongoDB Server v5.0 versions v5.0.0 to v5.0.14 and all MongoDB Server v4.4 versions.",
   "aliases": [
     "CVE-2023-1409"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -69,8 +69,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230921-0007/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1409"
     }
   ],
   "published": "2024-03-06T10:56:41.982Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

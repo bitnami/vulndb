@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:laravel:laravel:8.5.9:*:*:*:*:*:*:*"
+      "cpe:2.3:a:laravel:laravel:8.5.9:*:*:*:*:*:*:*",
+      "cpe:2.3:a:laravel:laravel:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://s1mple-top.github.io/2021/03/09/Laravel8-new-pop-chain-mining-process/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-28254"
     }
   ],
   "published": "2024-03-06T10:55:30.390Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

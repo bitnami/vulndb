@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
         }
       ],
       "ranges": [
@@ -242,7 +242,8 @@
       "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:2.9.0:beta9:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.0.0:beta15:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.0.0:beta15:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -257,8 +258,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-5www-jxvf-vrc3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-46177"
     }
   ],
   "published": "2024-03-06T11:02:19.390Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

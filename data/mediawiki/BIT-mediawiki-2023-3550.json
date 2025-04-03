@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mediawiki-2023-3550",
-  "details": "Mediawiki v1.40.0 does not validate namespaces used in XML files.Therefore, if the instance administrator allows XML file uploads,a remote attacker with a low-privileged user account can use thisexploit to become an administrator by sending a malicious link tothe instance administrator.",
+  "details": "Mediawiki v1.40.0 does not validate namespaces used in XML files.\n\nTherefore, if the instance administrator allows XML file uploads,\n\na remote attacker with a low-privileged user account can use this\n\nexploit to become an administrator by sending a malicious link to\n\nthe instance administrator.",
   "aliases": [
     "CVE-2023-3550"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*"
+      "cpe:2.3:a:mediawiki:mediawiki:1.40.0:-:*:*:*:*:*:*",
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -59,8 +60,12 @@
     {
       "type": "WEB",
       "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FU2FGUXXK6TMV6R52VRECLC6XCSQQISY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3550"
     }
   ],
   "published": "2024-03-06T11:01:36.392Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

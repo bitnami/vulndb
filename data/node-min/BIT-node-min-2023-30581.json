@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-min-2023-30581",
-  "details": "The use of __proto__ in process.mainModule.__proto__.require() can bypass the policy mechanism and require modules outside of the policy.json definition. This vulnerability affects all users using the experimental policy mechanism in all active release lines: v16, v18 and, v20.Please note that at the time this CVE was issued, the policy is an experimental feature of Node.js",
+  "details": "The use of __proto__ in process.mainModule.__proto__.require() can bypass the policy mechanism and require modules outside of the policy.json definition. This vulnerability affects all users using the experimental policy mechanism in all active release lines: v16, v18 and, v20.\n\nPlease note that at the time this CVE was issued, the policy is an experimental feature of Node.js",
   "aliases": [
     "CVE-2023-30581"
   ],
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://nodejs.org/en/blog/vulnerability/june-2023-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-30581"
     }
   ],
   "published": "2024-12-16T14:00:01.632Z",
-  "modified": "2024-12-16T14:26:30.868Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

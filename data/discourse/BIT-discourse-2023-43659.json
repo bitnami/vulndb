@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -44,7 +44,8 @@
     "cpes": [
       "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
       "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.2.0:beta1:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.2.0:beta1:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -55,8 +56,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-g4qg-5q2h-m8ph"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-43659"
     }
   ],
   "published": "2024-03-06T10:54:02.887Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

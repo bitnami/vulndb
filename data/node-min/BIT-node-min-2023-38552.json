@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-min-2023-38552",
-  "details": "When the Node.js policy feature checks the integrity of a resource against a trusted manifest, the application can intercept the operation and return a forged checksum to the node's policy implementation, thus effectively disabling the integrity check.Impacts:This vulnerability affects all users using the experimental policy mechanism in all active release lines: 18.x and, 20.x.Please note that at the time this CVE was issued, the policy mechanism is an experimental feature of Node.js.",
+  "details": "When the Node.js policy feature checks the integrity of a resource against a trusted manifest, the application can intercept the operation and return a forged checksum to the node's policy implementation, thus effectively disabling the integrity check.\nImpacts:\nThis vulnerability affects all users using the experimental policy mechanism in all active release lines: 18.x and, 20.x.\nPlease note that at the time this CVE was issued, the policy mechanism is an experimental feature of Node.js.",
   "aliases": [
     "CVE-2023-38552"
   ],
@@ -77,8 +77,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20231116-0013/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-38552"
     }
   ],
   "published": "2024-12-16T13:56:55.829Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

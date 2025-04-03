@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-31670",
-  "details": "Harbor fails to validate the user permissions when updating tag retention policies. By sending a request to update a tag retention policy with an id that belongs to a project that the currently authenticated user doesn’t have access to, the attacker could modifytag retention policies configured in other projects.",
+  "details": "Harbor fails to validate the user permissions when updating tag retention policies. \n\nBy sending a request to update a tag retention policy with an id that belongs to a project that the currently authenticated user doesn’t have access to, the attacker could modify\ntag retention policies configured in other projects.",
   "aliases": [
     "CVE-2022-31670"
   ],
@@ -55,8 +55,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-3637-v6vq-xqqw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31670"
     }
   ],
   "published": "2024-11-20T07:10:45.197Z",
-  "modified": "2024-11-20T07:37:11.267Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

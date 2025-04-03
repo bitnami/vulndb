@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
       "ranges": [
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:google:tensorflow:2.7.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:google:tensorflow:2.7.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -47,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/tensorflow/tensorflow/tree/274df9b02330b790aa8de1cee164b70f72b9b244/tensorflow/core/ir/importexport"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23594"
     }
   ],
   "published": "2024-03-06T11:14:43.924Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

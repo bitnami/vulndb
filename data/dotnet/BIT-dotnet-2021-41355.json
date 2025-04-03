@@ -34,9 +34,10 @@
     }
   ],
   "database_specific": {
-    "severity": "Low",
+    "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:microsoft:.net:5.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:microsoft:.net:5.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -47,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41355"
     }
   ],
   "published": "2024-03-06T10:59:07.911Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

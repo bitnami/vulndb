@@ -242,7 +242,8 @@
       "cpe:2.3:a:discourse:discourse:2.9.0:beta7:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:2.9.0:beta9:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.0.0:beta15:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.0.0:beta15:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -253,8 +254,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-xx97-6494-p2rv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22453"
     }
   ],
   "published": "2024-03-06T11:02:04.509Z",
-  "modified": "2025-01-20T07:55:28.351Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

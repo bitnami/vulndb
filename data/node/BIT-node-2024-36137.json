@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2024-36137",
-  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.\r\rNode.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a \"read-only\" file descriptor to change the owner and permissions of a file.",
+  "details": "A vulnerability has been identified in Node.js, affecting users of the experimental permission model when the --allow-fs-write flag is used.\r\n\r\nNode.js Permission Model do not operate on file descriptors, however, operations such as fs.fchown or fs.fchmod can use a \"read-only\" file descriptor to change the owner and permissions of a file.",
   "aliases": [
     "CVE-2024-36137"
   ],
@@ -53,8 +53,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241122-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36137"
     }
   ],
   "published": "2024-09-10T07:13:50.127Z",
-  "modified": "2024-11-27T19:40:48.342Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

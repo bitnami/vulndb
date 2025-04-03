@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2023-39333",
-  "details": "Maliciously crafted export names in an imported WebAssembly module can inject JavaScript code. The injected code may be able to access data and functions that the WebAssembly module itself does not have access to, similar to as if the WebAssembly module was a JavaScript module.This vulnerability affects users of any active release line of Node.js. The vulnerable feature is only available if Node.js is started with the `--experimental-wasm-modules` command line option.",
+  "details": "Maliciously crafted export names in an imported WebAssembly module can inject JavaScript code. The injected code may be able to access data and functions that the WebAssembly module itself does not have access to, similar to as if the WebAssembly module was a JavaScript module.\n\nThis vulnerability affects users of any active release line of Node.js. The vulnerable feature is only available if Node.js is started with the `--experimental-wasm-modules` command line option.",
   "aliases": [
     "CVE-2023-39333"
   ],
@@ -57,8 +57,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20241004-0006/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-39333"
     }
   ],
   "published": "2024-09-10T07:16:15.926Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

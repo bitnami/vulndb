@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:apache:airflow:2.0.0:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:airflow:2.0.0:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread.html/rd142565996d7ee847b9c14b8a9921dcf80bc6bc160e3d9dca6dfc2f8%40%3Cannounce.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26559"
     }
   ],
   "published": "2024-03-06T10:59:45.964Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

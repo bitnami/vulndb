@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -56,8 +56,12 @@
     {
       "type": "WEB",
       "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/456922"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11668"
     }
   ],
   "published": "2024-11-28T19:22:00.426Z",
-  "modified": "2024-11-28T19:37:08.844Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

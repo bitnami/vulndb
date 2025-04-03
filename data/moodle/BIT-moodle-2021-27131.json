@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:moodle:moodle:3.10.1:*:*:*:*:*:*:*"
+      "cpe:2.3:a:moodle:moodle:3.10.1:*:*:*:*:*:*:*",
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,8 +52,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/p4nk4jv/CVEs-Assigned/blob/master/Moodle-3.10.1-CVE-2021-27131.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27131"
     }
   ],
   "published": "2024-03-06T11:10:34.074Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

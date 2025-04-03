@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-24779",
-  "details": "Apache Superset with custom roles that include `can write on dataset` and without all data access permissions, allows for users to create virtual datasets to data they don't have access to. These users could then use those virtual datasets to get access to unauthorized data.This issue affects Apache Superset: before 3.0.4, from 3.1.0 before 3.1.1.Users are recommended to upgrade to version 3.1.1 or 3.0.4, which fixes the issue.",
+  "details": "Apache Superset with custom roles that include `can write on dataset` and without all data access permissions, allows for users to create virtual datasets to data they don't have access to. These users could then use those virtual datasets to get access to unauthorized data.\nThis issue affects Apache Superset: before 3.0.4, from 3.1.0 before 3.1.1.\n\nUsers are recommended to upgrade to version 3.1.1 or 3.0.4, which fixes the issue.",
   "aliases": [
     "CVE-2024-24779"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "https://lists.apache.org/thread/xzhz1m5bb9zxhyqgoy4q2d689b3zp4pq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-24779"
     }
   ],
   "published": "2025-02-05T07:26:02.294Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

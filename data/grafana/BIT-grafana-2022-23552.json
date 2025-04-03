@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2022-23552",
-  "details": "Grafana is an open-source platform for monitoring and observability. Starting with the 8.1 branch and prior to versions 8.5.16, 9.2.10, and 9.3.4, Grafana had a stored XSS vulnerability affecting the core plugin GeoMap. The stored XSS vulnerability was possible because SVG files weren't properly sanitized and allowed arbitrary JavaScript to be executed in the context of the currently authorized user of the Grafana instance. An attacker needs to have the Editor role in order to change a panel to include either an external URL to a SVG-file containing JavaScript, or use the `data:` scheme to load an inline SVG-file containing JavaScript. This means that vertical privilege escalation is possible, where a user with Editor role can change to a known password for a user having Admin role if the user with Admin role executes malicious JavaScript viewing a dashboard.   Users may upgrade to version 8.5.16, 9.2.10, or 9.3.4 to receive a fix.",
+  "details": "Grafana is an open-source platform for monitoring and observability. Starting with the 8.1 branch and prior to versions 8.5.16, 9.2.10, and 9.3.4, Grafana had a stored XSS vulnerability affecting the core plugin GeoMap. The stored XSS vulnerability was possible because SVG files weren't properly sanitized and allowed arbitrary JavaScript to be executed in the context of the currently authorized user of the Grafana instance. \n\nAn attacker needs to have the Editor role in order to change a panel to include either an external URL to a SVG-file containing JavaScript, or use the `data:` scheme to load an inline SVG-file containing JavaScript. This means that vertical privilege escalation is possible, where a user with Editor role can change to a known password for a user having Admin role if the user with Admin role executes malicious JavaScript viewing a dashboard.   \n\nUsers may upgrade to version 8.5.16, 9.2.10, or 9.3.4 to receive a fix.",
   "aliases": [
     "CVE-2022-23552"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -75,8 +75,12 @@
     {
       "type": "WEB",
       "url": "https://security.netapp.com/advisory/ntap-20230302-0008/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23552"
     }
   ],
   "published": "2024-03-06T10:57:42.704Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

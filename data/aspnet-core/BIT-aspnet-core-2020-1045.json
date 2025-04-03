@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-aspnet-core-2020-1045",
-  "details": "<p>A security feature bypass vulnerability exists in the way Microsoft ASP.NET Core parses encoded cookie names.</p><p>The ASP.NET Core cookie parser decodes entire cookie strings which could allow a malicious attacker to set a second cookie with the name being percent encoded.</p><p>The security update addresses the vulnerability by fixing the way the ASP.NET Core cookie parser handles encoded names.</p>",
+  "details": "<p>A security feature bypass vulnerability exists in the way Microsoft ASP.NET Core parses encoded cookie names.</p>\n<p>The ASP.NET Core cookie parser decodes entire cookie strings which could allow a malicious attacker to set a second cookie with the name being percent encoded.</p>\n<p>The security update addresses the vulnerability by fixing the way the ASP.NET Core cookie parser handles encoded names.</p>",
   "aliases": [
     "CVE-2020-1045"
   ],
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
     ]
@@ -63,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://security.snyk.io/vuln/SNYK-RHEL8-DOTNET-1439600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1045"
     }
   ],
   "published": "2024-03-06T10:54:08.693Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-23622",
-  "details": "Discourse is an open-source discussion platform. Prior to version 3.0.1 of the `stable` branch, the count of topics displayed for a tag is a count of all regular topics regardless of whether the topic is in a read restricted category or not. As a result, any users can technically poll a sensitive tag to determine if a new topic is created in a category which the user does not have excess to. In version 3.0.1 of the `stable` branch and version 3.1.0.beta2 of the `beta` and `tests-passed` branches, the count of topics displayed for a tag defaults to only counting regular topics which are not in read restricted categories. Staff users will continue to see a count of all topics regardless of the topic's category read restrictions.",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.0.1 of the `stable` branch and version 3.1.0.beta2 of the `beta` and `tests-passed` branches, the count of topics displayed for a tag is a count of all regular topics regardless of whether the topic is in a read restricted category or not. As a result, any users can technically poll a sensitive tag to determine if a new topic is created in a category which the user does not have excess to. \n\nIn version 3.0.1 of the `stable` branch and version 3.1.0.beta2 of the `beta` and `tests-passed` branches, the count of topics displayed for a tag defaults to only counting regular topics which are not in read restricted categories. Staff users will continue to see a count of all topics regardless of the topic's category read restrictions.",
   "aliases": [
     "CVE-2023-23622"
   ],
@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -243,7 +243,8 @@
       "cpe:2.3:a:discourse:discourse:2.9.0:beta8:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:2.9.0:beta9:*:*:beta:*:*:*",
       "cpe:2.3:a:discourse:discourse:3.0.0:beta15:*:*:beta:*:*:*",
-      "cpe:2.3:a:discourse:discourse:3.0.0:beta16:*:*:beta:*:*:*"
+      "cpe:2.3:a:discourse:discourse:3.0.0:beta16:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -266,8 +267,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/discourse/discourse/security/advisories/GHSA-2wvr-4x7w-v795"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23622"
     }
   ],
   "published": "2024-03-06T11:00:06.306Z",
-  "modified": "2025-01-20T07:55:28.351Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

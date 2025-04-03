@@ -36,15 +36,20 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:4homepages:4images:1.7.11:*:*:*:*:*:*:*"
+      "cpe:2.3:a:4homepages:4images:1.7.11:*:*:*:*:*:*:*",
+      "cpe:2.3:a:4homepages:4images:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
       "url": "https://www.exploit-db.com/exploits/49339"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-35853"
     }
   ],
   "published": "2024-03-06T11:04:18.866Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

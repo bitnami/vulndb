@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-55633",
-  "details": "Improper Authorization vulnerability in Apache Superset. On Postgres analytic databases an attacker with SQLLab access can craft a specially designed SQL DML statement that is Incorrectly identified as a read-only query, enabling its execution. Non postgres analytics database connections and postgres analytics database connections set with a readonly user (advised) are not vulnerable. This issue affects Apache Superset: before 4.1.0.Users are recommended to upgrade to version 4.1.0, which fixes the issue.",
+  "details": "Improper Authorization vulnerability in Apache Superset. On Postgres analytic databases an attacker with SQLLab access can craft a specially designed SQL DML statement that is Incorrectly identified as a read-only query, enabling its execution. Non postgres analytics database connections and postgres analytics database connections set with a readonly user (advised) are not vulnerable. \n\nThis issue affects Apache Superset: before 4.1.0.\n\nUsers are recommended to upgrade to version 4.1.0, which fixes the issue.",
   "aliases": [
     "CVE-2024-55633"
   ],
@@ -47,8 +47,12 @@
     {
       "type": "WEB",
       "url": "http://www.openwall.com/lists/oss-security/2024/12/12/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55633"
     }
   ],
   "published": "2025-02-05T07:24:52.298Z",
-  "modified": "2025-02-26T16:37:33.026Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

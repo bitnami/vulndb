@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:sqlite:sqlite:3.32.2:*:*:*:*:*:*:*"
+      "cpe:2.3:a:sqlite:sqlite:3.32.2:*:*:*:*:*:*:*",
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -79,8 +80,12 @@
     {
       "type": "WEB",
       "url": "https://www.sqlite.org/src/info/cd708fa84d2aaaea"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13871"
     }
   ],
   "published": "2024-03-06T11:07:31.077Z",
-  "modified": "2025-03-24T17:31:38.612Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }

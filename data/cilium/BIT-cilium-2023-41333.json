@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:H"
+          "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:H"
         }
       ],
       "ranges": [
@@ -63,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://github.com/cilium/cilium/security/advisories/GHSA-4xp2-w642-7mcx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-41333"
     }
   ],
   "published": "2024-05-15T12:06:29.973Z",
-  "modified": "2025-02-26T07:48:40.248Z"
+  "modified": "2025-04-03T14:40:37.652Z"
 }
