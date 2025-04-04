@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-jenkins-2025-31721",
+  "details": "A missing permission check in Jenkins 2.503 and earlier, LTS 2.492.2 and earlier allows attackers with Computer/Create permission but without Computer/Configure permission to copy an agent, gaining access to encrypted secrets in its configuration.",
+  "aliases": [
+    "CVE-2025-31721"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.492.3"
+            },
+            {
+              "introduced": "2.493.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31721"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2025-04-02/#SECURITY-3513"
+    }
+  ],
+  "published": "2025-04-04T07:21:30.555Z",
+  "modified": "2025-04-04T07:46:23.541Z"
+}
