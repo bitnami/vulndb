@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elasticsearch-2024-52980",
+  "details": "A flaw was discovered in Elasticsearch, where a large recursion using the innerForbidCircularReferences function of the PatternBank class could cause the Elasticsearch node to crash.\n\nA successful attack requires a malicious user to have read_pipeline Elasticsearch cluster privilege assigned to them.",
+  "aliases": [
+    "CVE-2024-52980"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.0"
+            },
+            {
+              "fixed": "8.15.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-15-1-security-update-esa-2024-34/376919"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52980"
+    }
+  ],
+  "published": "2025-04-10T07:10:13.338Z",
+  "modified": "2025-04-10T07:44:37.385Z"
+}
