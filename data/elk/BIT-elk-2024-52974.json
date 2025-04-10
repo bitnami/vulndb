@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-elk-2024-52974",
+  "details": "An issue has been identified where a specially crafted request sent to an Observability API could cause the kibana server to crash.\n\nA successful attack requires a malicious user to have read permissions for Observability assigned to them.",
+  "aliases": [
+    "CVE-2024-52974"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.0"
+            },
+            {
+              "fixed": "7.17.23"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.15.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-7-17-23-and-8-15-1-security-update-esa-2024-36/376923"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52974"
+    }
+  ],
+  "published": "2025-04-10T07:08:46.358Z",
+  "modified": "2025-04-10T07:44:37.385Z"
+}
