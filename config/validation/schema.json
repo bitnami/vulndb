@@ -21,10 +21,7 @@
       "$ref": "#/$defs/timestamp"
     },
     "aliases": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "items": {
         "type": "string"
       }
@@ -45,10 +42,7 @@
       "$ref": "#/$defs/severity"
     },
     "affected": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "items": {
         "type": "object",
         "properties": {
@@ -171,9 +165,7 @@
                     "properties": {
                       "events": {
                         "contains": {
-                          "required": [
-                            "last_affected"
-                          ]
+                          "required": ["last_affected"]
                         }
                       }
                     }
@@ -183,9 +175,7 @@
                       "properties": {
                         "events": {
                           "contains": {
-                            "required": [
-                              "fixed"
-                            ]
+                            "required": ["fixed"]
                           }
                         }
                       }
@@ -215,10 +205,7 @@
       }
     },
     "references": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "items": {
         "type": "object",
         "properties": {
@@ -294,10 +281,7 @@
   ],
   "$defs": {
     "severity": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": ["array", "null"],
       "items": {
         "type": "object",
         "properties": {
@@ -305,47 +289,14 @@
             "type": "string",
             "enum": [
               "CVSS_V2",
-              "CVSS_V3"
+              "CVSS_V3",
+              "CVSS_V4"
             ]
           },
           "score": {
             "type": "string"
           }
         },
-        "allOf": [
-          {
-            "if": {
-              "properties": {
-                "type": {
-                  "const": "CVSS_V2"
-                }
-              }
-            },
-            "then": {
-              "properties": {
-                "score": {
-                  "pattern": "AV:[NAL]\\/AC:[LMH]\\/A[Uu]:[NSM]\\/C:[NPC]\\/I:[NPC]\\/A:[NPC]"
-                }
-              }
-            }
-          },
-          {
-            "if": {
-              "properties": {
-                "type": {
-                  "const": "CVSS_V3"
-                }
-              }
-            },
-            "then": {
-              "properties": {
-                "score": {
-                  "pattern": "CVSS:3\\.[0-9]/AV:[NALP]\\/AC:[LH]\\/PR:[NLH]\\/UI:[NR]\\/S:[UC]\\/C:[NLH]\\/I:[NLH]\\/A:[NLH]"
-                }
-              }
-            }
-          }
-        ],
         "required": [
           "type",
           "score"
