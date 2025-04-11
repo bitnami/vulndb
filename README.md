@@ -140,6 +140,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2025-04
+
+- vmod-querystring
+
 ### 2025-03
 
 - Mattermost
