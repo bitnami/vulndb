@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-helm-2025-32387",
+  "details": "Helm is a package manager for Charts for Kubernetes. A JSON Schema file within a chart can be crafted with a deeply nested chain of references, leading to parser recursion that can exceed the stack size limit and trigger a stack overflow. This issue has been resolved in Helm v3.17.3.",
+  "aliases": [
+    "CVE-2025-32387"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "helm",
+        "purl": "pkg:bitnami/helm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.17.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/commit/d8ca55fc669645c10c0681d49723f4bb8c0b1ce7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/security/advisories/GHSA-5xqw-8hwv-wg92"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32387"
+    }
+  ],
+  "published": "2025-04-11T19:13:06.497Z",
+  "modified": "2025-04-11T19:44:39.690Z"
+}
