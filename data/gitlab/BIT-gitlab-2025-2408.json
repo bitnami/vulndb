@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-2408",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 13.12 before 17.8.7, 17.9 before 17.9.6, and 17.10 before 17.10.4. Under certain conditions users could bypass IP access restrictions and view sensitive information.",
+  "aliases": [
+    "CVE-2025-2408"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.12.0"
+            },
+            {
+              "fixed": "17.10.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/525323"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3027775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2408"
+    }
+  ],
+  "published": "2025-04-12T08:05:53.910Z",
+  "modified": "2025-04-12T08:07:05.000Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-0362",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 7.7 before 17.8.7, 17.9 before 17.9.6, and 17.10 before 17.10.4. Under certain conditions, an attacker could potentially trick users into unintentionally authorizing sensitive actions on their behalf.",
+  "aliases": [
+    "CVE-2025-0362"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.7.0"
+            },
+            {
+              "fixed": "17.10.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/512425"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2926425"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0362"
+    }
+  ],
+  "published": "2025-04-12T08:05:31.912Z",
+  "modified": "2025-04-12T08:07:05.000Z"
+}

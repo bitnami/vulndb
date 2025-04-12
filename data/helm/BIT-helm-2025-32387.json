@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:helm:helm:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-11T19:13:06.497Z",
-  "modified": "2025-04-11T19:44:39.690Z"
+  "modified": "2025-04-12T08:07:05.000Z"
 }
