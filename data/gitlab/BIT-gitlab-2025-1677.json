@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.5.0",
+  "id": "BIT-gitlab-2025-1677",
+  "details": "A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting all up to 17.8.7, 17.9 prior to 17.9.6 and 17.10 prior to 17.10.4 A denial of service could occur upon injecting oversized payloads into CI pipeline exports.",
+  "aliases": [
+    "CVE-2025-1677"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "17.10.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/521117"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3004008"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1677"
+    }
+  ],
+  "published": "2025-04-12T08:05:49.581Z",
+  "modified": "2025-04-12T08:07:05.000Z"
+}
