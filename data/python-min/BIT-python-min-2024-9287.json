@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.2",
   "id": "BIT-python-min-2024-9287",
   "details": "A vulnerability has been found in the CPython `venv` module and CLI where path names provided when creating a virtual environment were not quoted properly, allowing the creator to inject commands into virtual environment \"activation\" scripts (ie \"source venv/bin/activate\"). This means that attacker-controlled virtual environments are able to run commands when the virtual environment is activated. Virtual environments which are not created by an attacker or which aren't activated before being used (ie \"./venv/bin/python\") are not affected.",
   "aliases": [
@@ -14,8 +14,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Green"
         }
       ],
       "ranges": [
@@ -58,7 +58,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
     ]
@@ -106,5 +106,5 @@
     }
   ],
   "published": "2025-01-17T15:05:06.007Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-04-14T11:56:27.727Z"
 }

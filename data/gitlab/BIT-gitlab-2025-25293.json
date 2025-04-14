@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-25293",
+  "details": "ruby-saml provides security assertion markup language (SAML) single sign-on (SSO) for Ruby. Prior to versions 1.12.4 and 1.18.0, ruby-saml is susceptible to remote Denial of Service (DoS) with compressed SAML responses. ruby-saml uses zlib to decompress SAML responses in case they're compressed. It is possible to bypass the message size check with a compressed assertion since the message size is checked before inflation and not after. This issue may lead to remote Denial of Service (DoS). Versions 1.12.4 and 1.18.0 fix the issue.",
+  "aliases": [
+    "CVE-2025-25293"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "17.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/03/12/patch-release-gitlab-17-9-2-released"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/commit/acac9e9cc0b9a507882c614f25d41f8b47be349a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/commit/e2da4c6dae7dc01a4d9cd221395140a67e2b3eb1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/releases/tag/v1.12.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/releases/tag/v1.18.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/SAML-Toolkits/ruby-saml/security/advisories/GHSA-92rq-c8cf-prrq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/omniauth/omniauth-saml/security/advisories/GHSA-hw46-3hmr-x9xv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25293"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250314-0008/"
+    }
+  ],
+  "published": "2025-04-14T11:55:21.293Z",
+  "modified": "2025-04-14T11:56:27.727Z"
+}
