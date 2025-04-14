@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.2",
   "id": "BIT-superset-2024-55633",
   "details": "Improper Authorization vulnerability in Apache Superset. On Postgres analytic databases an attacker with SQLLab access can craft a specially designed SQL DML statement that is Incorrectly identified as a read-only query, enabling its execution. Non postgres analytics database connections and postgres analytics database connections set with a readonly user (advised) are not vulnerable. \n\nThis issue affects Apache Superset: before 4.1.0.\n\nUsers are recommended to upgrade to version 4.1.0, which fixes the issue.",
   "aliases": [
@@ -14,8 +14,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
         }
       ],
       "ranges": [
@@ -34,7 +34,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
     ]
@@ -54,5 +54,5 @@
     }
   ],
   "published": "2025-02-05T07:24:52.298Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-04-14T11:56:27.727Z"
 }
