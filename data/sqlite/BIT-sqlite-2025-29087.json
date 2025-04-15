@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-sqlite-2025-29087",
-  "details": "Sqlite 3.49.0 is susceptible to integer overflow through the concat function.",
+  "details": "In SQLite 3.44.0 through 3.49.0 before 3.49.1, the concat_ws() SQL function can cause memory to be written beyond the end of a malloc-allocated buffer. If the separator argument is attacker-controlled and has a large string (e.g., 2MB or more), an integer overflow occurs in calculating the size of the result buffer, and thus malloc may not allocate enough memory.",
   "aliases": [
     "CVE-2025-29087"
   ],
@@ -44,8 +44,16 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29087"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/releaselog/3_49_1.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.sqlite.org/cves.html"
     }
   ],
   "published": "2025-04-11T19:26:41.394Z",
-  "modified": "2025-04-11T19:44:39.690Z"
+  "modified": "2025-04-15T07:44:42.194Z"
 }
