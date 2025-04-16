@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-suitecrm-2022-45186",
+  "details": "An issue was discovered in SuiteCRM 7.12.7. Authenticated users can recover an arbitrary field of a database.",
+  "aliases": [
+    "CVE-2022-45186"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "suitecrm",
+        "purl": "pkg:bitnami/suitecrm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.12.7"
+            },
+            {
+              "last_affected": "7.12.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:salesagility:suitecrm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.suitecrm.com/admin/releases/7.12.x/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Orange-Cyberdefense/CVE-repository/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Orange-Cyberdefense/CVE-repository/blob/master/PoCs/poc_SuiteCRM.py"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-45186"
+    }
+  ],
+  "published": "2025-04-16T07:44:53.948Z",
+  "modified": "2025-04-16T08:06:52.943Z"
+}
