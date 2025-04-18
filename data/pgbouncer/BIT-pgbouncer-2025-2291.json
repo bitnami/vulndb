@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pgbouncer-2025-2291",
+  "details": "Password can be used past expiry in PgBouncer due to auth_query not taking into account Postgres its VALID UNTIL value, which allows an attacker to log in with an already expired password",
+  "aliases": [
+    "CVE-2025-2291"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pgbouncer",
+        "purl": "pkg:bitnami/pgbouncer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.24.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:pgbouncer:pgbouncer:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.pgbouncer.org/changelog.html#pgbouncer-124x"
+    }
+  ],
+  "published": "2025-04-18T19:19:16.416Z",
+  "modified": "2025-04-18T19:44:25.385Z"
+}
