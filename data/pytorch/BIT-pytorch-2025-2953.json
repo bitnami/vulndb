@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-pytorch-2025-2953",
-  "details": "A vulnerability, which was classified as problematic, has been found in PyTorch 2.6.0+cu124. Affected by this issue is the function torch.mkldnn_max_pool2d. The manipulation leads to denial of service. An attack has to be approached locally. The exploit has been disclosed to the public and may be used.",
+  "details": "A vulnerability, which was classified as problematic, has been found in PyTorch 2.6.0+cu124. Affected by this issue is the function torch.mkldnn_max_pool2d. The manipulation leads to denial of service. An attack has to be approached locally. The exploit has been disclosed to the public and may be used. The real existence of this vulnerability is still doubted at the moment. The security policy of the project warns to use unknown models which might establish malicious effects.",
   "aliases": [
     "CVE-2025-2953"
   ],
@@ -63,8 +63,12 @@
     {
       "type": "WEB",
       "url": "https://vuldb.com/?submit.521279"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models"
     }
   ],
   "published": "2025-04-16T07:31:10.049Z",
-  "modified": "2025-04-16T08:06:52.943Z"
+  "modified": "2025-04-23T09:27:45.300Z"
 }
