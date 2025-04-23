@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-fluent-bit-2024-50609",
+  "details": "An issue was discovered in Fluent Bit 3.1.9. When the OpenTelemetry input plugin is running and listening on an IP address and port, one can send a packet with Content-Length: 0 and it crashes the server. Improper handling of the case when Content-Length is 0 allows a user (with access to the endpoint) to perform a remote Denial of service attack. The crash happens because of a NULL pointer dereference when 0 (from the Content-Length) is passed to the function cfl_sds_len, which in turn tries to cast a NULL pointer into struct cfl_sds. This is related to process_payload_traces_proto_ng() at opentelemetry_prot.c.",
+  "aliases": [
+    "CVE-2024-50609"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluent-bit",
+        "purl": "pkg:bitnami/fluent-bit"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.9"
+            },
+            {
+              "fixed": "3.1.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:treasuredata:fluent_bit:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://fluentbit.io/announcements/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluent-bit/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-50609"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ebryx.com/blogs/exploring-cve-2024-50608-and-cve-2024-50609"
+    }
+  ],
+  "published": "2025-04-23T08:54:21.818Z",
+  "modified": "2025-04-23T09:27:45.300Z"
+}
