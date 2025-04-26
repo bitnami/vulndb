@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2024-25141",
+  "details": "When ssl was enabled for Mongo Hook, default settings included \"allow_insecure\" which caused that certificates were not validated. This was unexpected and undocumented.\nUsers are recommended to upgrade to version 4.0.0, which fixes this issue.",
+  "aliases": [
+    "CVE-2024-25141"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/02/20/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/37214"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/sqgbfqngjmn45ommmrgj7hvs7fgspsgm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25141"
+    }
+  ],
+  "published": "2025-04-26T05:35:36.661Z",
+  "modified": "2025-04-26T06:32:46.644Z"
+}

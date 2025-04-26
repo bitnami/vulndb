@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2024-12244",
+  "details": "An issue has been discovered in access controls could allow users to view certain restricted project information even when related features are disabled in GitLab EE, affecting all versions from 17.7 prior to 17.9.7, 17.10 prior to 17.10.5, and 17.11 prior to 17.11.1.",
+  "aliases": [
+    "CVE-2024-12244"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "17.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/508046"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2862754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12244"
+    }
+  ],
+  "published": "2025-04-26T06:28:03.620Z",
+  "modified": "2025-04-26T06:32:46.644Z"
+}
