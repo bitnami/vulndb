@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2024-43440",
+  "details": "A flaw was found in moodle. A local file may include risks when restoring block backups.",
+  "aliases": [
+    "CVE-2024-43440"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.12"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.6"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2304269"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461210"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43440"
+    }
+  ],
+  "published": "2025-05-02T06:19:00.410Z",
+  "modified": "2025-05-02T06:34:40.019Z"
+}

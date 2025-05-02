@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2024-43434",
+  "details": "The bulk message sending feature in Moodle's Feedback module's non-respondents report had an incorrect CSRF token check, leading to a CSRF vulnerability.",
+  "aliases": [
+    "CVE-2024-43434"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.12"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.6"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2304262"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=461203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43434"
+    }
+  ],
+  "published": "2025-05-02T06:18:55.145Z",
+  "modified": "2025-05-02T06:34:40.019Z"
+}

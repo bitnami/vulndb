@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2024-34004",
+  "details": "In a shared hosting environment that has been misconfigured to allow access to other users' content, a Moodle user with both access to restore wiki modules and direct access to the web server outside of the Moodle webroot could execute a local file include.",
+  "aliases": [
+    "CVE-2024-34004"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.10"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.7"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458393"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34004"
+    }
+  ],
+  "published": "2025-05-02T06:18:36.041Z",
+  "modified": "2025-05-02T06:34:40.019Z"
+}
