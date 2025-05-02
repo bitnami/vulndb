@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2024-28593",
+  "details": "The Chat activity in Moodle 4.3.3 allows students to insert a potentially unwanted HTML A element or IMG element, or HTML content that leads to a performance degradation. NOTE: the vendor's Using_Chat page says \"If you know some HTML code, you can use it in your text to do things like insert images, play sounds or create different coloured and sized text.\" This page also says \"Chat is due to be removed from standard Moodle.\"",
+  "aliases": [
+    "CVE-2024-28593"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.3.3"
+            },
+            {
+              "fixed": "4.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.moodle.org/403/en/Using_Chat"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.githubusercontent.com/minendie/4f23174687bc4d8eb7f727d9959b5399/raw/9ce573cebcce5521d9d6f826ab68f3780036b874/CVE-2024-28593.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://medium.com/%40lamscun/how-do-i-change-htmli-from-low-to-critical-your-email-box-is-safe-e7171efd88fe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28593"
+    }
+  ],
+  "published": "2025-05-02T06:18:27.353Z",
+  "modified": "2025-05-02T06:34:40.019Z"
+}
