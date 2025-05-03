@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2024-52979",
+  "details": "Uncontrolled Resource Consumption in Elasticsearch while evaluating specifically crafted search templates with Mustache functions can lead to Denial of Service by causing the Elasticsearch node to crash.",
+  "aliases": [
+    "CVE-2024-52979"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.0"
+            },
+            {
+              "fixed": "7.17.25"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-7-17-25-and-8-16-0-security-update-esa-2024-40/377709"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52979"
+    }
+  ],
+  "published": "2025-05-03T05:41:02.354Z",
+  "modified": "2025-05-03T06:34:12.721Z"
+}
