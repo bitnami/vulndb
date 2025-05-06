@@ -12,6 +12,12 @@
         "name": "tomcat",
         "purl": "pkg:bitnami/tomcat"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -40,7 +46,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
     ]
@@ -60,5 +66,5 @@
     }
   ],
   "published": "2025-05-02T16:49:51.447Z",
-  "modified": "2025-05-02T17:08:03.507Z"
+  "modified": "2025-05-06T06:35:19.124Z"
 }
