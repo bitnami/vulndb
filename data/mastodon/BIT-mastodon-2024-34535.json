@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2024-34535",
+  "details": "In Mastodon 4.1.6, API endpoint rate limiting can be bypassed by setting a crafted HTTP request header.",
+  "aliases": [
+    "CVE-2024-34535"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-q3rg-xx5v-4mxh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/tags"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34535"
+    }
+  ],
+  "published": "2025-05-07T05:43:55.990Z",
+  "modified": "2025-05-07T06:11:12.279Z"
+}
