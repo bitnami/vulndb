@@ -140,6 +140,15 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2025-05
+
+- Kubeapps
+- Kubeapps APIs
+- Kubeapps AppRepository Controller
+- Kubeapps Asset Syncer
+- Kubeapps OCI Catalog Service
+- Kubeapps Pinniped Proxy
+
 ### 2025-04
 
 - vmod-querystring
