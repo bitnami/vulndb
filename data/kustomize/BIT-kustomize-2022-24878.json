@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-kustomize-2022-24878",
+  "summary": "Improper path handling in Kustomization files allows for denial of service",
   "details": "Flux is an open and extensible continuous delivery solution for Kubernetes. Path Traversal in the kustomize-controller via a malicious `kustomization.yaml` allows an attacker to cause a Denial of Service at the controller level. Workarounds include automated tooling in the user's CI/CD pipeline to validate `kustomization.yaml` files conform with specific policies. This vulnerability is fixed in kustomize-controller v0.24.0 and included in flux2 v0.29.0. Users are recommended to upgrade.",
   "aliases": [
     "CVE-2022-24878"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:55:18.461Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

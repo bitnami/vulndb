@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-39318",
+  "summary": "Improper handling of HTML-like comments in script contexts in html/template",
   "details": "The html/template package does not properly handle HTML-like \"\" comment tokens, nor hashbang \"#!\" comment tokens, in <script> contexts. This may cause the template parser to improperly interpret the contents of <script> contexts, causing actions to be improperly escaped. This may be leveraged to perform an XSS attack.",
   "aliases": [
     "CVE-2023-39318"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T10:54:41.909Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

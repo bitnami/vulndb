@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2023-28425",
+  "summary": "Specially crafted MSETNX command can lead to denial-of-service",
   "details": "Redis is an in-memory database that persists on disk. Starting in version 7.0.8 and prior to version 7.0.10, authenticated users can use the MSETNX command to trigger a runtime assertion and termination of the Redis server process. The problem is fixed in Redis version 7.0.10.",
   "aliases": [
     "CVE-2023-28425"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-08-22T19:24:32.454Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

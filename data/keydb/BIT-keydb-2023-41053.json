@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2023-41053",
+  "summary": "Redis SORT_RO may bypass ACL configuration",
   "details": "Redis is an in-memory database that persists on disk. Redis does not correctly identify keys accessed by `SORT_RO` and as a result may grant users executing this command access to keys that are not explicitly authorized by the ACL configuration. The problem exists in Redis 7.0 or newer and has been fixed in Redis 7.0.13 and 7.2.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2023-41053"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-08-22T19:23:23.662Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-2121",
+  "summary": "Vault’s KV Diff Viewer Allowed for HTML Injection",
   "details": "Vault and Vault Enterprise's (Vault) key-value v2 (kv-v2) diff viewer allowed HTML injection into the Vault web UI through key values. This vulnerability, CVE-2023-2121, is fixed in Vault 1.14.0, 1.13.3, 1.12.7, and 1.11.11.",
   "aliases": [
     "CVE-2023-2121"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:09:28.191Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

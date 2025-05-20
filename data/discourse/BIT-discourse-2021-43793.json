@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2021-43793",
+  "summary": "Bypass of Poll voting limits in Discourse",
   "details": "Discourse is an open source discussion platform. In affected versions a vulnerability in the Polls feature allowed users to vote multiple times in a single-option poll. The problem is patched in the latest tests-passed, beta and stable versions of Discourse",
   "aliases": [
     "CVE-2021-43793"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:08:51.899Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

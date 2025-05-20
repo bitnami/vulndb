@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43432",
+  "summary": "Moodle: authorization headers preserved between \"emulated redirects\"",
   "details": "A flaw was found in moodle. The cURL wrapper in Moodle strips HTTPAUTH and USERPWD headers during emulated redirects, but retains other original request headers, so HTTP authorization header information could be unintentionally sent in requests to redirect URLs.",
   "aliases": [
     "CVE-2024-43432"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:52.499Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

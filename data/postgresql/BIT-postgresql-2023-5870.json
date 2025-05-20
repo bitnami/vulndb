@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2023-5870",
+  "summary": "Postgresql: role pg_signal_backend can signal certain superuser processes.",
   "details": "A flaw was found in PostgreSQL involving the pg_cancel_backend role that signals background workers, including the logical replication launcher, autovacuum workers, and the autovacuum launcher. Successful exploitation requires a non-core extension with a less-resilient background worker and would affect that specific background worker only. This issue may allow a remote high privileged user to launch a denial of service (DoS) attack.",
   "aliases": [
     "CVE-2023-5870"
@@ -181,5 +182,5 @@
     }
   ],
   "published": "2024-03-06T11:02:29.084Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

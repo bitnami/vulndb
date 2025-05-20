@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43429",
+  "summary": "Moodle: user information visibility control issues in gradebook reports",
   "details": "A flaw was found in moodle. Some hidden user profile fields are visible in gradebook reports, which could result in users without the \"view hidden user fields\" capability having access to the information.",
   "aliases": [
     "CVE-2024-43429"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:48.592Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

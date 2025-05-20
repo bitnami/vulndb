@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-consul-2023-0845",
+  "summary": "Consul Server Panic when Ingress and API Gateways Configured with Peering",
   "details": "Consul and Consul Enterprise allowed an authenticated user with service:write permissions to trigger a workflow that causes Consul server and client agents to crash under certain circumstances. This vulnerability was fixed in Consul 1.14.5.",
   "aliases": [
     "CVE-2023-0845"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:51:41.085Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

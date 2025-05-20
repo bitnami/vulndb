@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-2024-32760",
+  "summary": "NGINX HTTP/3 QUIC vulnerability",
   "details": "When NGINX Plus or NGINX OSS are configured to use the HTTP/3 QUIC module, undisclosed HTTP/3 encoder instructions can cause NGINX worker processes to terminate or cause or other potential impact.",
   "aliases": [
     "CVE-2024-32760"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-06-04T09:49:48.003Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

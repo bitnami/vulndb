@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-dolibarr-2021-3991",
+  "summary": "Improper Authorization in dolibarr/dolibarr",
   "details": "An Improper Authorization vulnerability exists in Dolibarr versions prior to the 'develop' branch. A user with restricted permissions in the 'Reception' section is able to access specific reception details via direct URL access, bypassing the intended permission restrictions.",
   "aliases": [
     "CVE-2021-3991"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-03T14:05:18.001Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

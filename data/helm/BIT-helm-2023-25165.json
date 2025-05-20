@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2023-25165",
+  "summary": "getHostByName Function Information Disclosure",
   "details": "Helm is a tool that streamlines installing and managing Kubernetes applications.`getHostByName` is a Helm template function introduced in Helm v3. The function is able to accept a hostname and return an IP address for that hostname. To get the IP address the function performs a DNS lookup. The DNS lookup happens when used with `helm install|upgrade|template` or when the Helm SDK is used to render a chart. Information passed into the chart can be disclosed to the DNS servers used to lookup the IP address. For example, a malicious chart could inject `getHostByName` into a chart in order to disclose values to a malicious DNS server. The issue has been fixed in Helm 3.11.1. Prior to using a chart with Helm verify the `getHostByName` function is not being used in a template to disclose any information you do not want passed to DNS servers.",
   "aliases": [
     "CVE-2023-25165"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:53:11.303Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

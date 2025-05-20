@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2021-21702",
+  "summary": "Null Dereference in SoapClient",
   "details": "In PHP versions 7.3.x below 7.3.27, 7.4.x below 7.4.15 and 8.0.x below 8.0.2, when using SOAP extension to connect to a SOAP server, a malicious SOAP server could return malformed XML data as a response that would cause PHP to access a null pointer and thus cause a crash.",
   "aliases": [
     "CVE-2021-21702"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2025-01-14T19:22:57.696Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2024-21731",
+  "summary": "[20240703] - Core - XSS in StringHelper::truncate method",
   "details": "Improper handling of input could lead to an XSS vector in the StringHelper::truncate method.",
   "aliases": [
     "CVE-2024-21731"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:16:45.887Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

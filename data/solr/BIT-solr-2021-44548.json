@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2021-44548",
+  "summary": "Apache Solr information disclosure vulnerability through DataImportHandler",
   "details": "An Improper Input Validation vulnerability in DataImportHandler of Apache Solr allows an attacker to provide a Windows UNC path resulting in an SMB network call being made from the Solr host to another host on the network. If the attacker has wider access to the network, this may lead to SMB attacks, which may result in: * The exfiltration of sensitive data such as OS user hashes (NTLM/LM hashes), * In case of misconfigured systems, SMB Relay Attacks which can lead to user impersonation on SMB Shares or, in a worse-case scenario, Remote Code Execution This issue affects all Apache Solr versions prior to 8.11.1. This issue only affects Windows.",
   "aliases": [
     "CVE-2021-44548"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:06:01.978Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

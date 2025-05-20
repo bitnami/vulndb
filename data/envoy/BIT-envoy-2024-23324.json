@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-23324",
+  "summary": "Envoy ext auth can be bypassed when Proxy protocol filter sets invalid UTF-8 metadata",
   "details": "Envoy is a high-performance edge/middle/service proxy. External authentication can be bypassed by downstream connections. Downstream clients can force invalid gRPC requests to be sent to ext_authz, circumventing ext_authz checks when failure_mode_allow is set to true. This issue has been addressed in released 1.29.1, 1.28.1, 1.27.3, and 1.26.7. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-23324"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:51:54.396Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

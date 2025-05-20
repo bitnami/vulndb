@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-subversion-2021-28544",
+  "summary": "Apache Subversion SVN authz protected copyfrom paths regression",
   "details": "Apache Subversion SVN authz protected copyfrom paths regression Subversion servers reveal 'copyfrom' paths that should be hidden according to configured path-based authorization (authz) rules. When a node has been copied from a protected location, users with access to the copy can see the 'copyfrom' path of the original. This also reveals the fact that the node was copied. Only the 'copyfrom' path is revealed; not its contents. Both httpd and svnserve servers are vulnerable.",
   "aliases": [
     "CVE-2021-28544"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:05:44.980Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

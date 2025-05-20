@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5512",
+  "summary": "Improper Control of Generation of Code ('Code Injection') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.3 before 16.4.4, all versions starting from 16.5 before 16.5.4, all versions starting from 16.6 before 16.6.2. File integrity may be compromised when specific HTML encoding is used for file names leading for incorrect representation in the UI.",
   "aliases": [
     "CVE-2023-5512"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:56:37.794Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

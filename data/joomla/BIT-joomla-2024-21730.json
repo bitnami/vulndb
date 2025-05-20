@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2024-21730",
+  "summary": "[20240702] - Core - Self-XSS in fancyselect list field layout",
   "details": "The fancyselect list field layout does not correctly escape inputs, leading to a self-XSS vector.",
   "aliases": [
     "CVE-2024-21730"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:16:37.895Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

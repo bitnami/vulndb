@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gulp-2020-28469",
+  "summary": "Regular Expression Denial of Service (ReDoS)",
   "details": "This affects the package glob-parent before 5.1.2. The enclosure regex used to check for strings ending in enclosure containing path separator.",
   "aliases": [
     "CVE-2020-28469"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T10:53:11.461Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

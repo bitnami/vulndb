@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-pip-2023-5752",
+  "summary": "Mercurial configuration injectable in repo revision when installing via pip",
   "details": "When installing a package from a Mercurial VCS URL  (ie \"pip install \nhg+...\") with pip prior to v23.3, the specified Mercurial revision could\n be used to inject arbitrary configuration options to the \"hg clone\" \ncall (ie \"--config\"). Controlling the Mercurial configuration can modify\n how and which repository is installed. This vulnerability does not \naffect users who aren't installing from Mercurial.",
   "aliases": [
     "CVE-2023-5752"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T11:01:43.973Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

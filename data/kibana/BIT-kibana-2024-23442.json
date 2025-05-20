@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-kibana-2024-23442",
+  "summary": "Kibana open redirect issue",
   "details": "An open redirect issue was discovered in Kibana that could lead to a user being redirected to an arbitrary website if they use a maliciously crafted Kibana URL.",
   "aliases": [
     "CVE-2024-23442"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-06-18T07:22:49.724Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

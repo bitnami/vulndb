@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-25978",
+  "summary": "Msa-24-0001: denial of service risk in file picker unzip functionality",
   "details": "Insufficient file size checks resulted in a denial of service risk in the file picker's unzip functionality.",
   "aliases": [
     "CVE-2024-25978"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-31T18:22:52.148Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

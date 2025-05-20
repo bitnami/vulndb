@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-opencart-2025-1749",
+  "summary": "HTML injection vulnerability in OpenCart",
   "details": "HTML injection vulnerabilities in OpenCart versions prior to 4.1.0. These vulnerabilities could allow an attacker to modify the HTML of the victim's browser by sending a malicious URL and modifying the parameter name in /account/voucher.",
   "aliases": [
     "CVE-2025-1749"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-05-08T08:46:49.941Z",
-  "modified": "2025-05-08T09:12:25.257Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

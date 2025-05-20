@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2023-43664",
+  "summary": "Employee without any access rights can list all installed modules in Prestashop",
   "details": "PrestaShop is an Open Source e-commerce web application. In the Prestashop Back office interface, an employee can list all modules without any access rights: method `ajaxProcessGetPossibleHookingListForModule` doesn't check access rights. This issue has been addressed in commit `15bd281c` which is included in version 8.1.2. Users are advised to upgrade. There are no known workaround for this issue.",
   "aliases": [
     "CVE-2023-43664"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:02:38.285Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

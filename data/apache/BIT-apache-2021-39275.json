@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2021-39275",
+  "summary": "ap_escape_quotes buffer overflow",
   "details": "ap_escape_quotes() may write beyond the end of a buffer when given malicious input. No included modules pass untrusted data to these functions, but third-party / external modules may. This issue affects Apache HTTP Server 2.4.48 and earlier.",
   "aliases": [
     "CVE-2021-39275"
@@ -106,5 +107,5 @@
     }
   ],
   "published": "2024-03-06T10:55:11.163Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

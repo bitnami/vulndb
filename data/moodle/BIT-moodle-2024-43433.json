@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43433",
+  "summary": "Moodle: matrix user/power level management not always working as expected with suspended users",
   "details": "A flaw was found in moodle. Matrix room membership and power levels are incorrectly applied and revoked for suspended Moodle users.",
   "aliases": [
     "CVE-2024-43433"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2025-05-02T06:18:53.795Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

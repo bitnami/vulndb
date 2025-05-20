@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2023-46674",
+  "summary": "Elasticsearch-hadoop Unsafe Deserialization",
   "details": "An issue was identified that allowed the unsafe deserialization of java objects from hadoop or spark configuration properties that could have been modified by authenticated users. Elastic would like to thank Yakov Shafranovich, with Amazon Web Services for reporting this issue.",
   "aliases": [
     "CVE-2023-46674"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T10:51:29.796Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

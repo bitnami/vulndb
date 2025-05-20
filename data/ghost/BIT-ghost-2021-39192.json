@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-ghost-2021-39192",
+  "summary": "Privilege escalation: all users can access Admin-level API keys",
   "details": "Ghost is a Node.js content management system. An error in the implementation of the limits service between versions 4.0.0 and 4.9.4 allows all authenticated users (including contributors) to view admin-level API keys via the integrations API endpoint, leading to a privilege escalation vulnerability. This issue is patched in Ghost version 4.10.0. As a workaround, disable all non-Administrator accounts to prevent API access. It is highly recommended to regenerate all API keys after patching or applying the workaround.",
   "aliases": [
     "CVE-2021-39192"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:54:14.780Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

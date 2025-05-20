@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-7057",
+  "summary": "Improper Access Control in GitLab",
   "details": "An information disclosure vulnerability in GitLab CE/EE affecting all versions starting from 16.7 prior to 17.0.5, starting from 17.1 prior to 17.1.3, and starting from 17.2 prior to 17.2.1 where job artifacts can be inappropriately exposed to users lacking the proper authorization level.",
   "aliases": [
     "CVE-2024-7057"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-07-26T07:19:19.356Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

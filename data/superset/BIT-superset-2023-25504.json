@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-25504",
+  "summary": "Apache Superset: Possible SSRF on import datasets",
   "details": "A malicious actor who has been authenticated and granted specific permissions in Apache Superset may use the import dataset feature in order to conduct Server-Side Request Forgery\nattacks and query internal resources on behalf of the server where Superset\nis deployed. This vulnerability exists in Apache Superset versions up to and including 2.0.1.",
   "aliases": [
     "CVE-2023-25504"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:28:42.590Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

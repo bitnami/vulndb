@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-26036",
+  "summary": "[20210702] - Core - DoS through usergroup table manipulation",
   "details": "An issue was discovered in Joomla! 2.5.0 through 3.9.27. Missing validation of input could lead to a broken usergroups table.",
   "aliases": [
     "CVE-2021-26036"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:13:37.395Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2021-40438",
+  "summary": "mod_proxy SSRF",
   "details": "A crafted request uri-path can cause mod_proxy to forward the request to an origin server choosen by the remote user. This issue affects Apache HTTP Server 2.4.48 and earlier.",
   "aliases": [
     "CVE-2021-40438"
@@ -122,5 +123,5 @@
     }
   ],
   "published": "2024-03-06T10:55:02.200Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

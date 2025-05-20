@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2021-43824",
+  "summary": "Null pointer dereference in envoy",
   "details": "Envoy is an open source edge and service proxy, designed for cloud-native applications. In affected versions a crafted request crashes Envoy when a CONNECT request is sent to JWT filter configured with regex match. This provides a denial of service attack vector. The only workaround is to not use regex in the JWT filter. Users are advised to upgrade.",
   "aliases": [
     "CVE-2021-43824"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:56:58.513Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-2024-7592",
+  "summary": "Quadratic complexity parsing cookies with backslashes",
   "details": "There is a LOW severity vulnerability affecting CPython, specifically the\n'http.cookies' standard library module.\n\n\nWhen parsing cookies that contained backslashes for quoted characters in\nthe cookie value, the parser would use an algorithm with quadratic\ncomplexity, resulting in excess CPU resources being used while parsing the\nvalue.",
   "aliases": [
     "CVE-2024-7592"
@@ -114,5 +115,5 @@
     }
   ],
   "published": "2024-09-16T12:03:55.576Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

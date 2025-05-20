@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-24532",
+  "summary": "Incorrect calculation on P256 curves in crypto/internal/nistec",
   "details": "The ScalarMult and ScalarBaseMult methods of the P256 Curve may return an incorrect result if called with some specific unreduced scalars (a scalar larger than the order of the curve). This does not impact usages of crypto/ecdsa or crypto/ecdh.",
   "aliases": [
     "CVE-2023-24532"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:57:15.189Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

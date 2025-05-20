@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-11931",
+  "summary": "Insufficient Granularity of Access Control in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 17.0 prior to 17.6.4, from 17.7 prior to 17.7.3, and from 17.8 prior to 17.8.1. Under certain conditions, it may have been possible for users with developer role to exfiltrate protected CI variables via CI lint.",
   "aliases": [
     "CVE-2024-11931"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-01-28T07:25:07.907Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

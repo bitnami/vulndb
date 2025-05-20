@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2023-0567",
+  "summary": "password_verify() always returns true for some invalid hashes",
   "details": "In PHP 8.0.X before 8.0.28, 8.1.X before 8.1.16 and 8.2.X before 8.2.3, password_verify() function may accept some invalid Blowfish hashes as valid. If such invalid hash ever ends up in the password database, it may lead to an application allowing any password for this entry as valid.",
   "aliases": [
     "CVE-2023-0567"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:02:12.080Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

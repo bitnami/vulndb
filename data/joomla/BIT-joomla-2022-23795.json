@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-23795",
+  "summary": "[20220303] - Core - User row are not bound to a authentication mechanism",
   "details": "An issue was discovered in Joomla! 2.5.0 through 3.10.6 & 4.0.0 through 4.1.0. A user row was not bound to a specific authentication mechanism which could under very special circumstances allow an account takeover.",
   "aliases": [
     "CVE-2022-23795"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-04-03T14:14:24.804Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

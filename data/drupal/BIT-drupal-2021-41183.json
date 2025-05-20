@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2021-41183",
+  "summary": "XSS in `*Text` options of the Datepicker widget",
   "details": "jQuery-UI is the official jQuery user interface library. Prior to version 1.13.0, accepting the value of various `*Text` options of the Datepicker widget from untrusted sources may execute untrusted code. The issue is fixed in jQuery UI 1.13.0. The values passed to various `*Text` options are now always treated as pure text, not HTML. A workaround is to not accept the value of the `*Text` options from untrusted sources.",
   "aliases": [
     "CVE-2021-41183"
@@ -130,5 +131,5 @@
     }
   ],
   "published": "2024-03-06T10:54:42.504Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

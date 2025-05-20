@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9633",
+  "summary": "Incorrect Ownership Assignment in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.3 before 17.4.2, all versions starting from 17.5 before 17.5.4, all versions starting from 17.6 before 17.6.2. This issue allows an attacker to create a group with a name matching an existing unique Pages domain, potentially leading to domain confusion attacks.",
   "aliases": [
     "CVE-2024-9633"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-11-16T07:09:30.396Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

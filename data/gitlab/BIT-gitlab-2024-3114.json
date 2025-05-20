@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-3114",
+  "summary": "Uncontrolled Resource Consumption in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.10 prior to 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2, with the processing logic for parsing invalid commits can lead to a regular expression DoS attack on the server.",
   "aliases": [
     "CVE-2024-3114"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-08-10T07:27:12.594Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

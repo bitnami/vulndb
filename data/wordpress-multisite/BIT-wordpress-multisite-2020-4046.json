@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-multisite-2020-4046",
+  "summary": "Authenticated XSS through embed block in WordPress",
   "details": "In affected versions of WordPress, users with low privileges (like contributors and authors) can use the embed block in a certain way to inject unfiltered HTML in the block editor. When affected posts are viewed by a higher privileged user, this could lead to script execution in the editor/wp-admin. This has been patched in version 5.4.2, along with all the previously affected versions via a minor release (5.3.4, 5.2.7, 5.1.6, 5.0.10, 4.9.15, 4.8.14, 4.7.18, 4.6.19, 4.5.22, 4.4.23, 4.3.24, 4.2.28, 4.1.31, 4.0.31, 3.9.32, 3.8.34, 3.7.34).",
   "aliases": [
     "CVE-2020-4046"
@@ -172,5 +173,5 @@
     }
   ],
   "published": "2024-03-06T11:11:01.994Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

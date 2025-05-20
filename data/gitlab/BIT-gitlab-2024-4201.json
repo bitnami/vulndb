@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-4201",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
   "details": "A cross-site scripting issue has been discovered in GitLab affecting all versions starting from 5.1 before 16.10.7, all versions starting from 16.11 before 16.111.4, all versions starting from 17.0 before 17.0.2. When viewing an XML file in a repository in raw mode, it can be made to render as HTML if viewed under specific circumstances.",
   "aliases": [
     "CVE-2024-4201"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-06-17T07:20:12.630Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

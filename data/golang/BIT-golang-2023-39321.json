@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-39321",
+  "summary": "Panic when processing post-handshake message on QUIC connections in crypto/tls",
   "details": "Processing an incomplete post-handshake message for a QUIC connection can cause a panic.",
   "aliases": [
     "CVE-2023-39321"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:54:10.069Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

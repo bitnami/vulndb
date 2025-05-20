@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2022-31626",
+  "summary": "mysqlnd/pdo password buffer overflow",
   "details": "In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply host to connect to and the password for the connection, password of excessive length can trigger a buffer overflow in PHP, which can lead to a remote code execution vulnerability.",
   "aliases": [
     "CVE-2022-31626"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:04:13.773Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

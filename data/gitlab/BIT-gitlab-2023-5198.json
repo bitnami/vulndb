@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5198",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions prior to 16.2.7, all versions starting from 16.3 before 16.3.5, and all versions starting from 16.4 before 16.4.1. It was possible for a removed project member to write to protected branches using deploy keys.",
   "aliases": [
     "CVE-2023-5198"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:57:26.166Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

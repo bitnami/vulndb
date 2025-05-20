@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-etcd-2023-32082",
+  "summary": "etcd key name can be accessed via LeaseTimeToLive API",
   "details": "etcd is a distributed key-value store for the data of a distributed system. Prior to versions 3.4.26 and 3.5.9, the LeaseTimeToLive API allows access to key names (not value) associated to a lease when `Keys` parameter is true, even a user doesn't have read permission to the keys. The impact is limited to a cluster which enables auth (RBAC). Versions 3.4.26 and 3.5.9 fix this issue. There are no known workarounds.",
   "aliases": [
     "CVE-2023-32082"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:51:44.987Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

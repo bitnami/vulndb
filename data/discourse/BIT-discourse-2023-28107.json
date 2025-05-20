@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-28107",
+  "summary": "Discourse vulnerable to multisite DoS by spamming backups",
   "details": "Discourse is an open-source discussion platform. Prior to version 3.0.2 of the `stable` branch and version 3.1.0.beta3 of the `beta` and `tests-passed` branches, a user logged as an administrator can request backups multiple times, which will eat up all the connections to the DB. If this is done on a site using multisite, then it can affect the whole cluster. The vulnerability is patched in version 3.0.2 of the `stable` branch and version 3.1.0.beta3 of the `beta` and `tests-passed` branches. There are no known workarounds.",
   "aliases": [
     "CVE-2023-28107"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T10:58:39.576Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

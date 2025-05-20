@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5612",
+  "summary": "Missing Authorization in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions before 16.6.6, 16.7 prior to 16.7.4, and 16.8 prior to 16.8.1. It was possible to read the user email address via tags feed although the visibility in the user profile has been disabled.",
   "aliases": [
     "CVE-2023-5612"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T10:56:26.779Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

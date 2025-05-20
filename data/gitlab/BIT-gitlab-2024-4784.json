@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-4784",
+  "summary": "Authentication Bypass by Primary Weakness in GitLab",
   "details": "An issue was discovered in GitLab EE starting from version 16.7 before 17.0.6, version 17.1 before 17.1.4 and 17.2 before 17.2.2 that allowed bypassing the password re-entry requirement to approve a policy.",
   "aliases": [
     "CVE-2024-4784"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-08-10T07:23:52.701Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-32148",
+  "summary": "Exposure of client IP addresses in net/http",
   "details": "Improper exposure of client IP addresses in net/http before Go 1.17.12 and Go 1.18.4 can be triggered by calling httputil.ReverseProxy.ServeHTTP with a Request.Header map containing a nil value for the X-Forwarded-For header, which causes ReverseProxy to set the client IP as the value of the X-Forwarded-For header.",
   "aliases": [
     "CVE-2022-32148"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:59:14.057Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

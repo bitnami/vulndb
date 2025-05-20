@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-15151",
+  "summary": "Observable Timing Discrepancy in OpenMage LTS",
   "details": "OpenMage LTS before versions 19.4.6 and 20.0.2 allows attackers to circumvent the `fromkey protection` in the Admin Interface and increases the attack surface for Cross Site Request Forgery attacks. This issue is related to Adobe's CVE-2020-9690. It is patched in versions 19.4.6 and 20.0.2.",
   "aliases": [
     "CVE-2020-15151"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:08:48.067Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

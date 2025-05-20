@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-40273",
+  "summary": "Session fixation in Apache Airflow web interface",
   "details": "The session fixation vulnerability allowed the authenticated user to continue accessing Airflow webserver even after the password of the user has been reset by the admin - up until the expiry of the session of the user. Other than manually cleaning the session database (for database session backend), or changing the secure_key and restarting the webserver, there were no mechanisms to force-logout the user (and all other users with that).\n\nWith this fix implemented, when using the database session backend, the existing sessions of the user are invalidated when the password of the user is reset. When using the securecookie session backend, the sessions are NOT invalidated and still require changing the secure key and restarting the webserver (and logging out all other users), but the user resetting the password is informed about it with a flash message warning displayed in the UI. Documentation is also updated explaining this behaviour.\n\nUsers of Apache Airflow are advised to upgrade to version 2.7.0 or newer to mitigate the risk associated with this vulnerability.",
   "aliases": [
     "CVE-2023-40273"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:53:37.079Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2022-31631",
+  "summary": "PDO::quote() may return unquoted string",
   "details": "In PHP versions 8.0.* before 8.0.27, 8.1.* before 8.1.15, 8.2.* before 8.2.2 when using PDO::quote() function to quote user-supplied data for SQLite, supplying an overly long string may cause the driver to incorrectly quote the data, which may further lead to SQL injection vulnerabilities.",
   "aliases": [
     "CVE-2022-31631"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2025-02-20T10:43:06.805Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

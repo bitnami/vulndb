@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2023-31250",
+  "summary": "Drupal core - Moderately critical - Access bypass - SA-CORE-2023-005",
   "details": "The file download facility doesn't sufficiently sanitize file paths in certain situations. This may result in users gaining access to private files that they should not have access to. Some sites may require configuration changes following this security release. Review the release notes for your Drupal version if you have issues accessing private files after updating.",
   "aliases": [
     "CVE-2023-31250"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:51:40.782Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

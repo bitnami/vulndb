@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-1439",
+  "summary": "Inadequate access control vulnerability in Moodle",
   "details": "Inadequate access control in Moodle LMS. This vulnerability could allow a local user with a student role to create arbitrary events intended for users with higher roles. It could also allow the attacker to add events to the calendar of all users without their prior consent.",
   "aliases": [
     "CVE-2024-1439"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-10-11T07:11:50.099Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

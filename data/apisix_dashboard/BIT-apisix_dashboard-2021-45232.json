@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apisix_dashboard-2021-45232",
+  "summary": "security vulnerability on unauthorized access.",
   "details": "In Apache APISIX Dashboard before 2.10.1, the Manager API uses two frameworks and introduces framework `droplet` on the basis of framework `gin`, all APIs and authentication middleware are developed based on framework `droplet`, but some API directly use the interface of framework `gin` thus bypassing the authentication.",
   "aliases": [
     "CVE-2021-45232"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:50:33.375Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

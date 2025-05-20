@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5545",
+  "summary": "Moodle: auto-populated h5p author name causes a potential information leak",
   "details": "H5P metadata automatically populated the author with the user's username, which could be sensitive information.",
   "aliases": [
     "CVE-2023-5545"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T10:57:40.178Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

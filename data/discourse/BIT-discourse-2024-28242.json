@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-28242",
+  "summary": "Disclosure of the existence of secret categories with custom backgrounds in Discourse",
   "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can learn that secret categories exist when they have backgrounds set. The issue is patched in the latest stable, beta and tests-passed version of Discourse. Users are advised to upgrade. Users unable to upgrade should temporarily remove category backgrounds.",
   "aliases": [
     "CVE-2024-28242"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-04-01T14:04:02.275Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-30522",
+  "summary": "mod_sed denial of service",
   "details": "If Apache HTTP Server 2.4.53 is configured to do transformations with mod_sed in contexts where the input to mod_sed may be very large, mod_sed may make excessively large memory allocations and trigger an abort.",
   "aliases": [
     "CVE-2022-30522"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-03-06T10:52:17.872Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

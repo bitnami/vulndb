@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8233",
+  "summary": "Inefficient Algorithmic Complexity in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 9.4 before 17.4.6, 17.5 before 17.5.4, and 17.6 before 17.6.2. An attacker could cause a denial of service with requests for diff files on a commit or merge request.",
   "aliases": [
     "CVE-2024-8233"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-12-16T07:12:33.876Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

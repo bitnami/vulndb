@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-56328",
+  "summary": "HTMLi(XSS without CSP) via Onebox urls in Discourse",
   "details": "Discourse is an open source platform for community discussion. An attacker can execute arbitrary JavaScript on users' browsers by posting a maliciously crafted onebox url. This issue only affects sites with CSP disabled. This problem has been patched in the latest version of Discourse. Users are advised to upgrade. Users unable to upgrade should enable CSP, disable inline Oneboxes globally, or allow specific domains for Oneboxing.",
   "aliases": [
     "CVE-2024-56328"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-20T10:31:29.492Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

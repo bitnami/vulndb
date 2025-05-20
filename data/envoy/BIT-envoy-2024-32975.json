@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-32975",
+  "summary": "Envoy crashes in QuicheDataReader::PeekVarInt62Length()",
   "details": "Envoy is a cloud-native, open source edge and service proxy. There is a crash at `QuicheDataReader::PeekVarInt62Length()`. It is caused by integer underflow in the `QuicStreamSequencerBuffer::PeekRegion()` implementation.",
   "aliases": [
     "CVE-2024-32975"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-06-06T07:18:33.558Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-31668",
+  "summary": "User permission validation failure and disclosure of P2P preheat execution logs",
   "details": "Harbor fails to validate the user permissions when updating p2p preheat policies. By sending a request to update a p2p preheat policy with an id that belongs to a project that the currently authenticated user doesn't have access to, the attacker could modify p2p preheat policies configured in other projects.",
   "aliases": [
     "CVE-2022-31668"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-11-20T07:10:59.480Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

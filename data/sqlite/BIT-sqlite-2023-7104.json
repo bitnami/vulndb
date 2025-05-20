@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-sqlite-2023-7104",
+  "summary": "SQLite SQLite3 make alltest sqlite3session.c sessionReadRecord heap-based overflow",
   "details": "A vulnerability was found in SQLite SQLite3 up to 3.43.0 and classified as critical. This issue affects the function sessionReadRecord of the file ext/session/sqlite3session.c of the component make alltest Handler. The manipulation leads to heap-based buffer overflow. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-248999.",
   "aliases": [
     "CVE-2023-7104"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T11:05:41.196Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

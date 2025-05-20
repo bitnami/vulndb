@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cassandra-2021-44521",
+  "summary": "Remote code execution for scripted UDFs",
   "details": "When running Apache Cassandra with the following configuration: enable_user_defined_functions: true enable_scripted_user_defined_functions: true enable_user_defined_functions_threads: false it is possible for an attacker to execute arbitrary code on the host. The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this. Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.",
   "aliases": [
     "CVE-2021-44521"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T10:50:58.097Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-redis-2022-35977",
+  "summary": "Integer overflow in certain command arguments can drive Redis to OOM panic",
   "details": "Redis is an in-memory database that persists on disk. Authenticated users issuing specially crafted `SETRANGE` and `SORT(_RO)` commands can trigger an integer overflow, resulting with Redis attempting to allocate impossible amounts of memory and abort with an out-of-memory (OOM) panic. The problem is fixed in Redis versions 7.0.8, 6.2.9 and 6.0.17. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2022-35977"
@@ -78,5 +79,5 @@
     }
   ],
   "published": "2024-03-06T11:05:24.585Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

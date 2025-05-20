@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-24405",
+  "summary": "Incorrect permissions in Inventory module could lead to unauthorized modification of inventory stock data",
   "details": "Magento version 2.4.0 and 2.3.5p1 (and earlier) are affected by an incorrect permissions issue vulnerability in the Inventory module. This vulnerability could be abused by authenticated users to modify inventory stock data without authorization.",
   "aliases": [
     "CVE-2020-24405"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:07:41.661Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

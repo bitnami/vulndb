@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-23615",
+  "summary": "Malicious users in Discourse can create spam topics as any user due to improper access control",
   "details": "Discourse is an open source discussion platform. The embeddable comments can be exploited to create new topics as any user but without any clear title or content. This issue is patched in the latest stable, beta and tests-passed versions of Discourse. As a workaround, disable embeddable comments by deleting all embeddable hosts.",
   "aliases": [
     "CVE-2023-23615"
@@ -265,5 +266,5 @@
     }
   ],
   "published": "2024-03-06T11:00:56.201Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

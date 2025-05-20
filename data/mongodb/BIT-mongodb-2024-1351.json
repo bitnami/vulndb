@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2024-1351",
+  "summary": "MongoDB Server may allow successful untrusted connection",
   "details": "Under certain configurations of --tlsCAFile and tls.CAFile, MongoDB Server may skip peer certificate validation which may result in untrusted connections to succeed. This may effectively reduce the security guarantees provided by TLS and open connections  that should have been closed due to failing certificate validation. This issue affects MongoDB Server v7.0 versions prior to and including 7.0.5, MongoDB Server v6.0 versions prior to and including 6.0.13, MongoDB Server v5.0 versions prior to and including 5.0.24 and MongoDB Server v4.4 versions prior to and including 4.4.28.\n\nRequired Configuration : A server process will allow incoming connections to skip peer certificate validation if the server process was started with TLS enabled (net.tls.mode set to allowTLS, preferTLS, or requireTLS) and without a net.tls.CAFile configured.",
   "aliases": [
     "CVE-2024-1351"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2025-03-12T07:18:10.164Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

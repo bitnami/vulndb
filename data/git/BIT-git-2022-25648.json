@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-git-2022-25648",
+  "summary": "Command Injection",
   "details": "The package git before 1.11.0 are vulnerable to Command Injection via git argument injection. When calling the fetch(remote = 'origin', opts = {}) function, the remote parameter is passed to the git fetch subcommand in a way that additional flags can be set. The additional flags can be used to perform a command injection.",
   "aliases": [
     "CVE-2022-25648"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T10:52:03.704Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

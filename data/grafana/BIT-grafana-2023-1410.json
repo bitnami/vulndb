@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2023-1410",
+  "summary": "Stored XSS in Graphite FunctionDescription tooltip",
   "details": "Grafana is an open-source platform for monitoring and observability. \n\nGrafana had a stored XSS vulnerability in the Graphite FunctionDescription tooltip. \n\nThe stored XSS vulnerability was possible due the value of the Function Description was not properly sanitized.\n\nAn attacker needs to have control over the Graphite data source in order to manipulate a function description and a Grafana admin needs to configure the data source, later a Grafana user needs to select a tampered function and hover over the description. \n\n  Users may upgrade to version 8.5.22, 9.2.15 and 9.3.11 to receive a fix.",
   "aliases": [
     "CVE-2023-1410"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:53:49.160Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

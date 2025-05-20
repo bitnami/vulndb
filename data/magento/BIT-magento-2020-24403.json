@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-24403",
+  "summary": "Incorrect permissions could lead to unauthorized modification of inventory source data via REST API",
   "details": "Magento version 2.4.0 and 2.3.5p1 (and earlier) are affected by an incorrect user permissions vulnerability within the Inventory component. This vulnerability could be abused by authenticated users with Inventory and Source permissions to make unauthorized changes to inventory source data via the REST API.",
   "aliases": [
     "CVE-2020-24403"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:08:04.773Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2022-43720",
+  "summary": "Apache Superset: Improper rendering of user input",
   "details": "An authenticated attacker with write CSS template permissions can create a record with specific HTML tags that will not get properly escaped by the toast message displayed when a user deletes that specific CSS template record. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
   "aliases": [
     "CVE-2022-43720"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-02-05T07:28:59.302Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

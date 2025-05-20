@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-etcd-2020-15113",
+  "summary": "Improper Preservation of Permissions in etcd",
   "details": "In etcd before versions 3.3.23 and 3.4.10, certain directory paths are created (etcd data directory and the directory path when provided to automatically generate self-signed certificates for TLS connections with clients) with restricted access permissions (700) by using the os.MkdirAll. This function does not perform any permission checks when a given directory path exists already. A possible workaround is to ensure the directories have the desired permission (700).",
   "aliases": [
     "CVE-2020-15113"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:52:21.172Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-pgbouncer-2025-2291",
+  "summary": "PgBouncer default auth_query does not take Postgres password expiry into account",
   "details": "Password can be used past expiry in PgBouncer due to auth_query not taking into account Postgres its VALID UNTIL value, which allows an attacker to log in with an already expired password",
   "aliases": [
     "CVE-2025-2291"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-18T19:19:16.416Z",
-  "modified": "2025-04-18T19:44:25.385Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

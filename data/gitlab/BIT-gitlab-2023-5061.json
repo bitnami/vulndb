@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5061",
+  "summary": "Missing Authorization in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 9.3 before 16.4.4, all versions starting from 16.5 before 16.5.4, all versions starting from 16.6 before 16.6.2. In certain situations, it may have been possible for developers to override predefined CI variables via the REST API.",
   "aliases": [
     "CVE-2023-5061"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:57:46.379Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

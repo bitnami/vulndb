@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-24824",
-  "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can poison the cache for anonymous (i.e. not logged in) users, such that the users are shown the crawler view of the site instead of the HTML page. This can lead to a partial denial-of-service. This issue is patched in the latest stable version of Discourse. There are no known workarounds for this issue.",
+  "summary": "Anonymous user cache poisoning in discourse",
+  "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can poison the cache for anonymous (i.e. not logged in) users, such that the users are shown the crawler view of the site instead of the HTML page. This can lead to a partial denial-of-service. This issue is patched in the latest stable, beta and tests-passed versions of Discourse. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-24824"
   ],
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:06:25.697Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

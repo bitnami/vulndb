@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-27919",
+  "summary": "HTTP/2: memory exhaustion due to CONTINUATION frame flood",
   "details": "Envoy is a cloud-native, open-source edge and service proxy. In versions 1.29.0 and 1.29.1, theEnvoy HTTP/2 protocol stack is vulnerable to the flood of CONTINUATION frames. Envoy's HTTP/2 codec does not reset a request when header map limits have been exceeded. This allows an attacker to send an sequence of CONTINUATION frames without the END_HEADERS bit set causing unlimited memory consumption. This can lead to denial of service through memory exhaustion. Users should upgrade to versions 1.29.2 to mitigate the effects of the CONTINUATION flood. Note that this vulnerability is a regression in Envoy version 1.29.0 and 1.29.1 only. As a workaround, downgrade to version 1.28.1 or earlier or disable HTTP/2 protocol for downstream connections.",
   "aliases": [
     "CVE-2024-27919"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-04-06T18:18:06.284Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

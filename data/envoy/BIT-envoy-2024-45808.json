@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-45808",
+  "summary": "Malicious log injection via access logs in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. A vulnerability has been identified in Envoy that allows malicious attackers to inject unexpected content into access logs. This is achieved by exploiting the lack of validation for the `REQUESTED_SERVER_NAME` field for access loggers. This issue has been addressed in versions 1.31.2, 1.30.6, 1.29.9, and 1.28.7. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-45808"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-09-21T07:10:31.256Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

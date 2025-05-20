@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-23567",
+  "summary": "Integer overflows in Tensorflow",
   "details": "Tensorflow is an Open Source Machine Learning Framework. The implementations of `Sparse*Cwise*` ops are vulnerable to integer overflows. These can be used to trigger large allocations (so, OOM based denial of service) or `CHECK`-fails when building new `TensorShape` objects (so, assert failures based denial of service). We are missing some validation on the shapes of the input tensors as well as directly constructing a large `TensorShape` with user-provided dimensions. The fix will be included in TensorFlow 2.8.0. We will also cherrypick this commit on TensorFlow 2.7.1, TensorFlow 2.6.3, and TensorFlow 2.5.3, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-23567"
@@ -79,5 +80,5 @@
     }
   ],
   "published": "2024-03-06T11:15:18.959Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

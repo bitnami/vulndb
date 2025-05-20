@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-43982",
+  "summary": "Apache Airflow prior to 2.4.2 allows reflected XSS via Origin Query Argument in URL",
   "details": "In Apache Airflow versions prior to 2.4.2, the \"Trigger DAG with config\" screen was susceptible to XSS attacks via the `origin` query argument.",
   "aliases": [
     "CVE-2022-43982"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:56:21.690Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

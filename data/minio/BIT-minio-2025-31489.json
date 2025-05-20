@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-minio-2025-31489",
+  "summary": "MinIO performs incomplete signature validation for unsigned-trailer uploads",
   "details": "MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. The signature component of the authorization may be invalid, which would mean that as a client you can use any arbitrary secret to upload objects given the user already has prior WRITE permissions on the bucket. Prior knowledge of access-key, and bucket name this user might have access\nto - and an access-key with a WRITE permissions is necessary. However with relevant information in place, uploading random objects to buckets is trivial and easy via curl. This issue is fixed in RELEASE.2025-04-03T14-56-28Z.",
   "aliases": [
     "CVE-2025-31489"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-14T11:14:54.951Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

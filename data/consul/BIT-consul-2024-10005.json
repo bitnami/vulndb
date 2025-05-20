@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-consul-2024-10005",
+  "summary": "Consul L7 Intentions Vulnerable To URL Path Bypass",
   "details": "A vulnerability was identified in Consul and Consul Enterprise (“Consul”) such that using URL paths in L7 traffic intentions could bypass HTTP request path-based access rules.",
   "aliases": [
     "CVE-2024-10005"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-11-01T07:08:02.109Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

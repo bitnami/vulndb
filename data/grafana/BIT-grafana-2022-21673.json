@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2022-21673",
+  "summary": "OAuth Identity Token exposure in Grafana",
   "details": "Grafana is an open-source platform for monitoring and observability. In affected versions when a data source has the Forward OAuth Identity feature enabled, sending a query to that datasource with an API token (and no other user credentials) will forward the OAuth Identity of the most recently logged-in user. This can allow API token holders to retrieve data for which they may not have intended access. This attack relies on the Grafana instance having data sources that support the Forward OAuth Identity feature, the Grafana instance having a data source with the Forward OAuth Identity feature toggled on, the Grafana instance having OAuth enabled, and the Grafana instance having usable API keys. This issue has been patched in versions 7.5.13 and 8.3.4.",
   "aliases": [
     "CVE-2022-21673"
@@ -80,5 +81,5 @@
     }
   ],
   "published": "2024-03-06T10:58:36.383Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

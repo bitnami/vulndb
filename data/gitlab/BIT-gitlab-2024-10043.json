@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-10043",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 14.3 before 17.4.6, all versions starting from 17.5 before 17.5.4 all versions starting from 17.6 before 17.6.2, that allows group users to view confidential incident title through the Wiki History Diff feature, potentially leading to information disclosure.",
   "aliases": [
     "CVE-2024-10043"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-12-16T07:24:22.581Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

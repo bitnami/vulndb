@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5549",
+  "summary": "Moodle: insufficient capability checks when updating the parent of a course category",
   "details": "Insufficient web service capability checks made it possible to move categories a user had permission to manage, to a parent category they did not have the capability to manage.",
   "aliases": [
     "CVE-2023-5549"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T10:57:00.585Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

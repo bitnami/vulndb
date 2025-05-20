@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2022-31043",
+  "summary": "Fix failure to strip Authorization header on HTTP downgrade in Guzzle",
   "details": "Guzzle is an open source PHP HTTP client. In affected versions `Authorization` headers on requests are sensitive information. On making a request using the `https` scheme to a server which responds with a redirect to a URI with the `http` scheme, we should not forward the `Authorization` header on. This is much the same as to how we don't forward on the header if the host changes. Prior to this fix, `https` to `http` downgrades did not result in the `Authorization` header being removed, only changes to the host. Affected Guzzle 7 users should upgrade to Guzzle 7.4.4 as soon as possible. Affected users using any earlier series of Guzzle should upgrade to Guzzle 6.5.7 or 7.4.4. Users unable to upgrade may consider an alternative approach which would be to use their own redirect middleware. Alternately users may simply disable redirects all together if redirects are not expected or required.",
   "aliases": [
     "CVE-2022-31043"
@@ -75,5 +76,5 @@
     }
   ],
   "published": "2024-03-06T10:52:03.100Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

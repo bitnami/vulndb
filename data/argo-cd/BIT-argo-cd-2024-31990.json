@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-argo-cd-2024-31990",
+  "summary": "Argo CD' API server does not enforce project sourceNamespaces",
   "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. The API server does not enforce project sourceNamespaces which allows attackers to use the UI to edit resources which should only be mutable via gitops. This vulenrability is fixed in 2.10.7, 2.9.12, and 2.8.16.",
   "aliases": [
     "CVE-2024-31990"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-04-17T07:16:36.280Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

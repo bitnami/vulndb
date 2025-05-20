@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3964",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 13.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for users to access composer packages on public projects that have package registry disabled in the project settings.",
   "aliases": [
     "CVE-2023-3964"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:01:24.492Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

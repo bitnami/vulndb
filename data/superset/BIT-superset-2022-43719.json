@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2022-43719",
+  "summary": "Apache Superset: Cross Site Request Forgery (CSRF) on accept, request access API",
   "details": "Two legacy REST API endpoints for approval and request access are vulnerable to cross site request forgery. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
   "aliases": [
     "CVE-2022-43719"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-02-05T07:29:05.011Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

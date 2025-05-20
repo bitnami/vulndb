@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2023-34981",
+  "summary": "Apache Tomcat: AJP response header mix-up",
   "details": "A regression in the fix for bug 66512 in Apache Tomcat 11.0.0-M5, 10.1.8, 9.0.74 and 8.5.88 meant that, if a response did not include any HTTP headers no AJP SEND_HEADERS messare woudl be sent for the response which in turn meant that at least one AJP proxy (mod_proxy_ajp) would use the response headers from the previous request leading to an information leak.",
   "aliases": [
     "CVE-2023-34981"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:08:35.200Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

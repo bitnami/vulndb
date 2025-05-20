@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-hyperledger-fabric-orderer-2022-31121",
+  "summary": "Improper Input Validation in fabric hyperledger",
   "details": "Hyperledger Fabric is a permissioned distributed ledger framework. In affected versions if a consensus client sends a malformed consensus request to an orderer it may crash the orderer node. A fix has been added in commit 0f1835949 which checks for missing consensus messages and returns an error to the consensus client should the message be missing. Users are advised to upgrade to versions 2.2.7 or v2.4.5. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-31121"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-07-18T19:22:13.551Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

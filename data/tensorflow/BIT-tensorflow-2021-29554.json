@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-29554",
+  "summary": "Division by 0 in `DenseCountSparseOutput`",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. An attacker can cause a denial of service via a FPE runtime error in `tf.raw_ops.DenseCountSparseOutput`. This is because the implementation(https://github.com/tensorflow/tensorflow/blob/efff014f3b2d8ef6141da30c806faf141297eca1/tensorflow/core/kernels/count_ops.cc#L123-L127) computes a divisor value from user data but does not check that the result is 0 before doing the division. Since `data` is given by the `values` argument, `num_batch_elements` is 0. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2, and TensorFlow 2.3.3, as these are also affected.",
   "aliases": [
     "CVE-2021-29554"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:19:17.329Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

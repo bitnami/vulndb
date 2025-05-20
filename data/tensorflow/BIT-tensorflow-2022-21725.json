@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-21725",
+  "summary": "Division by zero in Tensorflow",
   "details": "Tensorflow is an Open Source Machine Learning Framework. The estimator for the cost of some convolution operations can be made to execute a division by 0. The function fails to check that the stride argument is strictly positive. Hence, the fix is to add a check for the stride argument to ensure it is valid. The fix will be included in TensorFlow 2.8.0. We will also cherrypick this commit on TensorFlow 2.7.1, TensorFlow 2.6.3, and TensorFlow 2.5.3, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-21725"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-03-06T11:15:53.711Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

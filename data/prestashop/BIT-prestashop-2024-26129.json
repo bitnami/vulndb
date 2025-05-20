@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2024-26129",
+  "summary": "Prestashop vulnerable to path disclosure in JavaScript variable",
   "details": "PrestaShop is an open-source e-commerce platform. Starting in version 8.1.0 and prior to version 8.1.4, PrestaShop is vulnerable to path disclosure in a JavaScript variable. A patch is available in version 8.1.4.",
   "aliases": [
     "CVE-2024-26129"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-31T18:26:56.335Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

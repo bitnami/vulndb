@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-29404",
+  "summary": "Denial of service in mod_lua r:parsebody",
   "details": "In Apache HTTP Server 2.4.53 and earlier, a malicious request to a lua script that calls r:parsebody(0) may cause a denial of service due to no default limit on possible input size.",
   "aliases": [
     "CVE-2022-29404"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:52:28.171Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

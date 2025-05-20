@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nats-2023-46129",
+  "summary": "xkeys Seal encryption used fixed key for all encryption",
   "details": "NATS.io is a high performance open source pub-sub distributed communication technology, built for the cloud, on-premise, IoT, and edge computing. The cryptographic key handling library, nkeys, recently gained support for encryption, not just for signing/authentication. This is used in nats-server 2.10 (Sep 2023) and newer for authentication callouts. In nkeys versions 0.4.0 through 0.4.5, corresponding with NATS server versions 2.10.0 through 2.10.3, the nkeys library's `xkeys` encryption handling logic mistakenly passed an array by value into an internal function, where the function mutated that buffer to populate the encryption key to use. As a result, all encryption was actually to an all-zeros key. This affects encryption only, not signing.  \nFIXME: FILL IN IMPACT ON NATS-SERVER AUTH CALLOUT SECURITY. nkeys Go library 0.4.6, corresponding with NATS Server 2.10.4, has a patch for this issue. No known workarounds are available. For any application handling auth callouts in Go, if using the nkeys library, update the dependency, recompile and deploy that in lockstep.",
   "aliases": [
     "CVE-2023-46129"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:58:03.564Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

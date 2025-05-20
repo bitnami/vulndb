@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6489",
+  "summary": "Inefficient Regular Expression Complexity in GitLab",
   "details": "A denial of service vulnerability was identified in GitLab CE/EE, versions 16.7.7 prior to 16.8.6, 16.9 prior to 16.9.4 and 16.10 prior to 16.10.2 which allows an attacker to spike the GitLab instance resources usage resulting in service degradation via chat integration feature.",
   "aliases": [
     "CVE-2023-6489"
@@ -69,5 +70,5 @@
     }
   ],
   "published": "2024-04-16T07:23:13.267Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

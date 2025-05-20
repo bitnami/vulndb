@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-rails-2024-32464",
-  "details": "Action Text brings rich text content and editing to Rails. Instances of ActionText::Attachable::ContentAttachment included within a rich_text_area tag could potentially contain unsanitized HTML. This vulnerability is fixed in 7.1.3.4.",
+  "summary": "ActionText ContentAttachment can Contain Unsanitized HTML",
+  "details": "Action Text brings rich text content and editing to Rails. Instances of ActionText::Attachable::ContentAttachment included within a rich_text_area tag could potentially contain unsanitized HTML. This vulnerability is fixed in 7.1.3.4 and 7.2.0.beta2.",
   "aliases": [
     "CVE-2024-32464"
   ],
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-12-20T09:49:50.531Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

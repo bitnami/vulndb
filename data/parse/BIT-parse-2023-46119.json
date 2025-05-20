@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2023-46119",
+  "summary": "Parse Server may crash when uploading file without extension",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Parse Server crashes when uploading a file without extension. This vulnerability has been patched in versions 5.5.6 and 6.3.1.",
   "aliases": [
     "CVE-2023-46119"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:00:17.478Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

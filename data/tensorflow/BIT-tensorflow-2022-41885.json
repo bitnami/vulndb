@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-41885",
+  "summary": "Overflow in `FusedResizeAndPadConv2D` in Tensorflow",
   "details": "TensorFlow is an open source platform for machine learning. When `tf.raw_ops.FusedResizeAndPadConv2D` is given a large tensor shape, it overflows. We have patched the issue in GitHub commit d66e1d568275e6a2947de97dca7a102a211e01ce. The fix will be included in TensorFlow 2.11. We will also cherrypick this commit on TensorFlow 2.10.1, 2.9.3, and TensorFlow 2.8.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-41885"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:11:28.400Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

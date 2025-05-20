@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-32190",
+  "summary": "Failure to strip relative path components in net/url",
   "details": "JoinPath and URL.JoinPath do not remove ../ path elements appended to a relative path. For example, JoinPath(\"https://go.dev\", \"../go\") returns the URL \"https://go.dev/../go\", despite the JoinPath documentation stating that ../ path elements are removed from the result.",
   "aliases": [
     "CVE-2022-32190"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T10:58:50.479Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

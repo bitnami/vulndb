@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-21030",
+  "summary": "Magento Commerce Stored Cross-site Scripting Could Lead To Arbitrary Javascript Execution",
   "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) are vulnerable to a stored cross-site scripting (XSS) in the customer address upload feature. Successful exploitation could lead to arbitrary JavaScript execution in the victim's browser. Exploitation of this issue requires user interaction.",
   "aliases": [
     "CVE-2021-21030"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:59:40.719Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

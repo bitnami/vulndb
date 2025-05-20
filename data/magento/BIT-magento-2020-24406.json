@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-24406",
+  "summary": "Document root path disclosure on Maintenance page",
   "details": "When in maintenance mode, Magento version 2.4.0 and 2.3.4 (and earlier) are affected by an information disclosure vulnerability that could expose the installation path during build deployments. This information could be helpful to attackers if they are able to identify other exploitable vulnerabilities in the environment.",
   "aliases": [
     "CVE-2020-24406"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:07:30.889Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

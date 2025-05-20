@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2022-45438",
+  "summary": "Apache Superset: Dashboard metadata information leak",
   "details": "When explicitly enabling the feature flag DASHBOARD_CACHE (disabled by default), the system allowed for an unauthenticated user to access dashboard configuration metadata using a REST API Get endpoint. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
   "aliases": [
     "CVE-2022-45438"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-02-05T07:28:48.307Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

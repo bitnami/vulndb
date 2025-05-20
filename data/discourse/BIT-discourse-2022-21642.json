@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-21642",
+  "summary": "Exposure of whisper participants in discourse",
   "details": "Discourse is an open source platform for community discussion. In affected versions when composing a message from topic the composer user suggestions reveals whisper participants. The issue has been patched in stable version 2.7.13 and beta version 2.8.0.beta11. There is no workaround for this issue and users are advised to upgrade.",
   "aliases": [
     "CVE-2022-21642"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:08:17.506Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

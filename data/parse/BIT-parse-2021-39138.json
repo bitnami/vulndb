@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2021-39138",
+  "summary": "New anonymous user session acts as if it's created with password",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Developers can use the REST API to signup users and also allow users to login anonymously. Prior to version 4.5.1, when an anonymous user is first signed up using REST, the server creates session incorrectly. Particularly, the `authProvider` field in `_Session` class under `createdWith` shows the user logged in creating a password. If a developer later depends on the `createdWith` field to provide a different level of access between a password user and anonymous user, the server incorrectly classified the session type as being created with a `password`. The server does not currently use `createdWith` to make decisions about internal functions, so if a developer is not using `createdWith` directly, they are not affected. The vulnerability only affects users who depend on `createdWith` by using it directly. The issue is patched in Parse Server version 4.5.1. As a workaround, do not use the `createdWith` Session field to make decisions if one allows anonymous login.",
   "aliases": [
     "CVE-2021-39138"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:03:49.289Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

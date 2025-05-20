@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2020-11080",
+  "summary": "Denial of service in nghttp2",
   "details": "In nghttp2 before version 1.41.0, the overly large HTTP/2 SETTINGS frame payload causes denial of service. The proof of concept attack involves a malicious client constructing a SETTINGS frame with a length of 14,400 bytes (2400 individual settings entries) over and over again. The attack causes the CPU to spike at 100%. nghttp2 v1.41.0 fixes this vulnerability. There is a workaround to this vulnerability. Implement nghttp2_on_frame_recv_callback callback, and if received frame is SETTINGS frame and the number of settings entries are large (e.g., > 32), then drop the connection.",
   "aliases": [
     "CVE-2020-11080"
@@ -115,5 +116,5 @@
     }
   ],
   "published": "2024-03-06T11:08:52.092Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

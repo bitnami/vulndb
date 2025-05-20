@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apr-2022-28331",
+  "summary": "Apache Portable Runtime (APR):  Windows out-of-bounds write in apr_socket_sendv function",
   "details": "On Windows, Apache Portable Runtime 1.7.0 and earlier may write beyond the end of a stack based buffer in apr_socket_sendv(). This is a result of integer overflow.",
   "aliases": [
     "CVE-2022-28331"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:50:33.685Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

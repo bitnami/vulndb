@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2022-21703",
+  "summary": "Cross Site Request Forgery in Grafana",
   "details": "Grafana is an open-source platform for monitoring and observability. Affected versions are subject to a cross site request forgery vulnerability which allows attackers to elevate their privileges by mounting cross-origin attacks against authenticated high-privilege Grafana users (for example, Editors or Admins). An attacker can exploit this vulnerability for privilege escalation by tricking an authenticated user into inviting the attacker as a new user with high privileges. Users are advised to upgrade as soon as possible. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-21703"
@@ -87,5 +88,5 @@
     }
   ],
   "published": "2024-03-06T10:58:16.171Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

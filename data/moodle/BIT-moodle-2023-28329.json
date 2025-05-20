@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28329",
+  "summary": "Moodle: authenticated sql injection via availability check",
   "details": "Insufficient validation of profile field availability condition resulted in an SQL injection risk (by default only available to teachers and managers).",
   "aliases": [
     "CVE-2023-28329"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T11:00:53.463Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

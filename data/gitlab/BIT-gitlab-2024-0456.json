@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-0456",
+  "summary": "Direct Request ('Forced Browsing') in GitLab",
   "details": "An authorization vulnerability exists in GitLab versions 14.0 prior to 16.6.6, 16.7 prior to 16.7.4, and 16.8 prior to 16.8.1. An unauthorized attacker is able to assign arbitrary users to MRs that they created within the project",
   "aliases": [
     "CVE-2024-0456"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:53:14.072Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

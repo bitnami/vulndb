@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2023-31419",
+  "summary": "Elasticsearch StackOverflow vulnerability",
   "details": "A flaw was discovered in Elasticsearch, affecting the _search API that allowed a specially crafted query string to cause a Stack Overflow and ultimately a Denial of Service.",
   "aliases": [
     "CVE-2023-31419"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:51:47.965Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

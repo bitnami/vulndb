@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2025-1908",
+  "summary": "Business Logic Errors in GitLab",
   "details": "An issue has been discovered in GitLab EE/CE that could allow an attacker to track users' browsing activities, potentially leading to full account take-over, affecting all versions from 16.6 before 17.9.7, 17.10 before 17.10.5, and 17.11 before 17.11.1.",
   "aliases": [
     "CVE-2025-1908"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-04-26T06:31:29.850Z",
-  "modified": "2025-04-26T06:32:46.644Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

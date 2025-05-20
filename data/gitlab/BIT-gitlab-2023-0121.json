@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-0121",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "A denial of service issue was discovered in GitLab CE/EE affecting all versions starting from 13.2.4 before 15.10.8, all versions starting from 15.11 before 15.11.7, all versions starting from 16.0 before 16.0.2 which allows an attacker to cause high resource consumption using malicious test report artifacts.",
   "aliases": [
     "CVE-2023-0121"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:12:36.797Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

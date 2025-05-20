@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mariadb-2023-5157",
+  "summary": "Mariadb: node crashes with transport endpoint is not connected mysqld got signal 6",
   "details": "A vulnerability was found in MariaDB. An OpenVAS port scan on ports 3306 and 4567 allows a malicious remote client to cause a denial of service.",
   "aliases": [
     "CVE-2023-5157"
@@ -108,5 +109,5 @@
     }
   ],
   "published": "2024-03-06T10:55:35.781Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-29804",
+  "summary": "Path traversal via Clean on Windows in path/filepath",
   "details": "Incorrect conversion of certain invalid paths to valid, absolute paths in Clean in path/filepath before Go 1.17.11 and Go 1.18.3 on Windows allows potential directory traversal attack.",
   "aliases": [
     "CVE-2022-29804"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:00:46.305Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

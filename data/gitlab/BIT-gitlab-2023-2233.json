@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-2233",
+  "summary": "Missing Authorization in GitLab",
   "details": "An improper authorization issue has been discovered in GitLab CE/EE affecting all versions starting from 11.8 before 16.2.8, all versions starting from 16.3 before 16.3.5 and all versions starting from 16.4 before 16.4.1. It allows a project reporter to leak the owner's Sentry instance projects.",
   "aliases": [
     "CVE-2023-2233"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:08:14.093Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

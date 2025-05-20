@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-consul-2024-10086",
+  "summary": "Consul Vulnerable To Reflected XSS On Content-Type Error Manipulation",
   "details": "A vulnerability was identified in Consul and Consul Enterprise such that the server response did not explicitly set a Content-Type HTTP header, allowing user-provided inputs to be misinterpreted and lead to reflected XSS.",
   "aliases": [
     "CVE-2024-10086"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-11-01T07:07:47.800Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

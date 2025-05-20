@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-23923",
+  "summary": "Moodle: possible to set the preferred \"start page\" of other users",
   "details": "The vulnerability was found Moodle which exists due to insufficient limitations on the \"start page\" preference. A remote attacker can set that preference for another user. The vulnerability allows a remote attacker to gain unauthorized access to otherwise restricted functionality.",
   "aliases": [
     "CVE-2023-23923"
@@ -77,5 +78,5 @@
     }
   ],
   "published": "2024-03-06T11:01:04.603Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

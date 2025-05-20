@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-3035",
+  "summary": "Authorization Bypass Through User-Controlled Key in GitLab",
   "details": "A permission check vulnerability in GitLab CE/EE affecting all versions starting from 8.12 prior to 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2  allowed for LFS tokens to read and write to the user owned repositories.",
   "aliases": [
     "CVE-2024-3035"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-08-10T07:27:41.389Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

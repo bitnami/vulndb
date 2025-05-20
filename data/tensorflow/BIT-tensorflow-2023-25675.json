@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2023-25675",
+  "summary": "TensorFlow has Segfault in Bincount with XLA",
   "details": "TensorFlow is an open source machine learning platform. When running versions prior to 2.12.0 and 2.11.1 with XLA, `tf.raw_ops.Bincount` segfaults when given a parameter `weights` that is neither the same shape as parameter `arr` nor a length-0 tensor. A fix is included in TensorFlow 2.12.0 and 2.11.1.",
   "aliases": [
     "CVE-2023-25675"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:07:24.993Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

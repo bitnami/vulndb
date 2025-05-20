@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2023-6388",
+  "summary": "Suite CRM v7.14.2 - SSRF",
   "details": "Suite CRM version 7.14.2 allows making arbitrary HTTP requests through\n\nthe vulnerable server. This is possible because the application is vulnerable\n\nto SSRF.",
   "aliases": [
     "CVE-2023-6388"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T11:05:33.593Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

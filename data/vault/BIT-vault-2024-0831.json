@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2024-0831",
+  "summary": "Vault May Expose Sensitive Information When Configuring An Audit Log Device",
   "details": "Vault and Vault Enterprise (“Vault”) may expose sensitive information when enabling an audit device which specifies the `log_raw` option, which may log sensitive information to other audit devices, regardless of whether they are configured to use `log_raw`.",
   "aliases": [
     "CVE-2024-0831"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:07:52.877Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

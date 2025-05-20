@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-39322",
+  "summary": "Memory exhaustion in QUIC connection handling in crypto/tls",
   "details": "QUIC connections do not set an upper bound on the amount of data buffered when reading post-handshake messages, allowing a malicious QUIC connection to cause unbounded memory growth. With fix, connections now consistently reject messages larger than 65KiB in size.",
   "aliases": [
     "CVE-2023-39322"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:53:58.705Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

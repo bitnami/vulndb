@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2020-7066",
+  "summary": "get_headers() silently truncates after a null byte",
   "details": "In PHP versions 7.2.x below 7.2.29, 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using get_headers() with user-supplied URL, if the URL contains zero (\\0) character, the URL will be silently truncated at it. This may cause some software to make incorrect assumptions about the target of the get_headers() and possibly send some information to a wrong server.",
   "aliases": [
     "CVE-2020-7066"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2025-01-14T19:23:37.002Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

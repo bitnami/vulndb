@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-29206",
+  "summary": "Missing validation results in undefined behavior in `SparseTensorDenseAdd` in TensorFlow",
   "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, the implementation of `tf.raw_ops.SparseTensorDenseAdd` does not fully validate the input arguments. In this case, a reference gets bound to a `nullptr` during kernel execution. This is undefined behavior. Versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4 contain a patch for this issue.",
   "aliases": [
     "CVE-2022-29206"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:14:22.639Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

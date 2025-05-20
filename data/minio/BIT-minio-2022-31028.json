@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-minio-2022-31028",
+  "summary": "Possible DDOS by establishing keep-alive connections with anonymous HTTP clients in MinIO",
   "details": "MinIO is a multi-cloud object storage solution. Starting with version RELEASE.2019-09-25T18-25-51Z and ending with version RELEASE.2022-06-02T02-11-04Z, MinIO is vulnerable to an unending go-routine buildup while keeping connections established due to HTTP clients not closing the connections. Public-facing MinIO deployments are most affected. Users should upgrade to RELEASE.2022-06-02T02-11-04Z to receive a patch. One possible workaround is to use a reverse proxy to limit the number of connections being attempted in front of MinIO, and actively rejecting connections from such malicious clients.",
   "aliases": [
     "CVE-2022-31028"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:57:16.966Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

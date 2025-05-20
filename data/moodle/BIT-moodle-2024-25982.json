@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-25982",
+  "summary": "Msa-24-0005: csrf risk in language import utility",
   "details": "The link to update all installed language packs did not include the necessary token to prevent a CSRF risk.",
   "aliases": [
     "CVE-2024-25982"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-31T18:22:12.259Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

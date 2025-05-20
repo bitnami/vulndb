@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-23794",
+  "summary": "[20220302] - Core - Path Disclosure within filesystem error messages",
   "details": "An issue was discovered in Joomla! 3.0.0 through 3.10.6 & 4.0.0 through 4.1.0. Uploading a file name of an excess length causes the error. This error brings up the screen with the path of the source code of the web application.",
   "aliases": [
     "CVE-2022-23794"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-04-03T14:14:18.591Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

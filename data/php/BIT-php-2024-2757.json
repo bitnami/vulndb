@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2024-2757",
+  "summary": "PHP mb_encode_mimeheader runs endlessly for some inputs",
   "details": "In PHP 8.3.* before 8.3.5, function mb_encode_mimeheader() runs endlessly for some inputs that contain long strings of non-space characters followed by a space. This could lead to a potential DoS attack if a hostile user sends data to an application that uses this function.",
   "aliases": [
     "CVE-2024-2757"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-05-14T07:29:20.782Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

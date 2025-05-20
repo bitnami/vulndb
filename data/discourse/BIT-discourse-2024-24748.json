@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-24748",
+  "summary": "Disclosure of the existence of secret subcategories in Discourse",
   "details": "Discourse is an open source platform for community discussion. In affected versions an attacker can learn that a secret subcategory exists under a public category which has no public subcategories. The issue is patched in the latest stable, beta and tests-passed version of Discourse. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-24748"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-04-01T14:04:47.201Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

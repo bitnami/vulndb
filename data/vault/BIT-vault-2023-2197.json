@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-2197",
+  "summary": "Vault Enterprise Vulnerable to Padding Oracle Attacks When Using a CBC-based Encryption Mechanism with a HSM",
   "details": "HashiCorp Vault Enterprise 1.13.0 up to 1.13.1 is vulnerable to a padding oracle attack when using an HSM in conjunction with the CKM_AES_CBC_PAD or CKM_AES_CBC encryption mechanisms. An attacker with privileges to modify storage and restart Vault may be able to intercept or modify cipher text in order to derive Vault’s root key. Fixed in 1.13.2",
   "aliases": [
     "CVE-2023-2197"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:09:21.901Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

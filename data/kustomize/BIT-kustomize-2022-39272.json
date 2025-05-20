@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-kustomize-2022-39272",
+  "summary": "Flux2 vulnerable to Denial of Service due to Improper use of metav1.Duration",
   "details": "Flux is an open and extensible continuous delivery solution for Kubernetes. Versions prior to 0.35.0 are subject to a Denial of Service. Users that have permissions to change Flux’s objects, either through a Flux source or directly within a cluster, can provide invalid data to fields `.spec.interval` or `.spec.timeout` (and structured variations of these fields), causing the entire object type to stop being processed. This issue is patched in version 0.35.0. As a workaround, Admission controllers can be employed to restrict the values that can be used for fields `.spec.interval` and `.spec.timeout`, however upgrading to the latest versions is still the recommended mitigation.",
   "aliases": [
     "CVE-2022-39272"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:55:08.291Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

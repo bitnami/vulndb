@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-32301",
+  "summary": "Discourse's canonical url not being used for topic embeddings",
   "details": "Discourse is an open source discussion platform. Prior to version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches, multiple duplicate topics could be created if topic embedding is enabled. This issue is patched in version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches. As a workaround, disable topic embedding if it has been enabled.",
   "aliases": [
     "CVE-2023-32301"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T10:57:01.167Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

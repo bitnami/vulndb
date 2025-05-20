@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2025-4207",
+  "summary": "PostgreSQL GB18030 encoding validation can read one byte past end of allocation for text that fails validation",
   "details": "Buffer over-read in PostgreSQL GB18030 encoding validation allows a database input provider to achieve temporary denial of service on platforms where a 1-byte over-read can elicit process termination.  This affects the database server and also libpq.  Versions before PostgreSQL 17.5, 16.9, 15.13, 14.18, and 13.21 are affected.",
   "aliases": [
     "CVE-2025-4207"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2025-05-10T08:51:38.412Z",
-  "modified": "2025-05-10T09:10:12.512Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

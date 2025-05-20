@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-0194",
+  "summary": "Insertion of Sensitive Information into Externally-Accessible File or Directory in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 17.4 prior to 17.5.5, starting from 17.6 prior to 17.6.3, and starting from 17.7 prior to 17.7.1. Under certain conditions, access tokens may have been logged when API requests were made in a specific manner.",
   "aliases": [
     "CVE-2025-0194"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-01-10T19:11:23.175Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-0290",
+  "summary": "Loop with Unreachable Exit Condition ('Infinite Loop') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.0 prior to 17.5.5, from 17.6 prior to 17.6.3, and from 17.7 prior to 17.7.1. Under certain conditions, processing of CI artifacts metadata could cause background jobs to become unresponsive.",
   "aliases": [
     "CVE-2025-0290"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2025-01-30T19:13:11.925Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

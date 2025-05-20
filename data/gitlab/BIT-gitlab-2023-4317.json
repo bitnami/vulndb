@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-4317",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 9.2 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for a user with the Developer role to update a pipeline schedule from an unprotected branch to a protected branch.",
   "aliases": [
     "CVE-2023-4317"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:00:01.391Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

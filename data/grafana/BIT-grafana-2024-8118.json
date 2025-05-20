@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2024-8118",
+  "summary": "Grafana alerting wrong permission on datasource rule write endpoint",
   "details": "In Grafana, the wrong permission is applied to the alert rule write API endpoint, allowing users with permission to write external alert instances to also write alert rules.",
   "aliases": [
     "CVE-2024-8118"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-04-14T11:12:21.847Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

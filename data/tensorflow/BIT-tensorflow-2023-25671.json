@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2023-25671",
+  "summary": "TensorFlow has segmentation fault in tfg-translate ",
   "details": "TensorFlow is an open source platform for machine learning. There is out-of-bounds access due to mismatched integer type sizes. A fix is included in TensorFlow version 2.12.0 and version 2.11.1.",
   "aliases": [
     "CVE-2023-25671"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:08:02.488Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

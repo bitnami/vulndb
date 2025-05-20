@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-37436",
+  "summary": "Apache HTTP Server: mod_proxy prior to 2.4.55 allows a backend to trigger HTTP response splitting",
   "details": "Prior to Apache HTTP Server 2.4.55, a malicious backend can cause the response headers to be truncated early, resulting in some headers being incorporated into the response body. If the later headers have any security purpose, they will not be interpreted by the client.",
   "aliases": [
     "CVE-2022-37436"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:51:28.975Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2023-23936",
+  "summary": "CRLF Injection in Nodejs ‘undici’ via host",
   "details": "Undici is an HTTP/1.1 client for Node.js. Starting with version 2.0.0 and prior to version 5.19.1, the undici library does not protect `host` HTTP header from CRLF injection vulnerabilities. This issue is patched in Undici v5.19.1. As a workaround, sanitize the `headers.host` string before passing to undici.",
   "aliases": [
     "CVE-2023-23936"
@@ -75,5 +76,5 @@
     }
   ],
   "published": "2024-03-06T11:01:51.693Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

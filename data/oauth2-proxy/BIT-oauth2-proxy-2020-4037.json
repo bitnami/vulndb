@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-oauth2-proxy-2020-4037",
+  "summary": "Open Redirect in OAuth2 Proxy",
   "details": "In OAuth2 Proxy from version 5.1.1 and less than version 6.0.0, users can provide a redirect address for the proxy to send the authenticated user to at the end of the authentication flow. This is expected to be the original URL that the user was trying to access. This redirect URL is checked within the proxy and validated before redirecting the user to prevent malicious actors providing redirects to potentially harmful sites. This has been fixed in version 6.0.0.",
   "aliases": [
     "CVE-2020-4037"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:59:39.101Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

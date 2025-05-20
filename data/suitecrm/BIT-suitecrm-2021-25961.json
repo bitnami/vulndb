@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2021-25961",
+  "summary": "SuiteCRM - Account Takeover in Password Reset Functionality",
   "details": "In “SuiteCRM” application, v7.1.7 through v7.10.31 and v7.11-beta through v7.11.20 fail to properly invalidate password reset links that is associated with a deleted user id, which makes it possible for account takeover of any newly created user with the same user id.",
   "aliases": [
     "CVE-2021-25961"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T11:10:16.274Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

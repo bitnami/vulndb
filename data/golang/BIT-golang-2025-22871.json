@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2025-22871",
+  "summary": "Request smuggling due to acceptance of invalid chunked data in net/http",
   "details": "The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext.",
   "aliases": [
     "CVE-2025-22871"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-04-10T07:19:26.353Z",
-  "modified": "2025-04-19T07:44:40.595Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2024-37903",
+  "summary": "Mastodon has improper authorship check on audience extension for existing posts",
   "details": "Mastodon is a self-hosted, federated microblogging platform. Starting in version 2.6.0 and prior to versions 4.1.18 and 4.2.10, by crafting specific activities, an attacker can extend the audience of a post they do not own to other Mastodon users on a target server, thus gaining access to the contents of a post not intended for them. Versions 4.1.18 and 4.2.10 contain a patch for this issue.",
   "aliases": [
     "CVE-2024-37903"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-07-09T07:24:52.373Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

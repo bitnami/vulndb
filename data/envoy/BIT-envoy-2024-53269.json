@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-53269",
+  "summary": "Happy Eyeballs: Validate that additional_address are IP addresses instead of crashing when sorting in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. When additional address are not ip addresses, then the Happy Eyeballs sorting algorithm will crash in data plane. This issue has been addressed in releases 1.32.2, 1.31.4, and 1.30.8. Users are advised to upgrade. Users unable to upgrade may disable Happy Eyeballs and/or change the IP configuration.",
   "aliases": [
     "CVE-2024-53269"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-12-20T07:08:41.110Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

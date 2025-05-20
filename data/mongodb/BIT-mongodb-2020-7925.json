@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2020-7925",
+  "summary": "Denial of Service when processing malformed Role names",
   "details": "Incorrect validation of user input in the role name parser may lead to use of uninitialized memory allowing an unauthenticated attacker to use a specially crafted request to cause a denial of service. This issue affects MongoDB Server v4.4 versions prior to 4.4.0-rc12; MongoDB Server v4.2 versions prior to 4.2.9.",
   "aliases": [
     "CVE-2020-7925"
@@ -61,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T10:58:54.976Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

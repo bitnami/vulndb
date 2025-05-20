@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-22455",
-  "details": "Discourse is an option source discussion platform. Prior to version 2.8.14 on the `stable` branch, tag descriptions, which can be updated by moderators, can be used for cross-site scripting attacks. This vulnerability can lead to a full XSS on sites which have modified or disabled Discourse’s default Content Security Policy. Version 2.8.14 contain a patch.",
+  "summary": "Discourse vulnerable to Cross-site Scripting through tag descriptions",
+  "details": "Discourse is an option source discussion platform. Prior to version 2.8.14 on the `stable` branch and version 3.0.0.beta16 on the `beta` and `tests-passed` branches, tag descriptions, which can be updated by moderators, can be used for cross-site scripting attacks. This vulnerability can lead to a full XSS on sites which have modified or disabled Discourse’s default Content Security Policy. Versions 2.8.14 and 3.0.0.beta16 contain a patch.",
   "aliases": [
     "CVE-2023-22455"
   ],
@@ -261,5 +262,5 @@
     }
   ],
   "published": "2024-03-06T11:01:41.384Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

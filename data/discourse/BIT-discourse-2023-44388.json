@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-44388",
+  "summary": "Malicious requests can fill up the log files resulting in a deinal of service in Discourse",
   "details": "Discourse is an open source platform for community discussion. A malicious request can cause production log files to quickly fill up and thus result in the server running out of disk space. This problem has been patched in the 3.1.1 stable and 3.2.0.beta2 versions of Discourse. It is possible to temporarily work around this problem by reducing the `client_max_body_size nginx directive`. `client_max_body_size` will limit the size of uploads that can be uploaded directly to the server.",
   "aliases": [
     "CVE-2023-44388"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T10:53:42.285Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

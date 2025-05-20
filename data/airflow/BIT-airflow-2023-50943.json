@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-50943",
+  "summary": "Apache Airflow: Potential pickle deserialization vulnerability in XComs",
   "details": "Apache Airflow, versions before 2.8.1, have a vulnerability that allows a potential attacker to poison the XCom data by bypassing the protection of \"enable_xcom_pickling=False\" configuration setting resulting in poisoned data after XCom deserialization. This vulnerability is considered low since it requires a DAG author to exploit it. Users are recommended to upgrade to version 2.8.1 or later, which fixes this issue.",
   "aliases": [
     "CVE-2023-50943"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:50:50.999Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

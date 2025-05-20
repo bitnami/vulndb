@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2021-25122",
+  "summary": "Apache Tomcat h2c request mix-up",
   "details": "When responding to new h2c connection requests, Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 could duplicate request headers and a limited amount of request body from one request to another meaning user A and user B could both see the results of user A's request.",
   "aliases": [
     "CVE-2021-25122"
@@ -350,5 +351,5 @@
     }
   ],
   "published": "2024-03-06T11:10:22.561Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2024-47183",
+  "summary": "Parse Server's custom object ID allows to acquire role privileges",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. If the Parse Server option allowCustomObjectId: true is set, an attacker that is allowed to create a new user can set a custom object ID for that new user that exploits the vulnerability and acquires privileges of a specific role. This vulnerability is fixed in 6.5.9 and 7.3.0.",
   "aliases": [
     "CVE-2024-47183"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-10-08T07:14:06.158Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

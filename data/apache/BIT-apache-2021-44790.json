@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2021-44790",
+  "summary": "Possible buffer overflow when parsing multipart content in mod_lua of Apache HTTP Server 2.4.51 and earlier",
   "details": "A carefully crafted request body can cause a buffer overflow in the mod_lua multipart parser (r:parsebody() called from Lua scripts). The Apache httpd team is not aware of an exploit for the vulnerabilty though it might be possible to craft one. This issue affects Apache HTTP Server 2.4.51 and earlier.",
   "aliases": [
     "CVE-2021-44790"
@@ -126,5 +127,5 @@
     }
   ],
   "published": "2024-03-06T10:54:08.593Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

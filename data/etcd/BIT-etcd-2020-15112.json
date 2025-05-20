@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-etcd-2020-15112",
+  "summary": "Improper Input Validation in etcd",
   "details": "In etcd before versions 3.3.23 and 3.4.10, it is possible to have an entry index greater then the number of entries in the ReadAll method in wal/wal.go. This could cause issues when WAL entries are being read during consensus as an arbitrary etcd consensus participant could go down from a runtime panic when reading the entry.",
   "aliases": [
     "CVE-2020-15112"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:52:31.679Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

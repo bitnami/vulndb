@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43434",
+  "summary": "Moodle: csrf risk in feedback non-respondents report",
   "details": "The bulk message sending feature in Moodle's Feedback module's non-respondents report had an incorrect CSRF token check, leading to a CSRF vulnerability.",
   "aliases": [
     "CVE-2024-43434"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:55.145Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

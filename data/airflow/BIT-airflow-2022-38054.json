@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-38054",
+  "summary": "Session Fixation",
   "details": "In Apache Airflow versions 2.2.4 through 2.3.3, the `database` webserver session backend was susceptible to session fixation.",
   "aliases": [
     "CVE-2022-38054"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:58:07.690Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

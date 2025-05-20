@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-21016",
+  "summary": "Magento Commerce Unauthorized Data Modification Could Lead to Arbitrary Code Execution",
   "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) are vulnerable to OS command injection via the WebAPI. Successful exploitation could lead to remote code execution by an authenticated attacker. Access to the admin console is required for successful exploitation.",
   "aliases": [
     "CVE-2021-21016"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T11:01:43.913Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

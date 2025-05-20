@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6389",
+  "summary": "Exposure of Sensitive System Information to an Unauthorized Control Sphere in GitLab",
   "details": "An issue was discovered in GitLab-CE/EE affecting all versions starting with 17.0 before 17.1.7, 17.2 before 17.2.5, and 17.3 before 17.3.2. An attacker as a guest user was able to access commit information via the release Atom endpoint, contrary to permissions.",
   "aliases": [
     "CVE-2024-6389"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-09-14T07:09:28.429Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

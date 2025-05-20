@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-32672",
+  "summary": "Apache Superset: SQL parser edge case bypasses data access authorization",
   "details": "An Incorrect authorisation check in SQLLab in Apache Superset versions up to and including 2.1.0. This vulnerability allows an authenticated user to query tables that they do not have proper access to within Superset. The vulnerability can be exploited by leveraging a SQL parsing vulnerability.",
   "aliases": [
     "CVE-2023-32672"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-05T07:28:10.906Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

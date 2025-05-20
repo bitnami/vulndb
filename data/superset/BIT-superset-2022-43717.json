@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2022-43717",
+  "summary": "Apache Superset: Cross-Site Scripting on dashboards",
   "details": "Dashboard rendering does not sufficiently sanitize the content of markdown components leading to possible XSS attack vectors that can be performed by authenticated users with create dashboard permissions. This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
   "aliases": [
     "CVE-2022-43717"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-02-05T07:29:16.011Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

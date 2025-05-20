@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6324",
+  "summary": "Inefficient Algorithmic Complexity in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 15.7 prior to 17.5.5, starting from 17.6 prior to 17.6.3, and starting from 17.7 prior to 17.7.1. It was possible to trigger a DoS by creating cyclic references between epics.",
   "aliases": [
     "CVE-2024-6324"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-01-10T19:17:23.895Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2024-52318",
+  "summary": "Apache Tomcat: Incorrect JSP tag recycling leads to XSS",
   "details": "Incorrect object recycling and reuse vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: 11.0.0, 10.1.31, 9.0.96.\n\nUsers are recommended to upgrade to version 11.0.1, 10.1.32 or 9.0.97, which fixes the issue.",
   "aliases": [
     "CVE-2024-52318"
@@ -78,5 +79,5 @@
     }
   ],
   "published": "2024-11-20T07:19:59.288Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

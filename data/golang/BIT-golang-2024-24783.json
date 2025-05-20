@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-24783",
+  "summary": "Verify panics on certificates with an unknown public key algorithm in crypto/x509",
   "details": "Verifying a certificate chain which contains a certificate with an unknown public key algorithm will cause Certificate.Verify to panic. This affects all crypto/tls clients, and servers that set Config.ClientAuth to VerifyClientCertIfGiven or RequireAndVerifyClientCert. The default behavior is for TLS servers to not verify client certificates.",
   "aliases": [
     "CVE-2024-24783"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-12T08:24:32.786Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

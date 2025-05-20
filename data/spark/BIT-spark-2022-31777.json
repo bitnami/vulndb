@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-spark-2022-31777",
+  "summary": "Apache Spark XSS vulnerability in log viewer UI Javascript",
   "details": "A stored cross-site scripting (XSS) vulnerability in Apache Spark 3.2.1 and earlier, and 3.3.0, allows remote attackers to execute arbitrary JavaScript in the web browser of a user, by including a malicious payload into the logs which would be returned in logs rendered in the UI.",
   "aliases": [
     "CVE-2022-31777"
@@ -61,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T11:05:38.200Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

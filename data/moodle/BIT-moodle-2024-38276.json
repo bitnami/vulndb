@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-38276",
+  "summary": "moodle: CSRF risks due to misuse of confirm_sesskey",
   "details": "Incorrect CSRF token checks resulted in multiple CSRF risks.",
   "aliases": [
     "CVE-2024-38276"
@@ -77,5 +78,5 @@
     }
   ],
   "published": "2024-08-09T07:26:18.452Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

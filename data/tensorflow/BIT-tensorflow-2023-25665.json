@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2023-25665",
+  "summary": "TensorFlow has Null Pointer Error in SparseSparseMaximum",
   "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.12.0 and 2.11.1, when `SparseSparseMaximum` is given invalid sparse tensors as inputs, it can give a null pointer error. A fix is included in TensorFlow version 2.12 and version 2.11.1.",
   "aliases": [
     "CVE-2023-25665"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:08:57.810Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-52589",
+  "summary": "Moderators can view Screened emails even when the “moderators view emails” option is disabled in Discourse",
   "details": "Discourse is an open source platform for community discussion. Moderators can see the Screened emails list in the admin dashboard, and through that can learn the email of a user. This problem is patched in the latest version of Discourse. Users unable to upgrade should remove moderator role from untrusted users.",
   "aliases": [
     "CVE-2024-52589"
@@ -52,5 +53,5 @@
     }
   ],
   "published": "2024-12-23T19:10:30.112Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

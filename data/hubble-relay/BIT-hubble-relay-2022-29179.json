@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-hubble-relay-2022-29179",
+  "summary": "Improper Privilege Management in Cilium",
   "details": "Cilium is open source software for providing and securing network connectivity and loadbalancing between application workloads. Prior to versions 1.9.16, 1.10.11, and 1.11.15, if an attacker is able to perform a container escape of a container running as root on a host where Cilium is installed, the attacker can escalate privileges to cluster admin by using Cilium's Kubernetes service account. The problem has been fixed and the patch is available in versions 1.9.16, 1.10.11, and 1.11.5. There are no known workarounds available.",
   "aliases": [
     "CVE-2022-29179"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-05-24T19:23:58.191Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

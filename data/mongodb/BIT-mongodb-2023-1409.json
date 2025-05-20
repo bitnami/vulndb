@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2023-1409",
+  "summary": "Certificate validation issue in MongoDB Server running on Windows or macOS",
   "details": "If the MongoDB Server running on Windows or macOS is configured to use TLS with a specific set of configuration options that are already known to work securely in other platforms (e.g. Linux), it is possible that client certificate validation may not be in effect, potentially allowing client to establish a TLS connection with the server that supplies any certificate.\n\nThis issue affect all MongoDB Server v6.3 versions, MongoDB Server v5.0 versions v5.0.0 to v5.0.14 and all MongoDB Server v4.4 versions.",
   "aliases": [
     "CVE-2023-1409"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T10:56:41.982Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

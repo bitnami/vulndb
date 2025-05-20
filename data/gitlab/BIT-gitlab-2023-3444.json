@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3444",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.3 before 15.11.10, all versions starting from 16.0 before 16.0.6, all versions starting from 16.1 before 16.1.1, which allows an attacker to merge arbitrary code into protected branches.",
   "aliases": [
     "CVE-2023-3444"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T11:04:34.691Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

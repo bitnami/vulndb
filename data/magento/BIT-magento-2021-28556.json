@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-28556",
+  "summary": "Magento Commerce DOM-based cross-site scripting (XSS) could lead to arbitrary javascript execution",
   "details": "Magento versions 2.4.2 (and earlier), 2.4.1-p1 (and earlier) and 2.3.6-p1 (and earlier) are affected by a DOM-based Cross-Site Scripting vulnerability on mage-messages cookies. Successful exploitation could lead to arbitrary JavaScript execution by an unauthenticated attacker. User interaction is required for successful exploitation.",
   "aliases": [
     "CVE-2021-28556"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-03-06T10:59:08.920Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

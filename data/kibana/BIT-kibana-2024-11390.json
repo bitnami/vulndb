@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-kibana-2024-11390",
+  "summary": "Kibana Unrestricted Upload of File with Dangerous Type Can Lead to XSS",
   "details": "Unrestricted upload of a file with dangerous type in Kibana can lead to arbitrary JavaScript execution in a victim’s browser (XSS) via crafted HTML and JavaScript files.\n\nThe attacker must have access to the Synthetics app AND/OR have access to write to the synthetics indices.",
   "aliases": [
     "CVE-2024-11390"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-05-03T05:44:59.249Z",
-  "modified": "2025-05-03T06:34:12.721Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

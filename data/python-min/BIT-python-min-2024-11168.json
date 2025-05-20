@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-python-min-2024-11168",
+  "summary": "Improper validation of IPv6 and IPvFuture addresses",
   "details": "The urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.",
   "aliases": [
     "CVE-2024-11168"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2025-01-17T15:06:19.714Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

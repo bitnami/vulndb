@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2020-7068",
+  "summary": "Use of freed hash key in the phar_parse_zipfile function",
   "details": "In PHP versions 7.2.x below 7.2.33, 7.3.x below 7.3.21 and 7.4.x below 7.4.9, while processing PHAR files using phar extension, phar_parse_zipfile could be tricked into accessing freed memory, which could lead to a crash or information disclosure.",
   "aliases": [
     "CVE-2020-7068"
@@ -78,5 +79,5 @@
     }
   ],
   "published": "2025-01-14T19:23:24.202Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

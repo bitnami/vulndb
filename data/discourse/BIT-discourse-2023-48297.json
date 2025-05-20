@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-48297",
-  "details": "Discourse is a platform for community discussion. The message serializer uses the full list of expanded chat mentions (@all and @here) which can lead to a very long array of users. This issue was patched in version 3.1.4.",
+  "summary": "Discourse vulnerable to unlimited mentioned users in message serializer",
+  "details": "Discourse is a platform for community discussion. The message serializer uses the full list of expanded chat mentions (@all and @here) which can lead to a very long array of users. This issue was patched in versions 3.1.4 and beta 3.2.0.beta5.",
   "aliases": [
     "CVE-2023-48297"
   ],
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T10:51:42.888Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-5469",
+  "summary": "Uncontrolled Resource Consumption in GitLab",
   "details": "DoS in KAS in GitLab CE/EE affecting all versions from 16.10.0 prior to 16.10.6 and 16.11.0 prior to 16.11.3 allows an attacker to crash KAS via crafted gRPC requests.",
   "aliases": [
     "CVE-2024-5469"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-06-18T07:18:41.229Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

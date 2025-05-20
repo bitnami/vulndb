@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-34363",
+  "summary": "Envoy can crash due to uncaught nlohmann JSON exception",
   "details": "Envoy is a cloud-native, open source edge and service proxy. Due to how Envoy invoked the nlohmann JSON library, the library could throw an uncaught exception from downstream data if incomplete UTF-8 strings were serialized. The uncaught exception would cause Envoy to crash.",
   "aliases": [
     "CVE-2024-34363"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-06-06T07:17:42.957Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

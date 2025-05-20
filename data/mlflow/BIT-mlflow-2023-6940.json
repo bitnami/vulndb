@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2023-6940",
+  "summary": "Command Injection",
   "details": "with only one user interaction(download a malicious config), attackers can gain full command execution on the victim system.",
   "aliases": [
     "CVE-2023-6940"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:56:48.513Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

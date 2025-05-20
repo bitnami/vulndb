@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-4472",
+  "summary": "Insertion of Sensitive Information into Log File in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.5 prior to 17.1.7, starting from 17.2 prior to 17.2.5, and starting from 17.3 prior to 17.3.2, where dependency proxy credentials are retained in graphql Logs.",
   "aliases": [
     "CVE-2024-4472"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-09-14T07:13:58.424Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

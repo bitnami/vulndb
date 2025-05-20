@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2024-23952",
+  "summary": "Apache Superset: Allows for uncontrolled resource consumption via a ZIP bomb (version range fix for CVE-2023-46104)",
   "details": "This is a duplicate for CVE-2023-46104. With correct CVE version ranges for affected Apache Superset.\n \nUncontrolled resource consumption can be triggered by authenticated attacker that uploads a malicious ZIP to import database, dashboards or datasets.  \nThis vulnerability exists in Apache Superset versions up to and including 2.1.2 and versions 3.0.0, 3.0.1.",
   "aliases": [
     "CVE-2024-23952"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2025-02-05T07:26:25.704Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

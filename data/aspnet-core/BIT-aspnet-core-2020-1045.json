@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-aspnet-core-2020-1045",
+  "summary": "Microsoft ASP.NET Core Security Feature Bypass Vulnerability",
   "details": "<p>A security feature bypass vulnerability exists in the way Microsoft ASP.NET Core parses encoded cookie names.</p>\n<p>The ASP.NET Core cookie parser decodes entire cookie strings which could allow a malicious attacker to set a second cookie with the name being percent encoded.</p>\n<p>The security update addresses the vulnerability by fixing the way the ASP.NET Core cookie parser handles encoded names.</p>",
   "aliases": [
     "CVE-2020-1045"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:54:08.693Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

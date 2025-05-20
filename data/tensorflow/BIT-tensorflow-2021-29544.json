@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-29544",
+  "summary": "CHECK-fail in `QuantizeAndDequantizeV4Grad`",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. An attacker can trigger a denial of service via a `CHECK`-fail in `tf.raw_ops.QuantizeAndDequantizeV4Grad`. This is because the implementation does not validate the rank of the `input_*` tensors. In turn, this results in the tensors being passes as they are to `QuantizeAndDequantizePerChannelGradientImpl`. However, the `vec<T>` method, requires the rank to 1 and triggers a `CHECK` failure otherwise. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2 as this is the only other affected version.",
   "aliases": [
     "CVE-2021-29544"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T11:19:29.901Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

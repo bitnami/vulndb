@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-discourse-2025-32376",
+  "summary": "Discourse DM limits aren’t always properly enforced",
   "details": "Discourse is an open-source discussion platform. Prior to versions 3.4.3 on the stable branch and 3.5.0.beta3 on the beta branch, the users limit for a DM can be bypassed, thus giving the ability to potentially create a DM with every user from a site in it. This issue has been patched in stable version 3.4.3 and beta version 3.5.0.beta3.",
   "aliases": [
     "CVE-2025-32376"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-05-02T11:13:20.595Z",
-  "modified": "2025-05-02T11:37:36.188Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

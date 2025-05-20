@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2022-31628",
+  "summary": "phar wrapper can occur dos when using quine gzip file",
   "details": "In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the phar uncompressor code would recursively uncompress \"quines\" gzip files, resulting in an infinite loop.",
   "aliases": [
     "CVE-2022-31628"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2025-01-14T19:21:43.316Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

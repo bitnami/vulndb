@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2025-27399",
+  "summary": "Mastodon's domain blocks & rationales ignore user approval when visibility set as \"users\"",
   "details": "Mastodon is a self-hosted, federated microblogging platform. In versions prior to 4.1.23, 4.2.16, and 4.3.4, when the visibility for domain blocks/reasons is set to \"users\" (localized English string: \"To logged-in users\"), users that are not yet approved can view the block reasons. Instance admins that do not want their domain blocks to be public are impacted. Versions 4.1.23, 4.2.16, and 4.3.4 fix the issue.",
   "aliases": [
     "CVE-2025-27399"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2025-03-02T07:13:02.508Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

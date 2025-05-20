@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2024-8973",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 17.1 prior to 17.9.8, from 17.10 prior to 17.10.6, and from 17.11 prior to 17.11.2. It was possible to cause a DoS condition via GitHub import requests using a malicious crafted payload.",
   "aliases": [
     "CVE-2024-8973"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-05-13T06:11:22.852Z",
-  "modified": "2025-05-13T06:13:07.908Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

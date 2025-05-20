@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2020-35616",
+  "summary": "[20201107] - Core - Write ACL violation in multiple core views",
   "details": "An issue was discovered in Joomla! 1.7.0 through 3.9.22. Lack of input validation while handling ACL rulesets can cause write ACL violations.",
   "aliases": [
     "CVE-2020-35616"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:11:28.887Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

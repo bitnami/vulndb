@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43437",
+  "summary": "Moodle: xss risk when restoring malicious course backup file",
   "details": "A flaw was found in moodle. Insufficient sanitizing of data when performing a restore could result in a cross-site scripting (XSS) risk from malicious backup files.",
   "aliases": [
     "CVE-2024-43437"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-04-24T07:29:05.528Z",
-  "modified": "2025-04-24T07:42:29.577Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

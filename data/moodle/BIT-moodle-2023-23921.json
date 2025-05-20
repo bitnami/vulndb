@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-23921",
+  "summary": "Moodle: reflected xss risk in some returnurl parameters",
   "details": "The vulnerability was found Moodle which exists due to insufficient sanitization of user-supplied data in some returnurl parameters. A remote attacker can trick the victim to follow a specially crafted link and execute arbitrary HTML and script code in user's browser in context of vulnerable website. This flaw allows a remote attacker to perform cross-site scripting (XSS) attacks.",
   "aliases": [
     "CVE-2023-23921"
@@ -77,5 +78,5 @@
     }
   ],
   "published": "2024-03-06T11:01:25.162Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

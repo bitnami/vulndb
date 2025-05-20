@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2022-24736",
+  "summary": "A Malformed Lua script can crash Redis",
   "details": "Redis is an in-memory database that persists on disk. Prior to versions 6.2.7 and 7.0.0, an attacker attempting to load a specially crafted Lua script can cause NULL pointer dereference which will result with a crash of the redis-server process. The problem is fixed in Redis versions 7.0.0 and 6.2.7. An additional workaround to mitigate this problem without patching the redis-server executable, if Lua scripting is not being used, is to block access to `SCRIPT LOAD` and `EVAL` commands using ACL rules.",
   "aliases": [
     "CVE-2022-24736"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-08-22T19:27:22.053Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

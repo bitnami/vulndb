@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2024-12244",
+  "summary": "Missing Authorization in GitLab",
   "details": "An issue has been discovered in access controls could allow users to view certain restricted project information even when related features are disabled in GitLab EE, affecting all versions from 17.7 prior to 17.9.7, 17.10 prior to 17.10.5, and 17.11 prior to 17.11.1.",
   "aliases": [
     "CVE-2024-12244"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-04-26T06:28:03.620Z",
-  "modified": "2025-04-26T06:32:46.644Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

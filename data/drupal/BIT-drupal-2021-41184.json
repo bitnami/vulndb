@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2021-41184",
+  "summary": "XSS in the `of` option of the `.position()` util",
   "details": "jQuery-UI is the official jQuery user interface library. Prior to version 1.13.0, accepting the value of the `of` option of the `.position()` util from untrusted sources may execute untrusted code. The issue is fixed in jQuery UI 1.13.0. Any string value passed to the `of` option is now treated as a CSS selector. A workaround is to not accept the value of the `of` option from untrusted sources.",
   "aliases": [
     "CVE-2021-41184"
@@ -114,5 +115,5 @@
     }
   ],
   "published": "2024-03-06T10:54:31.396Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

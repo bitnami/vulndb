@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-kibana-2025-25015",
+  "summary": "Kibana arbitrary code execution via prototype pollution",
   "details": "Prototype pollution in Kibana leads to arbitrary code execution via a crafted file upload and specifically crafted HTTP requests.\nIn Kibana versions >= 8.15.0 and < 8.17.1, this is exploitable by users with the Viewer role. In Kibana versions 8.17.1 and 8.17.2 , this is only exploitable by users that have roles that contain all the following privileges: fleet-all, integrations-all, actions:execute-advanced-connectors",
   "aliases": [
     "CVE-2025-25015"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-07T20:56:34.668Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

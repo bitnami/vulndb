@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2024-9264",
+  "summary": "Grafana SQL Expressions allow for remote code execution",
   "details": "The SQL Expressions experimental feature of Grafana allows for the evaluation of `duckdb` queries containing user input. These queries are insufficiently sanitized before being passed to `duckdb`, leading to a command injection and local file inclusion vulnerability. Any user with the VIEWER or higher permission is capable of executing this attack.  The `duckdb` binary must be present in Grafana's $PATH for this attack to function; by default, this binary is not installed in Grafana distributions.",
   "aliases": [
     "CVE-2024-9264"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-10-22T07:09:52.003Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

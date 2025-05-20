@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2024-8365",
+  "summary": "Vault Leaks AppRole Client Tokens And Accessor in Audit Log",
   "details": "Vault Community Edition and Vault Enterprise experienced a regression where functionality that HMAC’d sensitive headers in the configured audit device, specifically client tokens and token accessors, was removed. This resulted in the plaintext values of client tokens and token accessors being stored in the audit log. This vulnerability, CVE-2024-8365, was fixed in Vault Community Edition and Vault Enterprise 1.17.5 and Vault Enterprise 1.16.9.",
   "aliases": [
     "CVE-2024-8365"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-09-04T07:26:12.647Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

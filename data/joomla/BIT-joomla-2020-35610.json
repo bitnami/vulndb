@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2020-35610",
+  "summary": "[20201101] - Core - com_finder ignores access levels on autosuggest",
   "details": "An issue was discovered in Joomla! 2.5.0 through 3.9.22. The autosuggestion feature of com_finder did not respect the access level of the corresponding terms.",
   "aliases": [
     "CVE-2020-35610"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:10:57.605Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

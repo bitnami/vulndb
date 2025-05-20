@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-argo-cd-2025-23216",
+  "summary": "Argo CD does not scrub secret values from patch errors",
   "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. A vulnerability was discovered in Argo CD that exposed secret values in error messages and the diff view when an invalid Kubernetes Secret resource was synced from a repository. The vulnerability assumes the user has write access to the repository and can exploit it, either intentionally or unintentionally, by committing an invalid Secret to repository and triggering a Sync. Once exploited, any user with read access to Argo CD can view the exposed secret data. The vulnerability is fixed in v2.13.4, v2.12.10, and v2.11.13.",
   "aliases": [
     "CVE-2025-23216"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2025-02-01T07:09:00.719Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

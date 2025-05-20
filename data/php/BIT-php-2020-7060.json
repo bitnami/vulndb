@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2020-7060",
+  "summary": "global buffer-overflow in mbfl_filt_conv_big5_wchar",
   "details": "When using certain mbstring functions to convert multibyte encodings, in PHP versions 7.2.x below 7.2.27, 7.3.x below 7.3.14 and 7.4.x below 7.4.2 it is possible to supply data that will cause function mbfl_filt_conv_big5_wchar to read past the allocated buffer. This may lead to information disclosure or crash.",
   "aliases": [
     "CVE-2020-7060"
@@ -114,5 +115,5 @@
     }
   ],
   "published": "2024-03-06T11:07:44.182Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

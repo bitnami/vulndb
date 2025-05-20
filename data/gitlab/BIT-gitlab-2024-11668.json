@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-11668",
+  "summary": "Insufficient Session Expiration in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.11 before 17.4.5, 17.5 before 17.5.3, and 17.6 before 17.6.1. Long-lived connections could potentially bypass authentication controls, allowing unauthorized access to streaming results.",
   "aliases": [
     "CVE-2024-11668"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-11-28T19:22:00.426Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-23128",
+  "summary": "[20210302] - Core - Potential Insecure FOFEncryptRandval",
   "details": "An issue was discovered in Joomla! 3.2.0 through 3.9.24. The core shipped but unused randval implementation within FOF (FOFEncryptRandval) used an potential insecure implemetation. That has now been replaced with a call to 'random_bytes()' and its backport that is shipped within random_compat.",
   "aliases": [
     "CVE-2021-23128"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:12:23.598Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

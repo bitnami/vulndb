@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-consul-2023-5332",
+  "summary": "Dependency on Vulnerable Third-Party Component in GitLab",
   "details": "Patch in third party library Consul requires 'enable-script-checks' to be set to False. This was required to enable a patch by the vendor. Without this setting the patch could be bypassed. This only affects GitLab-EE.",
   "aliases": [
     "CVE-2023-5332"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T10:50:58.088Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

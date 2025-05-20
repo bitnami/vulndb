@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-7060",
+  "summary": "Exposure of Sensitive Information to an Unauthorized Actor in GitLab",
   "details": "An information disclosure vulnerability in GitLab CE/EE in project/group exports affecting all versions from 15.4 prior to 17.0.5, 17.1 prior to 17.1.3, and 17.2 prior to 17.2.1 allows unauthorized users to view the resultant export.",
   "aliases": [
     "CVE-2024-7060"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-07-26T07:19:04.262Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

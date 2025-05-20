@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-minio-2023-28433",
+  "summary": "Minio Privilege Escalation on Windows via Path separator manipulation",
   "details": "Minio is a Multi-Cloud Object Storage framework. All users on Windows prior to version RELEASE.2023-03-20T20-16-18Z are impacted. MinIO fails to filter the `\\` character, which allows for arbitrary object placement across buckets. As a result, a user with low privileges, such as an access key, service account, or STS credential, which only has permission to `PutObject` in a specific bucket, can create an admin user. This issue is patched in RELEASE.2023-03-20T20-16-18Z. There are no known workarounds.",
   "aliases": [
     "CVE-2023-28433"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:56:28.094Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

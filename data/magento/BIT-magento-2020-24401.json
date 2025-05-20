@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-24401",
+  "summary": "Incorrect permissions following the deletion of a user role or deactivation of a user",
   "details": "Magento versions 2.4.0 and 2.3.5p1 (and earlier) are affected by an incorrect authorization vulnerability. A user can still access resources provisioned under their old role after an administrator removes the role or disables the user's account.",
   "aliases": [
     "CVE-2020-24401"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:08:28.087Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

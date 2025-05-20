@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-couchdb-2023-45725",
+  "summary": "Apache CouchDB, IBM Cloudant: Privilege Escalation Using _design Documents",
   "details": "Design document functions which receive a user http request object may expose authorization or session cookie headers of the user who accesses the document.\n\nThese design document functions are:\n  *    list\n  *    show\n  *    rewrite\n  *    update\n\nAn attacker can leak the session component using an HTML-like output, insert the session as an external resource (such as an image), or store the credential in a _local document with an \"update\" function.\n\nFor the attack to succeed the attacker has to be able to insert the design documents into the database, then manipulate a user to access a function from that design document.\n\nWorkaround: Avoid using design documents from untrusted sources which may attempt to access or manipulate request object's headers",
   "aliases": [
     "CVE-2023-45725"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:51:03.389Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

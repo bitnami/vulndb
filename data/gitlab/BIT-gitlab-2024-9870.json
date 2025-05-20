@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9870",
+  "summary": "Unintended Proxy or Intermediary ('Confused Deputy') in GitLab",
   "details": "An external service interaction vulnerability in GitLab EE affecting all versions from 15.11 prior to 17.6.5, 17.7 prior to 17.7.4, and 17.8 prior to 17.8.2 allows an attacker to send requests from the GitLab server to unintended services.",
   "aliases": [
     "CVE-2024-9870"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-17T19:11:40.337Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

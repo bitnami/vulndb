@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2021-41095",
+  "summary": "XSS via blocked watched word in error message",
   "details": "Discourse is an open source discussion platform. There is a cross-site scripting (XSS) vulnerability in versions 2.7.7 and earlier of the `stable` branch, versions 2.8.0.beta6 and earlier of the `beta` branch, and versions 2.8.0.beta6 and earlier of the `tests-passed` branch. Rendering of some error messages that contain user input can be susceptible to XSS attacks. This vulnerability only affects sites which have blocked watched words that contain HTML tags, modified or disabled Discourse's default Content Security Policy. This issue is patched in the latest `stable`, `beta` and `tests-passed` versions of Discourse. As a workaround, avoid modifying or disabling Discourse’s default Content Security Policy, and blocking watched words containing HTML tags.",
   "aliases": [
     "CVE-2021-41095"
@@ -96,5 +97,5 @@
     }
   ],
   "published": "2024-03-06T11:09:23.967Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

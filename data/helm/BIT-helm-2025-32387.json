@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2025-32387",
+  "summary": "Helm Allows A Specially Crafted JSON Schema To Cause A Stack Overflow",
   "details": "Helm is a package manager for Charts for Kubernetes. A JSON Schema file within a chart can be crafted with a deeply nested chain of references, leading to parser recursion that can exceed the stack size limit and trigger a stack overflow. This issue has been resolved in Helm v3.17.3.",
   "aliases": [
     "CVE-2025-32387"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-04-11T19:13:06.497Z",
-  "modified": "2025-04-12T08:07:05.000Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

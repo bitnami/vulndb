@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-38275",
+  "summary": "moodle: HTTP authorization header is preserved between \"emulated redirects\"",
   "details": "The cURL wrapper in Moodle retained the original request headers when following redirects, so HTTP authorization header information could be unintentionally sent in requests to redirect URLs.",
   "aliases": [
     "CVE-2024-38275"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2025-05-01T05:57:26.688Z",
-  "modified": "2025-05-01T06:10:59.840Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

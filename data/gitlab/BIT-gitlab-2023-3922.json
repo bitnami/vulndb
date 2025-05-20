@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3922",
+  "summary": "URL Redirection to Untrusted Site ('Open Redirect') in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 8.15 before 16.2.8, all versions starting from 16.3 before 16.3.5, all versions starting from 16.4 before 16.4.1. It was possible to hijack some links and buttons on the GitLab UI to a malicious page.",
   "aliases": [
     "CVE-2023-3922"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:02:04.162Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

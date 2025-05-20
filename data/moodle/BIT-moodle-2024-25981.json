@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-25981",
+  "summary": "Msa-24-0004: forum export did not respect activity group settings",
   "details": "Separate Groups mode restrictions were not honored when performing a forum export, which would export forum data for all groups. By default this only provided additional access to non-editing teachers.",
   "aliases": [
     "CVE-2024-25981"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-31T18:22:20.962Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

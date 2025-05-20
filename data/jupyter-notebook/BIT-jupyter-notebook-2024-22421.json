@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jupyter-notebook-2024-22421",
+  "summary": "Potential authentication and CSRF tokens leak in JupyterLab",
   "details": "JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture. Users of JupyterLab who click on a malicious link may get their `Authorization` and `XSRFToken` tokens exposed to a third party when running an older `jupyter-server` version. JupyterLab versions 4.1.0b2, 4.0.11, and 3.6.7 are patched. No workaround has been identified, however users should ensure to upgrade `jupyter-server` to version 2.7.2 or newer which includes a redirect vulnerability fix.",
   "aliases": [
     "CVE-2024-22421"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T10:53:53.191Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

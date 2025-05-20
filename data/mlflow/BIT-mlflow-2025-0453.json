@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2025-0453",
+  "summary": "Denial of Service through Batched Queries in GraphQL in mlflow/mlflow",
   "details": "In mlflow/mlflow version 2.17.2, the `/graphql` endpoint is vulnerable to a denial of service attack. An attacker can create large batches of queries that repeatedly request all runs from a given experiment. This can tie up all the workers allocated by MLFlow, rendering the application unable to respond to other requests. This vulnerability is due to uncontrolled resource consumption.",
   "aliases": [
     "CVE-2025-0453"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2025-04-03T09:02:58.147Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

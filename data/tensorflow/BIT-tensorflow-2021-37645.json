@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-37645",
+  "summary": "Integer overflow due to conversion to unsigned in TensorFlow",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions the implementation of `tf.raw_ops.QuantizeAndDequantizeV4Grad` is vulnerable to an integer overflow issue caused by converting a signed integer value to an unsigned one and then allocating memory based on this value. The [implementation](https://github.com/tensorflow/tensorflow/blob/8d72537c6abf5a44103b57b9c2e22c14f5f49698/tensorflow/core/kernels/quantize_and_dequantize_op.cc#L126) uses the `axis` value as the size argument to `absl::InlinedVector` constructor. But, the constructor uses an unsigned type for the argument, so the implicit conversion transforms the negative value to a large integer. We have patched the issue in GitHub commit 96f364a1ca3009f98980021c4b32be5fdcca33a1. The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, and TensorFlow 2.4.3, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-37645"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:17:40.526Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

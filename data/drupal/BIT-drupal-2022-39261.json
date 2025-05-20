@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2022-39261",
+  "summary": "Twig may load a template outside a configured directory when using the filesystem loader",
   "details": "Twig is a template language for PHP. Versions 1.x prior to 1.44.7, 2.x prior to 2.15.3, and 3.x prior to 3.4.3 encounter an issue when the filesystem loader loads templates for which the name is a user input. It is possible to use the `source` or `include` statement to read arbitrary files from outside the templates' directory when using a namespace like `@somewhere/../some.file`. In such a case, validation is bypassed. Versions 1.44.7, 2.15.3, and 3.4.3 contain a fix for validation of such template names. There are no known workarounds aside from upgrading.",
   "aliases": [
     "CVE-2022-39261"
@@ -96,5 +97,5 @@
     }
   ],
   "published": "2024-03-06T10:51:53.277Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

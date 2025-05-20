@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-laravel-2021-21263",
+  "summary": "Query Binding Exploitation in Laravel",
   "details": "Laravel is a web application framework. Versions of Laravel before 6.20.11, 7.30.2 and 8.22.1 contain a query binding exploitation. This same exploit applies to the illuminate/database package which is used by Laravel. If a request is crafted where a field that is normally a non-array value is an array, and that input is not validated or cast to its expected type before being passed to the query builder, an unexpected number of query bindings can be added to the query. In some situations, this will simply lead to no results being returned by the query builder; however, it is possible certain queries could be affected in a way that causes the query to return unexpected results.",
   "aliases": [
     "CVE-2021-21263"
@@ -78,5 +79,5 @@
     }
   ],
   "published": "2024-03-06T10:55:39.673Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

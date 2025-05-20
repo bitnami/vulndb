@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-pytorch-2025-2953",
+  "summary": "PyTorch torch.mkldnn_max_pool2d denial of service",
   "details": "A vulnerability, which was classified as problematic, has been found in PyTorch 2.6.0+cu124. Affected by this issue is the function torch.mkldnn_max_pool2d. The manipulation leads to denial of service. An attack has to be approached locally. The exploit has been disclosed to the public and may be used. The real existence of this vulnerability is still doubted at the moment. The security policy of the project warns to use unknown models which might establish malicious effects.",
   "aliases": [
     "CVE-2025-2953"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2025-04-16T07:31:10.049Z",
-  "modified": "2025-04-24T07:42:29.577Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

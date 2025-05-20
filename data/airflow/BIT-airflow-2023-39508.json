@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-39508",
+  "summary": "Apache Airflow: Airflow \"Run task\" feature allows execution with unnecessary priviledges",
   "details": "Execution with Unnecessary Privileges, : Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Software Foundation Apache Airflow.The \"Run Task\" feature enables authenticated user to bypass some of the restrictions put in place. It allows to execute code in the webserver context as well as allows to bypas limitation of access the user has to certain DAGs. The \"Run Task\" feature is considered dangerous and it has been removed entirely in Airflow 2.6.0\n\nThis issue affects Apache Airflow: before 2.6.0.",
   "aliases": [
     "CVE-2023-39508"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:53:46.702Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

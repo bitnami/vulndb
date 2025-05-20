@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-23943",
+  "summary": "mod_sed: Read/write beyond bounds",
   "details": "Out-of-bounds Write vulnerability in mod_sed of Apache HTTP Server allows an attacker to overwrite heap memory with possibly attacker provided data. This issue affects Apache HTTP Server 2.4 version 2.4.52 and prior versions.",
   "aliases": [
     "CVE-2022-23943"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2024-03-06T10:53:25.496Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

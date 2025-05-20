@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2022-23498",
+  "summary": "When query caching is enabled in Grafana users can query another users session",
   "details": "Grafana is an open-source platform for monitoring and observability. When datasource query caching is enabled, Grafana caches all headers, including `grafana_session`. As a result, any user that queries a datasource where the caching is enabled can acquire another user’s session. To mitigate the vulnerability you can disable datasource query caching for all datasources. This issue has been patched in versions 9.2.10 and 9.3.4.",
   "aliases": [
     "CVE-2022-23498"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:57:55.176Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

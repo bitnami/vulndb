@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-42502",
+  "summary": "Apache Superset: Open Redirect Vulnerability",
   "details": "An authenticated attacker with update datasets permission could change a dataset link to an untrusted site by spoofing the HTTP Host header, users could be redirected to this site when clicking on that specific dataset. This issue affects Apache Superset versions before 3.0.0.",
   "aliases": [
     "CVE-2023-42502"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-05T07:27:24.700Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

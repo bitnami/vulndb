@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3441",
+  "summary": "Exposure of Sensitive Information Due to Incompatible Policies in GitLab",
   "details": "An issue has been discovered in GitLab EE/CE affecting all versions starting from 8.0 before 16.4. The product did not sufficiently warn about security implications of granting merge rights to protected branches.",
   "aliases": [
     "CVE-2023-3441"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-10-03T07:38:54.069Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

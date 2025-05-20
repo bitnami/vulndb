@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2023-25170",
+  "summary": "PrestaShop has possible CSRF token fixation",
   "details": "PrestaShop is an open source e-commerce web application that, prior to version 8.0.1, is vulnerable to cross-site request forgery (CSRF). When authenticating users, PrestaShop preserves session attributes. Because this does not clear CSRF tokens upon login, this might enable same-site attackers to bypass the CSRF protection mechanism by performing an attack similar to a session-fixation. The problem is fixed in version 8.0.1.",
   "aliases": [
     "CVE-2023-25170"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T11:05:15.180Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

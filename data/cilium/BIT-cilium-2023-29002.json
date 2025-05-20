@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cilium-2023-29002",
+  "summary": "Debug mode leaks confidential data in Cilium",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. When run in debug mode, Cilium will log the contents of the `cilium-secrets` namespace. This could include data such as TLS private keys for Ingress and GatewayAPI resources. An attacker with access to debug output from the Cilium containers could use the resulting output to intercept and modify traffic to and from the affected cluster. Output of the sensitive information would occur at Cilium agent restart, when secrets in the namespace are modified, and on creation of Ingress or GatewayAPI resources. This vulnerability is fixed in Cilium releases 1.11.16, 1.12.9, and 1.13.2. Users unable to upgrade should disable debug mode.",
   "aliases": [
     "CVE-2023-29002"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-05-15T12:07:46.778Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

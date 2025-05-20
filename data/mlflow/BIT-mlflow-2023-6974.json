@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2023-6974",
+  "summary": "Server-Side Request Forgery (SSRF)",
   "details": "A malicious user could use this issue to access internal HTTP(s) servers and in the worst case (ie: aws instance) it could be abuse to get a remote code execution on the victim machine.",
   "aliases": [
     "CVE-2023-6974"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:56:37.402Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

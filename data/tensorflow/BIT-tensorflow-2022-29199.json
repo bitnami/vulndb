@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-29199",
+  "summary": "Missing validation causes denial of service in TensorFlow via `LoadAndRemapMatrix`",
   "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, the implementation of `tf.raw_ops.LoadAndRemapMatrix does not fully validate the input arguments. This results in a `CHECK`-failure which can be used to trigger a denial of service attack. The code assumes `initializing_values` is a vector but there is no validation for this before accessing its value. Versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4 contain a patch for this issue.",
   "aliases": [
     "CVE-2022-29199"
@@ -80,5 +81,5 @@
     }
   ],
   "published": "2024-03-06T11:14:31.370Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

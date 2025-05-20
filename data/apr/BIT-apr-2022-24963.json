@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apr-2022-24963",
+  "summary": "Apache Portable Runtime (APR): out-of-bound writes in the apr_encode family of functions",
   "details": "Integer Overflow or Wraparound vulnerability in apr_encode functions of Apache Portable Runtime (APR) allows an attacker to write beyond bounds of a buffer.\nThis issue affects Apache Portable Runtime (APR) version 1.7.0.",
   "aliases": [
     "CVE-2022-24963"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T10:50:46.060Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

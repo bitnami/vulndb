@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2025-27157",
+  "summary": "Mastodon's rate-limits are missing on `/auth/setup`",
   "details": "Mastodon is a self-hosted, federated microblogging platform. Starting in version 4.2.0 and prior to versions 4.2.16 and 4.3.4, the rate limits are missing on `/auth/setup`. Without those rate limits, an attacker can craft requests that will send an email to an arbitrary addresses. Versions 4.2.16 and 4.3.4 fix the issue.",
   "aliases": [
     "CVE-2025-27157"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-02T07:13:08.797Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

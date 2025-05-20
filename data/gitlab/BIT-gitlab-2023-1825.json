@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-1825",
+  "summary": "Insertion of Sensitive Information Into Sent Data in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 15.7 before 15.10.8, all versions starting from 15.11 before 15.11.7, all versions starting from 16.0 before 16.0.2. It was possible to disclose issue notes to an unauthorized user at project export.",
   "aliases": [
     "CVE-2023-1825"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-03-06T11:10:29.409Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

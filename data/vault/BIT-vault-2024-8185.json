@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2024-8185",
+  "summary": "Vault Vulnerable to Denial of Service When Processing Raft Join Requests",
   "details": "Vault Community and Vault Enterprise (“Vault”) clusters using Vault’s Integrated Storage backend are vulnerable to a denial-of-service (DoS) attack through memory exhaustion through a Raft cluster join API endpoint . An attacker may send a large volume of requests to the endpoint which may cause Vault to consume excessive system memory resources, potentially leading to a crash of the underlying system and the Vault process itself.\n\nThis vulnerability, CVE-2024-8185, is fixed in Vault Community 1.18.1 and Vault Enterprise 1.18.1, 1.17.8, and 1.16.12.",
   "aliases": [
     "CVE-2024-8185"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2024-11-02T07:20:15.411Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5544",
+  "summary": "Moodle: stored xss and potential idor risk in wiki comments",
   "details": "Wiki comments required additional sanitizing and access restrictions to prevent a stored XSS risk and potential IDOR risk.",
   "aliases": [
     "CVE-2023-5544"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T10:57:50.082Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-30634",
+  "summary": "Indefinite hang with large buffers on Windows in crypto/rand",
   "details": "Infinite loop in Read in crypto/rand before Go 1.17.11 and Go 1.18.3 on Windows allows attacker to cause an indefinite hang by passing a buffer larger than 1 << 32 - 1 bytes.",
   "aliases": [
     "CVE-2022-30634"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:59:32.189Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

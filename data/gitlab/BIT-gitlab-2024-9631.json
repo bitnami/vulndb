@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9631",
+  "summary": "Inefficient Algorithmic Complexity in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 13.6 prior to 17.2.9, starting from 17.3 prior to 17.3.5, and starting from 17.4 prior to 17.4.2, where viewing diffs of MR with conflicts can be slow.",
   "aliases": [
     "CVE-2024-9631"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-02-07T07:10:40.789Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

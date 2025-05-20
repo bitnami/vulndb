@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2022-24272",
+  "summary": "MongoDB Server (mongod) may crash in response to unexpected requests",
   "details": "An authenticated user may trigger an invariant assertion during command dispatch due to incorrect validation on the $external database. This may result in mongod denial of service or server crash. This issue affects: MongoDB Inc. MongoDB Server v5.0 versions, prior to and including v5.0.6.",
   "aliases": [
     "CVE-2022-24272"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:57:01.078Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

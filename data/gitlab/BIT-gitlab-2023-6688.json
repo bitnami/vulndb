@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6688",
+  "summary": "Inefficient Regular Expression Complexity in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.11 prior to 16.11.2. A problem with the processing logic for Google Chat Messages integration may lead to a regular expression DoS attack on the server.",
   "aliases": [
     "CVE-2023-6688"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-05-24T07:28:37.252Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-11669",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions from 16.9.8 before 17.4.5, 17.5 before 17.5.3, and 17.6 before 17.6.1. Certain API endpoints could potentially allow unauthorized access to sensitive data due to overly broad application of token scopes.",
   "aliases": [
     "CVE-2024-11669"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-11-28T19:21:54.715Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

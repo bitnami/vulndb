@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2021-32788",
+  "summary": "Post creator of a whisper post can be revealed to non-staff users in Discourse",
   "details": "Discourse is an open source discussion platform. In versions prior to 2.7.7 there are two bugs which led to the post creator of a whisper post being revealed to non-staff users. 1: Staff users that creates a whisper post in a personal message is revealed to non-staff participants of the personal message even though the whisper post cannot be seen by them. 2: When a whisper post is before the last post in a post stream, deleting the last post will result in the creator of the whisper post to be revealed to non-staff users as the last poster of the topic.",
   "aliases": [
     "CVE-2021-32788"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:10:01.686Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

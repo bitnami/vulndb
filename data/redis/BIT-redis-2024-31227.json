@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-redis-2024-31227",
+  "summary": "Denial-of-service due to malformed ACL selectors in Redis",
   "details": "Redis is an open source, in-memory database that persists on disk. An authenticated with sufficient privileges may create a malformed ACL selector which, when accessed, triggers a server panic and subsequent denial of service. The problem exists in Redis 7 prior to versions 7.2.6 and 7.4.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-31227"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-10-09T16:41:26.630Z",
-  "modified": "2025-04-25T12:11:30.644Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

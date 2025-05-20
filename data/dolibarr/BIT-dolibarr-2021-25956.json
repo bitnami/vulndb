@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-dolibarr-2021-25956",
+  "summary": "Improper User Access Control in \"Dolibarr\" Leads to Account Takeover",
   "details": "In “Dolibarr” application, v3.3.beta1_20121221 to v13.0.2 have “Modify” access for admin level users to change other user’s details but fails to validate already existing “Login” name, while renaming the user “Login”. This leads to complete account takeover of the victim user. This happens since the password gets overwritten for the victim user having a similar login name.",
   "aliases": [
     "CVE-2021-25956"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2025-04-03T14:04:55.593Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

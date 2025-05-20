@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28332",
+  "summary": "Moodle: algebra filter xss when filter is misconfigured",
   "details": "If the algebra filter was enabled but not functional (eg the necessary binaries were missing from the server), it presented an XSS risk.",
   "aliases": [
     "CVE-2023-28332"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T11:00:21.482Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-53266",
+  "summary": "Cross-site Scripting (XSS) via topic titles when CSP disabled in Discourse",
   "details": "Discourse is an open source platform for community discussion. In affected versions with some combinations of plugins, and with CSP disabled, activity streams in the user's profile page may be vulnerable to XSS. This has been patched in the latest version of Discourse core. Users are advised to upgrade. Users unable to upgrade should ensure CSP is enabled.",
   "aliases": [
     "CVE-2024-53266"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-20T10:32:23.108Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

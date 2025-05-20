@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-23799",
+  "summary": "[20220307] - Core - Variable Tampering on JInput $_REQUEST data",
   "details": "An issue was discovered in Joomla! 4.0.0 through 4.1.0. Under specific circumstances, JInput pollutes method-specific input bags with $_REQUEST data.",
   "aliases": [
     "CVE-2022-23799"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:14:51.000Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

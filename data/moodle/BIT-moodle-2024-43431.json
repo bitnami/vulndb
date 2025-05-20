@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43431",
+  "summary": "Moodle: idor in badges allows deletion of arbitrary badges",
   "details": "A vulnerability was found in Moodle. Insufficient capability checks made it possible to delete badges that a user does not have permission to access.",
   "aliases": [
     "CVE-2024-43431"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:51.186Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

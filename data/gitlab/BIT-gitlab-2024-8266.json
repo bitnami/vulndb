@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8266",
+  "summary": "Execution with Unnecessary Privileges in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 17.1 prior to 17.6.0, which allows an attacker with maintainer role to trigger a pipeline as project owner under certain circumstances.",
   "aliases": [
     "CVE-2024-8266"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-02-17T19:14:44.926Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-53270",
+  "summary": "HTTP/1: sending overload crashes when the request is reset beforehand in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. In affected versions `sendOverloadError` is going to assume the active request exists when `envoy.load_shed_points.http1_server_abort_dispatch` is configured. If `active_request` is nullptr, only onMessageBeginImpl() is called. However, the `onMessageBeginImpl` will directly return ok status if the stream is already reset leading to the nullptr reference. The downstream reset can actually happen during the H/2 upstream reset. As a result envoy may crash. This issue has been addressed in releases 1.32.3, 1.31.5, 1.30.9, and 1.29.12. Users are advised to upgrade. Users unable to upgrade may disable `http1_server_abort_dispatch` load shed point and/or use a high threshold.",
   "aliases": [
     "CVE-2024-53270"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-12-20T07:08:32.803Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

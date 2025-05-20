@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2024-39309",
+  "summary": "ZDI-CAN-23894: Parse Server literalizeRegexPart SQL Injection Authentication Bypass Vulnerability",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. A vulnerability in versions prior to 6.5.7 and 7.1.0 allows SQL injection when Parse Server is configured to use the PostgreSQL database. The algorithm to detect SQL injection has been improved in versions 6.5.7 and 7.1.0. No known workarounds are available.",
   "aliases": [
     "CVE-2024-39309"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-07-03T07:30:26.360Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

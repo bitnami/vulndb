@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2021-29943",
+  "summary": "Apache Solr Unprivileged users may be able to perform unauthorized read/write to collections",
   "details": "When using ConfigurableInternodeAuthHadoopPlugin for authentication, Apache Solr versions prior to 8.8.2 would forward/proxy distributed requests using server credentials instead of original client credentials. This would result in incorrect authorization resolution on the receiving hosts.",
   "aliases": [
     "CVE-2021-29943"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:06:21.010Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

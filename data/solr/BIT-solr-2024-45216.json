@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2024-45216",
+  "summary": "Apache Solr: Authentication bypass possible using a fake URL Path ending",
   "details": "Improper Authentication vulnerability in Apache Solr.\n\nSolr instances using the PKIAuthenticationPlugin, which is enabled by default when Solr Authentication is used, are vulnerable to Authentication bypass.\nA fake ending at the end of any Solr API URL path, will allow requests to skip Authentication while maintaining the API contract with the original URL Path.\nThis fake ending looks like an unprotected API path, however it is stripped off internally after authentication but before API routing.\n\n\nThis issue affects Apache Solr: from 5.3.0 before 8.11.4, from 9.0.0 before 9.7.0.\n\nUsers are recommended to upgrade to version 9.7.0, or 8.11.4, which fix the issue.",
   "aliases": [
     "CVE-2024-45216"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-10-18T07:18:31.999Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

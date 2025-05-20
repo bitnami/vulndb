@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-38684",
+  "summary": "Discourse vulnerable to ossible DDoS due to unbounded limits in various controller actions",
   "details": "Discourse is an open source discussion platform. Prior to version 3.0.6 of the `stable` branch and version 3.1.0.beta7 of the `beta` and `tests-passed` branches, in multiple controller actions, Discourse accepts limit params but does not impose any upper bound on the values being accepted. Without an upper bound, the software may allow arbitrary users to generate DB queries which may end up exhausting the resources on the server. The issue is patched in version 3.0.6 of the `stable` branch and version 3.1.0.beta7 of the `beta` and `tests-passed` branches. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2023-38684"
@@ -267,5 +268,5 @@
     }
   ],
   "published": "2024-03-06T10:55:14.077Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

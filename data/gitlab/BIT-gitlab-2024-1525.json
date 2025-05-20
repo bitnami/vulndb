@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-1525",
+  "summary": "Authentication Bypass Using an Alternate Path or Channel in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.1 before 16.7.6, all versions starting from 16.8 before 16.8.3, all versions starting from 16.9 before 16.9.1. Under some specialized conditions, an LDAP user may be able to reset their password using their verified secondary email address and sign-in using direct authentication with the reset password, bypassing LDAP.",
   "aliases": [
     "CVE-2024-1525"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:52:18.885Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

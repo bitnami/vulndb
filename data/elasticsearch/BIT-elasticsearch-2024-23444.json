@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2024-23444",
+  "summary": "Elasticsearch elasticsearch-certutil csr fails to encrypt private key",
   "details": "It was discovered by Elastic engineering that when elasticsearch-certutil CLI tool is used with the csr option in order to create a new Certificate Signing Requests, the associated private key that is generated is stored on disk unencrypted even if the --pass parameter is passed in the command invocation.",
   "aliases": [
     "CVE-2024-23444"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-08-02T07:18:37.023Z",
-  "modified": "2025-04-07T11:46:15.819Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

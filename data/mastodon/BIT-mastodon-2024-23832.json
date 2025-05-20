@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2024-23832",
+  "summary": "Mastodon Remote user impersonation and takeover",
   "details": "Mastodon is a free, open-source social network server based on ActivityPub Mastodon allows configuration of LDAP for authentication. Due to insufficient origin validation in all Mastodon, attackers can impersonate and take over any remote account. Every Mastodon version prior to 3.5.17 is vulnerable, as well as 4.0.x versions prior to 4.0.13, 4.1.x version prior to 4.1.13, and 4.2.x versions prior to 4.2.5.",
   "aliases": [
     "CVE-2024-23832"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T10:55:37.581Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8754",
+  "summary": "External Control of Critical State Data in GitLab",
   "details": "An issue has been discovered in GitLab EE/CE affecting all versions from 16.9.7 prior to 17.1.7, 17.2 prior to 17.2.5, and 17.3 prior to 17.3.2. An improper input validation error allows attacker to squat on accounts via linking arbitrary unclaimed provider identities when JWT authentication is configured.",
   "aliases": [
     "CVE-2024-8754"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-09-14T07:05:32.625Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

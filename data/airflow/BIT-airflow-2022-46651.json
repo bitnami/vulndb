@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-46651",
+  "summary": "Apache Airflow: Security vulnerability on AirFlow Connections",
   "details": "Apache Airflow, versions before 2.6.3, is affected by a vulnerability that allows an unauthorized actor to gain access to sensitive information in Connection edit view. This vulnerability is considered low since it requires someone with access to Connection resources specifically updating the connection to exploit it. Users should upgrade to version 2.6.3 or later which has removed the vulnerability.",
   "aliases": [
     "CVE-2022-46651"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:55:53.899Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

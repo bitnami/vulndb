@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2021-32039",
+  "summary": "MongoDB Extension for VS Code may unexpectedly store credentials locally in clear text",
   "details": "Users with appropriate file access may be able to access unencrypted user credentials saved by MongoDB Extension for VS Code in a binary file. These credentials may be used by malicious attackers to perform unauthorized actions. This vulnerability affects all MongoDB Extension for VS Code including and prior to version 0.7.0",
   "aliases": [
     "CVE-2021-32039"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:57:20.477Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

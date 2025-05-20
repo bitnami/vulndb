@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2024-27132",
+  "summary": "Insufficient sanitization in MLflow leads to XSS when running an untrusted recipe.",
   "details": "Insufficient sanitization in MLflow leads to XSS when running an untrusted recipe.\n\nThis issue leads to a client-side RCE when running an untrusted recipe in Jupyter Notebook.\n\nThe vulnerability stems from lack of sanitization over template variables.",
   "aliases": [
     "CVE-2024-27132"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-31T18:21:50.638Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-31667",
+  "summary": "Harbor fails to validate the user permissions when updating a robot account",
   "details": "Harbor fails to validate the user permissions when updating a robot account that belongs to a project that the authenticated user doesn’t have access to. \n\nBy sending a request that attempts to update a robot account, and specifying a robot account id and robot account name that belongs to a different project that the user doesn’t have access to, it was possible to revoke the robot account permissions.",
   "aliases": [
     "CVE-2022-31667"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-11-20T07:11:07.078Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

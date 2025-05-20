@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-ingress-controller-2025-1974",
+  "summary": "ingress-nginx admission controller RCE escalation",
   "details": "A security issue was discovered in Kubernetes where under certain conditions, an unauthenticated attacker with access to the pod network can achieve arbitrary code execution in the context of the ingress-nginx controller. This can lead to disclosure of Secrets accessible to the controller. (Note that in the default installation, the controller can access all Secrets cluster-wide.)",
   "aliases": [
     "CVE-2025-1974"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2025-03-26T07:24:38.747Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

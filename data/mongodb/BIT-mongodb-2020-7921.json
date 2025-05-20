@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2020-7921",
+  "summary": "Administrative action may disable enforcement of per-user IP whitelisting",
   "details": "Improper serialization of internal state in the authorization subsystem in MongoDB Server's authorization subsystem permits a user with valid credentials to bypass IP whitelisting protection mechanisms following administrative action. This issue affects MongoDB Server v4.2 versions prior to 4.2.3; MongoDB Server v4.0 versions prior to 4.0.15; MongoDB Server v4.3 versions prior to 4.3.3and MongoDB Server v3.6 versions prior to 3.6.18.",
   "aliases": [
     "CVE-2020-7921"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:59:14.555Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

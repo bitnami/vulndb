@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2023-40626",
+  "summary": "[20231101] - Core - Exposure of environment variables",
   "details": "The language file parsing process could be manipulated to expose environment variables. Environment variables might contain sensible information.",
   "aliases": [
     "CVE-2023-40626"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-04-03T14:16:16.690Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

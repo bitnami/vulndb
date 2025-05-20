@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2023-27491",
+  "summary": "Envoy forwards invalid Http2/Http3 downstream headers",
   "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. Compliant HTTP/1 service should reject malformed request lines. Prior to versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9, There is a possibility that non compliant HTTP/1 service may allow malformed requests, potentially leading to a bypass of security policies. This issue is fixed in versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9.",
   "aliases": [
     "CVE-2023-27491"
@@ -80,5 +81,5 @@
     }
   ],
   "published": "2024-03-06T10:54:12.095Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

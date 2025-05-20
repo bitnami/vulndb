@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2021-38540",
+  "summary": "Apache Airflow: Variable Import endpoint missed authentication check",
   "details": "The variable import endpoint was not protected by authentication in Airflow >=2.0.0, <2.1.3. This allowed unauthenticated users to hit that endpoint to add/modify Airflow variables used in DAGs, potentially resulting in a denial of service, information disclosure or remote code execution. This issue affects Apache Airflow >=2.0.0, <2.1.3.",
   "aliases": [
     "CVE-2021-38540"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:58:56.460Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

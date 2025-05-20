@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-opencart-2025-1746",
+  "summary": "Cross-Site Scripting vulnerability in OpenCart",
   "details": "Cross-Site Scripting vulnerability in OpenCart versions prior to 4.1.0. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending the victim a malicious URL using the search in the /product/search endpoint. This vulnerability could be exploited to steal sensitive user data, such as session cookies, or to perform actions on behalf of the user.",
   "aliases": [
     "CVE-2025-1746"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-05-08T08:46:28.858Z",
-  "modified": "2025-05-08T09:12:25.257Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

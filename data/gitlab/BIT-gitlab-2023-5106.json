@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5106",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue has been discovered in Ultimate-licensed GitLab EE affecting all versions starting 13.12 prior to 16.2.8, 16.3.0 prior to 16.3.5, and 16.4.0 prior to 16.4.1 that could allow an attacker to impersonate users in CI pipelines through direct transfer group imports.",
   "aliases": [
     "CVE-2023-5106"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:57:36.783Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

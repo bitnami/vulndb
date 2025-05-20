@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cilium-2023-27595",
+  "summary": "Cilium eBPF filters may be temporarily removed during agent restart",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. In version 1.13.0, when Cilium is started, there is a short period when Cilium eBPF programs are not attached to the host. During this period, the host does not implement any of Cilium's featureset. This can cause disruption to newly established connections during this period due to the lack of Load Balancing, or can cause Network Policy bypass due to the lack of Network Policy enforcement during the window. This vulnerability impacts any Cilium-managed endpoints on the node (such as Kubernetes Pods), as well as the host network namespace (including Host Firewall). This vulnerability is fixed in Cilium 1.13.1 or later. Cilium releases 1.12.x, 1.11.x, and earlier are not affected. There are no known workarounds.",
   "aliases": [
     "CVE-2023-27595"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-05-15T12:08:00.872Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

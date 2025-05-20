@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-28585",
+  "summary": "Magento Commerce improper input validation in customer customer webapi",
   "details": "Magento versions 2.4.2 (and earlier), 2.4.1-p1 (and earlier) and 2.3.6-p1 (and earlier) are affected by an Improper input validation vulnerability in the New customer WebAPI.Successful exploitation could allow an attacker to send unsolicited spam e-mails.",
   "aliases": [
     "CVE-2021-28585"
@@ -73,5 +74,5 @@
     }
   ],
   "published": "2024-03-06T10:58:00.077Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

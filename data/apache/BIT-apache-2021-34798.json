@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2021-34798",
+  "summary": "NULL pointer dereference in httpd core",
   "details": "Malformed requests may cause the server to dereference a NULL pointer. This issue affects Apache HTTP Server 2.4.48 and earlier.",
   "aliases": [
     "CVE-2021-34798"
@@ -114,5 +115,5 @@
     }
   ],
   "published": "2024-03-06T10:55:30.698Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

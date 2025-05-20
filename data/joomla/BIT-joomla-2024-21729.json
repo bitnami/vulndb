@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2024-21729",
+  "summary": "[20240701] - Core - XSS in accessible media selection field",
   "details": "Inadequate input validation leads to XSS vulnerabilities in the accessiblemedia field.",
   "aliases": [
     "CVE-2024-21729"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:16:30.697Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

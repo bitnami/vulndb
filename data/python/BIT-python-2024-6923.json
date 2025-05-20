@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-python-2024-6923",
+  "summary": "Email header injection due to unquoted newlines",
   "details": "There is a MEDIUM severity vulnerability affecting CPython.\n\nThe \nemail module didn’t properly quote newlines for email headers when \nserializing an email message allowing for header injection when an email\n is serialized.",
   "aliases": [
     "CVE-2024-6923"
@@ -126,5 +127,5 @@
     }
   ],
   "published": "2024-08-19T09:33:54.548Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

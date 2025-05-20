@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-3462",
+  "summary": "Vault's LDAP Auth Method Allows for User Enumeration",
   "details": "HashiCorp's Vault and Vault Enterprise are vulnerable to user enumeration when using the LDAP auth method. An attacker may submit requests of existent and non-existent LDAP users and observe the response from Vault to check if the account is valid on the LDAP server. This vulnerability is fixed in Vault 1.14.1 and 1.13.5.",
   "aliases": [
     "CVE-2023-3462"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:08:58.668Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

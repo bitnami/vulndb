@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2022-39313",
+  "summary": "Parse Server crashes when receiving file download request with invalid byte range",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Versions prior to 4.10.17, and prior to 5.2.8 on the 5.x branch, crash when a file download request is received with an invalid byte range, resulting in a Denial of Service. This issue has been patched in versions 4.10.17, and 5.2.8. There are no known workarounds.",
   "aliases": [
     "CVE-2022-39313"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T11:01:42.508Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

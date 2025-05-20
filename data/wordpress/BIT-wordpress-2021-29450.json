@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-2021-29450",
+  "summary": "WordPress Authenticated disclosure of password-protected posts and pages",
   "details": "Wordpress is an open source CMS. One of the blocks in the WordPress editor can be exploited in a way that exposes password-protected posts and pages. This requires at least contributor privileges. This has been patched in WordPress 5.7.1, along with the older affected versions via minor releases. It's strongly recommended that you keep auto-updates enabled to receive the fix.",
   "aliases": [
     "CVE-2021-29450"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T11:10:45.267Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

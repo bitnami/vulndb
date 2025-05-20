@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2024-36407",
+  "summary": "SuiteCRM unauthenticated user password reset on php7",
   "details": "SuiteCRM is an open-source Customer Relationship Management (CRM) software application. In versions prior to 7.14.4 and 8.6.1, a user password can be reset from an unauthenticated attacker. The attacker does not get access to the new password. But this can be annoying for the user. This attack is also dependent on some password reset functionalities being enabled. It also requires the system using php 7, which is not an officially supported version. Versions 7.14.4 and 8.6.1 contain a fix for this issue.",
   "aliases": [
     "CVE-2024-36407"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-06-12T07:39:14.510Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

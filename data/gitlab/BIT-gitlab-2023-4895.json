@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-4895",
+  "summary": "Missing Authorization in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 12.0 to 16.7.6, all versions starting from 16.8 before 16.8.3, all versions starting from 16.9 before 16.9.1. This vulnerability allows for bypassing the 'group ip restriction' settings to access environment details of projects",
   "aliases": [
     "CVE-2023-4895"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:58:18.268Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43435",
+  "summary": "Moodle: can create global glossary without being admin",
   "details": "A flaw was found in moodle. Insufficient capability checks make it possible for users with access to restore glossaries in courses to restore them into the global site glossary.",
   "aliases": [
     "CVE-2024-43435"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:56.485Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

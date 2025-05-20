@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2021-21706",
+  "summary": "ZipArchive::extractTo may extract outside of destination dir",
   "details": "In PHP versions 7.3.x below 7.3.31, 7.4.x below 7.4.24 and 8.0.x below 8.0.11, in Microsoft Windows environment, ZipArchive::extractTo may be tricked into writing a file outside target directory when extracting a ZIP file, thus potentially causing files to be created or overwritten, subject to OS permissions.",
   "aliases": [
     "CVE-2021-21706"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2025-01-14T19:22:26.617Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

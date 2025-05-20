@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-15201",
+  "summary": "Heap buffer overflow in Tensorflow",
   "details": "In Tensorflow before version 2.3.1, the `RaggedCountSparseOutput` implementation does not validate that the input arguments form a valid ragged tensor. In particular, there is no validation that the values in the `splits` tensor generate a valid partitioning of the `values` tensor. Hence, the code is prone to heap buffer overflow. If `split_values` does not end with a value at least `num_values` then the `while` loop condition will trigger a read outside of the bounds of `split_values` once `batch_idx` grows too large. The issue is patched in commit 3cbb917b4714766030b28eba9fb41bb97ce9ee02 and is released in TensorFlow version 2.3.1.",
   "aliases": [
     "CVE-2020-15201"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:20:38.643Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

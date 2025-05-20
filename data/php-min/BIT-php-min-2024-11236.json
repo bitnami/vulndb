@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2024-11236",
+  "summary": "Integer overflow in the firebird and dblib quoters causing OOB writes",
   "details": "In PHP versions 8.1.* before 8.1.31, 8.2.* before 8.2.26, 8.3.* before 8.3.14, uncontrolled long string inputs to ldap_escape() function on 32-bit systems can cause an integer overflow, resulting in an out-of-bounds write.",
   "aliases": [
     "CVE-2024-11236"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2025-01-14T19:20:14.001Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

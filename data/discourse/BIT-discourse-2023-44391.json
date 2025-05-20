@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-44391",
+  "summary": "Prevent unauthorized access to summary details in Discourse",
   "details": "Discourse is an open source platform for community discussion. User summaries are accessible for anonymous users even when `hide_user_profiles_from_public` is enabled. This problem has been patched in the 3.1.1 stable and 3.2.0.beta2 version of Discourse. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2023-44391"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:53:30.809Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

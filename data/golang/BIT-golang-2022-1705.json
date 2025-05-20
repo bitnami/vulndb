@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-1705",
+  "summary": "Improper sanitization of Transfer-Encoding headers in net/http",
   "details": "Acceptance of some invalid Transfer-Encoding headers in the HTTP/1 client in net/http before Go 1.17.12 and Go 1.18.4 allows HTTP request smuggling if combined with an intermediate server that also improperly fails to reject the header as invalid.",
   "aliases": [
     "CVE-2022-1705"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:03:10.170Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

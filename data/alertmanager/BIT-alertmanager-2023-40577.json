@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-alertmanager-2023-40577",
+  "summary": "Alertmanager UI is vulnerable to stored XSS via the /api/v1/alerts endpoint",
   "details": "Alertmanager handles alerts sent by client applications such as the Prometheus server. An attacker with the permission to perform POST requests on the /api/v1/alerts endpoint could be able to execute arbitrary JavaScript code on the users of Prometheus Alertmanager. This issue has been fixed in Alertmanager version 0.2.51.",
   "aliases": [
     "CVE-2023-40577"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-11-08T19:09:34.789Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

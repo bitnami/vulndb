@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2024-34716",
+  "summary": "PrestaShop vulnerable to XSS via customer contact form in FO, through file upload",
   "details": "PrestaShop is an open source e-commerce web application. A cross-site scripting (XSS) vulnerability that only affects PrestaShops with customer-thread feature flag enabled is present starting from PrestaShop 8.1.0 and prior to PrestaShop 8.1.6. When the customer thread feature flag is enabled through the front-office contact form, a hacker can upload a malicious file containing an XSS that will be executed when an admin opens the attached file in back office. The script injected can access the session and the security token, which allows it to perform any authenticated action in the scope of the administrator's right. This vulnerability is patched in 8.1.6. A workaround is to disable the customer-thread feature-flag.",
   "aliases": [
     "CVE-2024-34716"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-05-24T07:31:41.856Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

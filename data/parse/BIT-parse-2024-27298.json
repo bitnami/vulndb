@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2024-27298",
+  "summary": "Parse Server literalizeRegexPart SQL Injection",
   "details": "parse-server is a Parse Server for Node.js / Express. This vulnerability allows SQL injection when Parse Server is configured to use the PostgreSQL database. The vulnerability has been fixed in 6.5.0 and 7.0.0-alpha.20.",
   "aliases": [
     "CVE-2024-27298"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-31T18:25:01.637Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

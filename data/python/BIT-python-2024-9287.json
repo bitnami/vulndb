@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-python-2024-9287",
+  "summary": "Virtual environment (venv) activation scripts don't quote paths",
   "details": "A vulnerability has been found in the CPython `venv` module and CLI where path names provided when creating a virtual environment were not quoted properly, allowing the creator to inject commands into virtual environment \"activation\" scripts (ie \"source venv/bin/activate\"). This means that attacker-controlled virtual environments are able to run commands when the virtual environment is activated. Virtual environments which are not created by an attacker or which aren't activated before being used (ie \"./venv/bin/python\") are not affected.",
   "aliases": [
     "CVE-2024-9287"
@@ -110,5 +111,5 @@
     }
   ],
   "published": "2024-12-13T12:39:42.210Z",
-  "modified": "2025-04-26T06:32:46.644Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

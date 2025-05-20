@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-2023-5561",
+  "summary": "WordPress < 6.3.2 - Unauthenticated Post Author Email Disclosure",
   "details": "WordPress does not properly restrict which user fields are searchable via the REST API, allowing unauthenticated attackers to discern the email addresses of users who have published public posts on an affected website via an Oracle style attack",
   "aliases": [
     "CVE-2023-5561"
@@ -154,5 +155,5 @@
     }
   ],
   "published": "2024-03-06T11:08:48.764Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

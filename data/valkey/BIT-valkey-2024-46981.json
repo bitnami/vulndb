@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-valkey-2024-46981",
+  "summary": "Redis' Lua library commands may lead to remote code execution",
   "details": "Redis is an open source, in-memory database that persists on disk. An authenticated user may use a specially crafted Lua script to manipulate the garbage collector and potentially lead to remote code execution. The problem is fixed in 7.4.2, 7.2.7, and 6.2.17. An additional workaround to mitigate the problem without patching the redis-server executable is to prevent users from executing Lua scripts. This can be done using ACL to restrict EVAL and EVALSHA commands.",
   "aliases": [
     "CVE-2024-46981"
@@ -80,5 +81,5 @@
     }
   ],
   "published": "2025-01-08T07:22:30.615Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

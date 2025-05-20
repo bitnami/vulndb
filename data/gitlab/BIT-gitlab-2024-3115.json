@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-3115",
+  "summary": "Exposure of Sensitive Information to an Unauthorized Actor in GitLab",
   "details": "An issue was discovered in GitLab EE affecting all versions starting from 16.0 prior to 16.11.5, starting from 17.0 prior to 17.0.3, and starting from 17.1 prior to 17.1.1, which allows an attacker to access issues and epics without having an SSO session using Duo Chat.",
   "aliases": [
     "CVE-2024-3115"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-06-28T07:22:56.381Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

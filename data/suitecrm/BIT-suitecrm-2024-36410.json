@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2024-36410",
+  "summary": "SuiteCRM authenticated SQL Injection in EmailUIAjax messages count controller ",
   "details": "SuiteCRM is an open-source Customer Relationship Management (CRM) software application. In versions prior to 7.14.4 and 8.6.1, poor input validation allows for SQL Injection in EmailUIAjax messages count controller. Versions 7.14.4 and 8.6.1 contain a fix for this issue.",
   "aliases": [
     "CVE-2024-36410"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-06-12T07:38:31.505Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

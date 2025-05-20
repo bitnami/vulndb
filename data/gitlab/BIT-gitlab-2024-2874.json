@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-2874",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 16.10.6, version 16.11 before 16.11.3, and 17.0 before 17.0.1. A runner registered with a crafted description has the potential to disrupt the loading of targeted GitLab web resources.",
   "aliases": [
     "CVE-2024-2874"
@@ -69,5 +70,5 @@
     }
   ],
   "published": "2024-05-29T07:22:20.064Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

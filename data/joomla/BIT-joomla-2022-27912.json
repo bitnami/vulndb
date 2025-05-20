@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-27912",
+  "summary": "[20221001] - Core - Debug Mode leaks full request payloads including passwords",
   "details": "An issue was discovered in Joomla! 4.0.0 through 4.2.3. Sites with publicly enabled debug mode exposed data of previous requests.",
   "aliases": [
     "CVE-2022-27912"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:15:18.090Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

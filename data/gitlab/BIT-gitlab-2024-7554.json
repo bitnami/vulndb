@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-7554",
+  "summary": "Exposure of Sensitive Information to an Unauthorized Actor in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 13.9 before 17.0.6, all versions starting from 17.1 before 17.1.4, all versions starting from 17.2 before 17.2.2. Under certain conditions, access tokens may have been logged when an API request was made in a specific manner.",
   "aliases": [
     "CVE-2024-7554"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-08-10T07:18:59.092Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

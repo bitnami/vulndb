@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-4912",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 10.5 before 16.4.3, all versions starting from 16.5 before 16.5.3, all versions starting from 16.6 before 16.6.1. It was possible for an attacker to cause a client-side denial of service using malicious crafted mermaid diagram input.",
   "aliases": [
     "CVE-2023-4912"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:58:07.108Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-25980",
+  "summary": "Msa-24-0003: h5p attempts report did not respect activity group settings",
   "details": "Separate Groups mode restrictions were not honored in the H5P attempts report, which would display users from other groups. By default this only provided additional access to non-editing teachers.",
   "aliases": [
     "CVE-2024-25980"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-31T18:22:30.148Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

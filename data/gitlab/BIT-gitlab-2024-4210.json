@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-4210",
+  "summary": "Uncontrolled Resource Consumption in GitLab",
   "details": "A Denial of Service (DoS) condition has been discovered in GitLab CE/EE affecting all versions starting with 12.6 before 17.0.6, 17.1 prior to 17.1.4, and 17.2 prior to 17.2.2. It is possible for an attacker to cause a denial of service using crafted adoc files.",
   "aliases": [
     "CVE-2024-4210"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-08-10T07:24:57.497Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

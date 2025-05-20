@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-42501",
+  "summary": "Apache Superset: Unnecessary read permissions within the Gamma role",
   "details": "Unnecessary read permissions within the Gamma role would allow authenticated users to read configured CSS templates and annotations.\nThis issue affects Apache Superset: before 2.1.2.\nUsers should upgrade to version or above 2.1.2 and run `superset init` to reconstruct the Gamma role or remove `can_read` permission from the mentioned resources.",
   "aliases": [
     "CVE-2023-42501"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:27:30.205Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

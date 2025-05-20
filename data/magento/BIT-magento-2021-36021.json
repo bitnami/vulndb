@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-36021",
+  "summary": "Magento Commerce CMS Page Improper Input Validation Could Lead To Remote Code Execution",
   "details": "Magento versions 2.4.2 (and earlier), 2.4.2-p1 (and earlier) and 2.3.7 (and earlier) are affected by an Improper input validation vulnerability within the CMS page scheduled update feature. An authenticated attacker with administrative privilege could leverage this vulnerability to achieve remote code execution on the system.",
   "aliases": [
     "CVE-2021-36021"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T10:57:45.085Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

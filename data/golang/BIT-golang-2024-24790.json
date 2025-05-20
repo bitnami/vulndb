@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-24790",
+  "summary": "Unexpected behavior from Is methods for IPv4-mapped IPv6 addresses in net/netip",
   "details": "The various Is methods (IsPrivate, IsLoopback, etc) did not work as expected for IPv4-mapped IPv6 addresses, returning false for addresses which would return true in their traditional IPv4 forms.",
   "aliases": [
     "CVE-2024-24790"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-06-07T07:18:59.012Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

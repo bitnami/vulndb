@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-24787",
+  "summary": "Arbitrary code execution during build on Darwin in cmd/go",
   "details": "On Darwin, building a Go module which contains CGO can trigger arbitrary code execution when using the Apple version of ld, due to usage of the -lto_library flag in a \"#cgo LDFLAGS\" directive.",
   "aliases": [
     "CVE-2024-24787"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-05-14T07:18:33.392Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }
