@@ -43,6 +43,8 @@ Please note that this database is populated with information from the year 2020 
 
 In the [config](config) folder you can find the information about the Bitnami components, especially the vendor and product names to work with their [CPE specifications](https://cpe.mitre.org/specification/). Based on this information, the [data](data) folder is updated periodically with the set of CVEs related to our components.
 
+> NOTE: the `summary` information in our CVE registries is retrieved from the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) CVE cache.
+
 ### Available fields in config files
 
 Most of the files under the `config/components` directory only include their component name, but components are defining other properties like `cpeVendor`, `cpeProduct`, or `cpeSoftwareEdition`. To filter the CVEs related to each component, a sample `:cpeVendor:cpeProduct:` string is used, where `cpeVendor` and `cpeProduct` can be overridden by defining the property in its config file, being `name` the default value for both properties.
