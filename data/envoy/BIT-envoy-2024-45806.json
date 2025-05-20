@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-45806",
+  "summary": "Potential manipulate `x-envoy` headers from external sources in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. A security vulnerability in Envoy allows external clients to manipulate Envoy headers, potentially leading to unauthorized access or other malicious actions within the mesh. This issue arises due to Envoy's default configuration of internal trust boundaries, which considers all RFC1918 private address ranges as internal. The default behavior for handling internal addresses in Envoy has been changed. Previously, RFC1918 IP addresses were automatically considered internal, even if the internal_address_config was empty.  The default configuration of Envoy will continue to trust internal addresses while in this release and it will not trust them by default in next release. If you have tooling such as probes on your private network which need to be treated as trusted (e.g. changing arbitrary x-envoy headers) please explicitly include those addresses or CIDR ranges into `internal_address_config`. Successful exploitation could allow attackers to bypass security controls, access sensitive data, or disrupt services within the mesh, like Istio. This issue has been addressed in versions 1.31.2, 1.30.6, 1.29.9, and 1.28.7. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-45806"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-09-21T07:10:58.550Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

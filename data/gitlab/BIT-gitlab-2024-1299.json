@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-1299",
+  "summary": "Privilege Chaining in GitLab",
   "details": "A privilege escalation vulnerability was discovered in GitLab affecting versions 16.8 prior to 16.8.4 and 16.9 prior to 16.9.2. It was possible for a user with custom role of `manage_group_access_tokens` to rotate group access tokens with owner privileges.",
   "aliases": [
     "CVE-2024-1299"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-03-12T08:24:19.293Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

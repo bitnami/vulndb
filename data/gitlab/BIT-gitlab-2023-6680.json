@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6680",
+  "summary": "Improper Certificate Validation in GitLab",
   "details": "An improper certificate validation issue in Smartcard authentication in GitLab EE affecting all versions from 11.6 prior to 16.4.4, 16.5 prior to 16.5.4, and 16.6 prior to 16.6.2 allows an attacker to authenticate as another user given their public key if they use Smartcard authentication. Smartcard authentication is an experimental feature and has to be manually enabled by an administrator.",
   "aliases": [
     "CVE-2023-6680"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T10:54:27.113Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-12431",
+  "summary": "Missing Authorization in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 15.5 before 17.5.5, 17.6 before 17.6.3, and 17.7 before 17.7.1, in which unauthorized users could manipulate the status of issues in public projects.",
   "aliases": [
     "CVE-2024-12431"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-01-10T19:24:59.289Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-37906",
+  "summary": "Discourse vulnerable to DoS via post edit reason",
   "details": "Discourse is an open source discussion platform. Prior to version 3.0.6 of the `stable` branch and version 3.1.0.beta7 of the `beta` and `tests-passed` branches, a malicious user can edit a post in a topic and cause a DoS with a carefully crafted edit reason. The issue is patched in version 3.0.6 of the `stable` branch and version 3.1.0.beta7 of the `beta` and `tests-passed` branches. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2023-37906"
@@ -267,5 +268,5 @@
     }
   ],
   "published": "2024-03-06T10:55:36.996Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

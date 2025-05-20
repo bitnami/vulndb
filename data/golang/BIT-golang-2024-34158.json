@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-34158",
+  "summary": "Stack exhaustion in Parse in go/build/constraint",
   "details": "Calling Parse on a \"// +build\" build tag line with deeply nested expressions can cause a panic due to stack exhaustion.",
   "aliases": [
     "CVE-2024-34158"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-09-10T07:06:15.527Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

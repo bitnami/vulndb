@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-11828",
+  "summary": "Inefficient Algorithmic Complexity in GitLab",
   "details": "A denial of service (DoS) condition was discovered in GitLab CE/EE affecting all versions from 13.2.4 before 17.4.5, 17.5 before 17.5.3, and 17.6 before 17.6.1. By leveraging this vulnerability an attacker could create a DoS condition by sending crafted API calls. This was a regression of an earlier patch.",
   "aliases": [
     "CVE-2024-11828"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-11-28T19:21:48.331Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

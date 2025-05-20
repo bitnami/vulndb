@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6195",
+  "summary": "Server-Side Request Forgery (SSRF) in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.5 prior to 16.9.7, starting from 16.10 prior to 16.10.5, and starting from 16.11 prior to 16.11.2. GitLab was vulnerable to Server Side Request Forgery when an attacker uses a malicious URL in the markdown  image value when importing a GitHub repository.",
   "aliases": [
     "CVE-2023-6195"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-02-01T07:29:24.815Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

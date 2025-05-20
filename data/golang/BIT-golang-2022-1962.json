@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-1962",
+  "summary": "Stack exhaustion due to deeply nested types in go/parser",
   "details": "Uncontrolled recursion in the Parse functions in go/parser before Go 1.17.12 and Go 1.18.4 allow an attacker to cause a panic due to stack exhaustion via deeply nested types or declarations.",
   "aliases": [
     "CVE-2022-1962"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:02:59.703Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

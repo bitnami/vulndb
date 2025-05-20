@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-23575",
+  "summary": "Integer overflow in Tensorflow",
   "details": "Tensorflow is an Open Source Machine Learning Framework. The implementation of `OpLevelCostEstimator::CalculateTensorSize` is vulnerable to an integer overflow if an attacker can create an operation which would involve a tensor with large enough number of elements. The fix will be included in TensorFlow 2.8.0. We will also cherrypick this commit on TensorFlow 2.7.1, TensorFlow 2.6.3, and TensorFlow 2.5.3, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-23575"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-03-06T11:15:08.951Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

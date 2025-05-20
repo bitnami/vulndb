@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2024-24795",
+  "summary": "Apache HTTP Server: HTTP Response Splitting in multiple modules",
   "details": "HTTP Response splitting in multiple modules in Apache HTTP Server allows an attacker that can inject malicious response headers into backend applications to cause an HTTP desynchronization attack.\n\nUsers are recommended to upgrade to version 2.4.59, which fixes this issue.",
   "aliases": [
     "CVE-2024-24795"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-04-06T18:17:14.870Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

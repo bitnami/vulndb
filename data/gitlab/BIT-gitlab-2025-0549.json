@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2025-0549",
+  "summary": "Authentication Bypass Using an Alternate Path or Channel in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 17.3 prior to 17.9.8, from 17.10 prior to 17.10.6, and from 17.11 prior to 17.11.2. A security vulnerability allows attackers to bypass Device OAuth flow protections, enabling authorization form submission through minimal user interaction.",
   "aliases": [
     "CVE-2025-0549"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-05-13T06:11:47.084Z",
-  "modified": "2025-05-13T06:13:07.908Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

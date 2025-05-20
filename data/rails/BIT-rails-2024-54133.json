@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-rails-2024-54133",
+  "summary": "Possible Content Security Policy bypass in Action Dispatch",
   "details": "Action Pack is a framework for handling and responding to web requests. There is a possible Cross Site Scripting (XSS) vulnerability  in the `content_security_policy` helper starting in version 5.2.0 of Action Pack and prior to versions 7.0.8.7, 7.1.5.1, 7.2.2.1, and 8.0.0.1. Applications which set Content-Security-Policy (CSP) headers dynamically from untrusted user input may be vulnerable to carefully crafted inputs being able to inject new directives into the CSP. This could lead to a bypass of the CSP and its protection against XSS and other attacks. Versions 7.0.8.7, 7.1.5.1, 7.2.2.1, and 8.0.0.1 contain a fix. As a workaround, applications can avoid setting CSP headers dynamically from untrusted input, or can validate/sanitize that input.",
   "aliases": [
     "CVE-2024-54133"
@@ -88,5 +89,5 @@
     }
   ],
   "published": "2025-04-14T11:27:29.848Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

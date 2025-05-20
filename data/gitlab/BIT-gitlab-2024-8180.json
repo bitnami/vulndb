@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8180",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.3 before 17.3.7, 17.4 before 17.4.4, and 17.5 before 17.5.2. Improper output encoding could lead to XSS if CSP is not enabled.",
   "aliases": [
     "CVE-2024-8180"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-11-16T07:11:28.184Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

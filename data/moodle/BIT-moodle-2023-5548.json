@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5548",
+  "summary": "Moodle: cache poisoning risk with endpoint revision numbers",
   "details": "Stronger revision number limitations were required on file serving endpoints to improve cache poisoning protection.",
   "aliases": [
     "CVE-2023-5548"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T10:57:10.388Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

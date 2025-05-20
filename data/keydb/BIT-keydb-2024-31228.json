@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2024-31228",
+  "summary": "Denial-of-service due to unbounded pattern matching in Redis",
   "details": "Redis is an open source, in-memory database that persists on disk. Authenticated users can trigger a denial-of-service by using specially crafted, long string match patterns on supported commands such as `KEYS`, `SCAN`, `PSUBSCRIBE`, `FUNCTION LIST`, `COMMAND LIST` and ACL definitions. Matching of extremely long patterns may result in unbounded recursion, leading to stack overflow and process crash. This problem has been fixed in Redis versions 6.2.16, 7.2.6, and 7.4.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-31228"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-10-09T16:30:39.030Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

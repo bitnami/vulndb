@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-5257",
+  "summary": "Improper Access Control in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 17.0 prior to 17.0.4 and from 17.1 prior to 17.1.2 where a Developer user with `admin_compliance_framework` custom role may have been able to modify the URL for a group namespace.",
   "aliases": [
     "CVE-2024-5257"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-07-13T07:20:36.387Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

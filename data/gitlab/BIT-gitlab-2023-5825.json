@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-5825",
+  "summary": "Loop with Unreachable Exit Condition ('Infinite Loop') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 16.2 before 16.3.6, all versions starting from 16.4 before 16.4.2, all versions starting from 16.5 before 16.5.1. A low-privileged attacker can point a CI/CD Component to an incorrect path and cause the server to exhaust all available memory through an infinite loop and cause Denial of Service.",
   "aliases": [
     "CVE-2023-5825"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:56:16.968Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

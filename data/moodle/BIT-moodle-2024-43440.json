@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43440",
+  "summary": "Moodle: lfi vulnerability when restoring malformed block backups",
   "details": "A flaw was found in moodle. A local file may include risks when restoring block backups.",
   "aliases": [
     "CVE-2024-43440"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:19:00.410Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

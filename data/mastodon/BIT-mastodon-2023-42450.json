@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2023-42450",
+  "summary": "Mastodon Server-Side Request Forgery vulnerability",
   "details": "Mastodon is a free, open-source social network server based on ActivityPub. Starting in version 4.2.0-beta1 and prior to version 4.2.0-rc2, by crafting specific input, attackers can inject arbitrary data into HTTP requests issued by Mastodon. This can be used to perform confused deputy attacks if the server configuration includes `ALLOWED_PRIVATE_ADDRESSES` to allow access to local exploitable services. Version 4.2.0-rc2 has a patch for the issue.",
   "aliases": [
     "CVE-2023-42450"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T10:56:05.281Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

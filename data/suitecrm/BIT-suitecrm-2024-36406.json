@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2024-36406",
+  "summary": "SuiteCRM vulnerable to open redirects",
   "details": "SuiteCRM is an open-source Customer Relationship Management (CRM) software application. In versions prior to 7.14.4 and 8.6.1, unchecked input allows for open re-direct. Versions 7.14.4 and 8.6.1 contain a fix for this issue.",
   "aliases": [
     "CVE-2024-36406"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-06-12T07:39:28.408Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-36387",
+  "summary": "Apache Superset: Improper API permission for low privilege users",
   "details": "An improper default REST API permission for Gamma users in Apache Superset up to and including 2.1.0 allows for an authenticated Gamma user to test database connections.",
   "aliases": [
     "CVE-2023-36387"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:28:04.907Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

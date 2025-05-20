@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-24288",
+  "summary": "Apache Airflow: RCE in example DAGs",
   "details": "In Apache Airflow, prior to version 2.2.4, some example DAGs did not properly sanitize user-provided params, making them susceptible to OS Command Injection from the web UI.",
   "aliases": [
     "CVE-2022-24288"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:58:27.613Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

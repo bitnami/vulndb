@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-couchdb-2022-24706",
+  "summary": "Remote Code Execution Vulnerability in Packaging",
   "details": "In Apache CouchDB prior to 3.2.2, an attacker can access an improperly secured default installation without authenticating and gain admin privileges. The CouchDB documentation has always made recommendations for properly securing an installation, including recommending using a firewall in front of all CouchDB installations.",
   "aliases": [
     "CVE-2022-24706"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T10:51:24.067Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

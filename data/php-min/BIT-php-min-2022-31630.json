@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2022-31630",
+  "summary": "OOB read due to insufficient input validation in imageloadfont()",
   "details": "In PHP versions prior to 7.4.33, 8.0.25 and 8.1.12, when using imageloadfont() function in gd extension, it is possible to supply a specially crafted font file, such as if the loaded font is used with imagechar() function, the read outside allocated buffer will be used. This can lead to crashes or disclosure of confidential information.",
   "aliases": [
     "CVE-2022-31630"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2025-01-14T19:21:29.110Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

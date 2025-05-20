@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-3775",
+  "summary": "Vault Enterprise's Sentinel RGP Policies Allowed For Cross-Namespace Denial of Service",
   "details": "A Vault Enterprise Sentinel Role Governing Policy created by an operator to restrict access to resources in one namespace can be applied to requests outside in another non-descendant namespace, potentially resulting in denial of service. Fixed in Vault Enterprise 1.15.0, 1.14.4, 1.13.8.",
   "aliases": [
     "CVE-2023-3775"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T11:08:41.981Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

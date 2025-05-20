@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-12379",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "A denial of service vulnerability in GitLab CE/EE affecting all versions from 14.1 prior to 17.6.5, 17.7 prior to 17.7.4, and 17.8 prior to 17.8.2 allows an attacker to impact the availability of GitLab via unbounded symbol creation via the scopes parameter in a Personal Access Token.",
   "aliases": [
     "CVE-2024-12379"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-02-17T19:27:19.016Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

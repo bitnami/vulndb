@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2022-41703",
+  "summary": "Apache Superset: SQL injection vulnerability in adhoc clauses",
   "details": "A vulnerability in the SQL Alchemy connector of Apache Superset allows an authenticated user with read access to a specific database to add subqueries to the WHERE and HAVING fields referencing tables on the same database that the user should not have access to, despite the user having the feature flag \"ALLOW_ADHOC_SUBQUERY\" disabled (default value).  This issue affects Apache Superset version 1.5.2 and prior versions and version 2.0.0.",
   "aliases": [
     "CVE-2022-41703"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-02-05T07:29:20.796Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

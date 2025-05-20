@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-rabbitmq-2023-46118",
+  "summary": "Denial of Service by publishing large messages over the HTTP API",
   "details": "RabbitMQ is a multi-protocol messaging and streaming broker. HTTP API did not enforce an HTTP request body limit, making it vulnerable for denial of service (DoS) attacks with very large messages. An authenticated user with sufficient credentials can publish a very large messages over the HTTP API and cause target node to be terminated by an \"out-of-memory killer\"-like mechanism. This vulnerability has been patched in versions 3.11.24 and 3.12.7.",
   "aliases": [
     "CVE-2023-46118"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T11:03:02.882Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cilium-2023-41333",
+  "summary": "Bypass of namespace restrictions in CiliumNetworkPolicy ",
   "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. An attacker with the ability to create or modify CiliumNetworkPolicy objects in a particular namespace is able to affect traffic on an entire Cilium cluster, potentially bypassing policy enforcement in other namespaces. By using a crafted `endpointSelector` that uses the `DoesNotExist` operator on the `reserved:init` label, the attacker can create policies that bypass namespace restrictions and affect the entire Cilium cluster. This includes potentially allowing or denying all traffic. This attack requires API server access, as described in the Kubernetes API Server Attacker section of the Cilium Threat Model. This issue has been resolved in Cilium versions 1.14.2, 1.13.7, and 1.12.14. As a workaround an admission webhook can be used to prevent the use of `endpointSelectors` that use the `DoesNotExist` operator on the `reserved:init` label in CiliumNetworkPolicies.",
   "aliases": [
     "CVE-2023-41333"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-05-15T12:06:29.973Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

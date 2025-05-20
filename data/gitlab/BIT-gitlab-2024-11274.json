@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-11274",
+  "summary": "URL Redirection to Untrusted Site ('Open Redirect') in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.1 prior to 17.4.6, starting from 17.5 prior to 17.5.4, and starting from 17.6 prior to 17.6.2, injection of NEL headers in k8s proxy response could lead to session data exfiltration.",
   "aliases": [
     "CVE-2024-11274"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-12-16T07:24:08.091Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

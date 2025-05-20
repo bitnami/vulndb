@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-15205",
+  "summary": "Data leak in Tensorflow",
   "details": "In Tensorflow before versions 1.15.4, 2.0.3, 2.1.2, 2.2.1 and 2.3.1, the `data_splits` argument of `tf.raw_ops.StringNGrams` lacks validation. This allows a user to pass values that can cause heap overflow errors and even leak contents of memory In the linked code snippet, all the binary strings after `ee ff` are contents from the memory stack. Since these can contain return addresses, this data leak can be used to defeat ASLR. The issue is patched in commit 0462de5b544ed4731aa2fb23946ac22c01856b80, and is released in TensorFlow versions 1.15.4, 2.0.3, 2.1.2, 2.2.1, or 2.3.1.",
   "aliases": [
     "CVE-2020-15205"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:20:33.621Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

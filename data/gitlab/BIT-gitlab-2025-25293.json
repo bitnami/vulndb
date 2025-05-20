@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2025-25293",
+  "summary": "ruby-saml vulnerable to Remote Denial of Service (DoS) with compressed SAML responses",
   "details": "ruby-saml provides security assertion markup language (SAML) single sign-on (SSO) for Ruby. Prior to versions 1.12.4 and 1.18.0, ruby-saml is susceptible to remote Denial of Service (DoS) with compressed SAML responses. ruby-saml uses zlib to decompress SAML responses in case they're compressed. It is possible to bypass the message size check with a compressed assertion since the message size is checked before inflation and not after. This issue may lead to remote Denial of Service (DoS). Versions 1.12.4 and 1.18.0 fix the issue.",
   "aliases": [
     "CVE-2025-25293"
@@ -83,5 +84,5 @@
     }
   ],
   "published": "2025-04-14T11:55:21.293Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

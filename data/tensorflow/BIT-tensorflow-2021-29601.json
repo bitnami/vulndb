@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-29601",
+  "summary": "Integer overflow in TFLite concatentation",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. The TFLite implementation of concatenation is vulnerable to an integer overflow issue(https://github.com/tensorflow/tensorflow/blob/7b7352a724b690b11bfaae2cd54bc3907daf6285/tensorflow/lite/kernels/concatenation.cc#L70-L76). An attacker can craft a model such that the dimensions of one of the concatenation input overflow the values of `int`. TFLite uses `int` to represent tensor dimensions, whereas TF uses `int64`. Hence, valid TF models can trigger an integer overflow when converted to TFLite format. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2, TensorFlow 2.3.3, TensorFlow 2.2.3 and TensorFlow 2.1.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-29601"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:18:18.197Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

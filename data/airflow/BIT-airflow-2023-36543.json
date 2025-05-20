@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-36543",
+  "summary": "Apache Airflow: ReDoS via dags function",
   "details": "Apache Airflow, versions before 2.6.3, has a vulnerability where an authenticated user can use crafted input to make the current request hang. It is recommended to upgrade to a version that is not affected",
   "aliases": [
     "CVE-2023-36543"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:54:19.002Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

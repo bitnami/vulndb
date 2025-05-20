@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-13041",
+  "summary": "Incorrect User Management in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 16.4 prior to 17.5.5, starting from 17.6 prior to 17.6.3, and starting from 17.7 prior to 17.7.1. When a user is created via the SAML provider, the external groups setting overrides the external provider configuration. As a result, the user may not be marked as external thereby giving those users access to internal projects or groups.",
   "aliases": [
     "CVE-2024-13041"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-01-10T19:24:39.902Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

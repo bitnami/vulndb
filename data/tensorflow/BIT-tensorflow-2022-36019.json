@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-36019",
+  "summary": "`CHECK` fail in `FakeQuantWithMinMaxVarsPerChannel` in TensorFlow",
   "details": "TensorFlow is an open source platform for machine learning. If `FakeQuantWithMinMaxVarsPerChannel` is given `min` or `max` tensors of a rank other than one, it results in a `CHECK` fail that can be used to trigger a denial of service attack. We have patched the issue in GitHub commit 785d67a78a1d533759fcd2f5e8d6ef778de849e0. The fix will be included in TensorFlow 2.10.0. We will also cherrypick this commit on TensorFlow 2.9.1, TensorFlow 2.8.1, and TensorFlow 2.7.2, as these are also affected and still in supported range. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-36019"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T11:11:50.786Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

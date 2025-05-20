@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-28583",
+  "summary": "Magento Commerce insecure storage of sensitive documentation",
   "details": "Magento versions 2.4.2 (and earlier), 2.4.1-p1 (and earlier) and 2.3.6-p1 (and earlier) are affected by a Violation of Secure Design Principles vulnerability in RMA PDF filename formats. Successful exploitation could allow an attacker to get unauthorized access to restricted resources.",
   "aliases": [
     "CVE-2021-28583"
@@ -73,5 +74,5 @@
     }
   ],
   "published": "2024-03-06T10:58:23.464Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

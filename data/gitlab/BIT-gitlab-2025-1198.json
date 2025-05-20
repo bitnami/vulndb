@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-1198",
+  "summary": "Insufficient Session Expiration in GitLab",
   "details": "An issue discovered in GitLab CE/EE affecting all versions from 16.11 prior to 17.6.5, 17.7 prior to 17.7.4, and 17.8 prior to 17.8.2 meant that long-lived connections in ActionCable potentially allowed revoked Personal Access Tokens access to streaming results.",
   "aliases": [
     "CVE-2025-1198"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2025-02-17T19:10:33.316Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

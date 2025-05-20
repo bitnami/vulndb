@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2024-25619",
+  "summary": "Destroying OAuth Applications doesn't notify Streaming of Access Tokens being destroyed in mastodon",
   "details": "Mastodon is a free, open-source social network server based on ActivityPub. When an OAuth Application is destroyed, the streaming server wasn't being informed that the Access Tokens had also been destroyed, this could have posed security risks to users by allowing an application to continue listening to streaming after the application had been destroyed. Essentially this comes down to the fact that when Doorkeeper sets up the relationship between Applications and Access Tokens, it uses a `dependent: delete_all` configuration, which means the `after_commit` callback setup on `AccessTokenExtension` didn't actually fire, since `delete_all` doesn't trigger ActiveRecord callbacks. To mitigate, we need to add a `before_destroy` callback to `ApplicationExtension` which announces to streaming that all the Application's Access Tokens are being \"killed\". Impact should be negligible given the affected application had to be owned by the user. None the less this issue has been addressed in versions 4.2.6, 4.1.14, 4.0.14, and 3.5.18. Users are advised to upgrade. There are no known workaround for this vulnerability.",
   "aliases": [
     "CVE-2024-25619"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-31T18:21:09.827Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

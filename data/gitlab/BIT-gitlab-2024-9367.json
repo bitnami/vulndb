@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9367",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 13.9 before 17.4.6, 17.5 before 17.5.4, and 17.6 before 17.6.2, that allows an attacker to cause uncontrolled CPU consumption, potentially leading to a Denial of Service (DoS) condition while parsing templates to generate changelogs.",
   "aliases": [
     "CVE-2024-9367"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-12-16T07:10:23.699Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

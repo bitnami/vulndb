@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-2485",
+  "summary": "Incorrect Privilege Assignment in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 14.1 before 15.10.8, all versions starting from 15.11 before 15.11.7, all versions starting from 16.0 before 16.0.2. A malicious maintainer in a project can escalate other users to Owners in that project if they import members from another project that those other users are Owners of.",
   "aliases": [
     "CVE-2023-2485"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:07:45.289Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

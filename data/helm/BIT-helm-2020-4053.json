@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2020-4053",
+  "summary": "Path Traversal in Helm Plugin Archive",
   "details": "In Helm greater than or equal to 3.0.0 and less than 3.2.4, a path traversal attack is possible when installing Helm plugins from a tar archive over HTTP. It is possible for a malicious plugin author to inject a relative path into a plugin archive, and copy a file outside of the intended directory. This has been fixed in 3.2.4.",
   "aliases": [
     "CVE-2020-4053"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:54:38.488Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

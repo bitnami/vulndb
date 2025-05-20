@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-dolibarr-2023-4198",
+  "summary": "Dolibarr ERP CRM (<= 17.0.3) Improper Access Control",
   "details": "Improper Access Control in Dolibarr ERP CRM <= v17.0.3 allows an unauthorized authenticated user to read a database table containing customer data",
   "aliases": [
     "CVE-2023-4198"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-03T14:06:44.507Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

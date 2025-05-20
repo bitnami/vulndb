@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2025-1094",
+  "summary": "PostgreSQL quoting APIs miss neutralizing quoting syntax in text that fails encoding validation",
   "details": "Improper neutralization of quoting syntax in PostgreSQL libpq functions PQescapeLiteral(), PQescapeIdentifier(), PQescapeString(), and PQescapeStringConn() allows a database input provider to achieve SQL injection in certain usage patterns.  Specifically, SQL injection requires the application to use the function result to construct input to psql, the PostgreSQL interactive terminal.  Similarly, improper neutralization of quoting syntax in PostgreSQL command line utility programs allows a source of command line arguments to achieve SQL injection when client_encoding is BIG5 and server_encoding is one of EUC_TW or MULE_INTERNAL.  Versions before PostgreSQL 17.3, 16.7, 15.11, 14.16, and 13.19 are affected.",
   "aliases": [
     "CVE-2025-1094"
@@ -94,5 +95,5 @@
     }
   ],
   "published": "2025-02-17T19:18:46.733Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

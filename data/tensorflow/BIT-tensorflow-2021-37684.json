@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-37684",
+  "summary": "Division by zero in TensorFlow Lite pooling operations",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions the implementations of pooling in TFLite are vulnerable to division by 0 errors as there are no checks for divisors not being 0. We have patched the issue in GitHub commit [dfa22b348b70bb89d6d6ec0ff53973bacb4f4695](https://github.com/tensorflow/tensorflow/commit/dfa22b348b70bb89d6d6ec0ff53973bacb4f4695). The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-37684"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T11:16:50.661Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-argo-workflows-2022-29164",
+  "summary": "Privilege Escalation in argo-workflows",
   "details": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. In affected versions an attacker can create a workflow which produces a HTML artifact containing an HTML file that contains a script which uses XHR calls to interact with the Argo Server API. The attacker emails the deep-link to the artifact to their victim. The victim opens the link, the script starts running. As the script has access to the Argo Server API (as the victim), so may read information about the victim’s workflows, or create and delete workflows. Note the attacker must be an insider: they must have access to the same cluster as the victim and must already be able to run their own workflows. The attacker must have an understanding of the victim’s system. We have seen no evidence of this in the wild. We urge all users to upgrade to the fixed versions.",
   "aliases": [
     "CVE-2022-29164"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:50:37.184Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

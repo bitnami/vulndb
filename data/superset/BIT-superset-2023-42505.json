@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-42505",
+  "summary": "Apache Superset: Sensitive information disclosure on db connection details",
   "details": "An authenticated user with read permissions on database connections metadata could potentially access sensitive information such as the connection's username.\n\nThis issue affects Apache Superset before 3.0.0.",
   "aliases": [
     "CVE-2023-42505"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:27:12.602Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

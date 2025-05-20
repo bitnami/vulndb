@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-envoy-2025-46821",
+  "summary": "Envoy vulnerable to bypass of RBAC uri_template permission",
   "details": "Envoy is a cloud-native edge/middle/service proxy. Prior to versions 1.34.1, 1.33.3, 1.32.6, and 1.31.8, Envoy's URI template matcher incorrectly excludes the `*` character from a set of valid characters in the URI path. As a result URI path containing the `*` character will not match a URI template expressions. This can result in bypass of RBAC rules when configured using the `uri_template` permissions. This vulnerability is fixed in Envoy versions v1.34.1, v1.33.3, v1.32.6, v1.31.8. As a workaround, configure additional RBAC permissions using `url_path` with `safe_regex` expression.",
   "aliases": [
     "CVE-2025-46821"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2025-05-09T05:41:53.497Z",
-  "modified": "2025-05-09T06:11:17.850Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

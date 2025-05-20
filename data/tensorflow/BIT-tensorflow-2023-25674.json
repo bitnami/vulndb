@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2023-25674",
+  "summary": "TensorFlow has Null Pointer Error in RandomShuffle with XLA enable",
   "details": "TensorFlow is an open source machine learning platform. Versions prior to 2.12.0 and 2.11.1 have a null pointer error in RandomShuffle with XLA enabled. A fix is included in TensorFlow 2.12.0 and 2.11.1.",
   "aliases": [
     "CVE-2023-25674"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:07:36.773Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

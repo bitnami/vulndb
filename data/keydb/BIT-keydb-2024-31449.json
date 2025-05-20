@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2024-31449",
+  "summary": "Lua library commands may lead to stack overflow and RCE in Redis",
   "details": "Redis is an open source, in-memory database that persists on disk. An authenticated user may use a specially crafted Lua script to trigger a stack buffer overflow in the bit library, which may potentially lead to remote code execution. The problem exists in all versions of Redis with Lua scripting. This problem has been fixed in Redis versions 6.2.16, 7.2.6, and 7.4.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-31449"
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-10-09T16:30:25.529Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

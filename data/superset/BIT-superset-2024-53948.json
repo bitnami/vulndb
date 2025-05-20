@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-superset-2024-53948",
+  "summary": "Apache Superset: Error verbosity exposes metadata in analytics databases",
   "details": "Generation of Error Message Containing analytics metadata Information in Apache Superset.\n\nThis issue affects Apache Superset: before 4.1.0.\n\nUsers are recommended to upgrade to version 4.1.0, which fixes the issue.",
   "aliases": [
     "CVE-2024-53948"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:25:06.905Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

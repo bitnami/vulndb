@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2021-20326",
+  "summary": "Specially crafted query may result in a denial of service of mongod",
   "details": "A user authorized to performing a specific type of find query may trigger a denial of service. This issue affects MongoDB Server v4.4 versions prior to 4.4.4.",
   "aliases": [
     "CVE-2021-20326"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:58:14.498Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

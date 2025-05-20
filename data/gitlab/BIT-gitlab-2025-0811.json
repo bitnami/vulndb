@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-0811",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 before 17.8.6, 17.9 before 17.9.3, and 17.10 before 17.10.1. Improper rendering of certain file types leads to cross-site scripting.",
   "aliases": [
     "CVE-2025-0811"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-03-29T07:11:18.091Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

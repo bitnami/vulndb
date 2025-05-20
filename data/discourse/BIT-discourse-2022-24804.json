@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-24804",
-  "details": "Discourse is an open source platform for community discussion. In stable versions prior to 2.8.3 erroneously expose groups. When a group with restricted visibility has been used to set the permissions of a category, the name of the group is leaked to any user that is able to see the category. To workaround the problem, a site administrator can remove groups with restricted visibility from any category's permissions setting.",
+  "summary": "Private group name exposure in discourse",
+  "details": "Discourse is an open source platform for community discussion. In stable versions prior to 2.8.3 and beta versions prior 2.9.0.beta4 erroneously expose groups. When a group with restricted visibility has been used to set the permissions of a category, the name of the group is leaked to any user that is able to see the category. To workaround the problem, a site administrator can remove groups with restricted visibility from any category's permissions setting.",
   "aliases": [
     "CVE-2022-24804"
   ],
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:06:36.976Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

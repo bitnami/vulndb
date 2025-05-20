@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2024-4263",
+  "summary": "Improper Access Control in mlflow/mlflow",
   "details": "A broken access control vulnerability exists in mlflow/mlflow versions before 2.10.1, where low privilege users with only EDIT permissions on an experiment can delete any artifacts. This issue arises due to the lack of proper validation for DELETE requests by users with EDIT permissions, allowing them to perform unauthorized deletions of artifacts. The vulnerability specifically affects the handling of artifact deletions within the application, as demonstrated by the ability of a low privilege user to delete a directory inside an artifact using a DELETE request, despite the official documentation stating that users with EDIT permission can only read and update artifacts, not delete them.",
   "aliases": [
     "CVE-2024-4263"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-04T07:17:58.524Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

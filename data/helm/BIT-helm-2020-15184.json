@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2020-15184",
+  "summary": "Aliases are never checked in Helm",
   "details": "In Helm before versions 2.16.11 and 3.3.2 there is a bug in which the `alias` field on a `Chart.yaml` is not properly sanitized. This could lead to the injection of unwanted information into a chart. This issue has been patched in Helm 3.3.2 and 2.16.11. A possible workaround is to manually review the `dependencies` field of any untrusted chart, verifying that the `alias` field is either not used, or (if used) does not contain newlines or path characters.",
   "aliases": [
     "CVE-2020-15184"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:55:17.666Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

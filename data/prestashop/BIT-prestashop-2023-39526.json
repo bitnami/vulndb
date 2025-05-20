@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-prestashop-2023-39526",
-  "details": "PrestaShop is an open source e-commerce web application. Versions prior to 8.0.5, and 8.1.1 are vulnerable to remote code execution through SQL injection and arbitrary file write in the back office. Versions 8.0.5, and 8.1.1 contain a patch. There are no known workarounds.",
+  "summary": "PrestaShopSQL manager vulnerability (potential RCE)",
+  "details": "PrestaShop is an open source e-commerce web application. Versions prior to 1.7.8.10, 8.0.5, and 8.1.1 are vulnerable to remote code execution through SQL injection and arbitrary file write in the back office. Versions 1.7.8.10, 8.0.5, and 8.1.1 contain a patch. There are no known workarounds.",
   "aliases": [
     "CVE-2023-39526"
   ],
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T11:03:44.012Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

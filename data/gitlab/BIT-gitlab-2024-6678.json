@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6678",
+  "summary": "Authentication Bypass by Spoofing in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 8.14 prior to 17.1.7, starting from 17.2 prior to 17.2.5, and starting from 17.3 prior to 17.3.2, which allows an attacker to trigger a pipeline as an arbitrary user under certain circumstances.",
   "aliases": [
     "CVE-2024-6678"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-09-14T07:08:36.238Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

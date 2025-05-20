@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-7296",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "An issue was discovered in GitLab EE affecting all versions from 16.5 prior to 17.7.7, 17.8 prior to 17.8.5, and 17.9 prior to 17.9.2  which allowed a user with a custom permission to approve pending membership requests beyond the maximum number of allowed users.",
   "aliases": [
     "CVE-2024-7296"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-15T07:19:42.794Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

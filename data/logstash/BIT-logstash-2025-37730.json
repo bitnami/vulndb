@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-logstash-2025-37730",
+  "summary": "Logstash Improper Certificate Validation in TCP output",
   "details": "Improper certificate validation in Logstash's TCP output could lead to a man-in-the-middle (MitM) attack in “client” mode, as hostname verification in TCP output was not being performed when the ssl_verification_mode => full was set.",
   "aliases": [
     "CVE-2025-37730"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-05-08T05:42:10.346Z",
-  "modified": "2025-05-08T06:11:50.963Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

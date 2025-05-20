@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2020-7065",
+  "summary": "mb_strtolower (UTF-32LE): stack-buffer-overflow at php_unicode_tolower_full",
   "details": "In PHP versions 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using mb_strtolower() function with UTF-32LE encoding, certain invalid strings could cause PHP to overwrite stack-allocated buffer. This could lead to memory corruption, crashes and potentially code execution.",
   "aliases": [
     "CVE-2020-7065"
@@ -84,5 +85,5 @@
     }
   ],
   "published": "2025-01-14T19:23:42.897Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

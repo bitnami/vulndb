@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28331",
+  "summary": "Moodle: xss risk when outputting database activity filter data",
   "details": "Content output by the database auto-linking filter required additional sanitizing to prevent an XSS risk.",
   "aliases": [
     "CVE-2023-28331"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T11:00:32.094Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

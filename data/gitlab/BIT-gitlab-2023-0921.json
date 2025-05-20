@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-0921",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "A lack of length validation in GitLab CE/EE affecting all versions from 8.3 before 15.10.8, 15.11 before 15.11.7, and 16.0 before 16.0.2 allows an authenticated attacker to create a large Issue description via GraphQL which, when repeatedly requested, saturates CPU usage.",
   "aliases": [
     "CVE-2023-0921"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:11:49.396Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-40754",
+  "summary": "Open Redirect",
   "details": "In Apache Airflow 2.3.0 through 2.3.4, there was an open redirect in the webserver's `/confirm` endpoint.",
   "aliases": [
     "CVE-2022-40754"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:57:05.679Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

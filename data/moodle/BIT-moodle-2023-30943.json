@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-30943",
+  "summary": "Moodle: tinymce loaders susceptible to arbitrary folder creation",
   "details": "The vulnerability was found Moodle which exists because the application allows a user to control path of the older to create in TinyMCE loaders. A remote user can send a specially crafted HTTP request and create arbitrary folders on the system.",
   "aliases": [
     "CVE-2023-30943"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:59:39.012Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-concourse-2020-5415",
+  "summary": "Concourse's GitLab auth allows impersonation",
   "details": "Concourse, versions prior to 6.3.1 and 6.4.1, in installations which use the GitLab auth connector, is vulnerable to identity spoofing by way of configuring a GitLab account with the same full name as another user who is granted access to a Concourse team. GitLab groups do not have this vulnerability, so GitLab users may be moved into groups which are then configured in the Concourse team.",
   "aliases": [
     "CVE-2020-5415"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:51:03.790Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

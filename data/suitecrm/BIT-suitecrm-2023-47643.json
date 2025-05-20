@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2023-47643",
+  "summary": "SuiteCRM has Unauthenticated Graphql Introspection Enabled",
   "details": "SuiteCRM is a Customer Relationship Management (CRM) software application. Prior to version 8.4.2, Graphql Introspection is enabled without authentication, exposing the scheme defining all object types, arguments, and functions. An attacker can obtain the GraphQL schema and understand the entire attack surface of the API, including sensitive fields such as UserHash. This issue is patched in version 8.4.2. There are no known workarounds.",
   "aliases": [
     "CVE-2023-47643"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:07:17.301Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

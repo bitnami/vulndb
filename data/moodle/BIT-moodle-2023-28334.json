@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28334",
+  "summary": "Moodle: users' name enumeration possible via idor on learning plans page",
   "details": "Authenticated users were able to enumerate other users' names via the learning plans page.",
   "aliases": [
     "CVE-2023-28334"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:00:05.402Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

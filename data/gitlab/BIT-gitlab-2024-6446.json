@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6446",
+  "summary": "Business Logic Errors in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 17.1 to 17.1.7, 17.2 prior to 17.2.5 and 17.3 prior to 17.3.2. A crafted URL could be used to trick a victim to trust an attacker controlled application.",
   "aliases": [
     "CVE-2024-6446"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-09-14T07:09:14.036Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

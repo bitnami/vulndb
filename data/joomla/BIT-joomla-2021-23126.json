@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-23126",
+  "summary": "[20210301] - Core - Insecure randomness within 2FA secret generation",
   "details": "An issue was discovered in Joomla! 3.2.0 through 3.9.24. Usage of the insecure rand() function within the process of generating the 2FA secret.",
   "aliases": [
     "CVE-2021-23126"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:12:11.991Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

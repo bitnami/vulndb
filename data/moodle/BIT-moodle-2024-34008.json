@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-34008",
+  "summary": "moodle: CSRF risk in analytics management of models",
   "details": "Actions in the admin management of analytics models did not include the necessary token to prevent a CSRF risk.",
   "aliases": [
     "CVE-2024-34008"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-07-19T07:25:34.028Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

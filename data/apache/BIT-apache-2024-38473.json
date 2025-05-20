@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2024-38473",
+  "summary": "Apache HTTP Server proxy encoding problem",
   "details": "Encoding problem in mod_proxy in Apache HTTP Server 2.4.59 and earlier allows request URLs with incorrect encoding to be sent to backend services, potentially bypassing authentication via crafted requests.\nUsers are recommended to upgrade to version 2.4.60, which fixes this issue.",
   "aliases": [
     "CVE-2024-38473"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-07-03T07:17:33.455Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

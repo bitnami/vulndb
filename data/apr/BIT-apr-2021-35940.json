@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apr-2021-35940",
+  "summary": "Regression of CVE-2017-12613",
   "details": "An out-of-bounds array read in the apr_time_exp*() functions was fixed in the Apache Portable Runtime 1.6.3 release (CVE-2017-12613). The fix for this issue was not carried forward to the APR 1.7.x branch, and hence version 1.7.0 regressed compared to 1.6.3 and is vulnerable to the same issue.",
   "aliases": [
     "CVE-2021-35940"
@@ -111,5 +112,5 @@
     }
   ],
   "published": "2024-03-06T10:50:57.087Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

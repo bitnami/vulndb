@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8186",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.6 before 17.7.6, 17.8 before 17.8.4, and 17.9 before 17.9.1. An attacker could inject HMTL into the child item search potentially leading to XSS in certain situations.",
   "aliases": [
     "CVE-2024-8186"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-03-05T07:13:13.551Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

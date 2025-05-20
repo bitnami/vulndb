@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43425",
+  "summary": "Moodle: remote code execution via calculated question types",
   "details": "A flaw was found in Moodle. Additional restrictions are required to avoid a remote code execution risk in calculated question types. Note: This requires the capability to add/update questions.",
   "aliases": [
     "CVE-2024-43425"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:44.557Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

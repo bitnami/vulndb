@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elk-2024-52972",
+  "summary": "Kibana allocation of resources without limits or throttling leads to crash",
   "details": "An allocation of resources without limits or throttling in Kibana can lead to a crash caused by a specially crafted request to /api/metrics/snapshot. This can be carried out by users with read access to the Observability Metrics or Logs features in Kibana.",
   "aliases": [
     "CVE-2024-52972"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-01-27T07:09:41.033Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-5077",
+  "summary": "Vault's Google Cloud Secrets Engine Removed Existing IAM Conditions When Creating / Updating Rolesets",
   "details": "The Vault and Vault Enterprise (\"Vault\") Google Cloud secrets engine did not preserve existing Google Cloud IAM Conditions upon creating or updating rolesets. Fixed in Vault 1.13.0.",
   "aliases": [
     "CVE-2023-5077"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2024-03-06T11:08:23.375Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

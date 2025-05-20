@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-node-2022-3786",
+  "summary": "X.509 Email Address Variable Length Buffer Overflow",
   "details": "A buffer overrun can be triggered in X.509 certificate verification, specifically in name constraint checking. Note that this occurs after certificate chain signature verification and requires either a CA to have signed a malicious certificate or for an application to continue certificate verification despite failure to construct a path to a trusted issuer. An attacker can craft a malicious email address in a certificate to overflow an arbitrary number of bytes containing the `.' character (decimal 46) on the stack. This buffer overflow could result in a crash (causing a denial of service). In a TLS client, this can be triggered by connecting to a malicious server. In a TLS server, this can be triggered if the server requests client authentication and a malicious client connects.",
   "aliases": [
     "CVE-2022-3786"
@@ -69,5 +70,5 @@
     }
   ],
   "published": "2024-03-06T11:02:40.764Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

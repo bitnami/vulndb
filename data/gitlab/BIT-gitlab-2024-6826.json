@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6826",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 11.2 before 17.3.6, 17.4 before 17.4.3, and 17.5 before 17.5.1. A denial of service could occur via importing a malicious crafted XML manifest file.",
   "aliases": [
     "CVE-2024-6826"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-10-26T07:11:57.115Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

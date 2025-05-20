@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-29247",
+  "summary": "Stored XSS on Apache Airflow",
   "details": "Task instance details page in the UI is vulnerable to a stored XSS.This issue affects Apache Airflow: before 2.6.0.",
   "aliases": [
     "CVE-2023-29247"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:54:51.000Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

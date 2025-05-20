@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-45341",
+  "summary": "Usage of IPv6 zone IDs can bypass URI name constraints in crypto/x509",
   "details": "A certificate with a URI which has a IPv6 address with a zone ID may incorrectly satisfy a URI name constraint that applies to the certificate chain. Certificates containing URIs are not permitted in the web PKI, so this only affects users of private PKIs which make use of URIs.",
   "aliases": [
     "CVE-2024-45341"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2025-01-30T19:13:14.453Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

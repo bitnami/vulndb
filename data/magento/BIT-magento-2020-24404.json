@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2020-24404",
+  "summary": "Incorrect permissions in Integrations component could lead to unauthorized deletion of cmsPages via REST API",
   "details": "Magento version 2.4.0 and 2.3.5p1 (and earlier) are affected by an incorrect permissions vulnerability within the Integrations component. This vulnerability could be abused by users with permissions to the Pages resource to delete cms pages via the REST API without authorization.",
   "aliases": [
     "CVE-2020-24404"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:07:52.679Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

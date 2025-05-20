@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-28440",
-  "details": "Discourse is an open source platform for community discussion. In affected versions a maliciously crafted request from a Discourse administrator can lead to a long-running request and eventual timeout. This has the greatest potential impact in shared hosting environments where admins are untrusted. This issue has been addressed in version 3.0.3. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+  "summary": "Denial of service via admin theme import route in Discourse",
+  "details": "Discourse is an open source platform for community discussion. In affected versions a maliciously crafted request from a Discourse administrator can lead to a long-running request and eventual timeout. This has the greatest potential impact in shared hosting environments where admins are untrusted. This issue has been addressed in versions 3.0.3 and 3.1.0.beta4. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2023-28440"
   ],
@@ -261,5 +262,5 @@
     }
   ],
   "published": "2024-03-06T10:58:07.559Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-python-min-2025-4516",
+  "summary": "Use-after-free in \"unicode_escape\" decoder with error handler",
   "details": "There is an issue in CPython when using `bytes.decode(\"unicode_escape\", error=\"ignore|replace\")`. If you are not using the \"unicode_escape\" encoding or an error handler your usage is not affected. To work-around this issue you may stop using the error= handler and instead wrap the bytes.decode() call in a try-except catching the DecodeError.",
   "aliases": [
     "CVE-2025-4516"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2025-05-20T07:36:33.198Z",
-  "modified": "2025-05-20T07:52:51.964Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

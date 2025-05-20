@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-53851",
+  "summary": "Partial denial of service via inline oneboxes in Discourse",
   "details": "Discourse is an open source platform for community discussion. In affected versions the endpoint for generating inline oneboxes for URLs wasn't enforcing limits on the number of URLs that it accepted, allowing a malicious user to inflict denial of service on some parts of the app. This vulnerability is only exploitable by authenticated users. This issue has been patched in the latest stable, beta and tests-passed versions of Discourse. Users are advised to upgrade. Users unable to upgrade should turn off the `enable inline onebox on all domains` site setting and remove all entries from the `allowed inline onebox domains` site setting.",
   "aliases": [
     "CVE-2024-53851"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-20T10:32:14.095Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

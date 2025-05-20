@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-29205",
+  "summary": "Segfault due to missing support for quantized types in TensorFlow",
   "details": "TensorFlow is an open source platform for machine learning. Prior to versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4, there is a potential for segfault / denial of service in TensorFlow by calling `tf.compat.v1.*` ops which don't yet have support for quantized types, which was added after migration to TensorFlow 2.x. In these scenarios, since the kernel is missing, a `nullptr` value is passed to `ParseDimensionValue` for the `py_value` argument. Then, this is dereferenced, resulting in segfault. Versions 2.9.0, 2.8.1, 2.7.2, and 2.6.4 contain a patch for this issue.",
   "aliases": [
     "CVE-2022-29205"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2024-03-06T11:14:23.891Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

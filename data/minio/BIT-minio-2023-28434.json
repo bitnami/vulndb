@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-minio-2023-28434",
+  "summary": "MinIO is vulnerable to privilege escalation on Linux/MacOS",
   "details": "Minio is a Multi-Cloud Object Storage framework. Prior to RELEASE.2023-03-20T20-16-18Z, an attacker can use crafted requests to bypass metadata bucket name checking and put an object into any bucket while processing `PostPolicyBucket`. To carry out this attack, the attacker requires credentials with `arn:aws:s3:::*` permission, as well as enabled Console API access. This issue has been patched in RELEASE.2023-03-20T20-16-18Z. As a workaround, enable browser API access and turn off `MINIO_BROWSER=off`.",
   "aliases": [
     "CVE-2023-28434"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:56:17.000Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

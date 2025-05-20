@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-22720",
+  "summary": "HTTP request smuggling vulnerability in Apache HTTP Server 2.4.52 and earlier",
   "details": "Apache HTTP Server 2.4.52 and earlier fails to close inbound connection when errors are encountered discarding the request body, exposing the server to HTTP Request Smuggling",
   "aliases": [
     "CVE-2022-22720"
@@ -110,5 +111,5 @@
     }
   ],
   "published": "2024-03-06T10:53:47.761Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

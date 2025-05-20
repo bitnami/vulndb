@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-2022-3590",
+  "summary": "WP <= 6.1.1 - Unauthenticated Blind SSRF via DNS Rebinding",
   "details": "WordPress is affected by an unauthenticated blind SSRF in the pingback feature. Because of a TOCTOU race condition between the validation checks and the HTTP request, attackers can reach internal hosts that are explicitly forbidden.",
   "aliases": [
     "CVE-2022-3590"
@@ -61,5 +62,5 @@
     }
   ],
   "published": "2024-03-06T11:09:54.469Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2025-1474",
+  "summary": "Weak Password Requirements in mlflow/mlflow",
   "details": "In mlflow/mlflow version 2.18, an admin is able to create a new user account without setting a password. This vulnerability could lead to security risks, as accounts without passwords may be susceptible to unauthorized access. Additionally, this issue violates best practices for secure user account management. The issue is fixed in version 2.19.0.",
   "aliases": [
     "CVE-2025-1474"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-28T07:22:47.450Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

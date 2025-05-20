@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-22719",
+  "summary": "mod_lua Use of uninitialized value of in r:parsebody",
   "details": "A carefully crafted request body can cause a read to a random memory area which could cause the process to crash. This issue affects Apache HTTP Server 2.4.52 and earlier.",
   "aliases": [
     "CVE-2022-22719"
@@ -106,5 +107,5 @@
     }
   ],
   "published": "2024-03-06T10:53:56.107Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

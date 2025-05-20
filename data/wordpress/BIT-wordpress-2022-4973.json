@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-2022-4973",
+  "summary": "WordPress Core < 6.0.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via use of the_meta(); function",
   "details": "WordPress Core, in versions up to 6.0.2, is vulnerable to Authenticated Stored Cross-Site Scripting that can be exploited by users with access to the WordPress post and page editor, typically consisting of Authors, Contributors, and Editors making it possible to inject arbitrary web scripts into posts and pages that execute if the the_meta(); function is called on that page.",
   "aliases": [
     "CVE-2022-4973"
@@ -206,5 +207,5 @@
     }
   ],
   "published": "2024-10-18T07:22:50.306Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

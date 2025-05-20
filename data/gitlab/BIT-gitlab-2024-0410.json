@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-0410",
+  "summary": "Improper Enforcement of Behavioral Workflow in GitLab",
   "details": "An authorization bypass vulnerability was discovered in GitLab affecting versions 15.1 prior to 16.7.6, 16.8 prior to 16.8.3, and 16.9 prior to 16.9.1. A developer could bypass CODEOWNERS approvals by creating a merge conflict.",
   "aliases": [
     "CVE-2024-0410"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:53:23.990Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

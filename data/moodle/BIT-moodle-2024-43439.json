@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43439",
+  "summary": "Moodle: reflected xss via h5p error message",
   "details": "A flaw was found in moodle. H5P error messages require additional sanitizing to prevent a reflected cross-site scripting (XSS) risk.",
   "aliases": [
     "CVE-2024-43439"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-04-24T07:29:07.150Z",
-  "modified": "2025-04-24T07:42:29.577Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

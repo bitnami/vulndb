@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2020-35612",
+  "summary": "[20201103] - Core - Path traversal in mod_random_image",
   "details": "An issue was discovered in Joomla! 2.5.0 through 3.9.22. The folder parameter of mod_random_image lacked input validation, leading to a path traversal vulnerability.",
   "aliases": [
     "CVE-2020-35612"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:11:07.391Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2020-15270",
+  "summary": "Improper session expiration in Parse Server",
   "details": "Parse Server (npm package parse-server) broadcasts events to all clients without checking if the session token is valid. This allows clients with expired sessions to still receive subscription objects. It is not possible to create subscription objects with invalid session tokens. The issue is not patched.",
   "aliases": [
     "CVE-2020-15270"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:04:25.404Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

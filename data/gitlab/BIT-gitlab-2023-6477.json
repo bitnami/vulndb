@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6477",
+  "summary": "Incorrect Privilege Assignment in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 16.5 before 16.7.6, all versions starting from 16.8 before 16.8.3, all versions starting from 16.9 before 16.9.1. When a user is assigned a custom role with admin_group_member permission, they may be able to make a group, other members or themselves Owners of that group, which may lead to privilege escalation.",
   "aliases": [
     "CVE-2023-6477"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:54:47.087Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

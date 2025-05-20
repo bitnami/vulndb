@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2021-32609",
+  "summary": "XSS vulnerability on Explore page",
   "details": "Apache Superset up to and including 1.1 does not sanitize titles correctly on the Explore page. This allows an attacker with Explore access to save a chart with a malicious title, injecting html (including scripts) into the page.",
   "aliases": [
     "CVE-2021-32609"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-05T07:29:50.701Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-5954",
+  "summary": "Vault Requests Triggering Policy Checks May Lead To Unbounded Memory Consumption",
   "details": "HashiCorp Vault and Vault Enterprise inbound client requests triggering a policy check can lead to an unbounded consumption of memory. A large number of these requests may lead to denial-of-service. Fixed in Vault 1.15.2, 1.14.6, and 1.13.10.",
   "aliases": [
     "CVE-2023-5954"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-03-06T11:08:11.600Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

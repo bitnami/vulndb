@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2020-5251",
+  "summary": "Information disclosure in parse-server",
   "details": "In parser-server before version 4.1.0, you can fetch all the users objects, by using regex in the NoSQL query. Using the NoSQL, you can use a regex on sessionToken and find valid accounts this way.",
   "aliases": [
     "CVE-2020-5251"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:04:01.101Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

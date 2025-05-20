@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2021-26697",
+  "summary": "Apache Airflow: Lineage API endpoint for Experimental API missed authentication check",
   "details": "The lineage endpoint of the deprecated Experimental API was not protected by authentication in Airflow 2.0.0. This allowed unauthenticated users to hit that endpoint. This is low-severity issue as the attacker needs to be aware of certain parameters to pass to that endpoint and even after can just get some metadata about a DAG and a Task. This issue affects Apache Airflow 2.0.0.",
   "aliases": [
     "CVE-2021-26697"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T10:59:36.299Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

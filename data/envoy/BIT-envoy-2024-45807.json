@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-45807",
+  "summary": "oghttp2 crash on OnBeginHeadersForStream in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. Envoy's 1.31 is using `oghttp` as the default HTTP/2 codec, and there are potential bugs around stream management in the codec. To resolve this Envoy will switch off the `oghttp2` by default. The impact of this issue is that envoy will crash. This issue has been addressed in release version 1.31.2. All users are advised to upgrade. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2024-45807"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-09-21T07:10:45.353Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

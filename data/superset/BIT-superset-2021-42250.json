@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2021-42250",
+  "summary": "Possible log injection",
   "details": "Improper output neutralization for Logs. A specific Apache Superset HTTP endpoint allowed for an authenticated user to forge log entries or inject malicious content into logs.",
   "aliases": [
     "CVE-2021-42250"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:29:35.000Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

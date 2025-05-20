@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-41921",
+  "summary": "Discourse chat messages should have a maximum character limit",
   "details": "Discourse is an open-source discussion platform. Prior to version 2.9.0.beta13, users can post chat messages of an unlimited length, which can cause a denial of service for other users when posting huge amounts of text. Users should upgrade to version 2.9.0.beta13, where a limit has been introduced. No known workarounds are available.",
   "aliases": [
     "CVE-2022-41921"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:03:20.207Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

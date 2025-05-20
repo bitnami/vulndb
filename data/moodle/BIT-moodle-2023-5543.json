@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5543",
+  "summary": "Moodle: duplicating a bigbluebutton activity assigns the same meeting id",
   "details": "When duplicating a BigBlueButton activity, the original meeting ID was also duplicated instead of using a new ID for the new activity. This could provide unintended access to the original meeting.",
   "aliases": [
     "CVE-2023-5543"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:57:59.204Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

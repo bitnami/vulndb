@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elk-2024-12556",
+  "summary": "Kibana Prototype Pollution can lead to code injection",
   "details": "Prototype Pollution in Kibana can lead to code injection via unrestricted file upload combined with path traversal.",
   "aliases": [
     "CVE-2024-12556"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-10T07:07:56.053Z",
-  "modified": "2025-04-10T07:44:37.385Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

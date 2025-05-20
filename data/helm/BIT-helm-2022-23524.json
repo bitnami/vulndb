@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2022-23524",
+  "summary": "Helm vulnerable to Denial of service through string value parsing",
   "details": "Helm is a tool for managing Charts, pre-configured Kubernetes resources. Versions prior to 3.10.3 are subject to Uncontrolled Resource Consumption, resulting in Denial of Service. Input to functions in the _strvals_ package can cause a stack overflow. In Go, a stack overflow cannot be recovered from. Applications that use functions from the _strvals_ package in the Helm SDK can have a Denial of Service attack when they use this package and it panics. This issue has been patched in 3.10.3. SDK users can validate strings supplied by users won't create large arrays causing significant memory usage before passing them to the _strvals_ functions.",
   "aliases": [
     "CVE-2022-23524"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:54:06.367Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

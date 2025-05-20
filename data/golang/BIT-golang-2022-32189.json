@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-32189",
+  "summary": "Panic when decoding Float and Rat types in math/big",
   "details": "A too-short encoded message can cause a panic in Float.GobDecode and Rat GobDecode in math/big in Go before 1.17.13 and 1.18.5, potentially allowing a denial of service.",
   "aliases": [
     "CVE-2022-32189"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:59:01.492Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

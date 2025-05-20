@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-python-2025-1795",
+  "summary": "Mishandling of comma during folding and unicode-encoding of email headers",
   "details": "During an address list folding when a separating comma ends up on a folded line and that line is to be unicode-encoded then the separator itself is also unicode-encoded. Expected behavior is that the separating comma remains a plan comma. This can result in the address header being misinterpreted by some mail servers.",
   "aliases": [
     "CVE-2025-1795"
@@ -80,5 +81,5 @@
     }
   ],
   "published": "2025-04-14T11:35:31.045Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

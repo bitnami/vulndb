@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-26029",
+  "summary": "[20210309] - Core - Inadequate filtering of form contents could allow to overwrite the author field",
   "details": "An issue was discovered in Joomla! 1.6.0 through 3.9.24. Inadequate filtering of form contents could allow to overwrite the author field.",
   "aliases": [
     "CVE-2021-26029"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:12:57.202Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

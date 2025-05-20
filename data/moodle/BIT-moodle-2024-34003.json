@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-34003",
+  "summary": "moodle: authenticated LFI risk in some misconfigured shared hosting environments via modified mod_workshop backup",
   "details": "In a shared hosting environment that has been misconfigured to allow access to other users' content, a Moodle user with both access to restore workshop modules and direct access to the web server outside of the Moodle webroot could execute a local file include.",
   "aliases": [
     "CVE-2024-34003"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2025-05-02T06:18:33.951Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

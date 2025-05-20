@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-38360",
-  "details": "Discourse is an open source platform for community discussion. In affected versions by creating replacement words with an almost unlimited number of characters, a moderator can reduce the availability of a Discourse instance. This issue has been addressed in stable version 3.2.3. Users are advised to upgrade. Users unable to upgrade may manually remove the long watched words either via SQL or Rails console.",
+  "summary": "Denial of service via Watched Words in Discourse",
+  "details": "Discourse is an open source platform for community discussion. In affected versions by creating replacement words with an almost unlimited number of characters, a moderator can reduce the availability of a Discourse instance. This issue has been addressed in stable version 3.2.3 and in current betas. Users are advised to upgrade. Users unable to upgrade may manually remove the long watched words either via SQL or Rails console.",
   "aliases": [
     "CVE-2024-38360"
   ],
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-07-17T09:56:10.359Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

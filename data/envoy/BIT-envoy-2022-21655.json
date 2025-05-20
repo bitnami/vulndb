@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2022-21655",
+  "summary": "Incorrect handling of internal redirects results in crash in Envoy",
   "details": "Envoy is an open source edge and service proxy, designed for cloud-native applications. The envoy common router will segfault if an internal redirect selects a route configured with direct response or redirect actions. This will result in a denial of service. As a workaround turn off internal redirects if direct response entries are configured on the same listener.",
   "aliases": [
     "CVE-2022-21655"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:56:14.571Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

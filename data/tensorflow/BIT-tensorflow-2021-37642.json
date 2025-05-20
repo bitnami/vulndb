@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-37642",
+  "summary": "Division by 0 in `ResourceScatterDiv` in TensorFlow",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. In affected versions the implementation of `tf.raw_ops.ResourceScatterDiv` is vulnerable to a division by 0 error. The [implementation](https://github.com/tensorflow/tensorflow/blob/8d72537c6abf5a44103b57b9c2e22c14f5f49698/tensorflow/core/kernels/resource_variable_ops.cc#L865) uses a common class for all binary operations but fails to treat the division by 0 case separately. We have patched the issue in GitHub commit 4aacb30888638da75023e6601149415b39763d76. The fix will be included in TensorFlow 2.6.0. We will also cherrypick this commit on TensorFlow 2.5.1, TensorFlow 2.4.3, and TensorFlow 2.3.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-37642"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:17:44.249Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

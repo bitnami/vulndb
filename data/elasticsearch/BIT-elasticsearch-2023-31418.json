@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2023-31418",
+  "summary": "Elasticsearch uncontrolled resource consumption",
   "details": "An issue has been identified with how Elasticsearch handled incoming requests on the HTTP layer. An unauthenticated user could force an Elasticsearch node to exit with an OutOfMemory error by sending a moderate number of malformed HTTP requests. The issue was identified by Elastic Engineering and we have no indication that the issue is known or that it is being exploited in the wild.",
   "aliases": [
     "CVE-2023-31418"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:51:58.187Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

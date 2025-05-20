@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-25983",
+  "summary": "Msa-24-0006: idor on dashboard comments block",
   "details": "Insufficient checks in a web service made it possible to add comments to the comments block on another user's dashboard when it was not otherwise available (e.g., on their profile page).",
   "aliases": [
     "CVE-2024-25983"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-31T18:22:02.363Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

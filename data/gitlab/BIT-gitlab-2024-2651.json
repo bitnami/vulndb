@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-2651",
+  "summary": "Inefficient Regular Expression Complexity in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 16.9.7, all versions starting from 16.10 before 16.10.5, all versions starting from 16.11 before 16.11.2. It was possible for an attacker to cause a denial of service using maliciously crafted markdown content.",
   "aliases": [
     "CVE-2024-2651"
@@ -69,5 +70,5 @@
     }
   ],
   "published": "2024-05-24T07:22:10.554Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

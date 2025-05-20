@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28335",
+  "summary": "Moodle: csrf risk in resetting all templates of a database activity",
   "details": "The link to reset all templates of a database activity did not include the necessary token to prevent a CSRF risk.",
   "aliases": [
     "CVE-2023-28335"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:59:55.273Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

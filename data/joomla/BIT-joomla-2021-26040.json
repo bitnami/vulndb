@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-26040",
+  "summary": "[20210801] - Core - Insufficient access control for com_media deletion endpoint",
   "details": "An issue was discovered in Joomla! 4.0.0. The media manager does not correctly check the user's permissions before executing a file deletion command.",
   "aliases": [
     "CVE-2021-26040"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:14:05.591Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

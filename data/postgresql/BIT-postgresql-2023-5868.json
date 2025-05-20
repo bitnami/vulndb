@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2023-5868",
+  "summary": "Postgresql: memory disclosure in aggregate function calls",
   "details": "A memory disclosure vulnerability was found in PostgreSQL that allows remote users to access sensitive information by exploiting certain aggregate function calls with 'unknown'-type arguments. Handling 'unknown'-type values from string literals without type designation can disclose bytes, potentially revealing notable and confidential information. This issue exists due to excessive data output in aggregate function calls, enabling remote users to read some portion of system memory.",
   "aliases": [
     "CVE-2023-5868"
@@ -181,5 +182,5 @@
     }
   ],
   "published": "2024-03-06T11:02:52.082Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-subversion-2022-24070",
+  "summary": "Apache Subversion mod_dav_svn is vulnerable to memory corruption",
   "details": "Subversion's mod_dav_svn is vulnerable to memory corruption. While looking up path-based authorization rules, mod_dav_svn servers may attempt to use memory which has already been freed. Affected Subversion mod_dav_svn servers 1.10.0 through 1.14.1 (inclusive). Servers that do not use mod_dav_svn are not affected.",
   "aliases": [
     "CVE-2022-24070"
@@ -84,5 +85,5 @@
     }
   ],
   "published": "2024-03-06T11:05:35.473Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

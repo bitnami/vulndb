@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2023-25801",
+  "summary": "TensorFlow has double free in Fractional(Max/Avg)Pool",
   "details": "TensorFlow is an open source machine learning platform. Prior to versions 2.12.0 and 2.11.1, `nn_ops.fractional_avg_pool_v2` and `nn_ops.fractional_max_pool_v2` require the first and fourth elements of their parameter `pooling_ratio` to be equal to 1.0, as pooling on batch and channel dimensions is not supported. A fix is included in TensorFlow 2.12.0 and 2.11.1.",
   "aliases": [
     "CVE-2023-25801"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:07:03.074Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

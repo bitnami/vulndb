@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2021-36160",
+  "summary": "mod_proxy_uwsgi out of bound read",
   "details": "A carefully crafted request uri-path can cause mod_proxy_uwsgi to read above the allocated memory and crash (DoS). This issue affects Apache HTTP Server versions 2.4.30 to 2.4.48 (inclusive).",
   "aliases": [
     "CVE-2021-36160"
@@ -142,5 +143,5 @@
     }
   ],
   "published": "2024-03-06T10:55:19.901Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

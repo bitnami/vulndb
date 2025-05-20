@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2023-42452",
+  "summary": "Mastodon vulnerable to Stored XSS through the translation feature",
   "details": "Mastodon is a free, open-source social network server based on ActivityPub. In versions on the 4.x branch prior to versions 4.0.10, 4.2.8, and 4.2.0-rc2, under certain conditions, attackers can abuse the translation feature to bypass the server-side HTML sanitization, allowing unescaped HTML to execute in the browser. The impact is limited thanks to Mastodon's strict Content Security Policy, blocking inline scripts, etc. However a CSP bypass or loophole could be exploited to execute malicious XSS. Furthermore, it requires user interaction, as this can only occur upon clicking the “Translate” button on a malicious post. Versions 4.0.10, 4.2.8, and 4.2.0-rc2 contain a patch for this issue.",
   "aliases": [
     "CVE-2023-42452"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:55:46.292Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

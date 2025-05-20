@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-grafana-2022-31097",
+  "summary": "Stored XSS in Grafana's Unified Alerting",
   "details": "Grafana is an open-source platform for monitoring and observability. Versions on the 8.x and 9.x branch prior to 9.0.3, 8.5.9, 8.4.10, and 8.3.10 are vulnerable to stored cross-site scripting via the Unified Alerting feature of Grafana. An attacker can exploit this vulnerability to escalate privilege from editor to admin by tricking an authenticated admin to click on a link. Versions 9.0.3, 8.5.9, 8.4.10, and 8.3.10 contain a patch. As a workaround, it is possible to disable alerting or use legacy alerting.",
   "aliases": [
     "CVE-2022-31097"
@@ -84,5 +85,5 @@
     }
   ],
   "published": "2024-03-06T10:56:47.100Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

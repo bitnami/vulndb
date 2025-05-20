@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2021-26559",
+  "summary": "CWE-284 Improper Access Control on Configurations Endpoint for the Stable API",
   "details": "Improper Access Control on Configurations Endpoint for the Stable API of Apache Airflow allows users with Viewer or User role to get Airflow Configurations including sensitive information even when `[webserver] expose_config` is set to `False` in `airflow.cfg`. This allowed a privilege escalation attack. This issue affects Apache Airflow 2.0.0.",
   "aliases": [
     "CVE-2021-26559"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:59:45.964Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

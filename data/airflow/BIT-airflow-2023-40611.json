@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-40611",
+  "summary": "Apache Airflow Dag Runs Broken Access Control Vulnerability",
   "details": "Apache Airflow, versions before 2.7.1, is affected by a vulnerability that allows authenticated and DAG-view authorized Users to modify some DAG run detail values when submitting notes. This could have them alter details such as configuration parameters, start date, etc.\n\nUsers should upgrade to version 2.7.1 or later which has removed the vulnerability.",
   "aliases": [
     "CVE-2023-40611"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:53:28.968Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

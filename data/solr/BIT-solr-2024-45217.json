@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2024-45217",
+  "summary": "Apache Solr: ConfigSets created during a backup restore command are trusted implicitly",
   "details": "Insecure Default Initialization of Resource vulnerability in Apache Solr.\n\nNew ConfigSets that are created via a Restore command, which copy a configSet from the backup and give it a new name, are created without setting the \"trusted\" metadata.\nConfigSets that do not contain the flag are trusted implicitly if the metadata is missing, therefore this leads to \"trusted\" ConfigSets that may not have been created with an Authenticated request.\n\"trusted\" ConfigSets are able to load custom code into classloaders, therefore the flag is supposed to only be set when the request that uploads the ConfigSet is Authenticated & Authorized.\n\nThis issue affects Apache Solr: from 6.6.0 before 8.11.4, from 9.0.0 before 9.7.0. This issue does not affect Solr instances that are secured via Authentication/Authorization.\n\nUsers are primarily recommended to use Authentication and Authorization when running Solr. However, upgrading to version 9.7.0, or 8.11.4 will mitigate this issue otherwise.",
   "aliases": [
     "CVE-2024-45217"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-10-18T07:18:24.823Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

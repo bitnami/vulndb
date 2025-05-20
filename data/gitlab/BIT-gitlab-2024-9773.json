@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9773",
+  "summary": "Improper Neutralization of Special Elements used in a Command ('Command Injection') in GitLab",
   "details": "An issue was discovered in GitLab EE affecting all versions starting from 14.9 before 17.8.6, all versions starting from 17.9 before 17.8.3, all versions starting from 17.10 before 17.10.1. An input validation issue in the Harbor registry integration could have allowed a maintainer to add malicious code to the CLI commands shown in the UI.",
   "aliases": [
     "CVE-2024-9773"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-29T07:12:34.592Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

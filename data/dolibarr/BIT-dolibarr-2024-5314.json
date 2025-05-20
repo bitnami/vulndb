@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-dolibarr-2024-5314",
+  "summary": "Multiple vulnerabilities in DOLIBARR's ERP CMS",
   "details": "Vulnerabilities in Dolibarr ERP - CRM that affect version 9.0.1 and allow SQL injection. These vulnerabilities could allow a remote attacker to send a specially crafted SQL query to the system and retrieve all the information stored in the database through the parameters sortorder y sortfield in /dolibarr/admin/dict.php.",
   "aliases": [
     "CVE-2024-5314"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:07:08.493Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

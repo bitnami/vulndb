@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2021-43794",
+  "summary": "Anonymous user cache poisoning via development-mode header in Discourse",
   "details": "Discourse is an open source discussion platform. In affected versions an attacker can poison the cache for anonymous (i.e. not logged in) users, such that the users are shown a JSON blob instead of the HTML page. This can lead to a partial denial-of-service. This issue is patched in the latest stable, beta and tests-passed versions of Discourse.",
   "aliases": [
     "CVE-2021-43794"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:08:42.616Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

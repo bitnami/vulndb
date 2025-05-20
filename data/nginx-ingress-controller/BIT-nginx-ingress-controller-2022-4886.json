@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-ingress-controller-2022-4886",
+  "summary": "Ingress-nginx `path` sanitization can be bypassed with `log_format` directive",
   "details": "Ingress-nginx `path` sanitization can be bypassed with `log_format` directive.",
   "aliases": [
     "CVE-2022-4886"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:58:48.075Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

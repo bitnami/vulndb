@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28333",
+  "summary": "Moodle: pix helper potential mustache code injection risk",
   "details": "The Mustache pix helper contained a potential Mustache injection risk if combined with user input (note: This did not appear to be implemented/exploitable anywhere in the core Moodle LMS).",
   "aliases": [
     "CVE-2023-28333"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T11:00:15.007Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

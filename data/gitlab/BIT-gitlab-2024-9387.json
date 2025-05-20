@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-9387",
+  "summary": "URL Redirection to Untrusted Site ('Open Redirect') in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions from 11.8 before 17.4.6, 17.5 before 17.5.4, and 17.6 before 17.6.2. An attacker could potentially perform an open redirect against a given releases API endpoint.",
   "aliases": [
     "CVE-2024-9387"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-12-16T07:10:15.986Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

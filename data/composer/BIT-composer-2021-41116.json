@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-composer-2021-41116",
+  "summary": "Command injection in composer on Windows",
   "details": "Composer is an open source dependency manager for the PHP language. In affected versions windows users running Composer to install untrusted dependencies are subject to command injection and should upgrade their composer version. Other OSs and WSL are not affected. The issue has been resolved in composer versions 1.10.23 and 2.1.9. There are no workarounds for this issue.",
   "aliases": [
     "CVE-2021-41116"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:51:26.107Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

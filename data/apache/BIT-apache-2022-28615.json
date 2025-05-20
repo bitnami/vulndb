@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-28615",
+  "summary": "Read beyond bounds in ap_strcmp_match()",
   "details": "Apache HTTP Server 2.4.53 and earlier may crash or disclose information due to a read beyond bounds in ap_strcmp_match() when provided with an extremely large input buffer. While no code distributed with the server can be coerced into such a call, third-party modules or lua scripts that use ap_strcmp_match() may hypothetically be affected.",
   "aliases": [
     "CVE-2022-28615"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:52:39.207Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-26039",
+  "summary": "[20210705] - Core - XSS in com_media imagelist",
   "details": "An issue was discovered in Joomla! 3.0.0 through 3.9.27. Inadequate escaping in the imagelist view of com_media leads to a XSS vulnerability.",
   "aliases": [
     "CVE-2021-26039"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:13:58.891Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

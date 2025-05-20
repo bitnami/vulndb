@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-mediawiki-2025-3469",
+  "summary": "i18n XSS vulnerability in HTMLMultiSelectField when sections are used",
   "details": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Wikimedia Foundation MediaWiki. This vulnerability is associated with program files includes/htmlform/fields/HTMLMultiSelectField.Php.\n\nThis issue affects MediaWiki: before 1.39.12, 1.42.6, 1.43.1.",
   "aliases": [
     "CVE-2025-3469"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-18T19:31:46.802Z",
-  "modified": "2025-04-18T19:44:25.385Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2020-7067",
+  "summary": "OOB Read in urldecode()",
   "details": "In PHP versions 7.2.x below 7.2.30, 7.3.x below 7.3.17 and 7.4.x below 7.4.5, if PHP is compiled with EBCDIC support (uncommon), urldecode() function can be made to access locations past the allocated memory, due to erroneously using signed numbers as array indexes.",
   "aliases": [
     "CVE-2020-7067"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:06:30.498Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

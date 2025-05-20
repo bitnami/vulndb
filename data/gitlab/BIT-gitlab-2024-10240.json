@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-10240",
+  "summary": "Exposure of Sensitive System Information to an Unauthorized Control Sphere in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 17.3 before 17.3.7, all versions starting from 17.4 before 17.4.4, all versions starting from 17.5 before 17.5.2 in which an unauthenticated user may be able to read some information about an MR in a private project, under certain circumstances.",
   "aliases": [
     "CVE-2024-10240"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-11-28T19:22:10.536Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

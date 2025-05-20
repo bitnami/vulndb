@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2020-13668",
+  "summary": "Access bypass in Drupal Core 8/9",
   "details": "Access Bypass vulnerability in Drupal Core allows for an attacker to leverage the way that HTML is rendered for affected forms in order to exploit the vulnerability. This issue affects: Drupal Core 8.8.x versions prior to 8.8.10; 8.9.x versions prior to 8.9.6; 9.0.x versions prior to 9.0.6.",
   "aliases": [
     "CVE-2020-13668"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:57:51.785Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

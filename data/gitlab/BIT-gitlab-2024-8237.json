@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-8237",
+  "summary": "Inefficient Algorithmic Complexity in GitLab",
   "details": "A Denial of Service (DoS) issue has been discovered in GitLab CE/EE affecting all versions prior to 12.6 prior to 17.4.5, 17.5 prior to 17.5.3, and 17.6 prior to 17.6.1. An attacker could cause a denial of service with a crafted cargo.toml file.",
   "aliases": [
     "CVE-2024-8237"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-11-28T19:10:56.016Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

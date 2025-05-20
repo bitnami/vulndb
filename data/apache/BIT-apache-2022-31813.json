@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-31813",
+  "summary": "mod_proxy X-Forwarded-For dropped by hop-by-hop mechanism",
   "details": "Apache HTTP Server 2.4.53 and earlier may not send the X-Forwarded-* headers to the origin server based on client side Connection header hop-by-hop mechanism. This may be used to bypass IP based authentication on the origin server/application.",
   "aliases": [
     "CVE-2022-31813"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:51:52.102Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

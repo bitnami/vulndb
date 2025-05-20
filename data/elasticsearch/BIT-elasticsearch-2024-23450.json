@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2024-23450",
+  "summary": "Elasticsearch Uncontrolled Resource Consumption vulnerability",
   "details": "A flaw was discovered in Elasticsearch, where processing a document in a deeply nested pipeline on an ingest node could cause the Elasticsearch node to crash.",
   "aliases": [
     "CVE-2024-23450"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-05-14T07:17:11.184Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

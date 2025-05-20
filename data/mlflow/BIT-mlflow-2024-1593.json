@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2024-1593",
+  "summary": "Path Traversal via Parameter Smuggling in mlflow/mlflow",
   "details": "A path traversal vulnerability exists in the mlflow/mlflow repository due to improper handling of URL parameters. By smuggling path traversal sequences using the ';' character in URLs, attackers can manipulate the 'params' portion of the URL to gain unauthorized access to files or directories. This vulnerability allows for arbitrary data smuggling into the 'params' part of the URL, enabling attacks similar to those described in previous reports but utilizing the ';' character for parameter smuggling. Successful exploitation could lead to unauthorized information disclosure or server compromise.",
   "aliases": [
     "CVE-2024-1593"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-04T07:21:44.709Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

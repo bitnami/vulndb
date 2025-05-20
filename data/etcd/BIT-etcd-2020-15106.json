@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-etcd-2020-15106",
+  "summary": "Improper Input Validation in etcd",
   "details": "In etcd before versions 3.3.23 and 3.4.10, a large slice causes panic in decodeRecord method. The size of a record is stored in the length field of a WAL file and no additional validation is done on this data. Therefore, it is possible to forge an extremely large frame size that can unintentionally panic at the expense of any RAFT participant trying to decode the WAL.",
   "aliases": [
     "CVE-2020-15106"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:52:40.894Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

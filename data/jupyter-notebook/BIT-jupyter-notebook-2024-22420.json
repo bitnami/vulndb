@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jupyter-notebook-2024-22420",
+  "summary": "Stored cross site scripting in Markdown Preview in JupyterLab",
   "details": "JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture. This vulnerability depends on user interaction by opening a malicious Markdown file using JupyterLab preview feature. A malicious user can access any data that the attacked user has access to as well as perform arbitrary requests acting as the attacked user. JupyterLab version 4.0.11 has been patched. Users are advised to upgrade. Users unable to upgrade should disable the table of contents extension.",
   "aliases": [
     "CVE-2024-22420"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T10:54:05.906Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

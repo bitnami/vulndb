@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-41908",
+  "summary": "`CHECK` fail via inputs in `PyFunc` in Tensorflow",
   "details": "TensorFlow is an open source platform for machine learning. An input `token` that is not a UTF-8 bytestring will trigger a `CHECK` fail in `tf.raw_ops.PyFunc`. We have patched the issue in GitHub commit 9f03a9d3bafe902c1e6beb105b2f24172f238645. The fix will be included in TensorFlow 2.11. We will also cherrypick this commit on TensorFlow 2.10.1, 2.9.3, and TensorFlow 2.8.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-41908"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:10:11.097Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

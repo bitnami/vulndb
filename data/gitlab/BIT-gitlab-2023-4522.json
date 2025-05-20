@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-4522",
+  "summary": "Improper Validation of Specified Type of Input in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions before 16.2.0. Committing directories containing LF character results in 500 errors when viewing the commit.",
   "aliases": [
     "CVE-2023-4522"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:59:30.475Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

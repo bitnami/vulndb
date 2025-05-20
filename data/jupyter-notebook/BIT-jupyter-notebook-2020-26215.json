@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jupyter-notebook-2020-26215",
+  "summary": "Open redirect in Jupyter Notebook",
   "details": "Jupyter Notebook before version 6.1.5 has an Open redirect vulnerability. A maliciously crafted link to a notebook server could redirect the browser to a different website. All notebook servers are technically affected, however, these maliciously crafted links can only be reasonably made for known notebook server hosts. A link to your notebook server may appear safe, but ultimately redirect to a spoofed server on the public internet. The issue is patched in version 6.1.5.",
   "aliases": [
     "CVE-2020-26215"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:54:47.587Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

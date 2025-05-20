@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6323",
+  "summary": "Improper Isolation or Compartmentalization in GitLab",
   "details": "Improper authorization in global search in GitLab EE affecting all versions from 16.11 prior to 16.11.5 and 17.0 prior to 17.0.3 and 17.1 prior to 17.1.1 allows an attacker leak content of a private repository in a public project.",
   "aliases": [
     "CVE-2024-6323"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-06-28T07:18:50.287Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

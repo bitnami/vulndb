@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-34250",
+  "summary": "Discourse vulnerable to exposure of number of topics recently created in private categories",
   "details": "Discourse is an open source discussion platform. Prior to version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches, an attacker could use the new topics dismissal endpoint to reveal the number of topics recently created (but not the actual content thereof) in categories they didn't have access to. This issue is patched in version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches. There are no known workarounds.",
   "aliases": [
     "CVE-2023-34250"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T10:56:49.410Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

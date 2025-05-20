@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-0508",
+  "summary": "Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.4 before 15.10.8, all versions starting from 15.11 before 15.11.7, all versions starting from 16.0 before 16.0.2. Open redirection was possible via HTTP response splitting in the NPM package API.",
   "aliases": [
     "CVE-2023-0508"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:12:13.789Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

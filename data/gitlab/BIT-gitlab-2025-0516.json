@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-0516",
+  "summary": "Incorrect Authorization in GitLab",
   "details": "Improper Authorization in GitLab CE/EE affecting all versions from 17.7 prior to 17.7.4, 17.8 prior to 17.8.2 allow users with limited permissions to perform unauthorized actions on critical project data.",
   "aliases": [
     "CVE-2025-0516"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-02-17T19:10:56.835Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

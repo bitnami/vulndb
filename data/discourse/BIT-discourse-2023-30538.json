@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-30538",
+  "summary": "Stored Cross-site Scripting via improper sanitization of svg files in Discourse",
   "details": "Discourse is an open source platform for community discussion. Due to the improper sanitization of SVG files, an attacker can execute arbitrary JavaScript on the users’ browsers by uploading a crafted SVG file. This issue is patched in the latest stable and tests-passed versions of Discourse. Users are advised to upgrade. For users unable to upgrade there are two possible workarounds: enable CDN handing of uploads (and ensure the CDN sanitizes SVG files) or disable SVG file uploads by ensuring that the `authorized extensions` site setting does not include `svg` (or reset that setting to the default, by default Discourse doesn't enable SVG uploads by users).",
   "aliases": [
     "CVE-2023-30538"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T10:57:47.289Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

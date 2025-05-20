@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-30629",
+  "summary": "Session tickets lack random ticket_age_add in crypto/tls",
   "details": "Non-random values for ticket_age_add in session tickets in crypto/tls before Go 1.17.11 and Go 1.18.3 allow an attacker that can observe TLS handshakes to correlate successive connections by comparing ticket ages during session resumption.",
   "aliases": [
     "CVE-2022-30629"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:00:22.416Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

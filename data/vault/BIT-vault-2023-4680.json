@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-4680",
+  "summary": "Vault's Transit Secrets Engine Allowed Nonce Specified without Convergent Encryption",
   "details": "HashiCorp Vault and Vault Enterprise transit secrets engine allowed authorized users to specify arbitrary nonces, even with convergent encryption disabled. The encrypt endpoint, in combination with an offline attack, could be used to decrypt arbitrary ciphertext and potentially derive the authentication subkey when using transit secrets engine without convergent encryption. Introduced in 1.6.0 and fixed in 1.14.3, 1.13.7, and 1.12.11.",
   "aliases": [
     "CVE-2023-4680"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T11:08:32.778Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

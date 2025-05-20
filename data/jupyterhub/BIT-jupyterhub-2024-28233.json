@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jupyterhub-2024-28233",
+  "summary": "XSS in JupyterHub via Self-XSS leveraged by Cookie Tossing",
   "details": "JupyterHub is an open source multi-user server for Jupyter notebooks. By tricking a user into visiting a malicious subdomain, the attacker can achieve an XSS directly affecting the former's session. More precisely, in the context of JupyterHub, this XSS could achieve full access to JupyterHub API and user's single-user server. The affected configurations are single-origin JupyterHub deployments and JupyterHub deployments with user-controlled applications running on subdomains or peer subdomains of either the Hub or a single-user server. This vulnerability is fixed in 4.1.0.",
   "aliases": [
     "CVE-2024-28233"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-04-03T10:52:35.170Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

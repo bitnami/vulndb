@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2022-30580",
+  "summary": "Empty Cmd.Path can trigger unintended binary in os/exec on Windows",
   "details": "Code injection in Cmd.Start in os/exec before Go 1.17.11 and Go 1.18.3 allows execution of any binaries in the working directory named either \"..com\" or \"..exe\" by calling Cmd.Run, Cmd.Start, Cmd.Output, or Cmd.CombinedOutput when Cmd.Path is unset.",
   "aliases": [
     "CVE-2022-30580"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T11:00:32.217Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

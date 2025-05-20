@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-24788",
+  "summary": "Malformed DNS message can cause infinite loop in net",
   "details": "A malformed DNS message in response to a query can cause the Lookup functions to get stuck in an infinite loop.",
   "aliases": [
     "CVE-2024-24788"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-05-14T07:18:19.682Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

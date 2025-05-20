@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-45289",
+  "summary": "Incorrect forwarding of sensitive headers and cookies on HTTP redirect in net/http",
   "details": "When following an HTTP redirect to a domain which is not a subdomain match or exact match of the initial domain, an http.Client does not forward sensitive headers such as \"Authorization\" or \"Cookie\". For example, a redirect from foo.com to www.foo.com will forward the Authorization header, but a redirect to bar.com will not. A maliciously crafted HTTP redirect could cause sensitive headers to be unexpectedly forwarded.",
   "aliases": [
     "CVE-2023-45289"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-12T08:24:51.862Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

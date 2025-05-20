@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-6595",
+  "summary": "Uncontrolled Search Path Element in GitLab",
   "details": "An issue was discovered in GitLab CE/EE affecting all versions starting from 11.8 prior to 16.11.6, starting from 17.0 prior to 17.0.4, and starting from 17.1 prior to 17.1.2 where it was possible to upload an NPM package with conflicting package data.",
   "aliases": [
     "CVE-2024-6595"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-07-19T07:19:00.729Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

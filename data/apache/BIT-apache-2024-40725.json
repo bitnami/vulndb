@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2024-40725",
+  "summary": "Apache HTTP Server: source code disclosure with handlers configured via AddType",
   "details": "A partial fix for  CVE-2024-39884 in the core of Apache HTTP Server 2.4.61 ignores some use of the legacy content-type based configuration of handlers. \"AddType\" and similar configuration, under some circumstances where files are requested indirectly, result in source code disclosure of local content. For example, PHP scripts may be served instead of interpreted.\n\nUsers are recommended to upgrade to version 2.4.62, which fixes this issue.",
   "aliases": [
     "CVE-2024-40725"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-07-23T07:16:46.614Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

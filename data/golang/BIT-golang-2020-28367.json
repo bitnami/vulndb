@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2020-28367",
+  "summary": "Arbitrary code execution via the go command with cgo in cmd/go",
   "details": "Code injection in the go command with cgo before Go 1.14.12 and Go 1.15.5 allows arbitrary code execution at build time via malicious gcc flags specified via a #cgo directive.",
   "aliases": [
     "CVE-2020-28367"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:07:32.402Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

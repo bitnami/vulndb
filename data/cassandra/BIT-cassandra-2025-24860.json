@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-cassandra-2025-24860",
+  "summary": "Apache Cassandra: CassandraNetworkAuthorizer and CassandraCIDRAuthorizer can be bypassed allowing access to different network regions",
   "details": "Incorrect Authorization vulnerability in Apache Cassandra allowing users to access a datacenter or IP/CIDR groups they should not be able to when using CassandraNetworkAuthorizer or CassandraCIDRAuthorizer.\n\nUsers with restricted data center access can update their own permissions via data control language (DCL) statements on affected versions.\n\n\n\n\nThis issue affects Apache Cassandra: from 4.0.0 through 4.0.15 and from 4.1.0 through 4.1.7 for CassandraNetworkAuthorizer, and from 5.0.0 through 5.0.2 for both CassandraNetworkAuthorizer and CassandraCIDRAuthorizer.\n\n\n\n\nOperators using CassandraNetworkAuthorizer or CassandraCIDRAuthorizer on affected versions should review data access rules for potential breaches. Users are recommended to upgrade to versions 4.0.16, 4.1.8, 5.0.3, which fixes the issue.",
   "aliases": [
     "CVE-2025-24860"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2025-02-06T07:08:57.983Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

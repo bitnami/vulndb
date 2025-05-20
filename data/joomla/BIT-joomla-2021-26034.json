@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2021-26034",
+  "summary": "[20210503] - Core - CSRF in data download endpoints",
   "details": "An issue was discovered in Joomla! 3.0.0 through 3.9.26. A missing token check causes a CSRF vulnerability in data download endpoints in com_banners and com_sysinfo.",
   "aliases": [
     "CVE-2021-26034"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:13:23.793Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

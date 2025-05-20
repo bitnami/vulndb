@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2022-4343",
+  "summary": "Exposure of Sensitive Information to an Unauthorized Actor in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 13.12 before 16.1.5, all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1 in which a project member can leak credentials stored in site profile.",
   "aliases": [
     "CVE-2022-4343"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T11:13:00.182Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

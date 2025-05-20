@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43428",
+  "summary": "Moodle: cache poisoning via injection into storage",
   "details": "To address a cache poisoning risk in Moodle, additional validation for local storage was required.",
   "aliases": [
     "CVE-2024-43428"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2025-05-02T06:18:47.252Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

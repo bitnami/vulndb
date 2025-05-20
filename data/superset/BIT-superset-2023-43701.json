@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-43701",
+  "summary": "Apache Superset: Stored XSS on API endpoint",
   "details": "Improper payload validation and an improper REST API response type, made it possible for an authenticated malicious actor to store malicious code into Chart's metadata, this code could get executed if a user specifically accesses a specific deprecated API endpoint. This issue affects Apache Superset versions prior to 2.1.2. \nUsers are recommended to upgrade to version 2.1.2, which fixes this issue.",
   "aliases": [
     "CVE-2023-43701"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:27:04.308Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

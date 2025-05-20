@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2024-10979",
+  "summary": "PostgreSQL PL/Perl environment variable changes execute arbitrary code",
   "details": "Incorrect control of environment variables in PostgreSQL PL/Perl allows an unprivileged database user to change sensitive process environment variables (e.g. PATH).  That often suffices to enable arbitrary code execution, even if the attacker lacks a database server operating system user.  Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.",
   "aliases": [
     "CVE-2024-10979"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-11-16T07:16:38.797Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

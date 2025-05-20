@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-6736",
+  "summary": "Inefficient Regular Expression Complexity in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 11.3 before 16.7.6, all versions starting from 16.8 before 16.8.3, all versions starting from 16.9 before 16.9.1. It was possible for an attacker to cause a client-side denial of service using malicious crafted content in the CODEOWNERS file.",
   "aliases": [
     "CVE-2023-6736"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:54:14.703Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

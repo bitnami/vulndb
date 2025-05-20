@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-34155",
+  "summary": "Stack exhaustion in all Parse functions in go/parser",
   "details": "Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.",
   "aliases": [
     "CVE-2024-34155"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-09-10T07:06:41.834Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

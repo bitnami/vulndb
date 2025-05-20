@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-couchdb-2023-26268",
+  "summary": "Apache CouchDB, IBM Cloudant: Information sharing via couchjs processes",
   "details": "Design documents with matching document IDs, from databases on the same cluster, may share a mutable Javascript environment when using these design document functions:\n  *  validate_doc_update\n\n  *  list\n\n  *  filter\n\n  *  filter views (using view functions as filters)\n\n  *  rewrite\n\n  *  update\n\n\n\nThis doesn't affect map/reduce or search (Dreyfus) index functions.\n\nUsers are recommended to upgrade to a version that is no longer affected by this issue (Apache CouchDB 3.3.2 or 3.2.3).\n\nWorkaround: Avoid using design documents from untrusted sources which may attempt to cache or store data in the Javascript environment.",
   "aliases": [
     "CVE-2023-26268"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T10:51:14.379Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

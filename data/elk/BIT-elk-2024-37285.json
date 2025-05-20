@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elk-2024-37285",
+  "summary": "Kibana arbitrary code execution via YAML deserialization",
   "details": "A deserialization issue in Kibana can lead to arbitrary code execution when Kibana attempts to parse a YAML document containing a crafted payload. A successful attack requires a malicious user to have a combination of both specific  Elasticsearch indices privileges https://www.elastic.co/guide/en/elasticsearch/reference/current/defining-roles.html#roles-indices-priv  and  Kibana privileges https://www.elastic.co/guide/en/fleet/current/fleet-roles-and-privileges.html  assigned to them.\n\n\n\nThe following Elasticsearch indices permissions are required\n\n  *  write privilege on the system indices .kibana_ingest*\n  *  The allow_restricted_indices flag is set to true\n\n\nAny of the following Kibana privileges are additionally required\n\n  *  Under Fleet the All privilege is granted\n  *  Under Integration the Read or All privilege is granted\n  *  Access to the fleet-setup privilege is gained through the Fleet Server’s service account token",
   "aliases": [
     "CVE-2024-37285"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-11-16T07:08:55.088Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

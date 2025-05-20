@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2023-39418",
+  "summary": "Postgresql: merge fails to enforce update or select row security policies",
   "details": "A vulnerability was found in PostgreSQL with the use of the MERGE command, which fails to test new rows against row security policies defined for UPDATE and SELECT. If UPDATE and SELECT policies forbid some rows that INSERT policies do not forbid, a user could store such rows.",
   "aliases": [
     "CVE-2023-39418"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:03:03.384Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

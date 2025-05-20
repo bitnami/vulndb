@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2021-29621",
+  "summary": "Observable Response Discrepancy in Flask-AppBuilder",
   "details": "Flask-AppBuilder is a development framework, built on top of Flask. User enumeration in database authentication in Flask-AppBuilder <= 3.2.3. Allows for a non authenticated user to enumerate existing accounts by timing the response time from the server when you are logging in. Upgrade to version 3.3.0 or higher to resolve.",
   "aliases": [
     "CVE-2021-29621"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-03-06T10:59:16.077Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

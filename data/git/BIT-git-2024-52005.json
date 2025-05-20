@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-git-2024-52005",
+  "summary": "The sideband payload is passed unfiltered to the terminal in git",
   "details": "Git is a source code management tool. When cloning from a server (or fetching, or pushing), informational or error messages are transported from the remote Git process to the client via the so-called \"sideband channel\". These messages will be prefixed with \"remote:\" and printed directly to the standard error output. Typically, this standard error output is connected to a terminal that understands ANSI escape sequences, which Git did not protect against. Most modern terminals support control sequences that can be used by a malicious actor to hide and misrepresent information, or to mislead the user into executing untrusted scripts. As requested on the git-security mailing list, the patches are under discussion on the public mailing list. Users are advised to update as soon as possible. Users unable to upgrade should avoid recursive clones unless they are from trusted sources.",
   "aliases": [
     "CVE-2024-52005"
@@ -102,5 +103,5 @@
     }
   ],
   "published": "2025-04-14T11:03:18.348Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

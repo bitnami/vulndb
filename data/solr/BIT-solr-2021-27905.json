@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-solr-2021-27905",
+  "summary": "SSRF vulnerability with the Replication handler",
   "details": "The ReplicationHandler (normally registered at \"/replication\" under a Solr core) in Apache Solr has a \"masterUrl\" (also \"leaderUrl\" alias) parameter that is used to designate another ReplicationHandler on another Solr core to replicate index data into the local core. To prevent a SSRF vulnerability, Solr ought to check these parameters against a similar configuration it uses for the \"shards\" parameter. Prior to this bug getting fixed, it did not. This problem affects essentially all Solr versions prior to it getting fixed in 8.8.2.",
   "aliases": [
     "CVE-2021-27905"
@@ -94,5 +95,5 @@
     }
   ],
   "published": "2024-03-06T11:06:49.094Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

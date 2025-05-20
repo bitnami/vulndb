@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-valkey-2023-45145",
+  "summary": "Redis Unix-domain socket may have be exposed with the wrong permissions for a short time window.",
   "details": "Redis is an in-memory database that persists on disk. On startup, Redis begins listening on a Unix socket before adjusting its permissions to the user-provided configuration. If a permissive umask(2) is used, this creates a race condition that enables, during a short period of time, another process to establish an otherwise unauthorized connection. This problem has existed since Redis 2.6.0-RC1. This issue has been addressed in Redis versions 7.2.2, 7.0.14 and 6.2.14. Users are advised to upgrade. For users unable to upgrade, it is possible to work around the problem by disabling Unix sockets, starting Redis with a restrictive umask, or storing the Unix socket file in a protected directory.",
   "aliases": [
     "CVE-2023-45145"
@@ -86,5 +87,5 @@
     }
   ],
   "published": "2024-08-22T19:40:22.448Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

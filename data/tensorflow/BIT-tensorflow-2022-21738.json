@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2022-21738",
+  "summary": "Integer overflow leading to crash in Tensorflow",
   "details": "Tensorflow is an Open Source Machine Learning Framework. The implementation of `SparseCountSparseOutput` can be made to crash a TensorFlow process by an integer overflow whose result is then used in a memory allocation. The fix will be included in TensorFlow 2.8.0. We will also cherrypick this commit on TensorFlow 2.7.1, TensorFlow 2.6.3, and TensorFlow 2.5.3, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2022-21738"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-03-06T11:15:36.705Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-laravel-2025-27515",
+  "summary": "Laravel has a File Validation Bypass",
   "details": "Laravel is a web application framework. When using wildcard validation to validate a given file or image field (`files.*`), a user-crafted malicious request could potentially bypass the validation rules. This vulnerability is fixed in 11.44.1 and 12.1.1.",
   "aliases": [
     "CVE-2025-27515"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-14T11:10:08.151Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

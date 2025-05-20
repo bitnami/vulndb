@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-43659",
+  "summary": "Cross-site Scripting via email preview when CSP disabled in Discourse",
   "details": "Discourse is an open source platform for community discussion. Improper escaping of user input allowed for Cross-site Scripting attacks via the digest email preview UI. This issue only affects sites with CSP disabled. This issue has been patched in the 3.1.1 stable release as well as the 3.2.0.beta1 release. Users are advised to upgrade. Users unable to upgrade should ensure CSP is enabled on the forum.",
   "aliases": [
     "CVE-2023-43659"
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2024-03-06T10:54:02.887Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

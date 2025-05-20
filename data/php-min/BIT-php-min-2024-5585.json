@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2024-5585",
+  "summary": "Command injection via array-ish $command parameter of proc_open() (bypass CVE-2024-1874 fix)",
   "details": "In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, the fix for CVE-2024-1874 does not work if the command name includes trailing spaces. Original issue: when using proc_open() command with array syntax, due to insufficient escaping, if the arguments of the executed command are controlled by a malicious user, the user can supply arguments that would execute arbitrary commands in Windows shell.",
   "aliases": [
     "CVE-2024-5585"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2025-01-14T19:19:21.208Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-argo-cd-2024-32476",
+  "summary": "Denial of Service via malicious jqPathExpressions in ignoreDifferences",
   "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. There is a Denial of Service (DoS) vulnerability via OOM using jq in ignoreDifferences. This vulnerability has been patched in version(s) 2.10.7, 2.9.12 and 2.8.16.",
   "aliases": [
     "CVE-2024-32476"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-05-24T07:16:04.154Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

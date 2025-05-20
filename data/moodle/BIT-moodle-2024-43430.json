@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-moodle-2024-43430",
+  "summary": "Moodle: lack of access control when using external methods for quiz overrides",
   "details": "A flaw was found in moodle. External API access to Quiz can override contained insufficient access control.",
   "aliases": [
     "CVE-2024-43430"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-05-02T06:18:49.899Z",
-  "modified": "2025-05-02T06:34:40.019Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

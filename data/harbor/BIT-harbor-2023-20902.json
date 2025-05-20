@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2023-20902",
+  "summary": "Timing attack risk in Harbor",
   "details": "A timing condition in Harbor 2.6.x and below, Harbor 2.7.2 and below,  Harbor 2.8.2 and below, and Harbor 1.10.17 and below allows an attacker with network access to \ncreate jobs/stop job tasks and retrieve job task information.",
   "aliases": [
     "CVE-2023-20902"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:53:13.485Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

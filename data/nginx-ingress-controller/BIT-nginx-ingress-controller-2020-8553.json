@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-ingress-controller-2020-8553",
+  "summary": "Kubernetes ingress-nginx Compromise of auth via subset/superset namespace names",
   "details": "The Kubernetes ingress-nginx component prior to version 0.28.0 allows a user with the ability to create namespaces and to read and create ingress objects to overwrite the password file of another ingress which uses nginx.ingress.kubernetes.io/auth-type: basic and which has a hyphenated namespace or secret name.",
   "aliases": [
     "CVE-2020-8553"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:59:40.598Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

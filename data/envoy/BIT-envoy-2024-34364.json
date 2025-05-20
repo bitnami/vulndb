@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-34364",
+  "summary": "Envoy OOM vector from HTTP async client with unbounded response buffer for mirror response",
   "details": "Envoy is a cloud-native, open source edge and service proxy. Envoy exposed an out-of-memory (OOM) vector from the mirror response, since async HTTP client will buffer the response with an unbounded buffer.",
   "aliases": [
     "CVE-2024-34364"
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-06-06T07:17:26.560Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

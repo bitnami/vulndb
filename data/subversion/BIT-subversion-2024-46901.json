@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-subversion-2024-46901",
+  "summary": "Apache Subversion: mod_dav_svn denial-of-service via control characters in paths",
   "details": "Insufficient validation of filenames against control characters in Apache Subversion repositories served via mod_dav_svn allows authenticated users with commit access to commit a corrupted revision, leading to disruption for users of the repository.\n\nAll versions of Subversion up to and including Subversion 1.14.4 are affected if serving repositories via mod_dav_svn. Users are recommended to upgrade to version 1.14.5, which fixes this issue.\n\nRepositories served via other access methods are not affected.",
   "aliases": [
     "CVE-2024-46901"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-12-11T07:18:54.504Z",
-  "modified": "2025-04-14T07:43:47.057Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

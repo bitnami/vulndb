@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-pillow-2021-23437",
+  "summary": "Regular Expression Denial of Service (ReDoS)",
   "details": "The package pillow 5.2.0 and before 8.3.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.",
   "aliases": [
     "CVE-2021-23437"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T11:05:30.378Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

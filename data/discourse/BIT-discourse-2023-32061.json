@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-32061",
-  "details": "Discourse is an open source discussion platform. Prior to version 3.0.4 of the `stable` branch, the lack of restrictions on the iFrame tag makes it easy for an attacker to exploit the vulnerability and hide subsequent comments from other users. This issue is patched in version 3.0.4 of the `stable` branch. There are no known workarounds.",
+  "summary": "Discourse Topic Creation Page Allows iFrame Tag without Restrictions",
+  "details": "Discourse is an open source discussion platform. Prior to version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches, the lack of restrictions on the iFrame tag makes it easy for an attacker to exploit the vulnerability and hide subsequent comments from other users. This issue is patched in version 3.0.4 of the `stable` branch and version 3.1.0.beta5 of the `beta` and `tests-passed` branches. There are no known workarounds.",
   "aliases": [
     "CVE-2023-32061"
   ],
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T10:57:13.893Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

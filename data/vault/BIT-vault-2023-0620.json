@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2023-0620",
+  "summary": "Vault Vulnerable to SQL Injection When Configuring the Microsoft SQL Database Storage Backend",
   "details": "HashiCorp Vault and Vault Enterprise versions 0.8.0 through 1.13.1 are vulnerable to an SQL injection attack when configuring the Microsoft SQL (MSSQL) Database Storage Backend. When configuring the MSSQL plugin through the local, certain parameters are not sanitized when passed to the user-provided MSSQL database. An attacker may modify these parameters to execute a malicious SQL command.\n\nThis issue is fixed in versions 1.13.1, 1.12.5, and 1.11.9.",
   "aliases": [
     "CVE-2023-0620"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-03-06T11:09:41.369Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

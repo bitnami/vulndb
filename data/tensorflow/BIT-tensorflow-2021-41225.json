@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-41225",
+  "summary": "A use of uninitialized value vulnerability in Tensorflow",
   "details": "TensorFlow is an open source platform for machine learning. In affected versions TensorFlow's Grappler optimizer has a use of unitialized variable. If the `train_nodes` vector (obtained from the saved model that gets optimized) does not contain a `Dequeue` node, then `dequeue_node` is left unitialized. The fix will be included in TensorFlow 2.7.0. We will also cherrypick this commit on TensorFlow 2.6.1, TensorFlow 2.5.2, and TensorFlow 2.4.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-41225"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-03-06T11:15:58.880Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

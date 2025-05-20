@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-min-2020-7064",
+  "summary": "Use-of-uninitialized-value in exif",
   "details": "In PHP versions 7.2.x below 7.2.9, 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while parsing EXIF data with exif_read_data() function, it is possible for malicious data to cause PHP to read one byte of uninitialized memory. This could potentially lead to information disclosure or crash.",
   "aliases": [
     "CVE-2020-7064"
@@ -98,5 +99,5 @@
     }
   ],
   "published": "2025-01-14T19:23:49.415Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

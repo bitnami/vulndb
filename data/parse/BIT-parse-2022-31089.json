@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2022-31089",
+  "summary": "Invalid file request can crashe parse-server",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In affected versions certain types of invalid files requests are not handled properly and can crash the server. If you are running multiple Parse Server instances in a cluster, the availability impact may be low; if you are running Parse Server as single instance without redundancy, the availability impact may be high. This issue has been addressed in versions 4.10.12 and 5.2.3. Users are advised to upgrade. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2022-31089"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T11:02:37.484Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

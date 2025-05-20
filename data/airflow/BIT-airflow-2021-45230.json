@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2021-45230",
+  "summary": "Apache Airflow: Creating DagRuns didn't respect Dag-level permissions in the Webserver",
   "details": "In Apache Airflow prior to 2.2.0. This CVE applies to a specific case where a User who has \"can_create\" permissions on DAG Runs can create Dag Runs for dags that they don't have \"edit\" permissions for.",
   "aliases": [
     "CVE-2021-45230"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2024-03-06T10:58:36.898Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-3303",
+  "summary": "Improper Neutralization of Input Used for LLM Prompting in GitLab",
   "details": "An issue was discovered in GitLab EE affecting all versions starting from 16.0 prior to 17.6.5, starting from 17.7 prior to 17.7.4, and starting from 17.8 prior to 17.8.2, which allows an attacker to exfiltrate contents of a private issue using prompt injection.",
   "aliases": [
     "CVE-2024-3303"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-17T19:23:31.736Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

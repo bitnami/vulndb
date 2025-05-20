@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2021-32672",
+  "summary": "Vulnerability in Lua Debugger in Redis",
   "details": "Redis is an open source, in-memory database that persists on disk. When using the Redis Lua Debugger, users can send malformed requests that cause the debugger’s protocol parser to read data beyond the actual buffer. This issue affects all versions of Redis with Lua debugging support (3.2 or newer). The problem is fixed in versions 6.2.6, 6.0.16 and 5.0.14.",
   "aliases": [
     "CVE-2021-32672"
@@ -94,5 +95,5 @@
     }
   ],
   "published": "2024-08-22T19:29:26.350Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-49099",
+  "summary": "Discourse secure uploads accessible to guests even when login is required",
   "details": "Discourse is a platform for community discussion. Under very specific circumstances, secure upload URLs associated with posts can be accessed by guest users even when login is required. This vulnerability has been patched in 3.2.0.beta4 and 3.1.4.",
   "aliases": [
     "CVE-2023-49099"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:51:30.801Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

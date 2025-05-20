@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-49765",
+  "summary": "Bypass of Discourse Connect using other login paths if enabled in Discourse",
   "details": "Discourse is an open source platform for community discussion. Sites that are using discourse connect but still have local logins enabled could allow attackers to bypass discourse connect to create accounts and login. This problem is patched in the latest version of Discourse. Users unable to upgrade who are using discourse connect may disable all other login methods as a workaround.",
   "aliases": [
     "CVE-2024-49765"
@@ -52,5 +53,5 @@
     }
   ],
   "published": "2024-12-23T19:10:38.115Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

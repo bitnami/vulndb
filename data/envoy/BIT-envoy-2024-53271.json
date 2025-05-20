@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2024-53271",
+  "summary": "HTTP/1.1 multiple issues with envoy.reloadable_features.http1_balsa_delay_reset in envoy",
   "details": "Envoy is a cloud-native high-performance edge/middle/service proxy. In affected versions envoy  does not properly handle http 1.1 non-101 1xx responses. This can lead to downstream failures in networked devices. This issue has been addressed in versions 1.31.5 and 1.32.3. Users are advised to upgrade. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2024-53271"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-12-20T07:08:24.205Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

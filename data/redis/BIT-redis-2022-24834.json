@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-redis-2022-24834",
+  "summary": "Heap overflow issue with the Lua cjson library used by Redis",
   "details": "Redis is an in-memory database that persists on disk. A specially crafted Lua script executing in Redis can trigger a heap overflow in the cjson library, and result with heap corruption and potentially remote code execution. The problem exists in all versions of Redis with Lua scripting support, starting from 2.6, and affects only authenticated and authorized users. The problem is fixed in versions 7.0.12, 6.2.13, and 6.0.20.",
   "aliases": [
     "CVE-2022-24834"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T11:06:06.800Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

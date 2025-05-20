@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-php-2020-7070",
+  "summary": "PHP parses encoded cookie names so malicious `__Host-` cookies can be sent",
   "details": "In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when PHP is processing incoming HTTP cookie values, the cookie names are url-decoded. This may lead to cookies with prefixes like __Host confused with cookies that decode to such prefix, thus leading to an attacker being able to forge cookie which is supposed to be secure. See also CVE-2020-8184 for more information.",
   "aliases": [
     "CVE-2020-7070"
@@ -118,5 +119,5 @@
     }
   ],
   "published": "2024-03-06T11:05:57.987Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

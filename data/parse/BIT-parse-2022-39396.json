@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2022-39396",
+  "summary": "Parse Server vulnerable to Remote Code Execution via prototype pollution in MongoDB BSON parser",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Versions prior to 4.10.18, and prior to 5.3.1 on the 5.X branch, are vulnerable to Remote Code Execution via prototype pollution. An attacker can use this prototype pollution sink to trigger a remote code execution through the MongoDB BSON parser. This issue is patched in version 5.3.1 and in 4.10.18. There are no known workarounds.",
   "aliases": [
     "CVE-2022-39396"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T11:01:33.483Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

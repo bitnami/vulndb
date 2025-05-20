@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2024-1560",
+  "summary": "Path Traversal Vulnerability in mlflow/mlflow",
   "details": "A path traversal vulnerability exists in the mlflow/mlflow repository, specifically within the artifact deletion functionality. Attackers can bypass path validation by exploiting the double decoding process in the `_delete_artifact_mlflow_artifacts` handler and `local_file_uri_to_path` function, allowing for the deletion of arbitrary directories on the server's filesystem. This vulnerability is due to an extra unquote operation in the `delete_artifacts` function of `local_artifact_repo.py`, which fails to properly sanitize user-supplied paths. The issue is present up to version 2.9.2, despite attempts to fix a similar issue in CVE-2023-6831.",
   "aliases": [
     "CVE-2024-1560"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-02-04T07:21:57.427Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

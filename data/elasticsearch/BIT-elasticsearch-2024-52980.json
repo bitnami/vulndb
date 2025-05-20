@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2024-52980",
+  "summary": "Elasticsearch Uncontrolled Resource Consumption vulnerability",
   "details": "A flaw was discovered in Elasticsearch, where a large recursion using the innerForbidCircularReferences function of the PatternBank class could cause the Elasticsearch node to crash.\n\nA successful attack requires a malicious user to have read_pipeline Elasticsearch cluster privilege assigned to them.",
   "aliases": [
     "CVE-2024-52980"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-10T07:10:13.338Z",
-  "modified": "2025-04-10T07:44:37.385Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-phpmailer-2021-3603",
+  "summary": "Inclusion of Functionality from Untrusted Control Sphere in PHPMailer/PHPMailer",
   "details": "PHPMailer 6.4.1 and earlier contain a vulnerability that can result in untrusted code being called (if such code is injected into the host project's scope by other means). If the $patternselect parameter to validateAddress() is set to 'php' (the default, defined by PHPMailer::$validator), and the global namespace contains a function called php, it will be called in preference to the built-in validator of the same name. Mitigated in PHPMailer 6.5.0 by denying the use of simple strings as validator function names.",
   "aliases": [
     "CVE-2021-3603"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T11:01:27.687Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

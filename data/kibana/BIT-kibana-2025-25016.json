@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-kibana-2025-25016",
+  "summary": "Kibana Unrestricted Upload of File",
   "details": "Unrestricted file upload in Kibana allows an authenticated attacker to compromise software integrity by uploading a crafted malicious file due to insufficient server-side validation.",
   "aliases": [
     "CVE-2025-25016"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-05-03T05:46:27.247Z",
-  "modified": "2025-05-03T06:34:12.721Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

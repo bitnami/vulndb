@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-apache-2022-30556",
+  "summary": "Information Disclosure in mod_lua with websockets",
   "details": "Apache HTTP Server 2.4.53 and earlier may return lengths to applications calling r:wsread() that point past the end of the storage allocated for the buffer.",
   "aliases": [
     "CVE-2022-30556"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:52:05.387Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

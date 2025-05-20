@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-28330",
+  "summary": "Moodle: authenticated arbitrary file read through malformed backup file",
   "details": "Insufficient sanitizing in backup resulted in an arbitrary file read risk. The capability to access this feature is only available to teachers, managers and admins by default.",
   "aliases": [
     "CVE-2023-28330"
@@ -81,5 +82,5 @@
     }
   ],
   "published": "2024-03-06T11:00:43.602Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

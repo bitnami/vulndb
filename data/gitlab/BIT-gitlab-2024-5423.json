@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-5423",
+  "summary": "Uncontrolled Resource Consumption in GitLab",
   "details": "Multiple Denial of Service (DoS) conditions has been discovered in GitLab CE/EE affecting all versions starting from 1.0 prior to 17.0.6, starting from 17.1 prior to 17.1.4, and starting from 17.2 prior to 17.2.2 which allowed an attacker to cause resource exhaustion via banzai pipeline.",
   "aliases": [
     "CVE-2024-5423"
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2024-08-10T07:22:13.593Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

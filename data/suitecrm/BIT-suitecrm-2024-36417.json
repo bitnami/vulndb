@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-suitecrm-2024-36417",
+  "summary": "SuiteCRM Stored XSS Vulnerability Allows Code Execution via Malicious iFrame",
   "details": "SuiteCRM is an open-source Customer Relationship Management (CRM) software application. Prior to versions 7.14.4 and 8.6.1, an unverified IFrame can be added some some inputs, which could allow for a cross-site scripting attack. Versions 7.14.4 and 8.6.1 contain a fix for this issue.",
   "aliases": [
     "CVE-2024-36417"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-06-12T07:36:56.114Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

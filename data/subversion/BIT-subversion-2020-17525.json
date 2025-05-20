@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-subversion-2020-17525",
+  "summary": "Remote unauthenticated denial-of-service in Subversion mod_authz_svn",
   "details": "Subversion's mod_authz_svn module will crash if the server is using in-repository authz rules with the AuthzSVNReposRelativeAccessFile option and a client sends a request for a non-existing repository URL. This can lead to disruption for users of the service. This issue was fixed in mod_dav_svn+mod_authz_svn servers 1.14.1 and mod_dav_svn+mod_authz_svn servers 1.10.7",
   "aliases": [
     "CVE-2020-17525"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T11:05:54.580Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

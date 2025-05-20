@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2024-48901",
+  "summary": "Moodle: idor when fetching report schedules",
   "details": "A vulnerability was found in Moodle. Additional checks are required to ensure users can only access the schedule of a report if they have permission to edit that report.",
   "aliases": [
     "CVE-2024-48901"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-11-21T07:13:17.796Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-45402",
+  "summary": "Apache Airflow: Open redirect during login",
   "details": "In Apache Airflow versions prior to 2.4.3, there was an open redirect in the webserver's `/login` endpoint.",
   "aliases": [
     "CVE-2022-45402"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:56:02.090Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-45147",
+  "summary": "Arbitrary keys can be added to a topic's custom fields by any user in Discourse",
   "details": "Discourse is an open source community platform. In affected versions any user can create a topic and add arbitrary custom fields to a topic. The severity of this vulnerability depends on what plugins are installed and how the plugins uses topic custom fields. For a default Discourse installation with the default plugins, this vulnerability has no impact. The problem has been patched in the latest version of Discourse. Users are advised to update to version 3.1.1 if they are on the stable branch or 3.2.0.beta2 if they are on the beta branch. Users unable to upgrade should disable any plugins that access topic custom fields.",
   "aliases": [
     "CVE-2023-45147"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:53:06.773Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

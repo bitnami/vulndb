@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2024-2660",
+  "summary": "Vault TLS Cert Auth Method Did Not Correctly Validate OCSP Responses",
   "details": "Vault and Vault Enterprise TLS certificates auth method did not correctly validate OCSP responses when one or more OCSP sources were configured. This vulnerability, CVE-2024-2660, affects Vault and Vault Enterprise 1.14.0 and above, and is fixed in Vault 1.16.0 and Vault Enterprise 1.16.1, 1.15.7, and 1.14.11.",
   "aliases": [
     "CVE-2024-2660"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-05-01T07:38:05.608Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-1257",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
   "details": "An issue was discovered in GitLab EE affecting all versions starting with 12.3 before 17.7.7, 17.8 prior to 17.8.5, and 17.9 prior to 17.9.2. A vulnerability in certain GitLab instances could allow an attacker to cause a denial of service condition by manipulating specific API inputs.",
   "aliases": [
     "CVE-2025-1257"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-15T07:11:11.910Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

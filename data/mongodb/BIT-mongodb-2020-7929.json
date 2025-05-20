@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2020-7929",
+  "summary": "Specially crafted regex query can cause DoS",
   "details": "A user authorized to perform database queries may trigger denial of service by issuing specially crafted query contain a type of regex. This issue affects MongoDB Server v3.6 versions prior to 3.6.21 and MongoDB Server v4.0 versions prior to 4.0.20.",
   "aliases": [
     "CVE-2020-7929"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-03-06T10:58:23.672Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

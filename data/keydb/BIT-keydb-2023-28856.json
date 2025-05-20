@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-keydb-2023-28856",
+  "summary": "`HINCRBYFLOAT` can be used to crash a redis-server process",
   "details": "Redis is an open source, in-memory database that persists on disk. Authenticated users can use the `HINCRBYFLOAT` command to create an invalid hash field that will crash Redis on access in affected versions. This issue has been addressed in in versions 7.0.11, 6.2.12, and 6.0.19. Users are advised to upgrade. There are no known workarounds for this issue.",
   "aliases": [
     "CVE-2023-28856"
@@ -90,5 +91,5 @@
     }
   ],
   "published": "2024-08-22T19:24:15.254Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

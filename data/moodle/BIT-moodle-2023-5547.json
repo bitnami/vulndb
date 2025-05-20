@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-5547",
+  "summary": "Moodle: xss risk when previewing data in course upload tool",
   "details": "The course upload preview contained an XSS risk for users uploading unsafe data.",
   "aliases": [
     "CVE-2023-5547"
@@ -82,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T10:57:21.193Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

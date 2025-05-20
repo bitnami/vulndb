@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2025-2469",
+  "summary": "Debug Messages Revealing Unnecessary Information in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.9 before 17.9.6, and 17.10 before 17.10.4. The runtime profiling data of a specific service was accessible to unauthenticated users.",
   "aliases": [
     "CVE-2025-2469"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2025-04-12T08:05:55.234Z",
-  "modified": "2025-04-12T08:07:05.000Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

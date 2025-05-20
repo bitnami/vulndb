@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2022-39356",
+  "summary": "Discourse user account takeover via email and invite link",
   "details": "Discourse is a platform for community discussion. Users who receive an invitation link that is not scoped to a single email address can enter any non-admin user's email and gain access to their account when accepting the invitation. All users should upgrade to the latest version. A workaround is temporarily disabling invitations with `SiteSetting.max_invites_per_day = 0` or scope them to individual email addresses.",
   "aliases": [
     "CVE-2022-39356"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T11:03:50.674Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

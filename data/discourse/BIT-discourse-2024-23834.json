@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-23834",
-  "details": "Discourse is an open-source discussion platform. Improperly sanitized user input could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. The vulnerability is patched in 3.1.5.  As a workaround, ensure Content Security Policy is enabled and does not include `unsafe-inline`.",
+  "summary": "Discourse improperly sanitized user input leads to XSS",
+  "details": "Discourse is an open-source discussion platform. Improperly sanitized user input could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. The vulnerability is patched in 3.1.5 and 3.2.0.beta5.  As a workaround, ensure Content Security Policy is enabled and does not include `unsafe-inline`.",
   "aliases": [
     "CVE-2024-23834"
   ],
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2024-03-06T10:51:09.899Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

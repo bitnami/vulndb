@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-4018",
+  "summary": "Direct Request ('Forced Browsing') in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1. Due to improper permission validation it was possible to create model experiments in public projects.",
   "aliases": [
     "CVE-2023-4018"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T11:00:11.187Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

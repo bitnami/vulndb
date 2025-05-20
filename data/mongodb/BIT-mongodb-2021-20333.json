@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mongodb-2021-20333",
+  "summary": "Server log entry spoofing via newline injection",
   "details": "Sending specially crafted commands to a MongoDB Server may result in artificial log entries being generated or for log entries to be split. This issue affects MongoDB Server v3.6 versions prior to 3.6.20; MongoDB Server v4.0 versions prior to 4.0.21 and MongoDB Server v4.2 versions prior to 4.2.10.",
   "aliases": [
     "CVE-2021-20333"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:57:52.807Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

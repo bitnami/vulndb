@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-15191",
+  "summary": "Undefined behavior in Tensorflow",
   "details": "In Tensorflow before versions 2.2.1 and 2.3.1, if a user passes an invalid argument to `dlpack.to_dlpack` the expected validations will cause variables to bind to `nullptr` while setting a `status` variable to the error condition. However, this `status` argument is not properly checked. Hence, code following these methods will bind references to null pointers. This is undefined behavior and reported as an error if compiling with `-fsanitize=null`. The issue is patched in commit 22e07fb204386768e5bcbea563641ea11f96ceb8 and is released in TensorFlow versions 2.2.1, or 2.3.1.",
   "aliases": [
     "CVE-2020-15191"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:20:51.213Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

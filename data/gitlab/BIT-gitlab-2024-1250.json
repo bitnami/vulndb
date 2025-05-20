@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-1250",
+  "summary": "Privilege Chaining in GitLab",
   "details": "An issue has been discovered in GitLab EE affecting all versions starting from 16.8 before 16.8.2. When a user is assigned a custom role with manage_group_access_tokens permission, they may be able to create group access tokens with Owner privileges, which may lead to privilege escalation.",
   "aliases": [
     "CVE-2024-1250"
@@ -51,5 +52,5 @@
     }
   ],
   "published": "2024-03-06T10:52:40.993Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

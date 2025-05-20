@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2025-24808",
+  "summary": "Discourse has race condition when adding users to a group DM",
   "details": "Discourse is an open-source discussion platform. Prior to versions `3.3.4` on the `stable` branch and `3.4.0.beta5` on the `beta` branch, someone who is about to reach the limit of users in a group DM may send requests to add new users in parallel. The requests might all go through ignoring the limit due to a race condition. The patch in versions `3.3.4` and `3.4.0.beta5` uses the `lock` step in service to wrap part of the `add_users_to_channel` service inside a distributed lock/mutex in order to avoid the race condition.",
   "aliases": [
     "CVE-2025-24808"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-28T09:46:39.640Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

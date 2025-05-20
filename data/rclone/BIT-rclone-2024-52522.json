@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-rclone-2024-52522",
+  "summary": "Rclone  Improper Permission and Ownership Handling on Symlink Targets with --links and --metadata",
   "details": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Insecure handling of symlinks with --links and --metadata in rclone while copying to local disk allows unprivileged users to indirectly modify ownership and permissions on symlink target files when a superuser or privileged process performs a copy. This vulnerability could enable privilege escalation and unauthorized access to critical system files, compromising system integrity, confidentiality, and availability. This vulnerability is fixed in 1.68.2.",
   "aliases": [
     "CVE-2024-52522"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-14T11:22:08.956Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

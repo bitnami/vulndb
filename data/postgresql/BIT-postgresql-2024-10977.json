@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2024-10977",
+  "summary": "PostgreSQL libpq retains an error message from man-in-the-middle",
   "details": "Client use of server error message in PostgreSQL allows a server not trusted under current SSL or GSS settings to furnish arbitrary non-NUL bytes to the libpq application.  For example, a man-in-the-middle attacker could send a long error message that a human or screen-scraper user of psql mistakes for valid query results.  This is probably not a concern for clients where the user interface unambiguously indicates the boundary between one error message and other text.  Versions before PostgreSQL 17.1, 16.5, 15.9, 14.14, 13.17, and 12.21 are affected.",
   "aliases": [
     "CVE-2024-10977"
@@ -74,5 +75,5 @@
     }
   ],
   "published": "2024-11-16T07:16:52.278Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

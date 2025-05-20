@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2024-24785",
+  "summary": "Errors returned from JSON marshaling may break template escaping in html/template",
   "details": "If errors returned from MarshalJSON methods contain user controlled data, they may be used to break the contextual auto-escaping behavior of the html/template package, allowing for subsequent actions to inject unexpected content into templates.",
   "aliases": [
     "CVE-2024-24785"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-12T08:24:09.179Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

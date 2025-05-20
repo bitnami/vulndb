@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2021-41109",
+  "summary": "LiveQuery publishes user session tokens",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to version 4.10.4, for regular (non-LiveQuery) queries, the session token is removed from the response, but for LiveQuery payloads it is currently not. If a user has a LiveQuery subscription on the `Parse.User` class, all session tokens created during user sign-ups will be broadcast as part of the LiveQuery payload. A patch in version 4.10.4 removes session tokens from the LiveQuery payload. As a workaround, set `user.acl(new Parse.ACL())` in a beforeSave trigger to make the user private already on sign-up.",
   "aliases": [
     "CVE-2021-41109"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:03:28.771Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

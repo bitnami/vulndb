@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-moodle-2023-30944",
+  "summary": "Moodle: minor sql injection risk in external wiki method for listing pages",
   "details": "The vulnerability was found Moodle which exists due to insufficient sanitization of user-supplied data in external Wiki method for listing pages. A remote attacker can send a specially crafted request to the affected application and execute limited SQL commands within the application database.",
   "aliases": [
     "CVE-2023-30944"
@@ -88,5 +89,5 @@
     }
   ],
   "published": "2024-03-06T10:59:29.074Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

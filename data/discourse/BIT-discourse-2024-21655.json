@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-21655",
+  "summary": "Insufficient control of custom field value sizes",
   "details": "Discourse is a platform for community discussion. For fields that are client editable, limits on sizes are not imposed. This allows a malicious actor to cause a Discourse instance to use excessive disk space and also often excessive bandwidth. The issue is patched 3.1.4 and 3.2.0.beta4.",
   "aliases": [
     "CVE-2024-21655"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-06T10:51:21.402Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

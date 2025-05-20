@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2021-41271",
+  "summary": "Cache poisoning via maliciously-formed request in discourse",
   "details": "Discourse is a platform for community discussion. In affected versions a maliciously crafted request could cause an error response to be cached by intermediate proxies. This could cause a loss of confidentiality for some content. This issue is patched in the latest stable, beta and tests-passed versions of Discourse.",
   "aliases": [
     "CVE-2021-41271"
@@ -103,5 +104,5 @@
     }
   ],
   "published": "2024-03-06T11:09:07.503Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

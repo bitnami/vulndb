@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-elasticsearch-2024-37280",
+  "summary": "Elasticsearch StackOverflow vulnerability",
   "details": "A flaw was discovered in Elasticsearch, affecting document ingestion when an index template contains a dynamic field mapping of “passthrough” type. Under certain circumstances, ingesting documents in this index would cause a StackOverflow exception to be thrown and ultimately lead to a Denial of Service. Note that passthrough fields is an experimental feature.",
   "aliases": [
     "CVE-2024-37280"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-06-17T07:17:36.635Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

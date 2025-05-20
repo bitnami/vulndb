@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-jupyterlab-2021-32797",
+  "summary": "JupyterLab: XSS due to lack of sanitization of the action attribute of an html <form>",
   "details": "JupyterLab is a user interface for Project Jupyter which will eventually replace the classic Jupyter Notebook. In affected versions untrusted notebook can execute code on load. In particular JupyterLab doesn’t sanitize the action attribute of html `<form>`. Using this it is possible to trigger the form validation outside of the form itself. This is a remote code execution, but requires user action to open a notebook.",
   "aliases": [
     "CVE-2021-32797"
@@ -78,5 +79,5 @@
     }
   ],
   "published": "2024-03-06T10:54:25.501Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

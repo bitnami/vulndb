@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-modsecurity-2025-27110",
+  "summary": "Libmodsecurity3 has possible bypass of encoded HTML entities",
   "details": "Libmodsecurity is one component of the ModSecurity v3 project. The library codebase serves as an interface to ModSecurity Connectors taking in web traffic and applying traditional ModSecurity processing. A bug that exists only in Libmodsecurity3 version 3.0.13 means that, in 3.0.13, Libmodsecurity3 can't decode encoded HTML entities if they contains leading zeroes. Version 3.0.14 contains a fix. No known workarounds are available.",
   "aliases": [
     "CVE-2025-27110"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-03-07T20:58:41.959Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

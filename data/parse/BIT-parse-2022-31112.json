@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-parse-2022-31112",
+  "summary": "Protected fields exposed via LiveQuery in parse-server",
   "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In affected versions parse Server LiveQuery does not remove protected fields in classes, passing them to the client. The LiveQueryController now removes protected fields from the client response. Users are advised to upgrade. Users unable t upgrade should use `Parse.Cloud.afterLiveQueryEvent` to manually remove protected fields.",
   "aliases": [
     "CVE-2022-31112"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:02:26.390Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

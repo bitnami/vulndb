@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-0402",
+  "summary": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.0 prior to 16.6.6, 16.7 prior to 16.7.4, and 16.8 prior to 16.8.1 which allows an authenticated user to write files to arbitrary locations on the GitLab server while creating a workspace.",
   "aliases": [
     "CVE-2024-0402"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T10:53:34.701Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

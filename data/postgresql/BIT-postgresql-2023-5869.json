@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-postgresql-2023-5869",
+  "summary": "Postgresql: buffer overrun from integer overflow in array modification",
   "details": "A flaw was found in PostgreSQL that allows authenticated database users to execute arbitrary code through missing overflow checks during SQL array value modification. This issue exists due to an integer overflow during array modification where a remote user can trigger the overflow by providing specially crafted data. This enables the execution of arbitrary code on the target system, allowing users to write arbitrary bytes to memory and extensively read the server's memory.",
   "aliases": [
     "CVE-2023-5869"
@@ -213,5 +214,5 @@
     }
   ],
   "published": "2024-03-06T11:02:41.294Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

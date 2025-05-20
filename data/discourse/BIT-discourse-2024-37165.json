@@ -1,7 +1,8 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-37165",
-  "details": "Discourse is an open source discussion platform. Prior to 3.2.3, improperly sanitized Onebox data could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. This vulnerability is fixed in 3.2.3",
+  "summary": "Discourse has an XSS via Onebox system",
+  "details": "Discourse is an open source discussion platform. Prior to 3.2.3 and 3.3.0.beta3, improperly sanitized Onebox data could lead to an XSS vulnerability in some situations. This vulnerability only affects Discourse instances which have disabled the default Content Security Policy. This vulnerability is fixed in 3.2.3 and 3.3.0.beta3.",
   "aliases": [
     "CVE-2024-37165"
   ],
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-08-01T11:18:49.407Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

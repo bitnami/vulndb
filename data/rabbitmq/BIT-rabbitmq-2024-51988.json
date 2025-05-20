@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-rabbitmq-2024-51988",
+  "summary": "HTTP API's queue deletion endpoint does not verify that the user has a required permission",
   "details": "RabbitMQ is a feature rich, multi-protocol messaging and streaming broker. In affected versions queue deletion via the HTTP API was not verifying the `configure` permission of the user. Users who had all of the following: 1. Valid credentials, 2. Some permissions for the target virtual host & 3. HTTP API access. could delete queues it had no (deletion) permissions for. This issue has been addressed in version 3.12.11 of the open source rabbitMQ release and in versions 1.5.2, 3.13.0, and 4.0.0 of the tanzu release. Users are advised to upgrade. Users unable to upgrade may disable management plugin and use, for example, Prometheus and Grafana for monitoring.",
   "aliases": [
     "CVE-2024-51988"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-11-08T07:17:02.800Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

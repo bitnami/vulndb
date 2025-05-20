@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2023-43814",
+  "summary": "Exposure of poll options and votes to unauthorized users in Discourse",
   "details": "Discourse is an open source platform for community discussion. Attackers with details specific to a poll in a topic can use the `/polls/grouped_poll_results` endpoint to view the content of options in the poll and the number of votes for groups of poll participants. This impacts private polls where the results were intended to only be viewable by authorized users. This issue is patched in the 3.1.1 stable and 3.2.0.beta2 versions of Discourse. There is no workaround for this issue apart from upgrading to the fixed version.",
   "aliases": [
     "CVE-2023-43814"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T10:53:52.288Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

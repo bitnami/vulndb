@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-15200",
+  "summary": "Segfault in Tensorflow",
   "details": "In Tensorflow before version 2.3.1, the `RaggedCountSparseOutput` implementation does not validate that the input arguments form a valid ragged tensor. In particular, there is no validation that the values in the `splits` tensor generate a valid partitioning of the `values` tensor. Thus, the code sets up conditions to cause a heap buffer overflow. A `BatchedMap` is equivalent to a vector where each element is a hashmap. However, if the first element of `splits_values` is not 0, `batch_idx` will never be 1, hence there will be no hashmap at index 0 in `per_batch_counts`. Trying to access that in the user code results in a segmentation fault. The issue is patched in commit 3cbb917b4714766030b28eba9fb41bb97ce9ee02 and is released in TensorFlow version 2.3.1.",
   "aliases": [
     "CVE-2020-15200"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:20:39.865Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

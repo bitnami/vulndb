@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-git-lfs-2021-21237",
+  "summary": "Git LFS can execute a Git binary from the current directory on Windows",
   "details": "Git LFS is a command line extension for managing large files with Git. On Windows, if Git LFS operates on a malicious repository with a git.bat or git.exe file in the current directory, that program would be executed, permitting the attacker to execute arbitrary code. This does not affect Unix systems. This is the result of an incomplete fix for CVE-2020-27955. This issue occurs because on Windows, Go includes (and prefers) the current directory when the name of a command run does not contain a directory separator. Other than avoiding untrusted repositories or using a different operating system, there is no workaround. This is fixed in v2.13.2.",
   "aliases": [
     "CVE-2021-21237"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:52:17.596Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

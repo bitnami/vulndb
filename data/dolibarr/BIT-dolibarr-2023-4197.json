@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-dolibarr-2023-4197",
+  "summary": "Dolibarr ERP CRM (<= 18.0.1) Improper Input Sanitization Authenticated RCE",
   "details": "Improper input validation in Dolibarr ERP CRM <= v18.0.1 fails to strip certain PHP code from user-supplied input when creating a Website, allowing an attacker to inject and evaluate arbitrary PHP code.",
   "aliases": [
     "CVE-2023-4197"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-04-03T14:06:40.091Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-1279",
+  "summary": "URL Redirection to Untrusted Site in GitLab",
   "details": "An issue has been discovered in GitLab affecting all versions starting from 4.1 before 16.1.5, all versions starting from 16.2 before 16.2.5, all versions starting from 16.3 before 16.3.1 where it was possible to create a URL that would redirect to a different project.",
   "aliases": [
     "CVE-2023-1279"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:11:10.784Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-27914",
+  "summary": "[20221101] - Core - RXSS through reflection of user input in com_media",
   "details": "An issue was discovered in Joomla! 4.0.0 through 4.2.4. Inadequate filtering of potentially malicious user input leads to reflected XSS vulnerabilities in com_media.",
   "aliases": [
     "CVE-2022-27914"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:15:31.388Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

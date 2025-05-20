@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-rabbitmq-2021-32718",
+  "summary": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) in RabbitMQ management UI",
   "details": "RabbitMQ is a multi-protocol messaging broker. In rabbitmq-server prior to version 3.8.17, a new user being added via management UI could lead to the user's bane being rendered in a confirmation message without proper `<script>` tag sanitization, potentially allowing for JavaScript code execution in the context of the page. In order for this to occur, the user must be signed in and have elevated permissions (other user management). The vulnerability is patched in RabbitMQ 3.8.17. As a workaround, disable `rabbitmq_management` plugin and use CLI tools for management operations and Prometheus and Grafana for metrics and monitoring.",
   "aliases": [
     "CVE-2021-32718"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T11:03:33.790Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

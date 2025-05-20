@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2023-5256",
+  "summary": "Drupal core - Critical - Cache poisoning - SA-CORE-2023-006",
   "details": "In certain scenarios, Drupal's JSON:API module will output error backtraces. With some configurations, this may cause sensitive information to be cached and made available to anonymous users, leading to privilege escalation.\n\nThis vulnerability only affects sites with the JSON:API module enabled, and can be mitigated by uninstalling JSON:API.\n\nThe core REST and contributed GraphQL modules are not affected.",
   "aliases": [
     "CVE-2023-5256"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:51:30.695Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

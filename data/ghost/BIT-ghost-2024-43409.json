@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-ghost-2024-43409",
+  "summary": "Ghost's improper authentication allows access to member information and actions",
   "details": "Ghost is a Node.js content management system. Improper authentication on some endpoints used for member actions would allow an attacker to perform member-only actions, and read member information. This security vulnerability is present in Ghost v4.46.0-v5.89.4. v5.89.5 contains a fix for this issue.",
   "aliases": [
     "CVE-2024-43409"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-08-23T07:18:19.005Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

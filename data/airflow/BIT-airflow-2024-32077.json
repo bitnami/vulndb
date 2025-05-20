@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2024-32077",
+  "summary": "Apache Airflow: XSS vulnerability in Task Instance Log/Log Details",
   "details": "Apache Airflow version 2.9.0 has a vulnerability that allows an authenticated attacker to inject malicious data into the task instance logs. \nUsers are recommended to upgrade to version 2.9.1, which fixes this issue.",
   "aliases": [
     "CVE-2024-32077"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-05-24T07:15:55.746Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

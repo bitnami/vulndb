@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-vault-2024-7594",
+  "summary": "Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default",
   "details": "Vault’s SSH secrets engine did not require the valid_principals list to contain a value by default. If the valid_principals and default_user fields of the SSH secrets engine configuration are not set, an SSH certificate requested by an authorized user to Vault’s SSH secrets engine could be used to authenticate as any user on the host. Fixed in Vault Community Edition 1.17.6, and in Vault Enterprise 1.17.6, 1.16.10, and 1.15.15.",
   "aliases": [
     "CVE-2024-7594"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-09-30T09:10:31.036Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

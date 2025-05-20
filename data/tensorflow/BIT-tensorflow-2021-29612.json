@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2021-29612",
+  "summary": "Heap buffer overflow in `BandedTriangularSolve`",
   "details": "TensorFlow is an end-to-end open source platform for machine learning. An attacker can trigger a heap buffer overflow in Eigen implementation of `tf.raw_ops.BandedTriangularSolve`. The implementation(https://github.com/tensorflow/tensorflow/blob/eccb7ec454e6617738554a255d77f08e60ee0808/tensorflow/core/kernels/linalg/banded_triangular_solve_op.cc#L269-L278) calls `ValidateInputTensors` for input validation but fails to validate that the two tensors are not empty. Furthermore, since `OP_REQUIRES` macro only stops execution of current function after setting `ctx->status()` to a non-OK value, callers of helper functions that use `OP_REQUIRES` must check value of `ctx->status()` before continuing. This doesn't happen in this op's implementation(https://github.com/tensorflow/tensorflow/blob/eccb7ec454e6617738554a255d77f08e60ee0808/tensorflow/core/kernels/linalg/banded_triangular_solve_op.cc#L219), hence the validation that is present is also not effective. The fix will be included in TensorFlow 2.5.0. We will also cherrypick this commit on TensorFlow 2.4.2, TensorFlow 2.3.3, TensorFlow 2.2.3 and TensorFlow 2.1.4, as these are also affected and still in supported range.",
   "aliases": [
     "CVE-2021-29612"
@@ -76,5 +77,5 @@
     }
   ],
   "published": "2024-03-06T11:18:04.414Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

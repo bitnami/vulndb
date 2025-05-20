@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mlflow-2023-6976",
+  "summary": "Unrestricted Upload of File with Dangerous Type",
   "details": "This vulnerability is capable of writing arbitrary files into arbitrary locations on the remote filesystem in the context of the server process.",
   "aliases": [
     "CVE-2023-6976"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:56:16.395Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2023-23750",
+  "summary": "[20230101] - Core - CSRF within post-installation messages",
   "details": "An issue was discovered in Joomla! 4.0.0 through 4.2.6. A missing token check causes a CSRF vulnerability in the handling of post-installation messages.",
   "aliases": [
     "CVE-2023-23750"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:15:38.995Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

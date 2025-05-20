@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2021-39162",
+  "summary": "Incorrect handling of H2 GOAWAY + SETTINGS frames",
   "details": "Pomerium is an open source identity-aware access proxy. Envoy, which Pomerium is based on, can abnormally terminate if an H/2 GOAWAY and SETTINGS frame are received in the same IO event. This can lead to a DoS in the presence of untrusted *upstream* servers. 0.15.1 contains an upgraded envoy binary with this vulnerability patched. If only trusted upstreams are configured, there is not substantial risk of this condition being triggered.",
   "aliases": [
     "CVE-2021-39162"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:57:33.498Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

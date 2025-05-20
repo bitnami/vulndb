@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-envoy-2022-21654",
+  "summary": "Incorrect configuration handling allows TLS session re-use without re-validation in Envoy",
   "details": "Envoy is an open source edge and service proxy, designed for cloud-native applications. Envoy's tls allows re-use when some cert validation settings have changed from their default configuration. The only workaround for this issue is to ensure that default tls settings are used. Users are advised to upgrade.",
   "aliases": [
     "CVE-2022-21654"
@@ -72,5 +73,5 @@
     }
   ],
   "published": "2024-03-06T10:56:26.107Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

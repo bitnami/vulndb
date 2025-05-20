@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-zookeeper-2023-44981",
+  "summary": "Apache ZooKeeper: Authorization bypass in SASL Quorum Peer Authentication",
   "details": "Authorization Bypass Through User-Controlled Key vulnerability in Apache ZooKeeper. If SASL Quorum Peer authentication is enabled in ZooKeeper (quorum.auth.enableSasl=true), the authorization is done by verifying that the instance part in SASL authentication ID is listed in zoo.cfg server list. The instance part in SASL auth ID is optional and if it's missing, like 'eve@EXAMPLE.COM', the authorization check will be skipped. As a result an arbitrary endpoint could join the cluster and begin propagating counterfeit changes to the leader, essentially giving it complete read-write access to the data tree. Quorum Peer authentication is not enabled by default.\n\nUsers are recommended to upgrade to version 3.9.1, 3.8.3, 3.7.2, which fixes the issue.\n\nAlternately ensure the ensemble election/quorum communication is protected by a firewall as this will mitigate the issue.\n\nSee the documentation for more details on correct cluster administration.",
   "aliases": [
     "CVE-2023-44981"
@@ -84,5 +85,5 @@
     }
   ],
   "published": "2024-03-06T11:08:55.784Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

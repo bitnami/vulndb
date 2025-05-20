@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2023-23754",
+  "summary": "[20230501] - Core - Open Redirect and XSS within the mfa select",
   "details": "An issue was discovered in Joomla! 4.2.0 through 4.3.1. Lack of input validation caused an open redirect and XSS issue within the new mfa selection screen.",
   "aliases": [
     "CVE-2023-23754"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:16:03.188Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

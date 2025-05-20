@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2024-52794",
+  "summary": "Magnific lightbox susceptible to Cross-site Scripting in Discourse",
   "details": "Discourse is an open source platform for community discussion. Users clicking on the lightbox thumbnails could be affected. This problem is patched in the latest version of Discourse. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
   "aliases": [
     "CVE-2024-52794"
@@ -52,5 +53,5 @@
     }
   ],
   "published": "2024-12-23T19:10:22.128Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

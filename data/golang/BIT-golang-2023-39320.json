@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-golang-2023-39320",
+  "summary": "Arbitrary code execution via go.mod toolchain directive in cmd/go",
   "details": "The go.mod toolchain directive, introduced in Go 1.21, can be leveraged to execute scripts and binaries relative to the root of the module when the \"go\" command was executed within the module. This applies to modules downloaded using the \"go\" command from the module proxy, as well as modules downloaded directly using VCS software.",
   "aliases": [
     "CVE-2023-39320"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:54:20.860Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

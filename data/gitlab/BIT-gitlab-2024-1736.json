@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2024-1736",
+  "summary": "Uncontrolled Resource Consumption in GitLab",
   "details": "An issue has been discovered in GitLab CE/EE affecting all versions prior to 16.10.7, starting from 16.11 prior to 16.11.4, and starting from 17.0 prior to 17.0.2. A vulnerability in GitLab's CI/CD pipeline editor could allow for denial of service attacks through maliciously crafted configuration files.",
   "aliases": [
     "CVE-2024-1736"
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2024-06-17T07:23:34.137Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

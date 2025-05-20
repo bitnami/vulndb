@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-harbor-2022-31669",
+  "summary": "Harbor fails to validate the user permissions when updating tag immutability policies",
   "details": "Harbor fails to validate the user permissions when updating tag immutability policies. \n\nBy sending a request to update a tag immutability policy with an id that belongs to a\nproject that the currently authenticated user doesn’t have access to, the attacker could\nmodify tag immutability policies configured in other projects.",
   "aliases": [
     "CVE-2022-31669"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2024-11-20T07:10:52.890Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

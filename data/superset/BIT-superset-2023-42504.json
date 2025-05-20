@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-superset-2023-42504",
+  "summary": "Apache Superset: Lack of rate limiting allows for possible denial of service",
   "details": "An authenticated malicious user could initiate multiple concurrent requests, each requesting multiple dashboard exports, leading to a possible denial of service.\n\nThis issue affects Apache Superset: before 3.0.0",
   "aliases": [
     "CVE-2023-42504"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2025-02-05T07:27:18.806Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

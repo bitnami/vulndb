@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-discourse-2025-24972",
+  "summary": "Discourse may bypass user preference when adding users to chat groups",
   "details": "Discourse is an open-source discussion platform. Prior to versions `3.3.4` on the `stable` branch and `3.4.0.beta5` on the `beta` branch, in specific circumstances, users could be added to group direct messages despite disabling direct messaging in their preferences. Versions `3.3.4` and `3.4.0.beta5` contain a patch for the issue. A workaround is available. If a user disables chat in their preferences then they cannot be added to new group chats.",
   "aliases": [
     "CVE-2025-24972"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-03-28T09:46:35.742Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

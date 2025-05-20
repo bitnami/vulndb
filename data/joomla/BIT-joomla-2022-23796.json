@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2022-23796",
+  "summary": "[20220304] - Core - Missing input validation within com_fields class inputs",
   "details": "An issue was discovered in Joomla! 3.7.0 through 3.10.6. Lack of input validation could allow an XSS attack using com_fields.",
   "aliases": [
     "CVE-2022-23796"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:14:31.588Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

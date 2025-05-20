@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-21014",
+  "summary": "Magento Commerce Arbitrary Folder Empty Could Lead To Arbitrary Code Execution",
   "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) are vulnerable to a file upload restriction bypass. Successful exploitation could lead to arbitrary code execution by an authenticated attacker. Access to the admin console is required for successful exploitation.",
   "aliases": [
     "CVE-2021-21014"
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T11:02:08.390Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

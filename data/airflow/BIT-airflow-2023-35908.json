@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2023-35908",
+  "summary": "Apache Airflow: Access to DAGs without relevant permission",
   "details": "Apache Airflow, versions before 2.6.3, is affected by a vulnerability that allows unauthorized read access to a DAG through the URL. It is recommended to upgrade to a version that is not affected",
   "aliases": [
     "CVE-2023-35908"
@@ -54,5 +55,5 @@
     }
   ],
   "published": "2024-03-06T10:54:30.276Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

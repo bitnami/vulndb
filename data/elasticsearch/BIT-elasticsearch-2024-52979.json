@@ -1,6 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-elasticsearch-2024-52979",
+  "summary": "Elasticsearch Uncontrolled Resource Consumption vulnerability",
   "details": "Uncontrolled Resource Consumption in Elasticsearch while evaluating specifically crafted search templates with Mustache functions can lead to Denial of Service by causing the Elasticsearch node to crash.",
   "aliases": [
     "CVE-2024-52979"
@@ -56,5 +57,5 @@
     }
   ],
   "published": "2025-05-03T05:41:02.354Z",
-  "modified": "2025-05-03T06:34:12.721Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

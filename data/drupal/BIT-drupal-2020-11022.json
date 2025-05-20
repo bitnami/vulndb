@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-drupal-2020-11022",
+  "summary": "Potential XSS vulnerability in jQuery",
   "details": "In jQuery versions greater than or equal to 1.2 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.",
   "aliases": [
     "CVE-2020-11022"
@@ -230,5 +231,5 @@
     }
   ],
   "published": "2024-03-06T10:59:15.938Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

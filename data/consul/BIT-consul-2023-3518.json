@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-consul-2023-3518",
+  "summary": "JWT Auth in L7 Intentions Allow For Mismatched Service Identity and JWT Providers for Access",
   "details": "HashiCorp Consul and Consul Enterprise 1.16.0 when using JWT Auth for service mesh incorrectly allows/denies access regardless of service identities. Fixed in 1.16.1.",
   "aliases": [
     "CVE-2023-3518"
@@ -60,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T10:51:07.390Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

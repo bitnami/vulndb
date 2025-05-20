@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-concourse-2020-5409",
+  "summary": "Concourse Open Redirect in the /sky/login endpoint",
   "details": "Pivotal Concourse, most versions prior to 6.0.0, allows redirects to untrusted websites in its login flow. A remote unauthenticated attacker could convince a user to click on a link using the OAuth redirect link with an untrusted website and gain access to that user's access token in Concourse. (This issue is similar to, but distinct from, CVE-2018-15798.)",
   "aliases": [
     "CVE-2020-5409"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:51:15.173Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

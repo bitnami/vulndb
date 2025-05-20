@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-15196",
+  "summary": "Heap buffer overflow in Tensorflow",
   "details": "In Tensorflow version 2.3.0, the `SparseCountSparseOutput` and `RaggedCountSparseOutput` implementations don't validate that the `weights` tensor has the same shape as the data. The check exists for `DenseCountSparseOutput`, where both tensors are fully specified. In the sparse and ragged count weights are still accessed in parallel with the data. But, since there is no validation, a user passing fewer weights than the values for the tensors can generate a read from outside the bounds of the heap buffer allocated for the weights. The issue is patched in commit 3cbb917b4714766030b28eba9fb41bb97ce9ee02 and is released in TensorFlow version 2.3.1.",
   "aliases": [
     "CVE-2020-15196"
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-03-06T11:20:44.959Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

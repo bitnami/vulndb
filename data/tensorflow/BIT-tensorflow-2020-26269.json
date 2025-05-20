@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tensorflow-2020-26269",
+  "summary": "Heap out of bounds read in filesystem glob matching in TensorFlow",
   "details": "In TensorFlow release candidate versions 2.4.0rc*, the general implementation for matching filesystem paths to globbing pattern is vulnerable to an access out of bounds of the array holding the directories. There are multiple invariants and preconditions that are assumed by the parallel implementation of GetMatchingPaths but are not verified by the PRs introducing it (#40861 and #44310). Thus, we are completely rewriting the implementation to fully specify and validate these. This is patched in version 2.4.0. This issue only impacts master branch and the release candidates for TF version 2.4. The final release of the 2.4 release will be patched.",
   "aliases": [
     "CVE-2020-26269"
@@ -83,5 +84,5 @@
     }
   ],
   "published": "2024-03-06T11:20:14.848Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

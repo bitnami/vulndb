@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-helm-2024-26147",
+  "summary": "Helm's Missing YAML Content Leads To Panic",
   "details": "Helm is a package manager for Charts for Kubernetes. Versions prior to 3.14.2 contain an uninitialized variable vulnerability when Helm parses index and plugin yaml files missing expected content. When either an `index.yaml` file or a plugins `plugin.yaml` file were missing all metadata a panic would occur in Helm. In the Helm SDK, this is found when using the `LoadIndexFile` or `DownloadIndexFile` functions in the `repo` package or the `LoadDir` function in the `plugin` package. For the Helm client this impacts functions around adding a repository and all Helm functions if a malicious plugin is added as Helm inspects all known plugins on each invocation. This issue has been resolved in Helm v3.14.2. If a malicious plugin has been added which is causing all Helm client commands to panic, the malicious plugin can be manually removed from the filesystem. If using Helm SDK versions prior to 3.14.2, calls to affected functions can use `recover` to catch the panic.",
   "aliases": [
     "CVE-2024-26147"
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2024-03-31T18:18:46.734Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3906",
+  "summary": "Improper Validation of Specified Type of Input in GitLab",
   "details": "An input validation issue in the asset proxy in GitLab EE, affecting all versions from 12.3 prior to 16.2.8, 16.3 prior to 16.3.5, and 16.4 prior to 16.4.1, allowed an authenticated attacker to craft image urls which bypass the asset proxy.",
   "aliases": [
     "CVE-2023-3906"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T11:03:19.001Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

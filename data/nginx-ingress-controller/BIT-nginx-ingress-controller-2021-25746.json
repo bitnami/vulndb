@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-nginx-ingress-controller-2021-25746",
+  "summary": "Ingress-nginx directive injection via annotations",
   "details": "A security issue was discovered in ingress-nginx where a user that can create or update ingress objects can use .metadata.annotations in an Ingress object (in the networking.k8s.io or extensions API group) to obtain the credentials of the ingress-nginx controller. In the default configuration, that credential has access to all secrets in the cluster.",
   "aliases": [
     "CVE-2021-25746"
@@ -58,5 +59,5 @@
     }
   ],
   "published": "2024-03-06T10:59:11.279Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

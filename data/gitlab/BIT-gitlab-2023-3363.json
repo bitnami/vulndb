@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-gitlab-2023-3363",
+  "summary": "Insertion of Sensitive Information into Log File in GitLab",
   "details": "An information disclosure issue in Gitlab CE/EE affecting all versions from 13.6 prior to 15.11.10, all versions from 16.0 prior to 16.0.6, all versions from 16.1 prior to 16.1.1, resulted in the Sidekiq log including webhook tokens when the log format was set to `default`.",
   "aliases": [
     "CVE-2023-3363"
@@ -64,5 +65,5 @@
     }
   ],
   "published": "2024-03-06T11:05:58.594Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

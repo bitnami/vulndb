@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-mastodon-2023-42451",
+  "summary": "Mastodon Invalid Domain Name Normalization vulnerability",
   "details": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to versions 3.5.14, 4.0.10, 4.1.8, and 4.2.0-rc2, under certain circumstances, attackers can exploit a flaw in domain name normalization to spoof domains they do not own. Versions 3.5.14, 4.0.10, 4.1.8, and 4.2.0-rc2 contain a patch for this issue.",
   "aliases": [
     "CVE-2023-42451"
@@ -70,5 +71,5 @@
     }
   ],
   "published": "2024-03-06T10:55:56.068Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

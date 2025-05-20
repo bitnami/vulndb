@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-airflow-2022-38170",
+  "summary": "Overly permissive umask for daemons",
   "details": "In Apache Airflow prior to 2.3.4, an insecure umask was configured for numerous Airflow components when running with the `--daemon` flag which could result in a race condition giving world-writable files in the Airflow home directory and allowing local users to expose arbitrary file contents via the webserver.",
   "aliases": [
     "CVE-2022-38170"
@@ -62,5 +63,5 @@
     }
   ],
   "published": "2024-03-06T10:57:57.694Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }

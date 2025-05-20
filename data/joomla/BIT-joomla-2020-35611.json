@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-joomla-2020-35611",
+  "summary": "[20201102] - Core - Disclosure of secrets in Global Configuration page",
   "details": "An issue was discovered in Joomla! 2.5.0 through 3.9.22. The globlal configuration page does not remove secrets from the HTML output, disclosing the current values.",
   "aliases": [
     "CVE-2020-35611"
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2025-04-03T14:11:02.105Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-05-20T10:02:07.006Z"
 }
