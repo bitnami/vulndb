@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-4979",
+  "summary": "Insufficient Granularity of Access Control in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions before 17.10.7, 17.11 before 17.11.3, and 18.0 before 18.0.1. An attacker may be able to reveal masked or hidden CI variables (that they did not author) in the WebUI, by simply creating their own variable and observing the HTTP response.",
+  "aliases": [
+    "CVE-2025-4979"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "17.11.3"
+            },
+            {
+              "introduced": "18.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/524455"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4979"
+    }
+  ],
+  "published": "2025-05-24T18:17:09.255Z",
+  "modified": "2025-05-24T18:18:04.630Z"
+}
