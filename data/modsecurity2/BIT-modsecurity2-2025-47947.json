@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity2-2025-47947",
+  "summary": "ModSecurity Has Possible DoS Vulnerability",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. Versions up to and including 2.9.8 are vulnerable to denial of service in one special case (in stable released versions): when the payload's content type is `application/json`, and there is at least one rule which does a `sanitiseMatchedBytes` action. A patch is available at pull request 3389 and expected to be part of version 2.9.9. No known workarounds are available.",
+  "aliases": [
+    "CVE-2025-47947"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity2",
+        "purl": "pkg:bitnami/modsecurity2"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "2.9.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/pull/3389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-859r-vvv8-rm8r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47947"
+    }
+  ],
+  "published": "2025-05-24T20:45:53.097Z",
+  "modified": "2025-05-24T21:18:18.369Z"
+}
