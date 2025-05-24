@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-0605",
+  "summary": "Weak Authentication in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.8 before 17.10.7, 17.11 before 17.11.3, and 18.0 before 18.0.1. Group access controls could allow certain users to bypass two-factor authentication requirements.",
+  "aliases": [
+    "CVE-2025-0605"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.8.0"
+            },
+            {
+              "fixed": "17.11.3"
+            },
+            {
+              "introduced": "18.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/514204"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2919391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0605"
+    }
+  ],
+  "published": "2025-05-24T12:16:44.128Z",
+  "modified": "2025-05-24T12:18:13.551Z"
+}
