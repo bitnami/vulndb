@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2025-3580",
+  "details": "An access control vulnerability was discovered in Grafana OSS where an Organization administrator could permanently delete the Server administrator account. This vulnerability exists in the DELETE /api/org/users/ endpoint.\n\nThe vulnerability can be exploited when:\n\n1. An Organization administrator exists\n\n2. The Server administrator is either:\n\n   - Not part of any organization, or\n   - Part of the same organization as the Organization administrator\nImpact:\n\n- Organization administrators can permanently delete Server administrator accounts\n\n- If the only Server administrator is deleted, the Grafana instance becomes unmanageable\n\n- No super-user permissions remain in the system\n\n- Affects all users, organizations, and teams managed in the instance\n\nThe vulnerability is particularly serious as it can lead to a complete loss of administrative control over the Grafana instance.",
+  "aliases": [
+    "CVE-2025-3580"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.4.18"
+            },
+            {
+              "fixed": "10.4.19"
+            },
+            {
+              "introduced": "11.2.9"
+            },
+            {
+              "fixed": "11.3.0"
+            },
+            {
+              "introduced": "11.3.6"
+            },
+            {
+              "fixed": "11.4.0"
+            },
+            {
+              "introduced": "11.4.4"
+            },
+            {
+              "fixed": "11.5.0"
+            },
+            {
+              "introduced": "11.5.4"
+            },
+            {
+              "fixed": "11.6.0"
+            },
+            {
+              "introduced": "11.6.1"
+            },
+            {
+              "fixed": "11.6.2"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2025-3580/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3580"
+    }
+  ],
+  "published": "2025-05-28T11:44:30.552Z",
+  "modified": "2025-05-28T12:14:51.629Z"
+}
