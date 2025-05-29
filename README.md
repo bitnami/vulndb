@@ -150,6 +150,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 - Kubeapps Asset Syncer
 - Kubeapps OCI Catalog Service
 - Kubeapps Pinniped Proxy
+- Spring Cloud Data Flow
 
 ### 2025-04
 
