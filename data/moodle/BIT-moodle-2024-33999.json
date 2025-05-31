@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2024-33999",
+  "summary": "moodle: unsafe direct use of $_SERVER['HTTP_REFERER'] in admin/tool/mfa/index.php",
+  "details": "The referrer URL used by MFA required additional sanitizing, rather than being used directly.",
+  "aliases": [
+    "CVE-2024-33999"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=458387"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-33999"
+    }
+  ],
+  "published": "2025-05-31T05:57:14.246Z",
+  "modified": "2025-05-31T06:15:48.797Z"
+}
