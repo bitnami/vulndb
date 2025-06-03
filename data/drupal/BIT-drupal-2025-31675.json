@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-drupal-2025-31675",
+  "summary": "Drupal core - Moderately critical - Cross Site Scripting - SA-CORE-2025-004",
+  "details": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Drupal Drupal core allows Cross-Site Scripting (XSS).This issue affects Drupal core: from 8.0.0 before 10.3.14, from 10.4.0 before 10.4.5, from 11.0.0 before 11.0.13, from 11.1.0 before 11.1.5.",
+  "aliases": [
+    "CVE-2025-31675"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "10.4.5"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.1.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31675"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2025-004"
+    }
+  ],
+  "published": "2025-06-03T14:41:48.563Z",
+  "modified": "2025-06-03T15:16:07.023Z"
+}
