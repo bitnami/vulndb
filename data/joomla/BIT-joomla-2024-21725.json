@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-joomla-2024-21725",
+  "summary": "[20240204] - Core - XSS in mail address outputs",
+  "details": "Inadequate escaping of mail addresses lead to XSS vulnerabilities in various components.",
+  "aliases": [
+    "CVE-2024-21725"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/928-20240204-core-xss-in-mail-address-outputs.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21725"
+    }
+  ],
+  "published": "2025-06-03T11:46:53.703Z",
+  "modified": "2025-06-03T12:13:17.204Z"
+}

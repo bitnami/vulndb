@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-1763",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+  "details": "An issue has been discovered in GitLab EE that allows for cross-site-scripting attack and content security policy bypass in a user's browser under specific conditions, affecting all versions from 16.6 before 17.9.7, 17.10 before 17.10.5, and 17.11 before 17.11.1.",
+  "aliases": [
+    "CVE-2025-1763"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "17.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/521718"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3016600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1763"
+    }
+  ],
+  "published": "2025-06-03T12:12:06.672Z",
+  "modified": "2025-06-03T12:13:17.204Z"
+}
