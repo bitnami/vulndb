@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity2-2025-48866",
+  "summary": "ModSecurity has possible DoS vulnerability in sanitiseArg action",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. Versions prior to 2.9.10 contain a denial of service vulnerability similar to GHSA-859r-vvv8-rm8r/CVE-2025-47947. The `sanitiseArg` (and `sanitizeArg` - this is the same action but an alias) is vulnerable to adding an excessive number of arguments, thereby leading to denial of service. Version 2.9.10 fixes the issue. As a workaround, avoid using rules that contain the  `sanitiseArg` (or `sanitizeArg`) action.",
+  "aliases": [
+    "CVE-2025-48866"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity2",
+        "purl": "pkg:bitnami/modsecurity2"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/3a54ccea62d3f7151bb08cb78d60c5e90b53ca2e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-859r-vvv8-rm8r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-f82j-8pp7-cw2w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/wiki/Reference-Manual-(v2.x)#sanitisearg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48866"
+    }
+  ],
+  "published": "2025-06-04T14:48:01.890Z",
+  "modified": "2025-06-04T15:15:46.482Z"
+}
