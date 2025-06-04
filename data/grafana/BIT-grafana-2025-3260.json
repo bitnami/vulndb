@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2025-3260",
+  "details": "A security vulnerability in the /apis/dashboard.grafana.app/* endpoints allows authenticated users to bypass dashboard and folder permissions. The vulnerability affects all API versions (v0alpha1, v1alpha1, v2alpha1).\n\nImpact:\n\n- Viewers can view all dashboards/folders regardless of permissions\n\n- Editors can view/edit/delete all dashboards/folders regardless of permissions\n\n- Editors can create dashboards in any folder regardless of permissions\n\n- Anonymous users with viewer/editor roles are similarly affected\n\nOrganization isolation boundaries remain intact. The vulnerability only affects dashboard access and does not grant access to datasources.",
+  "aliases": [
+    "CVE-2025-3260"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.6.0"
+            },
+            {
+              "fixed": "11.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/CVE-2025-3260/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3260"
+    }
+  ],
+  "published": "2025-06-04T14:44:55.391Z",
+  "modified": "2025-06-04T15:15:46.482Z"
+}
