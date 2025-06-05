@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-joomla-2024-27185",
+  "summary": "[20240802] - Core - Cache Poisoning in Pagination",
+  "details": "The pagination class includes arbitrary parameters in links, leading to cache poisoning attack vectors.",
+  "aliases": [
+    "CVE-2024-27185"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "5.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:elts:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/942-20240802-core-cache-poisoning-in-pagination.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27185"
+    }
+  ],
+  "published": "2025-06-05T05:48:28.569Z",
+  "modified": "2025-06-05T06:15:32.323Z"
+}
