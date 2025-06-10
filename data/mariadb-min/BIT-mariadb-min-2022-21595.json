@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2022-21595",
+  "details": "Vulnerability in the MySQL Server product of Oracle MySQL (component: C API). Supported versions that are affected are 5.7.36 and prior and 8.0.27 and prior. Difficult to exploit vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.4 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H).",
+  "aliases": [
+    "CVE-2022-21595"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.2.42"
+            },
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.33"
+            },
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.23"
+            },
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.14"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.6"
+            },
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "10.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20221028-0013/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2022.html"
+    }
+  ],
+  "published": "2025-06-10T11:49:38.466Z",
+  "modified": "2025-06-10T12:16:43.155Z"
+}

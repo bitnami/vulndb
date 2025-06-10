@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2021-46662",
+  "details": "MariaDB through 10.5.9 allows a set_var.cc application crash via certain uses of an UPDATE statement in conjunction with a nested subquery.",
+  "aliases": [
+    "CVE-2021-46662"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "10.3.32"
+            },
+            {
+              "introduced": "10.4.0"
+            },
+            {
+              "fixed": "10.4.22"
+            },
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.13"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-25637"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mariadb.com/kb/en/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-46662"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20220221-0002/"
+    }
+  ],
+  "published": "2025-06-10T11:49:01.079Z",
+  "modified": "2025-06-10T12:16:43.155Z"
+}
