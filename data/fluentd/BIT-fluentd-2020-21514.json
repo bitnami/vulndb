@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-fluentd-2020-21514",
-  "details": "An issue was discovered in Fluent Fluentd v.1.8.0 and Fluent-ui v.1.2.2 allows attackers to gain escalated privileges and execute arbitrary code due to a default password.",
+  "details": "An issue was discovered in Fluent-ui v.1.2.2 allows attackers to gain escalated privileges and execute arbitrary code due to a default password.",
   "aliases": [
     "CVE-2020-21514"
   ],
@@ -48,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-21514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd-ui/issues/295"
     }
   ],
   "published": "2024-03-06T10:52:13.870Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-06-10T07:53:49.719Z"
 }
