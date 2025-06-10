@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2023-52971",
+  "details": "MariaDB Server 10.10 through 10.11.* and 11.0 through 11.4.* crashes in JOIN::fix_all_splittings_in_plan.",
+  "aliases": [
+    "CVE-2023-52971"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-32084"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52971"
+    }
+  ],
+  "published": "2025-06-10T11:52:22.389Z",
+  "modified": "2025-06-10T12:16:43.155Z"
+}
