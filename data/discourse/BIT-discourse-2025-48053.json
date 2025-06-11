@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-48053",
+  "summary": "Discourse vulnerable to DoS via large URL payload in PM to a bot",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.4.4 of the `stable` branch, version 3.5.0.beta5 of the `beta` branch, and version 3.5.0.beta6-dev of the `tests-passed` branch, sending a malicious URL in a PM to a bot user can cause a reduced the availability of a Discourse instance. This issue is patched in version 3.4.4 of the `stable` branch, version 3.5.0.beta5 of the `beta` branch, and version 3.5.0.beta6-dev of the `tests-passed` branch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2025-48053"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-3q5q-qmrm-rvwx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48053"
+    }
+  ],
+  "published": "2025-06-11T11:45:01.073Z",
+  "modified": "2025-06-11T12:17:36.925Z"
+}
