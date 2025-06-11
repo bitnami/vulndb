@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-48062",
+  "summary": "Discourse vulnerable to HTML injection when inviting to topic via email",
+  "details": "Discourse is an open-source discussion platform. Prior to version 3.4.4 of the `stable` branch, version 3.5.0.beta5 of the `beta` branch, and version 3.5.0.beta6-dev of the `tests-passed` branch, certain invites via email may result in HTML injection in the email body if the topic title includes HTML. This includes inviting someone (without an account) to a PM and inviting someone (without an account) to a topic with a custom message. This issue is patched in version 3.4.4 of the `stable` branch, version 3.5.0.beta5 of the `beta` branch, and version 3.5.0.beta6-dev of the `tests-passed` branch. This can be worked around if the relevant templates are overridden without `{topic_title}`.",
+  "aliases": [
+    "CVE-2025-48062"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-x8mp-chx3-6x2p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48062"
+    }
+  ],
+  "published": "2025-06-11T11:45:04.167Z",
+  "modified": "2025-06-11T12:17:36.925Z"
+}
