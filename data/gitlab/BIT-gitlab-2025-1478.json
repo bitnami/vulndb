@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-1478",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 8.13 before 17.10.7, 17.11 before 17.11.3, and 18.0 before 18.0.1. A lack of input validation in Board Names could be used to trigger a denial of service.",
+  "aliases": [
+    "CVE-2025-1478"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.13.0"
+            },
+            {
+              "fixed": "18.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/520354"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2987444"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1478"
+    }
+  ],
+  "published": "2025-06-14T06:15:07.198Z",
+  "modified": "2025-06-14T06:16:31.200Z"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-4278",
+  "summary": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting with 18.0 before 18.0.2. Under certain conditions html injection in new search page could lead to account takeover.",
+  "aliases": [
+    "CVE-2025-4278"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/539198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3085738"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4278"
+    }
+  ],
+  "published": "2025-06-14T06:15:30.019Z",
+  "modified": "2025-06-14T06:16:31.200Z"
+}

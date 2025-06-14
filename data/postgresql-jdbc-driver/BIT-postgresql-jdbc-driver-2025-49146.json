@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-jdbc-driver-2025-49146",
+  "summary": "pgjdbc Client Allows Fallback to Insecure Authentication Despite channelBinding=require Configuration",
+  "details": "pgjdbc is an open source postgresql JDBC Driver. From 42.7.4 and until 42.7.7, when the PostgreSQL JDBC driver is configured with channel binding set to required (default value is prefer), the driver would incorrectly allow connections to proceed with authentication methods that do not support channel binding (such as password, MD5, GSS, or SSPI authentication). This could allow a man-in-the-middle attacker to intercept connections that users believed were protected by channel binding requirements. This vulnerability is fixed in 42.7.7.",
+  "aliases": [
+    "CVE-2025-49146"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql-jdbc-driver",
+        "purl": "pkg:bitnami/postgresql-jdbc-driver"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "42.7.4"
+            },
+            {
+              "fixed": "42.7.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pgjdbc/pgjdbc/commit/9217ed16cb2918ab1b6b9258ae97e6ede244d8a0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-hq9p-pm7w-8p54"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49146"
+    }
+  ],
+  "published": "2025-06-14T05:57:03.201Z",
+  "modified": "2025-06-14T06:16:31.200Z"
+}

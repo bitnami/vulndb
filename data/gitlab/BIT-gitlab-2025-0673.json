@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-0673",
+  "summary": "Loop with Unreachable Exit Condition ('Infinite Loop') in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 before 17.10.8, 17.11 before 17.11.4, and 18.0 before 18.0.2, allow an attacker to trigger an infinite redirect loop, potentially leading to a denial of service condition.",
+  "aliases": [
+    "CVE-2025-0673"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "18.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/514732"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2936949"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0673"
+    }
+  ],
+  "published": "2025-06-14T06:14:51.122Z",
+  "modified": "2025-06-14T06:16:31.200Z"
+}
