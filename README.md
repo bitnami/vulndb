@@ -142,6 +142,11 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2025-06
+
+- Kaniko
+- KES
+
 ### 2025-05
 
 - Kubeapps
