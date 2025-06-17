@@ -144,7 +144,6 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ### 2025-06
 
-- Kaniko
 - KES
 
 ### 2025-05
