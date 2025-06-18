@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-node-min-2024-3566",
+  "summary": "Command injection vulnerability in programing languages on Microsoft Windows operating system.",
+  "details": "A command inject vulnerability allows an attacker to perform command injection on Windows applications that indirectly depend on the CreateProcess function when the specific conditions are satisfied.",
+  "aliases": [
+    "CVE-2024-3566"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.77.2"
+            },
+            {
+              "fixed": "18.20.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://flatt.tech/research/posts/batbadbut-you-cant-securely-execute-commands-on-windows/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kb.cert.org/vuls/id/123335"
+    },
+    {
+      "type": "WEB",
+      "url": "https://learn.microsoft.com/en-us/archive/blogs/twistylittlepassagesallalike/everyone-quotes-command-line-arguments-the-wrong-way"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3566"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-1874"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-24576"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.kb.cert.org/vuls/id/123335"
+    }
+  ],
+  "published": "2025-06-18T14:57:02.104Z",
+  "modified": "2025-06-18T15:17:39.937Z"
+}
