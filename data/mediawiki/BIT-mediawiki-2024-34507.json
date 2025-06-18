@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mediawiki-2024-34507",
+  "details": "An issue was discovered in includes/CommentFormatter/CommentParser.php in MediaWiki before 1.39.7, 1.40.x before 1.40.3, and 1.41.x before 1.41.1. XSS can occur because of mishandling of the 0x1b character, as demonstrated by Special:RecentChanges#%1b0000000.",
+  "aliases": [
+    "CVE-2024-34507"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.41.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FU2FGUXXK6TMV6R52VRECLC6XCSQQISY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34507"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T355538"
+    }
+  ],
+  "published": "2025-06-18T14:57:51.108Z",
+  "modified": "2025-06-18T15:17:39.937Z"
+}
