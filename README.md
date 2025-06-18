@@ -145,6 +145,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ### 2025-06
 
 - KES
+- Promtail
 
 ### 2025-05
 
