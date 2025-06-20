@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2025-1088",
+  "summary": "Very long unicode dashboard title or panel name can hang the frontend",
+  "details": "In Grafana, an excessively long dashboard title or panel name will cause Chromium browsers to become unresponsive due to Improper Input Validation vulnerability in Grafana.\nThis issue affects Grafana: before 11.6.2 and is fixed in 11.6.2 and higher.",
+  "aliases": [
+    "CVE-2025-1088"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "11.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2025-1088/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1088"
+    }
+  ],
+  "published": "2025-06-20T05:44:52.153Z",
+  "modified": "2025-06-20T06:16:43.559Z"
+}
