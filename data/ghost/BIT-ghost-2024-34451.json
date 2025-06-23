@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2024-34451",
+  "details": "Ghost through 5.85.1 allows remote attackers to bypass an authentication rate-limit protection mechanism by using many X-Forwarded-For headers with different values. NOTE: the vendor's position is that Ghost should be installed with a reverse proxy that allows only trusted X-Forwarded-For headers.",
+  "aliases": [
+    "CVE-2024-34451"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.85.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.google.com/document/d/1iy0X4Vc9xXYoBxFrcW6ATo8GKPV6ivuLVzn6GgEpwqE"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ghost.org/docs/faq/proxying-https-infinite-loops/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34451"
+    }
+  ],
+  "published": "2025-06-23T05:41:01.674Z",
+  "modified": "2025-06-23T06:16:57.984Z"
+}
