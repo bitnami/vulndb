@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openresty-2024-33452",
+  "details": "An issue in OpenResty lua-nginx-module v.0.10.26 and before allows a remote attacker to conduct HTTP request smuggling via a crafted HEAD request.",
+  "aliases": [
+    "CVE-2024-33452"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openresty",
+        "purl": "pkg:bitnami/openresty"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.25.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:openresty:lua-nginx-module:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-33452"
+    },
+    {
+      "type": "WEB",
+      "url": "https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.benasin.space/2025/03/18/OpenResty-lua-nginx-module-v0-10-26-HTTP-Request-Smuggling-in-HEAD-requests/"
+    }
+  ],
+  "published": "2025-06-24T14:52:16.514Z",
+  "modified": "2025-06-24T15:16:56.580Z"
+}
