@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2024-4025",
+  "summary": "Inefficient Regular Expression Complexity in GitLab",
+  "details": "A Denial of Service (DoS) condition has been discovered in GitLab CE/EE affecting all versions from 7.10 prior before 16.11.5, version 17.0 before 17.0.3, and 17.1 before 17.1.1. It is possible for an attacker to cause a denial of service using a crafted markdown page.",
+  "aliases": [
+    "CVE-2024-4025"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.10.0"
+            },
+            {
+              "fixed": "16.11.5"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/457474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2024974"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4025"
+    }
+  ],
+  "published": "2025-06-24T15:12:39.853Z",
+  "modified": "2025-06-24T15:16:56.580Z"
+}

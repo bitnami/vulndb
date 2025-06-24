@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2025-50200",
+  "summary": "RabbitMQ Node can log Basic Auth header from an HTTP request",
+  "details": "RabbitMQ is a messaging and streaming broker. In versions 3.13.7 and prior, RabbitMQ is logging authorization headers in plaintext encoded in base64. When querying RabbitMQ api with HTTP/s with basic authentication it creates logs with all headers in request, including authorization headers which show base64 encoded username:password. This is easy to decode and afterwards could be used to obtain control to the system depending on credentials. This issue has been patched in version 4.0.8.",
+  "aliases": [
+    "CVE-2025-50200"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-gh3x-4x42-fvq8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-50200"
+    }
+  ],
+  "published": "2025-06-24T14:58:31.787Z",
+  "modified": "2025-06-24T15:16:56.580Z"
+}
