@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-cert-manager-2024-36537",
+  "details": "Insecure permissions in cert-manager v1.14.4 allows attackers to access sensitive data and escalate privileges by obtaining the service account's token.",
+  "aliases": [
+    "CVE-2024-36537"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cert-manager",
+        "purl": "pkg:bitnami/cert-manager"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.4"
+            },
+            {
+              "fixed": "1.14.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:cert-manager:cert-manager:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/HouqiyuA/27879a6366a65fcd5f6c6fcbcf68d8e3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36537"
+    }
+  ],
+  "published": "2025-06-28T05:35:27.354Z",
+  "modified": "2025-06-28T06:16:35.133Z"
+}
