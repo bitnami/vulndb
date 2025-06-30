@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2025-4656",
+  "summary": "Vault Vulnerable to Recovery Key Cancellation Denial of Service",
+  "details": "Vault Community and Vault Enterprise rekey and recovery key operations can lead to a denial of service due to uncontrolled cancellation by a Vault operator. This vulnerability (CVE-2025-4656) has been remediated in Vault Community Edition 1.20.0 and Vault Enterprise 1.20.0, 1.19.6, 1.18.11, 1.17.17, and 1.16.22.",
+  "aliases": [
+    "CVE-2025-4656"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.8"
+            },
+            {
+              "fixed": "1.19.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2025-11-vault-vulnerable-to-recovery-key-cancellation-denial-of-service/75570"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4656"
+    }
+  ],
+  "published": "2025-06-30T15:05:10.786Z",
+  "modified": "2025-06-30T15:17:30.405Z"
+}

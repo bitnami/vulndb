@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-2938",
+  "summary": "Business Logic Errors in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.3 before 17.11.5, 18.0 before 18.0.3, and 18.1 before 18.1.1 that could have allowed authenticated users to gain elevated project privileges by requesting access to projects where role modifications during the approval process resulted in unintended permission grants.",
+  "aliases": [
+    "CVE-2025-2938"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.3.0"
+            },
+            {
+              "fixed": "18.0.1"
+            },
+            {
+              "introduced": "18.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/529006"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3063091"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2938"
+    }
+  ],
+  "published": "2025-06-30T15:16:20.004Z",
+  "modified": "2025-06-30T15:17:30.405Z"
+}

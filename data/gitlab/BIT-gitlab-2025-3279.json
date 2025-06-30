@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-3279",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 10.7 before 17.11.5, 18.0 before 18.0.3, and 18.1 before 18.1.1 that could have allowed authenticated attackers to create a DoS condition by sending crafted GraphQL requests.",
+  "aliases": [
+    "CVE-2025-3279"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "18.0.1"
+            },
+            {
+              "introduced": "18.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/534424"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3067111"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3279"
+    }
+  ],
+  "published": "2025-06-30T15:16:22.902Z",
+  "modified": "2025-06-30T15:17:30.405Z"
+}
