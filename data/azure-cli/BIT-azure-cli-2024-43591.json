@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-azure-cli-2024-43591",
+  "summary": "Azure Command Line Integration (CLI) Elevation of Privilege Vulnerability",
+  "details": "Azure Command Line Integration (CLI) Elevation of Privilege Vulnerability",
+  "aliases": [
+    "CVE-2024-43591"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "azure-cli",
+        "purl": "pkg:bitnami/azure-cli"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.65.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:microsoft:azure_command-line_interface:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43591"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43591"
+    }
+  ],
+  "published": "2025-07-03T05:35:49.296Z",
+  "modified": "2025-07-03T06:18:04.779Z"
+}
