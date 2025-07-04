@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-limesurvey-2024-42902",
+  "details": "An issue in the js_localize.php function of LimeSurvey v6.6.2 and before allows attackers to execute arbitrary code via injecting a crafted payload into the lng parameter of the js_localize.php function",
+  "aliases": [
+    "CVE-2024-42902"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "limesurvey",
+        "purl": "pkg:bitnami/limesurvey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.6.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.limesurvey.org/view.php?id=19639"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/LimeSurvey/LimeSurvey/blob/6434b12ded1c4b6516200c453441d0896e11eee0/vendor/kcfinder/js_localize.php#L19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysentr0py/CVEs/tree/main/CVE-2024-42902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-42902"
+    }
+  ],
+  "published": "2025-07-04T07:40:06.966Z",
+  "modified": "2025-07-04T08:10:20.098Z"
+}

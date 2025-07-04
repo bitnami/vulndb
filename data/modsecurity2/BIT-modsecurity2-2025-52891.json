@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity2-2025-52891",
+  "summary": "ModSecurity empty XML tag causes segmentation fault",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. In versions 2.9.8 to before 2.9.11, an empty XML tag can cause a segmentation fault. If SecParseXmlIntoArgs is set to On or OnlyArgs, and the request type is application/xml, and at least one XML tag is empty (eg <foo></foo>), then a segmentation fault occurs. This issue has been patched in version 2.9.11. A workaround involves setting SecParseXmlIntoArgs to Off.",
+  "aliases": [
+    "CVE-2025-52891"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity2",
+        "purl": "pkg:bitnami/modsecurity2"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.8"
+            },
+            {
+              "fixed": "2.9.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/ecd7b9736836eee391d25f35d5bd06a3ce35a45d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-gw9c-4wfm-vj3x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52891"
+    }
+  ],
+  "published": "2025-07-04T07:42:25.055Z",
+  "modified": "2025-07-04T08:10:20.098Z"
+}
