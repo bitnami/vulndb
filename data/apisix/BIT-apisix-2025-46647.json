@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2025-46647",
+  "summary": "Apache APISIX: improper validation of issuer from introspection discovery url in plugin openid-connect",
+  "details": "A vulnerability of plugin openid-connect in Apache APISIX.\n\nThis vulnerability will only have an impact if all of the following conditions are met:\n1. Use the openid-connect plugin with introspection mode\n2. The auth service connected to openid-connect provides services to multiple issuers\n3. Multiple issuers share the same private key and relies only on the issuer being different\n\nIf affected by this vulnerability, it would allow an attacker with a valid account on one of the issuers to log into the other issuer.\n\n\n\n\nThis issue affects Apache APISIX: until 3.12.0.\n\nUsers are recommended to upgrade to version 3.12.0 or higher.",
+  "aliases": [
+    "CVE-2025-46647"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.12.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/yrpp2cd3o4qkxlrh421mq8gsrt0k4x0w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46647"
+    }
+  ],
+  "published": "2025-07-04T07:28:48.965Z",
+  "modified": "2025-07-04T08:10:20.098Z"
+}
