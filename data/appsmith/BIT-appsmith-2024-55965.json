@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-appsmith-2024-55965",
+  "details": "An issue was discovered in Appsmith before 1.51. Users invited as \"App Viewer\" incorrectly have access to development information of a workspace (specifically, a list of datasources in a workspace they're a member of). This information disclosure does not expose sensitive data in the datasources, such as database passwords and API Keys.",
+  "aliases": [
+    "CVE-2024-55965"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "appsmith",
+        "purl": "pkg:bitnami/appsmith"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.51.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-794x-gm8v-2wj6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55965"
+    }
+  ],
+  "published": "2025-07-09T05:35:58.647Z",
+  "modified": "2025-07-09T06:18:38.715Z"
+}
