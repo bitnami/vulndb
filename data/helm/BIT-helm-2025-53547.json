@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-helm-2025-53547",
+  "summary": "Helm Chart Dependency Updating With Malicious Chart.yaml Content And Symlink Can Lead To Code Execution",
+  "details": "Helm is a package manager for Charts for Kubernetes. Prior to 3.18.4, a specially crafted Chart.yaml file along with a specially linked Chart.lock file can lead to local code execution when dependencies are updated. Fields in a Chart.yaml file, that are carried over to a Chart.lock file when dependencies are updated and this file is written, can be crafted in a way that can cause execution if that same content were in a file that is executed (e.g., a bash.rc file or shell script). If the Chart.lock file is symlinked to one of these files updating dependencies will write the lock file content to the symlinked file. This can lead to unwanted execution. Helm warns of the symlinked file but did not stop execution due to symlinking. This issue has been resolved in Helm v3.18.4.",
+  "aliases": [
+    "CVE-2025-53547"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "helm",
+        "purl": "pkg:bitnami/helm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/commit/4b8e61093d8f579f1165cdc6bd4b43fa5455f571"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/security/advisories/GHSA-557j-xg8c-q2mm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=44506696"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53547"
+    }
+  ],
+  "published": "2025-07-10T05:43:09.073Z",
+  "modified": "2025-07-10T06:17:18.979Z"
+}
