@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mysql-client-2023-26785",
+  "details": "MariaDB v10.5 was discovered to contain a remote code execution (RCE) vulnerability via UDF Code in a Shared Object File, followed by a \"create function\" statement. NOTE: this is disputed by the MariaDB Foundation because no privilege boundary is crossed.",
+  "aliases": [
+    "CVE-2023-26785"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-client",
+        "purl": "pkg:bitnami/mysql-client"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "last_affected": "10.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Ant1sec-ops/CVE-2023-26785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26785"
+    },
+    {
+      "type": "WEB",
+      "url": "https://seclists.org/fulldisclosure/2012/Dec/39"
+    }
+  ],
+  "published": "2025-07-11T05:56:57.141Z",
+  "modified": "2025-07-11T06:17:37.698Z"
+}
