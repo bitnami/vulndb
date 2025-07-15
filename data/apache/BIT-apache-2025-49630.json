@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2025-49630",
+  "summary": "Apache HTTP Server: mod_proxy_http2 denial of service",
+  "details": "In certain proxy configurations, a denial of service attack against Apache HTTP Server versions 2.4.26 through to 2.4.63 can be triggered by untrusted clients causing an assertion in mod_proxy_http2.\n\nConfigurations affected are a reverse proxy is configured for an HTTP/2 backend, with ProxyPreserveHost set to \"on\".",
+  "aliases": [
+    "CVE-2025-49630"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.26"
+            },
+            {
+              "fixed": "2.4.64"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49630"
+    }
+  ],
+  "published": "2025-07-15T14:38:57.003Z",
+  "modified": "2025-07-15T15:18:31.673Z"
+}
