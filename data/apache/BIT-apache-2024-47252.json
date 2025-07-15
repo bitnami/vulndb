@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2024-47252",
+  "summary": "Apache HTTP Server: mod_ssl error log variable escaping",
+  "details": "Insufficient escaping of user-supplied data in mod_ssl in Apache HTTP Server 2.4.63 and earlier allows an untrusted SSL/TLS client to insert escape characters into log files in some configurations.\n\nIn a logging configuration where CustomLog is used with \"%{varname}x\" or \"%{varname}c\" to log variables provided by mod_ssl such as SSL_TLS_SNI, no escaping is performed by either mod_log_config or mod_ssl and unsanitized data provided by the client may appear in log files.",
+  "aliases": [
+    "CVE-2024-47252"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.64"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47252"
+    }
+  ],
+  "published": "2025-07-15T20:39:24.408Z",
+  "modified": "2025-07-15T21:18:54.344Z"
+}
