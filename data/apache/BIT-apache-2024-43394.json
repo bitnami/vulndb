@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2024-43394",
+  "summary": "Apache HTTP Server: SSRF on Windows due to UNC paths",
+  "details": "Server-Side Request Forgery (SSRF) in Apache HTTP Server on Windows allows to potentially leak NTLM hashes to a malicious server via \nmod_rewrite or apache expressions that pass unvalidated request input.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.63.\n\nNote:  The Apache HTTP Server Project will be setting a higher bar for accepting vulnerability reports regarding SSRF via UNC paths. \n\nThe server offers limited protection against administrators directing the server to open UNC paths.\nWindows servers should limit the hosts they will connect over via SMB based on the nature of NTLM authentication.",
+  "aliases": [
+    "CVE-2024-43394"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.64"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43394"
+    }
+  ],
+  "published": "2025-07-16T07:56:03.162Z",
+  "modified": "2025-07-16T08:37:34.844Z"
+}
