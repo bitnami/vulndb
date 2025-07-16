@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2025-53020",
+  "summary": "Apache HTTP Server: HTTP/2 DoS by Memory Increase",
+  "details": "Late Release of Memory after Effective Lifetime vulnerability in Apache HTTP Server.\n\nThis issue affects Apache HTTP Server: from 2.4.17 up to 2.4.63.\n\nUsers are recommended to upgrade to version 2.4.64, which fixes the issue.",
+  "aliases": [
+    "CVE-2025-53020"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.17"
+            },
+            {
+              "fixed": "2.4.64"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53020"
+    }
+  ],
+  "published": "2025-07-16T05:39:25.666Z",
+  "modified": "2025-07-16T06:19:05.223Z"
+}
