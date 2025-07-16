@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-2025-30722",
+  "details": "Vulnerability in the MySQL Client product of Oracle MySQL (component: Client: mysqldump).  Supported versions that are affected are 8.0.0-8.0.41, 8.4.0-8.4.4 and  9.0.0-9.2.0. Difficult to exploit vulnerability allows low privileged attacker with network access via multiple protocols to compromise MySQL Client.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all MySQL Client accessible data as well as  unauthorized update, insert or delete access to some of MySQL Client accessible data. CVSS 3.1 Base Score 5.9 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N).",
+  "aliases": [
+    "CVE-2025-30722"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "10.5.29"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.22"
+            },
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "11.4.6"
+            },
+            {
+              "introduced": "11.5.0"
+            },
+            {
+              "fixed": "11.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250418-0005/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2025.html"
+    }
+  ],
+  "published": "2025-07-15T23:52:04.149Z",
+  "modified": "2025-07-16T00:16:22.809Z"
+}
