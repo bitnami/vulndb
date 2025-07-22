@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-hyperledger-fabric-orderer-2024-45244",
-  "details": "Hyperledger Fabric through 2.5.9 does not verify that a request has a timestamp within the expected time window.",
+  "details": "Hyperledger Fabric through 3.0.0 and 2.5.x through 2.5.9 do not verify that a request has a timestamp within the expected time window.",
   "aliases": [
     "CVE-2024-45244"
   ],
@@ -50,5 +50,5 @@
     }
   ],
   "published": "2024-09-13T07:06:30.781Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-07-22T06:07:25.512Z"
 }
