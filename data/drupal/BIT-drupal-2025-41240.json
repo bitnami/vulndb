@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-drupal-2025-41240",
+  "details": "The Bitnami Drupal Helm chart mounts Kubernetes Secrets under a predictable path (/opt/bitnami/drupal/secrets) that is located within the web server document root. In affected versions, this can lead to unauthenticated access to sensitive credentials via HTTP/S. A remote attacker could retrieve these secrets by accessing specific URLs if the application is exposed externally. The issue affects deployments using the default value of usePasswordFiles=true, which mounts secrets as files into the container filesystem.",
+  "aliases": [
+    "CVE-2025-41240"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/RL:O"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.1.5-0"
+            },
+            {
+              "fixed": "11.2.2-1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:*:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/bitnami/charts/security/advisories/GHSA-wgg9-9qgw-529w"
+    }
+  ],
+  "published": "2025-07-23T14:00:00.000Z",
+  "modified": "2025-07-23T14:00:00.000Z"
+}
