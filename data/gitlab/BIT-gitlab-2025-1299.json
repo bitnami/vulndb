@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-1299",
+  "summary": "Missing Authorization in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions starting from 15.4 before 18.0.5, all versions starting from 18.1 before 18.1.3, all versions starting from 18.2 before 18.2.1 that, under circumstances, could have allowed an unauthorized user to read deployment job logs by sending a crafted request.",
+  "aliases": [
+    "CVE-2025-1299"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.4.0"
+            },
+            {
+              "fixed": "18.0.5"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.3"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/519696"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2969145"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1299"
+    }
+  ],
+  "published": "2025-07-29T06:05:26.308Z",
+  "modified": "2025-07-29T06:07:59.028Z"
+}

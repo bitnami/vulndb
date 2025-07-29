@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-harbor-2025-32019",
+  "summary": "Harbor's repository description page allows for XSS",
+  "details": "Harbor is an open source trusted cloud native registry project that stores, signs, and scans content. Versions 2.11.2 and below, as well as versions 2.12.0-rc1 and 2.13.0-rc1, contain a vulnerability where the markdown field in the info tab page can be exploited to inject XSS code. This is fixed in versions 2.11.3 and 2.12.3.",
+  "aliases": [
+    "CVE-2025-32019"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "harbor",
+        "purl": "pkg:bitnami/harbor"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.0-rc1.0.20250421072404-a13a16383a41"
+            },
+            {
+              "introduced": "2.4.0-rc1.1"
+            },
+            {
+              "fixed": "2.11.3"
+            },
+            {
+              "introduced": "2.12.0-rc1"
+            },
+            {
+              "fixed": "2.12.4-rc1"
+            },
+            {
+              "introduced": "2.13.0-rc1"
+            },
+            {
+              "fixed": "2.13.1-rc1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/commit/76c2c5f7cfd9edb356cbb373889a59cc3217a058"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/commit/a13a16383a41a8e20f524593cb290dc52f86f088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/commit/f019430872118852f83f96cac9c587b89052d1e5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-f9vc-vf3r-pqqq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32019"
+    }
+  ],
+  "published": "2025-07-29T05:40:29.320Z",
+  "modified": "2025-07-29T06:07:59.028Z"
+}

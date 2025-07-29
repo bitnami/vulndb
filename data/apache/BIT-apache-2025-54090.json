@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2025-54090",
+  "summary": "Apache HTTP Server: 'RewriteCond expr' always evaluates to true in 2.4.64",
+  "details": "A bug in Apache HTTP Server 2.4.64 results in all \"RewriteCond expr ...\" tests evaluating as \"true\".\n\n\n\nUsers are recommended to upgrade to version 2.4.65, which fixes the issue.",
+  "aliases": [
+    "CVE-2025-54090"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.64"
+            },
+            {
+              "fixed": "2.4.65"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=44666896"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54090"
+    }
+  ],
+  "published": "2025-07-29T05:38:18.535Z",
+  "modified": "2025-07-29T06:07:59.028Z"
+}
