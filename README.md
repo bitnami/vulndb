@@ -26,6 +26,10 @@ Please note that this database is populated with information from the year 2020 
   - [How to consume this CVE feed](#how-to-consume-this-cve-feed)
   - [Reporting a vulnerability or feedback](#reporting-a-vulnerability-or-feedback)
   - [Deprecation notes](#deprecation-notes)
+    - [2025-08](#2025-08)
+    - [2025-06](#2025-06)
+    - [2025-05](#2025-05)
+    - [2025-04](#2025-04)
     - [2025-03](#2025-03)
     - [2024-11](#2024-11)
     - [2024-09](#2024-09)
@@ -141,6 +145,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 [Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
 
 ## Deprecation notes
+
+### 2025-08
+
+- Dolibarr
 
 ### 2025-06
 
