@@ -149,6 +149,9 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ### 2025-08
 
 - Dolibarr
+- Matomo
+- Subversion
+- SuiteCRM
 
 ### 2025-06
 
