@@ -43,7 +43,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
     ]
   },
   "references": [
@@ -57,5 +58,5 @@
     }
   ],
   "published": "2024-07-17T07:39:35.824Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-08-05T09:07:53.274Z"
 }

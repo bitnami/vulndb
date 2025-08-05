@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.5.0",
-  "id": "BIT-vault-2024-9180",
-  "summary": "Vault Operators in Root Namespace May Elevate Their Privileges",
-  "details": "A privileged Vault operator with write permissions to the root namespace’s identity endpoint could escalate their own or another user’s privileges to Vault’s root policy. Fixed in Vault Community Edition 1.18.0 and Vault Enterprise 1.18.0, 1.17.7, 1.16.11, and 1.15.16.",
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2025-5999",
+  "summary": "Vault Root Namespace Operator May Elevate Token Privileges",
+  "details": "A privileged Vault operator with write permissions to the root namespace’s identity endpoint could escalate their own or another user’s token privileges to Vault’s root policy. Fixed in Vault Community Edition 1.20.0 and Vault Enterprise 1.20.0, 1.19.6, 1.18.11 and 1.16.22.",
   "aliases": [
-    "CVE-2024-9180"
+    "CVE-2025-5999"
   ],
   "affected": [
     {
@@ -24,10 +24,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.7.7"
+              "introduced": "0.10.4"
             },
             {
-              "fixed": "1.18.0"
+              "fixed": "1.20.0"
             }
           ]
         }
@@ -37,7 +37,6 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:community:go:*:*"
     ]
@@ -45,13 +44,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://discuss.hashicorp.com/t/hcsec-2024-21-vault-operators-in-root-namespace-may-elevate-their-privileges/70565"
+      "url": "https://discuss.hashicorp.com/t/hcsec-2025-13-vault-root-namespace-operator-may-elevate-token-privileges/76032"
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9180"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5999"
     }
   ],
-  "published": "2024-10-13T19:17:50.102Z",
+  "published": "2025-08-05T08:52:54.433Z",
   "modified": "2025-08-05T09:07:53.274Z"
 }
