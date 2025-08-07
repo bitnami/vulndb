@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-opencart-2025-45893",
+  "details": "OpenCart version 4.1.0.4 is vulnerable to a Stored Cross-Site Scripting (XSS) attack via SVG file uploads used in blog posts. The vulnerability arises because SVG files uploaded through the media manager are not properly sanitized. Attackers can craft a malicious SVG file containing embedded JavaScript",
+  "aliases": [
+    "CVE-2025-45893"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "opencart",
+        "purl": "pkg:bitnami/opencart"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "4.1.0-4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:opencart:opencart:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-45893"
+    },
+    {
+      "type": "WEB",
+      "url": "https://packetstorm.news/files/id/202886"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.opencart.com"
+    }
+  ],
+  "published": "2025-08-07T10:49:57.676Z",
+  "modified": "2025-08-07T11:16:46.635Z"
+}
