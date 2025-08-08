@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Low",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
@@ -53,5 +53,5 @@
     }
   ],
   "published": "2024-06-17T07:39:45.639Z",
-  "modified": "2025-08-05T09:07:53.274Z"
+  "modified": "2025-08-08T06:26:52.450Z"
 }

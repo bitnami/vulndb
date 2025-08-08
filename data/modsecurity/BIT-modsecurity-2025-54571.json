@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity-2025-54571",
+  "summary": "ModSecurity's Insufficient Return Value Handling can Lead to XSS and Source Code Disclosure",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. In versions 2.9.11\nand below, an attacker can override the HTTP response’s Content-Type, which could lead to several issues depending on the HTTP scenario. For example, we have demonstrated the potential for XSS and arbitrary script source code disclosure in the latest version of mod_security2. This issue is fixed in version 2.9.12.",
+  "aliases": [
+    "CVE-2025-54571"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity",
+        "purl": "pkg:bitnami/modsecurity"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.9.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/6d7e8eb18f2d7d368fb8e29516fcdeaeb8d349b8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/issues/2514"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-cg44-9m43-3f9v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54571"
+    }
+  ],
+  "published": "2025-08-08T05:55:15.874Z",
+  "modified": "2025-08-08T06:26:52.450Z"
+}
