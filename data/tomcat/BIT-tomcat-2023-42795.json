@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2023-42795",
   "summary": "Apache Tomcat: Failure during request clean-up leads to sensitive data leaking to subsequent requests",
-  "details": "Incomplete Cleanup vulnerability in Apache Tomcat.When recycling various internal objects in Apache Tomcat from 11.0.0-M1 through 11.0.0-M11, from 10.1.0-M1 through 10.1.13, from 9.0.0-M1 through 9.0.80 and from 8.5.0 through 8.5.93, an error could \ncause Tomcat to skip some parts of the recycling process leading to \ninformation leaking from the current request/response to the next.\n\nUsers are recommended to upgrade to version 11.0.0-M12 onwards, 10.1.14 onwards, 9.0.81 onwards or 8.5.94 onwards, which fixes the issue.",
+  "details": "Incomplete Cleanup vulnerability in Apache Tomcat.When recycling various internal objects in Apache Tomcat from 11.0.0-M1 through 11.0.0-M11, from 10.1.0-M1 through 10.1.13, from 9.0.0-M1 through 9.0.80 and from 8.5.0 through 8.5.93, an error could \ncause Tomcat to skip some parts of the recycling process leading to \ninformation leaking from the current request/response to the next.\nOlder, EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.0-M12 onwards, 10.1.14 onwards, 9.0.81 onwards or 8.5.94 onwards, which fixes the issue.",
   "aliases": [
     "CVE-2023-42795"
   ],
@@ -83,5 +83,5 @@
     }
   ],
   "published": "2024-03-06T11:08:01.506Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-08-08T06:26:52.450Z"
 }
