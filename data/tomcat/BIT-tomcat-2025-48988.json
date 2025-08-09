@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2025-48988",
   "summary": "Apache Tomcat: FileUpload large number of parts with headers DoS",
-  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.7, from 10.1.0-M1 through 10.1.41, from 9.0.0.M1 through 9.0.105. Older, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
+  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.7, from 10.1.0-M1 through 10.1.41, from 9.0.0.M1 through 9.0.105.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.0 though 8.5.100. Other, older, EOL versions \nmay also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
   "aliases": [
     "CVE-2025-48988"
   ],
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-07-10T10:47:06.961Z",
-  "modified": "2025-08-08T06:26:52.450Z"
+  "modified": "2025-08-09T15:08:03.234Z"
 }
