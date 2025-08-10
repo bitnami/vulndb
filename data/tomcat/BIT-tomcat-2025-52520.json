@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2025-52520",
   "summary": "Apache Tomcat: DoS via integer overflow in multipart file upload",
-  "details": "For some unlikely configurations of multipart upload, an Integer Overflow vulnerability in Apache Tomcat could lead to a DoS via bypassing of size limits.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.8, from 10.1.0-M1 through 10.1.42, from 9.0.0.M1 through 9.0.106. Older, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.9, 10.1.43 or 9.0.107, which fix the issue.",
+  "details": "For some unlikely configurations of multipart upload, an Integer Overflow vulnerability in Apache Tomcat could lead to a DoS via bypassing of size limits.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.8, from 10.1.0-M1 through 10.1.42, from 9.0.0.M1 through 9.0.106.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.0 through 8.5.100. Other, older, EOL versions \nmay also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.9, 10.1.43 or 9.0.107, which fix the issue.",
   "aliases": [
     "CVE-2025-52520"
   ],
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2025-07-16T08:19:00.271Z",
-  "modified": "2025-08-08T06:26:52.450Z"
+  "modified": "2025-08-10T00:06:26.073Z"
 }
