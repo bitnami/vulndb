@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2024-11168",
+  "summary": "Improper validation of IPv6 and IPvFuture addresses",
+  "details": "The urllib.parse.urlsplit() and urlparse() functions improperly validated bracketed hosts (`[]`), allowing hosts that weren't IPv6 or IPvFuture. This behavior was not conformant to RFC 3986 and potentially enabled SSRF if a URL is processed by more than one URL parser.",
+  "aliases": [
+    "CVE-2024-11168"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.9.21"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.16"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/29f348e232e82938ba2165843c448c2b291504c5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/634ded45545ce8cbd6fd5d49785613dd7fa9b89e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b2171a2fd41416cf68afd67460578631d755a550"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/ddca2953191c67a12b1f19d6bca41016c6ae7132"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/103848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/103849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/XPWB6XVZ5G5KGEI63M4AWLIEUF5BPH4T/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11168"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250411-0004/"
+    }
+  ],
+  "published": "2025-08-11T13:52:38.571Z",
+  "modified": "2025-08-11T14:19:40.295Z"
+}

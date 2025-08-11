@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libphp-2020-7065",
+  "summary": "mb_strtolower (UTF-32LE): stack-buffer-overflow at php_unicode_tolower_full",
+  "details": "In PHP versions 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using mb_strtolower() function with UTF-32LE encoding, certain invalid strings could cause PHP to overwrite stack-allocated buffer. This could lead to memory corruption, crashes and potentially code execution.",
+  "aliases": [
+    "CVE-2020-7065"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libphp",
+        "purl": "pkg:bitnami/libphp"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.16"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugs.php.net/bug.php?id=79371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7065"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200403-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4330-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4330-2/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4719"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.php.net/ChangeLog-7.php#7.4.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.tenable.com/security/tns-2021-14"
+    }
+  ],
+  "published": "2025-08-11T13:53:07.698Z",
+  "modified": "2025-08-11T14:19:40.295Z"
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2020-8492",
+  "details": "Python 2.7 through 2.7.17, 3.5 through 3.5.9, 3.6 through 3.6.10, 3.7 through 3.7.6, and 3.8 through 3.8.1 allows an HTTP server to conduct Regular Expression Denial of Service (ReDoS) attacks against a client because of urllib.request.AbstractBasicAuthHandler catastrophic backtracking.",
+  "aliases": [
+    "CVE-2020-8492"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.18"
+            },
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.10"
+            },
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.11"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.7"
+            },
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00003.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugs.python.org/issue39503"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/18284"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/rdb31a608dd6758c6093fd645aea3fbf022dd25b37109b6aaea5bc0b5%40%3Ccommits.cassandra.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/rfec113c733162b39633fd86a2d0f34bf42ac35f711b3ec1835c774da%40%3Ccommits.cassandra.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00011.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/05/msg00024.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7WOKDEXLYW5UQ4S7PA7E37IITOC7C56J/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/A5NSAX4SC3V64PGZUPH7PRDLSON34Q5A/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APGWEMYZIY5VHLCSZ3HD67PA5Z2UQFGH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UESGYI5XDAHJBATEZN3MHNDUBDH47AS6/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8492"
+    },
+    {
+      "type": "WEB",
+      "url": "https://python-security.readthedocs.io/vuln/urllib-basic-auth-regex.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202005-09"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200221-0001/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4333-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4333-2/"
+    }
+  ],
+  "published": "2025-08-11T13:51:39.499Z",
+  "modified": "2025-08-11T14:19:40.295Z"
+}

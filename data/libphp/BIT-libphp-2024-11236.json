@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libphp-2024-11236",
+  "summary": "Integer overflow in the firebird and dblib quoters causing OOB writes",
+  "details": "In PHP versions 8.1.* before 8.1.31, 8.2.* before 8.2.26, 8.3.* before 8.3.14, uncontrolled long string inputs to ldap_escape() function on 32-bit systems can cause an integer overflow, resulting in an out-of-bounds write.",
+  "aliases": [
+    "CVE-2024-11236"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libphp",
+        "purl": "pkg:bitnami/libphp"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.1.31"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.26"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.14"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-5hqh-c84r-qjcv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11236"
+    }
+  ],
+  "published": "2025-08-11T13:54:06.723Z",
+  "modified": "2025-08-11T14:19:40.295Z"
+}
