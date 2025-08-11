@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2025-31650",
   "summary": "Apache Tomcat: DoS via malformed HTTP/2 PRIORITY_UPDATE frame",
-  "details": "Improper Input Validation vulnerability in Apache Tomcat. Incorrect error handling for some invalid HTTP priority headers resulted in incomplete clean-up of the failed request which created a memory leak. A large number of such requests could trigger an OutOfMemoryException resulting in a denial of service.\n\nThis issue affects Apache Tomcat: from 9.0.76 through 9.0.102, from 10.1.10 through 10.1.39, from 11.0.0-M2 through 11.0.5. Older, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6 which fix the issue.",
+  "details": "Improper Input Validation vulnerability in Apache Tomcat. Incorrect error handling for some invalid HTTP priority headers resulted in incomplete clean-up of the failed request which created a memory leak. A large number of such requests could trigger an OutOfMemoryException resulting in a denial of service.\n\nThis issue affects Apache Tomcat: from 9.0.76 through 9.0.102, from 10.1.10 through 10.1.39, from 11.0.0-M2 through 11.0.5.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.90 though 8.5.100.\n\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6 which fix the issue.",
   "aliases": [
     "CVE-2025-31650"
   ],
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-04-30T05:56:04.703Z",
-  "modified": "2025-08-08T06:26:52.450Z"
+  "modified": "2025-08-11T00:06:06.142Z"
 }
