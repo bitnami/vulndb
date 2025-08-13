@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -38,7 +38,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Low",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
@@ -59,5 +59,5 @@
     }
   ],
   "published": "2025-06-30T15:16:20.004Z",
-  "modified": "2025-06-30T15:17:30.405Z"
+  "modified": "2025-08-13T06:08:53.695Z"
 }
