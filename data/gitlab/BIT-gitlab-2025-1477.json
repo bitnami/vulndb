@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-1477",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 8.14 before 18.0.6, 18.1 before 18.1.4, and 18.2 before 18.2.2 that could have allowed an unauthenticated user to create a denial of service condition by sending specially crafted payloads to specific integration API endpoints.",
+  "aliases": [
+    "CVE-2025-1477"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.14.0"
+            },
+            {
+              "fixed": "18.0.6"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.4"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/520353"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2987614"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1477"
+    }
+  ],
+  "published": "2025-08-16T06:13:33.734Z",
+  "modified": "2025-08-16T06:16:23.036Z"
+}
