@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-superset-2025-55675",
+  "summary": "Apache Superset: Incorrect datasource authorization on REST API",
+  "details": "Apache Superset contains an improper access control vulnerability in its /explore endpoint. A missing authorization check allows an authenticated user to discover metadata about datasources they do not have permission to access. By iterating through the datasource_id in the URL, an attacker can enumerate and confirm the existence and names of protected datasources, leading to sensitive information disclosure.\n\nThis issue affects Apache Superset: before 5.0.0.\n\nUsers are recommended to upgrade to version 5.0.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2025-55675"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/op681b4kbd7g84tfjf9omz0sxggbcv33"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55675"
+    }
+  ],
+  "published": "2025-08-16T06:00:29.189Z",
+  "modified": "2025-08-16T06:16:23.036Z"
+}
