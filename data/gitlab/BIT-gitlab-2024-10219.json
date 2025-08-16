@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2024-10219",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 15.6 before 18.0.6, 18.1 before 18.1.4, and 18.2 before 18.2.2 that under certain conditions could have allowed authenticated users to bypass access controls and download private artifacts by accessing specific API endpoints.",
+  "aliases": [
+    "CVE-2024-10219"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "18.0.6"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.4"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/500134"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2780353"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10219"
+    }
+  ],
+  "published": "2025-08-16T11:59:46.219Z",
+  "modified": "2025-08-16T12:08:17.490Z"
+}
