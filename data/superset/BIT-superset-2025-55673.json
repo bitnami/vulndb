@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-superset-2025-55673",
+  "summary": "Apache Superset: Metadata exposure in embedded charts",
+  "details": "When a guest user accesses a chart in Apache Superset, the API response from the /chart/data endpoint includes a query field in its payload. This field contains the underlying query, which improperly discloses database schema information, such as table names, to the low-privileged guest user.\n\nThis issue affects Apache Superset: before 4.1.3.\n\nUsers are recommended to upgrade to version 4.1.3, which fixes the issue.",
+  "aliases": [
+    "CVE-2025-55673"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/h2hw756wk4sj4z49blvzkr5fntl9hlf8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55673"
+    }
+  ],
+  "published": "2025-08-16T11:52:17.712Z",
+  "modified": "2025-08-16T12:08:17.490Z"
+}
