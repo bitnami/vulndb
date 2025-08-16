@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2024-12303",
+  "summary": "Incorrect Privilege Assignment in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 17.7 before 18.0.6, 18.1 before 18.1.4, and 18.2 before 18.2.2 that under certain conditions could have allowed authenticated users with specific roles and permissions to delete issues including confidential ones by inviting users with a specific role.",
+  "aliases": [
+    "CVE-2024-12303"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.7.0"
+            },
+            {
+              "fixed": "18.0.6"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.4"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/508298"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/2861889"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-12303"
+    }
+  ],
+  "published": "2025-08-16T18:00:59.041Z",
+  "modified": "2025-08-16T18:08:54.972Z"
+}
