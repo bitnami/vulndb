@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-5819",
+  "summary": "Incorrect Permission Assignment for Critical Resource in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 15.7 before 17.11.6, 18.0 before 18.0.4, and 18.1 before 18.1.2 that could have allowed authenticated users with developer access to obtain ID tokens for protected branches under certain circumstances.",
+  "aliases": [
+    "CVE-2025-5819"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.7.0"
+            },
+            {
+              "fixed": "18.0.6"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.4"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/548165"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3137660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5819"
+    }
+  ],
+  "published": "2025-08-17T15:05:55.777Z",
+  "modified": "2025-08-17T15:07:35.173Z"
+}
