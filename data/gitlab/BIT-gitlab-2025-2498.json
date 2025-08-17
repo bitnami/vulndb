@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-2498",
+  "summary": "Insufficient Granularity of Access Control in GitLab",
+  "details": "An improper access control in Gitlab EE affecting all versions from 12.0 prior to 18.0.6, 18.1 prior to 18.1.4, and 18.2 prior to 18.2.2 that under certain conditions could have allowed users to view assigned issues from restricted groups by bypassing IP restrictions.",
+  "aliases": [
+    "CVE-2025-2498"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "18.0.6"
+            },
+            {
+              "introduced": "18.1.0"
+            },
+            {
+              "fixed": "18.1.4"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/525515"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3037722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2498"
+    }
+  ],
+  "published": "2025-08-17T06:06:15.878Z",
+  "modified": "2025-08-17T06:08:39.762Z"
+}

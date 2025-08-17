@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-superset-2025-55672",
+  "summary": "Apache Superset: Stored XSS on charts metadata",
+  "details": "A stored Cross-Site Scripting (XSS) vulnerability exists in Apache Superset's chart visualization. An authenticated user with permissions to edit charts can inject a malicious payload into a column's label. The payload is not properly sanitized and gets executed in the victim's browser when they hover over the chart, potentially leading to session hijacking or the execution of arbitrary commands on behalf of the user.\n\nThis issue affects Apache Superset: before 5.0.0.\n\nUsers are recommended to upgrade to version 5.0.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2025-55672"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "superset",
+        "purl": "pkg:bitnami/superset"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:superset:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/rvh7fdjfzxzjhcfwoz7twc2brhvochdj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55672"
+    }
+  ],
+  "published": "2025-08-17T05:52:23.142Z",
+  "modified": "2025-08-17T06:08:39.762Z"
+}
