@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2025-8713",
+  "summary": "PostgreSQL optimizer statistics can expose sampled data within a view, partition, or child table",
+  "details": "PostgreSQL optimizer statistics allow a user to read sampled data within a view that the user cannot access.  Separately, statistics allow a user to read sampled data that a row security policy intended to hide.  PostgreSQL maintains statistics for tables by sampling data available in columns; this data is consulted during the query planning process.  Prior to this release, a user could craft a leaky operator that bypassed view access control lists (ACLs) and bypassed row security policies in partitioning or table inheritance hierarchies.  Reachable statistics data notably included histograms and most-common-values lists.  CVE-2017-7484 and CVE-2019-10130 intended to close this class of vulnerability, but this gap remained.  Versions before PostgreSQL 17.6, 16.10, 15.14, 14.19, and 13.22 are affected.",
+  "aliases": [
+    "CVE-2025-8713"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.22.0"
+            },
+            {
+              "introduced": "14.0.0"
+            },
+            {
+              "fixed": "14.19.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.14.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.10.0"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8713"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2025-8713/"
+    }
+  ],
+  "published": "2025-08-16T23:49:38.900Z",
+  "modified": "2025-08-17T00:08:25.612Z"
+}
