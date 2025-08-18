@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-helm-2025-55198",
+  "summary": "Helm May Panic Due To Incorrect YAML Content",
+  "details": "Helm is a package manager for Charts for Kubernetes. Prior to version 3.18.5, when parsing Chart.yaml and index.yaml files, an improper validation of type error can lead to a panic. This issue has been resolved in Helm 3.18.5. A workaround involves ensuring YAML files are formatted as Helm expects prior to processing them with Helm.",
+  "aliases": [
+    "CVE-2025-55198"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "helm",
+        "purl": "pkg:bitnami/helm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.18.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/commit/ec5f59e2db56533d042a124f5bae54dd87b558e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/security/advisories/GHSA-f9f8-9pmf-xv68"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55198"
+    }
+  ],
+  "published": "2025-08-17T23:40:25.459Z",
+  "modified": "2025-08-18T00:07:20.256Z"
+}
