@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -47,7 +47,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Critical",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
     ]
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-05-31T05:35:36.284Z",
-  "modified": "2025-05-31T06:15:48.797Z"
+  "modified": "2025-08-28T12:45:31.397Z"
 }
