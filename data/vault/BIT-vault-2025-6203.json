@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2025-6203",
+  "summary": "Vault unauthenticated denial of service through complex json payload",
+  "details": "A malicious user may submit a specially-crafted complex payload that otherwise meets the default request size limit which results in excessive memory and CPU consumption of Vault. This may lead to a timeout in Vault’s auditing subroutine, potentially resulting in the Vault server to become unresponsive. This vulnerability, CVE-2025-6203, is fixed in Vault Community Edition 1.20.3 and Vault Enterprise 1.20.3, 1.19.9, 1.18.14, and 1.16.25.",
+  "aliases": [
+    "CVE-2025-6203"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.15.0"
+            },
+            {
+              "fixed": "1.20.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:community:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2025-24-vault-denial-of-service-though-complex-json-payloads/76393"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6203"
+    }
+  ],
+  "published": "2025-08-30T08:51:09.044Z",
+  "modified": "2025-08-30T09:06:08.850Z"
+}

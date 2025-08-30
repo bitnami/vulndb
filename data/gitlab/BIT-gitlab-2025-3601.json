@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-3601",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 8.15 before 18.1.5, 18.2 before 18.2.5, and 18.3 before 18.3.1 that could have could have allowed an authenticated user to cause a Denial of Service (DoS) condition by submitting URLs that generate excessively large responses.",
+  "aliases": [
+    "CVE-2025-3601"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.15.0"
+            },
+            {
+              "fixed": "18.1.5"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.5"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/536034"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3050155"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3601"
+    }
+  ],
+  "published": "2025-08-30T09:04:08.676Z",
+  "modified": "2025-08-30T09:06:08.850Z"
+}
