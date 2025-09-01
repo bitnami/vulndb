@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-superset-2025-27696",
-  "summary": "Apache Superset: Improper authorization leading to resource ownership takeover",
+  "summary": "Apache Superset: Incorrect authorization leading to resource ownership takeover",
   "details": "Improper Authorization vulnerability in Apache Superset allows ownership takeover of dashboards, charts or datasets by authenticated users with read permissions.\n\nThis issue affects Apache Superset: through 4.1.1.\n\nUsers are recommended to upgrade to version 4.1.2 or above, which fixes the issue.",
   "aliases": [
     "CVE-2025-27696"
@@ -55,5 +55,5 @@
     }
   ],
   "published": "2025-05-16T06:13:17.089Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-01T13:01:47.229Z"
 }
