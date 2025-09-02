@@ -146,6 +146,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2025-09
+
+- Gonit
+
 ### 2025-08
 
 - Dolibarr
