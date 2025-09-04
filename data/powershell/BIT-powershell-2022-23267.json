@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2022-23267",
+  "summary": ".NET and Visual Studio Denial of Service Vulnerability",
+  "details": ".NET and Visual Studio Denial of Service Vulnerability",
+  "aliases": [
+    "CVE-2022-23267"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.11"
+            },
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/GNXQL7EZORGU4PZCPJ5EPQ4P7IEY3ZZO/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/IBYSBUDJYQ76HK4TULXVIIPCKK2U6WDB/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/W5FPEQ6BTYRGTS6IYCDTZW6YF5HLQ3BY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-23267"
+    }
+  ],
+  "published": "2025-09-04T17:48:39.121Z",
+  "modified": "2025-09-04T18:07:55.535Z"
+}

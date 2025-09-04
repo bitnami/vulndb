@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2020-0951",
+  "summary": "Windows Defender Application Control Security Feature Bypass Vulnerability",
+  "details": "<p>A security feature bypass vulnerability exists in Windows Defender Application Control (WDAC) which could allow an attacker to bypass WDAC enforcement. An attacker who successfully exploited this vulnerability could execute PowerShell commands that would be blocked by WDAC.</p>\n<p>To exploit the vulnerability, an attacker need administrator access on a local machine where PowerShell is running. The attacker could then connect to a PowerShell session and send commands to execute arbitrary code.</p>\n<p>The update addresses the vulnerability by correcting how PowerShell commands are validated when WDAC protection is enabled.</p>",
+  "aliases": [
+    "CVE-2020-0951"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.8"
+            },
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "fixed": "7.1.5"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.8"
+            },
+            {
+              "last_affected": "7.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-0951"
+    },
+    {
+      "type": "WEB",
+      "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0951"
+    }
+  ],
+  "published": "2025-09-04T17:48:31.593Z",
+  "modified": "2025-09-04T18:07:55.535Z"
+}

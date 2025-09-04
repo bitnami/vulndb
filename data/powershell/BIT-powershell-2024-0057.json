@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2024-0057",
+  "summary": "NET, .NET Framework, and Visual Studio Security Feature Bypass Vulnerability",
+  "details": "NET, .NET Framework, and Visual Studio Security Feature Bypass Vulnerability",
+  "aliases": [
+    "CVE-2024-0057"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.2.0"
+            },
+            {
+              "fixed": "7.2.18"
+            },
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.3.11"
+            },
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0057"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0057"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240208-0007/"
+    }
+  ],
+  "published": "2025-09-04T17:48:50.396Z",
+  "modified": "2025-09-04T18:07:55.535Z"
+}

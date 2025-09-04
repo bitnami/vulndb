@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2024-30045",
+  "summary": ".NET and Visual Studio Remote Code Execution Vulnerability",
+  "details": ".NET and Visual Studio Remote Code Execution Vulnerability",
+  "aliases": [
+    "CVE-2024-30045"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30045"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30045"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20241122-0001/"
+    }
+  ],
+  "published": "2025-09-04T17:48:56.455Z",
+  "modified": "2025-09-04T18:07:55.535Z"
+}
