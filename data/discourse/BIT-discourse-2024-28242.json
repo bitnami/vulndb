@@ -27,7 +27,24 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.2.1"
+              "fixed": "3.3.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.3.0-beta1"
+            },
+            {
+              "last_affected": "3.3.0-beta1"
+            },
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "last_affected": "3.3.0"
             }
           ]
         }
@@ -38,7 +55,9 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:tests-passed:*:*:*"
     ]
   },
   "references": [
@@ -56,5 +75,5 @@
     }
   ],
   "published": "2024-04-01T14:04:02.275Z",
-  "modified": "2025-08-27T09:06:48.117Z"
+  "modified": "2025-09-10T12:12:26.839Z"
 }

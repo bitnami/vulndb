@@ -36,7 +36,7 @@
               "fixed": "4.1.8"
             },
             {
-              "introduced": "5.0.0"
+              "introduced": "5.0.0-beta1"
             },
             {
               "fixed": "5.0.3"
@@ -49,7 +49,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -67,5 +68,5 @@
     }
   ],
   "published": "2025-02-20T19:10:15.703Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-10T12:12:26.839Z"
 }

@@ -24,22 +24,27 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "13.9.0"
-            },
-            {
-              "fixed": "16.3.6"
-            },
-            {
               "introduced": "16.4.0"
             },
             {
               "fixed": "16.4.2"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.9.0"
+            },
+            {
+              "last_affected": "16.3.6"
             },
             {
               "introduced": "16.5.0"
             },
             {
-              "fixed": "16.5.1"
+              "last_affected": "16.5.0"
             }
           ]
         }
@@ -65,5 +70,5 @@
     }
   ],
   "published": "2024-03-06T10:55:44.971Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-10T12:12:26.839Z"
 }

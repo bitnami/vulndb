@@ -28,18 +28,23 @@
             },
             {
               "fixed": "16.7.6"
-            },
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
             {
               "introduced": "16.8.0"
             },
             {
-              "fixed": "16.8.3"
+              "last_affected": "16.8.3"
             },
             {
               "introduced": "16.9.0"
             },
             {
-              "fixed": "16.9.1"
+              "last_affected": "16.9.0"
             }
           ]
         }
@@ -69,5 +74,5 @@
     }
   ],
   "published": "2024-03-06T10:54:47.087Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-10T12:12:26.839Z"
 }

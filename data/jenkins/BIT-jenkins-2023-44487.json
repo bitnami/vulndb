@@ -26,13 +26,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.414.3"
-            },
-            {
-              "introduced": "2.415.0"
-            },
-            {
-              "fixed": "2.428.0"
+              "last_affected": "2.427.0"
             }
           ]
         }
@@ -43,7 +37,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -717,5 +712,5 @@
     }
   ],
   "published": "2024-03-06T10:54:03.578Z",
-  "modified": "2025-06-08T06:14:59.981Z"
+  "modified": "2025-09-10T12:12:26.839Z"
 }
