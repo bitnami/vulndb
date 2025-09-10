@@ -26,19 +26,19 @@
               "introduced": "13.1.0"
             },
             {
-              "fixed": "13.2.10"
+              "last_affected": "13.1.0"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "last_affected": "13.2.0"
             },
             {
               "introduced": "13.3.0"
             },
             {
-              "fixed": "13.3.7"
-            },
-            {
-              "introduced": "13.4.0"
-            },
-            {
-              "fixed": "13.4.2"
+              "last_affected": "13.3.0"
             }
           ]
         }
@@ -55,7 +55,8 @@
       "cpe:2.3:a:gitlab:gitlab:13.3.0:*:*:*:community:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:13.3.0:*:*:*:enterprise:*:*:*",
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*"
     ]
   },
   "references": [
@@ -77,5 +78,5 @@
     }
   ],
   "published": "2024-03-06T11:21:57.279Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2025-09-10T09:09:35.631Z"
 }

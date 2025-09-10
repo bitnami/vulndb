@@ -27,7 +27,13 @@
               "introduced": "0.11.0"
             },
             {
-              "fixed": "1.16.2"
+              "fixed": "1.15.9"
+            },
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.16.3"
             }
           ]
         }
@@ -39,7 +45,9 @@
     "cpes": [
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -53,5 +61,5 @@
     }
   ],
   "published": "2024-06-17T07:39:45.639Z",
-  "modified": "2025-08-08T06:26:52.450Z"
+  "modified": "2025-09-10T09:09:35.631Z"
 }
