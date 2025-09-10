@@ -26,19 +26,85 @@
               "introduced": "8.5.0"
             },
             {
-              "fixed": "8.5.94"
-            },
-            {
-              "introduced": "10.1.0"
-            },
-            {
-              "fixed": "10.1.14"
+              "last_affected": "8.5.93"
             },
             {
               "introduced": "9.0.0"
             },
             {
-              "fixed": "9.0.81"
+              "last_affected": "9.0.80"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "last_affected": "10.1.13"
+            },
+            {
+              "introduced": "11.0.0-milestone1"
+            },
+            {
+              "last_affected": "11.0.0-milestone1"
+            },
+            {
+              "introduced": "11.0.0-milestone10"
+            },
+            {
+              "last_affected": "11.0.0-milestone10"
+            },
+            {
+              "introduced": "11.0.0-milestone11"
+            },
+            {
+              "last_affected": "11.0.0-milestone11"
+            },
+            {
+              "introduced": "11.0.0-milestone2"
+            },
+            {
+              "last_affected": "11.0.0-milestone2"
+            },
+            {
+              "introduced": "11.0.0-milestone3"
+            },
+            {
+              "last_affected": "11.0.0-milestone3"
+            },
+            {
+              "introduced": "11.0.0-milestone4"
+            },
+            {
+              "last_affected": "11.0.0-milestone4"
+            },
+            {
+              "introduced": "11.0.0-milestone5"
+            },
+            {
+              "last_affected": "11.0.0-milestone5"
+            },
+            {
+              "introduced": "11.0.0-milestone6"
+            },
+            {
+              "last_affected": "11.0.0-milestone6"
+            },
+            {
+              "introduced": "11.0.0-milestone7"
+            },
+            {
+              "last_affected": "11.0.0-milestone7"
+            },
+            {
+              "introduced": "11.0.0-milestone8"
+            },
+            {
+              "last_affected": "11.0.0-milestone8"
+            },
+            {
+              "introduced": "11.0.0-milestone9"
+            },
+            {
+              "last_affected": "11.0.0-milestone9"
             }
           ]
         }
@@ -48,7 +114,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -722,5 +789,5 @@
     }
   ],
   "published": "2025-07-17T08:09:39.495Z",
-  "modified": "2025-07-17T08:31:17.431Z"
+  "modified": "2025-09-10T21:07:37.069Z"
 }

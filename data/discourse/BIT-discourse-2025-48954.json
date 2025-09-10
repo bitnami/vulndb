@@ -27,7 +27,18 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.5.0.beta6"
+              "fixed": "3.5.0"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "last_affected": "3.5.0"
             }
           ]
         }
@@ -37,7 +48,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -51,5 +63,5 @@
     }
   ],
   "published": "2025-07-01T17:44:46.702Z",
-  "modified": "2025-08-26T06:08:52.180Z"
+  "modified": "2025-09-10T21:07:37.069Z"
 }
