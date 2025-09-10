@@ -34,12 +34,17 @@
             },
             {
               "fixed": "17.4.3"
-            },
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
             {
               "introduced": "17.5.0"
             },
             {
-              "fixed": "17.5.1"
+              "last_affected": "17.5.0"
             }
           ]
         }
@@ -50,7 +55,8 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*"
     ]
   },
   "references": [
@@ -68,5 +74,5 @@
     }
   ],
   "published": "2024-10-26T07:11:57.115Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-10T18:08:26.776Z"
 }

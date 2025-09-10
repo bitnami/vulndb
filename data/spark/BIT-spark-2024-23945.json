@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-spark-2024-23945",
+  "summary": "Apache Hive, Apache Spark, Apache Spark: CookieSigner exposes the correct signature when message verification fails",
+  "details": "Signing cookies is an application security feature that adds a digital signature to cookie data to verify its authenticity and integrity. The signature helps prevent malicious actors from modifying the cookie value, which can lead to security vulnerabilities and exploitation. Apache Hive’s service component accidentally exposes the signed cookie to the end user when there is a mismatch in signature between the current and expected cookie. Exposing the correct cookie signature can lead to further exploitation.\n\nThe vulnerable CookieSigner logic was introduced in Apache Hive by HIVE-9710 (1.2.0) and in Apache Spark by SPARK-14987 (2.0.0). The affected components are the following:\n* org.apache.hive:hive-service\n* org.apache.spark:spark-hive-thriftserver_2.11\n* org.apache.spark:spark-hive-thriftserver_2.12",
+  "aliases": [
+    "CVE-2024-23945"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "spark",
+        "purl": "pkg:bitnami/spark"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "3.3.4"
+            },
+            {
+              "introduced": "3.4.0"
+            },
+            {
+              "fixed": "3.4.2"
+            },
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:spark:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/12/23/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/hive"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/hive/commit/7638cb1a3b07713cc490aa2909a37037f89e08b4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/spark"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/spark/commit/cf59b1f51c16301f689b4e0f17ba4dbd140e1b19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.apache.org/jira/browse/HIVE-9710"
+    },
+    {
+      "type": "WEB",
+      "url": "https://issues.apache.org/jira/browse/SPARK-14987"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/59r4mv7glrxpwkkdjvjbdljfpx3f5zzc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/5o2ljnzrv8zvhjw9vy7b4rwjpc32hgfc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23945"
+    }
+  ],
+  "published": "2025-09-10T17:50:36.070Z",
+  "modified": "2025-09-10T18:08:26.776Z"
+}

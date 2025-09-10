@@ -26,12 +26,6 @@
               "introduced": "0"
             },
             {
-              "fixed": "2.492.3"
-            },
-            {
-              "introduced": "2.493.0"
-            },
-            {
               "fixed": "2.504.1"
             }
           ]
@@ -42,7 +36,9 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -56,5 +52,5 @@
     }
   ],
   "published": "2025-04-04T07:21:24.647Z",
-  "modified": "2025-04-30T18:10:29.413Z"
+  "modified": "2025-09-10T18:08:26.776Z"
 }

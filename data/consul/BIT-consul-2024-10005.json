@@ -24,10 +24,21 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.9.0"
+              "introduced": "1.4.1"
             },
             {
               "fixed": "1.20.1"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "last_affected": "1.20.0"
             }
           ]
         }
@@ -39,7 +50,9 @@
     "cpes": [
       "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
       "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:go:*:*",
-      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:go:*:*"
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -57,5 +70,5 @@
     }
   ],
   "published": "2024-11-01T07:08:02.109Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-10T18:08:26.776Z"
 }
