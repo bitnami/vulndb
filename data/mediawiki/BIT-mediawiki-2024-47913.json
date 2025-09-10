@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mediawiki-2024-47913",
+  "details": "An issue was discovered in the AbuseFilter extension for MediaWiki before 1.39.9, 1.40.x and 1.41.x before 1.41.3, and 1.42.x before 1.42.2. An API caller can match a filter condition against AbuseFilter logs even if the caller is not authorized to view the log details for the filter.",
+  "aliases": [
+    "CVE-2024-47913"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mediawiki",
+        "purl": "pkg:bitnami/mediawiki"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.39.9"
+            },
+            {
+              "introduced": "1.40.0"
+            },
+            {
+              "fixed": "1.41.3"
+            },
+            {
+              "introduced": "1.42.0"
+            },
+            {
+              "fixed": "1.42.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mediawiki:mediawiki:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/AbuseFilter/+/1076855"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47913"
+    },
+    {
+      "type": "WEB",
+      "url": "https://phabricator.wikimedia.org/T372998"
+    }
+  ],
+  "published": "2025-09-10T14:50:57.920Z",
+  "modified": "2025-09-10T15:10:19.468Z"
+}

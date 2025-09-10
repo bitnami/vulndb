@@ -38,7 +38,9 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -52,5 +54,5 @@
     }
   ],
   "published": "2025-05-07T05:56:52.014Z",
-  "modified": "2025-08-13T06:08:53.695Z"
+  "modified": "2025-09-10T15:10:19.468Z"
 }

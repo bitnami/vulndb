@@ -24,13 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.16.7"
-            },
-            {
-              "fixed": "1.16.9"
-            },
-            {
-              "introduced": "1.17.3"
+              "introduced": "0"
             },
             {
               "fixed": "1.17.5"
@@ -44,7 +38,9 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
-      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -58,5 +54,5 @@
     }
   ],
   "published": "2024-09-04T07:26:12.647Z",
-  "modified": "2025-08-05T09:07:53.274Z"
+  "modified": "2025-09-10T15:10:19.468Z"
 }

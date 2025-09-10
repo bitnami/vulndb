@@ -27,7 +27,13 @@
               "introduced": "8.5.0"
             },
             {
-              "fixed": "8.5.100"
+              "fixed": "8.5.99"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.86"
             },
             {
               "introduced": "10.1.0"
@@ -36,10 +42,10 @@
               "fixed": "10.1.19"
             },
             {
-              "introduced": "9.0.0"
+              "introduced": "11.0.0-milestone1"
             },
             {
-              "fixed": "9.0.86"
+              "fixed": "11.0.9"
             }
           ]
         }
@@ -49,7 +55,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -83,5 +90,5 @@
     }
   ],
   "published": "2025-07-17T08:09:49.355Z",
-  "modified": "2025-07-17T08:31:17.431Z"
+  "modified": "2025-09-10T15:10:19.468Z"
 }

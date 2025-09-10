@@ -23,19 +23,19 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "18.0.0"
             },
             {
               "fixed": "18.20.6"
             },
             {
-              "introduced": "19.0.0"
+              "introduced": "20.0.0"
             },
             {
               "fixed": "20.18.2"
             },
             {
-              "introduced": "21.0.0"
+              "introduced": "22.0.0"
             },
             {
               "fixed": "22.13.1"
@@ -54,7 +54,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -68,5 +69,5 @@
     }
   ],
   "published": "2025-01-30T19:20:24.038Z",
-  "modified": "2025-08-20T06:29:59.371Z"
+  "modified": "2025-09-10T15:10:19.468Z"
 }
