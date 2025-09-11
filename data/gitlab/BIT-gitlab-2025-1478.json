@@ -27,7 +27,19 @@
               "introduced": "8.13.0"
             },
             {
-              "fixed": "18.0.2"
+              "fixed": "17.10.7"
+            },
+            {
+              "introduced": "17.11.0"
+            },
+            {
+              "fixed": "17.11.3"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.2.2"
             }
           ]
         }
@@ -38,7 +50,8 @@
     "severity": "High",
     "cpes": [
       "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*"
     ]
   },
   "references": [
@@ -56,5 +69,5 @@
     }
   ],
   "published": "2025-06-14T06:15:07.198Z",
-  "modified": "2025-08-11T00:06:06.142Z"
+  "modified": "2025-09-11T00:05:01.729Z"
 }

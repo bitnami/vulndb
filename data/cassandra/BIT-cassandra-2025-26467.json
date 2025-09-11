@@ -24,10 +24,34 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "4.0.16"
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.31"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.18"
+            },
+            {
+              "introduced": "4.0.0"
             },
             {
               "fixed": "4.0.17"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.8"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.3"
             }
           ]
         }
@@ -37,7 +61,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:maven:*:*"
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:maven:*:*",
+      "cpe:2.3:a:apache:cassandra:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -51,5 +76,5 @@
     }
   ],
   "published": "2025-08-27T08:36:32.891Z",
-  "modified": "2025-08-27T09:06:48.117Z"
+  "modified": "2025-09-11T00:05:01.729Z"
 }

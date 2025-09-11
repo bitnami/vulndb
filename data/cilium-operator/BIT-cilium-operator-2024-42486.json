@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.15.4"
+              "introduced": "1.15.0"
             },
             {
               "fixed": "1.16.1"
@@ -37,7 +37,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2024-08-20T07:17:05.111Z",
-  "modified": "2025-09-04T09:06:08.228Z"
+  "modified": "2025-09-11T00:05:01.729Z"
 }

@@ -28,6 +28,12 @@
             },
             {
               "fixed": "3.4.3"
+            },
+            {
+              "introduced": "3.5.0-beta1"
+            },
+            {
+              "fixed": "3.5.0"
             }
           ]
         }
@@ -37,7 +43,9 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
     ]
   },
   "references": [
@@ -55,5 +63,5 @@
     }
   ],
   "published": "2025-05-02T11:13:20.595Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-09-11T00:05:01.729Z"
 }
