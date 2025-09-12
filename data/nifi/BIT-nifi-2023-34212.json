@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nifi-2023-34212",
+  "summary": "Apache NiFi: Potential Deserialization of Untrusted Data with JNDI in JMS Components",
+  "details": "The JndiJmsConnectionFactoryProvider Controller Service, along with the ConsumeJMS and PublishJMS Processors, in Apache NiFi 1.8.0 through 1.21.0 allow an authenticated and authorized user to configure URL and library properties that enable deserialization of untrusted data from a remote location.\n\nThe resolution validates the JNDI URL and restricts locations to a set of allowed schemes.\n\nYou are recommended to upgrade to version 1.22.0 or later which fixes this issue.",
+  "aliases": [
+    "CVE-2023-34212"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nifi",
+        "purl": "pkg:bitnami/nifi"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "last_affected": "1.21.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/06/12/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/w5rm46fxmvxy216tglf0dv83wo6gnzr5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nifi.apache.org/security.html#CVE-2023-34212"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-34212"
+    }
+  ],
+  "published": "2025-09-12T17:47:55.576Z",
+  "modified": "2025-09-12T18:09:26.255Z"
+}
