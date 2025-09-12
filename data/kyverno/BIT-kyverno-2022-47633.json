@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2022-47633",
+  "details": "An image signature validation bypass vulnerability in Kyverno 1.8.3 and 1.8.4 allows a malicious image registry (or a man-in-the-middle attacker) to inject unsigned arbitrary container images into a protected Kubernetes cluster. This is fixed in 1.8.5. This has been fixed in 1.8.5 and mitigations are available for impacted releases.",
+  "aliases": [
+    "CVE-2022-47633"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.3"
+            },
+            {
+              "last_affected": "1.8.3"
+            },
+            {
+              "introduced": "1.8.4"
+            },
+            {
+              "last_affected": "1.8.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/compare/v1.8.4...v1.8.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/pull/5713"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/releases/tag/v1.8.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-m3cq-xcx9-3gvm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://kyverno.io/docs/writing-policies/verify-images/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-47633"
+    }
+  ],
+  "published": "2025-09-12T20:42:37.133Z",
+  "modified": "2025-09-12T21:08:37.958Z"
+}
