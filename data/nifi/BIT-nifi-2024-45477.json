@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nifi-2024-45477",
+  "summary": "Apache NiFi: Improper Neutralization of Input in Parameter Description",
+  "details": "Apache NiFi 1.10.0 through 1.27.0 and 2.0.0-M1 through 2.0.0-M3 support a description field for Parameters in a Parameter Context configuration that is vulnerable to cross-site scripting. An authenticated user, authorized to configure a Parameter Context, can enter arbitrary JavaScript code, which the client browser will execute within the session context of the authenticated user. Upgrading to Apache NiFi 1.28.0 or 2.0.0-M4 is the recommended mitigation.",
+  "aliases": [
+    "CVE-2024-45477"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nifi",
+        "purl": "pkg:bitnami/nifi"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.10.0"
+            },
+            {
+              "fixed": "1.28.0"
+            },
+            {
+              "introduced": "2.0.0-m1"
+            },
+            {
+              "fixed": "2.0.0-m4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/10/28/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/shdv0tw9hggj7tx9pl7g93mgok2lwbj9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45477"
+    }
+  ],
+  "published": "2025-09-13T20:46:36.766Z",
+  "modified": "2025-09-13T21:08:08.711Z"
+}

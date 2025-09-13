@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2025-47281",
+  "summary": "Kyverno's Improper JMESPath Variable Evaluation Leads to Denial of Service",
+  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. In versions 1.14.1 and below, a Denial of Service (DoS) vulnerability exists due to improper handling of JMESPath variable substitutions. Attackers with permissions to create or update Kyverno policies can craft expressions using the {{@}} variable combined with a pipe and an invalid JMESPath function (e.g., {{@ | non_existent_function }}). This leads to a nil value being substituted into the policy structure. Subsequent processing by internal functions, specifically getValueAsStringMap, which expect string values, results in a panic due to a type assertion failure (interface {} is nil, not string). This crashes Kyverno worker threads in the admission controller and causes continuous crashes of the reports controller pod. This is fixed in version 1.14.2.",
+  "aliases": [
+    "CVE-2025-47281"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/commit/cbd7d4ca24de1c55396fc3295e9fc3215832be7c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-r5p3-955p-5ggq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47281"
+    }
+  ],
+  "published": "2025-09-13T20:42:51.613Z",
+  "modified": "2025-09-13T21:08:08.711Z"
+}
