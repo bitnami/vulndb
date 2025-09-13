@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nifi-2021-20190",
+  "details": "A flaw was found in jackson-databind before 2.9.10.7. FasterXML mishandles the interaction between serialization gadgets and typing. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+  "aliases": [
+    "CVE-2021-20190"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nifi",
+        "purl": "pkg:bitnami/nifi"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.7.0"
+            },
+            {
+              "last_affected": "1.12.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1916633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/FasterXML/jackson-databind/issues/2854"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/r380e9257bacb8551ee6fcf2c59890ae9477b2c78e553fa9ea08e9d9a%40%3Ccommits.nifi.apache.org%3E"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2021/04/msg00025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20210219-0008/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+    }
+  ],
+  "published": "2025-09-13T11:44:30.149Z",
+  "modified": "2025-09-13T12:06:17.656Z"
+}
