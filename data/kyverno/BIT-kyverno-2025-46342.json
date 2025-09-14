@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2025-46342",
+  "summary": "Kyverno vulnerable to bypass of policy rules that use namespace selectors in match statements",
+  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to versions 1.13.5 and 1.14.0, it may happen that policy rules using namespace selector(s) in their match statements are mistakenly not applied during admission review request processing due to a missing error propagation in function `GetNamespaceSelectorsFromNamespaceLister` in `pkg/utils/engine/labels.go`. As a consequence, security-critical mutations and validations are bypassed, potentially allowing attackers with K8s API access to perform malicious operations. This issue has been patched in versions 1.13.5 and 1.14.0.",
+  "aliases": [
+    "CVE-2025-46342"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.13.5"
+            },
+            {
+              "introduced": "1.14.0-alpha.1"
+            },
+            {
+              "fixed": "1.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/commit/3ff923b7756e1681daf73849954bd88516589194"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-jrr2-x33p-6hvc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46342"
+    }
+  ],
+  "published": "2025-09-14T17:42:24.124Z",
+  "modified": "2025-09-14T18:07:40.051Z"
+}
