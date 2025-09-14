@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nifi-2023-40037",
+  "summary": "Apache NiFi: Incomplete Validation of JDBC and JNDI Connection URLs",
+  "details": "Apache NiFi 1.21.0 through 1.23.0 support JDBC and JNDI JMS access in several Processors and Controller Services with connection URL validation that does not provide sufficient protection against crafted inputs. An authenticated and authorized user can bypass connection URL validation using custom input formatting. The resolution enhances connection URL validation and introduces validation for additional related properties. Upgrading to Apache NiFi 1.23.1 is the recommended mitigation.",
+  "aliases": [
+    "CVE-2023-40037"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nifi",
+        "purl": "pkg:bitnami/nifi"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.21.0"
+            },
+            {
+              "fixed": "1.23.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/08/18/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/bqbjlrs2p5ghh8sbk5nsxb8xpf9l687q"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nifi.apache.org/security.html#CVE-2023-40037"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-40037"
+    }
+  ],
+  "published": "2025-09-14T14:45:17.167Z",
+  "modified": "2025-09-14T15:06:56.819Z"
+}
