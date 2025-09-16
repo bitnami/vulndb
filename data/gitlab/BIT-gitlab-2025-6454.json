@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-6454",
+  "summary": "Server-Side Request Forgery (SSRF) in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 16.11 before 18.1.6, 18.2 before 18.2.6, and 18.3 before 18.3.2 that could have allowed authenticated users to make unintended internal requests through proxy environments by injecting crafted sequences.",
+  "aliases": [
+    "CVE-2025-6454"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "18.1.6"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.6"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/550766"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3162711"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6454"
+    }
+  ],
+  "published": "2025-09-16T09:08:45.357Z",
+  "modified": "2025-09-16T09:10:21.105Z"
+}

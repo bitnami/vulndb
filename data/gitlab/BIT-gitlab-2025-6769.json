@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-6769",
+  "summary": "Exposure of Sensitive System Information to an Unauthorized Control Sphere in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 15.1 before 18.1.6, 18.2 before 18.2.6, and 18.3 before 18.3.2 that could have allowed authenticated users to view administrator-only maintenance notes by accessing runner details through specific interfaces.",
+  "aliases": [
+    "CVE-2025-6769"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.1.0"
+            },
+            {
+              "fixed": "18.1.6"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.6"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/551957"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3173328"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6769"
+    }
+  ],
+  "published": "2025-09-16T09:08:47.176Z",
+  "modified": "2025-09-16T09:10:21.105Z"
+}
