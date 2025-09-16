@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-10094",
+  "summary": "Improper Validation of Specified Quantity in Input in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 10.7 before 18.1.6, 18.2 before 18.2.6, and 18.3 before 18.3.2 that could have allowed authenticated users to disrupt access to token listings and related administrative operations by creating tokens with excessively large names.",
+  "aliases": [
+    "CVE-2025-10094"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.7.0"
+            },
+            {
+              "fixed": "18.1.6"
+            },
+            {
+              "introduced": "18.2.0"
+            },
+            {
+              "fixed": "18.2.6"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/528469"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3049089"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10094"
+    }
+  ],
+  "published": "2025-09-16T09:07:02.268Z",
+  "modified": "2025-09-16T09:10:21.105Z"
+}
