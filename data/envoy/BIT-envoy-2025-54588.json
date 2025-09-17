@@ -43,7 +43,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -65,5 +66,5 @@
     }
   ],
   "published": "2025-09-04T08:40:05.078Z",
-  "modified": "2025-09-04T09:06:08.228Z"
+  "modified": "2025-09-17T15:49:32.815Z"
 }
