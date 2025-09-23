@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2025-3083",
+  "summary": "Malformed MongoDB wire protocol messages may cause mongos to crash",
+  "details": "Specifically crafted MongoDB wire protocol messages can cause mongos to crash during command validation. This can occur without using an authenticated connection. This issue affects MongoDB v5.0 versions prior to 5.0.31,  MongoDB v6.0 versions prior to 6.0.20 and MongoDB v7.0 versions prior to 7.0.16",
+  "aliases": [
+    "CVE-2025-3083"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.31"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.20"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-103152"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3083"
+    }
+  ],
+  "published": "2025-09-23T08:46:32.630Z",
+  "modified": "2025-09-23T09:10:44.834Z"
+}
