@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongoose-2025-23061",
+  "details": "Mongoose before 8.9.5 can improperly use a nested $where filter with a populate() match, leading to search injection. NOTE: this issue exists because of an incomplete fix for CVE-2024-53900.",
+  "aliases": [
+    "CVE-2025-23061"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongoose",
+        "purl": "pkg:bitnami/mongoose"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.13.6"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.8.4"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.9.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/64a9f9706f2428c49e0cfb8e223065acc645f7bc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases/tag/8.9.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23061"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.npmjs.com/package/mongoose?activeTab=versions"
+    }
+  ],
+  "published": "2025-09-25T08:46:40.232Z",
+  "modified": "2025-09-25T09:09:38.625Z"
+}

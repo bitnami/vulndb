@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wordpress-multisite-2025-58674",
+  "summary": "WordPress core <= 6.8.2 - (Author+) Cross Site Scripting (XSS) Vulnerability",
+  "details": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Automattic WordPress allows Stored XSS.\n\nWordPress core security team is aware of the issue and working on a fix. This is low severity vulnerability that requires an attacker to have Author or higher user privileges to execute the attack vector. \nThis issue affects WordPress: from n/a through 6.8.2.",
+  "aliases": [
+    "CVE-2025-58674"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "6.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58674"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/wordpress/wordpress/vulnerability/wordpress-wordpress-wordpress-6-8-2-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    }
+  ],
+  "published": "2025-09-25T08:55:10.192Z",
+  "modified": "2025-09-25T09:09:38.625Z"
+}
