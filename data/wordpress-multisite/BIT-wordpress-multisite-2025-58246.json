@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wordpress-multisite-2025-58246",
+  "summary": "WordPress core <= 6.8.2 - (Contributor+) Sensitive Data Exposure vulnerability",
+  "details": "Insertion of Sensitive Information Into Sent Data vulnerability in Automattic WordPress allows Retrieve Embedded Sensitive Data.\n\nThe WordPress Core security team is aware of the issue and is already working on a fix. This is a low-severity vulnerability. Contributor-level privileges required in order to exploit it.\nThis issue affects WordPress: from n/a through 6.8.2",
+  "aliases": [
+    "CVE-2025-58246"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "6.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58246"
+    },
+    {
+      "type": "WEB",
+      "url": "https://patchstack.com/database/wordpress/wordpress/wordpress/vulnerability/wordpress-wordpress-wordpress-6-8-2-sensitive-data-exposure-vulnerability?_s_id=cve"
+    }
+  ],
+  "published": "2025-09-25T08:55:08.408Z",
+  "modified": "2025-09-25T09:09:38.625Z"
+}
