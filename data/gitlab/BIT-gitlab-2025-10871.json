@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-10871",
+  "summary": "Missing Authorization in GitLab",
+  "details": "An issue has been discovered in GitLab EE affecting all versions from 16.6 before 18.2.7, 18.3 before 18.3.3, and 18.4 before 18.4.1. Project Maintainers can exploit a vulnerability where they can assign custom roles to users with permissions exceeding their own, effectively granting themselves elevated privileges.",
+  "aliases": [
+    "CVE-2025-10871"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "18.2.7"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.3"
+            },
+            {
+              "introduced": "18.4.0"
+            },
+            {
+              "fixed": "18.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/569482"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10871"
+    }
+  ],
+  "published": "2025-10-01T15:11:02.199Z",
+  "modified": "2025-10-01T15:14:38.852Z"
+}

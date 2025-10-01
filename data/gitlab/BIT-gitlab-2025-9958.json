@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-9958",
+  "summary": "Insertion of Sensitive Information Into Sent Data in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 14.10 before 18.2.7, 18.3 before 18.3.3, and 18.4 before 18.4.1, that could have allowed Guest users to access sensitive information stored in virtual registry configurations.",
+  "aliases": [
+    "CVE-2025-9958"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.10.0"
+            },
+            {
+              "fixed": "18.2.7"
+            },
+            {
+              "introduced": "18.3.0"
+            },
+            {
+              "fixed": "18.3.3"
+            },
+            {
+              "introduced": "18.4.0"
+            },
+            {
+              "fixed": "18.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/567777"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3323573"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9958"
+    }
+  ],
+  "published": "2025-10-01T15:13:13.235Z",
+  "modified": "2025-10-01T15:14:38.852Z"
+}
