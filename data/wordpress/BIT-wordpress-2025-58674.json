@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-wordpress-2025-58674",
-  "summary": "WordPress core <= 6.8.2 - (Author+) Cross Site Scripting (XSS) Vulnerability",
+  "summary": "WordPress <= 6.8.2 - (Author+) Cross Site Scripting (XSS) Vulnerability",
   "details": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Automattic WordPress allows Stored XSS.\n\nWordPress core security team is aware of the issue and working on a fix. This is low severity vulnerability that requires an attacker to have Author or higher user privileges to execute the attack vector. \nThis issue affects WordPress: from n/a through 6.8.2.",
   "aliases": [
     "CVE-2025-58674"
@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "6.8.2"
+              "fixed": "6.8.3"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2025-09-25T08:55:10.378Z",
-  "modified": "2025-09-25T09:09:38.625Z"
+  "modified": "2025-10-01T09:06:36.513Z"
 }
