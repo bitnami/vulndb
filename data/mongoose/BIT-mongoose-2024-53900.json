@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongoose-2024-53900",
+  "details": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
+  "aliases": [
+    "CVE-2024-53900"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongoose",
+        "purl": "pkg:bitnami/mongoose"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.13.5"
+            },
+            {
+              "introduced": "7.0.0-rc0"
+            },
+            {
+              "fixed": "8.8.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/advisories/GHSA-m7xq-9374-9rvx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-53900"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.npmjs.com/package/mongoose?activeTab=versions"
+    }
+  ],
+  "published": "2025-10-02T14:44:18.222Z",
+  "modified": "2025-10-02T15:07:00.184Z"
+}

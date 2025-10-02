@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-wordpress-2025-58246",
   "summary": "WordPress <= 6.8.2 - (Contributor+) Sensitive Data Exposure Vulnerability",
-  "details": "Insertion of Sensitive Information Into Sent Data vulnerability in Automattic WordPress allows Retrieve Embedded Sensitive Data.\n\nThe WordPress Core security team is aware of the issue and is already working on a fix. This is a low-severity vulnerability. Contributor-level privileges required in order to exploit it.\nThis issue affects WordPress: from n/a through 6.8.2",
+  "details": "Insertion of Sensitive Information Into Sent Data vulnerability in WordPress allows Retrieve Embedded Sensitive Data. The WordPress Core security team is aware of the issue and is already working on a fix. This is a low-severity vulnerability. Contributor-level privileges required in order to exploit it.\nThis issue affects WordPress: from 6.8 through 6.8.2, from 6.7 through 6.7.3, from 6.6 through 6.6.3, from 6.5 through 6.5.6, from 6.4 through 6.4.6, from 6.3 through 6.3.6, from 6.2 through 6.2.7, from 6.1 through 6.1.8, from 6.0 through 6.0.10, from 5.9 through 5.9.11, from 5.8 through 5.8.11, from 5.7 through 5.7.13, from 5.6 through 5.6.15, from 5.5 through 5.5.16, from 5.4 through 5.4.17, from 5.3 through 5.3.19, from 5.2 through 5.2.22, from 5.1 through 5.1.20, from 5.0 through 5.0.23, from 4.9 through 4.9.27, from 4.8 through 4.8.26, from 4.7 through 4.7.30.",
   "aliases": [
     "CVE-2025-58246"
   ],
@@ -48,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://patchstack.com/database/wordpress/wordpress/wordpress/vulnerability/wordpress-wordpress-wordpress-6-8-2-sensitive-data-exposure-vulnerability?_s_id=cve"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2025/09/wordpress-6-8-3-release/"
     }
   ],
   "published": "2025-09-25T08:55:08.592Z",
-  "modified": "2025-10-01T09:06:36.513Z"
+  "modified": "2025-10-02T15:07:00.184Z"
 }
