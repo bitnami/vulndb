@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tensorflow-2025-55556",
+  "details": "TensorFlow v2.18.0 was discovered to output random results when compiling Embedding, leading to unexpected behavior in the application.",
+  "aliases": [
+    "CVE-2025-55556"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tensorflow",
+        "purl": "pkg:bitnami/tensorflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.18.0"
+            },
+            {
+              "fixed": "2.18.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:google:tensorflow:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/shaoyuyoung/0e7d2a586297ae9c8ed14d8706749efc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/tensorflow/tensorflow/issues/82317"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55556"
+    }
+  ],
+  "published": "2025-10-04T20:59:42.808Z",
+  "modified": "2025-10-04T21:06:04.994Z"
+}
