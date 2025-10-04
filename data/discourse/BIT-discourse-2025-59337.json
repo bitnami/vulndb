@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-59337",
+  "summary": "Discourse: Cross-Site Data Exposure via Backup Restore Metacommand Injection in Multisite Deployments",
+  "details": "Discourse is an open-source community discussion platform. In versions 3.5.0 and below, malicious meta-commands could be embedded in a backup dump and executed during restore. In multisite setups, this allowed an admin of one site to access data or credentials from other sites. This issue is fixed in version 3.5.1.",
+  "aliases": [
+    "CVE-2025-59337"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/43536b60d012cc8084e7e701d6afab9ba01e28a5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-7xjr-4f4g-9887"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59337"
+    }
+  ],
+  "published": "2025-10-04T11:42:01.133Z",
+  "modified": "2025-10-04T12:07:15.948Z"
+}

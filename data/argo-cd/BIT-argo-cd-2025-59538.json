@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-cd-2025-59538",
+  "summary": "Argo CD is Vulnerable to Unauthenticated Remote DoS via malformed Azure DevOps git.push webhook",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. For versions 2.9.0-rc1 through 2.14.19, 3.0.0-rc1 through 3.2.0-rc1, 3.1.6 and 3.0.17, when the webhook.azuredevops.username and webhook.azuredevops.password are not set in the default configuration, the /api/webhook endpoint crashes the entire argocd-server process when it receives an Azure DevOps Push event whose JSON array resource.refUpdates is empty. The slice index [0] is accessed without a length check, causing an index-out-of-range panic. A single unauthenticated HTTP POST is enough to kill the process. This issue is resolved in versions 2.14.20, 3.2.0-rc2, 3.1.8 and 3.0.19.",
+  "aliases": [
+    "CVE-2025-59538"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.9.0-rc1"
+            },
+            {
+              "fixed": "2.14.20"
+            },
+            {
+              "introduced": "3.0.0-rc1"
+            },
+            {
+              "fixed": "3.0.19"
+            },
+            {
+              "introduced": "3.1.0-rc1"
+            },
+            {
+              "fixed": "3.1.8"
+            },
+            {
+              "introduced": "3.2.0-rc1"
+            },
+            {
+              "fixed": "3.2.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/1a023f1ca7fe4ec942b4b6696804988d5a632baf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-gpx4-37g2-c8pv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59538"
+    }
+  ],
+  "published": "2025-10-04T11:37:35.835Z",
+  "modified": "2025-10-04T12:07:15.948Z"
+}

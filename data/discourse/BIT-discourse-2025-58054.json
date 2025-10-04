@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-58054",
+  "summary": "Discourse is vulnerable to XSS when quoting chat messages",
+  "details": "Discourse is an open-source community discussion platform. Versions 3.5.0 and below are vulnerable to XSS attacks through parsing and rendering of chat channel titles and chat thread titles via the quote message functionality when using the rich text editor. This issue is fixed in version 3.5.1.",
+  "aliases": [
+    "CVE-2025-58054"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/3a224fd546d894ee408e7414b6879e814a792f91"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-7p47-8m82-m2vf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58054"
+    }
+  ],
+  "published": "2025-10-04T11:41:58.092Z",
+  "modified": "2025-10-04T12:07:15.948Z"
+}

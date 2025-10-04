@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pytorch-2025-46153",
+  "details": "PyTorch before 3.7.0 has a bernoulli_p decompose function in decompositions.py even though it lacks full consistency with the eager CPU implementation, negatively affecting nn.Dropout1d, nn.Dropout2d, and nn.Dropout3d for fallback_random=True.",
+  "aliases": [
+    "CVE-2025-46153"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pytorch",
+        "purl": "pkg:bitnami/pytorch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/shaoyuyoung/4bcefba4004f8271e64b5185c95a248a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/shaoyuyoung/e636f2e7a306105b7e96809e2b85c28a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/compare/v2.6.0...v2.7.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/142853"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/pull/143460"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46153"
+    }
+  ],
+  "published": "2025-10-04T11:48:57.704Z",
+  "modified": "2025-10-04T12:07:15.948Z"
+}
