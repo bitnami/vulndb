@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pytorch-2025-55553",
+  "details": "A syntax error in the component proxy_tensor.py of pytorch v2.7.0 allows attackers to cause a Denial of Service (DoS).",
+  "aliases": [
+    "CVE-2025-55553"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pytorch",
+        "purl": "pkg:bitnami/pytorch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/shaoyuyoung/0e7d2a586297ae9c8ed14d8706749efc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/151432"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/pull/154645"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55553"
+    }
+  ],
+  "published": "2025-10-04T17:48:00.863Z",
+  "modified": "2025-10-04T18:06:13.192Z"
+}
