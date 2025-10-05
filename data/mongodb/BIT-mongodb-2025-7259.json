@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2025-7259",
+  "summary": "Certain Queries with Duplicate _id Fields May Cause MongoDB Server to Crash",
+  "details": "An authorized user can issue queries with duplicate _id fields, that leads to unexpected behavior in MongoDB Server, which may result to crash. This issue can only be triggered by authorized users and cause Denial of Service. This issue affects MongoDB Server v8.1 version 8.1.0.",
+  "aliases": [
+    "CVE-2025-7259"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-102693"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7259"
+    }
+  ],
+  "published": "2025-10-05T14:46:29.716Z",
+  "modified": "2025-10-05T15:08:38.702Z"
+}
