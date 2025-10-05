@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-58055",
+  "summary": "Discourse AI Suggestions Contain Insecure Direct Object Reference",
+  "details": "Discourse is an open-source community discussion platform. In versions 3.5.0 and below, the Discourse AI suggestion endpoints for topic “Title”, “Category”, and “Tags” allowed authenticated users to extract information about topics that they weren’t authorized to access. By modifying the “topic_id” value in API requests to the AI suggestion endpoints, users could target specific restricted topics. The AI model’s responses then disclosed information that the authenticated user couldn’t normally access. This issue is fixed in version 3.5.1. To workaround this issue, users can restrict group access to the AI helper feature through the \"composer_ai_helper_allowed_groups\" and \"post_ai_helper_allowed_groups\" site settings.",
+  "aliases": [
+    "CVE-2025-58055"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/28d569cae9b33cd55d647bf41806106e33d975c9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-32v2-x274-vfhr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58055"
+    }
+  ],
+  "published": "2025-10-05T11:40:49.365Z",
+  "modified": "2025-10-05T12:05:58.764Z"
+}

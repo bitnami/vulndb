@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pytorch-2025-46150",
+  "details": "In PyTorch before 2.7.0, when torch.compile is used, FractionalMaxPool2d has inconsistent results.",
+  "aliases": [
+    "CVE-2025-46150"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pytorch",
+        "purl": "pkg:bitnami/pytorch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/shaoyuyoung/4bcefba4004f8271e64b5185c95a248a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/141538"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/141538#issuecomment-2537424658"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/pull/144395"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46150"
+    }
+  ],
+  "published": "2025-10-05T11:47:44.869Z",
+  "modified": "2025-10-05T12:05:58.764Z"
+}
