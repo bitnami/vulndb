@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-cd-2025-59531",
+  "summary": "Unauthenticated argocd-server panic via a malicious Bitbucket-Server webhook payload",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Versions 1.2.0 through 1.8.7, 2.0.0-rc1 through 2.14.19, 3.0.0-rc1 through 3.2.0-rc1, 3.1.7 and 3.0.18 are vulnerable to malicious API requests which can crash the API server and cause denial of service to legitimate clients. Without a configured webhook.bitbucketserver.secret, Argo CD's /api/webhook endpoint crashes when receiving a malformed Bitbucket Server payload (non-array repository.links.clone field). A single unauthenticated request triggers CrashLoopBackOff, and targeting all replicas causes complete API outage. This issue is fixed in versions 2.14.20, 3.2.0-rc2, 3.1.8 and 3.0.19.",
+  "aliases": [
+    "CVE-2025-59531"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "2.14.20"
+            },
+            {
+              "introduced": "3.0.0-rc1"
+            },
+            {
+              "fixed": "3.0.19"
+            },
+            {
+              "introduced": "3.1.0-rc1"
+            },
+            {
+              "fixed": "3.1.8"
+            },
+            {
+              "introduced": "3.2.0-rc1"
+            },
+            {
+              "fixed": "3.2.0-rc2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/5c466a4e39802e059e75c0008ae7b7b8e842538f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-f9gq-prrc-hrhc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59531"
+    }
+  ],
+  "published": "2025-10-05T17:36:25.110Z",
+  "modified": "2025-10-05T18:06:02.848Z"
+}
