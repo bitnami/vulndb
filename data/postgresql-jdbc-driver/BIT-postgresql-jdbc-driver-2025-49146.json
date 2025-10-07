@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:maven:*:*"
     ]
@@ -55,5 +55,5 @@
     }
   ],
   "published": "2025-06-14T05:57:03.201Z",
-  "modified": "2025-06-14T06:16:31.200Z"
+  "modified": "2025-10-07T09:09:10.888Z"
 }
