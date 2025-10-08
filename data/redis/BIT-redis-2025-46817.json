@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-redis-2025-46817",
+  "summary": "Lua library commands may lead to integer overflow and potential RCE",
+  "details": "Redis is an open source, in-memory database that persists on disk. Versions 8.2.1 and below allow an authenticated user to use a specially crafted Lua script to cause an integer overflow and potentially lead to remote code execution The problem exists in all versions of Redis with Lua scripting. This issue is fixed in version 8.2.2.",
+  "aliases": [
+    "CVE-2025-46817"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redis",
+        "purl": "pkg:bitnami/redis"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.2.20"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.2.11"
+            },
+            {
+              "introduced": "7.3.0"
+            },
+            {
+              "fixed": "7.4.6"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.4"
+            },
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/commit/fc9abc775e308374f667fdf3e723ef4b7eb0e3ca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/releases/tag/8.2.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-m8fj-85cg-7vhp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46817"
+    }
+  ],
+  "published": "2025-10-08T08:51:25.578Z",
+  "modified": "2025-10-08T09:08:49.433Z"
+}
