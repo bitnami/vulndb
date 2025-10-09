@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2025-37728",
+  "summary": "Kibana Insufficiently Protected Credentials in the CrowdStrike Connector",
+  "details": "Insufficiently Protected Credentials in the Crowdstrike connector can lead to Crowdstrike credentials being leaked. A malicious user can access cached credentials from a Crowdstrike connector in another space by creating and running a Crowdstrike connector in a space to which they have access.",
+  "aliases": [
+    "CVE-2025-37728"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.18.8"
+            },
+            {
+              "introduced": "8.19.0"
+            },
+            {
+              "fixed": "8.19.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.8"
+            },
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-crowdstrike-connector-8-18-8-8-19-5-9-0-8-and-9-1-5-security-update-esa-2025-19/382455"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-37728"
+    }
+  ],
+  "published": "2025-10-09T08:43:25.053Z",
+  "modified": "2025-10-09T09:08:03.236Z"
+}
