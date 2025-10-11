@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-image-renderer-2025-11539",
+  "summary": "Arbitrary Code Execution in Grafana Image Renderer Plugin",
+  "details": "Grafana Image Renderer is vulnerable to remote code execution due to an arbitrary file write vulnerability. This is due to the fact that the /render/csv endpoint lacked validation of the filePath parameter that allowed an attacker to save a shared object to an arbitrary location that is then loaded by the Chromium process.\n\nInstances are vulnerable if:\n\n1. The default token (\"authToken\") is not changed, or is known to the attacker.\n2. The attacker can reach the image renderer endpoint.\nThis issue affects grafana-image-renderer: from 1.0.0 through 4.0.16.",
+  "aliases": [
+    "CVE-2025-11539"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana-image-renderer",
+        "purl": "pkg:bitnami/grafana-image-renderer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "4.0.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana-image-renderer:*:*:*:*:*:grafana:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/grafana/grafana-image-renderer/releases/tag/v4.0.17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2025-11539/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11539"
+    }
+  ],
+  "published": "2025-10-11T08:40:19.610Z",
+  "modified": "2025-10-11T09:07:57.990Z"
+}
