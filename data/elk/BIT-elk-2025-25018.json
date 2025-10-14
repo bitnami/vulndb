@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2025-25018",
+  "summary": "Kibana Stored Cross-Site Scripting (XSS)",
+  "details": "Improper Neutralization of Input During Web Page Generation in Kibana can lead to stored Cross-Site Scripting (XSS)",
+  "aliases": [
+    "CVE-2025-25018"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.18.8"
+            },
+            {
+              "introduced": "8.19.0"
+            },
+            {
+              "fixed": "8.19.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.8"
+            },
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://https://discuss.elastic.co/t/kibana-8-18-8-8-19-5-9-0-8-9-1-5-security-update-esa-2025-17/382451"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25018"
+    }
+  ],
+  "published": "2025-10-14T08:39:59.187Z",
+  "modified": "2025-10-14T09:09:11.030Z"
+}
