@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2025-62176",
+  "summary": "Mastadon streaming server allows OAuth clients without the `read` scope to subscribe to public channels",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. In Mastodon before 4.4.6, 4.3.14, and 4.2.27, the streaming server accepts serving events for public timelines to clients using any valid authentication token, even if those tokens lack the read:statuses scope. This allows OAuth clients without the read scope to subscribe to public channels and receive public timeline events. The impact is limited, as this only affects new public posts published on the public timelines and requires an otherwise valid token, but this may lead to unexpected access to public posts in a limited-federation setting. This issue has been patched in versions 4.4.6, 4.3.14, and 4.2.27. No known workarounds exist.",
+  "aliases": [
+    "CVE-2025-62176"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.27"
+            },
+            {
+              "introduced": "4.3.0-beta.1"
+            },
+            {
+              "fixed": "4.3.14"
+            },
+            {
+              "introduced": "4.4.0-beta.1"
+            },
+            {
+              "fixed": "4.4.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/7e98fa9b476fdaed235519f1d527eb956004ba0c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-7gwh-mw97-qjgp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62176"
+    }
+  ],
+  "published": "2025-10-15T08:44:06.235Z",
+  "modified": "2025-10-15T09:08:35.035Z"
+}
