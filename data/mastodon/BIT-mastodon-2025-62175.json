@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2025-62175",
+  "summary": "Mastodon streaming API fails to disconnect disabled and suspended users",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. In versions before 4.4.6, 4.3.14, and 4.2.27, disabling or suspending a user account does not disconnect the account from the streaming API. This allows disabled or suspended accounts to continue receiving real-time updates through existing streaming connections and to establish new streaming connections, even though they cannot interact with other API endpoints. This undermines moderation actions, as administrators expect disabled or suspended accounts to be fully disconnected from the service. This issue has been patched in versions 4.4.6, 4.3.14, and 4.2.27. No known workarounds exist.",
+  "aliases": [
+    "CVE-2025-62175"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.27"
+            },
+            {
+              "introduced": "4.3.0-beta.1"
+            },
+            {
+              "fixed": "4.3.14"
+            },
+            {
+              "introduced": "4.4.0-beta.1"
+            },
+            {
+              "fixed": "4.4.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/2971ac9863b91372e68ac152caf6f4dbff511d17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-r2fh-jr9c-9pxh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62175"
+    }
+  ],
+  "published": "2025-10-15T08:44:04.530Z",
+  "modified": "2025-10-15T09:08:35.035Z"
+}
