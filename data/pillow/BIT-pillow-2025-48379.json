@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -32,7 +32,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
     ]
@@ -60,5 +60,5 @@
     }
   ],
   "published": "2025-07-03T05:57:27.923Z",
-  "modified": "2025-07-03T06:18:04.779Z"
+  "modified": "2025-10-16T18:08:44.835Z"
 }
