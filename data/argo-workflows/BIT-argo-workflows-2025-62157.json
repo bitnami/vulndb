@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-workflows-2025-62157",
+  "summary": "Argo Workflows exposes artifact repository credentials in workflow-controller logs",
+  "details": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Argo Workflows versions prior to 3.6.12 and versions 3.7.0 through 3.7.2 expose artifact repository credentials in plaintext in workflow-controller pod logs. An attacker with permissions to read pod logs in a namespace running Argo Workflows can read the workflow-controller logs and obtain credentials to the artifact repository. Update to versions 3.6.12 or 3.7.3 to remediate the vulnerability. No known workarounds exist.",
+  "aliases": [
+    "CVE-2025-62157"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-workflows",
+        "purl": "pkg:bitnami/argo-workflows"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.12"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:argo_workflows_project:argo_workflows:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/18ad5138b6bcb2aba04e00b4ec657bc6b8fad8df"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/bded09fe4abd37cb98d7fc81b4c14a6f5034e9ab"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-c2hv-4pfj-mm2r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62157"
+    }
+  ],
+  "published": "2025-10-17T20:39:31.704Z",
+  "modified": "2025-10-17T21:09:44.551Z"
+}
