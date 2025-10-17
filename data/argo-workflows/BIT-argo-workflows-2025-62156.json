@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-workflows-2025-62156",
+  "summary": "argo-workflows Zip Slip path traversal allows arbitrary file write and container configuration overwrite",
+  "details": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Versions prior to 3.6.12 and versions 3.7.0 through 3.7.2 contain a Zip Slip path traversal vulnerability in artifact extraction. During artifact extraction the unpack/untar logic (workflow/executor/executor.go) uses filepath.Join(dest, filepath.Clean(header.Name)) without validating that header.Name stays within the intended extraction directory. A malicious archive entry can supply a traversal or absolute path that, after cleaning, overrides the destination directory and causes files to be written outside the /work/tmp extraction path and into system directories such as /etc inside the container. The vulnerability enables arbitrary file creation or overwrite in system configuration locations (for example /etc/passwd, /etc/hosts, /etc/crontab), which can lead to privilege escalation or persistence within the affected container. Update to 3.6.12 or 3.7.3 to remediate the issue.",
+  "aliases": [
+    "CVE-2025-62156"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-workflows",
+        "purl": "pkg:bitnami/argo-workflows"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.12"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:argo_workflows_project:argo_workflows:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/blob/946a2d6b9ac3309371fe47f49ae94c33ca7d488d/workflow/executor/executor.go#L993"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/5659ad9b641fcf52c04ed594cd6493f9170f6011"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/9f6bc5d236cd1b24d607943384511d71ad17a4c3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-p84v-gxvw-73pf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62156"
+    }
+  ],
+  "published": "2025-10-17T20:39:29.958Z",
+  "modified": "2025-10-17T21:09:44.551Z"
+}
