@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2025-25004",
+  "summary": "PowerShell Elevation of Privilege Vulnerability",
+  "details": "Improper access control in Microsoft PowerShell allows an authorized attacker to elevate privileges locally.",
+  "aliases": [
+    "CVE-2025-25004"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.13"
+            },
+            {
+              "introduced": "7.5.0"
+            },
+            {
+              "fixed": "7.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-25004"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25004"
+    }
+  ],
+  "published": "2025-10-21T08:49:11.753Z",
+  "modified": "2025-10-21T09:07:40.239Z"
+}
