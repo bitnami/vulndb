@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-minio-2025-62506",
+  "summary": "MinIO vulnerable to privilege escalation via session policy bypass in service accounts and STS",
+  "details": "MinIO is a high-performance object storage system. In all versions prior to RELEASE.2025-10-15T17-29-55Z, a privilege escalation vulnerability allows service accounts and STS (Security Token Service) accounts with restricted session policies to bypass their inline policy restrictions when performing operations on their own account, specifically when creating new service accounts for the same user. The vulnerability exists in the IAM policy validation logic where the code incorrectly relied on the DenyOnly argument when validating session policies for restricted accounts. When a session policy is present, the system should validate that the action is allowed by the session policy, not just that it is not denied. An attacker with valid credentials for a restricted service or STS account can create a new service account for itself without policy restrictions, resulting in a new service account with full parent privileges instead of being restricted by the inline policy. This allows the attacker to access buckets and objects beyond their intended restrictions and modify, delete, or create objects outside their authorized scope. The vulnerability is fixed in version RELEASE.2025-10-15T17-29-55Z.",
+  "aliases": [
+    "CVE-2025-62506"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "minio",
+        "purl": "pkg:bitnami/minio"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.10.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:minio:minio:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/commit/c1a49490c78e9c3ebcad86ba0662319138ace190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/pull/21642"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/security/advisories/GHSA-jjjj-jwhf-8rgr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62506"
+    }
+  ],
+  "published": "2025-10-21T09:34:30.739Z",
+  "modified": "2025-10-21T10:06:22.705Z"
+}
