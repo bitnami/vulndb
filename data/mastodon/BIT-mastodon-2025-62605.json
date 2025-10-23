@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2025-62605",
+  "summary": "Mastodon quotes control can be bypassed",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. In Mastodon version 4.4, support for verifiable quote posts with quote controls was added, but it is possible for an attacker to bypass these controls in Mastodon versions prior to 4.4.8 and 4.5.0-beta.2. Mastodon internally treats reblogs as statuses. Since they were not special-treated, an attacker could reblog any post, then quote their reblog, technically quoting themselves, but having the quote feature a preview of the post they did not get authorization for with all of the affordances that would be otherwise denied by the quote controls. This issue has been patched in versions 4.4.8 and 4.5.0-beta.2.",
+  "aliases": [
+    "CVE-2025-62605"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0-beta.1"
+            },
+            {
+              "fixed": "4.4.8"
+            },
+            {
+              "introduced": "4.5.0-beta.1"
+            },
+            {
+              "fixed": "4.5.0-beta.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/2dc4552229b55e2e4adaef675e68ed7ae123d78e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/405a49df44033e7d179f3d44d59fb68a67d54789"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.4.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.5.0-beta.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-8h43-rcqj-wpc6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62605"
+    }
+  ],
+  "published": "2025-10-23T08:44:09.997Z",
+  "modified": "2025-10-23T09:07:45.437Z"
+}
