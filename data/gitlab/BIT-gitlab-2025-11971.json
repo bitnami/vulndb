@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-11971",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 10.6 before 18.3.5, 18.4 before 18.4.3, and 18.5 before 18.5.1 that could have allowed an authenticated attacker to trigger unauthorized pipeline executions by manipulating commits.",
+  "aliases": [
+    "CVE-2025-11971"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "18.3.5"
+            },
+            {
+              "introduced": "18.4.0"
+            },
+            {
+              "fixed": "18.4.3"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/566587"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11971"
+    }
+  ],
+  "published": "2025-10-28T12:03:50.762Z",
+  "modified": "2025-10-28T12:07:16.062Z"
+}
