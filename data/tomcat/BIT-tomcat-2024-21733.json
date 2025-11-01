@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2024-21733",
   "summary": "Apache Tomcat: Leaking of unrelated request bodies in default error page",
-  "details": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Tomcat.This issue affects Apache Tomcat: from 8.5.7 through 8.5.63, from 9.0.0-M11 through 9.0.43.\n\nUsers are recommended to upgrade to version 8.5.64 onwards or 9.0.44 onwards, which contain a fix for the issue.",
+  "details": "Generation of Error Message Containing Sensitive Information vulnerability in Apache Tomcat.This issue affects Apache Tomcat: from 8.5.7 through 8.5.63, from 9.0.0-M11 through 9.0.43. Other, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 8.5.64 onwards or 9.0.44 onwards, which contain a fix for the issue.",
   "aliases": [
     "CVE-2024-21733"
   ],
@@ -27,10 +27,10 @@
               "introduced": "8.5.7"
             },
             {
-              "fixed": "8.5.98"
+              "fixed": "8.5.64"
             },
             {
-              "introduced": "9.0.0-milestone11"
+              "introduced": "9.0.0"
             },
             {
               "fixed": "9.0.45"
@@ -86,5 +86,5 @@
     }
   ],
   "published": "2024-03-06T11:07:26.980Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-11-01T18:06:56.613Z"
 }
