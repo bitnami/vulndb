@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2025-53506",
   "summary": "Apache Tomcat: DoS via excessive h2 streams at connection start",
-  "details": "Uncontrolled Resource Consumption vulnerability in Apache Tomcat if an HTTP/2 client did not acknowledge the initial settings frame that reduces the maximum permitted concurrent streams.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.8, from 10.1.0-M1 through 10.1.42, from 9.0.0.M1 through 9.0.106.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.0 through 8.5.100.\n\n\nUsers are recommended to upgrade to version 11.0.9, 10.1.43 or 9.0.107, which fix the issue.",
+  "details": "Uncontrolled Resource Consumption vulnerability in Apache Tomcat if an HTTP/2 client did not acknowledge the initial settings frame that reduces the maximum permitted concurrent streams.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.8, from 10.1.0-M1 through 10.1.42, from 9.0.0.M1 through 9.0.106.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.0 through 8.5.100. Other EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.9, 10.1.43 or 9.0.107, which fix the issue.",
   "aliases": [
     "CVE-2025-53506"
   ],
@@ -24,13 +24,13 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "9.0.0"
+              "introduced": "0"
             },
             {
               "fixed": "9.0.107"
             },
             {
-              "introduced": "10.1.0"
+              "introduced": "10.0.0"
             },
             {
               "fixed": "10.1.43"
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2025-07-16T08:19:04.361Z",
-  "modified": "2025-08-11T00:06:06.142Z"
+  "modified": "2025-11-01T15:06:57.169Z"
 }
