@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2023-42794",
   "summary": "Apache Tomcat: FileUpload: DoS due to accumulation of temporary files on Windows",
-  "details": "Incomplete Cleanup vulnerability in Apache Tomcat.\n\nThe internal fork of Commons FileUpload packaged with Apache Tomcat 9.0.70 through 9.0.80 and 8.5.85 through 8.5.93 included an unreleased, \nin progress refactoring that exposed a potential denial of service on \nWindows if a web application opened a stream for an uploaded file but \nfailed to close the stream. The file would never be deleted from disk \ncreating the possibility of an eventual denial of service due to the \ndisk being full.\n\nUsers are recommended to upgrade to version 9.0.81 onwards or 8.5.94 onwards, which fixes the issue.",
+  "details": "Incomplete Cleanup vulnerability in Apache Tomcat.\n\nThe internal fork of Commons FileUpload packaged with Apache Tomcat 9.0.70 through 9.0.80 and 8.5.85 through 8.5.93 included an unreleased, \nin progress refactoring that exposed a potential denial of service on \nWindows if a web application opened a stream for an uploaded file but \nfailed to close the stream. The file would never be deleted from disk \ncreating the possibility of an eventual denial of service due to the \ndisk being full.\n\nOther, EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 9.0.81 onwards or 8.5.94 onwards, which fixes the issue.",
   "aliases": [
     "CVE-2023-42794"
   ],
@@ -61,5 +61,5 @@
     }
   ],
   "published": "2024-03-06T11:08:11.491Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-11-02T06:08:11.620Z"
 }
