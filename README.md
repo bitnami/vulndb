@@ -146,6 +146,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2025-11
+
+- Keycloak Metrics SPI
+
 ### 2025-10
 
 - Apisix Dashboard
