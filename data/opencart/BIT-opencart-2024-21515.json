@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-opencart-2024-21515",
-  "details": "This affects versions of the package opencart/opencart from 4.0.0-0. A reflected XSS issue was identified in the filename parameter of the admin tool/log route. An attacker could obtain a user's token by tricking the user to click on a maliciously crafted URL. The user is then prompted to login and redirected again upon authentication with the payload automatically executing. If the attacked user has admin privileges, this vulnerability could be used as the start of a chain of exploits like Zip Slip or arbitrary file write vulnerabilities in the admin functionality.\r\r**Notes:**\r\r1) This is only exploitable if the attacker knows the name or path of the admin directory. The name of the directory is \"admin\" by default but there is a pop-up in the dashboard warning users to rename it.\r\r2) The fix for this vulnerability is incomplete. The redirect is removed so that it is not possible for an attacker to control the redirect post admin login anymore, but it is still possible to exploit this issue in admin if the user is authenticated as an admin already.",
+  "details": "This affects versions of the package opencart/opencart from 4.0.0.0. A reflected XSS issue was identified in the filename parameter of the admin tool/log route. An attacker could obtain a user's token by tricking the user to click on a maliciously crafted URL. The user is then prompted to login and redirected again upon authentication with the payload automatically executing. If the attacked user has admin privileges, this vulnerability could be used as the start of a chain of exploits like Zip Slip or arbitrary file write vulnerabilities in the admin functionality.\r\r**Notes:**\r\r1) This is only exploitable if the attacker knows the name or path of the admin directory. The name of the directory is \"admin\" by default but there is a pop-up in the dashboard warning users to rename it.\r\r2) The fix for this vulnerability is incomplete. The redirect is removed so that it is not possible for an attacker to control the redirect post admin login anymore, but it is still possible to exploit this issue in admin if the user is authenticated as an admin already.",
   "aliases": [
     "CVE-2024-21515"
   ],
@@ -20,10 +20,10 @@
       ],
       "ranges": [
         {
-          "type": "SEMVER",
+          "type": "ECOSYSTEM",
           "events": [
             {
-              "introduced": "4.0.0-0"
+              "introduced": "4.0.0.0"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2024-06-25T11:58:42.968Z",
-  "modified": "2025-04-14T11:56:27.727Z"
+  "modified": "2025-11-04T16:07:28.019Z"
 }
