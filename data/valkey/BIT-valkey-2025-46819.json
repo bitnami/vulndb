@@ -27,31 +27,19 @@
               "introduced": "0"
             },
             {
-              "fixed": "6.2.20"
-            },
-            {
-              "introduced": "7.0.0"
-            },
-            {
               "fixed": "7.2.11"
-            },
-            {
-              "introduced": "7.3.0"
-            },
-            {
-              "fixed": "7.4.6"
             },
             {
               "introduced": "8.0.0"
             },
             {
-              "fixed": "8.0.4"
+              "fixed": "8.0.6"
             },
             {
               "introduced": "8.1.0"
             },
             {
-              "fixed": "8.2.2"
+              "fixed": "8.1.4"
             }
           ]
         }
@@ -61,7 +49,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:valkey-io:valkey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -80,8 +69,16 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46819"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vicarius.io/vsociety/posts/cve-2025-46819-detect-redis-vulnerability"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vicarius.io/vsociety/posts/cve-2025-46819-mitigate-redis-vulnerability"
     }
   ],
   "published": "2025-10-08T08:52:39.220Z",
-  "modified": "2025-10-11T09:07:57.990Z"
+  "modified": "2025-11-06T13:25:46.476Z"
 }
