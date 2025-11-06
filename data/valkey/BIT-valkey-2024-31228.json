@@ -24,16 +24,16 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2.2.5"
+              "introduced": "0"
             },
             {
-              "fixed": "7.2.6"
+              "fixed": "7.2.7"
             },
             {
-              "introduced": "7.3.0"
+              "introduced": "8.0.0"
             },
             {
-              "fixed": "8.0.0"
+              "fixed": "8.0.1"
             }
           ]
         }
@@ -43,7 +43,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:valkey-io:valkey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -58,8 +59,12 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31228"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2024/11/msg00031.html"
     }
   ],
   "published": "2024-10-09T16:44:40.936Z",
-  "modified": "2025-09-09T06:08:46.021Z"
+  "modified": "2025-11-06T13:25:46.476Z"
 }

@@ -24,16 +24,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "7.0.0"
+              "introduced": "0"
             },
             {
-              "fixed": "7.2.7"
-            },
-            {
-              "introduced": "7.4.0"
-            },
-            {
-              "fixed": "8.0.0"
+              "fixed": "8.0.2"
             }
           ]
         }
@@ -43,7 +37,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:valkey-io:valkey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -57,5 +52,5 @@
     }
   ],
   "published": "2025-01-08T07:22:23.019Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2025-11-06T13:25:46.476Z"
 }

@@ -27,31 +27,19 @@
               "introduced": "0"
             },
             {
-              "fixed": "6.2.20"
-            },
-            {
-              "introduced": "7.0.0"
-            },
-            {
               "fixed": "7.2.11"
-            },
-            {
-              "introduced": "7.3.0"
-            },
-            {
-              "fixed": "7.4.6"
             },
             {
               "introduced": "8.0.0"
             },
             {
-              "fixed": "8.0.4"
+              "fixed": "8.0.6"
             },
             {
               "introduced": "8.1.0"
             },
             {
-              "fixed": "8.2.2"
+              "fixed": "8.1.4"
             }
           ]
         }
@@ -61,7 +49,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:valkey-io:valkey:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -83,5 +72,5 @@
     }
   ],
   "published": "2025-10-08T08:52:36.400Z",
-  "modified": "2025-10-09T09:08:03.236Z"
+  "modified": "2025-11-06T13:25:46.476Z"
 }

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2025-62232",
+  "summary": "Apache APISIX: basic-auth logs plaintext credentials at info level",
+  "details": "Sensitive data exposure via logging in basic-auth leads to plaintext usernames and passwords written to error logs and forwarded to log sinks when log level is INFO/DEBUG. This creates a high risk of credential compromise through log access.\nIt has been fixed in the following commit:  https://github.com/apache/apisix/pull/12629 \nUsers are recommended to upgrade to version 3.14, which fixes this issue.",
+  "aliases": [
+    "CVE-2025-62232"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "3.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2025/10/30/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/32hdgh570btfhg02hfc7p7ckf9v83259"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62232"
+    }
+  ],
+  "published": "2025-11-06T12:47:05.456Z",
+  "modified": "2025-11-06T13:25:46.476Z"
+}

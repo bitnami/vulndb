@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-61598",
+  "summary": "Discourse is missing Cache-Control response header on error responses",
+  "details": "Discourse is an open source discussion platform. Version before 3.6.2 and 3.6.0.beta2, default Cache-Control response header with value no-store, no-cache was missing from error responses. This may caused unintended caching of those responses by proxies potentially leading to cache poisoning attacks. This vulnerability is fixed in 3.6.2 and 3.6.0.beta2.",
+  "aliases": [
+    "CVE-2025-61598"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/3ea1b663c82c067e5ca778db846bad1e082ba6cd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/fd567af7bf5a15c70772021acbdf5d38487a31bc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-jp9x-wwv6-cv3j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61598"
+    }
+  ],
+  "published": "2025-11-06T12:59:31.285Z",
+  "modified": "2025-11-06T13:25:46.476Z"
+}

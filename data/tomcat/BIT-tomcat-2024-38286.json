@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2024-38286",
   "summary": "Apache Tomcat: Denial of Service",
-  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M20, from 10.1.0-M1 through 10.1.24, from 9.0.13 through 9.0.89.\n\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.35 through 8.5.100 and 7.0.92 through 7.0.109.\n\n\nUsers are recommended to upgrade to version 11.0.0-M21, 10.1.25, or 9.0.90, which fixes the issue.\n\n\n\nApache Tomcat, under certain configurations on any platform, allows an attacker to cause an OutOfMemoryError by abusing the TLS handshake process.",
+  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M20, from 10.1.0-M1 through 10.1.24, from 9.0.13 through 9.0.89.\n\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.35 through 8.5.100 and 7.0.92 through 7.0.109. Other EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.0-M21, 10.1.25, or 9.0.90, which fixes the issue.\n\n\n\nApache Tomcat, under certain configurations on any platform, allows an attacker to cause an OutOfMemoryError by abusing the TLS handshake process.",
   "aliases": [
     "CVE-2024-38286"
   ],
@@ -30,13 +30,13 @@
               "fixed": "9.0.90"
             },
             {
-              "introduced": "10.1.0-M1"
+              "introduced": "10.0.0"
             },
             {
               "fixed": "10.1.25"
             },
             {
-              "introduced": "11.0.0-M1"
+              "introduced": "11.0.0"
             },
             {
               "fixed": "11.0.9"
@@ -68,8 +68,12 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00009.html"
     }
   ],
   "published": "2024-11-09T07:20:25.873Z",
-  "modified": "2025-08-11T00:06:06.142Z"
+  "modified": "2025-11-06T13:25:46.476Z"
 }
