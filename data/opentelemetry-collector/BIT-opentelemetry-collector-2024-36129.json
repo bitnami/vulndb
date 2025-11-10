@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-opentelemetry-collector-2024-36129",
+  "summary": "OpenTelemetry Collector has a Denial of Service via Zip/Decompression Bomb sent over HTTP or gRPC",
+  "details": "The OpenTelemetry Collector offers a vendor-agnostic implementation on how to receive, process and export telemetry data. An unsafe decompression vulnerability allows unauthenticated attackers to crash the collector via excessive memory consumption. OTel Collector version 0.102.1 fixes this issue.  It is also fixed in the confighttp module version 0.102.0 and configgrpc module version 0.102.1.",
+  "aliases": [
+    "CVE-2024-36129"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "opentelemetry-collector",
+        "purl": "pkg:bitnami/opentelemetry-collector"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.102.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:opentelemetry:opentelemetry_collector:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/open-telemetry/opentelemetry-collector/pull/10289"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/open-telemetry/opentelemetry-collector/pull/10323"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/open-telemetry/opentelemetry-collector/security/advisories/GHSA-c74f-6mfw-mm4v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36129"
+    },
+    {
+      "type": "WEB",
+      "url": "https://opentelemetry.io/blog/2024/cve-2024-36129"
+    }
+  ],
+  "published": "2025-11-10T17:44:52.258Z",
+  "modified": "2025-11-10T18:06:47.972Z"
+}
