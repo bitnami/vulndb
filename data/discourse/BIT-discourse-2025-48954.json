@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-discourse-2025-48954",
   "summary": "Discourse vulnerable to XSS via user-provided query parameter in oauth failure flow",
-  "details": "Discourse is an open-source discussion platform. Versions prior to 3.5.0.beta6 are vulnerable to cross-site scripting when the content security policy isn't enabled when using social logins. Version 3.5.0.beta6 patches the issue. As a workaround, have the content security policy enabled.",
+  "details": "Discourse is an open-source discussion platform. Versions prior to 3.5.0 are vulnerable to cross-site scripting when the content security policy isn't enabled when using social logins. Version 3.5.0 patches the issue. As a workaround, have the content security policy enabled.",
   "aliases": [
     "CVE-2025-48954"
   ],
@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.5.0.beta6"
+              "fixed": "3.5.0"
             }
           ]
         }
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2025-07-01T17:44:46.702Z",
-  "modified": "2025-08-26T06:08:52.180Z"
+  "modified": "2025-11-13T11:23:28.166Z"
 }
