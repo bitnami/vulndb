@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2025-62397",
+  "summary": "Moodle: router produces json instead of 404 error for invalid course id",
+  "details": "The router’s inconsistent response to invalid course IDs allowed attackers to infer which course IDs exist, potentially aiding reconnaissance.",
+  "aliases": [
+    "CVE-2025-62397"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-62397"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404430"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62397"
+    }
+  ],
+  "published": "2025-11-17T23:47:45.012Z",
+  "modified": "2025-11-18T00:06:24.423Z"
+}
