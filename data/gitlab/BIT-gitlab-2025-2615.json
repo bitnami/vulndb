@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-2615",
+  "summary": "Insertion of Sensitive Information Into Sent Data in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.7  before 18.3.6, 18.4 before 18.4.4, and 18.5 before 18.5.2, that could have allowed a blocked user to access sensitive information by establishing GraphQL subscriptions through WebSocket connections.",
+  "aliases": [
+    "CVE-2025-2615"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.7.0"
+            },
+            {
+              "fixed": "18.3.6"
+            },
+            {
+              "introduced": "18.4.0"
+            },
+            {
+              "fixed": "18.4.4"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/526360"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3049150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2615"
+    }
+  ],
+  "published": "2025-11-20T09:04:09.576Z",
+  "modified": "2025-11-20T09:06:46.640Z"
+}
