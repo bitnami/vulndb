@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-12983",
+  "summary": "Memory Allocation with Excessive Size Value in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.9 before 18.3.6, 18.4 before 18.4.4, and 18.5 before 18.5.2 that could have allowed an authenticated attacker to cause a denial of service condition by submitting specially crafted markdown content with nested formatting patterns.",
+  "aliases": [
+    "CVE-2025-12983"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.9.0"
+            },
+            {
+              "fixed": "18.3.6"
+            },
+            {
+              "introduced": "18.4.0"
+            },
+            {
+              "fixed": "18.4.4"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/11/12/patch-release-gitlab-18-5-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/296257"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3419588"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12983"
+    }
+  ],
+  "published": "2025-11-20T09:03:27.972Z",
+  "modified": "2025-11-21T09:06:15.683Z"
+}
