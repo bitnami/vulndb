@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-golang-2025-58187",
   "summary": "Quadratic complexity when checking name constraints in crypto/x509",
-  "details": "Due to the design of the name constraint checking algorithm, the processing time of some inputs scals non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.",
+  "details": "Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.",
   "aliases": [
     "CVE-2025-58187"
   ],
@@ -73,5 +73,5 @@
     }
   ],
   "published": "2025-11-06T12:58:22.304Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2025-11-21T09:06:15.683Z"
 }
