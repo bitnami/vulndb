@@ -1,10 +1,10 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-gitlab-2025-2615",
+  "id": "BIT-gitlab-2025-7000",
   "summary": "Insertion of Sensitive Information Into Sent Data in GitLab",
-  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.7  before 18.3.6, 18.4 before 18.4.4, and 18.5 before 18.5.2, that could have allowed a blocked user to access sensitive information by establishing GraphQL subscriptions through WebSocket connections.",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions  from 17.6  before 18.3.6, 18.4 before 18.4.4, and 18.5 before 18.5.2, that, under specific conditions, could have allowed unauthorized users to view confidential branch names by accessing project issues with related merge requests.",
   "aliases": [
-    "CVE-2025-2615"
+    "CVE-2025-7000"
   ],
   "affected": [
     {
@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
         }
       ],
       "ranges": [
@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "16.7.0"
+              "introduced": "17.6.0"
             },
             {
               "fixed": "18.3.6"
@@ -49,9 +49,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
     ]
   },
   "references": [
@@ -61,17 +60,17 @@
     },
     {
       "type": "WEB",
-      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/526360"
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/553129"
     },
     {
       "type": "WEB",
-      "url": "https://hackerone.com/reports/3049150"
+      "url": "https://hackerone.com/reports/3214025"
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2615"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7000"
     }
   ],
-  "published": "2025-11-20T09:04:09.576Z",
+  "published": "2025-11-21T09:04:35.128Z",
   "modified": "2025-11-21T09:06:15.683Z"
 }
