@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-limesurvey-2025-41076",
+  "summary": "Multiple vulnerabilities in Limesurvey",
+  "details": "In version 6.13.0 of LimeSurvey, any external user can cause a 500 error in the survey system by sending a malformed session cookie. Instead of displaying a generic error message, the system exposes internal backend information, including the use of the Yii framework, the MySQL/MariaDB database engine, the table name 'lime_sessions', primary keys, and fragments of the content that caused the conflict. This information can simplify the collection of data about the internal architecture of the application by an attacker.",
+  "aliases": [
+    "CVE-2025-41076"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "limesurvey",
+        "purl": "pkg:bitnami/limesurvey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.13.0"
+            },
+            {
+              "fixed": "6.15.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:limesurvey:limesurvey:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41076"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-limesurvey-0"
+    }
+  ],
+  "published": "2025-11-22T08:41:50.495Z",
+  "modified": "2025-11-22T09:07:47.870Z"
+}
