@@ -27,7 +27,7 @@ jobs:
         run: npm install -g markdownlint-cli@0.33.0
       - name: Install check-jsonschema
         run: pipx install check-jsonschema
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         name: Checkout Repository
       - id: lint
         name: Lint modified files
