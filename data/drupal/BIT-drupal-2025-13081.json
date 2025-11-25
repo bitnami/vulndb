@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-drupal-2025-13081",
+  "summary": "Drupal core - Moderately critical - Gadget chain - SA-CORE-2025-006",
+  "details": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Drupal core allows Object Injection.This issue affects Drupal core: from 8.0.0 before 10.4.9, from 10.5.0 before 10.5.6, from 11.0.0 before 11.1.9, from 11.2.0 before 11.2.8.",
+  "aliases": [
+    "CVE-2025-13081"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "10.4.9"
+            },
+            {
+              "introduced": "10.5.0"
+            },
+            {
+              "fixed": "10.5.6"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.1.9"
+            },
+            {
+              "introduced": "11.2.0"
+            },
+            {
+              "fixed": "11.2.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13081"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2025-006"
+    }
+  ],
+  "published": "2025-11-25T17:56:43.353Z",
+  "modified": "2025-11-25T18:26:29.568Z"
+}
