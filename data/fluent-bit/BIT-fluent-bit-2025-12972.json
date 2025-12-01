@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-fluent-bit-2025-12972",
+  "summary": "CVE-2025-12972",
+  "details": "Fluent Bit out_file plugin does not properly sanitize tag values when deriving output file names. When the File option is omitted, the plugin uses untrusted tag input to construct file paths. This allows attackers with network access to craft tags containing path traversal sequences that cause Fluent Bit to write files outside the intended output directory.",
+  "aliases": [
+    "CVE-2025-12972"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluent-bit",
+        "purl": "pkg:bitnami/fluent-bit"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:treasuredata:fluent_bit:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://fluentbit.io/blog/2025/10/28/security-vulnerabilities-addressed-in-fluent-bit-v4.1-and-backported-to-v4.0/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12972"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oligo.security/blog/critical-vulnerabilities-in-fluent-bit-expose-cloud-environments-to-remote-takeover"
+    }
+  ],
+  "published": "2025-12-01T20:38:27.720Z",
+  "modified": "2025-12-01T21:08:19.180Z"
+}
