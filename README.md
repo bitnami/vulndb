@@ -209,7 +209,6 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ### 2024-07
 
-- ActiveMQ
 - Akeneo
 - EspoCRM
 - Guacamole
