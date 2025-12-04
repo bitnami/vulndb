@@ -149,7 +149,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
-### 2025-11
+### 2025-12
 
 - LimeSurvey
 
