@@ -151,6 +151,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ### 2025-11
 
+- LimeSurvey
+
+### 2025-11
+
 - Keycloak Metrics SPI
 
 ### 2025-10
