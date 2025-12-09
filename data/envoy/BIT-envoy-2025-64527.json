@@ -55,7 +55,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -69,5 +70,5 @@
     }
   ],
   "published": "2025-12-06T11:38:17.923Z",
-  "modified": "2025-12-06T12:06:23.267Z"
+  "modified": "2025-12-09T12:08:00.393Z"
 }
