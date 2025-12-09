@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:pgbouncer:pgbouncer:*:*:*:*:*:*:*:*"
     ]
@@ -55,5 +55,5 @@
     }
   ],
   "published": "2025-04-18T19:19:16.416Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2025-12-09T12:08:00.393Z"
 }
