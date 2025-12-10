@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-golang-2025-61725",
   "summary": "Excessive CPU consumption in ParseAddress in net/mail",
-  "details": "The ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.",
+  "details": "The ParseAddress function constructs domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.",
   "aliases": [
     "CVE-2025-61725"
   ],
@@ -73,5 +73,5 @@
     }
   ],
   "published": "2025-11-06T12:58:41.872Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2025-12-10T12:06:24.101Z"
 }
