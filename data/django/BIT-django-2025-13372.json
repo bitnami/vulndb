@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-django-2025-13372",
+  "summary": "Potential SQL injection in FilteredRelation column aliases on PostgreSQL",
+  "details": "An issue was discovered in 5.2 before 5.2.9, 5.1 before 5.1.15, and 4.2 before 4.2.27.\n`FilteredRelation` is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the `**kwargs` passed to `QuerySet.annotate()` or `QuerySet.alias()` on PostgreSQL.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Stackered for reporting this issue.",
+  "aliases": [
+    "CVE-2025-13372"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.27"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.15"
+            },
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "fixed": "5.2.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13372"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2025/dec/02/security-releases/"
+    }
+  ],
+  "published": "2025-12-13T11:36:31.883Z",
+  "modified": "2025-12-13T12:05:53.698Z"
+}
