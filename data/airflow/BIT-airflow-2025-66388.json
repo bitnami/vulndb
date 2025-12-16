@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2025-66388",
+  "summary": "Apache Airflow: Secrets in rendered templates not redacted properly and exposed in the UI",
+  "details": "A vulnerability in Apache Airflow allowed authenticated UI users to view secret values in rendered templates due to secrets not being properly redacted, potentially exposing secrets to users without the appropriate authorization.\n\nUsers are recommended to upgrade to version 3.1.4, which fixes this issue.",
+  "aliases": [
+    "CVE-2025-66388"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2025/12/12/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/58772"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/mv9hzsx8grjf7gdlkxwppnpbtogtls2g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66388"
+    }
+  ],
+  "published": "2025-12-16T14:37:51.384Z",
+  "modified": "2025-12-16T15:14:22.118Z"
+}
