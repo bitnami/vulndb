@@ -154,6 +154,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 - LimeSurvey
 - Laravel
+- Rails
 
 ### 2025-11
 
