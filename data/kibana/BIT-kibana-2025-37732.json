@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2025-37732",
+  "summary": "Kibana Cross-site Scripting via the Integration Package Upload Functionality",
+  "details": "Improper neutralization of input during web page generation ('Cross-site Scripting') (CWE-79) allows an authenticated user to render HTML tags within a user’s browser via the integration package upload functionality. This issue is related to ESA-2025-17 (CVE-2025-25018) bypassing that fix to achieve HTML injection.",
+  "aliases": [
+    "CVE-2025-37732"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.19.8"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.8"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-8-9-1-8-and-9-2-2-security-update-esa-2025-28/384064"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-37732"
+    }
+  ],
+  "published": "2025-12-18T11:40:39.003Z",
+  "modified": "2025-12-18T12:08:20.703Z"
+}

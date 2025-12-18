@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2025-68150",
+  "summary": "Parse Server has Server-Side Request Forgery (SSRF) in Instagram OAuth Adapter",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.2 and 9.1.1-alpha.1, the Instagram authentication adapter allows clients to specify a custom API URL via the `apiURL` parameter in `authData`. This enables SSRF attacks and possibly authentication bypass if malicious endpoints return fake responses to validate unauthorized users. This is fixed in versions 8.6.2 and 9.1.1-alpha.1 by hardcoding the Instagram Graph API URL `https://graph.instagram.com` and ignoring client-provided `apiURL` values. No known workarounds are available.",
+  "aliases": [
+    "CVE-2025-68150"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.2"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.1-alpha.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/9988"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/9989"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-3f5f-xgrj-97pf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68150"
+    }
+  ],
+  "published": "2025-12-18T11:46:18.950Z",
+  "modified": "2025-12-18T12:08:20.703Z"
+}

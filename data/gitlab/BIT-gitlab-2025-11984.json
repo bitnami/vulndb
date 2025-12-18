@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-11984",
+  "summary": "Authentication Bypass Using an Alternate Path or Channel in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.1 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to bypass WebAuthn two-factor authentication by manipulating the session state under certain conditions.",
+  "aliases": [
+    "CVE-2025-11984"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "18.4.6"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.4"
+            },
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/577847"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3322714"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11984"
+    }
+  ],
+  "published": "2025-12-18T12:04:14.698Z",
+  "modified": "2025-12-18T12:08:20.703Z"
+}
