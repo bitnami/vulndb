@@ -154,6 +154,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 - LimeSurvey
 - Laravel
+- Dokuwiki
+- GitLab EE
+- MediaWiki
+- Opencart
 
 ### 2025-11
 
