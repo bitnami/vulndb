@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-12734",
+  "summary": "Improper Encoding or Escaping of Output in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.6 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to, under certain conditions, render content in dialogs to other users by injecting malicious HTML content into merge request titles.",
+  "aliases": [
+    "CVE-2025-12734"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "18.4.6"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.4"
+            },
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/579573"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3379381"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12734"
+    }
+  ],
+  "published": "2025-12-18T12:04:35.112Z",
+  "modified": "2025-12-18T12:08:20.703Z"
+}
