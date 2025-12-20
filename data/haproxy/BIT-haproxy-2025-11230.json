@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-haproxy-2025-11230",
+  "summary": "Denial of service vulnerability in HAProxy mjson library",
+  "details": "Inefficient algorithm complexity in mjson in HAProxy allows remote attackers to cause a denial of service via specially crafted JSON requests.",
+  "aliases": [
+    "CVE-2025-11230"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.30"
+            },
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.23"
+            },
+            {
+              "introduced": "2.8.0"
+            },
+            {
+              "fixed": "2.8.16"
+            },
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.12"
+            },
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.9"
+            },
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "fixed": "3.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11230"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.com/blog/october-2025-cve-2025-11230-haproxy-mjson-library-denial-of-service-vulnerability"
+    }
+  ],
+  "published": "2025-12-20T11:38:08.173Z",
+  "modified": "2025-12-20T12:06:39.262Z"
+}

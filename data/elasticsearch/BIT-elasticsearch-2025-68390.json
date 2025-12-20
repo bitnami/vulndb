@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2025-68390",
+  "summary": "Elasticsearch Allocation of Resources Without Limits or Throttling",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Elasticsearch can allow an authenticated user with snapshot restore privileges to cause Excessive Allocation (CAPEC-130) of memory and a denial of service (DoS) via crafted HTTP request.",
+  "aliases": [
+    "CVE-2025-68390"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.19.8"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.8"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-8-9-1-8-and-9-2-2-security-update-esa-2025-37/384185"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68390"
+    }
+  ],
+  "published": "2025-12-20T11:36:36.080Z",
+  "modified": "2025-12-20T12:06:39.262Z"
+}

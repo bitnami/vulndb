@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2025-68387",
+  "summary": "Kibana Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+  "details": "Improper neutralization of input during web page generation ('Cross-site Scripting') (CWE-79) allows an unauthenticated user to embed a malicious script in content that will be served to web browsers causing cross-site scripting (XSS) (CAPEC-63) via a vulnerability a function handler in the Vega AST evaluator.",
+  "aliases": [
+    "CVE-2025-68387"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.19.9"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.9"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-9-9-1-9-and-9-2-3-security-update-esa-2025-35/384183"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68387"
+    }
+  ],
+  "published": "2025-12-20T11:36:38.841Z",
+  "modified": "2025-12-20T12:06:39.262Z"
+}
