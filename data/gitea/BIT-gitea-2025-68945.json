@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2025-68945",
+  "details": "In Gitea before 1.21.2, an anonymous user can visit a private user's project.",
+  "aliases": [
+    "CVE-2025-68945"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.21.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.gitea.com/release-of-1.21.2/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/28423"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v1.21.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68945"
+    }
+  ],
+  "published": "2026-01-01T11:37:48.522Z",
+  "modified": "2026-01-01T12:06:33.381Z"
+}
