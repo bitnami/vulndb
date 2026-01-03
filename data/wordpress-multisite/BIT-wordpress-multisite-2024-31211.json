@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
     ]
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2024-04-06T18:33:03.968Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2026-01-03T12:07:32.193Z"
 }

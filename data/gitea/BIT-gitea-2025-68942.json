@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2025-68942",
+  "details": "Gitea before 1.22.2 allows XSS because the search input box (for creating tags and branches) is v-html instead of v-text.",
+  "aliases": [
+    "CVE-2025-68942"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.22.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://blog.gitea.com/release-of-1.22.2/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/pull/31966"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v1.22.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68942"
+    }
+  ],
+  "published": "2026-01-03T11:37:48.385Z",
+  "modified": "2026-01-03T12:07:32.193Z"
+}
