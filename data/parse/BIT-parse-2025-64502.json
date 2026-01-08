@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2025-64502",
   "summary": "Parse Server allows public `explain` queries which may expose sensitive database performance information and schema details",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. The MongoDB `explain()` method provides detailed information about query execution plans, including index usage, collection scanning behavior, and performance metrics. Prior to version 8.5.0-alpha.5, Parse Server permits any client to execute explain queries without requiring the master key. This exposes database schema structure and field names, index configurations and query optimization details, query execution statistics and performance metrics, and potential attack vectors for database performance exploitation. In version 8.5.0-alpha.5, a new `databaseOptions.allowPublicExplain` configuration option has been introduced that allows to restrict `explain` queries to the master key. The option defaults to `true` for now to avoid a breaking change in production systems that depends on public `explain` availability. In addition, a security warning is logged when the option is not explicitly set, or set to `true`. In a future major release of Parse Server, the default will change to `false`. As a workaround, implement middleware to block explain queries from non-master-key requests, or monitor and alert on explain query usage in production environments.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. The MongoDB `explain()` method provides detailed information about query execution plans, including index usage, collection scanning behavior, and performance metrics. Prior to version 8.5.0, Parse Server permits any client to execute explain queries without requiring the master key. This exposes database schema structure and field names, index configurations and query optimization details, query execution statistics and performance metrics, and potential attack vectors for database performance exploitation. In version 8.5.0, a new `databaseOptions.allowPublicExplain` configuration option has been introduced that allows to restrict `explain` queries to the master key. The option defaults to `true` for now to avoid a breaking change in production systems that depends on public `explain` availability. In addition, a security warning is logged when the option is not explicitly set, or set to `true`. In a future major release of Parse Server, the default will change to `false`. As a workaround, implement middleware to block explain queries from non-master-key requests, or monitor and alert on explain query usage in production environments.",
   "aliases": [
     "CVE-2025-64502"
   ],
@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "8.5.0-alpha.5"
+              "fixed": "8.5.0"
             }
           ]
         }
@@ -59,5 +59,5 @@
     }
   ],
   "published": "2025-11-12T11:45:03.650Z",
-  "modified": "2025-11-12T12:05:53.614Z"
+  "modified": "2026-01-08T15:10:02.795Z"
 }

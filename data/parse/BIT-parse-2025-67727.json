@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2025-67727",
   "summary": "Parse Server GitHub CI workflow vulnerable to RCE through Improper Privilege Management",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that runs Node.js. In versions prior to 8.6.0-alpha.2, a GitHub CI workflow is triggered in a way that grants the GitHub Actions workflow elevated permissions, giving it access to GitHub secrets and write permissions which are defined in the workflow. Code from a fork or lifecycle scripts is potentially included. Only the repository's CI/CD infrastructure is affected, including any public GitHub forks with GitHub Actions enabled. This issue is fixed version 8.6.0-alpha.2 and commits 6b9f896 and e3d27fe.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that runs Node.js. In versions prior to 8.6.0, a GitHub CI workflow is triggered in a way that grants the GitHub Actions workflow elevated permissions, giving it access to GitHub secrets and write permissions which are defined in the workflow. Code from a fork or lifecycle scripts is potentially included. Only the repository's CI/CD infrastructure is affected, including any public GitHub forks with GitHub Actions enabled. This issue is fixed version 8.6.0 and commits 6b9f896 and e3d27fe.",
   "aliases": [
     "CVE-2025-67727"
   ],
@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "8.6.0-alpha.2"
+              "fixed": "8.6.0"
             }
           ]
         }
@@ -59,5 +59,5 @@
     }
   ],
   "published": "2025-12-18T11:46:15.637Z",
-  "modified": "2025-12-18T12:08:20.703Z"
+  "modified": "2026-01-08T15:10:02.795Z"
 }

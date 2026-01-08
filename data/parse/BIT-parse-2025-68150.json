@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2025-68150",
   "summary": "Parse Server has Server-Side Request Forgery (SSRF) in Instagram OAuth Adapter",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.2 and 9.1.1-alpha.1, the Instagram authentication adapter allows clients to specify a custom API URL via the `apiURL` parameter in `authData`. This enables SSRF attacks and possibly authentication bypass if malicious endpoints return fake responses to validate unauthorized users. This is fixed in versions 8.6.2 and 9.1.1-alpha.1 by hardcoding the Instagram Graph API URL `https://graph.instagram.com` and ignoring client-provided `apiURL` values. No known workarounds are available.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.2 and 9.1.1, the Instagram authentication adapter allows clients to specify a custom API URL via the `apiURL` parameter in `authData`. This enables SSRF attacks and possibly authentication bypass if malicious endpoints return fake responses to validate unauthorized users. This is fixed in versions 8.6.2 and 9.1.1 by hardcoding the Instagram Graph API URL `https://graph.instagram.com` and ignoring client-provided `apiURL` values. No known workarounds are available.",
   "aliases": [
     "CVE-2025-68150"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2025-12-18T11:46:18.950Z",
-  "modified": "2026-01-08T12:59:13.827Z"
+  "modified": "2026-01-08T15:10:02.795Z"
 }
