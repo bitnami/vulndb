@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2025-68115",
   "summary": "Parse Server vulnerable to Cross-Site Scripting (XSS) via Unescaped Mustache Template Variables",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In versions prior to 8.6.1 and 9.1.0-alpha.3, a Reflected Cross-Site Scripting (XSS) vulnerability exists in Parse Server's password reset and email verification HTML pages. The patch, available in versions 8.6.1 and 9.1.0-alpha.3, escapes user controlled values that are inserted into the HTML pages. No known workarounds are available.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. In versions prior to 8.6.1 and 9.1.0, a Reflected Cross-Site Scripting (XSS) vulnerability exists in Parse Server's password reset and email verification HTML pages. The patch, available in versions 8.6.1 and 9.1.0, escapes user controlled values that are inserted into the HTML pages. No known workarounds are available.",
   "aliases": [
     "CVE-2025-68115"
   ],
@@ -33,7 +33,7 @@
               "introduced": "9.0.0"
             },
             {
-              "fixed": "9.1.0-alpha.3"
+              "fixed": "9.1.0"
             }
           ]
         }
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2025-12-18T11:46:17.211Z",
-  "modified": "2025-12-18T12:08:20.703Z"
+  "modified": "2026-01-08T18:07:34.629Z"
 }
