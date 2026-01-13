@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-13761",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.6 before 18.6.3, and 18.7 before 18.7.1 that could have allowed an unauthenticated user to execute arbitrary code in the context of an  authenticated user's browser by convincing the legitimate user to visit a specially crafted webpage.",
+  "aliases": [
+    "CVE-2025-13761"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.3"
+            },
+            {
+              "introduced": "18.7.0"
+            },
+            {
+              "fixed": "18.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/01/07/patch-release-gitlab-18-7-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/582237"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3441368"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13761"
+    }
+  ],
+  "published": "2026-01-13T09:07:19.725Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}

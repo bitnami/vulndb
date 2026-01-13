@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-13781",
+  "summary": "Missing Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.5 before 18.5.5, 18.6 before 18.6.3, and 18.7 before 18.7.1 that could have allowed an authenticated user to modify instance-wide AI feature provider settings by exploiting missing authorization checks in GraphQL mutations.",
+  "aliases": [
+    "CVE-2025-13781"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.5"
+            },
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.3"
+            },
+            {
+              "introduced": "18.7.0"
+            },
+            {
+              "fixed": "18.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/01/07/patch-release-gitlab-18-7-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/578756"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3400940"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13781"
+    }
+  ],
+  "published": "2026-01-13T09:07:23.273Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}

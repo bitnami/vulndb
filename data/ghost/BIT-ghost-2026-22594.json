@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-22594",
+  "summary": "Ghost has Staff 2FA bypass",
+  "details": "Ghost is a Node.js content management system. In versions 5.105.0 through 5.130.5 and 6.0.0 through 6.10.3, a vulnerability in Ghost's 2FA mechanism allows staff users to skip email 2FA. This issue has been patched in versions 5.130.6 and 6.11.0.",
+  "aliases": [
+    "CVE-2026-22594"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.105.0"
+            },
+            {
+              "fixed": "5.130.6"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/b59f707f670e6f175b669977724ccf16c718430b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/fc7bc2fb0888513498154ec5cb4b21eccb88de07"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-5fp7-g646-ccf4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22594"
+    }
+  ],
+  "published": "2026-01-13T08:40:22.071Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}

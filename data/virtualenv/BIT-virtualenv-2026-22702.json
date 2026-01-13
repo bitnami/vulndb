@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-virtualenv-2026-22702",
+  "summary": "virtualenv Has TOCTOU Vulnerabilities in Directory Creation",
+  "details": "virtualenv is a tool for creating isolated virtual python environments. Prior to version 20.36.1, TOCTOU (Time-of-Check-Time-of-Use) vulnerabilities in virtualenv allow local attackers to perform symlink-based attacks on directory creation operations. An attacker with local access can exploit a race condition between directory existence checks and creation to redirect virtualenv's app_data and lock file operations to attacker-controlled locations. This issue has been patched in version 20.36.1.",
+  "aliases": [
+    "CVE-2026-22702"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "virtualenv",
+        "purl": "pkg:bitnami/virtualenv"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "20.36.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:virtualenv:virtualenv:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/commit/dec4cec5d16edaf83a00a658f32d1e032661cebc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/pull/3013"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-597g-3phw-6986"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22702"
+    }
+  ],
+  "published": "2026-01-13T08:53:06.703Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}

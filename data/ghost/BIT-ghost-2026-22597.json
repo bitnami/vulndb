@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-22597",
+  "summary": "Ghost has SSRF via External Media Inliner",
+  "details": "Ghost is a Node.js content management system. In versions 5.38.0 through 5.130.5 and 6.0.0 through 6.10.3, a vulnerability in Ghost’s media inliner mechanism allows staff users in possession of a valid authentication token for the Ghost Admin API to exfiltrate data from internal systems via SSRF. This issue has been patched in versions 5.130.6 and 6.11.0.",
+  "aliases": [
+    "CVE-2026-22597"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.38.0"
+            },
+            {
+              "fixed": "5.130.6"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/15d49131ff4aac3aca8642501c793f01f2bfcbb9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/93add549ccf079d8e28bdb724fbb71a76942ff51"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-vmc4-9828-r48r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22597"
+    }
+  ],
+  "published": "2026-01-13T08:40:27.429Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}
