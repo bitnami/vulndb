@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-22596",
+  "summary": "Ghost has SQL Injection in Members Activity Feed",
+  "details": "Ghost is a Node.js content management system. In versions 5.90.0 through 5.130.5 and 6.0.0 through 6.10.3, a vulnerability in Ghost's /ghost/api/admin/members/events endpoint allows users with authentication credentials for the Admin API to execute arbitrary SQL. This issue has been patched in versions 5.130.6 and 6.11.0.",
+  "aliases": [
+    "CVE-2026-22596"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.90.0"
+            },
+            {
+              "fixed": "5.130.6"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/cda236e455a7a30e828b6cba3c430e5796ded955"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/f2165f968bcdaae0e35590b38fa280ab03239391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-gjrp-xgmh-x9qq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22596"
+    }
+  ],
+  "published": "2026-01-13T08:40:25.592Z",
+  "modified": "2026-01-13T09:11:00.781Z"
+}
