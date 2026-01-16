@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-0530",
+  "summary": "Allocation of Resources Without Limits or Throttling in Kibana Leading to Excessive Allocation",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Kibana Fleet can lead to Excessive Allocation (CAPEC-130) via a specially crafted request. This causes the application to perform redundant processing operations that continuously consume system resources until service degradation or complete unavailability occurs.",
+  "aliases": [
+    "CVE-2026-0530"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.19.10"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.10"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-10-9-1-10-9-2-4-security-update-esa-2026-03/384521"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0530"
+    }
+  ],
+  "published": "2026-01-16T08:42:13.351Z",
+  "modified": "2026-01-16T09:10:29.256Z"
+}
