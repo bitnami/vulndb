@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2025-32044",
+  "summary": "Moodle: unauthenticated rest api user data exposure",
+  "details": "A flaw has been identified in Moodle where, on certain sites, unauthenticated users could retrieve sensitive user data—including names, contact information, and hashed passwords—via stack traces returned by specific API calls. Sites with PHP configured with zend.exception_ignore_args = 1 in the php.ini file are not affected by this vulnerability.",
+  "aliases": [
+    "CVE-2025-32044"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-32044"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2356829"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32044"
+    }
+  ],
+  "published": "2026-01-24T17:48:56.890Z",
+  "modified": "2026-01-24T18:08:58.198Z"
+}
