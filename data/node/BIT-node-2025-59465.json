@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-node-2025-59465",
+  "details": "A malformed `HTTP/2 HEADERS` frame with oversized, invalid `HPACK` data can cause Node.js to crash by triggering an unhandled `TLSSocket` error `ECONNRESET`. Instead of safely closing the connection, the process crashes, enabling a remote denial of service. This primarily affects applications that do not attach explicit error handlers to secure sockets, for example:\n```\nserver.on('secureConnection', socket => {\n  socket.on('error', err => {\n    console.log(err)\n  })\n})\n```",
+  "aliases": [
+    "CVE-2025-59465"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "20.20.0"
+            },
+            {
+              "introduced": "21.0.0"
+            },
+            {
+              "fixed": "22.22.0"
+            },
+            {
+              "introduced": "23.0.0"
+            },
+            {
+              "fixed": "24.13.0"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "25.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/december-2025-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59465"
+    }
+  ],
+  "published": "2026-01-24T11:47:50.165Z",
+  "modified": "2026-01-24T12:09:19.978Z"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-harbor-2022-31666",
+  "summary": "Harbor fails to validate user permissions while Viewing, updating and deleting Webhook policies",
+  "details": "Harbor fails to validate user permissions while deleting Webhook policies, allowing malicious users to view, update and delete Webhook policies of other users.  The attacker could modify Webhook policies configured in other projects.",
+  "aliases": [
+    "CVE-2022-31666"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "harbor",
+        "purl": "pkg:bitnami/harbor"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.4.3"
+            },
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "2.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-8hwq-5f22-jfr3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31666"
+    }
+  ],
+  "published": "2026-01-24T11:39:55.038Z",
+  "modified": "2026-01-24T12:09:19.978Z"
+}
