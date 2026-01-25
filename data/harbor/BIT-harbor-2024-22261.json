@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-harbor-2024-22261",
+  "summary": "SQL Injection in Harbor scan log API",
+  "details": "SQL-Injection in Harbor allows priviledge users to leak the task IDs",
+  "aliases": [
+    "CVE-2024-22261"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "harbor",
+        "purl": "pkg:bitnami/harbor"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.8.1"
+            },
+            {
+              "fixed": "2.8.6"
+            },
+            {
+              "introduced": "2.9.0"
+            },
+            {
+              "fixed": "2.9.4"
+            },
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/security/advisories/GHSA-vw63-824v-qf2j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22261"
+    }
+  ],
+  "published": "2026-01-25T14:40:04.155Z",
+  "modified": "2026-01-25T15:09:15.414Z"
+}
