@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2025-3640",
+  "summary": "Moodle: idor in web service allows users enrolled in a course to access some details of other users",
+  "details": "A flaw was found in Moodle. Insufficient capability checks made it possible for a user enrolled in a course to access some details, such as the full name and profile image URL, of other users they did not have permission to access.",
+  "aliases": [
+    "CVE-2025-3640"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.18"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.12"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.8"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-3640"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2359734"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/mod/forum/discuss.php?d=467601"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3640"
+    }
+  ],
+  "published": "2026-01-26T08:49:10.151Z",
+  "modified": "2026-01-26T09:07:56.392Z"
+}
