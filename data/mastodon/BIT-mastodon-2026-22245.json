@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-22245",
+  "summary": "Mastodon has SSRF Protection bypass",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. By nature, Mastodon performs a lot of outbound requests to user-provided domains. Mastodon, however, has some protection mechanism to disallow requests to local IP addresses (unless specified in `ALLOWED_PRIVATE_ADDRESSES`) to avoid the \"confused deputy\" problem. The list of disallowed IP address ranges was lacking some IP address ranges that can be used to reach local IP addresses. An attacker can use an IP address in the affected ranges to make Mastodon perform HTTP requests against loopback or local network hosts, potentially allowing access to otherwise private resources and services. This is fixed in Mastodon v4.5.4, v4.4.11, v4.3.17 and v4.2.29.",
+  "aliases": [
+    "CVE-2026-22245"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.2.29"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.17"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.11"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/0f4e8a6240b5af1f2c3f34d2793d8610c6ef2aca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/17022907866710a72a1b1fc0a5ce9538bad1b4c3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/commit/71ae4cf2cf5138ccdda64b1b1d665849b688686d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-xfrj-c749-jxxq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22245"
+    }
+  ],
+  "published": "2026-01-13T11:27:28.319Z",
+  "modified": "2026-01-13T12:01:00.363Z"
+}

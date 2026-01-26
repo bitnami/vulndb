@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-0543",
+  "summary": "Improper Input Validation in Kibana Email Connector Leading to Excessive Allocation",
+  "details": "Improper Input Validation (CWE-20) in Kibana's Email Connector can allow an attacker to cause an Excessive Allocation (CAPEC-130) through a specially crafted email address parameter. This requires an attacker to have authenticated access with view-level privileges sufficient to execute connector actions. The application attempts to process specially crafted email format, resulting in complete service unavailability for all users until manual restart is performed.",
+  "aliases": [
+    "CVE-2026-0543"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.19.10"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.10"
+            },
+            {
+              "introduced": "9.2.0"
+            },
+            {
+              "fixed": "9.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-10-9-1-10-9-2-4-security-update-esa-2026-08/384523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0543"
+    }
+  ],
+  "published": "2026-01-16T08:42:18.049Z",
+  "modified": "2026-01-16T09:10:29.256Z"
+}

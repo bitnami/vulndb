@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-kyverno-2025-29778",
   "summary": "Kyverno ignores subjectRegExp and IssuerRegExp",
-  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to version 1.14.0-alpha.1, Kyverno ignores subjectRegExp and IssuerRegExp while verifying artifact's sign with keyless mode. It allows the attacker to deploy kubernetes resources with the artifacts that were signed by unexpected certificate. Deploying these unauthorized kubernetes resources can lead to full compromise of kubernetes cluster. Version 1.14.0-alpha.1 contains a patch for the issue.",
+  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to version 1.14.0, Kyverno ignores subjectRegExp and IssuerRegExp while verifying artifact's sign with keyless mode. It allows the attacker to deploy kubernetes resources with the artifacts that were signed by unexpected certificate. Deploying these unauthorized kubernetes resources can lead to full compromise of kubernetes cluster. Version 1.14.0 contains a patch for the issue.",
   "aliases": [
     "CVE-2025-29778"
   ],
@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "fixed": "1.14.0-alpha.1"
+              "fixed": "1.14.0"
             }
           ]
         }
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-09-12T11:43:02.825Z",
-  "modified": "2025-09-12T12:08:23.743Z"
+  "modified": "2026-01-08T18:07:34.629Z"
 }

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pebble-2024-3250",
+  "details": "It was discovered that Canonical's Pebble service manager read-file API and the associated pebble pull command, before v1.10.2, allowed unprivileged local users to read files with root-equivalent permissions when Pebble was running as root. Fixes are also available as backports to v1.1.1, v1.4.2, and v1.7.4.",
+  "aliases": [
+    "CVE-2024-3250"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pebble",
+        "purl": "pkg:bitnami/pebble"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.4.1"
+            },
+            {
+              "introduced": "1.4.2"
+            },
+            {
+              "fixed": "1.7.3"
+            },
+            {
+              "introduced": "1.7.4"
+            },
+            {
+              "fixed": "1.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:canonical:pebble:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/canonical/pebble/security/advisories/GHSA-4685-2x5r-65pj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3250"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-3250"
+    }
+  ],
+  "published": "2026-01-02T17:44:20.392Z",
+  "modified": "2026-01-02T18:06:33.396Z"
+}

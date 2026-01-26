@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-13978",
+  "summary": "Generation of Error Message Containing Sensitive Information in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.5 before 18.4.6, 18.5 before 18.5.4, and 18.6 before 18.6.2 that could have allowed an authenticated user to discover the names of private projects they do not have access through API requests.",
+  "aliases": [
+    "CVE-2025-13978"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.5.0"
+            },
+            {
+              "fixed": "18.4.6"
+            },
+            {
+              "introduced": "18.5.0"
+            },
+            {
+              "fixed": "18.5.4"
+            },
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2025/12/10/patch-release-gitlab-18-6-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/566960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/566960"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13978"
+    }
+  ],
+  "published": "2025-12-18T12:04:44.454Z",
+  "modified": "2025-12-18T12:08:20.703Z"
+}

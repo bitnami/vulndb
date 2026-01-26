@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-appsmith-2026-22794",
+  "summary": "Account Takeover Vulnerability in Appsmith",
+  "details": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.93, the server uses the Origin value from the request headers as the email link baseUrl without validation. If an attacker controls the Origin, password reset / email verification links in emails can be generated pointing to the attacker’s domain, causing authentication tokens to be exposed and potentially leading to account takeover. This vulnerability is fixed in 1.93.",
+  "aliases": [
+    "CVE-2026-22794"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "appsmith",
+        "purl": "pkg:bitnami/appsmith"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.93.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/commit/6f9ee6226bac13fb4b836940b557913fff78b633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-7hf5-mc28-xmcv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22794"
+    }
+  ],
+  "published": "2026-01-14T08:37:00.092Z",
+  "modified": "2026-01-22T09:11:07.452Z"
+}
