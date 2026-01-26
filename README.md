@@ -153,6 +153,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 ### 2026-01
 
 - elasticsearch-plugin-repository-s3
+- bndiagnostic
 
 ### 2025-12
 
