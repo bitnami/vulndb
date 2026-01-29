@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-appsmith-2026-24042",
+  "summary": "Appsmith public apps can execute unpublished actions (viewMode confusion)",
+  "details": "Appsmith is a platform to build admin panels, internal tools, and dashboards. In versions 1.94 and below, publicly accessible apps allow unauthenticated users to execute unpublished (edit-mode) actions by sending viewMode=false (or omitting it) to POST /api/v1/actions/execute. This bypasses the expected publish boundary where public viewers should only execute published actions, not edit-mode versions. An attack can result in sensitive data exposure, execution of edit‑mode queries and APIs, development data access, and the ability to trigger side effect behavior. This issue does not have a released fix at the time of publication.",
+  "aliases": [
+    "CVE-2026-24042"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "appsmith",
+        "purl": "pkg:bitnami/appsmith"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.95.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-j9qq-4fj9-9883"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24042"
+    }
+  ],
+  "published": "2026-01-29T08:36:35.250Z",
+  "modified": "2026-01-29T09:11:54.406Z"
+}
