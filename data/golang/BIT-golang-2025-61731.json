@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2025-61731",
+  "summary": "Arbitrary file write using cgo pkg-config directive in cmd/go",
+  "details": "Building a malicious file with cmd/go can cause can cause a write to an attacker-controlled file with partial control of the file content. The \"#cgo pkg-config:\" directive in a Go source file provides command-line arguments to provide to the Go pkg-config command. An attacker can provide a \"--log-file\" argument to this directive, causing pkg-config to write to an attacker-controlled location.",
+  "aliases": [
+    "CVE-2025-61731"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.24.12"
+            },
+            {
+              "introduced": "1.25.0"
+            },
+            {
+              "fixed": "1.25.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/736711"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/77100"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61731"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4339"
+    }
+  ],
+  "published": "2026-01-31T08:43:38.643Z",
+  "modified": "2026-01-31T09:09:11.750Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-23743",
+  "summary": "Discourse allows permalinks to restricted resources to leak resource slugs to unauthorized users",
+  "details": "Discourse is an open source discussion platform. In versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0, permalinks pointing to access-restricted resources (private topics, categories, posts, or hidden tags) were redirecting users to URLs containing the resource slug, even when the user didn't have access to view the resource. This leaked potentially sensitive information (e.g., private topic titles) via the redirect Location header and the 404 page's search box. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-23743"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2026.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-v5jw-rxc6-4cvv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23743"
+    }
+  ],
+  "published": "2026-01-31T08:42:04.050Z",
+  "modified": "2026-01-31T09:09:11.750Z"
+}

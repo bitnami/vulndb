@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2025-61730",
+  "summary": "Handshake messages may be processed at the incorrect encryption level in crypto/tls",
+  "details": "During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.",
+  "aliases": [
+    "CVE-2025-61730"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.24.12"
+            },
+            {
+              "introduced": "1.25.0"
+            },
+            {
+              "fixed": "1.25.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/724120"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/76443"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61730"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4340"
+    }
+  ],
+  "published": "2026-01-31T08:43:36.684Z",
+  "modified": "2026-01-31T09:09:11.750Z"
+}
