@@ -15,8 +15,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V4",
-          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         }
       ],
       "ranges": [
@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "3.6.0"
+              "introduced": "4.4.0"
             },
             {
               "fixed": "4.4.30"
@@ -67,8 +67,7 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*",
-      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
@@ -87,22 +86,6 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7259"
-    },
-    {
-      "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14847"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.smartkeyss.com/post/mongobleed-pre-auth-memory-disclosure-via-op_compressed-in-mongodb-cve-2025-14847"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.vicarius.io/vsociety/posts/cve-2025-14847-detection-script-heap-memory-exposure-in-mongodb-server"
-    },
-    {
-      "type": "WEB",
-      "url": "https://www.vicarius.io/vsociety/posts/cve-2025-14847-mitigation-script-heap-memory-exposure-in-mongodb-server"
     }
   ],
   "published": "2025-12-19T11:15:49.277Z",
