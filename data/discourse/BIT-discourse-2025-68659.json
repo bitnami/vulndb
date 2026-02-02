@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-68659",
+  "summary": "Discourse has DoS vulnerability in username change endpoint",
+  "details": "Discourse is an open source discussion platform. Versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0 have an application level denial of service vulnerabilityin the username change functionality at try.discourse.org. The vulnerability allows attackers to cause noticeable server delays and resource exhaustion by sending large JSON payloads to the username preference endpoint PUT /u//preferences/username, resulting in degraded performance for other users and endpoints. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. No known workarounds are available.",
+  "aliases": [
+    "CVE-2025-68659"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2025.12.1"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-rmp6-c9rq-6q7p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68659"
+    }
+  ],
+  "published": "2026-02-02T08:42:14.606Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-67723",
+  "summary": "Discourse vulnerable to stored Cross-site Scripting via Katex in discourse-math plugin",
+  "details": "Discourse is an open source discussion platform. Versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0 have a content-security-policy-mitigated cross-site scriptinv vulnerability on the Discourse Math plugin when using its KaTeX variant. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. As a workaround, the Discourse Math plugin can be disabled, or the Mathjax provider can be used instead of KaTeX.",
+  "aliases": [
+    "CVE-2025-67723"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2025.12.1"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-955h-m28g-5379"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67723"
+    }
+  ],
+  "published": "2026-02-02T08:42:10.509Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}
