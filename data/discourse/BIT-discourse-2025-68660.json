@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-68660",
+  "summary": "Discourse AI Discover's continue conversation allows threat actor to impersonate user",
+  "details": "Discourse is an open source discussion platform. In versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0, an endpoint lets any authenticated user bypass the ai_discover_persona access controls and gain ongoing DM access to personas that may be wired to staff-only categories, RAG document sets, or automated tooling, enabling unauthorized data disclosure. Because the controller also accepts arbitrary user_id, an attacker can impersonate other accounts to trigger unwanted AI conversations on their behalf, generating confusing or abusive PM traffic. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. No known workarounds are available.",
+  "aliases": [
+    "CVE-2025-68660"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2025.12.1"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-mrvm-rprq-jqqh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68660"
+    }
+  ],
+  "published": "2026-02-02T08:42:16.289Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}

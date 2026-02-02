@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-68934",
+  "summary": "Discourse Has Denial of Service (DoS) Vulnerability in Drafts Creation Endpoint",
+  "details": "Discourse is an open source discussion platform. In versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0, authenticated users can submit crafted payloads to /drafts.json that cause O(n^2) processing in Base62.decode, tying up workers for 35-60 seconds per request. This affects all users as the shared worker pool becomes exhausted. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. Lowering the max_draft_length site setting reduces attack surface but does not fully mitigate the issue, as payloads under the limit can still trigger the slow code path.",
+  "aliases": [
+    "CVE-2025-68934"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-vwjh-vrx9-9849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68934"
+    }
+  ],
+  "published": "2026-02-02T08:42:23.259Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-24742",
+  "summary": "Discourse staff action logs expose sensitive information to moderators",
+  "details": "Discourse is an open source discussion platform. In versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0, non-admin moderators can view sensitive information in staff action logs that should be restricted to administrators only. The exposed information includes webhook payload URLs and secrets, API key details, site setting changes, private message content, restricted category names and structures, and private chat channel titles. This allows moderators to bypass intended access controls and extract confidential data by monitoring the staff action logs. With leaked webhook secrets, an attacker could potentially spoof webhook events to integrated services. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. As a workaround, site administrators should review and limit moderator appointments to fully trusted users. There is no configuration-based workaround to prevent this access.",
+  "aliases": [
+    "CVE-2026-24742"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2025.12.1"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hwjv-9gqj-m7h6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24742"
+    }
+  ],
+  "published": "2026-02-02T08:42:31.943Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}
