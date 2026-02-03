@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-23963",
+  "summary": "Mastodon missing length limits on list names, filter names, and filter keywords",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to versions 4.5.5, 4.4.12, and 4.3.18, the server does not enforce a maximum length for the names of lists or filters, or for filter keywords, allowing any user to set an arbitrarily long string as the name or keyword. Any local user can abuse the list or filter fields to cause disproportionate storage and computing resource usage. They can additionally cause their own web interface to be unusable, although they must intentionally do this to themselves or unknowingly approve a malicious API client. Mastodon versions v4.5.5, v4.4.12, v4.3.18 are patched.",
+  "aliases": [
+    "CVE-2026-23963"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.3.18"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.12"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.3.18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.4.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.5.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-6x3w-9g92-gvf3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23963"
+    }
+  ],
+  "published": "2026-02-03T08:44:38.949Z",
+  "modified": "2026-02-03T09:12:55.720Z"
+}

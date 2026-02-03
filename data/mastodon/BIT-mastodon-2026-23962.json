@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-23962",
+  "summary": "Mastodon vulnerable to Denial of Service from a single post (client/server)",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. Mastodon versions before v4.3.18, v4.4.12, and v4.5.5 do not have a limit on the maximum number of poll options for remote posts, allowing attackers to create polls with a very large amount of options, greatly increasing resource consumption. Depending on the number of poll options, an attacker can cause disproportionate resource usage in both Mastodon servers and clients, potentially causing Denial of Service either server-side or client-side. Mastodon versions v4.5.5, v4.4.12, v4.3.18 are patched.",
+  "aliases": [
+    "CVE-2026-23962"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.3.18"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.12"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.3.18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.4.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.5.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-gg8q-rcg7-p79g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23962"
+    }
+  ],
+  "published": "2026-02-03T08:44:37.076Z",
+  "modified": "2026-02-03T09:12:55.720Z"
+}
