@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-23961",
+  "summary": "Mastodon may allow a remote suspension bypass",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. Mastodon allows server administrators to suspend remote users to prevent interactions. However, some logic errors allow already-known posts from such suspended users to appear in timelines if boosted. Furthermore, under certain circumstances, previously-unknown posts from suspended users can be processed. This issue allows old posts from suspended users to occasionally end up on timelines on all Mastodon versions. Additionally, on Mastodon versions from v4.5.0 to v4.5.4, v4.4.5 to v4.4.11, v4.3.13 to v4.3.17, and v4.2.26 to v4.2.29, remote suspended users can partially bypass the suspension to get new posts in. Mastodon versions v4.5.5, v4.4.12, v4.3.18 are patched.",
+  "aliases": [
+    "CVE-2026-23961"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.3.18"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.12"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.3.18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.4.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/releases/tag/v4.5.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-5h2f-wg8j-xqwp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23961"
+    }
+  ],
+  "published": "2026-02-03T08:44:35.033Z",
+  "modified": "2026-02-03T09:12:55.720Z"
+}
