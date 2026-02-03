@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2007-4559",
+  "details": "Directory traversal vulnerability in the (1) extract and (2) extractall functions in the tarfile module in Python allows user-assisted remote attackers to overwrite arbitrary files via a .. (dot dot) sequence in filenames in a TAR archive, a related issue to CVE-2001-1267.",
+  "aliases": [
+    "CVE-2007-4559"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.6.16"
+            },
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "3.8.17"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.17"
+            },
+            {
+              "introduced": "3.10.0"
+            },
+            {
+              "fixed": "3.10.12"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://mail.python.org/pipermail/python-dev/2007-August/074290.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://mail.python.org/pipermail/python-dev/2007-August/074292.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://secunia.com/advisories/26623"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.vupen.com/english/advisories/2007/3022"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=263261"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CVBB7NU3YIRRDOKLYVN647WPRR3IAKR6/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FI55PGL47ES3OU2FQPGEHOI2EK3S2OBH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KA4Z44ZAI4SY7THCFBUDNT5EEFO4XQ3A/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CVBB7NU3YIRRDOKLYVN647WPRR3IAKR6/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FI55PGL47ES3OU2FQPGEHOI2EK3S2OBH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KA4Z44ZAI4SY7THCFBUDNT5EEFO4XQ3A/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2007-4559"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202309-06"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/advisories/GHSA-gw9q-c7gh-j9vm"
+    }
+  ],
+  "published": "2026-02-03T16:19:37.994Z",
+  "modified": "2026-02-03T16:19:37.994Z"
+}
