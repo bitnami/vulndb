@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2025-61732",
+  "summary": "Potential code smuggling via doc comments in cmd/cgo",
+  "details": "A discrepancy between how Go and C/C++ comments were parsed allowed for code smuggling into the resulting cgo binary.",
+  "aliases": [
+    "CVE-2025-61732"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.24.13"
+            },
+            {
+              "introduced": "1.25.0-0"
+            },
+            {
+              "fixed": "1.25.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/734220"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/76697"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61732"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4433"
+    }
+  ],
+  "published": "2026-02-10T08:48:31.170Z",
+  "modified": "2026-02-10T09:16:50.296Z"
+}
