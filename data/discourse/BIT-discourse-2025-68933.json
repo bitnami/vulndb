@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2025-68933",
+  "summary": "Discourse non-admin moderators can exfiltrate private content via post ownership transfer",
+  "details": "Discourse is an open source discussion platform. In versions prior to 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0, non-admin moderators with the `moderators_change_post_ownership` setting enabled can change ownership of posts in private messages and restricted categories they cannot access, then export their data to view the content. This is a broken access control vulnerability affecting sites that grant moderators post ownership transfer permissions. This issue is patched in versions 3.5.4, 2025.11.2, 2025.12.1, and 2026.1.0. The patch adds visibility checks for both the topic and posts before allowing ownership transfer. As a workaround, disable the `moderators_change_post_ownership` site setting to prevent non-admin moderators from using the post ownership transfer feature.",
+  "aliases": [
+    "CVE-2025-68933"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.5.4"
+            },
+            {
+              "introduced": "2025.11.0"
+            },
+            {
+              "fixed": "2025.11.2"
+            },
+            {
+              "introduced": "2025.12.0"
+            },
+            {
+              "fixed": "2025.12.1"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hpxv-mw7v-fqg2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68933"
+    }
+  ],
+  "published": "2026-02-02T08:42:21.302Z",
+  "modified": "2026-02-02T09:12:04.887Z"
+}

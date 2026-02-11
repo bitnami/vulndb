@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-cert-manager-2026-25518",
+  "summary": "cert-manager-controller DoS via Specially Crafted DNS Response",
+  "details": "cert-manager adds certificates and certificate issuers as resource types in Kubernetes clusters, and simplifies the process of obtaining, renewing and using those certificates. In versions from 1.18.0 to before 1.18.5 and from 1.19.0 to before 1.19.3, the cert-manager-controller performs DNS lookups during ACME DNS-01 processing (for zone discovery and propagation self-checks). By default, these lookups use standard unencrypted DNS. An attacker who can intercept and modify DNS traffic from the cert-manager-controller pod can insert a crafted entry into cert-manager's DNS cache. Accessing this entry will trigger a panic, resulting in denial‑of‑service (DoS) of the cert-manager controller. The issue can also be exploited if the authoritative DNS server for the domain being validated is controlled by a malicious actor. This issue has been patched in versions 1.18.5 and 1.19.3.",
+  "aliases": [
+    "CVE-2026-25518"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cert-manager",
+        "purl": "pkg:bitnami/cert-manager"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "1.18.5"
+            },
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cert-manager:cert-manager:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/commit/409fc24e539711a07aae45ed45abbe03dfdad2cc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/commit/9a73a0b3853035827edd37ac463e4803ba10327d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/commit/d4faed26ae12115cceb807cdc12507ebc28980e2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/pull/8467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/pull/8468"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/pull/8469"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cert-manager/cert-manager/security/advisories/GHSA-gx3x-vq4p-mhhv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25518"
+    }
+  ],
+  "published": "2026-02-10T08:39:46.944Z",
+  "modified": "2026-02-10T09:16:50.296Z"
+}

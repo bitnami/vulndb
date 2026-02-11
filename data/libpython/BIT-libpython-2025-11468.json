@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2025-11468",
+  "summary": "Folding email comments of unfoldable characters doesn't preserve parenthesis",
+  "details": "When folding a long comment in an email header containing exclusively unfoldable characters, the parenthesis would not be preserved. This could be used for injecting headers into email messages where addresses are user-controlled and not sanitized.",
+  "aliases": [
+    "CVE-2025-11468"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/17d1490aa97bd6b98a42b1a9b324ead84e7fd8a2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/143935"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/143936"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/FELSEOLBI2QR6YLG6Q7VYF7FWSGQTKLI/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11468"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/61614a5e5056e4f61ced65008d4576f3df34acb6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e9970f077240c7c670e8a6fc6662f2b30d3b6ad0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f738386838021c762efea6c9802c82de65e87796"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/a76e4cd62dd68e7cbe86e37e6ed988495a646b66"
+    }
+  ],
+  "published": "2026-01-26T14:42:59.991Z",
+  "modified": "2026-02-03T09:12:55.720Z"
+}
