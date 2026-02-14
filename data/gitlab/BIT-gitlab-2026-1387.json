@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-1387",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 15.6 before 18.6.6, 18.7 before 18.7.4, and 18.8 before 18.8.4 that could have allowed an authenticated user to cause Denial of Service by uploading a malicious file and repeatedly querying it through GraphQl.",
+  "aliases": [
+    "CVE-2026-1387"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "18.6.6"
+            },
+            {
+              "introduced": "18.7.0"
+            },
+            {
+              "fixed": "18.7.4"
+            },
+            {
+              "introduced": "18.8.0"
+            },
+            {
+              "fixed": "18.8.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/02/10/patch-release-gitlab-18-8-4-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/587546"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3515994"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1387"
+    }
+  ],
+  "published": "2026-02-14T12:08:19.784Z",
+  "modified": "2026-02-14T12:09:54.104Z"
+}
