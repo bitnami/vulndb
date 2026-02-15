@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-1282",
+  "summary": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.6 before 18.6.6, 18.7 before 18.7.4, and 18.8 before 18.8.4 that could have allowed an authenticated user to inject malicious content into project labels titles.",
+  "aliases": [
+    "CVE-2026-1282"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.6.0"
+            },
+            {
+              "fixed": "18.6.6"
+            },
+            {
+              "introduced": "18.7.0"
+            },
+            {
+              "fixed": "18.7.4"
+            },
+            {
+              "introduced": "18.8.0"
+            },
+            {
+              "fixed": "18.8.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/02/10/patch-release-gitlab-18-8-4-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/587106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3505596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1282"
+    }
+  ],
+  "published": "2026-02-15T06:07:34.714Z",
+  "modified": "2026-02-15T06:09:09.103Z"
+}
