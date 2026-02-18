@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-21720",
+  "summary": "Unauthenticated DoS: avatar cache leaks goroutines when /avatar/:hash requests time out",
+  "details": "Every uncached /avatar/:hash request spawns a goroutine that refreshes the Gravatar image. If the refresh sits in the 10-slot worker queue longer than three seconds, the handler times out and stops listening for the result, so that goroutine blocks forever trying to send on an unbuffered channel. Sustained traffic with random hashes keeps tripping this timeout, so goroutine count grows linearly, eventually exhausting memory and causing Grafana to crash on some systems.",
+  "aliases": [
+    "CVE-2026-21720"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "11.6.9"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.0.8"
+            },
+            {
+              "introduced": "12.1.0"
+            },
+            {
+              "fixed": "12.1.5"
+            },
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "fixed": "12.2.3"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/CVE-2026-21720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21720"
+    }
+  ],
+  "published": "2026-02-18T17:41:21.379Z",
+  "modified": "2026-02-18T18:09:39.057Z"
+}
