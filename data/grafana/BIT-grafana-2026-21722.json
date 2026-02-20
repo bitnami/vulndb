@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-21722",
+  "summary": "Public Dashboards time range restriction on annotations can be bypassed",
+  "details": "Public dashboards with annotations enabled did not limit their annotation timerange to the locked timerange of the public dashboard. This means one could read the entire history of annotations visible on the specific dashboard, even those outside the locked timerange.\n\nThis did not leak any annotations that would not otherwise be visible on the public dashboard.",
+  "aliases": [
+    "CVE-2026-21722"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "11.6.10"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.1.6"
+            },
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "fixed": "12.2.4"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/CVE-2026-21722"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21722"
+    }
+  ],
+  "published": "2026-02-20T08:41:29.411Z",
+  "modified": "2026-02-20T09:09:49.097Z"
+}
