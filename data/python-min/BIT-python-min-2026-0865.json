@@ -27,7 +27,13 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.15.0"
+              "fixed": "3.13.12"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.3"
             }
           ]
         }
@@ -80,8 +86,12 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/66da7bf6fe7b81e3ecc9c0a25bd47d4616c8d1a6"
     }
   ],
   "published": "2026-01-26T14:50:05.968Z",
-  "modified": "2026-01-26T15:09:56.435Z"
+  "modified": "2026-02-20T15:52:56.451Z"
 }

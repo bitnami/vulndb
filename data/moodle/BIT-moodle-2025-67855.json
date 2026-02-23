@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2025-67855",
+  "summary": "Mooodle: mooodle: information disclosure and script execution via reflected cross-site scripting",
+  "details": "A flaw was found in mooodle. A remote attacker could exploit a reflected Cross-Site Scripting (XSS) vulnerability in the policy tool return URL. This vulnerability arises from insufficient sanitization of URL parameters, allowing attackers to inject malicious scripts through specially crafted links. Successful exploitation could lead to information disclosure or arbitrary client-side script execution within the user's browser.",
+  "aliases": [
+    "CVE-2025-67855"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.1.22"
+            },
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.11"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.8"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.4"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-67855"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2423861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67855"
+    }
+  ],
+  "published": "2026-02-12T08:51:10.563Z",
+  "modified": "2026-02-12T09:10:24.600Z"
+}

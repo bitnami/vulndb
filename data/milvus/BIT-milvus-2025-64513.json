@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-milvus-2025-64513",
+  "summary": "Milvus Proxy has Critical Authentication Bypass Vulnerability",
+  "details": "Milvus is an open-source vector database built for generative AI applications. An unauthenticated attacker can exploit a vulnerability in versions prior to 2.4.24, 2.5.21, and 2.6.5 to bypass all authentication mechanisms in the Milvus Proxy component, gaining full administrative access to the Milvus cluster. This grants the attacker the ability to read, modify, or delete data, and to perform privileged administrative operations such as database or collection management. This issue has been fixed in Milvus 2.4.24, 2.5.21, and 2.6.5. If immediate upgrade is not possible, a temporary mitigation can be applied by removing the sourceID header from all incoming requests at the gateway, API gateway, or load balancer level before they reach the Milvus Proxy. This prevents attackers from exploiting the authentication bypass behavior.",
+  "aliases": [
+    "CVE-2025-64513"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "milvus",
+        "purl": "pkg:bitnami/milvus"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.4.24"
+            },
+            {
+              "introduced": "2.5.0"
+            },
+            {
+              "fixed": "2.5.21"
+            },
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:milvus:milvus:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/milvus-io/milvus/pull/45379"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/milvus-io/milvus/pull/45383"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/milvus-io/milvus/pull/45391"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/milvus-io/milvus/security/advisories/GHSA-mhjq-8c7m-3f7p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64513"
+    }
+  ],
+  "published": "2026-02-20T08:43:34.608Z",
+  "modified": "2026-02-20T09:09:49.097Z"
+}

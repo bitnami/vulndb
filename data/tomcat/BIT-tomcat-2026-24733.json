@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-24733",
+  "summary": "Apache Tomcat: Security constraint bypass with HTTP/0.9",
+  "details": "Improper Input Validation vulnerability in Apache Tomcat.\n\n\nTomcat did not limit HTTP/0.9 requests to the GET method. If a security \nconstraint was configured to allow HEAD requests to a URI but deny GET \nrequests, the user could bypass that constraint on GET requests by \nsending a (specification invalid) HEAD request using HTTP/0.9.\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.14, from 10.1.0-M1 through 10.1.49, from 9.0.0.M1 through 9.0.112.\n\n\nOlder, EOL versions are also affected.\n\nUsers are recommended to upgrade to version 11.0.15 or later, 10.1.50 or later or 9.0.113 or later, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-24733"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.113"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.50"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/6xk3t65qpn1myp618krtfotbjn1qt90f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24733"
+    }
+  ],
+  "published": "2026-02-20T09:52:58.708Z",
+  "modified": "2026-02-20T10:18:37.619Z"
+}

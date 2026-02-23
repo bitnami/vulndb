@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2025-66614",
+  "summary": "Apache Tomcat: Client certificate verification bypass due to virtual host mapping",
+  "details": "Improper Input Validation vulnerability.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.14, from 10.1.0-M1 through 10.1.49, from 9.0.0-M1 through 9.0.112.\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.0 through 8.5.100. Older EOL versions are not affected.\nTomcat did not validate that the host name provided via the SNI \nextension was the same as the host name provided in the HTTP host header \nfield. If Tomcat was configured with more than one virtual host and the \nTLS configuration for one of those hosts did not require client \ncertificate authentication but another one did, it was possible for a \nclient to bypass the client certificate authentication by sending \ndifferent host names in the SNI extension and the HTTP host header field.\n\n\n\nThe vulnerability only applies if client certificate authentication is \nonly enforced at the Connector. It does not apply if client certificate \nauthentication is enforced at the web application.\n\n\nUsers are recommended to upgrade to version 11.0.15 or later, 10.1.50 or later or 9.0.113 or later, which fix the issue.",
+  "aliases": [
+    "CVE-2025-66614"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "9.0.113"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.50"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.15"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/vw6lxtlh2qbqwpb61wd3sv1flm2nttw7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66614"
+    }
+  ],
+  "published": "2026-02-20T09:52:57.300Z",
+  "modified": "2026-02-20T10:18:37.619Z"
+}
