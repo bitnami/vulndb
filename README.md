@@ -150,6 +150,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2026-02
+
+- Rails
+
 ### 2026-01
 
 - elasticsearch-plugin-repository-s3
