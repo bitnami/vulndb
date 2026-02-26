@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pytorch-2025-2149",
+  "summary": "PyTorch Quantized Sigmoid Module nnq_Sigmoid initialization",
+  "details": "A vulnerability was found in PyTorch 2.6.0+cu124. It has been rated as problematic. Affected by this issue is the function nnq_Sigmoid of the component Quantized Sigmoid Module. The manipulation of the argument scale/zero_point leads to improper initialization. The attack needs to be approached locally. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used.",
+  "aliases": [
+    "CVE-2025-2149"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pytorch",
+        "purl": "pkg:bitnami/pytorch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.6.0"
+            },
+            {
+              "fixed": "2.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/147818"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/issues/147818#issue-2877301660"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.299060"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.299060"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.506563"
+    }
+  ],
+  "published": "2026-02-26T15:23:05.500Z",
+  "modified": "2026-02-26T15:46:51.306Z"
+}
