@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2026-26046",
+  "summary": "Moodle: moodle: improper input sanitization in tex filter administration setting",
+  "details": "A vulnerability was found in a Moodle TeX filter administrative setting where insufficient sanitization of configuration input could allow command injection. On sites where the TeX filter is enabled and ImageMagick is installed, a maliciously crafted setting value entered by an administrator could result in unintended system command execution. While exploitation requires administrative privileges, successful compromise could affect the entire Moodle server.",
+  "aliases": [
+    "CVE-2026-26046"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.5.9"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.5"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-26046"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2440903"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26046"
+    }
+  ],
+  "published": "2026-02-28T17:49:54.545Z",
+  "modified": "2026-02-28T18:10:17.649Z"
+}
