@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-21725",
+  "summary": "Authorization Bypass via TOCTOU in Grafana Datasource Deletion by Name",
+  "details": "A time-of-create-to-time-of-use (TOCTOU) vulnerability lets recently deleted-then-recreated data sources be re-deleted without permission to do so.\n\nThis requires several very stringent conditions to be met:\n\n- The attacker must have admin access to the specific datasource prior to its first deletion.\n- Upon deletion, all steps within the attack must happen within the next 30 seconds and on the same pod of Grafana.\n- The attacker must delete the datasource, then someone must recreate it.\n- The new datasource must not have the attacker as an admin.\n- The new datasource must have the same UID as the prior datasource. These are randomised by default.\n- The datasource can now be re-deleted by the attacker.\n- Once 30 seconds are up, the attack is spent and cannot be repeated.\n- No datasource with any other UID can be attacked.",
+  "aliases": [
+    "CVE-2026-21725"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "12.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-21725"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21725"
+    }
+  ],
+  "published": "2026-02-28T08:41:29.562Z",
+  "modified": "2026-02-28T09:12:37.551Z"
+}
