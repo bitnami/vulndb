@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-1747",
+  "summary": "Authentication Bypass Using an Alternate Path or Channel in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 17.11 before 18.7.5, 18.8 before 18.8.5, and 18.9 before 18.9.1 that, under certain conditions, could have allowed Developer-role users with insufficient privileges to make unauthorized modifications to protected Conan packages.",
+  "aliases": [
+    "CVE-2026-1747"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.11.0"
+            },
+            {
+              "fixed": "18.7.5"
+            },
+            {
+              "introduced": "18.8.0"
+            },
+            {
+              "fixed": "18.8.5"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/02/25/patch-release-gitlab-18-9-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/588385"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3533088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1747"
+    }
+  ],
+  "published": "2026-03-01T21:09:00.685Z",
+  "modified": "2026-03-01T21:10:34.715Z"
+}
