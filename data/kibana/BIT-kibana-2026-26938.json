@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-26938",
+  "summary": "Improper Neutralization of Special Elements Used in a Template Engine in Kibana Workflows Leading to Server-Side Request Forgery (SSRF)",
+  "details": "Improper Neutralization of Special Elements Used in a Template Engine (CWE-1336) exists in Workflows in Kibana which could allow an attacker to read arbitrary files from the Kibana server filesystem, and perform Server-Side Request Forgery (SSRF) via Code Injection (CAPEC-242). This requires an authenticated user who has the workflowsManagement:executeWorkflow privilege.",
+  "aliases": [
+    "CVE-2026-26938"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "9.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-3-1-security-update-esa-2026-17/385253"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26938"
+    }
+  ],
+  "published": "2026-03-03T08:43:31.139Z",
+  "modified": "2026-03-03T09:19:06.344Z"
+}
