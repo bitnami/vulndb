@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-26937",
+  "summary": "Uncontrolled Resource Consumption in Kibana Leading to Denial of Service",
+  "details": "Uncontrolled Resource Consumption (CWE-400) in the Timelion component in Kibana can lead Denial of Service via Input Data Manipulation (CAPEC-153)",
+  "aliases": [
+    "CVE-2026-26937"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.11"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.2.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-11-9-2-5-security-update-esa-2026-15/385251"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26937"
+    }
+  ],
+  "published": "2026-03-03T08:40:12.613Z",
+  "modified": "2026-03-03T09:19:06.344Z"
+}
