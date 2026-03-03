@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-26973",
+  "summary": "Discourse doesn't scope reviewable notes to user-visible reviewables",
+  "details": "Discourse is an open source discussion platform. Versions prior to 2025.12.2, 2026.1.1, and 2026.2.0 have an IDOR (Insecure Direct Object Reference) in `ReviewableNotesController`. When `enable_category_group_moderation` is enabled, a user belonging to a  category moderation group can create or delete their own notes on **any** reviewable in the system, including reviewables in categories they do not moderate. The controller used an unscoped `Reviewable.find` and the `ensure_can_see` guard only checked whether the user could access the review queue in general, not whether they could access the specific reviewable. Only instances with `enable_category_group_moderation` enabled are affected. Staff users (admins/moderators) are not impacted as they already have access to all reviewables. The issue is patched in versions 2025.12.2, 2026.1.1, and 2026.2.0 by scoping the reviewable lookup through `Reviewable.viewable_by(current_user)`. As a workaround, disable the `enable_category_group_moderation` site setting. This removes the attack surface as only staff users will have access to the review queue.",
+  "aliases": [
+    "CVE-2026-26973"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.12.2"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-c587-qx78-vhmx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26973"
+    }
+  ],
+  "published": "2026-03-03T13:29:10.861Z",
+  "modified": "2026-03-03T13:59:21.562Z"
+}
