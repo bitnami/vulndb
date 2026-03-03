@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-26207",
+  "summary": "DIscourse's discourse-policy plugin lacks post access check",
+  "details": "Discourse is an open source discussion platform. Prior to versions 2025.12.2, 2026.1.1, and 2026.2.0, `discourse-policy` plugin allows any authenticated user to interact with policies on posts they do not have permission to view. The `PolicyController` loads posts by ID without verifying the current user's access, enabling policy group members to accept/unaccept policies on posts in private categories or PMs they cannot see and any authenticated user to enumerate which post IDs have policies attached via differentiated error responses (information disclosure). The issue is patched in versions 2025.12.2, 2026.1.1, and 2026.2.0 by adding a `guardian.can_see?(@post)` check in the `set_post` before_action, ensuring post visibility is verified before any policy action is processed. As a workaround, disabling the discourse-policy plugin (`policy_enabled = false`) eliminates the vulnerability. There is no other workaround without upgrading.",
+  "aliases": [
+    "CVE-2026-26207"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.12.2"
+            },
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-jr4h-w6p5-w55r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26207"
+    }
+  ],
+  "published": "2026-03-03T13:29:06.818Z",
+  "modified": "2026-03-03T13:59:21.562Z"
+}
