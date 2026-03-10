@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-27139",
+  "summary": "FileInfo can escape from a Root in os",
+  "details": "On Unix platforms, when listing the contents of a directory using File.ReadDir or File.Readdir the returned FileInfo could reference a file outside of the Root in which the File was opened. The impact of this escape is limited to reading metadata provided by lstat from arbitrary locations on the filesystem without permitting reading or writing files outside the root.",
+  "aliases": [
+    "CVE-2026-27139"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.25.8"
+            },
+            {
+              "introduced": "1.26.0-0"
+            },
+            {
+              "fixed": "1.26.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/749480"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/77827"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27139"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4602"
+    }
+  ],
+  "published": "2026-03-10T08:44:14.844Z",
+  "modified": "2026-03-10T09:11:39.609Z"
+}

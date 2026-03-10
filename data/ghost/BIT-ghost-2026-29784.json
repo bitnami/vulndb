@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-29784",
+  "summary": "Ghost: Incomplete CSRF protections around OTC use",
+  "details": "Ghost is a Node.js content management system. From version 5.101.6 to 6.19.2, incomplete CSRF protections around /session/verify made it possible to use OTCs in login sessions different from the requesting session. In some scenarios this might have made it easier for phishers to take over a Ghost site. This issue has been patched in version 6.19.3.",
+  "aliases": [
+    "CVE-2026-29784"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.101.6"
+            },
+            {
+              "fixed": "6.19.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/ec065a774fa125953d2aa644a59cd8990329e0a0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-9m84-wc28-w895"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29784"
+    }
+  ],
+  "published": "2026-03-10T08:40:17.691Z",
+  "modified": "2026-03-10T09:11:39.609Z"
+}

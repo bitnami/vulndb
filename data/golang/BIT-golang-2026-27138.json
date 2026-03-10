@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-27138",
+  "summary": "Panic in name constraint checking for malformed certificates in crypto/x509",
+  "details": "Certificate verification can panic when a certificate in the chain has an empty DNS name and another certificate in the chain has excluded name constraints. This can crash programs that are either directly verifying X.509 certificate chains, or those that use TLS.",
+  "aliases": [
+    "CVE-2026-27138"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.26.0-0"
+            },
+            {
+              "fixed": "1.26.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/752183"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/77953"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27138"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4600"
+    }
+  ],
+  "published": "2026-03-10T08:44:12.992Z",
+  "modified": "2026-03-10T09:11:39.609Z"
+}
