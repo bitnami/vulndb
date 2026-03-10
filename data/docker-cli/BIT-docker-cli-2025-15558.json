@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-docker-cli-2025-15558",
+  "summary": "Docker Desktop Docker Plugins Uncontrolled Search Path Element Local Privilege Escalation Vulnerability",
+  "details": "Docker CLI for Windows searches for plugin binaries in C:\\ProgramData\\Docker\\cli-plugins, a directory that does not exist by default. A low-privileged attacker can create this directory and place malicious CLI plugin binaries (docker-compose.exe, docker-buildx.exe, etc.) that are executed when a victim user opens Docker Desktop or invokes Docker CLI plugin features, and allow privilege-escalation if the docker CLI is executed as a privileged user.\n\nThis issue affects Docker CLI: through 29.1.5 and Windows binaries acting as a CLI-plugin manager using the  github.com/docker/cli/cli-plugins/manager https://pkg.go.dev/github.com/docker/cli@v29.1.5+incompatible/cli-plugins/manager  package, such as Docker Compose.\n\nThis issue does not impact non-Windows binaries, and projects not using the plugin-manager code.",
+  "aliases": [
+    "CVE-2025-15558"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "docker-cli",
+        "purl": "pkg:bitnami/docker-cli"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "29.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:docker:command_line_interface:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.docker.com/desktop/release-notes/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/docker/cli/pull/6713"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15558"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.zerodayinitiative.com/advisories/ZDI-CAN-28304/"
+    }
+  ],
+  "published": "2026-03-10T08:37:19.024Z",
+  "modified": "2026-03-10T09:11:39.609Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-25679",
+  "summary": "Incorrect parsing of IPv6 host literals in net/url",
+  "details": "url.Parse insufficiently validated the host/authority component and accepted some invalid URLs.",
+  "aliases": [
+    "CVE-2026-25679"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.25.8"
+            },
+            {
+              "introduced": "1.26.0-0"
+            },
+            {
+              "fixed": "1.26.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/752180"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/77578"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-4601"
+    }
+  ],
+  "published": "2026-03-10T08:44:09.300Z",
+  "modified": "2026-03-10T09:11:39.609Z"
+}
