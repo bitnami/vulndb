@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30848",
   "summary": "Parse Server: `PagesRouter` path traversal allows reading files outside configured pages directory",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.8 and 9.5.0-alpha.8, the PagesRouter static file serving route is vulnerable to a path traversal attack that allows unauthenticated reading of files outside the configured pagesPath directory. The boundary check uses a string prefix comparison without enforcing a directory separator boundary. An attacker can use path traversal sequences to access files in sibling directories whose names share the same prefix as the pages directory (e.g. pages-secret starts with pages). This issue has been patched in versions 8.6.8 and 9.5.0-alpha.8.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.8 and 9.5.0, the PagesRouter static file serving route is vulnerable to a path traversal attack that allows unauthenticated reading of files outside the configured pagesPath directory. The boundary check uses a string prefix comparison without enforcing a directory separator boundary. An attacker can use path traversal sequences to access files in sibling directories whose names share the same prefix as the pages directory (e.g. pages-secret starts with pages). This issue has been patched in versions 8.6.8 and 9.5.0.",
   "aliases": [
     "CVE-2026-30848"
   ],
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2026-03-11T15:48:57.194Z",
-  "modified": "2026-03-11T16:15:46.032Z"
+  "modified": "2026-03-11T18:56:50.865Z"
 }
