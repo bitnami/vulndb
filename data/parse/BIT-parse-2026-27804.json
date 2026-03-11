@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-27804",
   "summary": "Parse Server: Account takeover via JWT algorithm confusion in Google auth adapter",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.3 and 9.1.1-alpha.4, an unauthenticated attacker can forge a Google authentication token with `alg: \"none\"` to log in as any user linked to a Google account, without knowing their credentials. All deployments with Google authentication enabled are affected. The fix in versions 8.6.3 and 9.1.1-alpha.4 hardcodes the expected `RS256` algorithm instead of trusting the JWT header, and replaces the Google adapter's custom key fetcher with `jwks-rsa` which rejects unknown key IDs. As a workaround, dsable Google authentication until upgrading is possible.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.3 and 9.3.1, an unauthenticated attacker can forge a Google authentication token with `alg: \"none\"` to log in as any user linked to a Google account, without knowing their credentials. All deployments with Google authentication enabled are affected. The fix in versions 8.6.3 and 9.3.1 hardcodes the expected `RS256` algorithm instead of trusting the JWT header, and replaces the Google adapter's custom key fetcher with `jwks-rsa` which rejects unknown key IDs. As a workaround, dsable Google authentication until upgrading is possible.",
   "aliases": [
     "CVE-2026-27804"
   ],
@@ -73,5 +73,5 @@
     }
   ],
   "published": "2026-03-02T11:46:50.810Z",
-  "modified": "2026-03-02T12:11:51.083Z"
+  "modified": "2026-03-11T18:56:50.865Z"
 }

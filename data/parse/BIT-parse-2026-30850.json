@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30850",
   "summary": "Parse Server: File metadata endpoint bypasses `beforeFind` / `afterFind` trigger authorization",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.9 and 9.5.0-alpha.9, the file metadata endpoint (GET /files/:appId/metadata/:filename) does not enforce beforeFind / afterFind file triggers. When these triggers are used as access-control gates, the metadata endpoint bypasses them entirely, allowing unauthorized access to file metadata. This issue has been patched in versions 8.6.9 and 9.5.0-alpha.9.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.9 and 9.5.0, the file metadata endpoint (GET /files/:appId/metadata/:filename) does not enforce beforeFind / afterFind file triggers. When these triggers are used as access-control gates, the metadata endpoint bypasses them entirely, allowing unauthorized access to file metadata. This issue has been patched in versions 8.6.9 and 9.5.0.",
   "aliases": [
     "CVE-2026-30850"
   ],
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2026-03-11T15:48:59.848Z",
-  "modified": "2026-03-11T16:15:46.032Z"
+  "modified": "2026-03-11T18:56:50.865Z"
 }
