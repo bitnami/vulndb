@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-29182",
+  "summary": "Parse Server: Cloud Hooks and Cloud Jobs bypass `readOnlyMasterKey` write restriction",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.4 and 9.4.1-alpha.3, Parse Server's readOnlyMasterKey option allows access with master-level read privileges but is documented to deny all write operations. However, some endpoints incorrectly accept the readOnlyMasterKey for mutating operations. This allows a caller who only holds the readOnlyMasterKey to create, modify, and delete Cloud Hooks and to start Cloud Jobs, which can be used for data exfiltration. Any Parse Server deployment that uses the readOnlyMasterKey option is affected. Note than an attacker needs to know the readOnlyMasterKey to exploit this vulnerability. This issue has been patched in versions 8.6.4 and 9.4.1-alpha.3.",
+  "aliases": [
+    "CVE-2026-29182"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.4.1-alpha.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-vc89-5g3r-cmhh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29182"
+    }
+  ],
+  "published": "2026-03-11T15:48:46.637Z",
+  "modified": "2026-03-11T16:15:46.032Z"
+}
