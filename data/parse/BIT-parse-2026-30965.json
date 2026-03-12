@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-30965",
+  "summary": "Parse Server session token exfiltration via `redirectClassNameForKey` query parameter",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.8 and 8.6.21, a vulnerability in Parse Server's query handling allows an authenticated or unauthenticated attacker to exfiltrate session tokens of other users by exploiting the redirectClassNameForKey query parameter. Exfiltrated session tokens can be used to take over user accounts. The vulnerability requires the attacker to be able to create or update an object with a new relation field, which depends on the Class-Level Permissions of at least one class. This vulnerability is fixed in 9.5.2-alpha.8 and 8.6.21.",
+  "aliases": [
+    "CVE-2026-30965"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.21"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-6r2j-cxgf-495f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30965"
+    }
+  ],
+  "published": "2026-03-12T14:48:09.696Z",
+  "modified": "2026-03-12T15:11:51.041Z"
+}

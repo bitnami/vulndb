@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-30938",
+  "summary": "Parse Server has denylist `requestKeywordDenylist` keyword scan bypass through nested object placement",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.12 and 9.5.1-alpha.1, the requestKeywordDenylist security control can be bypassed by placing any nested object or array before a prohibited keyword in the request payload. This is caused by a logic bug that stops scanning sibling keys after encountering the first nested value. Any custom requestKeywordDenylist entries configured by the developer are equally by-passable using the same technique. All Parse Server deployments are affected. The requestKeywordDenylist is enabled by default. This vulnerability is fixed in 8.6.12 and 9.5.1-alpha.1. Use a Cloud Code beforeSave trigger to validate incoming data for prohibited keywords across all classes.",
+  "aliases": [
+    "CVE-2026-30938"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.12"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.5.1-alpha.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-q342-9w2p-57fp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30938"
+    }
+  ],
+  "published": "2026-03-12T14:47:55.401Z",
+  "modified": "2026-03-12T15:11:51.041Z"
+}

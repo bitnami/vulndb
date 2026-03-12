@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-30925",
+  "summary": "Parse Server affected by Regular Expression Denial of Service (ReDoS) via `$regex` query in LiveQuery",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.0-alpha.14 and 8.6.11, a malicious client can subscribe to a LiveQuery with a crafted $regex pattern that causes catastrophic backtracking, blocking the Node.js event loop. This makes the entire Parse Server unresponsive, affecting all clients. Any Parse Server deployment with LiveQuery enabled is affected. The attacker only needs the application ID and JavaScript key, both of which are public in client-side apps. This only affects LiveQuery subscription matching, which evaluates regex in JavaScript on the Node.js event loop. Normal REST and GraphQL queries are not affected because their regex is evaluated by the database engine. This vulnerability is fixed in 9.5.0-alpha.14 and 8.6.11.",
+  "aliases": [
+    "CVE-2026-30925"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.11"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.5.0-alpha.14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-mf3j-86qx-cq5j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30925"
+    }
+  ],
+  "published": "2026-03-12T14:47:53.415Z",
+  "modified": "2026-03-12T15:11:51.041Z"
+}

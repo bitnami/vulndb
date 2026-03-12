@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-31800",
+  "summary": "Parse Server: Classes `_GraphQLConfig` and `_Audience` master key bypass via generic class routes",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.12 and 8.6.25, the _GraphQLConfig and _Audience internal classes can be read, modified, and deleted via the generic /classes/_GraphQLConfig and /classes/_Audience REST API routes without master key authentication. This bypasses the master key enforcement that exists on the dedicated /graphql-config and /push_audiences endpoints. An attacker can read, modify and delete GraphQL configuration and push audience data. This vulnerability is fixed in 9.5.2-alpha.12 and 8.6.25.",
+  "aliases": [
+    "CVE-2026-31800"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.25"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.25"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-7xg7-rqf6-pw6c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31800"
+    }
+  ],
+  "published": "2026-03-12T14:48:16.613Z",
+  "modified": "2026-03-12T15:11:51.041Z"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-30946",
+  "summary": "Parse Server affected by denial-of-service via unbounded query complexity in REST and GraphQL API",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior 9.5.2-alpha.2 and 8.6.15, an unauthenticated attacker can exhaust Parse Server resources (CPU, memory, database connections) through crafted queries that exploit the lack of complexity limits in the REST and GraphQL APIs. All Parse Server deployments using the REST or GraphQL API are affected. This vulnerability is fixed in 9.5.2-alpha.2 and 8.6.15.",
+  "aliases": [
+    "CVE-2026-30946"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.15"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.5.2-alpha.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-cmj3-wx7h-ffvg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30946"
+    }
+  ],
+  "published": "2026-03-12T14:48:00.783Z",
+  "modified": "2026-03-12T15:11:51.041Z"
+}
