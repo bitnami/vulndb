@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-0602",
+  "summary": "Authentication Bypass Using an Alternate Path or Channel in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.6 before 18.7.6, 18.8 before 18.8.6, and 18.9 before 18.9.2 that could have allowed an authenticated user to disclose metadata from private issues, merge requests, epics, milestones, or commits due to improper filtering in the snippet rendering process under certain circumstances.",
+  "aliases": [
+    "CVE-2026-0602"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "18.7.6"
+            },
+            {
+              "introduced": "18.8.0"
+            },
+            {
+              "fixed": "18.8.6"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/11/patch-release-gitlab-18-9-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/585007"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3486504"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0602"
+    }
+  ],
+  "published": "2026-03-13T09:35:05.636Z",
+  "modified": "2026-03-13T09:37:20.375Z"
+}
