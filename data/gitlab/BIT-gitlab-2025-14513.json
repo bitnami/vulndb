@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-14513",
+  "summary": "Improper Validation of Specified Quantity in Input in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.11 before 18.7.6, 18.8 before 18.8.6, and 18.9 before 18.9.2 that could have allowed an unauthenticated user to cause a denial of service condition due to improper input validation when processing specially crafted JSON payloads in the protected branches API.",
+  "aliases": [
+    "CVE-2025-14513"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.11.0"
+            },
+            {
+              "fixed": "18.7.6"
+            },
+            {
+              "introduced": "18.8.0"
+            },
+            {
+              "fixed": "18.8.6"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/11/patch-release-gitlab-18-9-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/583718"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3452477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14513"
+    }
+  ],
+  "published": "2026-03-13T09:31:32.729Z",
+  "modified": "2026-03-13T09:37:20.375Z"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wordpress-multisite-2026-3906",
+  "summary": "WordPress 6.9 - 6.9.1 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Note Creation via REST API",
+  "details": "WordPress core is vulnerable to unauthorized access in versions 6.9 through 6.9.1. The Notes feature (block-level collaboration annotations) was introduced in WordPress 6.9 to allow editorial comments directly on posts in the block editor. However, the REST API `create_item_permissions_check()` method in the comments controller did not verify that the authenticated user has `edit_post` permission on the target post when creating a note. This makes it possible for authenticated attackers with Subscriber-level access to create notes on any post, including posts authored by other users, private posts, and posts in any status.",
+  "aliases": [
+    "CVE-2026-3906"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.9.0"
+            },
+            {
+              "fixed": "6.9.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/browser/trunk/src/wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php#L562"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/changeset/61888"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3906"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a69782f0-aa61-4049-8339-7f27f4b6c36b?source=cve"
+    }
+  ],
+  "published": "2026-03-13T09:17:58.886Z",
+  "modified": "2026-03-13T09:37:20.375Z"
+}
