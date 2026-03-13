@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-31868",
+  "summary": "Parse Server has Stored XSS via file upload of HTML-renderable file types",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.30, an attacker can upload a file with a file extension or content type that is not blocked by the default configuration of the Parse Server fileUpload.fileExtensions option. The file can contain malicious code, for example JavaScript in an SVG or XHTML file. When the file is accessed via its URL, the browser renders the file and executes the malicious code in the context of the Parse Server domain. This is a stored Cross-Site Scripting (XSS) vulnerability that can be exploited to steal session tokens, redirect users, or perform actions on behalf of other users. Affected file extensions and content types include .svgz, .xht, .xml, .xsl, .xslt, and content types application/xhtml+xml and application/xslt+xml for extensionless uploads. Uploading of .html, .htm, .shtml, .xhtml, and .svg files was already blocked. This vulnerability is fixed in 9.6.0 and 8.6.30.",
+  "aliases": [
+    "CVE-2026-31868"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.30"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.30"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-v5hf-f4c3-m5rv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31868"
+    }
+  ],
+  "published": "2026-03-13T12:28:41.729Z",
+  "modified": "2026-03-13T12:55:29.610Z"
+}
