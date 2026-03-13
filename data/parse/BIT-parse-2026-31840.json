@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-31840",
+  "summary": "Parse Server has a SQL injection via dot-notation field name in PostgreSQL",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.28, an attacker can use a dot-notation field name in combination with the sort query parameter to inject SQL into the PostgreSQL database through an improper escaping of sub-field values in dot-notation queries. The vulnerability may also affect queries that use dot-notation field names with the distinct and where query parameters. This vulnerability only affects deployments using a PostgreSQL database. This vulnerability is fixed in 9.6.0 and 8.6.28.",
+  "aliases": [
+    "CVE-2026-31840"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.28"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-qpr4-jrj4-6f27"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31840"
+    }
+  ],
+  "published": "2026-03-13T12:28:36.029Z",
+  "modified": "2026-03-13T12:55:29.610Z"
+}

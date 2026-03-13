@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-31871",
+  "summary": "Parse Server has a SQL Injection via dot-notation sub-key name in `Increment` operation on PostgreSQL",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.31, a SQL injection vulnerability exists in the PostgreSQL storage adapter when processing Increment operations on nested object fields using dot notation (e.g., stats.counter). The sub-key name is interpolated directly into SQL string literals without escaping. An attacker who can send write requests to the Parse Server REST API can inject arbitrary SQL via a crafted sub-key name containing single quotes, potentially executing commands or reading data from the database, bypassing CLPs and ACLs. Only Postgres deployments are affected. This vulnerability is fixed in 9.6.0 and 8.6.31.",
+  "aliases": [
+    "CVE-2026-31871"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.31"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.31"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-gqpp-xgvh-9h7h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31871"
+    }
+  ],
+  "published": "2026-03-13T12:28:44.452Z",
+  "modified": "2026-03-13T12:55:29.610Z"
+}
