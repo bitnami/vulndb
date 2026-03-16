@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-32269",
+  "summary": "Parse Server OAuth2 adapter app ID validation sends wrong token to introspection endpoint",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.13 and 8.6.39, the OAuth2 authentication adapter does not correctly validate app IDs when appidField and appIds are configured. During app ID validation, a malformed value is sent to the token introspection endpoint instead of the user's actual access token. Depending on the introspection endpoint's behavior, this could either cause all OAuth2 logins to fail, or allow authentication from disallowed app contexts if the endpoint returns valid-looking data for the malformed request. Deployments using the OAuth2 adapter with appidField and appIds configured are affected. This vulnerability is fixed in 9.6.0-alpha.13 and 8.6.39.",
+  "aliases": [
+    "CVE-2026-32269"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.2"
+            },
+            {
+              "fixed": "8.6.39"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.39"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-69xg-f649-w5g2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32269"
+    }
+  ],
+  "published": "2026-03-16T09:53:45.375Z",
+  "modified": "2026-03-16T10:20:00.130Z"
+}
