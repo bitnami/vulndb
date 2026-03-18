@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-26929",
+  "summary": "Apache Airflow: Wildcard DagVersion Listing Bypasses Per‑DAG RBAC and Leaks Metadata",
+  "details": "Apache Airflow versions 3.0.0 through 3.1.7 FastAPI DagVersion listing API does not apply per-DAG authorization filtering when the request is made with dag_id set to \"~\" (wildcard for all DAGs). As a result, version metadata of DAGs that the requester is not authorized to access is returned.\n\n\nUsers are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue.",
+  "aliases": [
+    "CVE-2026-26929"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.1.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/03/17/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/61675"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/g5o6khx83jwqvdyn0mlyb0krt35cs9ss"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26929"
+    }
+  ],
+  "published": "2026-03-18T08:39:27.056Z",
+  "modified": "2026-03-18T09:23:06.258Z"
+}

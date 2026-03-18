@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2026-4224",
+  "summary": "Stack overflow parsing XML with deeply nested DTD content models",
+  "details": "When an Expat parser with a registered ElementDeclHandler parses an inline\ndocument type definition containing a deeply nested content model a C stack\noverflow occurs.",
+  "aliases": [
+    "CVE-2026-4224"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/03/16/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/196edfb06a7458377d4d0f4b3cd41724c1f3bd4a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e0a8a6da90597a924b300debe045cdb4628ee1f3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/eb0e8be3a7e11b87d198a2c3af1ed0eccf532768"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/145986"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/145987"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/5M7CGUW3XBRY7II4DK43KF7NQQ3TPZ6R/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4224"
+    }
+  ],
+  "published": "2026-03-18T08:45:42.290Z",
+  "modified": "2026-03-18T09:23:06.258Z"
+}

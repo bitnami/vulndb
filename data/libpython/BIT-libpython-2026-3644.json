@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2026-3644",
+  "summary": "Incomplete control character validation in http.cookies",
+  "details": "The fix for CVE-2026-0672, which rejected control characters in http.cookies.Morsel, was incomplete. The Morsel.update(), |= operator, and unpickling paths were not patched, allowing control characters to bypass input validation. Additionally, BaseCookie.js_output() lacked the output validation applied to BaseCookie.output().",
+  "aliases": [
+    "CVE-2026-3644"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/57e88c1cf95e1481b94ae57abe1010469d47a6b4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/62ceb396fcbe69da1ded3702de586f4072b590dd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/d16ecc6c3626f0e2cc8f08c309c83934e8a979dd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/145599"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/145600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/H6CADMBCDRFGWCMOXWUIHFJNV43GABJ7/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3644"
+    }
+  ],
+  "published": "2026-03-18T08:45:39.878Z",
+  "modified": "2026-03-18T09:23:06.258Z"
+}
