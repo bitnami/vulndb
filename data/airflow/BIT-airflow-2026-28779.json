@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-28779",
+  "summary": "Apache Airflow: Path of session token in cookie does not consider base_url - session hijacking via co-hosted applications",
+  "details": "Apache Airflow versions 3.1.0 through 3.1.7 session token (_token) in cookies is set to path=/ regardless of the configured [webserver] base_url or [api] base_url.\nThis allows any application co-hosted under the same domain to capture valid Airflow session tokens from HTTP request headers, allowing full session takeover without attacking Airflow itself.\n\nUsers are recommended to upgrade to Apache Airflow 3.1.8 or later, which resolves this issue.",
+  "aliases": [
+    "CVE-2026-28779"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.1.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/03/17/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/62771"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/r4n5znb8mcq14wo9v8ndml36nxlksdqb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28779"
+    }
+  ],
+  "published": "2026-03-18T08:39:31.052Z",
+  "modified": "2026-03-18T09:23:06.258Z"
+}
