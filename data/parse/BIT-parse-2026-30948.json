@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30948",
   "summary": "Parse Server has stored cross-site scripting (XSS) via SVG file upload",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.4 and 8.6.17, a stored cross-site scripting (XSS) vulnerability allows any authenticated user to upload an SVG file containing JavaScript. The file is served inline with Content-Type: image/svg+xml and without protective headers, causing the browser to execute embedded scripts in the Parse Server origin. This can be exploited to steal session tokens from localStorage and achieve account takeover. The default fileExtensions option blocks HTML file extensions but does not block SVG, which is a well-known XSS vector. All Parse Server deployments where file upload is enabled for authenticated users (the default) are affected. This vulnerability is fixed in 9.5.2-alpha.4 and 8.6.17.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2 and 8.6.17, a stored cross-site scripting (XSS) vulnerability allows any authenticated user to upload an SVG file containing JavaScript. The file is served inline with Content-Type: image/svg+xml and without protective headers, causing the browser to execute embedded scripts in the Parse Server origin. This can be exploited to steal session tokens from localStorage and achieve account takeover. The default fileExtensions option blocks HTML file extensions but does not block SVG, which is a well-known XSS vector. All Parse Server deployments where file upload is enabled for authenticated users (the default) are affected. This vulnerability is fixed in 9.5.2 and 8.6.17.",
   "aliases": [
     "CVE-2026-30948"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:04.274Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-18T17:16:27.144Z"
 }
