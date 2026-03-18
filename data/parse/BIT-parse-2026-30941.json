@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30941",
   "summary": "Parse Server has a NoSQL injection via token type in password reset and email verification endpoints",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.14 and 9.5.2-alpha.1, NoSQL injection vulnerability allows an unauthenticated attacker to inject MongoDB query operators via the token field in the password reset and email verification resend endpoints. The token value is passed to database queries without type validation and can be used to extract password reset and email verification tokens. Any Parse Server deployment using MongoDB with email verification or password reset enabled is affected. When emailVerifyTokenReuseIfValid is configured, the email verification token can be fully extracted and used to verify a user's email address without inbox access. This vulnerability is fixed in 8.6.14 and 9.5.2-alpha.1.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.14 and 9.5.2, NoSQL injection vulnerability allows an unauthenticated attacker to inject MongoDB query operators via the token field in the password reset and email verification resend endpoints. The token value is passed to database queries without type validation and can be used to extract password reset and email verification tokens. Any Parse Server deployment using MongoDB with email verification or password reset enabled is affected. When emailVerifyTokenReuseIfValid is configured, the email verification token can be fully extracted and used to verify a user's email address without inbox access. This vulnerability is fixed in 8.6.14 and 9.5.2.",
   "aliases": [
     "CVE-2026-30941"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:47:58.977Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-18T18:14:11.766Z"
 }
