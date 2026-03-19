@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30947",
   "summary": "Parse Server ha a bypass of class-level permissions in LiveQuery",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.3 and 8.6.16, class-level permissions (CLP) are not enforced for LiveQuery subscriptions. An unauthenticated or unauthorized client can subscribe to any LiveQuery-enabled class and receive real-time events for all objects, regardless of CLP restrictions. All Parse Server deployments that use LiveQuery with class-level permissions are affected. Data intended to be restricted by CLP is leaked to unauthorized subscribers in real time. This vulnerability is fixed in 9.5.2-alpha.3 and 8.6.16.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2 and 8.6.16, class-level permissions (CLP) are not enforced for LiveQuery subscriptions. An unauthenticated or unauthorized client can subscribe to any LiveQuery-enabled class and receive real-time events for all objects, regardless of CLP restrictions. All Parse Server deployments that use LiveQuery with class-level permissions are affected. Data intended to be restricted by CLP is leaked to unauthorized subscribers in real time. This vulnerability is fixed in 9.5.2 and 8.6.16.",
   "aliases": [
     "CVE-2026-30947"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:02.496Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-19T09:18:18.144Z"
 }
