@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-32242",
   "summary": "Parse Server OAuth2 adapter shares mutable state across providers via singleton instance",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.11 and 8.6.37, Parse Server's built-in OAuth2 auth adapter exports a singleton instance that is reused directly across all OAuth2 provider configurations. Under concurrent authentication requests for different OAuth2 providers, one provider's token validation may execute using another provider's configuration, potentially allowing a token that should be rejected by one provider to be accepted because it is validated against a different provider's policy. Deployments that configure multiple OAuth2 providers via the oauth2: true flag are affected. This vulnerability is fixed in 9.6.0-alpha.11 and 8.6.37.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.37, Parse Server's built-in OAuth2 auth adapter exports a singleton instance that is reused directly across all OAuth2 provider configurations. Under concurrent authentication requests for different OAuth2 providers, one provider's token validation may execute using another provider's configuration, potentially allowing a token that should be rejected by one provider to be accepted because it is validated against a different provider's policy. Deployments that configure multiple OAuth2 providers via the oauth2: true flag are affected. This vulnerability is fixed in 9.6.0 and 8.6.37.",
   "aliases": [
     "CVE-2026-32242"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-16T09:53:39.413Z",
-  "modified": "2026-03-16T10:20:00.130Z"
+  "modified": "2026-03-19T06:15:48.251Z"
 }
