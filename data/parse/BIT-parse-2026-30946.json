@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30946",
   "summary": "Parse Server affected by denial-of-service via unbounded query complexity in REST and GraphQL API",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior 9.5.2-alpha.2 and 8.6.15, an unauthenticated attacker can exhaust Parse Server resources (CPU, memory, database connections) through crafted queries that exploit the lack of complexity limits in the REST and GraphQL APIs. All Parse Server deployments using the REST or GraphQL API are affected. This vulnerability is fixed in 9.5.2-alpha.2 and 8.6.15.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior 9.5.2 and 8.6.15, an unauthenticated attacker can exhaust Parse Server resources (CPU, memory, database connections) through crafted queries that exploit the lack of complexity limits in the REST and GraphQL APIs. All Parse Server deployments using the REST or GraphQL API are affected. This vulnerability is fixed in 9.5.2 and 8.6.15.",
   "aliases": [
     "CVE-2026-30946"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:00.783Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-19T00:14:08.398Z"
 }
