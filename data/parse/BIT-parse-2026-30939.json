@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30939",
   "summary": "Parse Server has Denial of Service (DoS) and Cloud Function Dispatch Bypass via Prototype Chain Resolution",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.13 and 9.5.1-alpha.2, an unauthenticated attacker can crash the Parse Server process by calling a Cloud Function endpoint with a prototype property name as the function name. The server recurses infinitely, causing a call stack size error that terminates the process. Other prototype property names bypass Cloud Function dispatch validation and return HTTP 200 responses, even though no such Cloud Functions are defined. The same applies to dot-notation traversal. All Parse Server deployments that expose the Cloud Function endpoint are affected. This vulnerability is fixed in 8.6.13 and 9.5.1-alpha.2.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.13 and 9.5.1, an unauthenticated attacker can crash the Parse Server process by calling a Cloud Function endpoint with a prototype property name as the function name. The server recurses infinitely, causing a call stack size error that terminates the process. Other prototype property names bypass Cloud Function dispatch validation and return HTTP 200 responses, even though no such Cloud Functions are defined. The same applies to dot-notation traversal. All Parse Server deployments that expose the Cloud Function endpoint are affected. This vulnerability is fixed in 8.6.13 and 9.5.1.",
   "aliases": [
     "CVE-2026-30939"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:47:57.281Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-19T12:15:23.097Z"
 }
