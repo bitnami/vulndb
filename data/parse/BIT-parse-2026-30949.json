@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30949",
   "summary": "Parse Server is missing audience validation in Keycloak authentication adapter",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.5 and 8.6.18, the Keycloak authentication adapter does not validate the azp (authorized party) claim of Keycloak access tokens against the configured client-id. A valid access token issued by the same Keycloak realm for a different client application can be used to authenticate as any user on the Parse Server that uses the Keycloak adapter. This enables cross-application account takeover in multi-client Keycloak realms. All Parse Server deployments that use the Keycloak authentication adapter with a Keycloak realm that has multiple client applications are affected. This vulnerability is fixed in 9.5.2-alpha.5 and 8.6.18.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2 and 8.6.18, the Keycloak authentication adapter does not validate the azp (authorized party) claim of Keycloak access tokens against the configured client-id. A valid access token issued by the same Keycloak realm for a different client application can be used to authenticate as any user on the Parse Server that uses the Keycloak adapter. This enables cross-application account takeover in multi-client Keycloak realms. All Parse Server deployments that use the Keycloak authentication adapter with a Keycloak realm that has multiple client applications are affected. This vulnerability is fixed in 9.5.2 and 8.6.18.",
   "aliases": [
     "CVE-2026-30949"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:06.075Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-19T21:20:16.168Z"
 }

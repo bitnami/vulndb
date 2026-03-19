@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2021-20288",
+  "details": "An authentication flaw was found in ceph in versions before 14.2.20. When the monitor handles CEPHX_GET_AUTH_SESSION_KEY requests, it doesn't sanitize other_keys, allowing key reuse. An attacker who can request a global_id can exploit the ability of any user to request a global_id previously associated with another user, as ceph does not force the reuse of old keys to generate new ones. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+  "aliases": [
+    "CVE-2021-20288"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.2.21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1938031"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00034.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/362CEPPYF3YMJZBEJQUT3KDE2EHYYIYQ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5BPIAYTRCWAU4XWCDBK2THEFVXSC4XGK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/JVWUKUUS5BCIFWRV3JCUQMAPJ4HIWSED/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20288"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202105-39"
+    }
+  ],
+  "published": "2026-03-19T20:41:13.289Z",
+  "modified": "2026-03-19T21:20:16.168Z"
+}

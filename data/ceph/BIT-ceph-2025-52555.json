@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2025-52555",
+  "summary": "CephFS Permission Escalation Vulnerability in Ceph Fuse mounted FS",
+  "details": "Ceph is a distributed object, block, and file storage platform. In versions 17.2.7, 18.2.1 through 18.2.4, and 19.0.0 through 19.2.2, an unprivileged user can escalate to root privileges in a ceph-fuse mounted CephFS by chmod 777 a directory owned by root to gain access. The result of this is that a user could read, write and execute to any directory owned by root as long as they chmod 777 it. This impacts confidentiality, integrity, and availability. It is patched in versions 17.2.8, 18.2.5, and 19.2.3.",
+  "aliases": [
+    "CVE-2025-52555"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.2.7"
+            },
+            {
+              "fixed": "17.2.8"
+            },
+            {
+              "introduced": "18.2.1"
+            },
+            {
+              "fixed": "18.2.5"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/pull/60314"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-89hm-qq33-2fjm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/09/msg00025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52555"
+    }
+  ],
+  "published": "2026-03-19T20:41:20.420Z",
+  "modified": "2026-03-19T21:20:16.168Z"
+}

@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30967",
   "summary": "Parse Server OAuth2 authentication adapter account takeover via identity spoofing",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.9. and 8.6.22, the OAuth2 authentication adapter, when configured without the useridField option, only verifies that a token is active via the provider's token introspection endpoint, but does not verify that the token belongs to the user identified by authData.id. An attacker with any valid OAuth2 token from the same provider can authenticate as any other user. This affects any Parse Server deployment that uses the generic OAuth2 authentication adapter (configured with oauth2: true) without setting the useridField option. This vulnerability is fixed in 9.5.2-alpha.9. and 8.6.22.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2. and 8.6.22, the OAuth2 authentication adapter, when configured without the useridField option, only verifies that a token is active via the provider's token introspection endpoint, but does not verify that the token belongs to the user identified by authData.id. An attacker with any valid OAuth2 token from the same provider can authenticate as any other user. This affects any Parse Server deployment that uses the generic OAuth2 authentication adapter (configured with oauth2: true) without setting the useridField option. This vulnerability is fixed in 9.5.2. and 8.6.22.",
   "aliases": [
     "CVE-2026-30967"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:13.390Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-19T21:20:16.168Z"
 }
