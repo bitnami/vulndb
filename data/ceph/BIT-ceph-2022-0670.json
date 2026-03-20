@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2022-0670",
+  "details": "A flaw was found in Openstack manilla owning a Ceph File system \"share\", which enables the owner to read/write any manilla share or entire file system. The vulnerability is due to a bug in the \"volumes\" plugin in Ceph Manager. This allows an attacker to compromise Confidentiality and Integrity of a file system. Fixed in RHCS 5.2 and Ceph 17.2.2.",
+  "aliases": [
+    "CVE-2022-0670"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.2.17"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.2.10"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://ceph.io/en/news/blog/2022/v17-2-2-quincy-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5O3XMDFZWA2FWU6GAYOVSFJPOUTXN42N/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TIRTTRG5O4YP2TNGDCDOHIHP2DM3DFBT/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0670"
+    }
+  ],
+  "published": "2026-03-20T09:05:45.618Z",
+  "modified": "2026-03-20T09:47:33.381Z"
+}

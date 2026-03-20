@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2025-55668",
   "summary": "Apache Tomcat: session fixation via rewrite valve",
-  "details": "Session Fixation vulnerability in Apache Tomcat via rewrite valve.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.7, from 10.1.0-M1 through 10.1.41, from 9.0.0.M1 through 9.0.105.\nOlder, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
+  "details": "Session Fixation vulnerability in Apache Tomcat via rewrite valve.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.7, from 10.1.0 through 10.1.41, from 9.0.0 through 9.0.105.\nOlder, EOL versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.8, 10.1.42 or 9.0.106, which fix the issue.",
   "aliases": [
     "CVE-2025-55668"
   ],
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-08-18T08:14:21.163Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }

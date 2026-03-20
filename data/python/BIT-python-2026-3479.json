@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-2026-3479",
+  "summary": "pkgutil.get_data() does not enforce documented restrictions",
+  "details": "pkgutil.get_data() did not validate the resource argument as documented, allowing path traversals.",
+  "aliases": [
+    "CVE-2026-3479"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/bcdf231946b1da8bdfbab4c05539bb0cc964a1c7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/146121"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/146122"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/WYLLVQOOCKGK73JM7Z7ZSNOJC4N7BAWY/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3479"
+    }
+  ],
+  "published": "2026-03-20T09:21:01.169Z",
+  "modified": "2026-03-20T09:47:33.381Z"
+}

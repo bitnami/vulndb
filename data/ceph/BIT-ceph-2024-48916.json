@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2024-48916",
+  "summary": "Ceph is vulnerable to authentication bypass through RadosGW",
+  "details": "Ceph is a distributed object, block, and file storage platform. In versions 19.2.3 and below, it is possible to send an JWT that has \"none\" as JWT alg. And by doing so the JWT signature is not checked. The vulnerability is most likely in the RadosGW OIDC provider. As of time of publication, a known patched version has yet to be published.",
+  "aliases": [
+    "CVE-2024-48916"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "19.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-5g9m-mmp6-93mq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-48916"
+    }
+  ],
+  "published": "2026-03-20T09:05:50.770Z",
+  "modified": "2026-03-20T09:47:33.381Z"
+}

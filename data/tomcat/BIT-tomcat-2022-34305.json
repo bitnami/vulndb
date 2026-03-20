@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2022-34305",
   "summary": "XSS in examples web application",
-  "details": "In Apache Tomcat 10.1.0-M1 to 10.1.0-M16, 10.0.0-M1 to 10.0.22, 9.0.30 to 9.0.64 and 8.5.50 to 8.5.81 the Form authentication example in the examples web application displayed user provided data without filtering, exposing a XSS vulnerability.",
+  "details": "In Apache Tomcat 10.1.0 to 10.1.0, 10.0.0 to 10.0.22, 9.0.30 to 9.0.64 and 8.5.50 to 8.5.81 the Form authentication example in the examples web application displayed user provided data without filtering, exposing a XSS vulnerability.",
   "aliases": [
     "CVE-2022-34305"
   ],
@@ -91,5 +91,5 @@
     }
   ],
   "published": "2024-03-06T11:09:17.789Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }
