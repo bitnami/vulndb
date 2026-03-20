@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-nifi-2024-45477",
   "summary": "Apache NiFi: Improper Neutralization of Input in Parameter Description",
-  "details": "Apache NiFi 1.10.0 through 1.27.0 and 2.0.0-M1 through 2.0.0-M3 support a description field for Parameters in a Parameter Context configuration that is vulnerable to cross-site scripting. An authenticated user, authorized to configure a Parameter Context, can enter arbitrary JavaScript code, which the client browser will execute within the session context of the authenticated user. Upgrading to Apache NiFi 1.28.0 or 2.0.0-M4 is the recommended mitigation.",
+  "details": "Apache NiFi 1.10.0 through 1.27.0 and 2.0.0 support a description field for Parameters in a Parameter Context configuration that is vulnerable to cross-site scripting. An authenticated user, authorized to configure a Parameter Context, can enter arbitrary JavaScript code, which the client browser will execute within the session context of the authenticated user. Upgrading to Apache NiFi 1.28.0 or 2.0.0 is the recommended mitigation.",
   "aliases": [
     "CVE-2024-45477"
   ],
@@ -55,5 +55,5 @@
     }
   ],
   "published": "2025-09-12T11:47:04.858Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T00:16:42.114Z"
 }
