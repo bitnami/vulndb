@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2021-43980",
   "summary": "Apache Tomcat: Information disclosure",
-  "details": "The simplified implementation of blocking reads and writes introduced in Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing (but extremely hard to trigger) concurrency bug in Apache Tomcat 10.1.0 to 10.1.0-M12, 10.0.0-M1 to 10.0.18, 9.0.0-M1 to 9.0.60 and 8.5.0 to 8.5.77 that could cause client connections to share an Http11Processor instance resulting in responses, or part responses, to be received by the wrong client.",
+  "details": "The simplified implementation of blocking reads and writes introduced in Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing (but extremely hard to trigger) concurrency bug in Apache Tomcat 10.1.0 to 10.1.0, 10.0.0 to 10.0.18, 9.0.0 to 9.0.60 and 8.5.0 to 8.5.77 that could cause client connections to share an Http11Processor instance resulting in responses, or part responses, to be received by the wrong client.",
   "aliases": [
     "CVE-2021-43980"
   ],
@@ -87,5 +87,5 @@
     }
   ],
   "published": "2024-03-06T11:09:43.693Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }

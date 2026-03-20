@@ -1,7 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2020-13943",
-  "details": "If an HTTP/2 client connecting to Apache Tomcat 10.0.0-M1 to 10.0.0-M7, 9.0.0.M1 to 9.0.37 or 8.5.0 to 8.5.57 exceeded the agreed maximum number of concurrent streams for a connection (in violation of the HTTP/2 protocol), it was possible that a subsequent request made on that connection could contain HTTP headers - including HTTP/2 pseudo headers - from a previous request rather than the intended headers. This could lead to users seeing responses for unexpected resources.",
+  "details": "If an HTTP/2 client connecting to Apache Tomcat 9.0.0 through 9.0.37 or 8.5.0 to 8.5.57 exceeded the agreed maximum number of concurrent streams for a connection (in violation of the HTTP/2 protocol), it was possible that a subsequent request made on that connection could contain HTTP headers - including HTTP/2 pseudo headers - from a previous request rather than the intended headers. This could lead to users seeing responses for unexpected resources.",
   "aliases": [
     "CVE-2020-13943"
   ],
@@ -547,5 +547,5 @@
     }
   ],
   "published": "2024-03-06T11:11:40.396Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }

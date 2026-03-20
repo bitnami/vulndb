@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2024-47866",
+  "summary": "RGW DoS attack with empty HTTP header in S3 object copy",
+  "details": "Ceph is a distributed object, block, and file storage platform. In versions up to and including 19.2.3, using the argument `x-amz-copy-source` to put an object and specifying an empty string as its content leads to the RGW daemon crashing, resulting in a DoS attack. As of time of publication, no known patched versions exist.",
+  "aliases": [
+    "CVE-2024-47866"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "19.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2025/11/11/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-mgrm-g92q-f8h8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47866"
+    }
+  ],
+  "published": "2026-03-20T09:05:48.271Z",
+  "modified": "2026-03-20T09:47:33.381Z"
+}

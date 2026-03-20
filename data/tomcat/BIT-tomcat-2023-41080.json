@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2023-41080",
   "summary": "Apache Tomcat: Open redirect with FORM authentication",
-  "details": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\nOlder, EOL versions may also be affected.\n\n\nThe vulnerability is limited to the ROOT (default) web application.",
+  "details": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0 through 11.0.0, from 10.1.0 through 10.0.12, from 9.0.0 through 9.0.79 and from 8.5.0 through 8.5.92.\nOlder, EOL versions may\u00a0also be affected.\n\n\nThe vulnerability is limited to the ROOT (default) web application.",
   "aliases": [
     "CVE-2023-41080"
   ],
@@ -89,5 +89,5 @@
     }
   ],
   "published": "2024-03-06T11:08:22.964Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }

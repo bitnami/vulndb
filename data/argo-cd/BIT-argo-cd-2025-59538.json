@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-argo-cd-2025-59538",
   "summary": "Argo CD is Vulnerable to Unauthenticated Remote DoS via malformed Azure DevOps git.push webhook",
-  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. For versions 2.9.0-rc1 through 2.14.19, 3.0.0-rc1 through 3.2.0-rc1, 3.1.6 and 3.0.17, when the webhook.azuredevops.username and webhook.azuredevops.password are not set in the default configuration, the /api/webhook endpoint crashes the entire argocd-server process when it receives an Azure DevOps Push event whose JSON array resource.refUpdates is empty. The slice index [0] is accessed without a length check, causing an index-out-of-range panic. A single unauthenticated HTTP POST is enough to kill the process. This issue is resolved in versions 2.14.20, 3.2.0-rc2, 3.1.8 and 3.0.19.",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. For versions 2.9.0 through 2.14.19, 3.0.0 through 3.2.0, 3.1.6 and 3.0.17, when the webhook.azuredevops.username and webhook.azuredevops.password are not set in the default configuration, the /api/webhook endpoint crashes the entire argocd-server process when it receives an Azure DevOps Push event whose JSON array resource.refUpdates is empty. The slice index [0] is accessed without a length check, causing an index-out-of-range panic. A single unauthenticated HTTP POST is enough to kill the process. This issue is resolved in versions 2.14.20, 3.1.8 and 3.0.19.",
   "aliases": [
     "CVE-2025-59538"
   ],
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2025-10-06T08:54:12.506Z",
-  "modified": "2025-10-06T09:29:51.512Z"
+  "modified": "2026-03-20T09:47:33.381Z"
 }
