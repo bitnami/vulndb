@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-tomcat-2023-46589",
   "summary": "Apache Tomcat: HTTP request smuggling via malformed trailer headers",
-  "details": "Improper Input Validation vulnerability in Apache Tomcat.Tomcat from 11.0.0 through 11.0.0, from 10.1.0 through 10.1.15, from 9.0.0 through 9.0.82 and from 8.5.0 through 8.5.95 did not correctly parse HTTP trailer headers. A trailer header that exceeded the header size limit could cause Tomcat to treat a single \nrequest as multiple requests leading to the possibility of request \nsmuggling when behind a reverse proxy.\n\n\nOlder, EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.0\u00a0onwards, 10.1.16 onwards, 9.0.83 onwards or 8.5.96 onwards, which fix the issue.",
+  "details": "Improper Input Validation vulnerability in Apache Tomcat.Tomcat from 11.0.0 through 11.0.0, from 10.1.0 through 10.1.15, from 9.0.0 through 9.0.82 and from 8.5.0 through 8.5.95 did not correctly parse HTTP trailer headers. A trailer header that exceeded the header size limit could cause Tomcat to treat a single \nrequest as multiple requests leading to the possibility of request \nsmuggling when behind a reverse proxy.\n\n\nOlder, EOL versions may also be affected.\n\n\nUsers are recommended to upgrade to version 11.0.0 onwards, 10.1.16 onwards, 9.0.83 onwards or 8.5.96 onwards, which fix the issue.",
   "aliases": [
     "CVE-2023-46589"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2024-03-06T11:07:35.204Z",
-  "modified": "2026-03-20T09:47:33.381Z"
+  "modified": "2026-03-20T12:52:04.213Z"
 }
