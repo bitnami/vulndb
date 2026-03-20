@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-argo-cd-2025-55190",
   "summary": "Argo CD: Project API Token Exposes Repository Credentials",
-  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. In versions 2.13.0 through 2.13.8, 2.14.0 through 2.14.15, 3.0.0 through 3.0.12 and 3.1.0-rc1 through 3.1.1, API tokens with project-level permissions are able to retrieve sensitive repository credentials (usernames, passwords) through the project details API endpoint, even when the token only has standard application management permissions and no explicit access to secrets. This vulnerability does not only affect project-level permissions. Any token with project get permissions is also vulnerable, including global permissions such as: `p, role/user, projects, get, *, allow`. This issue is fixed in versions 2.13.9, 2.14.16, 3.0.14 and 3.1.2.",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. In versions 2.13.0 through 2.13.8, 2.14.0 through 2.14.15, 3.0.0 through 3.0.12 and 3.1.0 through 3.1.1, API tokens with project-level permissions are able to retrieve sensitive repository credentials (usernames, passwords) through the project details API endpoint, even when the token only has standard application management permissions and no explicit access to secrets. This vulnerability does not only affect project-level permissions. Any token with project get permissions is also vulnerable, including global permissions such as: `p, role/user, projects, get, *, allow`. This issue is fixed in versions 2.13.9, 2.14.16, 3.0.14 and 3.1.2.",
   "aliases": [
     "CVE-2025-55190"
   ],
@@ -73,5 +73,5 @@
     }
   ],
   "published": "2025-09-09T05:36:21.602Z",
-  "modified": "2025-11-06T13:25:46.476Z"
+  "modified": "2026-03-20T06:13:44.633Z"
 }

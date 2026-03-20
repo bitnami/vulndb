@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-30962",
   "summary": "Parse Server has a protected fields bypass via logical query operators",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2-alpha.6 and 8.6.19, the validation for protected fields only checks top-level query keys. By wrapping a query constraint on a protected field inside a logical operator, the check is bypassed entirely. This allows any authenticated user to query on protected fields to extract field values. All Parse Server deployments have default protected fields and are vulnerable. This vulnerability is fixed in 9.5.2-alpha.6 and 8.6.19.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.5.2 and 8.6.19, the validation for protected fields only checks top-level query keys. By wrapping a query constraint on a protected field inside a logical operator, the check is bypassed entirely. This allows any authenticated user to query on protected fields to extract field values. All Parse Server deployments have default protected fields and are vulnerable. This vulnerability is fixed in 9.5.2 and 8.6.19.",
   "aliases": [
     "CVE-2026-30962"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-12T14:48:07.977Z",
-  "modified": "2026-03-12T15:11:51.041Z"
+  "modified": "2026-03-20T06:13:44.633Z"
 }

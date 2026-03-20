@@ -2,7 +2,7 @@
   "schema_version": "1.5.0",
   "id": "BIT-magento-2021-21032",
   "summary": "Magento Commerce Failure To Invalidate User Session Could Lead To Unauthorized Access",
-  "details": "Magento versions 2.4.1 (and earlier), 2.4.0-p1 (and earlier) and 2.3.6 (and earlier) do not adequately invalidate user sessions. Successful exploitation of this issue could lead to unauthorized access to restricted resources. Access to the admin console is not required for successful exploitation.",
+  "details": "Magento versions 2.4.1 (and earlier), 2.4.0 (and earlier) and 2.3.6 (and earlier) do not adequately invalidate user sessions. Successful exploitation of this issue could lead to unauthorized access to restricted resources. Access to the admin console is not required for successful exploitation.",
   "aliases": [
     "CVE-2021-21032"
   ],
@@ -66,5 +66,5 @@
     }
   ],
   "published": "2024-03-06T10:59:18.181Z",
-  "modified": "2025-05-20T10:02:07.006Z"
+  "modified": "2026-03-20T06:13:44.633Z"
 }

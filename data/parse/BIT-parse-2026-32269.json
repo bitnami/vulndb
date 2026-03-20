@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-32269",
   "summary": "Parse Server OAuth2 adapter app ID validation sends wrong token to introspection endpoint",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.13 and 8.6.39, the OAuth2 authentication adapter does not correctly validate app IDs when appidField and appIds are configured. During app ID validation, a malformed value is sent to the token introspection endpoint instead of the user's actual access token. Depending on the introspection endpoint's behavior, this could either cause all OAuth2 logins to fail, or allow authentication from disallowed app contexts if the endpoint returns valid-looking data for the malformed request. Deployments using the OAuth2 adapter with appidField and appIds configured are affected. This vulnerability is fixed in 9.6.0-alpha.13 and 8.6.39.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.39, the OAuth2 authentication adapter does not correctly validate app IDs when appidField and appIds are configured. During app ID validation, a malformed value is sent to the token introspection endpoint instead of the user's actual access token. Depending on the introspection endpoint's behavior, this could either cause all OAuth2 logins to fail, or allow authentication from disallowed app contexts if the endpoint returns valid-looking data for the malformed request. Deployments using the OAuth2 adapter with appidField and appIds configured are affected. This vulnerability is fixed in 9.6.0 and 8.6.39.",
   "aliases": [
     "CVE-2026-32269"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-16T09:53:45.375Z",
-  "modified": "2026-03-16T10:20:00.130Z"
+  "modified": "2026-03-20T06:13:44.633Z"
 }

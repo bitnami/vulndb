@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-parse-2026-32248",
   "summary": "Parse Server: Account takeover via operator injection in authentication data identifier",
-  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.12 and 8.6.38, an unauthenticated attacker can take over any user account that was created with an authentication provider that does not validate the format of the user identifier (e.g. anonymous authentication). By sending a crafted login request, the attacker can cause the server to perform a pattern-matching query instead of an exact-match lookup, allowing the attacker to match an existing user and obtain a valid session token for that user's account. Both MongoDB and PostgreSQL database backends are affected. Any Parse Server deployment that allows anonymous authentication (enabled by default) is vulnerable. This vulnerability is fixed in 9.6.0-alpha.12 and 8.6.38.",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0 and 8.6.38, an unauthenticated attacker can take over any user account that was created with an authentication provider that does not validate the format of the user identifier (e.g. anonymous authentication). By sending a crafted login request, the attacker can cause the server to perform a pattern-matching query instead of an exact-match lookup, allowing the attacker to match an existing user and obtain a valid session token for that user's account. Both MongoDB and PostgreSQL database backends are affected. Any Parse Server deployment that allows anonymous authentication (enabled by default) is vulnerable. This vulnerability is fixed in 9.6.0 and 8.6.38.",
   "aliases": [
     "CVE-2026-32248"
   ],
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-16T09:53:42.464Z",
-  "modified": "2026-03-16T10:20:00.130Z"
+  "modified": "2026-03-20T06:13:44.633Z"
 }
