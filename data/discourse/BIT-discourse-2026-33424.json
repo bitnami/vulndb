@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-33424",
+  "summary": "PM access granted through invites after access revocation",
+  "details": "Discourse is an open-source discussion platform. Prior to versions 2026.3.0, 2026.2.1, and 2026.1.2, an attacker can grant access to a private message topic through invites even after they lose access to that PM. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-33424"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.2"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.1"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-hgcp-p7hq-cwxw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33424"
+    }
+  ],
+  "published": "2026-03-26T16:10:26.894Z",
+  "modified": "2026-03-26T16:40:18.669Z"
+}
