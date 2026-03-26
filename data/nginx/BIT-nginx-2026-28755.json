@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nginx-2026-28755",
+  "summary": "NGINX ngx_stream_ssl_module vulnerability",
+  "details": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_stream_ssl_module module due to the improper handling of revoked certificates when configured with the ssl_verify_client on and ssl_ocsp on directives, allowing the TLS handshake to succeed even after an OCSP check identifies the certificate as revoked.   \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+  "aliases": [
+    "CVE-2026-28755"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nginx",
+        "purl": "pkg:bitnami/nginx"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.27.2"
+            },
+            {
+              "fixed": "1.28.3"
+            },
+            {
+              "introduced": "1.29.0"
+            },
+            {
+              "fixed": "1.29.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://my.f5.com/manage/s/article/K000160368"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28755"
+    }
+  ],
+  "published": "2026-03-26T11:47:10.426Z",
+  "modified": "2026-03-26T12:15:40.950Z"
+}
