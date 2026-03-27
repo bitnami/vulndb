@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-31805",
+  "summary": "Discourse has a poll authorization bypass via post_id array parameter",
+  "details": "Discourse is an open-source discussion platform. Prior to versions 2026.3.0, 2026.2.1, and 2026.1.2, an authorization bypass in the poll plugin allowed authenticated users to vote on, remove votes from, or toggle the open/closed status of polls they did not have access to. By passing post_id as an array (e.g. post_id[]=&post_id[]=), the authorization check resolves to the accessible post while the poll lookup resolves to a different post's poll. This affects the vote, remove_vote, and toggle_status endpoints in DiscoursePoll::PollsController. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch.",
+  "aliases": [
+    "CVE-2026-31805"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.2"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.1"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/1a6b3cdd8939053f485a60a6ea004a40878392c4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-fgxm-prjv-g823"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31805"
+    }
+  ],
+  "published": "2026-03-27T07:10:31.444Z",
+  "modified": "2026-03-27T07:40:55.991Z"
+}
