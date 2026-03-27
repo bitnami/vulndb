@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-30888",
+  "summary": "Discourse has moderator privilege escalation via arbitrary post_id in suspend/silence endpoint",
+  "details": "Discourse is an open-source discussion platform. Versions prior to 2026.3.0, 2026.2.1, and 2026.1.2 allow a moderator to edit site policy documents (ToS, guidelines, privacy policy) that they are explicitly prohibited from modifying. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-30888"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-jj9p-p7m6-jq96"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30888"
+    }
+  ],
+  "published": "2026-03-26T23:42:24.142Z",
+  "modified": "2026-03-27T00:11:51.506Z"
+}

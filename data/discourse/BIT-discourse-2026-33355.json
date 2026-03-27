@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-33355",
+  "summary": "Discourse filters whisper posts from private-posts feed",
+  "details": "Discourse is an open-source discussion platform. Prior to versions 2026.3.0, 2026.2.1, and 2026.1.2, the `/private-posts` endpoint did not apply post-type visibility filtering, allowing regular PM participants to see whisper posts in PM topics they had access to. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-33355"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.2"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.1"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/84e5865a279716c6866e8c0648d1d8b42320603c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/d25b8ee9ee182dbb34e92b34e39878ce4d59bcdc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/d2f317271ad7638f1e2791905472ebd9370946d1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-g4v5-6gfp-3hjq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33355"
+    }
+  ],
+  "published": "2026-03-26T23:42:40.850Z",
+  "modified": "2026-03-27T00:11:51.506Z"
+}
