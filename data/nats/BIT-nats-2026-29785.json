@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-29785",
+  "summary": "NATS Server panic via malicious compression on leafnode port",
+  "details": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.14 and 2.12.5, if the nats-server has the \"leafnode\" configuration enabled (not default), then anyone who can connect can crash the nats-server by triggering a panic. This happens pre-authentication and requires that compression be enabled (which it is, by default, when leafnodes are used). Versions 2.11.14 and 2.12.5 contain a fix. As a workaround, disable compression on the leafnode port.",
+  "aliases": [
+    "CVE-2026-29785"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.14"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://advisories.nats.io/CVE/secnote-2026-04.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/commit/a1488de6f2ba6e666aef0f9cce0016f7f167d6a8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-52jh-2xxh-pwh6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29785"
+    }
+  ],
+  "published": "2026-03-27T17:45:10.061Z",
+  "modified": "2026-03-27T18:14:10.313Z"
+}

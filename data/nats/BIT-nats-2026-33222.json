@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-33222",
+  "summary": "NATS JetStream has an authorization bypass through its Management API",
+  "details": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, users with JetStream admin API access to restore one stream could restore to other stream names, impacting data which should have been protected against them. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, if developers have configured users to have limited JetStream restore permissions, temporarily remove those permissions.",
+  "aliases": [
+    "CVE-2026-33222"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.15"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://advisories.nats.io/CVE/secnote-2026-12.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-9983-vrx2-fg9c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33222"
+    }
+  ],
+  "published": "2026-03-27T17:45:19.827Z",
+  "modified": "2026-03-27T18:14:10.313Z"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-33247",
+  "summary": "NATS credentials are exposed in monitoring port via command-line argv",
+  "details": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Prior to versions 2.11.15 and 2.12.6, if a nats-server is run with static credentials for all clients provided via argv (the command-line), then those credentials are visible to any user who can see the monitoring port, if that too is enabled. The `/debug/vars` end-point contains an unredacted copy of argv. Versions 2.11.15 and 2.12.6 contain a fix. As a workaround, configure credentials inside a configuration file instead of via argv, and do not enable the monitoring port if using secrets in argv. Best practice remains to not expose the monitoring port to the Internet, or to untrusted network sources.",
+  "aliases": [
+    "CVE-2026-33247"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.15"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://advisories.nats.io/CVE/secnote-2026-14.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-x6g4-f6q3-fqvv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33247"
+    }
+  ],
+  "published": "2026-03-27T17:45:24.871Z",
+  "modified": "2026-03-27T18:14:10.313Z"
+}
