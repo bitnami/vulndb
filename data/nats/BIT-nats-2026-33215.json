@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-33215",
+  "summary": "NATS is vulnerable to MQTT hijacking via Client ID",
+  "details": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. The nats-server provides an MQTT client interface. Prior to versions 2.11.15 and 2.12.5, Sessions and Messages can by hijacked via MQTT Client ID malfeasance. Versions 2.11.15 and 2.12.5 patch the issue. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-33215"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.15"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://advisories.nats.io/CVE/secnote-2026-06.tx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-fcjp-h8cc-6879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33215"
+    }
+  ],
+  "published": "2026-03-27T08:47:06.598Z",
+  "modified": "2026-03-27T09:17:00.854Z"
+}

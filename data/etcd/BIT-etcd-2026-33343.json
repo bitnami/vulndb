@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-etcd-2026-33343",
+  "summary": "etcd: Nested etcd transactions bypass RBAC authorization checks",
+  "details": "etcd is a distributed key-value store for the data of a distributed system. Prior to versions 3.4.42, 3.5.28, and 3.6.9, an authenticated user with RBAC restricted permissions on key ranges can use nested transactions to bypass all key-level authorization. This allows any authenticated user with direct access to etcd to effectively ignore all key range restrictions, accessing the entire etcd data store. Kubernetes does not rely on etcd’s built-in authentication and authorization. Instead, the API server handles authentication and authorization itself, so typical Kubernetes deployments are not affected. Versions 3.4.42, 3.5.28, and 3.6.9 contain a patch. If upgrading is not immediately possible, reduce exposure by treating the affected RPCs as unauthenticated in practice. Restrict network access to etcd server ports so only trusted components can connect and require strong client identity at the transport layer, such as mTLS with tightly scoped client certificate distribution.",
+  "aliases": [
+    "CVE-2026-33343"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "etcd",
+        "purl": "pkg:bitnami/etcd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.42"
+            },
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.28"
+            },
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.6.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:etcd:etcd:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/etcd-io/etcd/security/advisories/GHSA-rfx7-8w68-q57q"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33343"
+    }
+  ],
+  "published": "2026-03-27T08:40:02.410Z",
+  "modified": "2026-03-27T09:17:00.854Z"
+}
