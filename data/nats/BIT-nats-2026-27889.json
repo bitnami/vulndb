@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-27889",
+  "summary": "NATS: Pre-auth remote server crash via WebSocket frame length overflow in wsRead",
+  "details": "NATS-Server is a High-Performance server for NATS.io, a cloud and edge native messaging system. Starting in version 2.2.0 and prior to versions 2.11.14 and 2.12.5, a missing sanity check on a WebSockets frame could trigger a server panic in the nats-server.  This happens before authentication, and so is exposed to anyone who can connect to the websockets port. Versions 2.11.14 and 2.12.5 contains a fix. A workaround is available. The vulnerability only affects deployments which use WebSockets and which expose the network port to untrusted end-points. If one is able to do so, a defense in depth of restricting either of these will mitigate the attack.",
+  "aliases": [
+    "CVE-2026-27889"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.2.0"
+            },
+            {
+              "fixed": "2.11.14"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://advisories.nats.io/CVE/secnote-2026-03.txt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-pq2q-rcw4-3hr6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27889"
+    }
+  ],
+  "published": "2026-03-27T11:47:22.988Z",
+  "modified": "2026-03-27T12:16:52.978Z"
+}
