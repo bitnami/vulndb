@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-33408",
+  "summary": "Discourse has Improper Authorization in \"Post Edits\" Report For Moderators",
+  "details": "Discourse is an open-source discussion platform. Prior to versions 2026.3.0, 2026.2.1, and 2026.1.2, moderators were able to see the first 40 characters of post edits in PMs and private categories. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-33408"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.2"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.1"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/3bf3793a708662716c0a4eaf64ae091abe71ab4c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/473288219e93cd17576cf15e4f0b9e388a31d0c1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/62721429d4402505d21280bcbe5894032447d800"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-wf9r-386h-g29c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33408"
+    }
+  ],
+  "published": "2026-03-27T05:43:35.141Z",
+  "modified": "2026-03-27T06:13:17.641Z"
+}

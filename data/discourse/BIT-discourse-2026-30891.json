@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-30891",
+  "summary": "Discourse hasUnauthorized Exposure of Private User Action Types",
+  "details": "Discourse is an open-source discussion platform. Prior to versions 2026.3.0, 2026.2.1, and 2026.1.2, a user could access another user's private activity due to insufficient authorization checks in the user actions endpoint. Versions 2026.3.0, 2026.2.1, and 2026.1.2 contain a patch.",
+  "aliases": [
+    "CVE-2026-30891"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.2"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.1"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-ww5f-24g5-c33g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30891"
+    }
+  ],
+  "published": "2026-03-27T05:43:13.062Z",
+  "modified": "2026-03-27T06:13:17.641Z"
+}
