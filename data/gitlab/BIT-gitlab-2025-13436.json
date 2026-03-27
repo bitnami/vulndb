@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-13436",
+  "summary": "Allocation of Resources Without Limits or Throttling in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.7 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 that could have allowed an authenticated user to cause a denial of service due to excessive resource consumption when handling certain CI-related inputs.",
+  "aliases": [
+    "CVE-2025-13436"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.7.0"
+            },
+            {
+              "fixed": "18.8.7"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.3"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/581372"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3418149"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13436"
+    }
+  ],
+  "published": "2026-03-27T12:11:11.989Z",
+  "modified": "2026-03-27T12:16:52.978Z"
+}

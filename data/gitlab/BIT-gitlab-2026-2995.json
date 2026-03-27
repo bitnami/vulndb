@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-2995",
+  "summary": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 15.4 before 18.8.7, 18.9 before 18.9.3, and 18.10 before 18.10.1 that could have allowed an authenticated user to add email addresses to targeted user accounts due to improper sanitization of HTML content.",
+  "aliases": [
+    "CVE-2026-2995"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.4.0"
+            },
+            {
+              "fixed": "18.8.7"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.3"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/03/25/patch-release-gitlab-18-10-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/591065"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3564600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2995"
+    }
+  ],
+  "published": "2026-03-27T12:15:11.976Z",
+  "modified": "2026-03-27T12:16:52.978Z"
+}
