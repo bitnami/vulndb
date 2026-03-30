@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-prestashop-2026-33673",
+  "summary": "PrestaShop has multiple stored XSS vulnerabilities via unprotected Template variables",
+  "details": "PrestaShop is an open source e-commerce web application. Versions prior to 8.2.5 and 9.1.0 are vulnerable to stored Cross-Site Scripting (stored XSS) vulnerabilities in the BO. An attacker who can inject data into the database, via limited back-office access or a previously existing vulnerability, can exploit unprotected variables in back-office templates. Versions 8.2.5 and 9.1.0 contain a fix. No known workarounds are available.",
+  "aliases": [
+    "CVE-2026-33673"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prestashop",
+        "purl": "pkg:bitnami/prestashop"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.2.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:php:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/releases/tag/8.2.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.1.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-35pf-37c6-jxjv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33673"
+    }
+  ],
+  "published": "2026-03-30T11:49:49.224Z",
+  "modified": "2026-03-30T12:13:12.971Z"
+}
