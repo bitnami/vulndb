@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-33869",
+  "summary": "Mastodon has a denial of service for quote authorization",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. In versions on the 4.5.x branch prior to 4.5.8 and on the 4.4.x branch prior to 4.4.15, an attacker that knows of a quote before it has reached a server can prevent it from being correctly processed on that server. The vulnerability has been patched in Mastodon 4.5.8 and 4.4.15. Mastodon 4.3 and earlier are not affected because they do not support quotes.",
+  "aliases": [
+    "CVE-2026-33869"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.4.0"
+            },
+            {
+              "fixed": "4.4.15"
+            },
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-q4g8-82c5-9h33"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33869"
+    }
+  ],
+  "published": "2026-03-31T08:45:37.827Z",
+  "modified": "2026-03-31T09:14:23.567Z"
+}
