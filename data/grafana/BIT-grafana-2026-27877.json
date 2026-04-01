@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-27877",
+  "summary": "Public dashboards discloses all direct mode datasources",
+  "details": "When using public dashboards and direct data-sources, all direct data-sources' passwords are exposed despite not being used in dashboards.\n\nNo passwords of proxied data-sources are exposed. We encourage all direct data-sources to be converted to proxied data-sources as far as possible to improve your deployments' security.",
+  "aliases": [
+    "CVE-2026-27877"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.3.0"
+            },
+            {
+              "introduced": "11.6.14"
+            },
+            {
+              "fixed": "12.0.0"
+            },
+            {
+              "introduced": "12.1.10"
+            },
+            {
+              "fixed": "12.2.0"
+            },
+            {
+              "introduced": "12.2.8"
+            },
+            {
+              "fixed": "12.3.0"
+            },
+            {
+              "introduced": "12.3.6"
+            },
+            {
+              "fixed": "12.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-27877"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27877"
+    }
+  ],
+  "published": "2026-04-01T08:41:09.536Z",
+  "modified": "2026-04-01T09:11:42.692Z"
+}

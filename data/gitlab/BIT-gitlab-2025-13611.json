@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-gitlab-2025-13611",
   "summary": "Insertion of Sensitive Information into Log File in GitLab",
-  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.2 before 18.5.5, 18.6 before 18.6.3, and 18.7 before 18.7.1 that could have allowed an authenticated user with access to certain logs to obtain sensitive tokens under specific conditions.",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.2 before 18.5.5 and 18.6 before 18.6.3 that could have allowed an authenticated user with access to certain logs to obtain sensitive tokens under specific conditions.",
   "aliases": [
     "CVE-2025-13611"
   ],
@@ -72,5 +72,5 @@
     }
   ],
   "published": "2025-12-02T12:03:48.649Z",
-  "modified": "2026-03-31T09:14:23.567Z"
+  "modified": "2026-04-01T09:11:42.692Z"
 }

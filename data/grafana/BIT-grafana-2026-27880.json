@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-27880",
+  "summary": "OpenFeature evaluation API reads input data with no bounds",
+  "details": "The OpenFeature feature toggle evaluation endpoint reads unbounded values into memory, which can cause out-of-memory crashes.",
+  "aliases": [
+    "CVE-2026-27880"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "12.1.0"
+            },
+            {
+              "introduced": "12.1.10"
+            },
+            {
+              "fixed": "12.2.0"
+            },
+            {
+              "introduced": "12.2.8"
+            },
+            {
+              "fixed": "12.3.0"
+            },
+            {
+              "introduced": "12.3.6"
+            },
+            {
+              "fixed": "12.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-27880"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27880"
+    }
+  ],
+  "published": "2026-04-01T08:41:13.459Z",
+  "modified": "2026-04-01T09:11:42.692Z"
+}
