@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-27876",
+  "summary": "RCE on Grafana via sqlExpressions",
+  "details": "A chained attack via SQL Expressions and a Grafana Enterprise plugin can lead to a remote arbitrary code execution impact (RCE). This is enabled by a feature in Grafana (OSS), so all users are always recommended to update to avoid future attack vectors going this path.\n\nOnly instances with the sqlExpressions feature toggle enabled are vulnerable.",
+  "aliases": [
+    "CVE-2026-27876"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "11.6.0"
+            },
+            {
+              "introduced": "11.6.14"
+            },
+            {
+              "fixed": "12.0.0"
+            },
+            {
+              "introduced": "12.1.10"
+            },
+            {
+              "fixed": "12.2.0"
+            },
+            {
+              "introduced": "12.2.8"
+            },
+            {
+              "fixed": "12.3.0"
+            },
+            {
+              "introduced": "12.3.6"
+            },
+            {
+              "fixed": "12.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-27876"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27876"
+    }
+  ],
+  "published": "2026-04-01T08:41:07.673Z",
+  "modified": "2026-04-01T09:11:42.692Z"
+}

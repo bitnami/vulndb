@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-27879",
+  "summary": "Query resampling can cause unbounded memory allocations",
+  "details": "A resample query can be used to trigger out-of-memory crashes in Grafana.",
+  "aliases": [
+    "CVE-2026-27879"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.0.0"
+            },
+            {
+              "introduced": "11.6.14"
+            },
+            {
+              "fixed": "12.0.0"
+            },
+            {
+              "introduced": "12.1.10"
+            },
+            {
+              "fixed": "12.2.0"
+            },
+            {
+              "introduced": "12.2.8"
+            },
+            {
+              "fixed": "12.3.0"
+            },
+            {
+              "introduced": "12.3.6"
+            },
+            {
+              "fixed": "12.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-27879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27879"
+    }
+  ],
+  "published": "2026-04-01T08:41:11.477Z",
+  "modified": "2026-04-01T09:11:42.692Z"
+}
