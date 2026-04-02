@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
         }
       ],
       "ranges": [
@@ -41,7 +41,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:prestashop:prestashop:*:*:*:*:*:php:*:*"
     ]
@@ -65,5 +65,5 @@
     }
   ],
   "published": "2026-03-30T11:49:49.224Z",
-  "modified": "2026-03-30T12:13:12.971Z"
+  "modified": "2026-04-02T18:17:13.981Z"
 }
