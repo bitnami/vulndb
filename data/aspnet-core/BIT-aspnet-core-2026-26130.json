@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-aspnet-core-2026-26130",
+  "summary": "ASP.NET Core Denial of Service Vulnerability",
+  "details": "Allocation of resources without limits or throttling in ASP.NET Core allows an unauthorized attacker to deny service over a network.",
+  "aliases": [
+    "CVE-2026-26130"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "aspnet-core",
+        "purl": "pkg:bitnami/aspnet-core"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.25"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.14"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:asp.net_core:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26130"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26130"
+    }
+  ],
+  "published": "2026-04-03T14:36:05.022Z",
+  "modified": "2026-04-03T15:12:42.633Z"
+}
