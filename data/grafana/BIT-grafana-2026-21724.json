@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-21724",
+  "summary": "Missing Protected-field Authorization in Provisioning Contact Points API",
+  "details": "A vulnerability has been discovered in Grafana OSS where an authorization bypass in the provisioning contact points API allows users with Editor role to modify protected webhook URLs without the required alert.notifications.receivers.protected:write permission.",
+  "aliases": [
+    "CVE-2026-21724"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.6.9"
+            },
+            {
+              "fixed": "11.6.14"
+            },
+            {
+              "introduced": "12.1.5"
+            },
+            {
+              "fixed": "12.1.10"
+            },
+            {
+              "introduced": "12.2.2"
+            },
+            {
+              "fixed": "12.2.8"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-21724"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21724"
+    }
+  ],
+  "published": "2026-04-03T14:41:17.572Z",
+  "modified": "2026-04-03T15:12:42.633Z"
+}
