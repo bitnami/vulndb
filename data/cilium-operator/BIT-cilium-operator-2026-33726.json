@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-cilium-operator-2026-33726",
+  "summary": "Cilium L7 proxy may bypass Kubernetes NetworkPolicy for same-node traffic",
+  "details": "Cilium is a networking, observability, and security solution with an eBPF-based dataplane. Prior to versions 1.17.14, 1.18.8, and 1.19.2, Ingress Network Policies are not enforced for traffic from pods to L7 Services (Envoy, GAMMA) with a local backend on the same node, when Per-Endpoint Routing is enabled and BPF Host Routing is disabled. Per-Endpoint Routing is disabled by default, but is automatically enabled in deployments using cloud IPAM, including Cilium ENI on EKS (`eni.enabled`), AlibabaCloud ENI (`alibabacloud.enabled`), Azure IPAM (`azure.enabled`, but not AKS BYOCNI), and some GKE deployments (`gke.enabled`; managed offerings such as GKE Dataplane V2 may use different defaults). It is typically not enabled in tunneled deployments, and chaining deployments are not affected. In practice, Amazon EKS with Cilium ENI mode is likely the most common affected environment. Versions 1.17.14, 1.18.8, and 1.19.2 contain a patch. There is currently no officially verified or comprehensive workaround for this issue. The only option would be to disable per-endpoint routes, but this will likely cause disruptions to ongoing connections, and potential conflicts if running in cloud providers.",
+  "aliases": [
+    "CVE-2026-33726"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium-operator",
+        "purl": "pkg:bitnami/cilium-operator"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.17.14"
+            },
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "1.18.8"
+            },
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#routing"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/network/kubernetes/policy/#network-policy"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/network/servicemesh/l7-traffic-management"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.cilium.io/en/stable/operations/performance/tuning/#ebpf-host-routing"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/44693"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-hxv8-4j4r-cqgv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33726"
+    }
+  ],
+  "published": "2026-04-03T08:36:52.490Z",
+  "modified": "2026-04-03T09:14:06.943Z"
+}
