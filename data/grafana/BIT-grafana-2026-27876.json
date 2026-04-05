@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2026-27876",
   "summary": "RCE on Grafana via sqlExpressions",
-  "details": "A chained attack via SQL Expressions and a Grafana Enterprise plugin can lead to a remote arbitrary code execution impact (RCE). This is enabled by a feature in Grafana (OSS), so all users are always recommended to update to avoid future attack vectors going this path.\n\nOnly instances with the sqlExpressions feature toggle enabled are vulnerable.",
+  "details": "A chained attack via SQL Expressions and a Grafana Enterprise plugin can lead to a remote arbitrary code execution impact (RCE). This is enabled by a feature in Grafana (OSS), so all users are always recommended to update to avoid future attack vectors going this path.\n\nOnly instances with the sqlExpressions feature toggle enabled are vulnerable.\n\nOnly instances in the following version ranges are affected:\n\n- 11.6.0 (inclusive) to 11.6.14 (exclusive): 11.6.14 has the fix. 11.5 and below are not affected.\n- 12.0.0 (inclusive) to 12.1.10 (exclusive): 12.1.10 has the fix. 12.0 did not receive an update, as it is end-of-life.\n- 12.2.0 (inclusive) to 12.2.8 (exclusive): 12.2.8 has the fix.\n- 12.3.0 (inclusive) to 12.3.6 (exclusive): 12.3.6 has the fix.\n- 12.4.0 (inclusive) to 12.4.2 (exclusive): 12.4.2 has the fix. 13.0.0 and above also have the fix: no v13 release is affected.",
   "aliases": [
     "CVE-2026-27876"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-04-01T08:41:07.673Z",
-  "modified": "2026-04-01T09:11:42.692Z"
+  "modified": "2026-04-05T06:12:59.594Z"
 }
