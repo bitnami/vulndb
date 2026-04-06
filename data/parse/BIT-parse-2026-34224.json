@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-34224",
+  "summary": "Parse Server: MFA single-use token bypass via concurrent authData login requests",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.64 and 9.7.0, an attacker who possesses a valid authentication provider token and a single MFA recovery code or SMS one-time password can create multiple authenticated sessions by sending concurrent login requests via the authData login endpoint. This defeats the single-use guarantee of MFA recovery codes and SMS one-time passwords, allowing session persistence even after the legitimate user revokes detected sessions. This issue has been patched in versions 8.6.64 and 9.7.0.",
+  "aliases": [
+    "CVE-2026-34224"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.64"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/661f160edac8daac0486bc94413cf9652876ab92"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/commit/e7efbebba398ce6abe5b6b6fb9829c6ebe310fbf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10326"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10327"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-w73w-g5xw-rwhf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34224"
+    }
+  ],
+  "published": "2026-04-06T14:49:26.245Z",
+  "modified": "2026-04-06T15:13:09.641Z"
+}
