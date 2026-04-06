@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-minio-2026-34204",
   "summary": "MinIO is Vulnerable to SSE Metadata Injection via Replication Headers",
-  "details": "MinIO is a high-performance object storage system. A flaw in extractMetadataFromMime() allows any authenticated user with s3:PutObject permission to inject internal server-side encryption metadata into objects by sending crafted X-Minio-Replication-* headers on a normal PutObject request.",
+  "details": "MinIO is a high-performance object storage system. Prior to version 2026.03.26, a flaw in extractMetadataFromMime() allows any authenticated user with s3:PutObject permission to inject internal server-side encryption metadata into objects by sending crafted X-Minio-Replication-* headers on a normal PutObject request. This issue has been patched in version 2026.03.26.",
   "aliases": [
     "CVE-2026-34204"
   ],
@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "2024.03.30"
             }
           ]
         }
@@ -48,5 +48,5 @@
     }
   ],
   "published": "2026-04-06T09:26:13.602Z",
-  "modified": "2026-04-06T10:00:07.144Z"
+  "modified": "2026-04-06T11:34:08.453Z"
 }
