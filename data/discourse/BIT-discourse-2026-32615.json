@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-32615",
+  "summary": "Discourse: Category group moderators can perform actions on topics in restricted categories without read access",
+  "details": "Discourse is an open-source discussion platform. From versions 2026.1.0 to before 2026.1.3, and 2026.2.0 to before 2026.2.2, category group moderators could perform privileged actions on topics inside private categories they did not have read access to. This issue has been patched in versions 2026.1.3, 2026.2.2, and 2026.3.0.",
+  "aliases": [
+    "CVE-2026-32615"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.3"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/5a00b47523ec70cbb6e8efc3ac7677cc0a91448b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-pr9m-5hpq-wc57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32615"
+    }
+  ],
+  "published": "2026-04-07T08:43:53.093Z",
+  "modified": "2026-04-07T09:14:25.218Z"
+}
