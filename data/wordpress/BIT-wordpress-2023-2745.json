@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-2023-2745",
+  "summary": "WordPress Core < 6.2.1 - Directory Traversal",
   "details": "WordPress Core is vulnerable to Directory Traversal in versions up to, and including, 6.2, via the ‘wp_lang’ parameter. This allows unauthenticated attackers to access and load arbitrary translation files. In cases where an attacker is able to upload a crafted translation file onto the site, such as via an upload form, this could be also used to perform a Cross-Site Scripting attack.",
   "aliases": [
     "CVE-2023-2745"
@@ -198,5 +199,5 @@
     }
   ],
   "published": "2024-03-06T11:09:15.187Z",
-  "modified": "2025-04-25T07:43:14.470Z"
+  "modified": "2026-04-08T21:13:57.297Z"
 }
