@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-35200",
+  "summary": "Parse Server has a file upload Content-Type override via extension mismatch",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.73 and 9.7.1, a file can be uploaded with a filename extension that passes the file extension allowlist (e.g., .txt) but with a Content-Type header that differs from the extension (e.g., text/html). The Content-Type is passed to the storage adapter without consistency validation. Storage adapters that store and serve the provided Content-Type (such as S3 or GCS) serve the file with the mismatched Content-Type. The default GridFS adapter is not affected because it derives Content-Type from the filename at serving time. This vulnerability is fixed in 8.6.73 and 9.7.1.",
+  "aliases": [
+    "CVE-2026-35200"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.73"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10383"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10384"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-vr5f-2r24-w5hc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35200"
+    }
+  ],
+  "published": "2026-04-08T14:51:33.993Z",
+  "modified": "2026-04-08T15:15:28.618Z"
+}
