@@ -1,6 +1,7 @@
 {
   "schema_version": "1.5.0",
   "id": "BIT-wordpress-multisite-2023-5692",
+  "summary": "WordPress Core <= 6.4.3 - Sensitive Information Exposure via redirect_guess_404_permalink",
   "details": "WordPress Core is vulnerable to Sensitive Information Exposure in versions up to, and including,  6.4.3 via the redirect_guess_404_permalink function. This can allow unauthenticated attackers to expose the slug of a custom post whose 'publicly_queryable' post status has been set to 'false'.",
   "aliases": [
     "CVE-2023-5692"
@@ -66,5 +67,5 @@
     }
   ],
   "published": "2024-04-09T10:58:38.759Z",
-  "modified": "2025-04-03T14:40:37.652Z"
+  "modified": "2026-04-08T18:15:20.423Z"
 }
