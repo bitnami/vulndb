@@ -61,7 +61,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
     ]
   },
   "references": [
@@ -75,5 +76,5 @@
     }
   ],
   "published": "2026-04-01T08:41:07.673Z",
-  "modified": "2026-04-06T15:13:09.641Z"
+  "modified": "2026-04-08T09:14:18.943Z"
 }
