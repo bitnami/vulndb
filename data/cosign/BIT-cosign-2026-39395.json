@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-cosign-2026-39395",
+  "summary": "Cosign's verify-blob-attestation reports false positive when payload parsing fails",
+  "details": "Cosign provides code signing and transparency for containers and binaries. Prior to 3.0.6 and 2.6.3, cosign verify-blob-attestation may erroneously report a \"Verified OK\" result for attestations with malformed payloads or mismatched predicate types. For old-format bundles and detached signatures, this was due to a logic flaw in the error handling of the predicate type validation. For new-format bundles, the predicate type validation was bypassed completely. This vulnerability is fixed in 3.0.6 and 2.6.3.",
+  "aliases": [
+    "CVE-2026-39395"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cosign",
+        "purl": "pkg:bitnami/cosign"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.3"
+            },
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sigstore:cosign:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sigstore/cosign/security/advisories/GHSA-w6c6-c85g-mmv6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39395"
+    }
+  ],
+  "published": "2026-04-09T08:37:13.235Z",
+  "modified": "2026-04-09T09:13:50.652Z"
+}
