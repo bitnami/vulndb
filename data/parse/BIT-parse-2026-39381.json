@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-39381",
+  "summary": "Parse Server's Endpoint `/sessions/me` bypasses `_Session` `protectedFields`",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.8.0 and 8.6.75, the GET /sessions/me endpoint returns _Session fields that the server operator explicitly configured as protected via the protectedFields server option. Any authenticated user can retrieve their own session's protected fields with a single request. The equivalent GET /sessions and GET /sessions/:objectId endpoints correctly strip protected fields. This vulnerability is fixed in 9.8.0 and 8.6.75.",
+  "aliases": [
+    "CVE-2026-39381"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "8.6.75"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.8.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10406"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10407"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-g4v2-qx3q-4p64"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39381"
+    }
+  ],
+  "published": "2026-04-09T14:37:43.255Z",
+  "modified": "2026-04-09T15:05:10.890Z"
+}
