@@ -49,7 +49,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2026-02-20T09:53:00.269Z",
-  "modified": "2026-03-20T13:43:29.174Z"
+  "modified": "2026-04-11T12:10:32.899Z"
 }

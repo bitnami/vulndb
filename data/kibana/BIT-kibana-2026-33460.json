@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-33460",
+  "summary": "Incorrect Authorization in Kibana Fleet Leading to Information Disclosure",
+  "details": "Incorrect Authorization (CWE-863) in Kibana can lead to cross-space information disclosure via Privilege Abuse (CAPEC-122). A user with Fleet agent management privileges in one Kibana space can retrieve Fleet Server policy details from other spaces through an internal enrollment endpoint. The endpoint bypasses space-scoped access controls by using an unscoped internal client, returning operational identifiers, policy names, management state, and infrastructure linkage details from spaces the user is not authorized to access.",
+  "aliases": [
+    "CVE-2026-33460"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.14"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.2.8"
+            },
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "9.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-14-9-2-8-9-3-3-security-update-esa-2026-25/385813"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33460"
+    }
+  ],
+  "published": "2026-04-11T11:41:25.020Z",
+  "modified": "2026-04-11T12:10:32.899Z"
+}
