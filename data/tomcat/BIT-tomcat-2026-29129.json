@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-29129",
+  "summary": "Apache Tomcat: TLS cipher order is not preserved",
+  "details": "Configured cipher preference order not preserved vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.16 through 11.0.18, from 10.1.51 through 10.1.52, from 9.0.114 through 9.0.115.\n\nUsers are recommended to upgrade to version 11.0.20, 10.1.53 or 9.0.116, which fix the issue.",
+  "aliases": [
+    "CVE-2026-29129"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.114"
+            },
+            {
+              "fixed": "9.0.116"
+            },
+            {
+              "introduced": "10.1.51"
+            },
+            {
+              "fixed": "10.1.53"
+            },
+            {
+              "introduced": "11.0.16"
+            },
+            {
+              "fixed": "11.0.20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/09/22"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/r4h1t6f8xhxsxfm6c2z5cprolsosho3f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29129"
+    }
+  ],
+  "published": "2026-04-11T17:51:00.180Z",
+  "modified": "2026-04-11T18:09:27.041Z"
+}
