@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-34538",
+  "summary": "Apache Airflow: Authorization bypass in DagRun wait endpoint (XCom exposure)",
+  "details": "Apache Airflow versions 3.0.0 through 3.1.8 DagRun wait endpoint returns XCom result values even to users who only have DAG Run read permissions, such as the Viewer role.This behavior conflicts with the FAB RBAC model, which treats XCom as a separate protected resource, and with the security model documentation that defines the Viewer role as read-only.\n\nAirflow uses the FAB Auth Manager to manage access control on a per-resource basis. The Viewer role is intended to be read-only by default, and the security model documentation defines Viewer users as those who can inspect DAGs without accessing sensitive execution results.\n\nUsers are recommended to upgrade to Apache Airflow 3.2.0 which resolves this issue.",
+  "aliases": [
+    "CVE-2026-34538"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/09/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/64415"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/9mq3msqhmgjwdzbr6bgthj4brb3oz9fl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34538"
+    }
+  ],
+  "published": "2026-04-12T05:37:35.147Z",
+  "modified": "2026-04-12T06:09:50.703Z"
+}
