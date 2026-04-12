@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2025-57735",
+  "summary": "Apache Airflow: Airflow Logout Not Invalidating JWT",
+  "details": "When user logged out, the JWT token the user had authtenticated with was not invalidated, which could lead to reuse of that token in case it was intercepted. In Airflow 3.2 we implemented the mechanism that implements token invalidation at logout. Users who are concerned about the logout scenario and possibility of intercepting the tokens, should upgrade to Airflow 3.2+\n\n\n\nUsers are recommended to upgrade to version 3.2.0, which fixes this issue.",
+  "aliases": [
+    "CVE-2025-57735"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/09/16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/56633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/61339"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/ovn8mpd8zkc604hojt7x3wsw3kc60x98"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57735"
+    }
+  ],
+  "published": "2026-04-12T14:37:29.495Z",
+  "modified": "2026-04-12T15:10:08.840Z"
+}
