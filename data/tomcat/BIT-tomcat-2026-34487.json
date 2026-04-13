@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-34487",
+  "summary": "Apache Tomcat: Cloud membership for clustering component exposed the Kubernetes bearer token",
+  "details": "Insertion of Sensitive Information into Log File vulnerability in the cloud membership for clustering component of Apache Tomcat exposed the Kubernetes bearer token.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.20, from 10.1.0 through 10.1.53, from 9.0.13 through 9.0.116.\n\nUsers are recommended to upgrade to version 11.0.21, 10.1.54 or 9.0.117, which fix the issue.",
+  "aliases": [
+    "CVE-2026-34487"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.13"
+            },
+            {
+              "fixed": "9.0.117"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.54"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/09/28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/4xpkwolpkrj8v5xzp5nyovtlqp3y850h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34487"
+    }
+  ],
+  "published": "2026-04-13T10:20:00.791Z",
+  "modified": "2026-04-13T10:42:00.723Z"
+}
