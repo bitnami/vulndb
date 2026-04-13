@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-9484",
+  "summary": "Missing Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 16.6 before 18.8.9, 18.9 before 18.9.5, and 18.10 before 18.10.3 that under certain circumstances could have allowed an authenticated user to have access to other users' email addresses via certain GraphQL queries.",
+  "aliases": [
+    "CVE-2025-9484"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.6.0"
+            },
+            {
+              "fixed": "18.8.9"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.5"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/04/08/patch-release-gitlab-18-10-3-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/565363"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3303810"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9484"
+    }
+  ],
+  "published": "2026-04-13T06:08:58.190Z",
+  "modified": "2026-04-13T06:11:47.324Z"
+}
