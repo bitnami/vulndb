@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wiremock-2023-50069",
+  "details": "WireMock with GUI versions 3.2.0.0 through 3.0.4.0 are vulnerable to stored cross-site scripting (SXSS) through the recording feature. An attacker can host a malicious payload and perform a test mapping pointing to the attacker's file, and the result will render on the Matched page in the Body area, resulting in the execution of the payload. This occurs because the response body is not validated or sanitized.",
+  "aliases": [
+    "CVE-2023-50069"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wiremock",
+        "purl": "pkg:bitnami/wiremock"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.4"
+            },
+            {
+              "last_affected": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wiremock:wiremock:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/holomekc/wiremock/issues/51"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-50069"
+    }
+  ],
+  "published": "2026-04-13T11:50:15.583Z",
+  "modified": "2026-04-13T12:09:46.643Z"
+}
