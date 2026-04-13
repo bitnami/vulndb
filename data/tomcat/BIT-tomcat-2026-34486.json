@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-34486",
+  "summary": "Apache Tomcat: Fix for CVE-2026-29146 allowed bypass of EncryptInterceptor",
+  "details": "Missing Encryption of Sensitive Data vulnerability in Apache Tomcat due to the fix for CVE-2026-29146 allowing the bypass of the EncryptInterceptor.\n\nThis issue affects Apache Tomcat: 11.0.20, 10.1.53, 9.0.116.\n\nUsers are recommended to upgrade to version 11.0.21, 10.1.54 or 9.0.117, which fix the issue.",
+  "aliases": [
+    "CVE-2026-34486"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.116"
+            },
+            {
+              "fixed": "9.0.117"
+            },
+            {
+              "introduced": "10.1.53"
+            },
+            {
+              "fixed": "10.1.54"
+            },
+            {
+              "introduced": "11.0.20"
+            },
+            {
+              "fixed": "11.0.21"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/9510k5p5zdvt9pkkgtyp85mvwxo2qrly"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34486"
+    }
+  ],
+  "published": "2026-04-13T05:53:08.595Z",
+  "modified": "2026-04-13T06:11:47.324Z"
+}
