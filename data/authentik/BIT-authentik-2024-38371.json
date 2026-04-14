@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2024-38371",
+  "summary": "Insufficient access control for OAuth2 Device Code flow in authentik",
+  "details": "authentik is an open-source Identity Provider. Access restrictions assigned to an application were not checked when using the OAuth2 Device code flow. This could potentially allow users without the correct authorization to get OAuth tokens for an application and access it. This issue has been patched in version(s) 2024.6.0, 2024.2.4 and 2024.4.3.",
+  "aliases": [
+    "CVE-2024-38371"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2024.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2024.2.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2024.4.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2024.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-jq3m-37m7-gp45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38371"
+    }
+  ],
+  "published": "2026-04-14T11:36:13.065Z",
+  "modified": "2026-04-14T12:10:57.488Z"
+}
