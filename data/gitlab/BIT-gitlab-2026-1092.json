@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-1092",
+  "summary": "Improper Validation of Specified Quantity in Input in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 12.10 before 18.8.9, 18.9 before 18.9.5, and 18.10 before 18.10.3 that could have allowed an unauthenticated user to cause denial of service due to improper input validation of JSON payloads.",
+  "aliases": [
+    "CVE-2026-1092"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.10.0"
+            },
+            {
+              "fixed": "18.8.9"
+            },
+            {
+              "introduced": "18.9.0"
+            },
+            {
+              "fixed": "18.9.5"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/04/08/patch-release-gitlab-18-10-3-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/586479"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3487030"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1092"
+    }
+  ],
+  "published": "2026-04-15T21:06:43.198Z",
+  "modified": "2026-04-15T21:09:10.942Z"
+}
