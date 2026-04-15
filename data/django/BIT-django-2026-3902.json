@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-django-2026-3902",
+  "summary": "ASGI header spoofing via underscore/hyphen conflation",
+  "details": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`ASGIRequest` allows a remote attacker to spoof headers by exploiting an ambiguous mapping of two header variants (with hyphens or with underscores) to a single version with underscores.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
+  "aliases": [
+    "CVE-2026-3902"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.30"
+            },
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "fixed": "5.2.13"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3902"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+    }
+  ],
+  "published": "2026-04-15T05:38:19.369Z",
+  "modified": "2026-04-15T06:10:10.098Z"
+}
