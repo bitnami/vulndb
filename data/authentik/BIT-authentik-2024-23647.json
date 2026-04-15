@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2024-23647",
+  "summary": "PKCE downgrade attack in Authentik",
+  "details": "Authentik is an open-source Identity Provider. There is a bug in our implementation of PKCE that allows an attacker to circumvent the protection that PKCE offers. PKCE adds the code_challenge parameter to the authorization request and adds the code_verifier parameter to the token request. Prior to 2023.8.7 and 2023.10.7, a downgrade scenario is possible: if the attacker removes the code_challenge parameter from the authorization request, authentik will not do the PKCE check. Because of this bug, an attacker can circumvent the protection PKCE offers, such as CSRF attacks and code injection attacks.  Versions 2023.8.7 and 2023.10.7 fix the issue.",
+  "aliases": [
+    "CVE-2024-23647"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2023.8.7"
+            },
+            {
+              "introduced": "2023.10.0"
+            },
+            {
+              "fixed": "2023.10.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/38e04ae12720e5d81b4f7ac77997eb8d1275d31a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-mrx3-gxjx-hjqj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23647"
+    }
+  ],
+  "published": "2026-04-15T08:36:04.594Z",
+  "modified": "2026-04-15T09:13:56.434Z"
+}
