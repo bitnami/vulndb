@@ -150,6 +150,11 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2026-04
+
+- Attu
+- aws-java-sdk-bundle
+
 ### 2026-02
 
 - Rails
