@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-31923",
+  "summary": "Apache APISIX: Openid-connect `tls_verify` field is disabled by default",
+  "details": "Cleartext Transmission of Sensitive Information vulnerability in Apache APISIX.\n\nThis can occur due to `ssl_verify` in openid-connect plugin configuration being set to false by default.\nThis issue affects Apache APISIX: from 0.7 through 3.15.0.\n\nUsers are recommended to upgrade to version 3.16.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-31923"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.7.0"
+            },
+            {
+              "fixed": "3.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/14/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/0pjs72l7qj83j3srw1l1toyj24bsgkds"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31923"
+    }
+  ],
+  "published": "2026-04-16T08:50:35.967Z",
+  "modified": "2026-04-16T09:28:59.228Z"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2025-64521",
+  "summary": "authentik deactivated service accounts can authenticate to OAuth",
+  "details": "authentik is an open-source Identity Provider. Prior to versions 2025.8.5 and 2025.10.2, when authenticating with client_id and client_secret to an OAuth provider, authentik creates a service account for the provider. In previous authentik versions, authentication for this account was possible even when the account was deactivated. Other permissions are correctly applied and federation with other providers still take assigned policies correctly into account. authentik versions 2025.8.5 and 2025.10.2 fix this issue. A workaround involves adding a policy to the application that explicitly checks if the service account is still valid, and deny access if not.",
+  "aliases": [
+    "CVE-2025-64521"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.0.0-20251119140106-9dbdfc3f1be0"
+            },
+            {
+              "introduced": "2000.0.0"
+            },
+            {
+              "fixed": "2025.8.5"
+            },
+            {
+              "introduced": "2025.9.0"
+            },
+            {
+              "fixed": "2025.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/9dbdfc3f1be0f1be36f8efce2442897b2a54a71c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-xr73-jq5p-ch8r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64521"
+    }
+  ],
+  "published": "2026-04-16T08:51:01.066Z",
+  "modified": "2026-04-16T09:28:59.228Z"
+}
