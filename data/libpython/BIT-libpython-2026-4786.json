@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2026-4786",
+  "summary": "Incomplete mitigation of CVE-2026-4519, %action expansion for command injection to webbrowser.open()",
+  "details": "Mitgation of CVE-2026-4519 was incomplete. If the URL contained \"%action\" the mitigation could be bypassed for certain browser types the \"webbrowser.open()\" API could have commands injected into the underlying shell. See CVE-2026-4519 for details.",
+  "aliases": [
+    "CVE-2026-4786"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/c5767a72838a8dda9d6dc5d3558075b055c56bca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/d22922c8a7958353689dc4763dd72da2dea03fff"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f4654824ae0850ac87227fb270f9057477946769"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/148169"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/148170"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/JQDUNJVB4AQNTJECSUKOBDU3XCJIPSE5/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4786"
+    }
+  ],
+  "published": "2026-04-16T05:46:44.260Z",
+  "modified": "2026-04-16T06:14:23.365Z"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2024-52307",
+  "summary": "authentik allows a timing attack due to missing constant time comparison for metrics view",
+  "details": "authentik is an open-source identity provider. Due to the usage of a non-constant time comparison for the /-/metrics/ endpoint it was possible to brute-force the SECRET_KEY, which is used to authenticate the endpoint. The /-/metrics/ endpoint returns Prometheus metrics and is not intended to be accessed directly, as the Go proxy running in the authentik server container fetches data from this endpoint and serves it on a separate port (9300 by default), which can be scraped by Prometheus without being exposed publicly. authentik 2024.8.5 and 2024.10.3 fix this issue. Since the /-/metrics/ endpoint is not intended to be accessed publicly, requests to the endpoint can be blocked by the reverse proxy/load balancer used in conjunction with authentik.",
+  "aliases": [
+    "CVE-2024-52307"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2024.8.5"
+            },
+            {
+              "introduced": "2024.10.0"
+            },
+            {
+              "fixed": "2024.10.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/11/27/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/5ea4580884f99369f0ccfe484c04cb03a66e65b8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-2xrw-5f2x-m56j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-52307"
+    }
+  ],
+  "published": "2026-04-16T05:35:59.647Z",
+  "modified": "2026-04-16T06:14:23.365Z"
+}
