@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-31924",
+  "summary": "Apache APISIX: Plugin tencent-cloud-cls log export uses plaintext HTTP",
+  "details": "Cleartext Transmission of Sensitive Information vulnerability in Apache APISIX.\n\ntencent-cloud-cls log export uses plaintext HTTP\nThis issue affects Apache APISIX: from 2.99.0 through 3.15.0.\n\nUsers are recommended to upgrade to version 3.16.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-31924"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.99.0"
+            },
+            {
+              "fixed": "3.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/14/2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/sqxjjlt87c1q28db28ztdxylm5pgwohq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31924"
+    }
+  ],
+  "published": "2026-04-16T20:35:43.842Z",
+  "modified": "2026-04-16T21:10:59.979Z"
+}

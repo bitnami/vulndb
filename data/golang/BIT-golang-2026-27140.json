@@ -13,6 +13,12 @@
         "name": "golang",
         "purl": "pkg:bitnami/golang"
       },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
       "ranges": [
         {
           "type": "SEMVER",
@@ -35,7 +41,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Unknown",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
     ]
@@ -63,5 +69,5 @@
     }
   ],
   "published": "2026-04-13T05:43:35.566Z",
-  "modified": "2026-04-13T06:11:47.324Z"
+  "modified": "2026-04-16T21:10:59.979Z"
 }
