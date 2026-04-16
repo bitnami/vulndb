@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2024-21637",
+  "summary": "XSS in Authentik via JavaScript-URI as Redirect URI and form_post Response Mode",
+  "details": "Authentik is an open-source Identity Provider. Authentik is a vulnerable to a reflected Cross-Site Scripting vulnerability via JavaScript-URIs in OpenID Connect flows with `response_mode=form_post`. This relatively user could use the described attacks to perform a privilege escalation. This vulnerability has been patched in versions 2023.10.6 and 2023.8.6.",
+  "aliases": [
+    "CVE-2024-21637"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2023.8.0"
+            },
+            {
+              "fixed": "2023.8.6"
+            },
+            {
+              "introduced": "2023.10.0"
+            },
+            {
+              "fixed": "2023.10.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2023.10.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2023.8.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-rjpr-7w8c-gv3j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21637"
+    }
+  ],
+  "published": "2026-04-15T23:35:44.199Z",
+  "modified": "2026-04-16T00:10:47.460Z"
+}

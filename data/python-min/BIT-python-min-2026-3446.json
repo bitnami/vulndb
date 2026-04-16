@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-3446",
+  "summary": "Base64 decoding stops at first padded quad by default",
+  "details": "When calling base64.b64decode() or related functions the decoding process would stop after encountering the first padded quad regardless of whether there was more information to be processed. This can lead to data being accepted which may be processed differently by other implementations. Use \"validate=True\" to enable stricter processing of base64 data.",
+  "aliases": [
+    "CVE-2026-3446"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.13.13"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/1f9958f909c1b41a4ffc0b613ef8ec8fa5e7c474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4561f6418a691b3e89aef0901f53fe0dfb7f7c0e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e31c55121620189a0d1a07b689762d8ca9c1b7fa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/145264"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/145267"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/F5ZT5ICGJ6CKXVUJ34YBVY7WOZ5SHG53/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3446"
+    }
+  ],
+  "published": "2026-04-15T23:50:37.754Z",
+  "modified": "2026-04-16T00:10:47.460Z"
+}

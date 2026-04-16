@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2026-25922",
+  "summary": "authentik has a Signature Verification Bypass via SAML Assertion Wrapping",
+  "details": "authentik is an open-source identity provider. Prior to 2025.8.6, 2025.10.4, and 2025.12.4, when using a SAML Source that has the option Verify Assertion Signature under Verification Certificate enabled and not Verify Response Signature, or does not have the Encryption Certificate setting under Advanced Protocol settings configured, it was possible for an attacker to inject a malicious assertion before the signed assertion that authentik would use instead. authentik 2025.8.6, 2025.10.4, and 2025.12.4 fix this issue.",
+  "aliases": [
+    "CVE-2026-25922"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.8.6"
+            },
+            {
+              "introduced": "2025.10.0"
+            },
+            {
+              "fixed": "2025.12.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.10.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.12.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.8.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-jh35-c4cc-wjm4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25922"
+    }
+  ],
+  "published": "2026-04-15T23:36:08.943Z",
+  "modified": "2026-04-16T00:10:47.460Z"
+}
