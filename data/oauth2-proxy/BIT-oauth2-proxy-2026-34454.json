@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-oauth2-proxy-2026-34454",
+  "summary": "OAuth2 Proxy: Session cookie not cleared when rendering sign-in page",
+  "details": "OAuth2 Proxy is a reverse proxy that provides authentication using OAuth2 providers. A regression introduced in 7.11.0 prevents OAuth2 Proxy from clearing the session cookie when rendering the sign-in page. In deployments that rely on the sign-in page as part of their logout flow, a user may be shown the sign-in page while the existing session cookie remains valid, meaning the browser session is not actually logged out. On shared workstations or devices, a subsequent user could continue to use the previous user's authenticated session. Deployments that use a dedicated logout/sign-out endpoint to terminate sessions are not affected. This issue is fixed in 7.15.2",
+  "aliases": [
+    "CVE-2026-34454"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "oauth2-proxy",
+        "purl": "pkg:bitnami/oauth2-proxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.11.0"
+            },
+            {
+              "fixed": "7.15.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:oauth2_proxy_project:oauth2_proxy:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/releases/tag/v7.15.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/security/advisories/GHSA-f24x-5g9q-753f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34454"
+    }
+  ],
+  "published": "2026-04-16T11:59:32.747Z",
+  "modified": "2026-04-16T12:24:13.613Z"
+}
