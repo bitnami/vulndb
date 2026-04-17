@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2026-25748",
+  "summary": "authentik has a forward authentication bypass with broken cookie",
+  "details": "authentik is an open-source identity provider. Prior to 2025.10.4 and 2025.12.4, with a malformed cookie it was possible to bypass authentication when using forward authentication in the authentik Proxy Provider when used in conjunction with Traefik or Caddy as reverse proxy. When a malicious cookie was used, none of the authentik-specific X-Authentik-* headers were set which depending on application can grant access to an attacker. authentik 2025.10.4 and 2025.12.4 fix this issue.",
+  "aliases": [
+    "CVE-2026-25748"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2025.10.0"
+            },
+            {
+              "fixed": "2025.12.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.10.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.12.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-fj56-5763-j8pp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25748"
+    }
+  ],
+  "published": "2026-04-16T23:36:33.948Z",
+  "modified": "2026-04-17T00:10:47.507Z"
+}
