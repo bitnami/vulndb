@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2025-70873",
+  "details": "An information disclosure issue in the zipfileInflate function in the zipfile extension in SQLite v3.51.1 and earlier allows attackers to obtain heap memory via supplying a crafted ZIP file.",
+  "aliases": [
+    "CVE-2025-70873"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.51.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gist.github.com/cnwangjihe/f496393f30f5ecec5b18c8f5ab072054"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-70873"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/forum/forumpost/761eac3c82"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/src/info/3d459f1fb1bd1b5e"
+    }
+  ],
+  "published": "2026-04-18T08:50:04.362Z",
+  "modified": "2026-04-18T09:10:03.541Z"
+}
