@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-31987",
+  "summary": "Apache Airflow: JWT token appearing in logs",
+  "details": "JWT Tokens used by tasks were exposed in logs. This could allow UI users to act as Dag Authors. \nUsers are advised to upgrade to Airflow version that contains fix.\n\nUsers are recommended to upgrade to version 3.2.0, which fixes this issue.",
+  "aliases": [
+    "CVE-2026-31987"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/16/7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/issues/62428"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/issues/62773"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/62964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/pvsrtxzwo9xy6xgknmwslv4zrw70kt6g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31987"
+    }
+  ],
+  "published": "2026-04-18T08:37:43.676Z",
+  "modified": "2026-04-18T09:10:03.541Z"
+}

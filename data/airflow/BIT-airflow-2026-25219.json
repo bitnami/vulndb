@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-25219",
+  "summary": "Apache Airflow: Sensitive Azure Service Bus connection string (and possibly other providers) exposed to users with view access",
+  "details": "The `access_key` and `connection_string` connection properties were not marked as sensitive names in secrets masker. This means that user with read permission could see the values in Connection UI, as well as when Connection was accidentaly logged to logs, those values could be seen in the logs. Azure Service Bus used those properties to store sensitive values. Possibly other providers could be also affected if they used the same fields to store sensitive data.\n\nIf you used Azure Service Bus connection with those values set or if you have other connections with those values storing sensitve values, you should upgrade Airflow to 3.1.8",
+  "aliases": [
+    "CVE-2026-25219"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/15/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/61580"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/61582"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/t4dlmqkn0njz4chk3g7mdgzb96y4ttqh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25219"
+    }
+  ],
+  "published": "2026-04-18T08:37:36.342Z",
+  "modified": "2026-04-18T09:10:03.541Z"
+}

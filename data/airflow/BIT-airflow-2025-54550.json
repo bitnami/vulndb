@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2025-54550",
+  "summary": "Apache Airflow: RCE by race condition in example_xcom dag",
+  "details": "The example example_xcom that was included in airflow documentation implemented unsafe pattern of reading value\nfrom xcom in the way that could be exploited to allow UI user who had access to modify XComs to perform arbitrary\nexecution of code on the worker. Since the UI users are already highly trusted, this is a Low severity vulnerability.\n\nIt does not affect Airflow release - example_dags are not supposed to be enabled in production environment, however\nusers following the example could replicate the bad pattern. Documentation of Airflow 3.2.0 contains version of\nthe example with improved resiliance for that case.\n\nUsers who followed that pattern are advised to adjust their implementations accordingly.",
+  "aliases": [
+    "CVE-2025-54550"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/15/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/63200"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/3mf4cfx070ofsnf9qy0s2v5gqb5sc2g1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54550"
+    }
+  ],
+  "published": "2026-04-18T08:37:17.629Z",
+  "modified": "2026-04-18T09:10:03.541Z"
+}
