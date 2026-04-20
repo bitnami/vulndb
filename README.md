@@ -154,6 +154,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 - Attu
 - aws-java-sdk-bundle
+- NGINX Ingress Controller
 
 ### 2026-02
 
