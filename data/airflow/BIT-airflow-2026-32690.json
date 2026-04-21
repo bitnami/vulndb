@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-32690",
+  "summary": "Apache Airflow: 3.x - Nested Variable Secret Values Bypass Redaction via max_depth=1",
+  "details": "Secrets in Variables saved as JSON dictionaries were not properly redacted - in case thee variables were retrieved by the user the secrets stored as nested fields were not masked.\n\nIf you do not store variables with sensitive values in JSON form, you are not affected. Otherwise please upgrade to Apache Airflow 3.2.0 that has the fix implemented",
+  "aliases": [
+    "CVE-2026-32690"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/17/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/63480"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/7rnzxofntcznqxnhsmjvvlvygwph7rn5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32690"
+    }
+  ],
+  "published": "2026-04-21T11:21:53.940Z",
+  "modified": "2026-04-21T11:55:15.771Z"
+}

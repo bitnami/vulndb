@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-pyroscope-2025-41118",
+  "summary": "Sensitive COS `SecretKey` exposed in plaintext via configuration API due to missing type protection",
+  "details": "Pyroscope is an open-source continuous profiling database. The database supports various storage backends, including Tencent Cloud Object Storage (COS).\n\nIf the database is configured to use Tencent COS as the storage backend, an attacker could extract the secret_key configuration value from the Pyroscope API.\n\nTo exploit this vulnerability, an attacker needs direct access to the Pyroscope API. We highly recommend limiting the public internet exposure of all our databases, such that they are only accessible by trusted users or internal systems.\n\nThis vulnerability is fixed in versions:\n\n1.15.x: 1.15.2 and above.\n1.16.x: 1.16.1 and above.\n1.17.x: 1.17.0 and above (i.e. all versions).\n\nThanks to Théo Cusnir for reporting this vulnerability to us via our bug bounty program.",
+  "aliases": [
+    "CVE-2025-41118"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana-pyroscope",
+        "purl": "pkg:bitnami/grafana-pyroscope"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.15.2"
+            },
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.17.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:grafana:pyroscope:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2025-41118"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41118"
+    }
+  ],
+  "published": "2026-04-21T11:20:55.859Z",
+  "modified": "2026-04-21T11:55:15.771Z"
+}

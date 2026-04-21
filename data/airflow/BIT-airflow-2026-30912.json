@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-30912",
+  "summary": "Apache Airflow: Exposing stack trace in case of constraint error",
+  "details": "In case of SQL errors, exception/stack trace of errors was exposed in API even if \"api/expose_stack_traces\" was set to false. That could lead to exposing additional information to potential attacker. Users are recommended to upgrade to Apache Airflow 3.2.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-30912"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/17/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/63028"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/tp6kz1hnfb3zsrrtg19myo8x5x80w8r9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30912"
+    }
+  ],
+  "published": "2026-04-21T11:21:44.455Z",
+  "modified": "2026-04-21T11:55:15.771Z"
+}

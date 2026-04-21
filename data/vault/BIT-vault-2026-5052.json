@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-5052",
+  "summary": "Vault Vulnerable to Server-Side Request Forgery in ACME Challenge Validation via Attacker-Controlled DNS",
+  "details": "Vault’s PKI engine’s ACME validation did not reject local targets when issuing http-01 and tls-alpn-01 challenges. This may lead to these requests being sent to local network targets, potentially leading to information disclosure. Fixed in Vault Community Edition 2.0.0 and Vault Enterprise 2.0.0, 1.21.5, 1.20.10, and 1.19.16.",
+  "aliases": [
+    "CVE-2026-5052"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.10.0"
+            },
+            {
+              "fixed": "2.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-06-vault-vulnerable-to-server-side-request-forgery-in-acme-challenge-validation-via-attacker-controlled-dns/77343"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5052"
+    }
+  ],
+  "published": "2026-04-21T11:34:11.013Z",
+  "modified": "2026-04-21T11:55:15.771Z"
+}
