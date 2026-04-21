@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-33866",
+  "summary": "Authorization Bypass in MLflow AJAX Endpoint",
+  "details": "MLflow is vulnerable to an authorization bypass affecting the AJAX endpoint used to download saved model artifacts. Due to missing access‑control validation, a user without permissions to a given experiment can directly query this endpoint and retrieve model artifacts they are not authorized to access.\n\n \nThis issue affects MLflow version through 3.10.1",
+  "aliases": [
+    "CVE-2026-33866"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://afine.com/blogs/attacking-mlflow-how-ml-artifacts-become-attack-vectors"
+    },
+    {
+      "type": "WEB",
+      "url": "https://cert.pl/en/posts/2026/04/CVE-2026-33865/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/pull/21708"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33866"
+    }
+  ],
+  "published": "2026-04-21T12:08:47.512Z",
+  "modified": "2026-04-21T12:33:30.555Z"
+}
