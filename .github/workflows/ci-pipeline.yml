@@ -21,14 +21,19 @@ jobs:
     outputs:
       allow_auto_merge: ${{ steps.lint.outputs.allow_auto_merge }}
     steps:
-      - name: Install system deps
-        run: sudo apt-get install -y jq python3 pipx
-      - name: Install markdownlint
-        run: npm install -g markdownlint-cli@0.33.0
-      - name: Install check-jsonschema
-        run: pipx install check-jsonschema
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         name: Checkout Repository
+      - name: Install system deps
+        run: sudo apt-get install -y jq python3 python3-venv
+      - name: Install markdownlint
+        run: |
+          npm ci --prefix "${{ github.workspace }}/config"
+          echo "${{ github.workspace }}/config/node_modules/.bin" >> "$GITHUB_PATH"
+      - name: Install check-jsonschema
+        run: |
+          python3 -m venv "${{ runner.temp }}/check-jsonschema-venv"
+          "${{ runner.temp }}/check-jsonschema-venv/bin/pip" install --require-hashes -r "${{ github.workspace }}/config/requirements.txt"
+          echo "${{ runner.temp }}/check-jsonschema-venv/bin" >> "$GITHUB_PATH"
       - id: lint
         name: Lint modified files
         env:
