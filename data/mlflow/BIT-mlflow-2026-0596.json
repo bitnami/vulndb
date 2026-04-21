@@ -18,6 +18,19 @@
           "type": "CVSS_V3",
           "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.1"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -38,5 +51,5 @@
     }
   ],
   "published": "2026-04-16T23:45:08.946Z",
-  "modified": "2026-04-17T00:10:47.507Z"
+  "modified": "2026-04-21T12:33:30.555Z"
 }
