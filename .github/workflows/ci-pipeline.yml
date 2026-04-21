@@ -26,7 +26,9 @@ jobs:
       - name: Install system deps
         run: sudo apt-get install -y jq python3 python3-venv
       - name: Install markdownlint
-        run: npm install -g markdownlint-cli@0.33.0
+        run: |
+          npm ci --prefix "${{ github.workspace }}/config"
+          echo "${{ github.workspace }}/config/node_modules/.bin" >> "$GITHUB_PATH"
       - name: Install check-jsonschema
         run: |
           python3 -m venv "${{ runner.temp }}/check-jsonschema-venv"
