@@ -24,9 +24,14 @@ jobs:
       - name: Install system deps
         run: sudo apt-get install -y jq python3 pipx
       - name: Install markdownlint
-        run: npm install -g markdownlint-cli@0.33.0
+        env:
+          NPM_PROXY: https://${{secrets.NPM_PROXY_HOST}}
+          NODE_AUTH_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
+        run: npm install -g markdownlint-cli@0.33.0 >/dev/null 2>&1
       - name: Install check-jsonschema
-        run: pipx install check-jsonschema
+        env:
+          PIP_INDEX_URL: https://${{secrets.REGISTRY_USERNAME}}:${{secrets.REGISTRY_TOKEN}}@${{secrets.PIP_INDEX_HOST}}
+        run: pipx install check-jsonschema==0.37.1 >/dev/null 2>&1
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         name: Checkout Repository
       - id: lint
