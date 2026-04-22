@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -47,7 +47,7 @@
     }
   ],
   "database_specific": {
-    "severity": "High",
+    "severity": "Critical",
     "cpes": [
       "cpe:2.3:a:elastic:logstash:*:*:*:*:*:ruby:*:*"
     ]
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2026-04-13T05:42:10.653Z",
-  "modified": "2026-04-13T06:11:47.324Z"
+  "modified": "2026-04-22T09:10:06.651Z"
 }
