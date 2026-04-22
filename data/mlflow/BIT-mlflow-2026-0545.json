@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-0545",
+  "summary": "Missing Authentication for Critical Function in mlflow/mlflow",
+  "details": "In mlflow/mlflow, the FastAPI job endpoints under `/ajax-api/3.0/jobs/*` are not protected by authentication or authorization when the `basic-auth` app is enabled. This vulnerability affects the latest version of the repository. If job execution is enabled (`MLFLOW_SERVER_ENABLE_JOB_EXECUTION=true`) and any job function is allowlisted, any network client can submit, read, search, and cancel jobs without credentials, bypassing basic-auth entirely. This can lead to unauthenticated remote code execution if allowed jobs perform privileged actions such as shell execution or filesystem changes. Even if jobs are deemed safe, this still constitutes an authentication bypass, potentially resulting in job spam, denial of service (DoS), or data exposure in job results.",
+  "aliases": [
+    "CVE-2026-0545"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/b2e5b028-9541-4d29-8703-a76f1a3734d8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0545"
+    }
+  ],
+  "published": "2026-04-22T08:45:28.317Z",
+  "modified": "2026-04-22T09:10:06.651Z"
+}
