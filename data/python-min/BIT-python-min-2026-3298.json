@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-3298",
+  "summary": "Out-of-bounds write in Windows asyncio.ProacterEventLoop.sock_recvfrom_into() when using nbytes",
+  "details": "The method \"sock_recvfrom_into()\" of \"asyncio.ProacterEventLoop\" (Windows only) was missing a boundary check for the data buffer when using nbytes parameter. This allowed for an out-of-bounds buffer write if data was larger than the buffer size. Non-Windows platforms are not affected.",
+  "aliases": [
+    "CVE-2026-3298"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/1274766d3c29007ab77245a72abbf8dce2a9db4d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/27522b7d6e6588f03e61099dd858cd5a9314e2f2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/95633d2aad4721e25e4dfd9f43dfb6e1edcbd741"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/148808"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/148809"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/KWTPIQBOOOUNQP7UFSLBI437NJDFLA3F/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3298"
+    }
+  ],
+  "published": "2026-04-23T08:52:52.431Z",
+  "modified": "2026-04-23T09:10:51.830Z"
+}

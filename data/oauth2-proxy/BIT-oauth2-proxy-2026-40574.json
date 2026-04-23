@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-oauth2-proxy-2026-40574",
+  "summary": "OAuth2 Proxy has an Authorization Bypass in Email Domain Validation via Malformed Multi-@ Email Claims",
+  "details": "OAuth2 Proxy is a reverse proxy that provides authentication using OAuth2 providers. Prior to 7.15.2, an authorization bypass exists in OAuth2 Proxy as part of the email_domain enforcement option. An attacker may be able to authenticate with an email claim such as attacker@evil.com@company.com and satisfy an allowed domain check for company.com, even though the claim is not a valid email address. The issue ONLY affects deployments that rely on email_domain restrictions and accept email claim values from identity providers or claim mappings that do not strictly enforce normal email syntax. This vulnerability is fixed in 7.15.2.",
+  "aliases": [
+    "CVE-2026-40574"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "oauth2-proxy",
+        "purl": "pkg:bitnami/oauth2-proxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.15.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oauth2_proxy_project:oauth2_proxy:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/oauth2-proxy/oauth2-proxy/security/advisories/GHSA-c5c4-8r6x-56w3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40574"
+    }
+  ],
+  "published": "2026-04-23T08:47:00.871Z",
+  "modified": "2026-04-23T09:10:51.830Z"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mysql-shell-2026-34317",
+  "details": "Vulnerability in the MySQL Shell product of Oracle MySQL (component: Shell: Core Client).  Supported versions that are affected are 8.0.0-8.0.45, 8.4.0-8.4.8 and  9.0.0-9.6.0. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where MySQL Shell executes to compromise MySQL Shell.  Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Shell. CVSS 3.1 Base Score 5.0 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H).",
+  "aliases": [
+    "CVE-2026-34317"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-shell",
+        "purl": "pkg:bitnami/mysql-shell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.0.46"
+            },
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.4.9"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oracle:mysql_shell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34317"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2026.html"
+    }
+  ],
+  "published": "2026-04-23T08:45:30.751Z",
+  "modified": "2026-04-23T09:10:51.830Z"
+}
