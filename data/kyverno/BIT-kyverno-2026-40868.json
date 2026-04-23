@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-40868",
+  "summary": "kyverno apicall servicecall implicit bearer token injection leaks kyverno serviceaccount token",
+  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to 1.16.4, kyverno’s apiCall servicecall helper implicitly injects Authorization: Bearer ... using the kyverno controller serviceaccount token when a policy does not explicitly set an Authorization header. Because context.apiCall.service.url is policy-controlled, this can send the kyverno serviceaccount token to an attacker-controlled endpoint (confused deputy). Namespaced policies are blocked from servicecall usage by the namespaced urlPath gate in pkg/engine/apicall/apiCall.go, so this report is scoped to ClusterPolicy and global context usage. This vulnerability is fixed in 1.16.4.",
+  "aliases": [
+    "CVE-2026-40868"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.16.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-q93q-v844-jrqp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40868"
+    }
+  ],
+  "published": "2026-04-23T08:41:53.633Z",
+  "modified": "2026-04-23T09:10:51.830Z"
+}
