@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-6019",
+  "summary": "BaseCookie.js_output() does not neutralize embedded characters",
+  "details": "http.cookies.Morsel.js_output() returns an inline <script> snippet and only escapes \" for JavaScript string context. It does not neutralize the HTML parser-sensitive sequence </script> inside the generated script element. Mitigation base64-encodes the cookie value to disallow escaping using cookie value.",
+  "aliases": [
+    "CVE-2026-6019"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/76b3923d688c0efc580658476c5f525ec8735104"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/90309"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/148848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/IVNWGV2BBNC3RHQAFS22UP4DY56SAXX3/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6019"
+    }
+  ],
+  "published": "2026-04-24T16:10:59.894Z",
+  "modified": "2026-04-24T16:35:04.084Z"
+}
