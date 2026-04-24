@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-3254",
+  "summary": "Improper Restriction of Rendered UI Layers or Frames in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.11 before 18.11.1 that under certain conditions could have allowed an authenticated user to load unauthorized content into another user's browser due to improper input validation in the Mermaid sandbox.",
+  "aliases": [
+    "CVE-2026-3254"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.11.0"
+            },
+            {
+              "fixed": "18.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/591587"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3572752"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3254"
+    }
+  ],
+  "published": "2026-04-24T09:10:47.044Z",
+  "modified": "2026-04-24T09:12:35.749Z"
+}
