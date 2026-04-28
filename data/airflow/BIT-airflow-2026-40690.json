@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-40690",
+  "summary": "Apache Airflow: Assets graph view bypasses DAG level access control displaying unrelated topologies and all DAGs names to unauthorized users",
+  "details": "The asset dependency graph did not restrict nodes by the viewer's DAG read permissions: a user with read access to at least one DAG could browse the asset graph for any other asset in the deployment and learn the existence and names of DAGs and assets outside their authorized scope.\n\nUsers are recommended to upgrade to version 3.2.1, which fixes this issue.",
+  "aliases": [
+    "CVE-2026-40690"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/24/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/65273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/bqt7y4g2cpj396b0sd20lv510ff19ndl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40690"
+    }
+  ],
+  "published": "2026-04-28T08:40:00.554Z",
+  "modified": "2026-04-28T09:12:07.790Z"
+}

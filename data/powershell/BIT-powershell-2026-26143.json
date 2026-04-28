@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2026-26143",
+  "summary": "Microsoft PowerShell Security Feature Bypass Vulnerability",
+  "details": "Improper input validation in Microsoft PowerShell allows an unauthorized attacker to bypass a security feature locally.",
+  "aliases": [
+    "CVE-2026-26143"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.14"
+            },
+            {
+              "introduced": "7.5.0"
+            },
+            {
+              "fixed": "7.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26143"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26143"
+    }
+  ],
+  "published": "2026-04-28T08:49:49.213Z",
+  "modified": "2026-04-28T09:12:07.790Z"
+}
