@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-2026-3087",
+  "summary": "shutil.unpack_archive() doesn't check for Windows absolute paths in ZIPs",
+  "details": "If `shutil.unpack_archive()` is given a ZIP archive with an absolute Windows path containing a drive (`C:\\\\...`) then the archive will be extracted outside the target directory which is different than other operating systems. Only Windows is affected by this vulnerability.",
+  "aliases": [
+    "CVE-2026-3087"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/28/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/146581"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/146591"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/X6FXE5C6KDKOVNX3EC3DWD5RUPFWOZA4/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3087"
+    }
+  ],
+  "published": "2026-04-29T11:50:21.474Z",
+  "modified": "2026-04-29T12:09:41.635Z"
+}
