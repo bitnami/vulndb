@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-thrift-2026-41603",
+  "summary": "Apache Thrift: Java TSSLTransportFactory hostname verification",
+  "details": "Improper Validation of Certificate with Host Mismatch vulnerability in Apache Thrift.\n\nThis issue affects Apache Thrift: before 0.23.0.\n\nUsers are recommended to upgrade to version 0.23.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-41603"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "thrift",
+        "purl": "pkg:bitnami/thrift"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.23.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:thrift:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/04/28/7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/lb4j0zyd5f3g36cos0wql925przpnwql"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41603"
+    }
+  ],
+  "published": "2026-04-29T08:50:20.169Z",
+  "modified": "2026-04-29T09:10:02.628Z"
+}
