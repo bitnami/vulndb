@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pytorch-2026-4538",
+  "summary": "PyTorch pt2 Loading deserialization",
+  "details": "A vulnerability was identified in PyTorch 2.10.0. The affected element is an unknown function of the component pt2 Loading Handler. The manipulation leads to deserialization. The attack can only be performed from a local environment. The exploit is publicly available and might be used. The project was informed of the problem early through a pull request but has not reacted yet.",
+  "aliases": [
+    "CVE-2026-4538"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pytorch",
+        "purl": "pkg:bitnami/pytorch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.10.0"
+            },
+            {
+              "fixed": "2.11.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:pytorch:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pytorch/pytorch/pull/176791"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4538"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?ctiid.352326"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?id.352326"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/?submit.774681"
+    }
+  ],
+  "published": "2026-04-30T08:51:30.621Z",
+  "modified": "2026-04-30T09:12:59.139Z"
+}
