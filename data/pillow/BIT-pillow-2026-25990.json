@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-pillow-2026-25990",
   "summary": "Pillow has an out-of-bounds write when loading PSD images",
-  "details": "Pillow is a Python imaging library. From 10.3.0 to before 12.1.1, n out-of-bounds write may be triggered when loading a specially crafted PSD image. This vulnerability is fixed in 12.1.1.",
+  "details": "Pillow is a Python imaging library. From 10.3.0 to before 12.1.1, an out-of-bounds write may be triggered when loading a specially crafted PSD image. This vulnerability is fixed in 12.1.1.",
   "aliases": [
     "CVE-2026-25990"
   ],
@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V4",
-          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
         }
       ],
       "ranges": [
@@ -59,5 +59,5 @@
     }
   ],
   "published": "2026-02-16T16:02:06.871Z",
-  "modified": "2026-02-16T16:32:40.318Z"
+  "modified": "2026-05-01T09:12:30.437Z"
 }
