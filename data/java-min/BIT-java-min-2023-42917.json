@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-java-min-2023-42917",
+  "details": "A memory corruption vulnerability was addressed with improved locking. This issue is fixed in iOS 17.1.2 and iPadOS 17.1.2, macOS Sonoma 14.1.2, Safari 17.1.2. Processing web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited against versions of iOS before iOS 16.7.1.",
+  "aliases": [
+    "CVE-2023-42917"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "java-min",
+        "purl": "pkg:bitnami/java-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.411"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:oracle:jdk:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/12"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/13"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/3"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/4"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/5"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2023/Dec/8"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2024/Jan/35"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2023/12/05/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AD2KIHHCUBQC2YYH3FJWAHI5BG3QETOH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P5LQS6VEI7VIZNC7QGQ62EOV45R5RJIR/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42917"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openjdk.org/groups/vulnerability/advisories/2024-04-16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202401-04"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214031"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214032"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214033"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/kb/HT214033"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/kb/HT214034"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/kb/HT214062"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-42917"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2023/dsa-5575"
+    }
+  ],
+  "published": "2026-05-06T14:44:07.218Z",
+  "modified": "2026-05-06T15:10:05.412Z"
+}
