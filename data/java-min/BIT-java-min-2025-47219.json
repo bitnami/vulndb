@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-java-min-2025-47219",
+  "details": "In GStreamer through 1.26.1, the isomp4 plugin's qtdemux_parse_trak function may read past the end of a heap buffer while parsing an MP4 file, possibly leading to information disclosure.",
+  "aliases": [
+    "CVE-2025-47219"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "java-min",
+        "purl": "pkg:bitnami/java-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.481"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:oracle:jdk:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/atredispartners/advisories/blob/master/2025/ATREDIS-2025-0003.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gstreamer.freedesktop.org/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47219"
+    }
+  ],
+  "published": "2026-05-06T14:03:58.386Z",
+  "modified": "2026-05-06T14:29:06.816Z"
+}

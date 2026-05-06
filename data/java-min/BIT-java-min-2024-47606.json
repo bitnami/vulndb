@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-java-min-2024-47606",
+  "summary": "GHSL-2024-166: GStreamer Integer overflows in MP4/MOV demuxer and memory allocator that can lead to out-of-bounds writes",
+  "details": "GStreamer is a library for constructing graphs of media-handling components. An integer underflow has been detected in the function qtdemux_parse_theora_extension within qtdemux.c. The vulnerability occurs due to an underflow of the gint size variable, which causes size to hold a large unintended value when cast to an unsigned integer. This 32-bit negative value is then cast to a 64-bit unsigned integer (0xfffffffffffffffa) in a subsequent call to gst_buffer_new_and_alloc. The function gst_buffer_new_allocate then attempts to allocate memory, eventually calling _sysmem_new_block. The function _sysmem_new_block adds alignment and header size to the (unsigned) size, causing the overflow of the 'slice_size' variable. As a result, only 0x89 bytes are allocated, despite the large input size. When the following memcpy call occurs in gst_buffer_fill, the data from the input file will overwrite the content of the GstMapInfo info structure. Finally, during the call to gst_memory_unmap, the overwritten memory may cause a function pointer hijack, as the mem->allocator->mem_unmap_full function is called with a corrupted pointer. This function pointer overwrite could allow an attacker to alter the execution flow of the program, leading to arbitrary code execution. This vulnerability is fixed in 1.24.10.",
+  "aliases": [
+    "CVE-2024-47606"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "java-min",
+        "purl": "pkg:bitnami/java-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.451"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:oracle:jdk:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8032.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gstreamer.freedesktop.org/security/sa-2024-0014.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2024/12/msg00016.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00035.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250418-0003/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://securitylab.github.com/advisories/GHSL-2024-166_Gstreamer/"
+    }
+  ],
+  "published": "2026-05-06T14:03:09.209Z",
+  "modified": "2026-05-06T14:29:06.816Z"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-java-min-2024-47775",
+  "summary": "GHSL-2024-261: GStreamer has an OOB-read in parse_ds64",
+  "details": "GStreamer is a library for constructing graphs of media-handling components. An OOB-read vulnerability has been found in the parse_ds64 function within gstwavparse.c. The parse_ds64 function does not check that the buffer buf contains sufficient data before attempting to read from it, doing multiple GST_READ_UINT32_LE operations without performing boundary checks. This can lead to an OOB-read when buf is smaller than expected. This vulnerability allows reading beyond the bounds of the data buffer, potentially leading to a crash (denial of service) or the leak of sensitive data. This vulnerability is fixed in 1.24.10.",
+  "aliases": [
+    "CVE-2024-47775"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "java-min",
+        "purl": "pkg:bitnami/java-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.451"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oracle:jdk:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/8042.patch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gstreamer.freedesktop.org/security/sa-2024-0027.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2025/02/msg00035.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47775"
+    },
+    {
+      "type": "WEB",
+      "url": "https://securitylab.github.com/advisories/GHSL-2024-261_Gstreamer/"
+    }
+  ],
+  "published": "2026-05-06T14:03:11.167Z",
+  "modified": "2026-05-06T14:29:06.816Z"
+}
