@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-java-min-2025-43457",
+  "details": "A use-after-free issue was addressed with improved memory management. This issue is fixed in Safari 26.1, iOS 26.1 and iPadOS 26.1, macOS Tahoe 26.1, visionOS 26.1, watchOS 26.1. Processing maliciously crafted web content may lead to an unexpected Safari crash.",
+  "aliases": [
+    "CVE-2025-43457"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "java-min",
+        "purl": "pkg:bitnami/java-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.491"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:oracle:jdk:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43457"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125632"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125634"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125638"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125639"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/125640"
+    }
+  ],
+  "published": "2026-05-06T14:45:36.145Z",
+  "modified": "2026-05-06T15:10:05.412Z"
+}
