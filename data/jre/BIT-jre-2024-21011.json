@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2024-21011",
+  "details": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: Hotspot).  Supported versions that are affected are Oracle Java SE: 8u401, 8u401-perf, 11.0.22, 17.0.10, 21.0.2, 22; Oracle GraalVM for JDK: 17.0.10, 21.0.2, 22;   Oracle GraalVM Enterprise Edition: 20.3.13 and  21.3.9. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition.  Successful attacks of this vulnerability can result in unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition. Note: This vulnerability can be exploited by using APIs in the specified Component, e.g., through a web service which supplies data to the APIs. This vulnerability also applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. CVSS 3.1 Base Score 3.7 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L).",
+  "aliases": [
+    "CVE-2024-21011"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.411"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "11.0.23"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "17.0.11"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "21.0.3"
+            },
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "22.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2024/04/msg00014.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21011"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openjdk.org/groups/vulnerability/advisories/2024-04-16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20240426-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2024.html"
+    }
+  ],
+  "published": "2026-05-07T17:46:26.818Z",
+  "modified": "2026-05-07T18:11:55.210Z"
+}

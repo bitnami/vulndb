@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2026-22013",
+  "details": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition product of Oracle Java SE (component: JGSS).  Supported versions that are affected are Oracle Java SE: 8u481, 8u481-b50, 8u481-perf, 11.0.30, 17.0.18, 21.0.10, 25.0.2, 26; Oracle GraalVM for JDK: 17.0.18 and  21.0.10; Oracle GraalVM Enterprise Edition: 21.3.17. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition.  Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Java SE, Oracle GraalVM for JDK, Oracle GraalVM Enterprise Edition accessible data. Note: This vulnerability applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. This vulnerability does not apply to Java deployments, typically in servers, that load and run only trusted code (e.g., code installed by an administrator). CVSS 3.1 Base Score 5.3 (Confidentiality impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N).",
+  "aliases": [
+    "CVE-2026-22013"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.491"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "11.0.31"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "17.0.19"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "21.0.11"
+            },
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "25.0.3"
+            },
+            {
+              "introduced": "26.0.0"
+            },
+            {
+              "fixed": "26.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22013"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2026.html"
+    }
+  ],
+  "published": "2026-05-07T17:48:19.186Z",
+  "modified": "2026-05-07T18:11:55.210Z"
+}

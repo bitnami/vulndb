@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2024-54534",
+  "details": "The issue was addressed with improved memory handling. This issue is fixed in Safari 18.2, iOS 18.2 and iPadOS 18.2, iPadOS 17.7.6, macOS Sequoia 15.2, tvOS 18.2, visionOS 2.2, watchOS 11.2. Processing maliciously crafted web content may lead to memory corruption.",
+  "aliases": [
+    "CVE-2024-54534"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.451"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2024/Dec/11"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2024/Dec/13"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2024/Dec/5"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2024/Dec/7"
+    },
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2025/Apr/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-54534"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20250418-0002/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121837"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121843"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121844"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121845"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/121846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/122372"
+    }
+  ],
+  "published": "2026-05-07T17:47:10.585Z",
+  "modified": "2026-05-07T18:11:55.210Z"
+}
