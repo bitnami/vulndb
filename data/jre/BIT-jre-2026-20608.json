@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2026-20608",
+  "details": "This issue was addressed through improved state management. This issue is fixed in Safari 26.3, iOS 18.7.5 and iPadOS 18.7.5, iOS 26.3 and iPadOS 26.3, macOS Tahoe 26.3, visionOS 26.3. Processing maliciously crafted web content may lead to an unexpected process crash.",
+  "aliases": [
+    "CVE-2026-20608"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.491"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20608"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/126346"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/126347"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/126348"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/126353"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/126354"
+    }
+  ],
+  "published": "2026-05-07T14:43:44.684Z",
+  "modified": "2026-05-07T15:08:37.891Z"
+}

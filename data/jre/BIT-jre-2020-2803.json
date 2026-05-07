@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2020-2803",
+  "details": "Vulnerability in the Java SE, Java SE Embedded product of Oracle Java SE (component: Libraries). Supported versions that are affected are Java SE: 7u251, 8u241, 11.0.6 and 14; Java SE Embedded: 8u241. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Java SE, Java SE Embedded. Successful attacks require human interaction from a person other than the attacker and while the vulnerability is in Java SE, Java SE Embedded, attacks may significantly impact additional products. Successful attacks of this vulnerability can result in takeover of Java SE, Java SE Embedded. Note: This vulnerability applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. This vulnerability does not apply to Java deployments, typically in servers, that load and run only trusted code (e.g., code installed by an administrator). CVSS 3.0 Base Score 8.3 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H).",
+  "aliases": [
+    "CVE-2020-2803"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.7.0"
+            },
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.261"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.251"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "11.0.7"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "14.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00000.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00023.html"
+    },
+    {
+      "type": "WEB",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00048.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2020/04/msg00024.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CKAV6KFFAEANXAN73AFTGU7Z6YNRWCXQ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/L7VHC4EW36KZEIDQ56RPCWBZCQELFFKN/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NYHHHZRHXCBGRHGE5UP7UEB4IZ2QX536/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-2803"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202006-22"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202209-15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20200416-0004/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://usn.ubuntu.com/4337-1/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4662"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.debian.org/security/2020/dsa-4668"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+    }
+  ],
+  "published": "2026-05-07T14:38:20.984Z",
+  "modified": "2026-05-07T15:08:37.891Z"
+}
