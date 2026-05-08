@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2023-42950",
+  "details": "A use after free issue was addressed with improved memory management. This issue is fixed in Safari 17.2, iOS 17.2 and iPadOS 17.2, tvOS 17.2, watchOS 10.2, macOS Sonoma 14.2. Processing maliciously crafted web content may lead to arbitrary code execution.",
+  "aliases": [
+    "CVE-2023-42950"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.8.0"
+            },
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "8.0.431"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2024/03/26/1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IXLXIOAH5S7J22LJTCIAVFVVJ4TESAX4/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42950"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openjdk.org/groups/vulnerability/advisories/2024-10-15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.netapp.com/advisory/ntap-20241018-0009/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214035"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214036"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214039"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214040"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/en-us/HT214041"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/kb/HT214039"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpuoct2024.html"
+    }
+  ],
+  "published": "2026-05-07T23:45:42.715Z",
+  "modified": "2026-05-08T00:11:31.546Z"
+}
