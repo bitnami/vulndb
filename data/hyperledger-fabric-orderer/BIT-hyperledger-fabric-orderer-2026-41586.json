@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-hyperledger-fabric-orderer-2026-41586",
+  "summary": "ObjectInputStream.readObject() without ObjectInputFilter in fabric-sdk-java allows Java deserialization RCE",
+  "details": "Hyperledger Fabric is an enterprise-grade permissioned distributed ledger framework for developing solutions and applications. From versions 1.0.0 to 2.2.26, Channel.java implements readObject() and exposes deSerializeChannel() which call ObjectInputStream.readObject() on untrusted byte arrays without configuring an ObjectInputFilter. This is a classic Java deserialization RCE pattern. At time of publication, there are no publicly available patches.",
+  "aliases": [
+    "CVE-2026-41586"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hyperledger-fabric-orderer",
+        "purl": "pkg:bitnami/hyperledger-fabric-orderer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "2.5.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:hyperledger:fabric:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/hyperledger/fabric/security/advisories/GHSA-prf8-cf2x-rhx7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hyperledger.github.io/fabric-gateway"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41586"
+    }
+  ],
+  "published": "2026-05-10T11:41:00.788Z",
+  "modified": "2026-05-10T12:11:49.621Z"
+}
