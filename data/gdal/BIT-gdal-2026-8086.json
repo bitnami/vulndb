@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gdal-2026-8086",
+  "summary": "OSGeo gdal SWapi.c SWnentries heap-based overflow",
+  "details": "A vulnerability was identified in OSGeo gdal up to 3.13.0dev-4. This issue affects the function SWnentries of the file frmts/hdf4/hdf-eos/SWapi.c. Such manipulation of the argument DimensionName leads to heap-based buffer overflow. The attack must be carried out locally. The exploit is publicly available and might be used. Upgrading to version 3.12.4RC1 is capable of addressing this issue. The name of the patch is 9491e794f1757f08063ea2f7a274ad2994afa636. It is advisable to upgrade the affected component.",
+  "aliases": [
+    "CVE-2026-8086"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gdal",
+        "purl": "pkg:bitnami/gdal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.13.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:osgeo:gdal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/commit/9491e794f1757f08063ea2f7a274ad2994afa636"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/issues/14356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/pull/14361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/releases/tag/v3.12.4RC1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/biniamf/pocs/tree/main/gdal-swinqdims_bof"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8086"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/submit/808038"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/361839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://vuldb.com/vuln/361839/cti"
+    }
+  ],
+  "published": "2026-05-10T05:40:02.323Z",
+  "modified": "2026-05-10T06:13:04.629Z"
+}
