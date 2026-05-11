@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keydb-2026-25589",
+  "summary": "RedisBloom RESTORE invalid memory access may allow remote code execution",
+  "details": "RedisBloom is a probabilistic data structures module for Redis. In all versions of RedisBloom before 2.8.20, the module does not properly validate serialized values processed through the Redis RESTORE command. An authenticated attacker with permission to execute RESTORE on a server with the RedisBloom module loaded can supply a crafted serialized payload that triggers invalid memory access and may lead to remote code execution. A workaround is to restrict access to the RESTORE command with ACL rules. This issue is fixed in version 2.8.20.",
+  "aliases": [
+    "CVE-2026-25589"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keydb",
+        "purl": "pkg:bitnami/keydb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.2.6"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.4.3"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.6.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/RedisBloom/RedisBloom/releases/tag/v2.8.20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/RedisBloom/RedisBloom/security/advisories/GHSA-7862-34pw-44wv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25589"
+    }
+  ],
+  "published": "2026-05-07T08:42:59.502Z",
+  "modified": "2026-05-07T09:12:02.780Z"
+}
