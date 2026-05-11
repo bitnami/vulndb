@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2025-12084",
+  "summary": "Quadratic complexity in node ID cache clearing",
+  "details": "When building nested elements using xml.dom.minidom methods such as appendChild() that have a dependency on _clear_id_cache() the algorithm is quadratic. Availability can be impacted when building excessively nested documents.",
+  "aliases": [
+    "CVE-2025-12084"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.10.20"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.15"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.13"
+            },
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.11"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/027f21e417b26eed4505ac2db101a4352b7c51a0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/08d8e18ad81cd45bc4a27d6da478b51ea49486e4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/27648a1818749ef44c420afe6173af6868715437"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/41f468786762348960486c166833a218a0a436af"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/57937a8e5e293f0dcba5115f7b7a11b1e0c9a273"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/8d2d7bb2e754f8649a68ce4116271a4932f76907"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/9c9dda6625a2a90d2a06c657eee021d6be19842d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/a46c10ec9d4050ab67b8a932e0859a2ea60c3cb8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/a696ba8b4d42fd632afc9bc88ad830a2e4cceed8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/c97e87593063d84a2bd9fe7068b30eb44de23dc0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/ddcd2acd85d891a53e281c773b3093f9db953964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e91c11449cad34bac3ea55ee09ca557691d92b53"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/142145"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/142146"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12084"
+    }
+  ],
+  "published": "2026-05-11T17:31:35.652Z",
+  "modified": "2026-05-11T18:04:15.512Z"
+}
