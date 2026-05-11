@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-gdal-2026-8086",
   "summary": "OSGeo gdal SWapi.c SWnentries heap-based overflow",
-  "details": "A vulnerability was identified in OSGeo gdal up to 3.13.0dev-4. This issue affects the function SWnentries of the file frmts/hdf4/hdf-eos/SWapi.c. Such manipulation of the argument DimensionName leads to heap-based buffer overflow. The attack must be carried out locally. The exploit is publicly available and might be used. Upgrading to version 3.12.4RC1 is capable of addressing this issue. The name of the patch is 9491e794f1757f08063ea2f7a274ad2994afa636. It is advisable to upgrade the affected component.",
+  "details": "A vulnerability was identified in OSGeo gdal up to 3.13.0. This issue affects the function SWnentries of the file frmts/hdf4/hdf-eos/SWapi.c. Such manipulation of the argument DimensionName leads to heap-based buffer overflow. The attack must be carried out locally. The exploit is publicly available and might be used. Upgrading to version 3.12.4 is capable of addressing this issue. The name of the patch is 9491e794f1757f08063ea2f7a274ad2994afa636. It is advisable to upgrade the affected component.",
   "aliases": [
     "CVE-2026-8086"
   ],
@@ -83,5 +83,5 @@
     }
   ],
   "published": "2026-05-11T05:39:26.532Z",
-  "modified": "2026-05-11T06:12:18.508Z"
+  "modified": "2026-05-11T10:37:11.396Z"
 }
