@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-42311",
+  "summary": "Pillow: OOB Write with Invalid PSD Tile Extents (Integer Overflow)",
+  "details": "Pillow is a Python imaging library. From version 10.3.0 to before version 12.2.0, processing a malicious PSD file could lead to memory corruption, potentially resulting in a crash or arbitrary code execution. This issue has been patched in version 12.2.0.",
+  "aliases": [
+    "CVE-2026-42311"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.3.0"
+            },
+            {
+              "fixed": "12.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/58f9a1d166dcb0c274807d4423522d205b0c35ea"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/pull/9520"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/12.2.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pwv6-vv43-88gr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42311"
+    }
+  ],
+  "published": "2026-05-12T08:54:05.960Z",
+  "modified": "2026-05-12T09:14:35.689Z"
+}

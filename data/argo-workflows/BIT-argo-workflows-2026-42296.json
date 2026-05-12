@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-workflows-2026-42296",
+  "summary": "Argo Workflows has incomplete fix for CVE-2026-31892: hostNetwork, securityContext, serviceAccountName bypass templateReferencing Strict/Secure",
+  "details": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Prior to versions 3.7.14 and 4.0.5, a user with create Workflow permission can bypass templateReferencing: Strict to get host network access, switch service accounts, override pod security context, add tolerations to schedule on control-plane nodes, or enable SA token mounting. This defeats the stated purpose of the feature. The practical impact depends on what Kubernetes-level controls are in place. Clusters with PodSecurity admission or OPA/Gatekeeper would independently block some of these (like hostNetwork). Clusters that rely on Argo's Strict mode as the primary enforcement layer are fully exposed. This issue has been patched in versions 3.7.14 and 4.0.5.",
+  "aliases": [
+    "CVE-2026-42296"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-workflows",
+        "purl": "pkg:bitnami/argo-workflows"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.7.14"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:argo_workflows_project:argo_workflows:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/commit/534f4ff1cbd86908e8ff76d97d553ad5a49a950d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/releases/tag/v3.7.14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/releases/tag/v4.0.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-workflows/security/advisories/GHSA-3775-99mw-8rp4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42296"
+    }
+  ],
+  "published": "2026-05-12T08:38:49.538Z",
+  "modified": "2026-05-12T09:14:35.689Z"
+}
