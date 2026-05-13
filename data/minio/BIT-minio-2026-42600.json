@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-minio-2026-42600",
+  "summary": "MinIO: Path Traversal via msgpack Body in `ReadMultiple` Storage-REST Endpoint",
+  "details": "MinIO is a high-performance object storage system. From 2022.07.24 to before 2026.04.14, A path traversal vulnerability in MinIO's ReadMultiple internode storage-REST endpoint allows a caller holding the cluster root JWT to read files from outside the configured drive roots, bounded only by the MinIO process UID. The attacker sends POST minio/storage/{drivePath}/v63/rmpl with a msgpack-encoded body carrying ../ sequences in the Bucket field. The server opens the resulting path via os.OpenFile with O_RDONLY|O_NOATIME and returns its contents in the msgpack response stream. This vulnerability is fixed in 2026.04.14.",
+  "aliases": [
+    "CVE-2026-42600"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "minio",
+        "purl": "pkg:bitnami/minio"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2022.07.24"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:minio:minio:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/minio/minio/security/advisories/GHSA-xh8f-g2qw-gcm7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42600"
+    }
+  ],
+  "published": "2026-05-13T15:13:37.429Z",
+  "modified": "2026-05-13T15:43:44.805Z"
+}
