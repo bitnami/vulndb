@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-43513",
+  "summary": "Apache Tomcat: LockOutRealm treats user names as case-sensitive",
+  "details": "Improper Handling of Case Sensitivity vulnerability in LockOutRealm in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\nOlder unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
+  "aliases": [
+    "CVE-2026-43513"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.55"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.22"
+            },
+            {
+              "introduced": "9.0.0.M1"
+            },
+            {
+              "fixed": "9.0.118"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/12/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/ytjcgldshj73lcnd1sh95od5hrghwogp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43513"
+    }
+  ],
+  "published": "2026-05-14T11:56:47.327Z",
+  "modified": "2026-05-14T12:12:22.799Z"
+}
