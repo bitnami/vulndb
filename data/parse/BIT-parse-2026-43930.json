@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-43930",
+  "summary": "Parse Server: MFA SMS one-time password accepted twice under concurrent login",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.76 and 9.9.0, a race condition in the MFA SMS one-time password (OTP) login path allows two concurrent /login requests carrying the same OTP to both succeed and both receive valid session tokens, breaking the single-use property of the OTP. The vulnerability requires the attacker to already possess the victim's password and intercept the active SMS OTP (e.g. via SIM swap, network mirror, or phishing relay) and to race the legitimate login request, so the practical attack surface is narrow. This vulnerability is fixed in 8.6.76 and 9.9.0.",
+  "aliases": [
+    "CVE-2026-43930"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.76"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.9.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10448"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10449"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-jpq4-7fmq-q5fj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43930"
+    }
+  ],
+  "published": "2026-05-14T11:52:39.338Z",
+  "modified": "2026-05-14T12:12:22.799Z"
+}
