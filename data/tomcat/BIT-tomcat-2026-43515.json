@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2026-43515",
   "summary": "Apache Tomcat: Security constraints not correctly applied",
-  "details": "Improper Authorization vulnerability when multiple method constraints define an HTTP method for the same extension in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
+  "details": "Improper Authorization vulnerability when multiple method constraints define an HTTP method for the same extension in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
   "aliases": [
     "CVE-2026-43515"
   ],
@@ -36,7 +36,7 @@
               "fixed": "11.0.22"
             },
             {
-              "introduced": "9.0.0.M1"
+              "introduced": "9.0.0"
             },
             {
               "fixed": "9.0.118"
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2026-05-14T11:56:50.640Z",
-  "modified": "2026-05-15T09:12:54.074Z"
+  "modified": "2026-05-15T12:24:26.484Z"
 }

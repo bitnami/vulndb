@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2026-41284",
   "summary": "Apache Tomcat: Unbounded read in WebDAV LOCK and PROPFIND handling",
-  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0.M1 through 9.0.117.\nOlder, unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
+  "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0 through 9.0.117.\nOlder, unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
   "aliases": [
     "CVE-2026-41284"
   ],
@@ -36,7 +36,7 @@
               "fixed": "11.0.22"
             },
             {
-              "introduced": "9.0.0.M1"
+              "introduced": "9.0.0"
             },
             {
               "fixed": "9.0.118"
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2026-05-14T11:56:40.844Z",
-  "modified": "2026-05-14T12:12:22.799Z"
+  "modified": "2026-05-15T12:24:26.484Z"
 }
