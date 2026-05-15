@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jupyter-notebook-2026-42557",
+  "summary": "jupyterlab: Command linker attributes in HTML enable one-click command execution from untrusted content",
+  "details": "jupyterlab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. Prior to 4.5.7, JupyterLab's HTML sanitizer allowlists data-commandlinker-command and data-commandlinker-args on button elements, while CommandLinker listens for all click events on document.body and executes the named command without checking whether the element came from trusted JupyterLab UI. A notebook with a pre-saved HTML cell output containing a deceptive button can trigger arbitrary JupyterLab commands - including arbitrary code execution - on a single user click, without any code being submitted for execution by the user. This vulnerability is fixed in 4.5.7.",
+  "aliases": [
+    "CVE-2026-42557"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyter-notebook",
+        "purl": "pkg:bitnami/jupyter-notebook"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.5.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jupyter:notebook:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-mqcg-5x36-vfcg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42557"
+    }
+  ],
+  "published": "2026-05-15T08:42:02.983Z",
+  "modified": "2026-05-15T09:12:54.074Z"
+}

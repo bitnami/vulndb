@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-33377",
+  "summary": "Dashboard Import Overwrites ACL — Editor Privilege Escalation to Dashboard Admin",
+  "details": "An Editor can overwrite a dashboard not owned by them to acquire admin on that specific dashboard. The user must have write access to the dashboard to escalate privilege.",
+  "aliases": [
+    "CVE-2026-33377"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "11.6.14"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.2.8"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.6"
+            },
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.3"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-33377"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33377"
+    }
+  ],
+  "published": "2026-05-15T08:42:45.411Z",
+  "modified": "2026-05-15T09:12:54.074Z"
+}
