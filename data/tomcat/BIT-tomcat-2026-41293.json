@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-tomcat-2026-41293",
   "summary": "Apache Tomcat: HTTP/2 request headers not validated",
-  "details": "Improper Input Validation vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 10.0.0 through 10.0.27.\nOlder, end of support versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
+  "details": "Improper Input Validation vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.21, from 10.1.0 through 10.1.54, from 9.0.0 through 9.0.117, from 10.0.0 through 10.0.27.\nOlder, end of support versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
   "aliases": [
     "CVE-2026-41293"
   ],
@@ -36,7 +36,7 @@
               "fixed": "11.0.22"
             },
             {
-              "introduced": "9.0.0.M1"
+              "introduced": "9.0.0"
             },
             {
               "fixed": "9.0.118"
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2026-05-14T11:56:42.533Z",
-  "modified": "2026-05-15T09:12:54.074Z"
+  "modified": "2026-05-15T12:24:26.484Z"
 }
