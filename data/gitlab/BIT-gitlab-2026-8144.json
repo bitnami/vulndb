@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-8144",
+  "summary": "Missing Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.1 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that could have allowed an authenticated user with project membership to enumerate private group members due to missing authorization checks.",
+  "aliases": [
+    "CVE-2026-8144"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.1.0"
+            },
+            {
+              "fixed": "18.9.7"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.6"
+            },
+            {
+              "introduced": "18.11.0"
+            },
+            {
+              "fixed": "18.11.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/591964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8144"
+    }
+  ],
+  "published": "2026-05-15T09:11:20.119Z",
+  "modified": "2026-05-15T09:12:54.074Z"
+}

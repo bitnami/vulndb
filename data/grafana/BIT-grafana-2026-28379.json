@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-28379",
+  "summary": "Viewer-triggered race condition in Grafana Live leads to complete server crash",
+  "details": "A race condition in Grafana Live allows authenticated users with Viewer role to trigger a server crash by sending concurrent requests that cause a fatal map access error. This results in complete service unavailability requiring restart of the Grafana server.",
+  "aliases": [
+    "CVE-2026-28379"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "11.6.14"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.2.8"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.6"
+            },
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.3"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-28379"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28379"
+    }
+  ],
+  "published": "2026-05-15T08:42:37.068Z",
+  "modified": "2026-05-15T09:12:54.074Z"
+}
