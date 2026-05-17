@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2026-6479",
+  "summary": "PostgreSQL SSL/GSS init causes denial of service, via uncontrolled recursion",
+  "details": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+  "aliases": [
+    "CVE-2026-6479"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.23.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.18.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.14.0"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.10.0"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6479"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2026-6479/"
+    }
+  ],
+  "published": "2026-05-17T14:52:27.954Z",
+  "modified": "2026-05-17T15:12:35.910Z"
+}
