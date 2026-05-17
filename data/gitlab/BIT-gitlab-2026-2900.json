@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-2900",
+  "summary": "Missing Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 16.10 before 18.9.7, 18.10 before 18.10.6, and 18.11 before 18.11.3 that when instance-level approval rule editing prevention was enabled, could have allowed an authenticated user with Maintainer permissions to modify or delete project approval rules due to missing authorization checks.",
+  "aliases": [
+    "CVE-2026-2900"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "16.10.0"
+            },
+            {
+              "fixed": "18.9.7"
+            },
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.10.6"
+            },
+            {
+              "introduced": "18.11.0"
+            },
+            {
+              "fixed": "18.11.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/05/13/patch-release-gitlab-18-11-3-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/590983"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3561092"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2900"
+    }
+  ],
+  "published": "2026-05-17T06:09:46.217Z",
+  "modified": "2026-05-17T06:12:17.424Z"
+}
