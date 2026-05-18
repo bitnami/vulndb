@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2026-6477",
+  "summary": "PostgreSQL libpq lo_* functions let server superuser overwrite client stack memory",
+  "details": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or psql stack memory.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
+  "aliases": [
+    "CVE-2026-6477"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.23.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.18.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.14.0"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.10.0"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2026-6477/"
+    }
+  ],
+  "published": "2026-05-17T23:52:50.770Z",
+  "modified": "2026-05-18T00:12:58.633Z"
+}
