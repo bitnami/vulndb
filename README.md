@@ -150,6 +150,10 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2026-05
+
+- bncert
+
 ### 2026-04
 
 - Attu
