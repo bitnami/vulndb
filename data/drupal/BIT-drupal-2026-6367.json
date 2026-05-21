@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-drupal-2026-6367",
+  "summary": "Drupal core - Moderately critical - Cross-site scripting - SA-CORE-2026-003",
+  "details": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal Drupal core allows Cross-Site Scripting (XSS).\n\nThis issue affects Drupal core: from 11.3.0 before 11.3.7.",
+  "aliases": [
+    "CVE-2026-6367"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.3.0"
+            },
+            {
+              "fixed": "11.3.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6367"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2026-003"
+    }
+  ],
+  "published": "2026-05-21T08:39:58.541Z",
+  "modified": "2026-05-21T09:12:24.336Z"
+}
