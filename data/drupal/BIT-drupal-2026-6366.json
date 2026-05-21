@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-drupal-2026-6366",
+  "summary": "Drupal core - Moderately critical - Gadget Chain - SA-CORE-2026-002",
+  "details": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Drupal core allows Object Injection.\n\nThis issue affects Drupal core: from 8.0.0 before 10.5.9, from 10.6.0 before 10.6.7, from 11.0.0 before 11.2.11, from 11.3.0 before 11.3.7.",
+  "aliases": [
+    "CVE-2026-6366"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "drupal",
+        "purl": "pkg:bitnami/drupal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "10.5.9"
+            },
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.7"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.2.11"
+            },
+            {
+              "introduced": "11.3.0"
+            },
+            {
+              "fixed": "11.3.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6366"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.drupal.org/sa-core-2026-002"
+    }
+  ],
+  "published": "2026-05-21T08:39:56.806Z",
+  "modified": "2026-05-21T09:12:24.336Z"
+}
