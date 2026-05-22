@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-memcached-2026-47784",
+  "details": "In memcached before 1.6.42, password data for SASL password database authentication has a timing side channel because memcmp is used by sasl_server_userdb_checkpass.",
+  "aliases": [
+    "CVE-2026-47784"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "memcached",
+        "purl": "pkg:bitnami/memcached"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.42"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:memcached:memcached:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/commit/d13f282b4bce33a9c33b8a1bbf07f12114160fed"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/compare/1.6.41...1.6.42"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/memcached/memcached/wiki/ReleaseNotes1642"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47784"
+    }
+  ],
+  "published": "2026-05-22T08:47:49.029Z",
+  "modified": "2026-05-22T09:16:34.647Z"
+}
