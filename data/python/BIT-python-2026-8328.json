@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-python-2026-8328",
   "summary": "FTP PASV SSRF, ftpcp() does not use actual peer address, trusts server-supplied PASV host address",
-  "details": "The ftpcp() function in Lib/ftplib.py was not updated when \nCVE-2021-4189 was fixed. While makepasv() was patched to replace \nserver-supplied PASV host addresses with the actual peer address \n(getpeername()[0]), ftpcp() still calls parse227() directly and passes \nthe raw attacker-controllable IP address and port to target.sendport(). This patch is related to CVE-2021-4189.",
+  "details": "The ftpcp() function in Lib/ftplib.py was not updated when \nCVE-2021-4189 was fixed. While makepasv() was patched to replace \nserver-supplied PASV host addresses with the actual peer address \n(getpeername()[0]), ftpcp() still calls parse227() directly and passes \nthe raw attacker-controllable IP address and port to target.sendport(). This patch is related to CVE-2021-4189.",
   "aliases": [
     "CVE-2026-8328"
   ],
@@ -25,6 +25,9 @@
           "events": [
             {
               "introduced": "0"
+            },
+            {
+              "fixed": "3.14.5"
             }
           ]
         }
@@ -55,6 +58,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8328"
     }
   ],
-  "published": "2026-05-15T12:01:48.398Z",
-  "modified": "2026-05-15T12:24:26.484Z"
+  "published": "2026-05-20T12:04:45.838Z",
+  "modified": "2026-05-20T12:26:38.146Z"
 }
