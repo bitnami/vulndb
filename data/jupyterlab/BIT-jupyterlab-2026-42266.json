@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-jupyterlab-2026-42266",
   "summary": "JupyterLab has an Extension Manager API/GUI Policy Discrepancy allowing 3rd party (malicious) extensions install via POST request.",
-  "details": "jupyterlab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From 4.0.0 to 4.5.6, the allow-list of extensions that can be installed from PyPI Extension Manager (allowed_extensions_uris) is not correctly enforced by JupyterLab. The PyPI Extension Manager was not contained to packages listed on the default PyPI index. This vulnerability is fixed in 4.5.7.",
+  "details": "JupyterLab is an extensible environment for interactive and reproducible computing, based on the Jupyter Notebook Architecture. From 4.0.0 to 4.5.6, the allow-list of extensions that can be installed from PyPI Extension Manager (allowed_extensions_uris) is not correctly enforced by JupyterLab. The PyPI Extension Manager was not contained to packages listed on the default PyPI index. This vulnerability is fixed in 4.5.7.",
   "aliases": [
     "CVE-2026-42266"
   ],
@@ -48,8 +48,20 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42266"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/releases/tag/v4.5.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jupyterhub.readthedocs.io/en/5.2.1/explanation/websecurity.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jupyterlab.readthedocs.io/en/latest/user/extensions.html#extension-manager-implementations"
     }
   ],
   "published": "2026-05-15T08:42:28.664Z",
-  "modified": "2026-05-21T06:12:40.531Z"
+  "modified": "2026-05-22T09:16:34.647Z"
 }
