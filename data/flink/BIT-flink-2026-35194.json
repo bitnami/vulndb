@@ -55,7 +55,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:flink:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:flink:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:flink:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -73,5 +74,5 @@
     }
   ],
   "published": "2026-05-19T08:43:28.119Z",
-  "modified": "2026-05-19T09:16:23.954Z"
+  "modified": "2026-05-27T09:16:35.330Z"
 }
