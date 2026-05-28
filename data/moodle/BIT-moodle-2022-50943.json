@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2022-50943",
+  "summary": "Moodle LMS 4.0 Cross-Site Scripting via course search.php",
+  "details": "Moodle LMS 4.0 contains a cross-site scripting vulnerability that allows unauthenticated attackers to inject malicious scripts by submitting payloads through the search parameter. Attackers can inject JavaScript code via the search field in course/search.php to execute arbitrary scripts in users' browsers and steal session cookies.",
+  "aliases": [
+    "CVE-2022-50943"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "4.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git.in.moodle.com/moodle"
+    },
+    {
+      "type": "WEB",
+      "url": "https://moodle.org/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-50943"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.exploit-db.com/exploits/51115"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/moodle-lms-cross-site-scripting-via-course-search-php"
+    }
+  ],
+  "published": "2026-05-28T08:53:04.751Z",
+  "modified": "2026-05-28T09:14:08.616Z"
+}
