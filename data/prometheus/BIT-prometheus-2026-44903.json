@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-prometheus-2026-44903",
+  "summary": "Prometheus: Stored XSS via crafted histogram bucket label values in the heatmap display of the old Prometheus web UI",
+  "details": "Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3 and 3.11.3, in the Prometheus server's legacy web UI (enabled via the command-line flag --enable-feature=old-ui), the histogram heatmap chart view does not escape le label values when inserting them into the HTML for use as axis tick mark labels. An attacker who can inject crafted metrics can execute JavaScript in the browser of any Prometheus user who views the metric in the heatmap chart UI. This vulnerability is fixed in 3.5.3 and 3.11.3.",
+  "aliases": [
+    "CVE-2026-44903"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "prometheus",
+        "purl": "pkg:bitnami/prometheus"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.49.0"
+            },
+            {
+              "fixed": "3.5.3"
+            },
+            {
+              "introduced": "3.6.0"
+            },
+            {
+              "fixed": "3.11.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:prometheus:prometheus:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/prometheus/prometheus/commit/38f23b9075ced1de2b82d2dad8b2bebb1ecd5b7d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/prometheus/prometheus/security/advisories/GHSA-fw8g-cg8f-9j28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44903"
+    }
+  ],
+  "published": "2026-05-28T11:26:41.321Z",
+  "modified": "2026-05-28T11:48:30.090Z"
+}
