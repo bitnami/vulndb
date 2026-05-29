@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-44839",
+  "summary": "RabbitMQ: Unsanitized vhost names allow for XSS in management UI",
+  "details": "RabbitMQ is a messaging and streaming broker. From 3.7.0 to before 4.1.2 and 4.0.13, This vulnerability is fixed in 4.1.2 and 4.0.13.",
+  "aliases": [
+    "CVE-2026-44839"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.7.0"
+            },
+            {
+              "fixed": "4.0.13"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/7f54319279d1ece161ae0b4cdc6f0e58a4045eb5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-fh5r-jpm3-fjwp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44839"
+    }
+  ],
+  "published": "2026-05-29T10:33:07.764Z",
+  "modified": "2026-05-29T10:52:11.929Z"
+}

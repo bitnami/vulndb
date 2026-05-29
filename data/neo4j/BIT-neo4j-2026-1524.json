@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-neo4j-2026-1524",
+  "summary": "Auth misconfiguration when multiple providers enabled",
+  "details": "An edgecase in SSO implementation in Neo4j Enterprise edition versions prior to version 2026.02 can lead to unauthorised access under the following conditions:\n\n\nIf a neo4j admin configures two or more OIDC providers AND configures one or more of them to be an authorization provider AND configures one or more of them to be authentication-only, then those that are authentication-only will also provide authorization. This edgecase becomes a security problem only if the authentication-only provider contains groups which have higher privileges than provided by the intended (configured) authorization provider. \n\nWhen using multiple plugins for authentication and authorisation, prior to the fix the issue could lead to a plugin configured to provide only authentication or authorisation capabilities erroneously providing both capabilities. \n\nWe recommend upgrading to versions 2026.02 (or 5.26.22) where the issue is fixed.",
+  "aliases": [
+    "CVE-2026-1524"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "neo4j",
+        "purl": "pkg:bitnami/neo4j"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:U/V:D/RE:M/U:Green"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.26.22"
+            },
+            {
+              "introduced": "2025.1.0"
+            },
+            {
+              "fixed": "2026.2.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:neo4j:neo4j:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://neo4j.com/security/CVE-2026-1524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1524"
+    }
+  ],
+  "published": "2026-05-29T10:28:51.795Z",
+  "modified": "2026-05-29T10:52:11.929Z"
+}
