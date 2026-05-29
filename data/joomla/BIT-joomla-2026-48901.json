@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-joomla-2026-48901",
+  "summary": "Joomla! Core - [20260517] - Incorrect Cache Key Construction for InputFilter objects",
+  "details": "The InputFilter::getInstance() method omitted a security sensitive parameter from the instance cache key.",
+  "aliases": [
+    "CVE-2026-48901"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "5.4.6"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/1049-20260517-core-incorrect-cache-key-construction-for-inputfilter-objects.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48901"
+    }
+  ],
+  "published": "2026-05-29T08:44:45.095Z",
+  "modified": "2026-05-29T09:07:36.285Z"
+}
