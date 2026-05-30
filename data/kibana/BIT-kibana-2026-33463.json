@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-33463",
+  "summary": "Operation on a Resource after Expiration or Termination in Kibana Leading to Unauthorized File Access",
+  "details": "Operation on a Resource after Expiration or Termination (CWE-672) in Kibana can lead to unauthorized information disclosure. A logic error in how expiration timestamps were validated allowed a time-bounded access token to remain usable beyond its intended validity window, enabling an unauthenticated actor in possession of the token to retrieve the associated content after expiration.",
+  "aliases": [
+    "CVE-2026-33463"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.16"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/8-19-16-9-3-5-security-update-esa-2026-33/386551"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33463"
+    }
+  ],
+  "published": "2026-05-30T11:41:42.022Z",
+  "modified": "2026-05-30T12:04:03.749Z"
+}
