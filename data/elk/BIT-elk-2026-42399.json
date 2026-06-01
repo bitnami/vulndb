@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-42399",
+  "summary": "Uncontrolled Resource Consumption in Kibana Leading to Denial of Service",
+  "details": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). An authenticated low-privileged user can cause Kibana to consume exponentially increasing amounts of memory by submitting a specially crafted Timelion visualization expression containing deeply chained function calls. The resulting data structure grows without bound, exhausting available memory and causing the Kibana service to crash and become unavailable to all users.",
+  "aliases": [
+    "CVE-2026-42399"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.16"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-16-and-9-3-5-security-update-esa-2026-36/386556"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42399"
+    }
+  ],
+  "published": "2026-06-01T11:39:12.382Z",
+  "modified": "2026-06-01T12:05:25.064Z"
+}
