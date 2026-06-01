@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-42401",
+  "summary": "Improper Neutralization of Input During Web Page Generation in Kibana Leading to Stored HTML Injection",
+  "details": "Improper Neutralization of Input During Web Page Generation (CWE-79) in Kibana can lead to stored HTML injection. A user with write access to an Elasticsearch index could persist crafted markup which, when subsequently rendered through an affected Kibana view by another user, was not sufficiently sanitized. Successful exploitation could result in unauthorized UI manipulation and outbound network requests issued from the viewing user's browser session.",
+  "aliases": [
+    "CVE-2026-42401"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.16"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-16-9-3-5-security-update-esa-2026-34/386552"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42401"
+    }
+  ],
+  "published": "2026-06-01T08:43:22.410Z",
+  "modified": "2026-06-01T09:05:31.854Z"
+}
