@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2026-40166",
+  "summary": "authentik: Non-admin user can retrieve confidential OAuth client_secret via /api/v3/oauth2/access_tokens/",
+  "details": "authentik is an open-source identity provider. In versions prior to 2025.12.5 and 2026.2.0 through 2026.2.2, authenticated non-admin users with at least one OAuth2 access token can retrieve the client_secret of confidential OAuth2 providers they have previously authenticated against, exposing sensitive information to users without the correct permissions. This logic is GET /api/v3/oauth2/access_tokens/. The API response includes a nested provider object containing client_id and client_secret for providers configured with client_type: confidential, which should not be accessible to low-privilege users. This issue has been fixed in versions 2025.12.5 and 2026.2.3.",
+  "aliases": [
+    "CVE-2026-40166"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2025.12.5"
+            },
+            {
+              "introduced": "2026.2.0"
+            },
+            {
+              "fixed": "2026.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2025.12.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version%2F2026.2.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-hhpc-rqgm-pxj4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40166"
+    }
+  ],
+  "published": "2026-06-01T09:52:27.957Z",
+  "modified": "2026-06-01T10:23:34.500Z"
+}
