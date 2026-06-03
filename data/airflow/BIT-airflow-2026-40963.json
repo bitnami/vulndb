@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-40963",
+  "summary": "Apache Airflow: DAG authorization bypass on /ui/structure/structure_data",
+  "details": "The structure_data endpoint in the Airflow UI returned external dependency graph nodes for linked Dags without checking whether the caller had read permission on those linked Dags. An authenticated UI/API user authorized for one Dag could enumerate linked Dag IDs and dependency metadata for other Dags they were not authorized to read. Affects deployments that rely on per-Dag read scoping to keep Dag dependency topology private across teams. Users are advised to upgrade to `apache-airflow` 3.2.2 or later.",
+  "aliases": [
+    "CVE-2026-40963"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/31/3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/65342"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/s907bhsksc37m59f0loqjcp1ryobrr60"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40963"
+    }
+  ],
+  "published": "2026-06-02T23:37:41.154Z",
+  "modified": "2026-06-03T00:04:21.580Z"
+}
