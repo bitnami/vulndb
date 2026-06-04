@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-3198",
+  "summary": "Improper Access Control in mlflow/mlflow",
+  "details": "MLflow 3.9.0 with basic-auth (`--app-name basic-auth`) fails to enforce authorization checks for multiple Gateway API 'list' endpoints. Specifically, the `BEFORE_REQUEST_HANDLERS` dictionary in `mlflow/server/auth/__init__.py` does not include entries for `ListGatewaySecretInfos`, `ListGatewayEndpoints`, and `ListGatewayModelDefinitions`. This allows any authenticated user, regardless of their assigned permissions, to enumerate all gateway secrets, endpoints, and model definitions. This vulnerability exposes sensitive information, such as API keys, endpoint configurations, and proprietary model definitions, to unauthorized users.",
+  "aliases": [
+    "CVE-2026-3198"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.10.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/e57db731-97d3-40c3-a429-831ee959807f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3198"
+    }
+  ],
+  "published": "2026-06-04T17:46:26.560Z",
+  "modified": "2026-06-04T18:05:53.597Z"
+}
