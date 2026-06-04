@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-49157",
+  "summary": "Apache ActiveMQ: Authenticated low-privilege Web users retain Jolokia broker-management capability by default",
+  "details": "Incorrect Default Permissions vulnerability in Apache ActiveMQ.\n\nThis issue affects Apache ActiveMQ: before 5.19.7, from 6.0.0 before 6.2.6.\n\nThe default Jolokia authorization settings granted non-admin (low-privilege) web-login accounts access to Jolokia operations which allowed executing broker management operations meant for admins such as addQueue and removeQueue.\n\nUsers are recommended to upgrade to version 6.2.6 or 5.19.7, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-49157"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.7"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/05/31/21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/rrcsf6s90hj4tdh89nvkko75q5505rj8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49157"
+    }
+  ],
+  "published": "2026-06-04T14:38:13.610Z",
+  "modified": "2026-06-04T15:06:52.185Z"
+}
