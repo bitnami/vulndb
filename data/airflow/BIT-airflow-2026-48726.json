@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-48726",
+  "summary": "Apache Airflow: revoke_token() unreachable in FabAuthManager / KeycloakAuthManager logout path",
+  "details": "A bug in Apache Airflow's auth manager logout handling left previously-issued JWT tokens valid after the user clicked logout in the UI: the logout flow for `FabAuthManager` and `KeycloakAuthManager` did not actually reach the underlying `revoke_token()` call, so the JWT remained accepted by the API server until its natural expiry. An attacker holding a previously-issued JWT for a logged-out user could continue to make authenticated API calls as that user. Affects deployments configured with `FabAuthManager` or `KeycloakAuthManager` (the bug does not affect SimpleAuthManager). This is a residual gap in the fix for CVE-2025-57735, which addressed cookie-side invalidation in PR #57992 / PR #61339 but did not cover the provider-side `revoke_token()` reachability in the FAB / Keycloak code paths. Users who already upgraded for CVE-2025-57735 should additionally upgrade to `apache-airflow` 3.2.2 or later to cover the FAB / Keycloak logout paths.",
+  "aliases": [
+    "CVE-2026-48726"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/67289"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/630jg4z6cjkv4m2yv2ljgmf1zhdj1vqx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48726"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-57735"
+    }
+  ],
+  "published": "2026-06-04T23:38:40.837Z",
+  "modified": "2026-06-05T00:06:01.681Z"
+}
