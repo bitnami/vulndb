@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-2651",
+  "summary": "Missing Authorization Validation in mlflow/mlflow",
+  "details": "A vulnerability in MLflow versions <=3.10.1.dev0 allows unauthorized access to multipart upload (MPU) endpoints when the `--serve-artifacts` mode is enabled. The authorization logic does not enforce resource-level permission checks for `/mlflow-artifacts/mpu/*` endpoints, enabling attackers to overwrite artifacts belonging to other users. This can lead to unauthorized cross-user writes, model supply chain poisoning, and arbitrary code execution when compromised models are loaded. The issue is resolved in version 3.10.0.",
+  "aliases": [
+    "CVE-2026-2651"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/d7290811d8f3c95366d80109424edc1fb1ad966f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://huntr.com/bounties/65beb119-d3e0-4e03-af2f-fa98f78f83dc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2651"
+    }
+  ],
+  "published": "2026-06-05T08:52:14.527Z",
+  "modified": "2026-06-05T09:11:00.149Z"
+}

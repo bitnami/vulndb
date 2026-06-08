@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gdal-2026-49014",
+  "details": "In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver allows code execution via a stack-based buffer overflow. It reads a geometry attribute into a fixed-size stack buffer without validating the attribute length. The attacker embeds the exploit as an oversized geometry attribute in a crafted NetCDF file. This achieves arbitrary code execution on the server running GDAL. This is in frmts/netcdf/netcdfsg.cpp.",
+  "aliases": [
+    "CVE-2026-49014"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gdal",
+        "purl": "pkg:bitnami/gdal"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.13.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:osgeo:gdal:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/OSGeo/gdal/issues/14594"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49014"
+    }
+  ],
+  "published": "2026-06-05T08:44:46.134Z",
+  "modified": "2026-06-05T18:03:32.375Z"
+}
