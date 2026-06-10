@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-2026-9669",
+  "summary": "bz2.BZ2Decompressor reuse after error can cause a stack buffer overflow",
+  "details": "bz2.BZ2Decompressor objects could be reused after a decompression error. If an application caught the resulting OSError and retried with the same decompressor, crafted input could cause the decompressor to resume from an invalid internal state and perform out-of-bounds writes to a stack buffer. This could crash the process when processing untrusted data.",
+  "aliases": [
+    "CVE-2026-9669"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/08/17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/150599"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/150600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/DBJZETMGUIFK7DVUWMOXHD3Z6IX2QPSX/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9669"
+    }
+  ],
+  "published": "2026-06-10T10:16:28.099Z",
+  "modified": "2026-06-10T10:34:44.297Z"
+}
