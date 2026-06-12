@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2026-11822",
+  "summary": "SQLite before 3.53.2 Memory Corruption in FTS5 Extension",
+  "details": "SQLite before 3.53.2 contains memory corruption vulnerabilities in the FTS5 full-text search extension that allow attackers to cause process crashes, memory exhaustion, or arbitrary code execution by supplying a crafted database with malformed FTS5 page data. Attackers can trigger an out-of-bounds read in fts5LeafSeek() via an attacker-controlled loop bound and a heap buffer overflow write in fts5ChunkIterate() through a crafted continuation page causing an integer underflow, exploitable when an FTS5 MATCH query is executed against the malicious database.",
+  "aliases": [
+    "CVE-2026-11822"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.53.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11822"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/releaselog/3_53_2.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/src/info/061febcf41ca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://sqlite.org/src/info/4a5ad516ea93"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/sqlite-before-memory-corruption-in-fts5-extension"
+    }
+  ],
+  "published": "2026-06-12T08:51:44.016Z",
+  "modified": "2026-06-12T09:06:56.549Z"
+}
