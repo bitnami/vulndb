@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-9694",
+  "summary": "Improper Neutralization of Substitution Characters in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.9 before 18.10.8, 18.11 before 18.11.5, and 19.0 before 19.0.2 that under certain conditions, could have allowed an unauthenticated user to impersonate the GitLab Support Bot and inject arbitrary content via a specially crafted Service Desk email reply due to improper neutralization in email template processing.",
+  "aliases": [
+    "CVE-2026-9694"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.9.0"
+            },
+            {
+              "fixed": "18.10.8"
+            },
+            {
+              "introduced": "18.11.0"
+            },
+            {
+              "fixed": "18.11.5"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://about.gitlab.com/releases/2026/06/10/patch-release-gitlab-19-0-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/601330"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3685720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9694"
+    }
+  ],
+  "published": "2026-06-12T09:05:18.381Z",
+  "modified": "2026-06-12T09:06:56.549Z"
+}
