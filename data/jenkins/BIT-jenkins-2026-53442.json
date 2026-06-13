@@ -26,6 +26,12 @@
               "introduced": "0"
             },
             {
+              "fixed": "2.555.3"
+            },
+            {
+              "introduced": "2.556.0"
+            },
+            {
               "fixed": "2.568.0"
             }
           ]
@@ -37,7 +43,8 @@
     "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:jenkins:jenkins:*:*:*:*:lts:*:*:*",
-      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*"
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -51,5 +58,5 @@
     }
   ],
   "published": "2026-06-12T08:43:11.942Z",
-  "modified": "2026-06-12T09:06:56.549Z"
+  "modified": "2026-06-13T09:00:17.512Z"
 }

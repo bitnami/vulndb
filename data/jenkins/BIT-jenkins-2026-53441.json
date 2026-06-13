@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-53441",
+  "details": "Jenkins 2.483 through 2.567 (both inclusive), LTS 2.492.1 through 2.555.2 (both inclusive) does not escape the user-provided description of a generic offline cause that could be set through the `POST config.xml` API, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with Agent/Configure permission.",
+  "aliases": [
+    "CVE-2026-53441"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.483.0"
+            },
+            {
+              "fixed": "2.555.3"
+            },
+            {
+              "introduced": "2.556.0"
+            },
+            {
+              "fixed": "2.568.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53441"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2026-06-10/#SECURITY-3731"
+    }
+  ],
+  "published": "2026-06-13T08:41:31.560Z",
+  "modified": "2026-06-13T09:00:17.512Z"
+}
