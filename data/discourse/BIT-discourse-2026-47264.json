@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-47264",
+  "summary": "Discourse: Don't leak restricted tag group names via tag info",
+  "details": "Discourse is an open-source discussion platform. From versions 2026.1.0 to before 2026.1.4, 2026.3.0 to before 2026.3.1, and 2026.4.0 to before 2026.4.1, DetailedTagSerializer#tag_group_names returned every tag group a tag belonged to without filtering against the requesting user's visibility. With SiteSetting.tags_listed_by_group enabled, anonymous and unprivileged users hitting TagsController#info (which is exempt from requires_login) could read the names of tag groups restricted to specific user groups or non-visible categories. This issue has been patched in versions 2026.1.4, 2026.3.1, 2026.4.1, and 2026.5.0.",
+  "aliases": [
+    "CVE-2026-47264"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.4"
+            },
+            {
+              "introduced": "2026.3.0"
+            },
+            {
+              "fixed": "2026.3.1"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-4q5q-6hh6-53x2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47264"
+    }
+  ],
+  "published": "2026-06-16T12:37:44.366Z",
+  "modified": "2026-06-16T12:59:08.700Z"
+}

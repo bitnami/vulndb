@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-53724",
+  "summary": "Parse Server: Stored XSS via trailing-dot filename bypassing file upload extension blocklist",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.79 and 9.9.1, the default file upload extension blocklist can be bypassed by appending a trailing dot to a filename whose extension would otherwise be blocked (e.g. poc.svg.). The trailing dot causes the extension parser to extract an empty string, which short-circuits the blocklist check, and the attacker-controlled Content-Type is forwarded to the storage adapter unchanged. Storage adapters that persist and serve the provided Content-Type (such as S3 or GCS) then serve the file with an active type such as image/svg+xml, enabling stored XSS when a victim opens the file URL. The default GridFS adapter is not affected because it sets X-Content-Type-Options: nosniff on responses. This issue has been patched in versions 8.6.79 and 9.9.1.",
+  "aliases": [
+    "CVE-2026-53724"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.79"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10489"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10490"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-7wqv-xjf3-x35v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53724"
+    }
+  ],
+  "published": "2026-06-16T12:40:08.407Z",
+  "modified": "2026-06-16T12:59:08.700Z"
+}

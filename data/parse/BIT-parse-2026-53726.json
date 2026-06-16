@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-53726",
+  "summary": "Parse Server: Relation `$relatedTo` query bypasses `protectedFields` and owning-object ACL",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.80 and 9.9.1, a relation query using the $relatedTo operator could read the membership of a Relation field even when that field was hidden from the requesting client by protectedFields, and even when the object owning the relation was not readable by the client under its ACL or class-level permissions. The request requires only the public API credentials that Parse clients normally carry — no user session, master key, or Cloud Code is needed. As a result, an unauthenticated client who knows or obtains the owning object's objectId could enumerate the objects linked through a protected relation, or combine the operator with an objectId constraint to use it as a membership oracle — confirming whether a specific object is linked to a private parent. This affects applications that rely on protectedFields or object ACLs to keep Relation membership confidential, such as private group memberships, block lists, or account-to-resource associations. This issue has been patched in versions 8.6.80 and 9.9.1.",
+  "aliases": [
+    "CVE-2026-53726"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.80"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10493"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10494"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-wmwx-jr2p-4j4r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53726"
+    }
+  ],
+  "published": "2026-06-16T12:40:10.366Z",
+  "modified": "2026-06-16T12:59:08.700Z"
+}
