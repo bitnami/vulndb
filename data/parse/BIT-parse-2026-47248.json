@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-47248",
+  "summary": "Parse Server: GraphQL \"Did you mean\" validation suggestions disclose schema to unauthenticated callers",
+  "details": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.78 and 9.9.1, Parse Server's GraphQL endpoint discloses schema metadata to unauthenticated callers through Did you mean ...? suggestions embedded in GraphQL validation-error messages. An unauthenticated caller who knows only the public application id can iteratively send malformed queries to reconstruct class names, field names, argument names, mutation names, and input-object fields. This issue has been patched in versions 8.6.78 and 9.9.1.",
+  "aliases": [
+    "CVE-2026-47248"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.78"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.9.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10467"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/pull/10468"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-8cph-rgr4-g5vj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47248"
+    }
+  ],
+  "published": "2026-06-16T12:40:06.250Z",
+  "modified": "2026-06-16T12:59:08.700Z"
+}
