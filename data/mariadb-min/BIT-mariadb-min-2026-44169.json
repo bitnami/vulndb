@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2026-44169",
+  "summary": "MariaDB: Authorization bypass in role-based routine-level privilege check exposes stored routine definitions",
+  "details": "MariaDB server is a community developed fork of MySQL server. From versions 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, a user getting EXECUTE access to a stored routine via a role, could see the routine definition even without SHOW CREATE ROUTINE privilege. This issue has been patched in versions 11.4.11, 11.8.7, and 12.3.2.",
+  "aliases": [
+    "CVE-2026-44169"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.11"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.7"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-22xq-vq3f-87x2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-39288"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44169"
+    }
+  ],
+  "published": "2026-06-16T11:47:06.438Z",
+  "modified": "2026-06-16T12:06:30.986Z"
+}

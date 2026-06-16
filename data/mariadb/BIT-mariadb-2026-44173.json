@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-2026-44173",
+  "summary": "MariaDB: FILE privilege was not checked for subqueries in the FROM clause",
+  "details": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB allowed SELECT ... INTO OUTFILE and SELECT ... INTO DUMPFILE without verifying the FILE privilege if the FROM clause contained only subqueries. This issue has been patched in versions 10.6.26, 10.11.17, 11.4.11, 11.8.7, and 12.3.2.",
+  "aliases": [
+    "CVE-2026-44173"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb",
+        "purl": "pkg:bitnami/mariadb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.26"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.17"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.11"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.7"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-667j-m53j-wpmc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-39493"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44173"
+    }
+  ],
+  "published": "2026-06-16T11:47:00.883Z",
+  "modified": "2026-06-16T12:06:30.986Z"
+}
