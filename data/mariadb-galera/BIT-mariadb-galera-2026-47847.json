@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-galera-2026-47847",
+  "summary": "Default replication credential monitor:monitor created",
+  "details": "Bitnami MariaDB Galera container images and Helm chart are affected by a hardcoded default credential vulnerability in the Galera replication health-check user. The MARIADB_REPLICATION_USER and MARIADB_REPLICATION_PASSWORD environment variables defaulted to monitor and monitor respectively. This user is granted REPLICATION CLIENT privileges from any host ('%'). The Bitnami Helm chart for MariaDB Galera did not expose parameters to configure this user's credentials, resulting in all chart deployments using this publicly known credential by default. A remote attacker with network access to the MariaDB port can authenticate as monitor:monitor and query replication topology and status information.",
+  "aliases": [
+    "CVE-2026-47847"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-galera",
+        "purl": "pkg:bitnami/mariadb-galera"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.0"
+            },
+            {
+              "fixed": "10.6.27-0"
+            },
+            {
+              "introduced": "10.11.0"
+            },
+            {
+              "fixed": "10.11.17-0"
+            },
+            {
+              "introduced": "11.4.0"
+            },
+            {
+              "fixed": "11.4.12-0"
+            },
+            {
+              "introduced": "11.8.0"
+            },
+            {
+              "fixed": "11.8.7-0"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.2-0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb-galera:mariadb-galera:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/bitnami/containers/security/advisories/GHSA-xcv9-cg8m-3mf2"
+    }
+  ],
+  "published": "2026-06-18T12:00:00.000Z",
+  "modified": "2026-06-18T12:00:00.000Z"
+}
