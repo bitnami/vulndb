@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2026-48163",
+  "summary": "MariaDB: wsrep SST unsafe parameter handling on the donor side (rsync)",
+  "details": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.27, 10.11.1 to before 10.11.18, 11.4.1 to before 11.4.12, 11.8.1 to before 11.8.8, and 12.3.1, during the SST the donor node is interpolating parameters that the joiner sent into the command line. Not all parameters were properly validated which could allow a malicious joiner to execute arbitrary shell commands on the donor side via the rsync SST method. This issue has been patched in versions 10.6.27, 10.11.18, 11.4.12, 11.8.8, and 12.3.2.",
+  "aliases": [
+    "CVE-2026-48163"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.27"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.18"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.12"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.8"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-rpgv-q6gv-684r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://jira.mariadb.org/browse/MDEV-39648"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48163"
+    }
+  ],
+  "published": "2026-06-16T11:47:11.957Z",
+  "modified": "2026-06-17T12:07:41.316Z"
+}

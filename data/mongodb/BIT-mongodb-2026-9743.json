@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-9743",
+  "summary": "Aggregation sub-pipeline null dereference may allow DoS via crafted getMore",
+  "details": "In MongoDB Server 8.0, an aggregation stage can leave its _subPipeline field null during processing of certain pipelines. If a getMore is subsequently issued on the same cursor, the server may dereference this null sub-pipeline when reattaching to the operation context, accessing an invalid address and crashing the process. This issue allows an authenticated user who can run aggregation pipelines to cause a denial of service by issuing a specially crafted aggregation followed by getMore on affected versions.",
+  "aliases": [
+    "CVE-2026-9743"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.24"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-123688"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9743"
+    }
+  ],
+  "published": "2026-06-16T11:48:11.223Z",
+  "modified": "2026-06-16T12:06:30.986Z"
+}
