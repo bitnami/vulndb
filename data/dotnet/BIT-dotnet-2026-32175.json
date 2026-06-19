@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-dotnet-2026-32175",
+  "summary": ".NET Core Tampering Vulnerability",
+  "details": "A tampering vulnerability exists when .NET Core improperly handles specially crafted files. An attacker who successfully exploited this vulnerability could write arbitrary files and directories to certain locations on a vulnerable system. However, an attacker would have limited control over the destination of the files and directories.\nTo exploit the vulnerability, an attacker must send a specially crafted file to a vulnerable system.\nThe security update fixes the vulnerability by ensuring .NET Core properly handles files.",
+  "aliases": [
+    "CVE-2026-32175"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet",
+        "purl": "pkg:bitnami/dotnet"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.27"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32175"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32175"
+    }
+  ],
+  "published": "2026-06-19T14:40:47.319Z",
+  "modified": "2026-06-19T15:09:00.818Z"
+}
