@@ -27,9 +27,13 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.MAIN_CATALOG_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.MAIN_CATALOG_SECRET_ACCESS_KEY }}
+          AWS_ASSUME_ROLE: ${{ secrets.MAIN_CATALOG_ASSUME_ROLE }}
           AWS_S3_BUCKET: ${{ secrets.MAIN_CATALOG_BUCKET }}
           AWS_DEFAULT_REGION: us-east-1
         run: |
+          export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+            $(aws sts assume-role --role-arn $AWS_ASSUME_ROLE --role-session-name MySessionName \
+              --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" --output text))
           readarray -t files_changed < <(git show --pretty="" --name-only)
           for f in "${files_changed[@]}"; do
             base_filename="$(basename -- "$f")"
