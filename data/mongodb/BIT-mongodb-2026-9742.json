@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-9742",
+  "summary": "Authenticate command with specific mechanism parameter can trigger server crash",
+  "details": "When OIDC authentication is enabled in configuration, clients may set specific values in the \"mechanism\" parameter of the \"authenticate\" command that lead to server crash. The authenticate command is accessible to unauthenticated clients, leading to pre-auth denial-of-service in affected product configurations.",
+  "aliases": [
+    "CVE-2026-9742"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.10"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-124183"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9742"
+    }
+  ],
+  "published": "2026-06-19T23:49:04.904Z",
+  "modified": "2026-06-20T00:08:33.746Z"
+}
