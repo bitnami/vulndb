@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-48895",
+  "summary": "Apache APISIX: Cas-auth Host header influence on CAS service URL",
+  "details": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Apache APISIX.\n\nThe attacker could manipulate some client headers to perform an open-redirect, to potentially expose the session token.\n\nThis issue affects Apache APISIX: from 3.0.0 through 3.16.0.\n\nUsers are recommended to upgrade to version 3.17.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-48895"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.17.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/yo1kq93ds69zbgjjopop7dmzm7zhj1gq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48895"
+    }
+  ],
+  "published": "2026-06-23T08:45:01.875Z",
+  "modified": "2026-06-23T09:16:30.702Z"
+}

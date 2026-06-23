@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-39998",
+  "summary": "Apache APISIX: Identity Injection via forward-auth Plugin Missing Header Cleanup",
+  "details": "Improper Input Validation vulnerability in Apache APISIX.\n\nThe attacker can take advantage of certain configuration in forward-auth plugin to spoof identity headers.\nThis issue affects Apache APISIX: from 2.12.0 through 3.16.0.\n\nUsers are recommended to upgrade to version 3.17.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-39998"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "3.17.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/vgkvy396010d7g6m0jrn4d3hjf2svlvv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39998"
+    }
+  ],
+  "published": "2026-06-23T08:44:53.776Z",
+  "modified": "2026-06-23T09:16:30.702Z"
+}
