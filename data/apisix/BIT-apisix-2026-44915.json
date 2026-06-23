@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-44915",
+  "summary": "Apache APISIX: Cas-auth plugin open redirect via unsanitized cookie value",
+  "details": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Apache APISIX.\n\nThe default configuration of cas-auth in Apache APISIX is vulnerable to phishing and credential theft.\n\nThis issue affects Apache APISIX: from 3.0.0 through 3.16.0.\n\nUsers are recommended to upgrade to version 3.17.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-44915"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.17.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/19/8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/2syk2kkzjnpzrdh98plbzj8os7wn521c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44915"
+    }
+  ],
+  "published": "2026-06-23T14:37:44.599Z",
+  "modified": "2026-06-23T15:08:27.870Z"
+}
