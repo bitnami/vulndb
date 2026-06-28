@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-appsmith-2026-55454",
+  "summary": "Appsmith: Caddy admin API exposed without authentication",
+  "details": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 2.1, the bundled Caddy reverse-proxy's admin API — which has no authentication by default — is bound on 0.0.0.0:2019 inside the container. While this listener is not directly published to the host by docker-compose.yml, it is reachable from the Appsmith server process itself or a SSRF vulnerability. An authenticated low-privileged user can therefore drive the SSRF to issue POST /load (or any other admin-API call) against http://0.0.0.0:2019/, fully replacing the live Caddy configuration and taking over the reverse proxy. This vulnerability is fixed in 2.1.",
+  "aliases": [
+    "CVE-2026-55454"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "appsmith",
+        "purl": "pkg:bitnami/appsmith"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-8jvv-gwqg-6vjc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55454"
+    }
+  ],
+  "published": "2026-06-28T17:36:57.680Z",
+  "modified": "2026-06-28T18:07:13.880Z"
+}

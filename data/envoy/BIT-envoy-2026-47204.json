@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-envoy-2026-47204",
+  "summary": "Envoy: grpc_stats filter segfault on Connect protocol requests to direct_response routes",
+  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.26.0 until 1.35.13, 1.36.9, 1.37.5, and 1.38.3, the envoy.filters.http.grpc_stats filter crashes (null pointer dereference / segfault) when a Connect protocol request (Content-Type: application/connect+proto or application/connect+json) hits a direct_response route. A single unauthenticated HTTP request crashes the Envoy process. This vulnerability is fixed in 1.35.13, 1.36.9, 1.37.5, and 1.38.3.",
+  "aliases": [
+    "CVE-2026-47204"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.26.0"
+            },
+            {
+              "fixed": "1.35.13"
+            },
+            {
+              "introduced": "1.36.0"
+            },
+            {
+              "fixed": "1.36.9"
+            },
+            {
+              "introduced": "1.37.0"
+            },
+            {
+              "fixed": "1.37.5"
+            },
+            {
+              "introduced": "1.38.0"
+            },
+            {
+              "fixed": "1.38.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-3jxh-8p6x-7pf6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47204"
+    }
+  ],
+  "published": "2026-06-28T17:40:09.644Z",
+  "modified": "2026-06-28T18:07:13.880Z"
+}
