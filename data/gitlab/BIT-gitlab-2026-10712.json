@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-10712",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.10 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an unauthenticated user to execute arbitrary JavaScript in a user's browser session due to improper path validation under certain conditions.",
+  "aliases": [
+    "CVE-2026-10712"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.10.0"
+            },
+            {
+              "fixed": "18.11.6"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.0.3"
+            },
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "fixed": "19.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/601857"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3688717"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10712"
+    }
+  ],
+  "published": "2026-06-28T15:04:36.183Z",
+  "modified": "2026-06-28T15:08:31.605Z"
+}

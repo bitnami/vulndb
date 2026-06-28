@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-1606",
+  "summary": "Improper Control of Generation of Code ('Code Injection') in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 14.8 before 18.11.6, 19.0 before 19.0.3, and 19.1 before 19.1.1 that under certain conditions could have allowed an authenticated user to conceal content within a Snippet due to improper input validation.",
+  "aliases": [
+    "CVE-2026-1606"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "14.8.0"
+            },
+            {
+              "fixed": "18.11.6"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.0.3"
+            },
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "fixed": "19.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-1-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/588128"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3527473"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1606"
+    }
+  ],
+  "published": "2026-06-28T15:05:09.521Z",
+  "modified": "2026-06-28T15:08:31.605Z"
+}
