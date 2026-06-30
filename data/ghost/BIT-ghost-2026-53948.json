@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-53948",
+  "summary": "Ghost: File Upload Content-Type Spoofing",
+  "details": "Ghost is a Node.js content management system. From 6.19.4 until 6.21.1, insufficient validation of the client-supplied Content-Type on Ghost's Admin API file upload endpoint allowed uploaded files to be served from the site with an attacker-chosen content type on S3/GCS storage backends. On installations that serve uploaded files from the same origin as the site, this could have been used to facilitate stored cross-site scripting against site visitors or staff. This vulnerability is fixed in 6.21.1.",
+  "aliases": [
+    "CVE-2026-53948"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.19.4"
+            },
+            {
+              "fixed": "6.21.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-944x-pm95-3jpr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53948"
+    }
+  ],
+  "published": "2026-06-30T20:44:01.274Z",
+  "modified": "2026-06-30T21:12:58.526Z"
+}
