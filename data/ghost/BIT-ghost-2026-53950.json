@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-53950",
+  "summary": "@tryghost/activitypub: XSS in Ghost's ActivityPub client",
+  "details": "@tryghost/activitypub is Ghost’s social/federation client app. Prior to 3.1.0, the ActivityPub client in Ghost was vulnerable to JavaScript injection on posts shared by a maliciously customised ActivityPub server. This vulnerability is fixed in 3.1.0.",
+  "aliases": [
+    "CVE-2026-53950"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-xpp7-93x6-v29m"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53950"
+    }
+  ],
+  "published": "2026-06-30T14:42:57.756Z",
+  "modified": "2026-06-30T15:11:22.764Z"
+}

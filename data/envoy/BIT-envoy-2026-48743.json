@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-envoy-2026-48743",
+  "summary": "Envoy: HTTP/3 to HTTP/1 request smuggling via headers-only request with nonzero Content-Length",
+  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, Envoy can translate a downstream HTTP/3 request that is complete at the transport layer (HEADERS with FIN / headers-only close) but still carries a nonzero Content-Length into a complete upstream HTTP/1 request with unresolved body debt. In an HTTP/1 upstream deployment where the origin replies before reading the declared body and keeps the connection reusable, the beginning of the next Envoy-generated upstream request can be consumed as the first request's body. The remaining bytes are then parsed by the origin as a new HTTP/1 request. This was reproduced as a route-bypass/desync: direct /pwn was denied by Envoy, but the second downstream H3 stream received the response for backend-parsed GET /pwn HTTP/1.1. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.",
+  "aliases": [
+    "CVE-2026-48743"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.35.0"
+            },
+            {
+              "fixed": "1.35.13"
+            },
+            {
+              "introduced": "1.36.0"
+            },
+            {
+              "fixed": "1.36.9"
+            },
+            {
+              "introduced": "1.37.0"
+            },
+            {
+              "fixed": "1.37.5"
+            },
+            {
+              "introduced": "1.38.0"
+            },
+            {
+              "fixed": "1.38.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-8phg-2h2q-jgxf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48743"
+    }
+  ],
+  "published": "2026-06-30T14:43:09.210Z",
+  "modified": "2026-06-30T15:11:22.764Z"
+}

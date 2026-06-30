@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-53946",
+  "summary": "Ghost: Mobiledoc image-size fetch SSRF",
+  "details": "Ghost is a Node.js content management system. From 6.19.4 until 6.21.1, when re-rendering posts, Ghost would refetch missing image dimensions by issuing an outbound HTTP request to the URL stored on an image card — without restricting that URL to trusted image hosts. An authenticated staff user able to create or edit posts could therefore point an image card at an attacker-chosen host and cause the Ghost server to request it on their behalf, including hosts on internal networks or cloud instance metadata endpoints that would not normally be reachable from the public internet. This vulnerability is fixed in 6.21.1.",
+  "aliases": [
+    "CVE-2026-53946"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.19.4"
+            },
+            {
+              "fixed": "6.21.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-g366-23fw-ggp6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53946"
+    }
+  ],
+  "published": "2026-06-30T14:42:51.916Z",
+  "modified": "2026-06-30T15:11:22.764Z"
+}
