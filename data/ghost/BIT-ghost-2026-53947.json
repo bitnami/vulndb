@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-53947",
+  "summary": "Ghost: Member existence leak via magic link sign-in response",
+  "details": "Ghost is a Node.js content management system. From 5.18.0 until 6.21.1, a discrepancy in responses from the members signin endpoints made it possible for an unauthenticated attacker to determine whether a given email address belongs to a registered member of a Ghost site. This vulnerability is fixed in 6.21.1.",
+  "aliases": [
+    "CVE-2026-53947"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.18.0"
+            },
+            {
+              "fixed": "6.21.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-chgm-3698-jm42"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53947"
+    }
+  ],
+  "published": "2026-06-30T17:41:23.195Z",
+  "modified": "2026-06-30T18:03:49.219Z"
+}

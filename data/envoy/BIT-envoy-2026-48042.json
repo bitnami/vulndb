@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-envoy-2026-48042",
+  "summary": "Envoy: Stack overflow in destructor of highly nested JSON",
+  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to 1.35.11, 1.36.7, 1.37.3, and 1.38.1, destructor of JSON Object results in stack overflow when deeply O(100K) nested objects are present. This vulnerability is fixed in 1.35.11, 1.36.7, 1.37.3, and 1.38.1.",
+  "aliases": [
+    "CVE-2026-48042"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "1.35.13"
+            },
+            {
+              "introduced": "1.36.0"
+            },
+            {
+              "fixed": "1.36.9"
+            },
+            {
+              "introduced": "1.37.0"
+            },
+            {
+              "fixed": "1.37.5"
+            },
+            {
+              "introduced": "1.38.0"
+            },
+            {
+              "fixed": "1.38.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/blob/099a9d71ebfd8aa9f823e1738b34138cb634a07b/source/common/json/json_loader.h#L21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-f24p-rxw2-g6pv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48042"
+    }
+  ],
+  "published": "2026-06-30T17:41:29.270Z",
+  "modified": "2026-06-30T18:03:49.219Z"
+}

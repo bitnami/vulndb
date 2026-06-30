@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-53944",
+  "summary": "Ghost: Private IP filtering bypass to make server-side requests to internal services",
+  "details": "Ghost is a Node.js content management system. From 6.0.9 until 6.21.1, when making an external request, it is possible to bypass the IP filter that ensures the request isn't going to an internal service using an IPv6 literal which maps to a private IPv4 address. This vulnerability is fixed in 6.21.1.",
+  "aliases": [
+    "CVE-2026-53944"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.9"
+            },
+            {
+              "fixed": "6.21.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-wvp2-4qqp-4h3r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53944"
+    }
+  ],
+  "published": "2026-06-30T17:41:19.770Z",
+  "modified": "2026-06-30T18:03:49.219Z"
+}

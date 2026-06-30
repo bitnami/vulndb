@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-envoy-2026-47205",
+  "summary": "Envoy: ext_authz Use-After-Free during Stream Teardown with Per-Route Overrides",
+  "details": "Envoy is an open source edge and service proxy designed for cloud-native applications. From 1.36.0 until 1.36.9, 1.37.5, and 1.38.3, a Use-After-Free (UAF) vulnerability leading to a sudden segmentation fault exists in Envoy's ext_authz HTTP filter when processing per-route authorization overrides concurrently with rapid downstream client disconnects. During standard request lifecycles, Envoy instantiates the ext_authz filter with a foundational authorization client object (client_). If a matched route dictates a dynamic per-route HTTP or gRPC authorization service override, the filter generates a localized client. In the vulnerable implementation, this transient client aggressively overwrote the default client_ unique pointer by executing client_ = std::move(per_route_client). When a client rapidly establishes and subsequently tears down a stream (such as rapidly refreshing a protected WebSocket endpoint), the downstream triggers the ConnectionManagerImpl::doDeferredStreamDestroy() -> ActiveStream::onResetStream() lifecycle. Envoy immediately sequences Filter::onDestroy() in an attempt to securely abort dispatched asynchronous authorization check transactions via client_->cancel(). By destructing the default client abruptly during initiateCall, a memory lifecycle misalignment occurs within the async client manager. The stream teardown fails to reliably track and cancel the dynamically bound asynchronous authorization tasks, orchestrating a sequence where a late asynchronous callback from the network evaluates against a heavily destroyed ActiveStream validation span, generating a UAF process crash. This vulnerability is fixed in 1.36.9, 1.37.5, and 1.38.3.",
+  "aliases": [
+    "CVE-2026-47205"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.36.0"
+            },
+            {
+              "fixed": "1.36.9"
+            },
+            {
+              "introduced": "1.37.0"
+            },
+            {
+              "fixed": "1.37.5"
+            },
+            {
+              "introduced": "1.38.0"
+            },
+            {
+              "fixed": "1.38.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-mvh9-767w-x47j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47205"
+    }
+  ],
+  "published": "2026-06-30T17:41:19.987Z",
+  "modified": "2026-06-30T18:03:49.219Z"
+}
