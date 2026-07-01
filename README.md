@@ -1,13 +1,13 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
-    <img width="400px" height=auto src="https://dyltqmyl993wv.cloudfront.net/bitnami/bitnami-by-vmware.png" />
+    <img width="400px" height=auto src="https://dyltqmyl993wv.cloudfront.net/bitnami/bitnami-by-vmware.png" alt="Bitnami by Broadcom logo" />
 </p>
 
 <p align="center">
-    <a href="https://twitter.com/bitnami"><img src="https://badgen.net/badge/twitter/@bitnami/1DA1F2?icon&label" /></a>
-    <a href="https://github.com/bitnami/vulndb"><img src="https://badgen.net/github/stars/bitnami/vulndb?icon=github" /></a>
-    <a href="https://github.com/bitnami/vulndb"><img src="https://badgen.net/github/forks/bitnami/vulndb?icon=github" /></a>
-    <a href="https://github.com/bitnami/vulndb/actions/workflows/ci-pipeline.yml"><img src="https://github.com/bitnami/vulndb/actions/workflows/ci-pipeline.yml/badge.svg" /></a>
+    <a href="https://twitter.com/bitnami"><img src="https://badgen.net/badge/twitter/@bitnami/1DA1F2?icon&label" alt="Bitnami on Twitter" /></a>
+    <a href="https://github.com/bitnami/vulndb"><img src="https://badgen.net/github/stars/bitnami/vulndb?icon=github" alt="GitHub Stars" /></a>
+    <a href="https://github.com/bitnami/vulndb"><img src="https://badgen.net/github/forks/bitnami/vulndb?icon=github" alt="GitHub Forks" /></a>
+    <a href="https://github.com/bitnami/vulndb/actions/workflows/ci-pipeline.yml"><img src="https://github.com/bitnami/vulndb/actions/workflows/ci-pipeline.yml/badge.svg" alt="CI Pipeline status" /></a>
 </p>
 
 # The Bitnami Vulnerability Database
@@ -146,7 +146,7 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Reporting a vulnerability or feedback
 
-[Click here](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
+[Open an issue](https://github.com/bitnami/vulndb/issues/new/choose) to report a public vulnerability in the Bitnami ecosystem, or give us feedback about the project.
 
 ## Deprecation notes
 
