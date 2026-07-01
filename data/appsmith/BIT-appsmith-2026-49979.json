@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-appsmith-2026-49979",
+  "summary": "Appsmith: SSRF via `POST /api/v1/admin/send-test-email` — JavaMail Bypasses WebClient IP Filter",
+  "details": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.99, the POST /api/v1/admin/send-test-email endpoint accepts attacker-controlled smtpHost and smtpPort values and establishes a raw JavaMail TCP connection without any IP validation. This completely bypasses WebClientUtils.IP_CHECK_FILTER, which only applies to Spring WebClient HTTP requests. Additionally, the raw MailException.getMessage() is returned verbatim in the API error response, enabling error-based internal port scanning and service banner enumeration. This vulnerability is fixed in 1.99.",
+  "aliases": [
+    "CVE-2026-49979"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "appsmith",
+        "purl": "pkg:bitnami/appsmith"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.99.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-vvxf-f8q9-86gh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49979"
+    }
+  ],
+  "published": "2026-06-30T23:35:48.224Z",
+  "modified": "2026-07-01T00:07:50.168Z"
+}
