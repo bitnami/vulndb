@@ -23,10 +23,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2026.2.0"
+              "introduced": "0"
             },
             {
-              "last_affected": "2026.2.0"
+              "fixed": "2026.5.0"
             }
           ]
         }
@@ -36,7 +36,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:oracle:mysql_shell:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:oracle:mysql_shell:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:oracle:mysql_shell:*:*:*:*:*:visual_studio_code:*:*"
     ]
   },
   "references": [
@@ -50,5 +51,5 @@
     }
   ],
   "published": "2026-06-22T05:46:20.438Z",
-  "modified": "2026-06-22T06:07:36.958Z"
+  "modified": "2026-07-02T15:09:04.184Z"
 }
