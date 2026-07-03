@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-56149",
+  "summary": "Allocation of Resources Without Limits or Throttling in Elasticsearch Leading to Denial of Service",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Elasticsearch can lead to a denial of service via Excessive Allocation (CAPEC-130). A user with elevated privileges can submit a specially crafted machine learning request that causes excessive memory consumption, which may render the affected node unavailable.",
+  "aliases": [
+    "CVE-2026-56149"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.17"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.6"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-17-9-3-6-9-4-3-security-update-esa-2026-43"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56149"
+    }
+  ],
+  "published": "2026-07-03T17:36:59.471Z",
+  "modified": "2026-07-03T17:59:17.282Z"
+}
