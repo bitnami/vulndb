@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-49877",
+  "summary": "Apache ActiveMQ: Authenticated web users retain admin access by default in the Web Console",
+  "details": "Improper Authorization vulnerability in Apache ActiveMQ.\n\nAn authenticated low-privilege Web Console user by default can access /admin/* paths in the Web Console. The default Jetty settings incorrectly did not limit those paths to only admins.\nThis issue affects Apache ActiveMQ: before 5.19.8, from 6.0.0 before 6.2.7.\n\nUsers are recommended to upgrade to version 6.2.7 or 5.19.8, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-49877"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.8"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.2.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/29/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/w82vtc3q02j5ot94tnyy1197y3wb98hl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49877"
+    }
+  ],
+  "published": "2026-07-03T08:37:04.690Z",
+  "modified": "2026-07-03T09:06:35.343Z"
+}
