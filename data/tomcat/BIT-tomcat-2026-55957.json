@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-55957",
+  "summary": "Apache Tomcat: Authentication bypass with JNDIRealm and GSSAPI authenticated bind",
+  "details": "Missing Critical Step in Authentication vulnerability in Apache Tomcat when the JNDIRealm was configured to authenticate binds using GSSAPI allowed attackers to authenticate without provided the correct password.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.4, from 10.1.0 through 10.1.36, from 9.0.0 through 9.0.100, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\n\nUsers are recommended to upgrade to version 11.0.5, 10.1.37 or 9.0.101, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-55957"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.101"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.37"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/29/26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/7fk339o5jvd4mcgsf0chbrn4o525ccjh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55957"
+    }
+  ],
+  "published": "2026-07-06T16:18:16.864Z",
+  "modified": "2026-07-06T16:36:14.740Z"
+}

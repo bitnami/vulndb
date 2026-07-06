@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-53404",
+  "summary": "Apache Tomcat: Bad ornext processing in RewriteValve",
+  "details": "Always-Incorrect Control Flow Implementation vulnerability in Apache Tomcat's rewrite valve meant that if the first condition in an OR chain matched, subsequent non-OR conditions were skipped.\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.22, from 10.1.0 through 10.1.55, from 9.0.0 through 9.0.118, from 8.5.0 through 8.5.100. Other versions that have reached end of support may also be affected.\n\nUsers are recommended to upgrade to version 11.0.23, 10.1.56 or 9.0.119, which fix the issue.",
+  "aliases": [
+    "CVE-2026-53404"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "9.0.101"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.37"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/29/21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/rdhpghgfskrdmw9hqzjgjrtw538smpmz"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53404"
+    }
+  ],
+  "published": "2026-07-06T16:18:10.526Z",
+  "modified": "2026-07-06T16:36:14.740Z"
+}
