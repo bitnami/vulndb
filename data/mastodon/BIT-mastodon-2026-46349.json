@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mastodon-2026-46349",
+  "summary": "Mastodon: LD-Signature Bypass via JSON-LD Named-Graph Restructuring",
+  "details": "Mastodon is a free, open-source social network server based on ActivityPub. Prior to 4.5.10, 4.4.17, and 4.3.23, Mastodon's normalization of incoming activities signed with Linked-Data Signatures does not sufficiently protect the activities from a certain class of spoofing, allowing attackers to re-arrange a valid signed JSON-LD activity from a third-party actor to have it processed differently. This vulnerability is fixed in 4.5.10, 4.4.17, and 4.3.23.",
+  "aliases": [
+    "CVE-2026-46349"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mastodon",
+        "purl": "pkg:bitnami/mastodon"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.5.0"
+            },
+            {
+              "fixed": "4.5.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joinmastodon:mastodon:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mastodon/mastodon/security/advisories/GHSA-chgx-jx3p-rf73"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46349"
+    }
+  ],
+  "published": "2026-07-06T05:55:15.922Z",
+  "modified": "2026-07-06T06:18:57.499Z"
+}

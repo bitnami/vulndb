@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-52760",
+  "summary": "Apache ActiveMQ, Apache ActiveMQ Web Console: Stored XSS via Unescaped values in ActiveMQ Web Console",
+  "details": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache ActiveMQ, Apache ActiveMQ Web Console.\n\nThe browse page in the web console renders a message Id directly without sanitization. This allows an authenticated producer to send a message with a JMS message ID that has been crafted to contain HTML/JavaScript such that when an administrator browses the queue in the Web Console, the payload executes in their browser.\nThis issue affects Apache ActiveMQ: before 5.19.8, from 6.0.0 before 6.2.7; Apache ActiveMQ Web Console: before 5.19.8, from 6.0.0 before 6.2.7.\n\nUsers are recommended to upgrade to version 6.2.7 or 5.19.8, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-52760"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.8"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.2.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/06/29/12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/d3mhyo2116nomz2lwxppyy4pclvdxq3n"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52760"
+    }
+  ],
+  "published": "2026-07-06T05:47:15.763Z",
+  "modified": "2026-07-06T06:18:57.499Z"
+}
