@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-5051",
+  "summary": "Audit Log Plugin Directory Guard Bypass via Legacy path Option",
+  "details": "HashiCorp Vault and Vault Enterprise prior to 2.0.1 audit device validation logic did not consistently apply plugin directory protections when the legacy file audit path option was used. \n\nThis vulnerability (CVE-2026-5051) is fixed in 2.0.1, 1.21.6, 1.20.11, and 1.19.17.",
+  "aliases": [
+    "CVE-2026-5051"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.17"
+            },
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "fixed": "1.20.11"
+            },
+            {
+              "introduced": "1.21.0"
+            },
+            {
+              "fixed": "1.21.6"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:community:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-16-vault-audit-device-plugin-directory-guard-bypass-via-legacy-path-option/77536"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5051"
+    }
+  ],
+  "published": "2026-07-07T08:54:58.835Z",
+  "modified": "2026-07-07T09:05:18.345Z"
+}
