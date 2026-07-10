@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2021-32658",
+  "summary": "Sensitive data may not be removed from storage on account removal",
+  "details": "Nextcloud Android is the Android client for the Nextcloud open source home cloud system. Due to a timeout issue the Android client may not properly clean all sensitive data on account removal. This could include sensitive key material such as the End-to-End encryption keys. It is recommended that the Nextcloud Android App is upgraded to 3.16.1",
+  "aliases": [
+    "CVE-2021-32658"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.16.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:android:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/android/commit/355f3c745b464b741b20a3b96597303490c26333"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-g5gf-rmhm-wpxw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1189168"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32658"
+    }
+  ],
+  "published": "2026-07-10T11:46:36.127Z",
+  "modified": "2026-07-10T12:06:55.949Z"
+}

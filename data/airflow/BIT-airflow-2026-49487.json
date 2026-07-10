@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-49487",
+  "summary": "Apache Airflow: Task-instance API exposes secrets in deferred trigger kwargs",
+  "details": "In Apache Airflow before 3.3.0, the REST API task-instance detail and list\nendpoints returned a deferred task's trigger kwargs without masking. When a\ndeferred operator passed a secret (for example a provider API key) into its\ntrigger, any authenticated user with DAG-scoped task-instance read access for\nthat DAG could read that secret in clear text while the task was deferred.\nUsers should upgrade to apache-airflow 3.3.0 or later, which masks sensitive\nvalues in trigger kwargs returned by the API.",
+  "aliases": [
+    "CVE-2026-49487"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/07/07/6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/67868"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/qlw6pozlzlfhkvmbgqsbjlq6vj4v0pc4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49487"
+    }
+  ],
+  "published": "2026-07-10T11:38:42.705Z",
+  "modified": "2026-07-10T12:06:55.949Z"
+}
