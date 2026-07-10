@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2026-45691",
+  "summary": "Nextcloud: Bypass of second factor authentication on DAV endpoints",
+  "details": "Nextcloud is an open source content collaboration platform. In Nextcloud Server from versions 32.0.0 to before 32.0.9, and 33.0.0 to before 33.0.3, a pre-2FA session cookie (created after successful password authentication but before TOTP completion) could be reused as a Bearer token to authenticate against DAV endpoints, granting read/write access and bypassing mandatory two-factor authentication. It is recommended that the Nextcloud Server is upgraded to 33.0.3 or 32.0.9. It is recommended that the Nextcloud Enterprise Server is upgraded to 33.0.3, 32.0.9, 31.0.14.5, 30.0.17.9 or 29.0.16.16",
+  "aliases": [
+    "CVE-2026-45691"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "32.0.0"
+            },
+            {
+              "fixed": "32.0.9"
+            },
+            {
+              "introduced": "33.0.0"
+            },
+            {
+              "fixed": "33.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-mp6x-g55j-w9jw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/server/pull/59758"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3573399"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45691"
+    }
+  ],
+  "published": "2026-07-10T17:47:36.928Z",
+  "modified": "2026-07-10T18:08:07.165Z"
+}
