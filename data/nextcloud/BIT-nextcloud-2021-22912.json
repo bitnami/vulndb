@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2021-22912",
+  "details": "Nextcloud iOS before 3.4.2 suffers from an information disclosure vulnerability when searches for sharees utilize the lookup server by default instead of only on the local Nextcloud server unless a global search has been explicitly chosen by the user.",
+  "aliases": [
+    "CVE-2021-22912"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:iphone_os:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-m7w4-cvjr-76mh"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1167919"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-22912"
+    }
+  ],
+  "published": "2026-07-11T11:44:19.901Z",
+  "modified": "2026-07-11T12:00:08.025Z"
+}
