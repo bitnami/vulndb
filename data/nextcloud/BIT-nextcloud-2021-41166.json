@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2021-41166",
+  "summary": "Permission bypass in Nextcloud Android App",
+  "details": "The Nextcloud Android app is the Android client for Nextcloud, a self-hosted productivity platform. An issue in versions prior to 3.17.1 may lead to sensitive information disclosure. An unauthorized app that does not have the otherwise required `MANAGE_DOCUMENTS` permission may view image thumbnails for images it does not have permission to view. Version 3.17.1 contains a patch. There are no known workarounds.",
+  "aliases": [
+    "CVE-2021-41166"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.17.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:android:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/android/commit/aa47197109970b8449c4e44601eba36e3481b086"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/android/commit/b6ecf515b38c2d82d32743f27236534f3e03ee0c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-wrwg-jwpg-r3c4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1358597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41166"
+    }
+  ],
+  "published": "2026-07-11T17:47:02.943Z",
+  "modified": "2026-07-11T18:07:54.338Z"
+}

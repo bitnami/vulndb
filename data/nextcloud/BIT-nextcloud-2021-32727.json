@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2021-32727",
+  "summary": "End-to-end encryption device setup did not verify public key",
+  "details": "Nextcloud Android Client is the Android client for Nextcloud. Clients using the Nextcloud end-to-end encryption feature download the public and private key via an API endpoint. In versions prior to 3.16.1, the Nextcloud Android client skipped a step that involved the client checking if a private key belonged to a previously downloaded public certificate. If the Nextcloud instance served a malicious public key, the data would be encrypted for this key and thus could be accessible to a malicious actor. The vulnerability is patched in version 3.16.1. As a workaround, do not add additional end-to-end encrypted devices to a user account.",
+  "aliases": [
+    "CVE-2021-32727"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.16.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:android:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/android/pull/8438"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/end_to_end_encryption_rfc/blob/7f002996397faefb664019a97ebb0a1e210f64f0/RFC.md#further-devices"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-5v33-r9cm-7736"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1189162"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32727"
+    }
+  ],
+  "published": "2026-07-11T17:47:01.733Z",
+  "modified": "2026-07-11T18:07:54.338Z"
+}

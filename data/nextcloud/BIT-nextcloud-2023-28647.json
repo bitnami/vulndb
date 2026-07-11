@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2023-28647",
+  "summary": "App pin of the iOS app can be bypassed in Nextcloud iOS",
+  "details": "Nextcloud iOS is an ios application used to interface with the nextcloud home cloud ecosystem. In versions prior to 4.7.0 when an attacker has physical access to an unlocked device, they may enable the integration into the iOS Files app and bypass the Nextcloud pin/password protection and gain access to a users files. It is recommended that the Nextcloud iOS app is upgraded to 4.7.0. There are no known workarounds for this vulnerability.",
+  "aliases": [
+    "CVE-2023-28647"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:iphone_os:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/ios/pull/2344"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-wjgg-2v4p-2gq6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28647"
+    }
+  ],
+  "published": "2026-07-11T17:47:11.434Z",
+  "modified": "2026-07-11T18:07:54.338Z"
+}
