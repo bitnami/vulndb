@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2026-42127",
-  "summary": "Grafana pre-auth DoS through arbitrarily large input to public dashboard query handler",
+  "summary": "Pre-authentication denial of service in the public dashboard query endpoint",
   "details": "The public dashboard query endpoint does not limit request body size before processing, allowing unauthenticated attackers to trigger excessive memory allocation by sending arbitrarily large JSON payloads. This can lead to denial of service through memory exhaustion. No valid dashboard access token or authentication is required to exploit this vulnerability.",
   "aliases": [
     "CVE-2026-42127"
@@ -76,5 +76,5 @@
     }
   ],
   "published": "2026-06-26T08:43:07.401Z",
-  "modified": "2026-06-29T14:45:12.993Z"
+  "modified": "2026-07-11T09:07:59.762Z"
 }
