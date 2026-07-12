@@ -1,8 +1,8 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2026-10601",
-  "summary": "Path Traversal in Tempo and Loki Data Source Plugins — Credential Leakage and Admin Endpoint Access",
-  "details": "The Tempo and Loki datasource plugins construct backend HTTP requests by interpolating user-supplied input into URL paths without sanitization, enabling path traversal. A Viewer-role user can: (1) capture admin-configured datasource credentials (secureJsonData custom headers) by traversing to an attacker-controlled endpoint, (2) invoke state-changing admin endpoints on Tempo (e.g. /flush, /shutdown), and (3) exfiltrate internal service data via Loki's CallResource which returns full HTTP response bodies.",
+  "summary": "Path traversal in the Tempo and Loki data source plugins",
+  "details": "A user with Viewer permissions can use specially crafted requests to the Tempo and Loki data source plugins to reach unintended backend endpoints. Depending on the backend configuration this can expose data source credentials, leak internal responses, or trigger administrative actions on the configured backend.",
   "aliases": [
     "CVE-2026-10601"
   ],
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2026-06-26T08:42:32.754Z",
-  "modified": "2026-07-06T06:18:57.499Z"
+  "modified": "2026-07-12T09:06:46.381Z"
 }
