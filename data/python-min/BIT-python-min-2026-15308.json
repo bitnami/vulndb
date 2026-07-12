@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-15308",
+  "summary": "Incremental HTMLParser feed() allows CPU-exhaustion DoS via repeated unterminated markup declarations",
+  "details": "The incremental HTML parser (html.parser.HTMLParser) allows for CPU\ndenial-of-service through repeated unterminated markup declarations when\nprocessing uncontrolled data.",
+  "aliases": [
+    "CVE-2026-15308"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/07/09/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/07efb08123ba9367a7107325adb9d5626dca1ca9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/7933f4bf7131aa4140750f9404f5de0aa2969ced"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/bcf98ddbc40ec9b3ee87da0124a5660b19b7e606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e9f92ac0b298292e7ff998e52cb8ccacfb27a0bd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/153030"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/153031"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/F6453LWKSHKCTWFLCOURWPLETNUIW2Z5/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15308"
+    }
+  ],
+  "published": "2026-07-12T00:32:33.597Z",
+  "modified": "2026-07-12T00:47:55.179Z"
+}
