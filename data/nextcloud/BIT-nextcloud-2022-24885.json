@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2022-24885",
+  "summary": "Improper Authentication in Nextcloud Android Files",
+  "details": "Nextcloud Android app is the Android client for Nextcloud, a self-hosted productivity platform. Prior to version 3.19.1, users can bypass a lock on the Nextcloud app on an Android device by repeatedly reopening the app. Version 3.19.1 contains a fix for the problem. There are currently no known workarounds.",
+  "aliases": [
+    "CVE-2022-24885"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.19.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:android:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/android/pull/9816"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-32j4-9xf3-h2mg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/1450368"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24885"
+    }
+  ],
+  "published": "2026-07-12T14:48:06.645Z",
+  "modified": "2026-07-12T15:08:54.051Z"
+}
