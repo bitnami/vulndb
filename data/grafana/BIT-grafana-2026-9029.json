@@ -1,8 +1,8 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-grafana-2026-9029",
-  "summary": "Stored XSS via Geomap Panel Template Variable Attribution Injection",
-  "details": "The geomap panel's XYZ tile layer has a sanitize-then-interpolate ordering bug. sanitizeTextPanelContent() runs on the raw template string before getTemplateSrv().replace() substitutes the variable value, which uses the glob format with no HTML escaping. The result is passed to OpenLayers via element.innerHTML. An Editor can set a textbox variable's default value to an XSS payload that executes for every user who opens the dashboard. This is a bypass of the CVE-2023-0507 fix",
+  "summary": "Stored XSS in the Geomap panel tile-layer attribution",
+  "details": "A user with Editor permissions can place a malicious script in the attribution field of a Geomap panel's XYZ tile layer via a template variable. The script then executes in the browser of any user who views the affected dashboard (stored cross-site scripting).",
   "aliases": [
     "CVE-2026-9029"
   ],
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2026-06-26T08:43:08.876Z",
-  "modified": "2026-07-06T06:18:57.499Z"
+  "modified": "2026-07-12T21:09:04.401Z"
 }
