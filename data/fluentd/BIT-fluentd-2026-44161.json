@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-fluentd-2026-44161",
+  "summary": "Fluentd: Server-Side Request Forgery (SSRF) via Placeholder Expansion in `out_http`",
+  "details": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, the Fluentd out_http output plugin allows placeholders such as ${tag} in the endpoint configuration parameter, and if a placeholder value is derived from untrusted input an attacker can control the destination hostname of outbound HTTP requests and force requests to arbitrary internal services. This issue is fixed in version 1.19.3.",
+  "aliases": [
+    "CVE-2026-44161"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluentd",
+        "purl": "pkg:bitnami/fluentd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:fluentd:fluentd:*:*:*:*:*:ruby:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/commit/c6a01ea2e0ea01977f8d615f7c6dbfae4cba88c9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/pull/5394"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/releases/tag/v1.19.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/security/advisories/GHSA-72f5-rr8c-r6gr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44161"
+    }
+  ],
+  "published": "2026-07-14T08:42:52.436Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}

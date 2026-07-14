@@ -1,10 +1,10 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-grafana-2026-42127",
-  "summary": "Pre-authentication denial of service in the public dashboard query endpoint",
-  "details": "The public dashboard query endpoint does not limit request body size before processing, allowing unauthenticated attackers to trigger excessive memory allocation by sending arbitrarily large JSON payloads. This can lead to denial of service through memory exhaustion. No valid dashboard access token or authentication is required to exploit this vulnerability.",
+  "id": "BIT-grafana-2026-8609",
+  "summary": "Pre-authentication denial of service via the OAuth login route",
+  "details": "An unauthenticated attacker can repeatedly call Grafana's OAuth login route with unique values, causing unbounded memory growth that can eventually exhaust memory and crash the Grafana instance (denial of service).",
   "aliases": [
-    "CVE-2026-42127"
+    "CVE-2026-8609"
   ],
   "affected": [
     {
@@ -51,12 +51,6 @@
               "introduced": "13.0.0"
             },
             {
-              "fixed": "11.6.15"
-            },
-            {
-              "introduced": "12.0.0"
-            },
-            {
               "fixed": "13.0.2"
             }
           ]
@@ -67,20 +61,19 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
-      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:-:*:*:*"
     ]
   },
   "references": [
     {
       "type": "WEB",
-      "url": "https://grafana.com/security/security-advisories/cve-2026-42127"
+      "url": "https://grafana.com/security/security-advisories/cve-2026-8609"
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42127"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8609"
     }
   ],
-  "published": "2026-06-26T08:43:07.401Z",
+  "published": "2026-07-14T08:45:33.798Z",
   "modified": "2026-07-14T09:10:57.073Z"
 }
