@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-55420",
+  "summary": "Discourse: Remote code execution via pdf uploads",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+  "aliases": [
+    "CVE-2026-55420"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.5"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.2"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.1"
+            },
+            {
+              "introduced": "2026.6.0"
+            },
+            {
+              "fixed": "2026.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:latest:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/ca5a7e06167561928556afa2f237d67e459c6914"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.1.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.5.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55420"
+    }
+  ],
+  "published": "2026-07-14T08:46:44.451Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}

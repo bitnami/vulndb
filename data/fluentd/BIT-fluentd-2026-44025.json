@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-fluentd-2026-44025",
+  "summary": "Fluentd: Exposure of Sensitive Information via Monitor Agent API",
+  "details": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd's Monitor Agent plugin in_monitor_agent exposes internal metrics and plugin information via a REST API, and responses from /api/plugins.json and related endpoints unintentionally include internal instance variables that may contain database passwords, API keys, or cloud credentials. This issue is fixed in version 1.19.3.",
+  "aliases": [
+    "CVE-2026-44025"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "fluentd",
+        "purl": "pkg:bitnami/fluentd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:fluentd:fluentd:*:*:*:*:*:ruby:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/commit/990921518971699b9a97441970674d1800e29177"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/pull/5392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/releases/tag/v1.19.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/fluent/fluentd/security/advisories/GHSA-pr7j-96cj-549h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44025"
+    }
+  ],
+  "published": "2026-07-14T08:42:50.111Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-seaweedfs-2026-55874",
+  "summary": "SeaweedFS: Path traversal in the S3 gateway X-Amz-Copy-Source header allows cross-bucket object read",
+  "details": "SeaweedFS is a distributed storage system. Prior to 4.34, the S3 API gateway does not reject dot-dot path segments in the X-Amz-Copy-Source header used by CopyObject and UploadPartCopy, allowing an authenticated identity scoped to one bucket to read objects from other buckets through server-side copy. This issue is fixed in version 4.34.",
+  "aliases": [
+    "CVE-2026-55874"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "seaweedfs",
+        "purl": "pkg:bitnami/seaweedfs"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.34.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:seaweedfs:seaweedfs:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/commit/b44cf51fe931bd75aa4d37ae766bea90d7f85ccd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/pull/9929"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/releases/tag/4.34"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/security/advisories/GHSA-56wq-x3wv-3ff4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55874"
+    }
+  ],
+  "published": "2026-07-14T08:55:20.997Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}

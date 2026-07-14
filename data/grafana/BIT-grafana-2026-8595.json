@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-8595",
+  "summary": "Stored XSS in the table panel (TableNG)",
+  "details": "A user with Editor permissions can craft a dashboard whose table (TableNG) panel contains a malicious field name that executes as a script in the browser of any user who views the dashboard (stored cross-site scripting).",
+  "aliases": [
+    "CVE-2026-8595"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.4"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-8595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8595"
+    }
+  ],
+  "published": "2026-07-14T08:45:32.264Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}

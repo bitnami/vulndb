@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-cilium-operator-2026-53935",
+  "summary": "CiliumLocalRedirectPolicy addressMatcher allows cross-namespace service traffic hijacking and can break service translation",
+  "details": "Cilium is a networking, observability, and security solution. Prior to 1.17.16, from 1.18.2 to 1.18.9, and from 1.19.0 to 1.19.3, users with the ability to create CiliumLocalRedirectPolicies can specify arbitrary ClusterIPs via addressMatcher, enabling hijacking traffic to Services in any namespace and bypassing namespace scoping enforced by serviceMatcher; deleting such a policy can also corrupt Cilium internal service state and stop service translation for the affected Service. This issue is fixed in versions 1.17.16, 1.18.10, and 1.19.4.",
+  "aliases": [
+    "CVE-2026-53935"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "cilium-operator",
+        "purl": "pkg:bitnami/cilium-operator"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.17.16"
+            },
+            {
+              "introduced": "1.18.2"
+            },
+            {
+              "fixed": "1.18.10"
+            },
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/81d446395673dc2c684c047c12715caffac1a351"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/92ca32eda85aa0c7611c28221cc26fa08be17ebc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/fe7eb53c7aac9fa7ec610b1975d73fbbb198c66d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/45412"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/45584"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/45585"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-q6h5-q3q6-f87x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53935"
+    }
+  ],
+  "published": "2026-07-14T08:41:16.936Z",
+  "modified": "2026-07-14T09:10:57.073Z"
+}
