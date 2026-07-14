@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nats-2026-58252",
+  "summary": "NATS Server: Subscribe Authz Bypass via Wildcard-Overlap",
+  "details": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.14.0, 2.12.7, and 2.11.16, an authenticated user could receive messages on denied subjects when a wildcard subscription overlapped with a configured wildcard deny rule but was not a subset of it, and queue subscriptions could also affect delivery to legitimate queue consumers. This issue is fixed in versions 2.14.0, 2.12.7, and 2.11.16.",
+  "aliases": [
+    "CVE-2026-58252"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nats",
+        "purl": "pkg:bitnami/nats"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.11.16"
+            },
+            {
+              "introduced": "2.12.0"
+            },
+            {
+              "fixed": "2.12.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/commit/8ced85a11497f86704a95d960281480ce037386b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/commit/a42a6d1e258eb5c3a2190384d31965a4b715e854"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/commit/e611ca9604697b02d8f22beb76037400a9cf72e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/releases/tag/v2.11.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/releases/tag/v2.12.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/releases/tag/v2.14.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/nats-io/nats-server/security/advisories/GHSA-wh7g-5m82-pmhr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58252"
+    }
+  ],
+  "published": "2026-07-14T15:47:18.064Z",
+  "modified": "2026-07-14T16:10:26.025Z"
+}
