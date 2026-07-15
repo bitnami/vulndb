@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity-2026-52761",
+  "summary": "ModSecurity: Transformation utf8toUnicode produces wrong output on i386 architecture",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. From 3.0.0 through 3.0.15, the t:utf8toUnicode transformation in src/actions/transformations/utf8_to_unicode.cc produces wrong output on i386 architecture because snprintf uses sizeof on a char pointer rather than the length of the unicode buffer, allowing rules that use this transformation to be bypassed on i386 architecture. This issue is fixed in version 3.0.16.",
+  "aliases": [
+    "CVE-2026-52761"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity",
+        "purl": "pkg:bitnami/modsecurity"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/edcd010814e234d46e2ec55a0f1078ff9d3032e4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/releases/tag/v3.0.16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-qjgm-7gp4-f8qq"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52761"
+    }
+  ],
+  "published": "2026-07-15T08:51:31.071Z",
+  "modified": "2026-07-15T09:15:52.837Z"
+}
