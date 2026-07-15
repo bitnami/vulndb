@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-45788",
+  "summary": "Discourse: Secure uploads exposed by hotlinked image copying",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, secure uploads could be exposed by pull_hotlinked_images when an attacker knew the secured upload URL and the secure_uploads site setting was enabled. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+  "aliases": [
+    "CVE-2026-45788"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.5"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.2"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/5807c426880eadf248006e851604fc9284327ce5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/8b4a959b251a856a9c911fb9f2ac34fbc31a7471"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/eff53af26367ae0dcb3a426954d233e8c7449f95"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/fa74e0dec7341a858ab83a1977fa52629bced1aa"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.1.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.5.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-3876-w96v-8v38"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45788"
+    }
+  ],
+  "published": "2026-07-15T15:56:16.647Z",
+  "modified": "2026-07-15T16:14:00.031Z"
+}

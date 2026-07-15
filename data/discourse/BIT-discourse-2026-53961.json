@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-53961",
+  "summary": "Discourse: Forged AWS SNS bounce notifications can disable a targeted user's email (missing TopicArn binding)",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, the AWS SES bounce webhook at POST /webhooks/aws verified that SNS messages were signed by Amazon but did not bind them to trusted TopicArn values, allowing any AWS account holder to publish validly signed forged Bounce notifications that revoke a targeted user email. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+  "aliases": [
+    "CVE-2026-53961"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.5"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.2"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/3a3d315a85ef3c6aabfc7e7bb38702059784f06b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/61f12e13aa1b760f81d5ff60f12e3a7e77434b94"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/958f0cd831d65a49ec75f05343ca2c167679f0ea"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/aea35190791261bab258ebab05da279e78cdd0e6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.1.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.5.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-8f9m-v436-wr3x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53961"
+    }
+  ],
+  "published": "2026-07-15T15:56:21.593Z",
+  "modified": "2026-07-15T16:14:00.031Z"
+}

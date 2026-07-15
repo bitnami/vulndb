@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-53963",
+  "summary": "Discourse: Stored-XSS in 2FA delete confirmation modal",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, a malicious second factor name on an attacker-controlled account was not escaped in the delete confirmation dialog, allowing stored cross-site scripting when an administrator impersonated that account. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+  "aliases": [
+    "CVE-2026-53963"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.5"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.2"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/40de62cddadc65c328a1028ab999f3fa94adbfed"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/529e17d4d570a48972e7cf64720e5dd1fdf23ca8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/d92973e51a46cf6dd20c71e6068e6769b67eea5b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/daea5214d833eacbdd3b1a78d99eb14e9cabd915"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.1.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.5.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-wg5x-7f23-m3r5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53963"
+    }
+  ],
+  "published": "2026-07-15T15:56:23.554Z",
+  "modified": "2026-07-15T16:14:00.031Z"
+}
