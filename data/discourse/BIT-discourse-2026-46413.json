@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-46413",
+  "summary": "Discourse: Regular users can route multipart uploads into the admin backup store",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, regular users could route direct S3 multipart uploads through ExternalUploadManager into the admin backup store. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+  "aliases": [
+    "CVE-2026-46413"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2026.1.0"
+            },
+            {
+              "fixed": "2026.1.5"
+            },
+            {
+              "introduced": "2026.4.0"
+            },
+            {
+              "fixed": "2026.4.2"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/1f1ded8dd361d81786bff17b35e1138d6ee299c0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/7ddde266617b452152c1bf5f903f6c07be38fc40"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/a53df26dcf7e50ce2b20bfd5454a0c9d44b8fc7d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/abaa664c5df84026efb2ca264ba0f5586c3f2b01"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.1.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.5.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-3mvf-q9rg-w6m7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46413"
+    }
+  ],
+  "published": "2026-07-15T15:56:17.652Z",
+  "modified": "2026-07-15T16:14:00.031Z"
+}
