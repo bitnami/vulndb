@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-59732",
+  "summary": "rclone archive extract allows S3 destination prefix escape via crafted archive paths",
+  "details": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone archive extract can write extracted files outside the user-selected destination prefix when extracting a crafted archive containing parent path components such as ../, allowing creation or overwrite of sibling objects in the same bucket or path scope. This issue is fixed in version 1.74.4.",
+  "aliases": [
+    "CVE-2026-59732"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.74.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/1a746732441e8158f32fab35924b23701e719a8c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/d11efe0d58fe6a2d6d90675bb9d8ee5840c51e1d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.74.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-4vr5-p2gc-h23p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59732"
+    }
+  ],
+  "published": "2026-07-18T11:45:42.941Z",
+  "modified": "2026-07-18T11:58:12.086Z"
+}
