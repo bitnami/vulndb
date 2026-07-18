@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-hubble-relay-2026-56743",
+  "summary": "Cilium may unexpectedly allow ingress traffic from the local namespace when a Kubernetes NetworkPolicy is configured with an ipBlock match",
+  "details": "Cilium is a networking, observability, and security solution. From 1.19.0 to 1.19.4, standard Kubernetes NetworkPolicy specifications using CIDR-based ipBlock rules without pod or namespace selectors erroneously generate a wildcard namespace allow rule when Cilium is configured with a custom clusterName rather than the default any value. The parser incorrectly instantiates a pod selector on selectorless peer definitions, allowing traffic from other workloads in the same namespace as the subject of the policy. This issue is fixed in version 1.19.5.",
+  "aliases": [
+    "CVE-2026-56743"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "hubble-relay",
+        "purl": "pkg:bitnami/hubble-relay"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.19.0"
+            },
+            {
+              "fixed": "1.19.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:cilium:cilium:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/1c84ae3b58a7cd54f7ee355e6c524c82f620eae8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/commit/bacea640404c0805c23515353dc1681c5bf35171"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/46305"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/pull/46456"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/releases/tag/v1.19.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/cilium/cilium/security/advisories/GHSA-fm8w-2m5w-9j7r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56743"
+    }
+  ],
+  "published": "2026-07-18T20:41:08.464Z",
+  "modified": "2026-07-18T21:07:00.504Z"
+}
