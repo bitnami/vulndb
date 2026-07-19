@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-54572",
+  "summary": "rclone: Unvalidated symlink target in local `--links` — arbitrary file write from an untrusted remote",
+  "details": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, with -l/--links, rclone serializes symlinks as .rclonelink text objects and recreates them on a local destination without validating the target, allowing an attacker-controlled remote to plant an escaping symlink and cause a following object write to land outside the destination with attacker-chosen contents. This issue is fixed in version 1.74.4.",
+  "aliases": [
+    "CVE-2026-54572"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.74.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/1154afebee986180b489084d38e2a0c578751498"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/874a804f5289517defdd7de68b2a374837080265"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.74.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-cf44-9pgv-m4xc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54572"
+    }
+  ],
+  "published": "2026-07-18T23:51:22.843Z",
+  "modified": "2026-07-19T00:08:12.933Z"
+}
