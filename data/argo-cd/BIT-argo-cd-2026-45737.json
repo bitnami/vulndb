@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-cd-2026-45737",
+  "summary": "Argo CD: Kubernetes Secret Extraction via ArgoCD ServerSideDiff via sensitive annotations",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 3.2.0 until 3.2.12, 3.3.10, and 3.4.2, Argo CD ServerSideDiff can expose Kubernetes Secret values embedded in the kubectl.kubernetes.io/last-applied-configuration annotation because HideSecretData(target, live, ...) does not fully sanitize ResourceDiff.TargetState and LiveState predicted live Secret objects, allowing sensitive data, stringData, and annotations to appear in UI or CLI diffs. This issue is fixed in versions 3.2.12, 3.3.10, and 3.4.2.",
+  "aliases": [
+    "CVE-2026-45737"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "fixed": "3.2.12"
+            },
+            {
+              "introduced": "3.3.9"
+            },
+            {
+              "fixed": "3.3.10"
+            },
+            {
+              "introduced": "3.4.1"
+            },
+            {
+              "fixed": "3.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/7879e6322465080a82d152bf00f2b92e0f36c658"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/87e9148320749693624d08e3d6fa2cc217c672a0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/ac11bec9986807adc8886ef1181eced7347ef5c6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/bcb4298afc9fcff5f5d69f4e1db2d0a75983f42c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.2.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.3.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.4.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-rg3g-4rw9-gqrp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45737"
+    }
+  ],
+  "published": "2026-07-20T20:36:41.499Z",
+  "modified": "2026-07-20T21:02:01.540Z"
+}
