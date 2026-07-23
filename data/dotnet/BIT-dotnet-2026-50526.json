@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-dotnet-2026-50526",
+  "summary": ".NET Tampering Vulnerability",
+  "details": "Improper link resolution before file access ('link following') in .NET allows an authorized attacker to perform tampering locally.",
+  "aliases": [
+    "CVE-2026-50526"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet",
+        "purl": "pkg:bitnami/dotnet"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.29"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.18"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50526"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50526"
+    }
+  ],
+  "published": "2026-07-23T17:38:04.252Z",
+  "modified": "2026-07-23T18:00:31.538Z"
+}

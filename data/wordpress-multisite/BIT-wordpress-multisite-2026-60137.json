@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wordpress-multisite-2026-60137",
+  "summary": "WordPress < 7.0.2 - Facilitated SQL Injection via author__not_in in WP_Query",
+  "details": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter.",
+  "aliases": [
+    "CVE-2026-60137"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress-multisite",
+        "purl": "pkg:bitnami/wordpress-multisite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.8.0"
+            },
+            {
+              "fixed": "6.8.6"
+            },
+            {
+              "introduced": "6.9.0"
+            },
+            {
+              "fixed": "6.9.5"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137"
+    },
+    {
+      "type": "WEB",
+      "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-60137"
+    }
+  ],
+  "published": "2026-07-23T17:50:40.425Z",
+  "modified": "2026-07-23T18:00:31.538Z"
+}

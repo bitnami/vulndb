@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-dotnet-sdk-2026-50528",
+  "summary": ".NET Security Feature Bypass Vulnerability",
+  "details": "Incorrect authorization in .NET allows an unauthorized attacker to bypass a security feature over a network.",
+  "aliases": [
+    "CVE-2026-50528"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.29"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.18"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50528"
+    }
+  ],
+  "published": "2026-07-23T17:38:05.005Z",
+  "modified": "2026-07-23T18:00:31.538Z"
+}
