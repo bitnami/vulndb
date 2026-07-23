@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2024-9180",
+  "summary": "Vault Operators in Root Namespace May Elevate Their Privileges",
+  "details": "A privileged Vault operator with write permissions to the root namespace’s identity endpoint could escalate their own or another user’s privileges to Vault’s root policy. Fixed in Vault Community Edition 1.18.0 and Vault Enterprise 1.18.0, 1.17.7, 1.16.11, and 1.15.16.",
+  "aliases": [
+    "CVE-2024-9180"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2024-21-vault-operators-in-root-namespace-may-elevate-their-privileges/70565"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9180"
+    }
+  ],
+  "published": "2026-07-23T20:46:12.329Z",
+  "modified": "2026-07-23T21:02:00.659Z"
+}

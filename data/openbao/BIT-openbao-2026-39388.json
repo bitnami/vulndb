@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-39388",
+  "summary": "OpenBao's Certificate Authentication Allows Token Renewal With Different Certificate",
+  "details": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.3, OpenBao's Certificate authentication method, when a token renewal is requested and `disable_binding=true` is set, attempts to verify the current request's presented mTLS certificate matches the original. Token renewals for other authentication methods do not require any supplied login information. Due to incorrect matching, the certificate authentication method would allow renewal of tokens for which the attacker had a sibling certificate+key signed by the same CA, but which did not necessarily match the original role or the originally supplied certificate. This implies an attacker could still authenticate to OpenBao in a similar scope, however, token renewal implies that an attacker may be able to extend the lifetime of dynamic leases held by the original token. This attack requires knowledge of either the original token or its accessor. This vulnerability is original from HashiCorp Vault. This is addressed in v2.5.3. As a workaround, ensure privileged roles are tightly scoped to single certificates.",
+  "aliases": [
+    "CVE-2026-39388"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-7ccv-rp6m-rffr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39388"
+    }
+  ],
+  "published": "2026-07-23T20:46:28.917Z",
+  "modified": "2026-07-23T21:02:00.659Z"
+}
