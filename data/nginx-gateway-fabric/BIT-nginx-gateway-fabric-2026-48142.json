@@ -1,6 +1,6 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-nginx-2026-48142",
+  "id": "BIT-nginx-gateway-fabric-2026-48142",
   "summary": "NGINX ngx_http_charset_module vulnerability",
   "details": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_charset_module module. When content is served or proxied through a location block with both source_charset utf-8; and a charset directive (for example, charset koi8-r;) configured, remote, unauthenticated attackers can send requests (in conjunction with conditions beyond their control) to cause a heap buffer over-read in the NGINX worker process, leading to limited disclosure of memory or a restart. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
   "aliases": [
@@ -10,8 +10,8 @@
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "nginx",
-        "purl": "pkg:bitnami/nginx"
+        "name": "nginx-gateway-fabric",
+        "purl": "pkg:bitnami/nginx-gateway-fabric"
       },
       "severity": [
         {
@@ -24,16 +24,10 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "1.0.0"
+              "introduced": "1.3.0"
             },
             {
-              "fixed": "1.30.3"
-            },
-            {
-              "introduced": "1.31.0"
-            },
-            {
-              "fixed": "1.31.2"
+              "fixed": "2.6.4"
             }
           ]
         }
@@ -43,7 +37,7 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:f5:nginx_gateway_fabric:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -56,6 +50,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48142"
     }
   ],
-  "published": "2026-06-22T05:47:07.939Z",
+  "published": "2026-07-23T14:48:13.659Z",
   "modified": "2026-07-23T15:08:25.288Z"
 }
