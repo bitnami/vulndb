@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-40264",
+  "summary": "OpenBao's Token Store Allows Cross-Namespace Renewal, Revocation",
+  "details": "OpenBao is an open source identity-based secrets management system. OpenBao's namespaces provide multi-tenant separation. Prior to version 2.5.3, a tenant who leaks token accessors can have their token revoked or renewed by a privileged administrator in another tenant. This is addressed in v2.5.3.",
+  "aliases": [
+    "CVE-2026-40264"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-p49j-v9wc-wg57"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40264"
+    }
+  ],
+  "published": "2026-07-23T20:46:31.924Z",
+  "modified": "2026-07-23T21:02:00.659Z"
+}
