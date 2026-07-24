@@ -37,7 +37,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:postgresql:postgresql_jdbc_driver:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2026-07-12T23:50:28.176Z",
-  "modified": "2026-07-13T00:08:34.851Z"
+  "modified": "2026-07-24T09:06:38.369Z"
 }
