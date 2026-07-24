@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-39396",
+  "summary": "OpenBao has Decompression Bomb via Unbounded Copy in OCI Plugin Extraction (DoS)",
+  "details": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.3, `ExtractPluginFromImage()` in OpenBao's OCI plugin downloader extracts a plugin binary from a container image by streaming decompressed tar data via `io.Copy` with no upper bound on the number of bytes written. An attacker who controls or compromises the OCI registry referenced in the victim's configuration can serve a crafted image containing a decompression bomb that decompresses to an arbitrarily large file. The SHA256 integrity check occurs after the full file is written to disk, meaning the hash mismatch is detected only after the damage (disk exhaustion) has already occurred. This allow the attacker to replace **legit plugin image** with no need to change its signature. Version 2.5.3 contains a patch.",
+  "aliases": [
+    "CVE-2026-39396"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-r65v-xgwc-g56j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39396"
+    }
+  ],
+  "published": "2026-07-24T08:51:16.104Z",
+  "modified": "2026-07-24T09:06:38.369Z"
+}
