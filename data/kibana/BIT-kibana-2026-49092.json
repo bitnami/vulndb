@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-49092",
+  "summary": "Unintended Proxy or Intermediary ('Confused Deputy') in Kibana Leading to Unauthorized Information Exposure",
+  "details": "Unintended Proxy or Intermediary ('Confused Deputy') (CWE-441) in Kibana can lead to unauthorized information exposure via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). Under certain conditions, a lower-privileged user can cause data from sources they are not authorized to access to be processed using another user's privileges.",
+  "aliases": [
+    "CVE-2026-49092"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-4-3-security-update-esa-2026-54/388553"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49092"
+    }
+  ],
+  "published": "2026-07-28T08:58:03.837Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}

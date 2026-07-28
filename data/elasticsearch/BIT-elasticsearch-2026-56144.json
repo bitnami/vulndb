@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-56144",
+  "summary": "Incorrect Authorization in Elasticsearch Leading to Information Disclosure",
+  "details": "Incorrect Authorization (CWE-863) in Elasticsearch can allow an authenticated user with limited index privileges to exploit insufficient authorization controls in the ingest simulation feature. By targeting indices they are not authorized to access directly, the user can cause those indices' configured ingest pipelines to execute and return their output, potentially disclosing data processed or enriched by those pipelines. Additionally, the same feature can be used to retrieve index mapping metadata for indices the user are not authorized to access directly.",
+  "aliases": [
+    "CVE-2026-56144"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.12.0"
+            },
+            {
+              "fixed": "8.19.18"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.7"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-18-9-3-7-9-4-4-security-update-esa-2026-56/388555"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56144"
+    }
+  ],
+  "published": "2026-07-28T08:52:58.054Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}

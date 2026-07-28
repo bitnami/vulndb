@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-63140",
+  "summary": "Reachable Assertion in Elasticsearch Leading to Denial of Service",
+  "details": "Reachable Assertion (CWE-617) in Elasticsearch can lead to denial of service via Input Data Manipulation (CAPEC-153). A specially crafted search request containing a null value in a specific query clause causes an internal assertion to be raised during query parsing. Because Elasticsearch treats assertion failures as fatal errors, this terminates the affected node process. A low-privileged authenticated user with read access to at least one index can exploit this condition with a single request to cause a node to terminate, disrupting search availability. In a single-node deployment this fully stops Elasticsearch; in a multi-node cluster it reduces cluster capacity for each affected node.",
+  "aliases": [
+    "CVE-2026-63140"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.19"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-19-9-3-8-9-4-4-security-update-esa-2026-64/388565"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63140"
+    }
+  ],
+  "published": "2026-07-28T08:53:03.950Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}
