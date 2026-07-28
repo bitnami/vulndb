@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-63141",
+  "summary": "Missing Authorization in Kibana Leading to Unauthorized Access to Cloud Connect Management Functions",
+  "details": "Missing Authorization (CWE-862) in Kibana allows an authenticated user to access and modify Cloud Connect configuration and service settings without the required feature privileges, via direct requests to insufficiently protected product endpoints.",
+  "aliases": [
+    "CVE-2026-63141"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-3-8-9-4-4-security-update-esa-2026-65/388566"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63141"
+    }
+  ],
+  "published": "2026-07-28T08:53:29.628Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}

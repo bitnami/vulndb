@@ -1,17 +1,17 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-kibana-2026-33464",
+  "id": "BIT-elk-2026-63261",
   "summary": "Uncontrolled Resource Consumption in Kibana Leading to Denial of Service",
-  "details": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to a denial of service via Excessive Allocation (CAPEC-130). An authenticated user holding a low-privileged role can submit a specially crafted, oversized payload to an internal Kibana API, causing the Kibana process to exhaust available resources and become unresponsive to all users until the service recovers or is restarted.",
+  "details": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). A low-privileged authenticated user can send a specially crafted request to a Kibana machine learning feature, causing the server to exhaust available memory and become unavailable to all users.",
   "aliases": [
-    "CVE-2026-33464"
+    "CVE-2026-63261"
   ],
   "affected": [
     {
       "package": {
         "ecosystem": "Bitnami",
-        "name": "kibana",
-        "purl": "pkg:bitnami/kibana"
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
       },
       "severity": [
         {
@@ -24,16 +24,22 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "8.0.0"
             },
             {
-              "fixed": "9.3.5"
+              "fixed": "8.19.19"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
             },
             {
               "introduced": "9.4.0"
             },
             {
-              "fixed": "9.4.1"
+              "fixed": "9.4.4"
             }
           ]
         }
@@ -49,13 +55,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://discuss.elastic.co/t/kibana-8-19-16-9-3-5-9-4-1-security-update-esa-2026-32/386548"
+      "url": "https://discuss.elastic.co/t/kibana-8-19-19-9-3-8-9-4-4-security-update-esa-2026-72/388575"
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33464"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63261"
     }
   ],
-  "published": "2026-06-01T11:42:49.585Z",
+  "published": "2026-07-28T08:53:37.196Z",
   "modified": "2026-07-28T09:23:53.136Z"
 }

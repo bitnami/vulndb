@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-56147",
+  "summary": "Authorization Bypass Through User-Controlled Key in Kibana Leading to Unauthorized Information Disclosure and Case Attachment Integrity Compromise",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to unauthorized information disclosure and case attachment integrity compromise via Privilege Abuse (CAPEC-122). An inconsistency in Kibana's file access authorization logic allows a low-privileged authenticated user to retrieve, modify, and delete case attachments that belong to feature areas they are not authorized to access. Because the access control check and the resource retrieval use different resolution mechanisms, an authenticated attacker with limited file management permissions can obtain the contents of, modify, or delete protected case attachments — such as those associated with Security Solution cases — without holding the privileges required to access those features.",
+  "aliases": [
+    "CVE-2026-56147"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.7.0"
+            },
+            {
+              "fixed": "8.19.18"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.7"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-18-9-3-7-9-4-3-security-update-esa-2026-59/388558"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56147"
+    }
+  ],
+  "published": "2026-07-28T08:58:10.100Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}

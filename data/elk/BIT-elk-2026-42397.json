@@ -1,10 +1,10 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-elk-2026-33464",
-  "summary": "Uncontrolled Resource Consumption in Kibana Leading to Denial of Service",
-  "details": "Uncontrolled Resource Consumption (CWE-400) in Kibana can lead to a denial of service via Excessive Allocation (CAPEC-130). An authenticated user holding a low-privileged role can submit a specially crafted, oversized payload to an internal Kibana API, causing the Kibana process to exhaust available resources and become unresponsive to all users until the service recovers or is restarted.",
+  "id": "BIT-elk-2026-42397",
+  "summary": "Allocation of Resources Without Limits or Throttling in Kibana Leading to Denial of Service",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Kibana can lead to a denial of service via Excessive Allocation (CAPEC-130). An authenticated user can submit a specially crafted request to affected Entity Analytics endpoints containing an oversized input value that causes excessive resource consumption, which may render Kibana unavailable.",
   "aliases": [
-    "CVE-2026-33464"
+    "CVE-2026-42397"
   ],
   "affected": [
     {
@@ -24,16 +24,16 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "9.3.0"
             },
             {
-              "fixed": "9.3.5"
+              "fixed": "9.3.7"
             },
             {
               "introduced": "9.4.0"
             },
             {
-              "fixed": "9.4.1"
+              "fixed": "9.4.4"
             }
           ]
         }
@@ -49,13 +49,13 @@
   "references": [
     {
       "type": "WEB",
-      "url": "https://discuss.elastic.co/t/kibana-8-19-16-9-3-5-9-4-1-security-update-esa-2026-32/386548"
+      "url": "https://discuss.elastic.co/t/kibana-9-3-7-9-4-4-security-update-esa-2026-55/388554/1"
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33464"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42397"
     }
   ],
-  "published": "2026-06-01T11:39:10.343Z",
+  "published": "2026-07-28T08:53:13.941Z",
   "modified": "2026-07-28T09:23:53.136Z"
 }
