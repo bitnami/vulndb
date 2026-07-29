@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-56146",
+  "summary": "Improper Access Control in Kibana Leading to Unauthorized Data Modification and Information Disclosure",
+  "details": "Improper Access Control (CWE-284) in Kibana can lead to unauthorized modification of Entity Analytics Watchlist configuration and potential information disclosure. A low-privileged authenticated user with read-only Security Solution access could perform write operations on watchlist data that should require elevated privileges. Under specific deployment conditions, this could also allow such a user to access data beyond their authorized scope.",
+  "aliases": [
+    "CVE-2026-56146"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-4-3-security-update-esa-2026-58/388557"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56146"
+    }
+  ],
+  "published": "2026-07-28T08:58:08.874Z",
+  "modified": "2026-07-28T09:23:53.136Z"
+}
