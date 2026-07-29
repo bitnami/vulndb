@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-21723",
+  "summary": "CVE-2026-21723 Record",
+  "details": "The alertmanager templates test endpoint (/api/alertmanager/grafana/config/api/v1/templates/test) can execute templates with no memory limits. Mass-executing templates in a short period causes OOM and crashes the Grafana service. The endpoint requires very low privileges and is exploitable with anonymous access enabled.",
+  "aliases": [
+    "CVE-2026-21723"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "11.6.11"
+            },
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.0.10"
+            },
+            {
+              "introduced": "12.1.0"
+            },
+            {
+              "fixed": "12.1.7"
+            },
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "fixed": "12.2.5"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-21723"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21723"
+    }
+  ],
+  "published": "2026-07-29T08:50:07.249Z",
+  "modified": "2026-07-29T09:17:40.827Z"
+}
