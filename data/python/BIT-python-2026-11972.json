@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-2026-11972",
+  "summary": "tarfile opened in streaming mode mishandles EOF",
+  "details": "When using the \"tarfile\" module with a file opened in \"streaming mode\" (mode=\"r|\") the tarfile module did not properly handle EOF, making archive parsing take exponentially longer.",
+  "aliases": [
+    "CVE-2026-11972"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/3f031d431f80668e14f3bc066bbf4369cd9281b9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/4ce6bf7c8aa7725828a38981c306f214c1f29365"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/7f0dc59c9a70f8f3b4da33d7c4a2ba552a7acc21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e86666c9dd256d52d0fbef6feb1ea4a51768fdec"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/eb63c0f94dfcbea7fda8eab6213818e134d67192"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f50bf13566189c8d0ce5a814f33eff3d89951896"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/151981"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/151982"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/AXPSKKTSRKXTTJULW3XSIC74WZNAAPPB/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11972"
+    }
+  ],
+  "published": "2026-07-30T11:34:03.356Z",
+  "modified": "2026-07-30T11:52:58.921Z"
+}
