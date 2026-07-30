@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2026-51298",
+  "details": "sqlite 3.41 is vulnerable to use after free in the JSON extraction function. After releasing JsonParse object memory via jsonParseFree(), the program still accesses internal member of the freed pointer, which can cause service crash and denial of service.",
+  "aliases": [
+    "CVE-2026-51298"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.41.0"
+            },
+            {
+              "last_affected": "3.41.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/programmervuln/cveadvisory-/blob/main/CVE-2026-51298"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sqlite/sqlite/blob/master/src/json.c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51298"
+    }
+  ],
+  "published": "2026-07-30T08:53:33.123Z",
+  "modified": "2026-07-30T09:07:47.269Z"
+}
