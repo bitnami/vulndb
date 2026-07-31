@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-helm-2026-63308",
+  "summary": "Helm Files.Lines Denial of Service via Empty Chart Files",
+  "details": "Helm through 4.2.3, fixed in commit ba6c9a2, contains a denial of service vulnerability in the Files.Lines template helper in pkg/engine/files.go that allows attackers to trigger an index out of range panic by including zero-length byte slices in chart files. Attackers can include empty files in Helm charts to cause deterministic render failures across template, install, upgrade, lint, and SDK Engine.Render operations.",
+  "aliases": [
+    "CVE-2026-63308"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "helm",
+        "purl": "pkg:bitnami/helm"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "4.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:helm:helm:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/commit/ba6c9a29efa7bf9198dad6a5ec12b4fb30c96017"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/issues/32279"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/helm/helm/pull/32290"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63308"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/chat2db-insecure-direct-object-reference-via-get-api-connection-datasource"
+    }
+  ],
+  "published": "2026-07-31T08:42:54.137Z",
+  "modified": "2026-07-31T09:10:46.238Z"
+}
