@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2026-46968",
+  "details": "Vulnerability in Oracle Java SE (component: JSSE). Supported versions that are affected are Oracle Java SE: 8u491, 8u491-perf, 11.0.31, 17.0.19, 21.0.11, 25.0.3, 26.0.1; Oracle GraalVM for JDK: 17.0.19 and 21.0.11; Oracle GraalVM Enterprise Edition: 21.3.18. Difficult to exploit vulnerability allows unauthenticated attacker with network access via TLS to compromise Oracle Java SE. Successful attacks of this vulnerability can result in unauthorized creation, deletion or modification access to critical data or all Oracle Java SE accessible data. Note: This vulnerability can only be exploited by supplying data to APIs in the specified Component without using Untrusted Java Web Start applications or Untrusted Java applets, such as through a web service. CVSS 3.1 Base Score 5.9 (Integrity impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N).",
+  "aliases": [
+    "CVE-2026-46968"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.8.0"
+            },
+            {
+              "fixed": "1.8.442"
+            },
+            {
+              "introduced": "11.0.31"
+            },
+            {
+              "fixed": "11.0.32"
+            },
+            {
+              "introduced": "17.0.19"
+            },
+            {
+              "fixed": "17.0.20"
+            },
+            {
+              "introduced": "21.0.11"
+            },
+            {
+              "fixed": "21.0.12"
+            },
+            {
+              "introduced": "25.0.3"
+            },
+            {
+              "fixed": "25.0.4"
+            },
+            {
+              "introduced": "26.0.1"
+            },
+            {
+              "fixed": "26.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:enterprise_performance_pack:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46968"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cpujul2026.html"
+    }
+  ],
+  "published": "2026-08-07T14:47:42.356Z",
+  "modified": "2026-08-07T15:08:29.394Z"
+}
