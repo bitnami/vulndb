@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-14869",
+  "summary": "terraform-mcp-server vulnerable to server side request forgery leading to token exposure",
+  "details": "The terraform-mcp-server before version 1.1.0 is vulnerable to a server-side request forgery issue in the streamable-HTTP transport that may allow an unauthenticated remote client to redirect the server's Terraform API requests, and the server-side authorization token, to an attacker-controlled endpoint. This vulnerability, CVE-2026-14869, is fixed in terraform-mcp-server 1.1.0.",
+  "aliases": [
+    "CVE-2026-14869"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.3.0"
+            },
+            {
+              "fixed": "1.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-23-multiple-vulnerabilities-impacting-hashicorp-terraform-mcp-server/77606"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14869"
+    }
+  ],
+  "published": "2026-08-04T14:38:27.918Z",
+  "modified": "2026-08-04T15:01:38.775Z"
+}
