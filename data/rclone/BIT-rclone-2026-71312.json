@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-71312",
+  "summary": "rclone: PowerShell Smart-Quote Filename Injection Enables SFTP Server-Side Command Execution",
+  "details": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to v1.75.0, rclone interpolates remote SFTP paths into PowerShell hash commands in backend/sftp/sftp.go, and quoteOrEscapeShellPath escapes only ASCII apostrophe even though PowerShell treats U+2018, U+2019, U+201A, and U+201B as single-quote delimiters, allowing an attacker-controlled filename to terminate the intended path literal and append PowerShell statements that execute as the victim SSH account when server-side hashing is invoked. This issue is fixed in v1.75.0.",
+  "aliases": [
+    "CVE-2026-71312"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/e122fba1a57641b63a580aa26c026903a84e2e88"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.75.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-2m8m-jhrm-w6j2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71312"
+    }
+  ],
+  "published": "2026-08-11T14:54:19.383Z",
+  "modified": "2026-08-11T15:10:57.111Z"
+}

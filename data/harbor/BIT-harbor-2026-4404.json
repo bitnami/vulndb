@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-harbor-2026-4404",
+  "summary": "Use of hard coded credentials in GoHarbor Harbor",
+  "details": "Use of hard coded credentials in GoHarbor Harbor version 2.15.0 and below, allows attackers to use the default password and gain access to the web UI.",
+  "aliases": [
+    "CVE-2026-4404"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "harbor",
+        "purl": "pkg:bitnami/harbor"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.15.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:harbor:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cwe.mitre.org/data/definitions/1393.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/issues/1937"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goharbor/harbor/pull/22751"
+    },
+    {
+      "type": "WEB",
+      "url": "https://goharbor.io/docs/1.10/install-config/run-installer-script/#:~:text=If%20you%20did%20not%20change%20them%20in%20harbor.yml,%20the%20default%20administrator%20username%20and%20password%20are%20admin%20and%20Harbor12345"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4404"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.kb.cert.org/vuls/id/577436"
+    }
+  ],
+  "published": "2026-08-11T14:42:16.468Z",
+  "modified": "2026-08-11T15:10:57.111Z"
+}

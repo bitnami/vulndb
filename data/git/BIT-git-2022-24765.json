@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-git-2022-24765",
+  "summary": "Uncontrolled search for the Git directory in Git for Windows",
+  "details": "Git for Windows is a fork of Git containing Windows-specific patches. This vulnerability affects users working on multi-user machines, where untrusted parties have write access to the same hard disk. Those untrusted parties could create the folder `C:\\.git`, which would be picked up by Git operations run supposedly outside a repository while searching for a Git directory. Git would then respect any config in said Git directory. Git Bash users who set `GIT_PS1_SHOWDIRTYSTATE` are vulnerable as well. Users who installed posh-gitare vulnerable simply by starting a PowerShell. Users of IDEs such as Visual Studio are vulnerable: simply creating a new project would already read and respect the config specified in `C:\\.git\\config`. Users of the Microsoft fork of Git are vulnerable simply by starting a Git Bash. The problem has been patched in Git for Windows v2.35.2. Users unable to upgrade may create the folder `.git` on all drives where Git commands are run, and remove read/write access from those folders as a workaround. Alternatively, define or extend `GIT_CEILING_DIRECTORIES` to cover the _parent_ directory of the user profile, e.g. `C:\\Users` if the user profile is located in `C:\\Users\\my-user-name`.",
+  "aliases": [
+    "CVE-2022-24765"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git",
+        "purl": "pkg:bitnami/git"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.35.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:git:git:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://seclists.org/fulldisclosure/2022/May/31"
+    },
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2022/04/12/7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash"
+    },
+    {
+      "type": "WEB",
+      "url": "https://git-scm.com/docs/git#Documentation/git.txt-codeGITCEILINGDIRECTORIEScode"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git-for-windows/git/security/advisories/GHSA-vw2c-22j4-2fh2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5PTN5NYEHYN2OQSHSAMCNICZNK2U4QH6/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BENQYTDGUL6TF3UALY6GSIEXIHUIYNWM/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DDI325LOO2XBDDKLINOAQJEG6MHAURZE/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/DIKWISWUDFT2FAITYIA6372BVLH3OOOC/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HVOLER2PIGMHPQMDGG4RDE2KZB74QLA2/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SLP42KIZ6HACTVZMZLJLFJQ4W2XYT27M/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TRZG5CDUQ27OWTPC5MQOR4UASNXHWEZS/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UDZRZAL7QULOB6V7MKT66MOMWJLBJPX4/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YROCMBWYFKRSS64PO6FUNM6L7LKBUKVW/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24765"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.gentoo.org/glsa/202312-15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://support.apple.com/kb/HT213261"
+    }
+  ],
+  "published": "2026-08-11T14:41:15.013Z",
+  "modified": "2026-08-11T15:10:57.111Z"
+}
