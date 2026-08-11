@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apr-util-2025-49506",
+  "summary": "Apache Portable Runtime Utility: apr_password_validate() vulnerable to timing attack",
+  "details": "APR-util versions 1.6.3 (and earlier) function apr_password_validate() was not constant-time with regards to hashes or passwords comparisons, potentially leaking their content via a side channel timing attack particularly on platforms without crypt() such as  Windows, BeOS, NetWare, or Android.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes this issue.",
+  "aliases": [
+    "CVE-2025-49506"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr-util",
+        "purl": "pkg:bitnami/apr-util"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "1.6.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apr-util:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/06/8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/2v8o3bj9pb7lfcr57bdnjg9xfkj04mg5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49506"
+    }
+  ],
+  "published": "2026-08-11T20:37:31.832Z",
+  "modified": "2026-08-11T21:09:15.114Z"
+}
