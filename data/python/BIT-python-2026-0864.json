@@ -25,6 +25,15 @@
           "events": [
             {
               "introduced": "0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.7"
             }
           ]
         }
@@ -69,8 +78,20 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0864"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/12dcbd74d3563016a8cb8c47e4898889f34f74dd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/274de100bbf4345bd0c23ef5b446722e9e636908"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/db4a157c790479710a1a840d7937c5c815a6f8b6"
     }
   ],
   "published": "2026-07-30T11:33:59.347Z",
-  "modified": "2026-07-30T11:52:58.921Z"
+  "modified": "2026-08-12T21:09:43.179Z"
 }
