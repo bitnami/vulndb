@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-70596",
+  "summary": "Ghost: Cross-Site Scripting in Feature Image Captions",
+  "details": "Ghost is a Node.js content management system. From 4.9.0 until 6.54.1, an input validation issue allowed any staff user to create a post with content in feature_image_caption that could be used to hijack another staff user's Ghost Admin session, resulting in privilege escalation. This issue is fixed in 6.54.1.",
+  "aliases": [
+    "CVE-2026-70596"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.9.0"
+            },
+            {
+              "fixed": "6.54.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/a8bea3a4ceec4c852b880f4885119453c3d8588e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/pull/29635"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.54.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-pr22-p9rp-2cqv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70596"
+    }
+  ],
+  "published": "2026-08-13T11:42:16.654Z",
+  "modified": "2026-08-13T12:10:59.091Z"
+}
