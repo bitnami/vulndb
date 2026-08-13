@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-71311",
+  "summary": "rclone: FTP Command Arguments Permit CRLF Injection When Custom Encoding Preserves Newlines",
+  "details": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.0, a valid but nondefault FTP filename encoding in backend/ftp/ftp.go can restore raw CR/LF immediately before an attacker-controlled path is interpolated into the line-oriented FTP control channel, and github.com/jlaffaye/ftp formats the argument through textproto.Conn.Cmd without rejecting CR or LF, allowing a filename such as victim CRLF DELE other-secret CRLF NOOP to inject an independent authenticated FTP command when the victim copies or syncs to a more-privileged FTP destination. This issue is fixed in 1.75.0.",
+  "aliases": [
+    "CVE-2026-71311"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/1df2b70753286c1dfe8366078cbedfdf7f96472c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.75.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-8c48-q9wj-3w37"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71311"
+    }
+  ],
+  "published": "2026-08-12T23:52:53.846Z",
+  "modified": "2026-08-13T00:09:36.361Z"
+}
