@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-15970",
+  "summary": "L7 intention authorization bypass via custom public listener",
+  "details": "Consul Community Edition and Consul Enterprise 1.20.1 through 2.0.2 are vulnerable to an L7 intention authorization bypass when a service proxy is configured with a custom public listener. An authenticated mesh workload may reach HTTP paths that are blocked by a path-based deny intention. This vulnerability, CVE-2026-15970, is fixed in Consul 2.0.3 and Consul Enterprise 1.21.17, 1.22.11, and 2.0.3.",
+  "aliases": [
+    "CVE-2026-15970"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.20.1"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-25-multiple-vulnerabilities-impacting-hashicorp-consul/77629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15970"
+    }
+  ],
+  "published": "2026-08-13T05:38:35.683Z",
+  "modified": "2026-08-13T06:08:44.264Z"
+}
