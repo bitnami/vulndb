@@ -25,6 +25,15 @@
           "events": [
             {
               "introduced": "0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.7"
             }
           ]
         }
@@ -77,8 +86,12 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11972"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f5e2776ff0383a902c12acf2b703e7e951fc8438"
     }
   ],
   "published": "2026-07-30T11:34:03.356Z",
-  "modified": "2026-07-30T11:52:58.921Z"
+  "modified": "2026-08-13T15:12:16.982Z"
 }
