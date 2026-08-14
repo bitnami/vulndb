@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-6879",
+  "summary": "Quadratic Behavior in xml.etree.ElementPath Index Predicates",
+  "details": "`Element.findall()` and fully-consumed `Element.iterfind()` exhibit `O(n^2)` time complexity when using XPath index predicates (e.g. `[1]`, `[last()]`, `[last()-N]`) on XML documents with many same-tag siblings. `Element.find()` is only affected when the first match is near the end  of the sibling list, such as with `[last()]` or `[last()-N]`;  `.//item[1]` short-circuits after the first match.",
+  "aliases": [
+    "CVE-2026-6879"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/02c08e6b747ac43d0d866a4ffa916bedf3423f81"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/037965c00a427cba5c05447efadc67c51a492e85"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/0583f24ae678993e3f7939f51ad5bcae5ad9dc70"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/2ffab083782968a4d732738f4f1dff6bbd69d2b0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/390337b8ba1658833fdef379e1739c9f9533a8db"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/96510a3758f4a075f43223afdee3b6ee1a7a7f02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/cb409342a19f25656f62e679f8bac265fe1442c3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/152674"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/152676"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/7YMZ6DDZVR26TJJBVO3RDNBAVGHNYAKR/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6879"
+    }
+  ],
+  "published": "2026-08-14T20:52:14.228Z",
+  "modified": "2026-08-14T21:05:06.030Z"
+}
