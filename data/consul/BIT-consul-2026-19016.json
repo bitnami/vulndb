@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-19016",
+  "summary": "Authorization bypass for session deletion in the transaction API",
+  "details": "Consul Community Edition and Consul Enterprise 1.19.1 through 2.0.2 did not enforce the {{session:write}} ACL permission for session deletion operations submitted through the transaction API. An authenticated caller with network access to the Consul server RPC port could delete arbitrary sessions without holding the required permission. This vulnerability, CVE-2026-19016, is fixed in Consul 2.0.3 and Consul Enterprise 1.21.17, 1.22.11, and 2.0.3.",
+  "aliases": [
+    "CVE-2026-19016"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.19.1"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-25-multiple-vulnerabilities-impacting-hashicorp-consul/77629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19016"
+    }
+  ],
+  "published": "2026-08-14T08:39:43.396Z",
+  "modified": "2026-08-14T09:11:53.679Z"
+}
