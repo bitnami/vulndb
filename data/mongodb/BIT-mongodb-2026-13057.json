@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-13057",
+  "summary": "Authorization Bypass via Client-Supplied $search.mergingPipeline Leaks Unauthorized Collection Data Through $$SEARCH_META",
+  "details": "An issue in the server’s Atlas Search integration allows an authenticated user to bypass per-user access controls.\n\n\n\nIn sharded topologies, the $search and $searchMeta aggregation stages use internal routing that is normally populated only by the trusted router during sharded search planning. Due to insufficient input validation, an authenticated client can supply these fields directly.",
+  "aliases": [
+    "CVE-2026-13057"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.28"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.12"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://jira.mongodb.org/browse/SERVER-126247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13057"
+    }
+  ],
+  "published": "2026-08-13T23:44:58.765Z",
+  "modified": "2026-08-14T00:01:21.285Z"
+}
