@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-72728",
+  "summary": "Discourse: Onebox iframe origin allowlist enforces URL authority boundary",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.1.7, an authenticated user could submit specially formed URLs that bypassed the Onebox allowlist and embedded malicious content in a site. This issue is fixed in versions 2026.1.7, 2026.6.2, 2026.7.1, and 2026.8.0.",
+  "aliases": [
+    "CVE-2026-72728"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.1.7"
+            },
+            {
+              "introduced": "2026.6.0"
+            },
+            {
+              "fixed": "2026.6.2"
+            },
+            {
+              "introduced": "2026.7.0"
+            },
+            {
+              "fixed": "2026.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/92eec47e8b477cb8b4ccdb237e26dc1ba8f8b76b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-qp9j-3v7r-wrvr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72728"
+    }
+  ],
+  "published": "2026-08-15T08:46:09.472Z",
+  "modified": "2026-08-15T09:11:17.406Z"
+}
