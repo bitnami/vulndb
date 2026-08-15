@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-46358",
+  "summary": "OpenBao's Inline Auth Incorrectly Redacted Headers",
+  "details": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao's inline auth functionality incorrectly redacted audit log entries, resulting in non-auth headers being removed and auth-related headers being retained in cleartext. This requires an attacker to compromise access to the audit device. Operators should review leaked source authentication material and rotate it as appropriate. This is fixed in OpenBao v2.5.4.",
+  "aliases": [
+    "CVE-2026-46358"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/commit/131c6966af4dfb4e1906703436eecdb8f2a3e9df"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/issues/3074"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/pull/3076"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/releases/tag/v2.5.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-q8cj-789h-vg24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46358"
+    }
+  ],
+  "published": "2026-08-15T14:46:09.568Z",
+  "modified": "2026-08-15T15:00:38.119Z"
+}
