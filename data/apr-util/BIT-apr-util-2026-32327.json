@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apr-util-2026-32327",
+  "summary": "Apache Portable Runtime Utility: apr-util XML stack recursion crash",
+  "details": "A bug in APR-util version 1.6.3 (and earlier) allows a stack recursion attack against any library consumer which parses XML from untrusted sources and uses the apr_xml_quote_elem() function.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes this issue.",
+  "aliases": [
+    "CVE-2026-32327"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr-util",
+        "purl": "pkg:bitnami/apr-util"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.6.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:apr-util:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/06/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/hq27vj8yfno9tkwv0fpj6jksfzgxvth1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32327"
+    }
+  ],
+  "published": "2026-08-16T17:37:18.061Z",
+  "modified": "2026-08-16T18:08:28.978Z"
+}
