@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-72726",
+  "summary": "Discourse: Unauthorized eavesdropping on private AI bot conversations.",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, an authenticated user could eavesdrop on private AI bot conversations through the AI bot reply stream. The issue is fixed in 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+  "aliases": [
+    "CVE-2026-72726"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.1.6"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.2"
+            },
+            {
+              "introduced": "2026.6.0"
+            },
+            {
+              "fixed": "2026.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/01faa889830f56e02fba2f6c1731811d319c5e81"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/1fb2026eb8004dfeb12553014cc534dfd8083fbc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/9247666f8359f3cf214b8aea3d396e8a8237ed38"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/b56b98232aa4dad4a30500a65e31db0c9080c8f5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-gw88-2jw8-jf2h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72726"
+    }
+  ],
+  "published": "2026-08-16T08:45:28.218Z",
+  "modified": "2026-08-16T09:10:07.229Z"
+}
