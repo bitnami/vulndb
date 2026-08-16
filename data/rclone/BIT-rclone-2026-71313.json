@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-71313",
+  "summary": "rclone: Local Encoding Path Traversal",
+  "details": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. From v1.51.0 until v1.75.0, the local backend in backend/local/local.go relies on the configurable filename encoder to prevent remote filename data from becoming operating-system path syntax, so a local destination using Slash, None, Raw, or on Windows an encoding that preserves backslash can decode a standard-encoded fullwidth dot-dot component or native backslash form into an actual parent-directory component before filepath.Join resolves it outside the configured local root, allowing an attacker-controlled source object to create or overwrite files outside the selected destination directory as the rclone process. This issue is fixed in v1.75.0.",
+  "aliases": [
+    "CVE-2026-71313"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.51.0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/commit/6a69713864b1d8f6edbc03d8af735f9624576d6e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.75.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-7p4m-qxvv-g567"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71313"
+    }
+  ],
+  "published": "2026-08-16T05:52:17.085Z",
+  "modified": "2026-08-16T06:08:38.299Z"
+}
