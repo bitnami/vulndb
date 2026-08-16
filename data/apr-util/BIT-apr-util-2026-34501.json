@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apr-util-2026-34501",
+  "summary": "Apache Portable Runtime Utility: Heap buffer overflow in APR redis client",
+  "details": "Heap-based Buffer Overflow vulnerability in Apache Portable Runtime Utility redis client.\n\nThis issue affects Apache Portable Runtime Utility: from 1.6.0 through 1.6.3.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-34501"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apr-util",
+        "purl": "pkg:bitnami/apr-util"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.6.0"
+            },
+            {
+              "fixed": "1.6.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apr-util:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/06/11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/o8h6c7cq86fplxlnry6c3rn9x0ovq8mv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34501"
+    }
+  ],
+  "published": "2026-08-15T23:36:14.620Z",
+  "modified": "2026-08-16T00:08:14.150Z"
+}

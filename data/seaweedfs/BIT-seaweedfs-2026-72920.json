@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-seaweedfs-2026-72920",
+  "summary": "SeaweedFS: Unauthenticated filer IAM gRPC service grants S3 administrative control",
+  "details": "SeaweedFS is a distributed storage system. Prior to 4.24, the filer registers the SeaweedIdentityAccessManagement gRPC service without mandatory authentication when jwt.filer_signing.key is unset, allowing any client that can reach the filer gRPC port to invoke CreateUser, CreateAccessKey, PutPolicy, and related IAM RPCs to mint credentials and gain S3 administrative control. This issue is fixed in versions 4.24.",
+  "aliases": [
+    "CVE-2026-72920"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "seaweedfs",
+        "purl": "pkg:bitnami/seaweedfs"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.24.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:seaweedfs:seaweedfs:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/commit/5e8f99f40a8abc7b449aefd260516443377041c7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/pull/9442"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/releases/tag/4.24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/security/advisories/GHSA-2v6v-25fm-p4fg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72920"
+    }
+  ],
+  "published": "2026-08-15T23:52:40.486Z",
+  "modified": "2026-08-16T00:08:14.150Z"
+}
