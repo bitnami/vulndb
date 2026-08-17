@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-68968",
+  "summary": "Apache Airflow: Authorization bypass in the Backfill API through conflicting interpretations of the backfill id",
+  "details": "Apache Airflow's Backfill API authorized a request against a Dag id supplied by the caller whenever the `backfill_id` path segment failed to parse. The authorization dependency parsed it with `int()` while the route handler parsed it as pydantic's `NonNegativeInt`, which accepts values `int()` rejects (`1.0` coerces to `1`); FastAPI resolves dependencies before endpoint validation, so the two acted on different Dags. An authenticated user holding edit permission on any single Dag could therefore read, pause and cancel backfills belonging to any other Dag, including moving another Dag's queued runs to `failed`. No non-default configuration is required and backfill ids are sequential, so finding a target is trivial. Users are advised to upgrade to apache-airflow 3.3.1 or later, which parses the backfill id with the same type the routes declare.",
+  "aliases": [
+    "CVE-2026-68968"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/12/12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/70889"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/f9zmw6xs5b4syhwzbl6fsxm4kf2632ol"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68968"
+    }
+  ],
+  "published": "2026-08-16T23:39:08.503Z",
+  "modified": "2026-08-17T00:09:23.587Z"
+}

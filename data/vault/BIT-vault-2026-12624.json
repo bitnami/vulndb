@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-12624",
+  "summary": "Vault vulnerable to LIST authorization bypass via trailing-slash strip",
+  "details": "Vault’s ACL policy engine did not consistently enforce a wildcard (glob) deny rule against LIST requests made with a trailing slash on the denied path. This may allow a token holding a broader allow rule alongside a narrower wildcard deny rule to enumerate the names of entries beneath a path it was intended to be denied access to. This vulnerability (CVE-2026-12624) is fixed in Vault Community Edition 2.0.3 and Vault Enterprise 2.0.3, 1.21.8, 1.20.13, and 1.19.19.",
+  "aliases": [
+    "CVE-2026-12624"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-26-vault-vulnerable-to-list-authorization-bypass-via-trailing-slash-strip/77632"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12624"
+    }
+  ],
+  "published": "2026-08-16T23:55:32.957Z",
+  "modified": "2026-08-17T00:09:23.587Z"
+}
