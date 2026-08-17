@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-19017",
+  "summary": "Consul vulnerable to partial arbitrary file read via Vault Connect CA provider",
+  "details": "Consul Community Edition and Consul Enterprise 1.18.21 through 2.0.2 are vulnerable to a partial arbitrary file read when configured to use the Vault Connect CA provider with JWT or AppRole authentication. A privileged attacker with `operator:write` permission may direct Consul to read and forward credential files outside the intended scope, potentially leading to the exfiltration of sensitive secrets from the Consul server host. This vulnerability, CVE-2026-19017, is fixed in Consul 2.0.3 and Consul Enterprise 1.21.17, 1.22.11, and 2.0.3.",
+  "aliases": [
+    "CVE-2026-19017"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.21"
+            },
+            {
+              "fixed": "2.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-25-multiple-vulnerabilities-impacting-hashicorp-consul/77629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19017"
+    }
+  ],
+  "published": "2026-08-17T05:38:17.374Z",
+  "modified": "2026-08-17T06:10:32.268Z"
+}
