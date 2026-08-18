@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2025-9486",
+  "summary": "Incorrect Privilege Assignment in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 15.6 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed a user with a pending membership to receive permissions granted by a custom role, due to incorrect privilege assignment that did not account for membership state.",
+  "aliases": [
+    "CVE-2025-9486"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.6.0"
+            },
+            {
+              "fixed": "19.0.6"
+            },
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "fixed": "19.1.4"
+            },
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-2-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/565412"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3262844"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9486"
+    }
+  ],
+  "published": "2026-08-18T10:27:35.297Z",
+  "modified": "2026-08-18T10:32:25.960Z"
+}
