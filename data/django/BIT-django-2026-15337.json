@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-django-2026-15337",
+  "summary": "Potential denial-of-service vulnerability in check_for_language()",
+  "details": "An issue was discovered in Django 5.2 before 5.2.17 and 6.0 before 6.0.8.\n`django.utils.translation.check_for_language()` is subject to a potential denial-of-service attack when given many distinct, very long language codes, which are retained as keys in an in-memory cache and consume process memory. Such codes reach the function through the `django.views.i18n.set_language()` view, which is not routed by default. The consumed memory is bounded, since request data is limited by the `DATA_UPLOAD_MAX_MEMORY_SIZE` setting (default 2.5 MB) and the cache holds a fixed maximum number of entries.\nEarlier, unsupported Django series (such as 5.1.x, 5.0.x, and 4.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jaeyoung Jang for reporting this issue.",
+  "aliases": [
+    "CVE-2026-15337"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "django",
+        "purl": "pkg:bitnami/django"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.2.17"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.djangoproject.com/en/dev/releases/security/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/django/django/commit/224dbc832586ad5cfb0237c2ff30d14baeaddc6f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/django/django/commit/27137e655e442e81095f1f8f77ff3870d9fdf169"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/django/django/commit/5b3523d29be25948e1dd90b3863a002f00fc865f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/django/django/commit/c72a5dbb64d0777f3f471f1be94e8b2ca91e0959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/django-announce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15337"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.djangoproject.com/weblog/2026/aug/04/security-releases/"
+    }
+  ],
+  "published": "2026-08-19T08:39:52.170Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

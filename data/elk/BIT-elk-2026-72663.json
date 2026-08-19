@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72663",
+  "summary": "Inefficient Algorithmic Complexity in Kibana Leading to Denial of Service",
+  "details": "Inefficient Algorithmic Complexity (CWE-407) in Kibana can lead to denial of service via Input Data Manipulation (CAPEC-153). A specially crafted, deeply nested expression submitted to a Kibana TSVB visualization is evaluated with a worst-case cost that grows disproportionately with the size of the input. Because the evaluation runs synchronously, a single request consumes the Kibana request-processing thread indefinitely, and Kibana stops responding to all further requests until the service is restarted.",
+  "aliases": [
+    "CVE-2026-72663"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.20"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-20-and-9-4-5-security-update-esa-2026-104/389520"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72663"
+    }
+  ],
+  "published": "2026-08-19T08:40:33.421Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

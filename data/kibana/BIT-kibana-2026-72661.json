@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-72661",
+  "summary": "Missing Authorization in Kibana Leading to Information Disclosure",
+  "details": "Missing Authorization (CWE-862) in Kibana can lead to information disclosure via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). An internal Kibana data retrieval capability used by Elastic Defend endpoint response actions did not enforce the Security Solution and endpoint privileges that its user-facing equivalents require, and it retrieved data with elevated internal permissions rather than the permissions of the requesting user. As a result, an authenticated low-privileged Kibana user with no Security Solution privileges, endpoint privileges and no Elasticsearch privileges on the underlying data, could read endpoint response action records and the corresponding response content returned by managed hosts.",
+  "aliases": [
+    "CVE-2026-72661"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.12.0"
+            },
+            {
+              "fixed": "8.19.19"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-19-9-3-8-9-4-4-security-update-esa-2026-102/389513"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72661"
+    }
+  ],
+  "published": "2026-08-19T08:45:06.436Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-72655",
+  "summary": "Improperly Controlled Modification of Dynamically-Determined Object Attributes in Kibana Leading to Unauthorized Data Modification",
+  "details": "Improperly Controlled Modification of Dynamically-Determined Object Attributes (CWE-915) in the case management functionality of Elastic Security in Kibana can lead to unauthorized modification of case data by an authenticated user who has not been granted case editing privileges, via Manipulating User-Controlled Variables (CAPEC-77). Object attributes accepted by the case management API were not subject to the same authorization enforcement applied in the user interface, so a low-privileged user could alter case records they were only entitled to view.",
+  "aliases": [
+    "CVE-2026-72655"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.20"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-20-9-4-5-security-update-esa-2026-110/389523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72655"
+    }
+  ],
+  "published": "2026-08-19T08:45:02.045Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}
