@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kibana-2026-72666",
+  "summary": "Authorization Bypass Through User-Controlled Key in Kibana Leading to Unauthorized Query Execution on Managed Hosts",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to unauthorized query execution against Elastic Agents that are assigned to a Kibana space the requesting user has no access to, via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). A user who is authorized to run Osquery live queries in one space can have a query carried out on hosts belonging to another space, resulting in disclosure of information from those hosts to the Osquery results data stream.",
+  "aliases": [
+    "CVE-2026-72666"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kibana",
+        "purl": "pkg:bitnami/kibana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.4.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-4-5-security-update-esa-2026-97/389537"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72666"
+    }
+  ],
+  "published": "2026-08-19T08:45:10.852Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72674",
+  "summary": "Allocation of Resources Without Limits or Throttling in Kibana Leading to Denial of Service",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Kibana can lead to a denial of service via Excessive Allocation (CAPEC-130). A user-supplied list of document fields accepted by the Kibana Playground for RAG feature was neither bounded in length nor de-duplicated before it was used to assemble the response for each matching document. A single crafted request could therefore make Kibana build a response far larger than the data it was derived from, and the resulting processing and memory pressure exhausts the resources of the Kibana instance.",
+  "aliases": [
+    "CVE-2026-72674"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.3.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-3-8-9-4-4-security-update-esa-2026-91/389533"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72674"
+    }
+  ],
+  "published": "2026-08-19T08:40:44.901Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

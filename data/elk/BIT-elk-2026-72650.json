@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72650",
+  "summary": "Authorization Bypass Through User-Controlled Key in Kibana Leading to Information Disclosure",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to information disclosure via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). An authenticated user who is authorized to read alerting rules in a single Kibana space could retrieve alerting rule execution telemetry that belongs to spaces the user is not authorized to access. The disclosed telemetry includes rule identifiers, rule names, space identifiers, execution outcomes, timestamps, and execution counters.",
+  "aliases": [
+    "CVE-2026-72650"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.20"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-20-and-9-4-5-security-update-esa-2026-105/389521"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72650"
+    }
+  ],
+  "published": "2026-08-19T08:40:24.205Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}

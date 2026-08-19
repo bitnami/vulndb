@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongoose-2026-73562",
+  "summary": "Mongoose: Prototype pollution in the update casting via __proto__-prefixed dotted path (Schema._getSchema/path getter)",
+  "details": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.10, 7.8.10, 8.24.1, and 9.7.2, passing a user-controlled update such as MyModel.updateOne(filter, req.body) can exploit Mongoose update casting with a __proto__.x dotted path under $set. Schema.prototype.path and Schema.prototype._getPathType can treat inherited properties of schema.paths and schema.nested as schema types, allowing the casting process to set $fullPath and $parentSchemaDocArray on Object.prototype before throwing. This prototype pollution makes those properties visible on newly created objects and can cause application integrity and availability impacts. This issue is fixed in versions 6.13.10, 7.8.10, 8.24.1, and 9.7.2.",
+  "aliases": [
+    "CVE-2026-73562"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongoose",
+        "purl": "pkg:bitnami/mongoose"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.13.10"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.8.10"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.24.1"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/35a3f33bc9a0a28671f99e3c5010000425650d0f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/7285466b860d3b511f8d07b2ab72656703ee707a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/953d085bee5a16b5d6c5af33a156e6314d6d9a45"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/fab793b747131c68927888cba41cf3e6d6593740"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/security/advisories/GHSA-664h-wqgq-64gw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73562"
+    }
+  ],
+  "published": "2026-08-19T08:48:07.081Z",
+  "modified": "2026-08-19T09:09:14.600Z"
+}
