@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-neo4j-2026-14587",
+  "summary": "Unathenticated connection can hold Bolt channel open",
+  "details": "Neo4j's Bolt modern handshake decoder treats an overlong capability bit mask the same way it treats a truncated bit mask. When an unauthenticated client sends a selected protocol version followed by 32 continuation bytes in the capability mask, the decoder resets the reader index and waits for more bytes instead of rejecting the protocol message and closing the channel.\n\n\n\nBecause the same unread bytes remain at the front of the decoder buffer, appending a terminating byte later does not recover the connection. The decoder re-reads the same first 32 continuation bytes, returns without producing a handshake-finalization message, and leaves the channel open.\n\n\n\nThis can be triggered before authentication by any client that can reach the Bolt connector.",
+  "aliases": [
+    "CVE-2026-14587"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "neo4j",
+        "purl": "pkg:bitnami/neo4j"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.26.29"
+            },
+            {
+              "introduced": "2025.1.0"
+            },
+            {
+              "fixed": "2026.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:neo4j:neo4j:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:neo4j:neo4j:*:*:*:*:community:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://neo4j.com/security/CVE-2026-14587"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14587"
+    }
+  ],
+  "published": "2026-08-20T11:46:02.962Z",
+  "modified": "2026-08-20T12:02:45.408Z"
+}
