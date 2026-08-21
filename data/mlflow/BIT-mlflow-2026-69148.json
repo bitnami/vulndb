@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-69148",
+  "summary": "MLflow: CreateModelVersion source validation does not check READ permission on referenced run_id",
+  "details": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. Prior to 3.15.0, CreateModelVersion accepts a run_id or model_id after _validate_source_run() or _validate_source_model() in mlflow/server/handlers.py verifies only path containment, allowing authenticated users to create a model version that references another user's artifact directory and read files through GET /model-versions/get-artifact without the required READ permission. This issue is fixed in version 3.15.0.",
+  "aliases": [
+    "CVE-2026-69148"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/4bb7474771c3be808cd9e129defef9305f2869be"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/pull/24293"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/releases/tag/v3.15.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-gqch-g4w5-7qcw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69148"
+    }
+  ],
+  "published": "2026-08-21T08:50:13.561Z",
+  "modified": "2026-08-21T09:11:01.118Z"
+}

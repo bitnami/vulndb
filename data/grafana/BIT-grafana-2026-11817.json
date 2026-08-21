@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-11817",
+  "summary": "CVE-2026-11817 CVE Record",
+  "details": "This vulnerability only affects Grafana stacks configured with multiple organizations; single-organization deployments are not impacted. In a multi-organization stack, a user who is an Org Admin of a single organization can call GET /api/access-control/users/permissions/search?actionPrefix=dashboards: and receive permission data belonging to other organizations. The disclosed data is limited to dashboard and folder identifiers (UIDs) and per-user permission/scope mappings (which user holds which access on which dashboard). Dashboard contents, panels, query results, datasource credentials, secrets, and personal data are not exposed. This is a limited cross-organization information disclosure affecting multi-org deployments only.",
+  "aliases": [
+    "CVE-2026-11817"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-11817"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11817"
+    }
+  ],
+  "published": "2026-08-21T08:43:32.031Z",
+  "modified": "2026-08-21T09:11:01.118Z"
+}

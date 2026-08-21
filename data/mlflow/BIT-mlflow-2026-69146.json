@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-69146",
+  "summary": "MLflow: LogInputs endpoint bypasses per-run UPDATE authorization in basic-auth",
+  "details": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. From 3.13.0 until 3.15.0, LogInputs is absent from BEFORE_REQUEST_HANDLERS in the mlflow/server/auth package, allowing any authenticated user to call POST /api/2.0/mlflow/runs/log-inputs for another user's run_id and inject attacker-controlled DatasetInput records into the dataset_inputs lineage metadata without UPDATE permission. This issue is fixed in version 3.15.0.",
+  "aliases": [
+    "CVE-2026-69146"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.15.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/5c34aec5669e2386b38b5ee0855cd61174e27693"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/pull/24291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/releases/tag/v3.15.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-3p64-6gvh-82v5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69146"
+    }
+  ],
+  "published": "2026-08-21T08:50:12.154Z",
+  "modified": "2026-08-21T09:11:01.118Z"
+}
