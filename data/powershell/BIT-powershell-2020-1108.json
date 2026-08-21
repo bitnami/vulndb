@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-powershell-2020-1108",
   "summary": ".NET Core & .NET Framework Denial of Service Vulnerability",
-  "details": "A denial of service vulnerability exists when .NET Core or .NET Framework improperly handles web requests, aka '.NET Core & .NET Framework Denial of Service Vulnerability'.",
+  "details": "A denial of service vulnerability exists when .NET Core or .NET Framework improperly handles web requests. An attacker who successfully exploited this vulnerability could cause a denial of service against a .NET Core or .NET Framework web application. The vulnerability can be exploited remotely, without authentication.\nA remote unauthenticated attacker could exploit this vulnerability by issuing specially crafted requests to the .NET Core or .NET Framework application.\nThe update addresses the vulnerability by correcting how the .NET Core or .NET Framework web application handles web requests.",
   "aliases": [
     "CVE-2020-1108"
   ],
@@ -48,8 +48,12 @@
     {
       "type": "WEB",
       "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1108"
+    },
+    {
+      "type": "WEB",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2020-1108"
     }
   ],
   "published": "2025-09-04T17:48:33.089Z",
-  "modified": "2026-08-19T18:13:31.052Z"
+  "modified": "2026-08-21T00:09:59.119Z"
 }
