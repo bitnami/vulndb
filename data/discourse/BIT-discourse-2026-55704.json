@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-55704",
+  "summary": "Discourse: Shared-draft titles and excerpts leak through group post serialization",
+  "details": "Discourse is an open-source discussion platform. Prior o 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, users who were allowed to view a group’s activity, but were not permitted to see shared drafts, could still receive shared-draft entries through the group posts and group mentions endpoints. This could disclose shared-draft topic titles and post excerpt/content, resulting in an information disclosure of unpublished draft material. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+  "aliases": [
+    "CVE-2026-55704"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.1.6"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.2"
+            },
+            {
+              "introduced": "2026.6.0"
+            },
+            {
+              "fixed": "2026.6.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-fxw4-38v9-76v8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55704"
+    }
+  ],
+  "published": "2026-08-21T11:26:41.076Z",
+  "modified": "2026-08-21T11:49:56.463Z"
+}
