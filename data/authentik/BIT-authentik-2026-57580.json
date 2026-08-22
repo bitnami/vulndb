@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2026-57580",
+  "summary": "authentik: Account Takeover via SAML NameID Comment Truncation",
+  "details": "authentik is an open-source identity provider. Prior to 2026.2.6 and 2026.5.5, an inbound SAML Source configured with the non-default USERNAME_LINK or EMAIL_LINK user-matching mode interprets an XML comment in a NameID differently from the identity provider's signed assertion. An attacker with an account on the source identity provider who can set the account's NameID can inject an XML comment that truncates the value used by authentik to the text before the comment while the signed assertion remains valid. A crafted NameID can therefore truncate to a victim's username or email and bind the attacker's external identity to the victim's existing account. This grants full takeover without the victim's password or the identity provider's private key, and the malicious link persists so later logins succeed without the comment. Sources using the default unique-identifier matching mode and authentik's outbound SAML Provider role are not affected. This issue is fixed in versions 2026.2.6 and 2026.5.5.",
+  "aliases": [
+    "CVE-2026-57580"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.2.6"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/6bd00f09f1f6b5bc5212a10340418fa1b264f02c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/8704a1b89d7bf46bcef0d3c434c821b937fdecc3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/24057"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/24062"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version/2026.2.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version/2026.5.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-35v6-hv2g-6992"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57580"
+    }
+  ],
+  "published": "2026-08-22T20:38:07.645Z",
+  "modified": "2026-08-22T21:10:56.434Z"
+}
