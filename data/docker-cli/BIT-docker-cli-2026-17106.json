@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-docker-cli-2026-17106",
+  "summary": "Tar extraction in moby/go-archive can write outside the destination directory via link following",
+  "details": "The tar extraction routines in moby/go-archive (Unpack, UnpackLayer, Untar/UntarUncompressed, and the ApplyLayer helpers) do not confine filesystem operations to the destination directory. The extractor decides where each archive entry lands using lexical string checks and then performs the filesystem operation on a path that is resolved by the OS, so links introduced by the archive can be followed out of the destination directory. An attacker who controls the contents of an archive can create or overwrite files at arbitrary paths writable by the extracting process.",
+  "aliases": [
+    "CVE-2026-17106"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "docker-cli",
+        "purl": "pkg:bitnami/docker-cli"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "29.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:docker:command_line_interface:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.docker.com/desktop/release-notes/#4860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.docker.com/engine/release-notes/29/#2970"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/docker/cli/releases/tag/v29.7.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/docker/compose/releases/tag/v5.4.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/docker/sbx-releases/releases/tag/v0.38.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/masasron/CopyEscape-CVE-2026-17106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moby/go-archive/releases/tag/v0.3.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moby/go-archive/security/advisories/GHSA-hfg8-hc9c-6c3h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17106"
+    }
+  ],
+  "published": "2026-08-23T14:37:24.356Z",
+  "modified": "2026-08-23T15:02:02.196Z"
+}
