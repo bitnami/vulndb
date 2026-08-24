@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-valkey-2026-63639",
+  "summary": "Valkey: UAF in stream deserialization may lead to remote code execution",
+  "details": "Valkey is a distributed key-value database. Prior to 7.2.14, 8.0.10, 8.1.9, 9.0.5, and 9.1.1, Valkey's RESTORE command accepts a malformed RDB stream payload that assigns one Pending Entry List NACK to multiple consumers during stream consumer-group deserialization, causing a use-after-free when one consumer is deleted while another still references the shared NACK and potentially allowing remote code execution. This issue is fixed in versions 7.2.14, 8.0.10, 8.1.9, 9.0.5, and 9.1.1.",
+  "aliases": [
+    "CVE-2026-63639"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "valkey",
+        "purl": "pkg:bitnami/valkey"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "7.2.14"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.10"
+            },
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "8.1.9"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.5"
+            },
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:valkey-io:valkey:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/commit/06bc7768fe609f2054e69ccedefe7628f5675da9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/commit/509cb3c74e8cbc9c0498ebe8b6c93dcd605e7271"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/commit/98465eaffe3f95524a5046318bfbc4bdb9798291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/commit/e95911d4d65be8789fa3705f44d7ed1e65378445"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/commit/f8d2027e8d4df790ac04974bf606408c8ea62778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/pull/4073"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/releases/tag/7.2.14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/releases/tag/8.0.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/releases/tag/8.1.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/releases/tag/9.0.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/releases/tag/9.1.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/valkey-io/valkey/security/advisories/GHSA-mvcj-73cw-22m4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63639"
+    }
+  ],
+  "published": "2026-08-24T05:53:59.815Z",
+  "modified": "2026-08-24T06:09:24.796Z"
+}
