@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-17183",
+  "summary": "CVE-2026-17183 CVE Record",
+  "details": "An authenticated user with permission to create or edit alert rules can bypass datasource query authorization by marking an alert rule query as a server-side expression while referencing a real datasource UID (incorrect authorization). This can expose data accessible through Grafana's configured datasource credentials to users who lack permission to query that datasource.",
+  "aliases": [
+    "CVE-2026-17183"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "12.3.11"
+            },
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.9"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.7"
+            },
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-17183"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17183"
+    }
+  ],
+  "published": "2026-08-25T08:41:58.852Z",
+  "modified": "2026-08-25T09:03:39.364Z"
+}
