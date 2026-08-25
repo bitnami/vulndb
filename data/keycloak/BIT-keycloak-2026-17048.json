@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-17048",
+  "summary": "Keycloak-services: keycloak-services: vault-resolved rotated client secrets leaked via admin rest api",
+  "details": "A flaw was found in the Keycloak Admin REST API, which is used to manage security realms and clients. The issue occurs when the system processes requests for rotated client secrets that are stored in a secure vault. Due to improper boundary enforcement, a delegated administrator with view-only permissions can retrieve the actual resolved secret instead of the vault placeholder, leading to the exposure of sensitive credentials.",
+  "aliases": [
+    "CVE-2026-17048"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:56523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:56524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-17048"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2506743"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17048"
+    }
+  ],
+  "published": "2026-08-25T12:16:47.248Z",
+  "modified": "2026-08-25T12:42:31.008Z"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2024-4629",
+  "summary": "Keycloak: potential bypass of brute force protection",
+  "details": "A vulnerability was found in Keycloak. This flaw allows attackers to bypass brute force protection by exploiting the timing of login attempts. By initiating multiple login requests simultaneously, attackers can exceed the configured limits for failed attempts before the system locks them out. This timing loophole enables attackers to make more guesses at passwords than intended, potentially compromising account security on affected systems.",
+  "aliases": [
+    "CVE-2024-4629"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "22.12.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6493"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6494"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6495"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6497"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6499"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6500"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2024:6501"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2024-4629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2276761"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/hnsecurity/vulns/blob/main/HNS-2024-09-Keycloak.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4629"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.humanativaspa.it/an-analysis-of-the-keycloak-authentication-system/"
+    }
+  ],
+  "published": "2026-08-25T12:16:16.496Z",
+  "modified": "2026-08-25T12:42:31.008Z"
+}
