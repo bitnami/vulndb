@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-14613",
+  "summary": "Keycloak-services: keycloak-services: keycloak: fgap v2 role groups endpoint discloses hidden group metadata without group view permission",
+  "details": "A vulnerability was discovered in Keycloak's administrative interface that allows certain administrators to see information about groups they shouldn't have access to. When the new Fine-Grained Admin Permissions (FGAP v2) are turned on, an administrator who is allowed to see a specific \"role\" can also see a list of all groups assigned to that role. The system fails to check if the administrator has permission to see those specific groups. This could allow a restricted administrator to discover \"hidden\" groups and see their details, such as internal names and custom settings, which might contain sensitive deployment information.",
+  "aliases": [
+    "CVE-2026-14613"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:56523"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:56524"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-14613"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2496878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14613"
+    }
+  ],
+  "published": "2026-08-25T12:16:30.125Z",
+  "modified": "2026-08-25T12:42:31.008Z"
+}
