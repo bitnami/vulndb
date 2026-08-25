@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-15572",
+  "summary": "Keycloak-services: keycloak-services: dcr protocol mapper type-swap policy bypass allows privilege escalation",
+  "details": "A flaw was found in Keycloak's Dynamic Client Registration (DCR) security policy management. The \"Allowed Protocol Mapper Types\" policy, which restricts which types of data mappers a client can use, fails to re-validate the mapper type during a client update if the mapper's configuration remains unchanged. An attacker with client registration privileges can exploit this by first registering an allowed mapper type with a malicious configuration and then swapping it for a restricted, high-privilege mapper type (such as one that hardcodes administrative roles). This allows the attacker to gain full administrative access to the Keycloak realm.",
+  "aliases": [
+    "CVE-2026-15572"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.14"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-15572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2499592"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15572"
+    }
+  ],
+  "published": "2026-08-25T11:41:38.475Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

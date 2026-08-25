@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-16102",
+  "summary": "Keycloak-services: keycloak-services: default dcr policy allows role forgery via user property mappers",
+  "details": "A flaw was found in the Dynamic Client Registration (DCR) component of Keycloak, an identity and access management solution. The default DCR policy fails to properly validate the claim path for User Property mappers, allowing them to write values to sensitive internal claim locations. An attacker with a standard user account and a limited Initial Access Token can exploit this to forge administrative roles in their access token. This allows the attacker to take over other clients, steal confidential secrets, and potentially gain full administrative control over the realm.",
+  "aliases": [
+    "CVE-2026-16102"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.14"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-16102"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2501735"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16102"
+    }
+  ],
+  "published": "2026-08-25T11:41:47.200Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

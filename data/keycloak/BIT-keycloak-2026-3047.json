@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-3047",
+  "summary": "Org.keycloak.broker.saml: keycloak saml broker: authentication bypass due to disabled saml client completing idp-initiated login",
+  "details": "A flaw was found in org.keycloak.broker.saml. When a disabled Security Assertion Markup Language (SAML) client is configured as an Identity Provider (IdP)-initiated broker landing target, it can still complete the login process and establish a Single Sign-On (SSO) session. This allows a remote attacker to gain unauthorized access to other enabled clients without re-authentication, effectively bypassing security restrictions.",
+  "aliases": [
+    "CVE-2026-3047"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.2.0"
+            },
+            {
+              "fixed": "26.2.1"
+            },
+            {
+              "introduced": "26.2.14"
+            },
+            {
+              "fixed": "26.3.0"
+            },
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.1"
+            },
+            {
+              "introduced": "26.4.10"
+            },
+            {
+              "fixed": "26.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*",
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3925"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3926"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3947"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3948"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-3047"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2441966"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3047"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3047.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:14.552Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

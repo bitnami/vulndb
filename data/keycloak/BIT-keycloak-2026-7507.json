@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-7507",
+  "summary": "Org.keycloak/keycloak-services: session fixation in oidc login flow that can lead to account takeover",
+  "details": "A session fixation vulnerability was found in Keycloak's login-actions endpoints. An unauthenticated attacker could exploit this flaw by pre-creating an authentication session and tricking a victim into visiting a maliciously crafted link. By leveraging the /login-actions/restart endpoint—which processes session handles without adequate CSRF protection or cookie ownership validation—an attacker can reset the authentication flow state. This causes Single Sign-On (SSO) to authenticate the victim transparently upon clicking the link, allowing the attacker to hijack the required-action form without needing the victim's credentials. A successful exploit could lead to complete account takeover, including highly privileged administrative accounts.",
+  "aliases": [
+    "CVE-2026-7507"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19594"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-7507"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2464145"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7507"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-7507.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:36.076Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

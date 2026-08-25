@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-3429",
+  "summary": "Org.keycloak.services.resources.account: improper access control leading to mfa deletion and account takeover in keycloak account rest api",
+  "details": "A flaw was identified in the Account REST API of Keycloak that allows a user authenticated at a lower security level to perform sensitive actions intended only for higher-assurance sessions. Specifically, an attacker who has already obtained a victim’s password can delete the victim’s registered MFA/OTP credential without first proving possession of that factor. The attacker can then register their own MFA device, effectively taking full control of the account. This weakness undermines the intended protection provided by multi-factor authentication.",
+  "aliases": [
+    "CVE-2026-3429"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6478"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-3429"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2443771"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3429"
+    }
+  ],
+  "published": "2026-08-25T11:42:17.111Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

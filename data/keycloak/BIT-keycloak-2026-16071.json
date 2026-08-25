@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-16071",
+  "summary": "Keycloak-services: keycloak-services: ldap entry-dn user search bypasses configured users dn boundary",
+  "details": "A flaw was found in the LDAP storage provider of Keycloak, which is used to federate user identities from external directories. The issue occurs when a delegated administrator performs a search using a specific LDAP entry Distinguished Name (DN). Due to missing validation, the system allows lookups for users located outside the configured search boundary, leading to the disclosure of account information from unauthorized parts of the directory and unintended importing of those users into local storage.",
+  "aliases": [
+    "CVE-2026-16071"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.14"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-16071"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2501720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16071"
+    }
+  ],
+  "published": "2026-08-25T11:41:41.975Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

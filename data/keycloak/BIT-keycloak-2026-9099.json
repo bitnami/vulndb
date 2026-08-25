@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-9099",
+  "summary": "Keycloak: group-admin escalation to realm-admin",
+  "details": "A flaw was found in Keycloak. A missing authorization check in the GroupResource.addChild() endpoint within the Admin REST API allows an authenticated user with limited administrative privileges to reparent any existing group. When Fine-Grained Admin Permissions v2 (FGAPv2) is enabled, an attacker with management rights over a single low-privilege group can reparent a highly privileged group (such as one possessing the realm-admin role) under their managed group.\n\nBecause group permissions follow a hierarchical structure, this action unauthorizedly grants the attacker management and password-reset capabilities over the members of the targeted privileged group. An attacker can exploit this to reset an administrator's password, compromise the account, and achieve a full realm takeover, leading to a complete compromise of confidentiality, integrity, and availability.",
+  "aliases": [
+    "CVE-2026-9099"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.13"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30049"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30050"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30083"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30084"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-9099"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2480182"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9099"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-9099.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:41.994Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

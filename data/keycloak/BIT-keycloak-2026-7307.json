@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-7307",
+  "summary": "Keycloak: keycloak: denial of service via specially crafted saml input",
+  "details": "A flaw was found in Keycloak. A remote, unauthenticated attacker can send a specially crafted XML input to the Security Assertion Markup Language (SAML) endpoint. This malicious input can cause high CPU usage and worker thread starvation, leading to a Denial of Service (DoS) where the server becomes unavailable.",
+  "aliases": [
+    "CVE-2026-7307"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19594"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19595"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-7307"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2476526"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7307"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-7307.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:33.470Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

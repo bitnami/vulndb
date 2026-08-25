@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-3009",
+  "summary": "Org.keycloak/keycloak-services: improper enforcement of disabled identity provider in identitybrokerservice (authentication bypass)",
+  "details": "A security flaw in the IdentityBrokerService.performLogin endpoint of Keycloak allows authentication to proceed using an Identity Provider (IdP) even after it has been disabled by an administrator. An attacker who knows the IdP alias can reuse a previously generated login request to bypass the administrative restriction. This undermines access control enforcement and may allow unauthorized authentication through a disabled external provider.",
+  "aliases": [
+    "CVE-2026-3009"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.1"
+            },
+            {
+              "introduced": "26.4.10"
+            },
+            {
+              "fixed": "26.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*",
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3947"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3948"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-3009"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2441867"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3009"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-3009.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:13.652Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

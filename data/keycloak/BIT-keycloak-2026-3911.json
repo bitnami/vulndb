@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-3911",
+  "summary": "Org.keycloak.services.resources.admin.userresource: keycloak: information disclosure of disabled user attributes via administrative endpoint",
+  "details": "A flaw was found in Keycloak. An authenticated user with the view-users role could exploit a vulnerability in the UserResource component. By accessing a specific administrative endpoint, this user could improperly retrieve user attributes that were configured to be hidden. This unauthorized information disclosure could expose sensitive user data.",
+  "aliases": [
+    "CVE-2026-3911"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.1"
+            },
+            {
+              "introduced": "26.4.11"
+            },
+            {
+              "fixed": "26.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*",
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6478"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-3911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2446392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3911"
+    }
+  ],
+  "published": "2026-08-25T11:42:23.921Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

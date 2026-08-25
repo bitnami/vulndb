@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-0871",
+  "summary": "Org.keycloak/keycloak-services: keycloak: unauthorized modification of unmanaged user attributes by administrators",
+  "details": "A flaw was found in Keycloak. An administrator with `manage-users` permission can bypass the \"Only administrators can view\" setting for unmanaged attributes, allowing them to modify these attributes. This improper access control can lead to unauthorized changes to user profiles, even when the system is configured to restrict such modifications.",
+  "aliases": [
+    "CVE-2026-0871"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.4.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*",
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:2365"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:2366"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-0871"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2428881"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0871"
+    }
+  ],
+  "published": "2026-08-25T11:41:30.675Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

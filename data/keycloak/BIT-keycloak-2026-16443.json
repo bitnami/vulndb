@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-16443",
+  "summary": "Keycloak-services: keycloak-services: saml broker metadata import disables response signature validation",
+  "details": "A flaw was found in the SAML metadata import functionality of the keycloak-services component, which is the core engine for identity brokering in Red Hat Build of Keycloak. When importing identity provider metadata that lacks specific usage attributes for keys, the system incorrectly disables signature validation for SAML responses even if a signing certificate is provided. This issue allows an unauthenticated attacker to forge a SAML response and gain unauthorized access to a user account by knowing their external identifier.",
+  "aliases": [
+    "CVE-2026-16443"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.14"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50846"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50847"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50848"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:50849"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-16443"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2503139"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16443"
+    }
+  ],
+  "published": "2026-08-25T11:41:53.153Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

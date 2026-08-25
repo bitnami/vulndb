@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-9799",
+  "summary": "Keycloak: keycloak: unauthorized access to resources via uma permission ticket bypass",
+  "details": "A flaw was found in org.keycloak.authorization. An authenticated user with a granted User-Managed Access (UMA) permission ticket for one resource can exploit this by using a specific permission request prefix to bypass per-resource access control. This allows the user to gain unauthorized access to all resources of that type within the same resource server, even if they do not have a ticket for those specific resources. This vulnerability requires the resource server to be configured in PERMISSIVE policy enforcement mode and affects typed resources with ownerManagedAccess enabled, where no explicit policy protects the resource type. The primary consequence is unauthorized information disclosure or modification of resources.",
+  "aliases": [
+    "CVE-2026-9799"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.13"
+            },
+            {
+              "introduced": "26.6.0"
+            },
+            {
+              "fixed": "26.6.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30049"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30050"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30083"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:30084"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-9799"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2482471"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9799"
+    }
+  ],
+  "published": "2026-08-25T11:42:51.586Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

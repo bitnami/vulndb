@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-37981",
+  "summary": "Keycloak: org.keycloak.authorization: keycloak: information disclosure via broken access control in user lookup endpoint",
+  "details": "A flaw was found in Keycloak. A broken access control vulnerability in the Account Resources user lookup endpoint allows a remote authenticated user, who owns at least one User-Managed Access (UMA) resource, to enumerate and harvest personally identifiable information (PII) for all realm users. By sending crafted requests with arbitrary usernames or email values, the endpoint returns full profile objects for unrelated users. This leads to broad profile-level information disclosure.",
+  "aliases": [
+    "CVE-2026-37981"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-37981"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2455326"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37981"
+    }
+  ],
+  "published": "2026-08-25T11:42:21.390Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

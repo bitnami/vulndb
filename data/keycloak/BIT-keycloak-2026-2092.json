@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-2092",
+  "summary": "Keycloak-services: keycloak: unauthorized access via improper validation of encrypted saml assertions",
+  "details": "A flaw was found in Keycloak. Keycloak's Security Assertion Markup Language (SAML) broker endpoint does not properly validate encrypted assertions when the overall SAML response is not signed. An attacker with a valid signed SAML assertion can exploit this by crafting a malicious SAML response. This allows the attacker to inject an encrypted assertion for an arbitrary principal, leading to unauthorized access and potential information disclosure.",
+  "aliases": [
+    "CVE-2026-2092"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.2.0"
+            },
+            {
+              "fixed": "26.2.14"
+            },
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3925"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3926"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3947"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:3948"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-2092"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437296"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2092"
+    },
+    {
+      "type": "WEB",
+      "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-2092.json"
+    }
+  ],
+  "published": "2026-08-25T11:42:10.230Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-37982",
+  "summary": "Keycloak: org.keycloak.authentication: keycloak: unauthorized account takeover via webauthn token replay",
+  "details": "A flaw was found in Keycloak. This authentication vulnerability allows a remote attacker to replay `ExecuteActionsActionToken` tokens within Keycloak's WebAuthn (Web Authentication) flow. By intercepting an execute-actions email link, an attacker can register their own authenticator to a victim's account. This leads to unauthorized enrollment of a hardware-backed credential, enabling persistent account takeover.",
+  "aliases": [
+    "CVE-2026-37982"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19596"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:19597"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-37982"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2455329"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37982"
+    }
+  ],
+  "published": "2026-08-25T11:42:22.236Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}
