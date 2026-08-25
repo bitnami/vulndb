@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2025-12150",
+  "summary": "Org.keycloak/keycloak-services: webauthn attestation statement verification bypass",
+  "details": "A flaw was found in Keycloak’s WebAuthn registration component. This vulnerability allows an attacker to bypass the configured attestation policy and register untrusted or forged authenticators via submission of an attestation object with fmt: \"none\", even when the realm is configured to require direct attestation. This can lead to weakened authentication integrity and unauthorized authenticator registration.",
+  "aliases": [
+    "CVE-2025-12150"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*",
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:21370"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:21371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:22088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2025:22089"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2025-12150"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2406192"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/keycloak/keycloak/issues/43723"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12150"
+    }
+  ],
+  "published": "2026-08-25T11:41:28.192Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}

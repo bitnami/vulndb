@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-4325",
+  "summary": "Keycloak: keycloak: replay of action tokens via improper handling of single-use entries",
+  "details": "A flaw was found in Keycloak. The SingleUseObjectProvider, a global key-value store, lacks proper type and namespace isolation. This vulnerability allows an attacker to delete arbitrary single-use entries, which can enable the replay of consumed action tokens, such as password reset links. This could lead to unauthorized access or account compromise.",
+  "aliases": [
+    "CVE-2026-4325"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "26.2.0"
+            },
+            {
+              "fixed": "26.2.1"
+            },
+            {
+              "introduced": "26.2.15"
+            },
+            {
+              "fixed": "26.3.0"
+            },
+            {
+              "introduced": "26.4.0"
+            },
+            {
+              "fixed": "26.4.1"
+            },
+            {
+              "introduced": "26.4.11"
+            },
+            {
+              "fixed": "26.5.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:text-only:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6475"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6476"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/errata/RHSA-2026:6478"
+    },
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-4325"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2448351"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4325"
+    }
+  ],
+  "published": "2026-08-25T11:42:25.639Z",
+  "modified": "2026-08-25T12:00:59.918Z"
+}
