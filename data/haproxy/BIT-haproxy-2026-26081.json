@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-haproxy-2026-26081",
+  "details": "HAProxy Community Edition 3.0 through 3.3 before 3.3.3 lacks a length check for the NEW_TOKEN format. HAProxy Enterprise and ALOHA are also affected.",
+  "aliases": [
+    "CVE-2026-26081"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.16"
+            },
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.14"
+            },
+            {
+              "introduced": "3.2.0"
+            },
+            {
+              "fixed": "3.2.12"
+            },
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "3.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://git.haproxy.org/?p=haproxy-3.2.git;a=commit;h=4765277f4f915baac2d57db63538ff0a59966deb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26081"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org"
+    }
+  ],
+  "published": "2026-08-26T08:42:45.692Z",
+  "modified": "2026-08-26T09:13:18.225Z"
+}
