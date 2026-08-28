@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-63041",
+  "summary": "Apache APISIX: attach-consumer-label does not strip client-supplied consumer-label headers",
+  "details": "Reliance on Untrusted Inputs in a Security Decision vulnerability in Apache APISIX.\n\nThis vulnerability allows an attacker to escalate privilege or perform an authorization bypass by sending certain values that the attach-consumer-label plugin does not sanitise correctly.\n\n\nThis issue affects Apache APISIX: from 3.11.0 through 3.17.0.\n\n\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-63041"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.18.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/26/11"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/yg9tgn699rz7kyglw82m1775do8frjr4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63041"
+    }
+  ],
+  "published": "2026-08-28T11:37:08.143Z",
+  "modified": "2026-08-28T12:09:39.645Z"
+}
