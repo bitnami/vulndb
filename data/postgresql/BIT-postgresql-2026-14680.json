@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14680",
   "summary": "PostgreSQL type confusion via \"internal\" arguments",
-  "details": "Type confusion with PostgreSQL \"internal\" data type arguments allows any user to execute arbitrary code as the operating system user running the database, via calls to functions with that argument type.  Type \"internal\" represents a class of mutually-incompatible data structures not intended for access from SQL.  The system intended to prevent such function calls, but this prevention had gaps.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Type confusion with PostgreSQL \"internal\" data type arguments allows any user to execute arbitrary code as the operating system user running the database, via calls to functions with that argument type.  Type \"internal\" represents a class of mutually-incompatible data structures not intended for access from SQL.  The system intended to prevent such function calls, but this prevention had gaps.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-14680"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:45.189Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T09:09:21.901Z"
 }
