@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-16238",
   "summary": "PostgreSQL type confusion in pg_restore_attribute_stats() executes arbitrary code",
-  "details": "Type confusion in PostgreSQL pg_restore_attribute_stats() allows an object creator to execute arbitrary code as the operating system user running the database, via conflation of range and multirange values.  Within major version 18, minor versions before PostgreSQL 18.5 are affected.  Versions before PostgreSQL 18 are unaffected.",
+  "details": "Type confusion in PostgreSQL pg_restore_attribute_stats() allows an object creator to execute arbitrary code as the operating system user running the database, via conflation of range and multirange values.  Within major version 18, minor versions before PostgreSQL 18.6 are affected.  Versions before PostgreSQL 18 are unaffected.",
   "aliases": [
     "CVE-2026-16238"
   ],
@@ -51,5 +51,5 @@
     }
   ],
   "published": "2026-08-19T08:52:49.623Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T21:10:45.923Z"
 }

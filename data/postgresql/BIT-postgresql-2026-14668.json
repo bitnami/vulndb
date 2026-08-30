@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14668",
   "summary": "PostgreSQL ctid type confusion in selectivity estimator discloses derivative of arbitrary read",
-  "details": "Type confusion regarding input of PostgreSQL ctid data type selectivity estimator allows an object creator to view a calculation derived from the value of an arbitrary 4-byte span of memory, via a chosen non-ctid input.  While the calculation loses precision, substantial memory value recovery appears possible.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Type confusion regarding input of PostgreSQL ctid data type selectivity estimator allows an object creator to view a calculation derived from the value of an arbitrary 4-byte span of memory, via a chosen non-ctid input.  While the calculation loses precision, substantial memory value recovery appears possible.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-14668"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:33.567Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T21:10:45.923Z"
 }

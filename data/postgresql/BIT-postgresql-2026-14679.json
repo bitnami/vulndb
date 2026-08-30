@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14679",
   "summary": "PostgreSQL stack buffer overflow in argument match writes 0x0 and 0x1 to server memory",
-  "details": "Stack buffer overflow in PostgreSQL argument name matching allows an object creator to achieve unknown impacts via OUT parameter count.  The attack can write only 0x0 and 0x1 bytes.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Stack buffer overflow in PostgreSQL argument name matching allows an object creator to achieve unknown impacts via OUT parameter count.  The attack can write only 0x0 and 0x1 bytes.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-14679"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:44.105Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T21:10:45.923Z"
 }
