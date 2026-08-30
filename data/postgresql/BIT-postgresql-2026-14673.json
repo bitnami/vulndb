@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14673",
   "summary": "PostgreSQL amcheck does not clear untrusted search path",
-  "details": "Untrusted search path in PostgreSQL amcheck allows a grantee of amcheck function EXECUTE privilege to execute arbitrary functions as the owners of expression indexes that depend on the search path, via setting a hostile search path before calling the amcheck function.  Within major versions 18, 16, 15, and 14, minor versions before PostgreSQL 18.5, 16.15, 15.19, and 14.24 are affected.  PostgreSQL 17 is unaffected.",
+  "details": "Untrusted search path in PostgreSQL amcheck allows a grantee of amcheck function EXECUTE privilege to execute arbitrary functions as the owners of expression indexes that depend on the search path, via setting a hostile search path before calling the amcheck function.  Within major versions 18, 16, 15, and 14, minor versions before PostgreSQL 18.6, 16.15, 15.19, and 14.24 are affected.  PostgreSQL 17 is unaffected.",
   "aliases": [
     "CVE-2026-14673"
   ],
@@ -69,5 +69,5 @@
     }
   ],
   "published": "2026-08-19T08:52:39.633Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T17:59:19.481Z"
 }

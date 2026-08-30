@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14671",
   "summary": "PostgreSQL refint plan cache type confusion executes arbitrary code",
-  "details": "Type confusion in PostgreSQL module \"refint\" allows an object creator to execute arbitrary code as the operating system user running the database.  The fix for this emerged as a non-security bug report, and the fix appear in the git repository with subject \"refint: Remove plan cache.\", without a CVE number.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Type confusion in PostgreSQL module \"refint\" allows an object creator to execute arbitrary code as the operating system user running the database.  The fix for this emerged as a non-security bug report, and the fix appear in the git repository with subject \"refint: Remove plan cache.\", without a CVE number.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-14671"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:37.254Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T17:59:19.481Z"
 }
