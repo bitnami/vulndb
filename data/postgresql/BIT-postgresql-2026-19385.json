@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-19385",
   "summary": "PostgreSQL pg_dump heap buffer overflow executes arbitrary code",
-  "details": "Heap buffer overflow in PostgreSQL pg_dump of long function transform lists allows an object creator to execute arbitrary code as the operating system user running pg_dump, via a crafted transform list.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Heap buffer overflow in PostgreSQL pg_dump of long function transform lists allows an object creator to execute arbitrary code as the operating system user running pg_dump, via a crafted transform list.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-19385"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:55.190Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T12:10:47.659Z"
 }

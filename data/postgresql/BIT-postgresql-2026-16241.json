@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-16241",
   "summary": "PostgreSQL ECPG integer underflow can crash the client",
-  "details": "Integer underflow in PostgreSQL ECPG allows a database server administrator to achieve temporary denial of service against the ECPG client via sending a bytea value lacking the mandatory prefix.  The client overwrites a huge memory region with bytes outside attacker knowledge or control.  This typically yields a simple SIGSEGV, but rare cases might achieve client-specific integrity impact via the write.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Integer underflow in PostgreSQL ECPG allows a database server administrator to achieve temporary denial of service against the ECPG client via sending a bytea value lacking the mandatory prefix.  The client overwrites a huge memory region with bytes outside attacker knowledge or control.  This typically yields a simple SIGSEGV, but rare cases might achieve client-specific integrity impact via the write.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-16241"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:52:51.819Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T12:10:47.659Z"
 }

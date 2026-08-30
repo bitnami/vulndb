@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14681",
   "summary": "PostgreSQL improper enforcement of GSSAPI encryption when coupled with SSL",
-  "details": "Improper enforcement of message integrity in PostgreSQL GSSAPI support allows a user to negotiate GSSAPI contrary to pg_hba.conf rules, via initial direct TLS connection.  Despite a pg_hba.conf that appears to require GSSAPI, the connection may exchange data over TLS encryption alone.  If the TLS settings are more permissive than the GSS settings, the connection may continue with lesser protection.  Within major versions 17-18, minor versions before PostgreSQL 18.5 and 17.11 are affected.  Versions before PostgreSQL 17 are unaffected.",
+  "details": "Improper enforcement of message integrity in PostgreSQL GSSAPI support allows a user to negotiate GSSAPI contrary to pg_hba.conf rules, via initial direct TLS connection.  Despite a pg_hba.conf that appears to require GSSAPI, the connection may exchange data over TLS encryption alone.  If the TLS settings are more permissive than the GSS settings, the connection may continue with lesser protection.  Within major versions 17-18, minor versions before PostgreSQL 18.6 and 17.11 are affected.  Versions before PostgreSQL 17 are unaffected.",
   "aliases": [
     "CVE-2026-14681"
   ],
@@ -57,5 +57,5 @@
     }
   ],
   "published": "2026-08-19T08:52:46.290Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T12:10:47.659Z"
 }

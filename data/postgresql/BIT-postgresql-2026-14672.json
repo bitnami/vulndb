@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-14672",
   "summary": "PostgreSQL observable response discrepancy with non-default scram_iterations provides user existence oracle",
-  "details": "Observable response discrepancy in PostgreSQL SCRAM authentication allows an unauthenticated user to test the existence of a user via observing the SCRAM iteration count.  This requires the probed user to have a non-default scram_iterations count, because the authentication challenge for a nonexistent user reports the default scram_iterations.  Within major versions 16-18, minor versions before PostgreSQL 18.5, 17.11, and 16.15 are affected.  Versions before PostgreSQL 16 are unaffected.",
+  "details": "Observable response discrepancy in PostgreSQL SCRAM authentication allows an unauthenticated user to test the existence of a user via observing the SCRAM iteration count.  This requires the probed user to have a non-default scram_iterations count, because the authentication challenge for a nonexistent user reports the default scram_iterations.  Within major versions 16-18, minor versions before PostgreSQL 18.6, 17.11, and 16.15 are affected.  Versions before PostgreSQL 16 are unaffected.",
   "aliases": [
     "CVE-2026-14672"
   ],
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2026-08-19T08:52:38.472Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-30T12:10:47.659Z"
 }
