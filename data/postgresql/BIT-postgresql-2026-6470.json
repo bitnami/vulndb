@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-postgresql-2026-6470",
   "summary": "PostgreSQL fails to check type USAGE privilege",
-  "details": "Missing authorization in PostgreSQL DDL commands allows an object creator to achieve denial of service against ALTER and DROP of the type, via creating a dependency on the type.  Many DDL operations did check the privilege, but assigning a range subtype and referencing the type from an SQL expression did not.  Versions before PostgreSQL 18.5, 17.11, 16.15, 15.19, and 14.24 are affected.",
+  "details": "Missing authorization in PostgreSQL DDL commands allows an object creator to achieve denial of service against ALTER and DROP of the type, via creating a dependency on the type.  Many DDL operations did check the privilege, but assigning a range subtype and referencing the type from an SQL expression did not.  Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are affected.",
   "aliases": [
     "CVE-2026-6470"
   ],
@@ -75,5 +75,5 @@
     }
   ],
   "published": "2026-08-19T08:53:04.461Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-08-31T06:11:21.365Z"
 }
