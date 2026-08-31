@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-keycloak-2026-16106",
+  "summary": "Keycloak-services: keycloak-services: incorrect authorization in admin role-composite deletion allows delegated admin to remove privileged child roles",
+  "details": "A flaw was found in the admin REST API of Keycloak, a solution for identity and access management. The issue occurs when a delegated administrator attempts to remove a child role from a composite role. Due to missing authorization checks, an attacker with limited administrative permissions can remove privileged roles they are not authorized to manage, leading to a loss of access for other users and administrators.",
+  "aliases": [
+    "CVE-2026-16106"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "keycloak",
+        "purl": "pkg:bitnami/keycloak"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "26.7.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redhat:build_of_keycloak:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://access.redhat.com/security/cve/CVE-2026-16106"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2501739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16106"
+    }
+  ],
+  "published": "2026-08-31T14:37:02.882Z",
+  "modified": "2026-08-31T15:03:11.569Z"
+}
