@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-75020",
+  "summary": "Apache APISIX: ldap-auth plugin cross-subtree identity impersonation",
+  "details": "Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection') vulnerability in Apache APISIX.\n\nA caller who holds valid credentials for one entry in the LDAP directory can authenticate through APISIX as a consumer mapped to a different entry, one the plugin's configured scope was meant to keep out of reach.\n\n\nThis issue affects Apache APISIX: from 2.11.0 through 3.17.0.\n\n\n\nUsers are recommended to upgrade to version 3.18.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-75020"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.11.0"
+            },
+            {
+              "fixed": "3.18.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/08/26/14"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/d4007wk6dbl9mxy5h05zxwn8fsg13bxt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75020"
+    }
+  ],
+  "published": "2026-09-01T08:38:53.960Z",
+  "modified": "2026-09-01T09:14:09.053Z"
+}
