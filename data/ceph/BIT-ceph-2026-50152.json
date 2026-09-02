@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ceph-2026-50152",
+  "summary": "Ceph Monitor subscription handler improperly authorizes config-key store reads, exposing cluster secrets to read-only users",
+  "details": "Ceph is an open-source distributed storage platform providing object, block, and file storage. In versions prior to 20.2.4 and 19.2.6, the Monitor subscription handler fails to properly authorize access to the configuration-key store, allowing any CephX user with only  `mon allow r` capabilities to read the entire store by sending a single crafted MMonSubscribe message. The config-key store holds sensitive secrets including OSD LUKS disk-encryption passphrases and, on cephadm-managed clusters, the SSH private key that cephadm uses to reach every host in the cluster. Because that key grants root on every node under the default cephadm configuration, a low-privileged read-only account can escalate to full cluster and host compromise. This issue is fixed in versions 20.2.4 and 19.2.6",
+  "aliases": [
+    "CVE-2026-50152"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ceph",
+        "purl": "pkg:bitnami/ceph"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.2.6"
+            },
+            {
+              "introduced": "20.0.0"
+            },
+            {
+              "fixed": "20.2.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:ceph:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/commit/d971bb2b6199f70b1708a20a63fa944ee7a94727"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/commit/f2840d2fd338ab5de2865f0f78684bbf7b888c84"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-rg9p-5xcp-wm8h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50152"
+    }
+  ],
+  "published": "2026-09-02T11:37:00.331Z",
+  "modified": "2026-09-02T12:10:55.360Z"
+}
