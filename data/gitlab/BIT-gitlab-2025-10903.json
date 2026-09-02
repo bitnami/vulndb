@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "11.1.0"
+              "introduced": "11.10.0"
             },
             {
               "fixed": "19.1.7"
@@ -49,7 +49,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
@@ -71,5 +72,5 @@
     }
   ],
   "published": "2026-09-01T09:05:12.987Z",
-  "modified": "2026-09-01T09:14:09.053Z"
+  "modified": "2026-09-02T15:04:30.450Z"
 }

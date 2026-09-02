@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-54523",
+  "summary": "Kyverno: NamespacedGeneratingPolicy generator.apply() namespace argument unvalidated -- background controller creates RoleBindings in any namespace including kube-system",
+  "details": "Kyverno is a policy engine designed for cloud native platform engineering teams. From 1.18.0 until 1.18.2, the NamespacedMutatingPolicy CEL compiler exposes the generator library to matchConditions, allowing a namespace-scoped policy to invoke generator.apply(namespace, resources) with an arbitrary target namespace. The validation in pkg/cel/policies/mpol/validate.go checks that the policy compiles but does not enforce namespace scope, and GenerateResources in pkg/cel/libs/context.go does not reject the cross-namespace target. A user who can create NamespacedMutatingPolicy objects in one namespace can cause the admission controller, operating with cluster-wide privileges, to create ConfigMaps, NetworkPolicies, Secrets, RoleBindings, and other resources in another namespace, enabling unauthorized modification and potential privilege escalation. This issue is fixed in version 1.18.2.",
+  "aliases": [
+    "CVE-2026-54523"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "1.18.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/commit/0919553c0ea1904f8d891280c92018da97946a06"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/commit/5164bcdeda5b57678bc2d7a03ecc2cbb02982dae"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/pull/16238"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/releases/tag/v1.18.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-79gf-7frw-68m9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/sdk/commit/6573937441443e1ba5af9fbb28d5c0f20297f9df"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54523"
+    }
+  ],
+  "published": "2026-09-02T14:44:00.671Z",
+  "modified": "2026-09-02T15:04:30.450Z"
+}
