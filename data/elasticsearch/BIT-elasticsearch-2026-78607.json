@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-78607",
+  "summary": "Missing Authorization in Elasticsearch Leading to Information Disclosure",
+  "details": "Missing Authorization (CWE-862) in the Elasticsearch custom inference service can lead to information disclosure via Privilege Abuse (CAPEC-122). A user holding only inference execution privileges could cause outbound inference traffic to be directed to a destination of their choosing and could cause administrator-provisioned credentials to be exposed.",
+  "aliases": [
+    "CVE-2026-78607"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.19"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-19-9-3-8-9-4-4-9-5-1-security-update-esa-2026-143/390094"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78607"
+    }
+  ],
+  "published": "2026-09-03T08:40:52.618Z",
+  "modified": "2026-09-03T09:07:28.402Z"
+}

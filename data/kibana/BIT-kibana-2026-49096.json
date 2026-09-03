@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:L"
         }
       ],
       "ranges": [
@@ -47,7 +47,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "Low",
     "cpes": [
       "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
     ]
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2026-08-19T08:44:39.227Z",
-  "modified": "2026-08-19T09:09:14.600Z"
+  "modified": "2026-09-03T09:07:28.402Z"
 }
