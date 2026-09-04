@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-joomla-2026-71572",
+  "summary": "Joomla! Core - [20260801] - Response header injection in download views in Joomla 3.0.0-5.4.7, 6.0.0-6.1.2",
+  "details": "Joomla! Core - [20260801] - Response header injection in download views in Joomla 3.0.0-5.4.7, 6.0.0-6.1.2 - Lack of output processing allowed a header injection in the multiple download views, leading to reflected file download / content-type confusion.",
+  "aliases": [
+    "CVE-2026-71572"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "5.4.8"
+            }
+          ]
+        },
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "last_affected": "6.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://developer.joomla.org/security-centre/1068-20260801-core-response-header-injection-in-download-views.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.joomla.org/"
+    }
+  ],
+  "published": "2026-09-04T08:47:49.770Z",
+  "modified": "2026-09-04T09:13:55.944Z"
+}
