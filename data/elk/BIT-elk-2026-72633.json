@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72633",
+  "summary": "Incorrect Authorization in Kibana Leading to Unauthorized Disabling of Privilege Monitoring",
+  "details": "Incorrect Authorization (CWE-863) in Kibana Entity Analytics can lead to a loss of security monitoring via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). An authenticated user holding only read-level Security feature access, and no Elasticsearch privileges, could stop the recurring Privilege Monitoring engine task for a Kibana space. Privileged user monitoring then stops producing data for that space while the engine continues to report a healthy state to operators.",
+  "aliases": [
+    "CVE-2026-72633"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "9.4.6"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-4-6-9-5-2-security-update-esa-2026-130/390059"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72633"
+    }
+  ],
+  "published": "2026-09-05T07:51:28.062Z",
+  "modified": "2026-09-05T08:22:06.519Z"
+}
