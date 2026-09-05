@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -27,7 +27,7 @@
               "introduced": "3.8.0"
             },
             {
-              "fixed": "3.9.0"
+              "fixed": "3.8.1"
             }
           ]
         }
@@ -67,5 +67,5 @@
     }
   ],
   "published": "2026-04-29T08:45:22.489Z",
-  "modified": "2026-07-06T06:18:57.499Z"
+  "modified": "2026-09-05T15:03:35.422Z"
 }
