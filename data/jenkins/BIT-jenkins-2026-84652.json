@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-84652",
+  "details": "In Jenkins 2.579 and earlier, LTS 2.568.2 and earlier, Jenkins does not rotate the session when a user is authenticated via the \"remember me\" cookie, allowing attackers able to serve content on the same site as Jenkins to set a known session cookie in the victim's browser, which after the victim authenticates via the \"remember me\" cookie, grants the attacker access to Jenkins as that user.",
+  "aliases": [
+    "CVE-2026-84652"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84652"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2026-09-02/#SECURITY-4016"
+    }
+  ],
+  "published": "2026-09-08T08:16:28.107Z",
+  "modified": "2026-09-08T08:34:36.952Z"
+}

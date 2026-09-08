@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-84654",
+  "details": "In Stapler 2107.v8dfcb_e8ed317 and earlier, except 2088.2093.vd7c3e58008a_6, included in Jenkins 2.579 and earlier, LTS 2.568.2 and earlier, form data binding allows setting public static fields of the bound configuration object, allowing attackers who can submit configuration forms to modify public static fields of the configuration objects those forms are bound to, resulting in changes that apply globally to the Jenkins instance.",
+  "aliases": [
+    "CVE-2026-84654"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84654"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2026-09-02/#SECURITY-3926"
+    }
+  ],
+  "published": "2026-09-08T08:16:30.053Z",
+  "modified": "2026-09-08T08:34:36.952Z"
+}

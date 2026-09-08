@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-14199",
+  "summary": "Session takeover via Auth Proxy cache key collision",
+  "details": "Only self-managed Grafana instances with Auth Proxy authentication and identity caching enabled (sync_ttl greater than zero) are affected. The Auth Proxy cache key concatenated the username and forwarded identity attributes without a delimiter, so distinct identities could collide on one key. An authenticated user who shapes their own attributes to collide with a higher-privileged user's, while that user's cache entry is live, is authenticated as that user, up to Administrator (authentication bypass by spoofing).",
+  "aliases": [
+    "CVE-2026-14199"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "13.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-14199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14199"
+    }
+  ],
+  "published": "2026-09-08T08:14:51.153Z",
+  "modified": "2026-09-08T08:34:36.952Z"
+}

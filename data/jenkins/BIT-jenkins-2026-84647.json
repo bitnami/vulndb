@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-84647",
+  "details": "In Stapler 2107.v8dfcb_e8ed317 and earlier, except 2088.2093.vd7c3e58008a_6, included in Jenkins 2.579 and earlier, LTS 2.568.2 and earlier, Stapler does not restrict the types of objects that can be instantiated via form data binding to those compatible with the expected field type, allowing attackers with Overall/Read permission to instantiate types related to configuration for which that field type was not intended.",
+  "aliases": [
+    "CVE-2026-84647"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84647"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.jenkins.io/security/advisory/2026-09-02/#SECURITY-3915"
+    }
+  ],
+  "published": "2026-09-08T08:16:23.181Z",
+  "modified": "2026-09-08T08:34:36.952Z"
+}
