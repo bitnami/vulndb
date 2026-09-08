@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-82293",
+  "summary": "Incorrect Authorization in Kibana Leading to Unauthorized Resource Consumption",
+  "details": "Incorrect Authorization (CWE-863) in the Kibana machine learning feature can lead to unauthorized resource consumption via Exploiting Incorrectly Configured Access Control Security Levels (CAPEC-180). An authenticated user could invoke machine learning functionality beyond their authorization scope, consuming cluster resources they should not be able to reach.",
+  "aliases": [
+    "CVE-2026-82293"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.21"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.6"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-21-9-4-6-9-5-2-security-update-esa-2026-169/390119"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82293"
+    }
+  ],
+  "published": "2026-09-08T08:14:01.671Z",
+  "modified": "2026-09-08T08:34:36.952Z"
+}
