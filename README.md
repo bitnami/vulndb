@@ -150,6 +150,14 @@ $ docker run bitnami/postgresql cat /opt/bitnami/postgresql/.spdx-postgresql.spd
 
 ## Deprecation notes
 
+### 2026-09
+
+- Bitnami Object Storage based on MinIO&reg;
+- Bitnami Object Storage Client based on MinIO&reg; Client
+- Bitnami Object Storage Operator based on MinIO&reg;
+- Bitnami Object Storage Sidecar based on MinIO&reg;
+- Bitnami Object Storage Console based on MinIO&reg;
+
 ### 2026-07
 
 - KIAM
