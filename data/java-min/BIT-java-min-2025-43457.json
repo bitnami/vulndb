@@ -15,7 +15,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -40,7 +40,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
     ]
@@ -128,5 +128,5 @@
     }
   ],
   "published": "2026-05-06T14:45:36.145Z",
-  "modified": "2026-09-08T08:34:36.952Z"
+  "modified": "2026-09-10T15:46:03.895Z"
 }
