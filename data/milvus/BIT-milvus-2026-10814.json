@@ -15,8 +15,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V4",
-          "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
         }
       ],
       "ranges": [
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Low",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:milvus:milvus:*:*:*:*:*:*:*:*"
     ]
@@ -79,5 +79,5 @@
     }
   ],
   "published": "2026-06-11T11:45:00.999Z",
-  "modified": "2026-09-08T08:34:36.952Z"
+  "modified": "2026-09-10T15:46:03.895Z"
 }
