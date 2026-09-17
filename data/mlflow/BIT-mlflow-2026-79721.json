@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mlflow-2026-79721",
+  "details": "Code execution can occur in versions of the MLflow platform running version 0.0.1 or newer, enabling a maliciously crafted model artifact to execute arbitrary code on an end user's system when loaded by the project.",
+  "aliases": [
+    "CVE-2026-79721"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mlflow",
+        "purl": "pkg:bitnami/mlflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:python:*:*",
+      "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79721"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.hiddenlayer.com/sai-security-advisory/2026-09-mlflow"
+    }
+  ],
+  "published": "2026-09-17T10:38:32.527Z",
+  "modified": "2026-09-17T11:01:03.365Z"
+}
