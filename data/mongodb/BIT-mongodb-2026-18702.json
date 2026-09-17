@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-18702",
+  "summary": "Improper Authorization in MongoDB profile Command Allows Unauthorized Modification of Server-Wide Diagnostic Settings",
+  "details": "An issue in MongoDB Server could allow an authenticated user with limited, database-scoped privileges to modify diagnostic logging settings that affect the entire server rather than just the intended database. This could allow suppression of diagnostic logging server-wide, potentially obscuring unauthorized activity, or degrade operational monitoring by causing excessive log volume.",
+  "aliases": [
+    "CVE-2026-18702"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.40"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.29"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://jira.mongodb.org/browse/SERVER-130198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18702"
+    }
+  ],
+  "published": "2026-09-17T11:50:06.194Z",
+  "modified": "2026-09-17T12:08:03.261Z"
+}

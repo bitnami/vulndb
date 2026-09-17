@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-18704",
+  "summary": "Improper Authorization in MongoDB Aggregation Framework Allows Read-Only User to Perform Unauthorized Write Operations",
+  "details": "An issue in MongoDB Server's aggregation framework could allow an authenticated user with only read privileges to perform write operations against collections they should not be able to modify. This is due to an internal-use aggregation stage being reachable by external clients without an appropriate authorization check on its embedded operations.",
+  "aliases": [
+    "CVE-2026-18704"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://jira.mongodb.org/browse/SERVER-129936"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18704"
+    }
+  ],
+  "published": "2026-09-17T11:50:08.965Z",
+  "modified": "2026-09-17T12:08:03.261Z"
+}

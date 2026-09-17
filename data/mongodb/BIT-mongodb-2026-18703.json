@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-18703",
+  "summary": "Improper Enforcement of Authentication Mechanism Restrictions in MongoDB Server Allows Use of Disabled Authentication Method",
+  "details": "An issue in MongoDB Server could allow a party with a valid client certificate and a corresponding user account to authenticate using a certificate-based authentication method, even when an administrator has configured the server to restrict authentication to other mechanisms. This could allow authentication through a method the administrator intended to disable.",
+  "aliases": [
+    "CVE-2026-18703"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://jira.mongodb.org/browse/SERVER-127863"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18703"
+    }
+  ],
+  "published": "2026-09-17T11:50:07.497Z",
+  "modified": "2026-09-17T12:08:03.261Z"
+}
