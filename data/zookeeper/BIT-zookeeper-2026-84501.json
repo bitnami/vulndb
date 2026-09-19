@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-zookeeper-2026-84501",
+  "summary": "Apache ZooKeeper: Operational log forgery via newline injection in EnsembleAuthenticationProvider",
+  "details": "An unauthenticated attacker can inject arbitrary fake log lines into Apache ZooKeeper's operational log by sending a crafted add_auth(\"ensemble\", ...) request containing newline characters (\\n). When the ensemble name doesn't match, EnsembleAuthenticationProvider.handleAuthentication() logs the raw, unsanitized name via LOG.warn(). Because SLF4J's {} placeholder preserves embedded newlines, the attacker can forge complete log entries — with arbitrary timestamps, log levels, class names, and messages — that are visually indistinguishable from genuine ZooKeeper log output.\n\nThis issue affects Apache ZooKeeper: from 3.9.0 through 3.9.5, from 3.8.0 through 3.8.6.\n\nUsers are recommended to upgrade to version 3.8.7 or 3.9.6, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-84501"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "zookeeper",
+        "purl": "pkg:bitnami/zookeeper"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.8.7"
+            },
+            {
+              "introduced": "3.9.0"
+            },
+            {
+              "fixed": "3.9.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:zookeeper:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "DISCUSSION",
+      "url": "http://www.openwall.com/lists/oss-security/2026/09/15/7"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://lists.apache.org/thread/ohby1g6zjt72p0w79rhbr41nczzvr33y"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84501"
+    }
+  ],
+  "published": "2026-09-19T08:51:30.697Z",
+  "modified": "2026-09-19T09:02:05.474Z"
+}
