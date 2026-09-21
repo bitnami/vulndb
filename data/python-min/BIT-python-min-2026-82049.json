@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-min-2026-82049",
+  "summary": "tarfile extraction filters allow file modification and content disclosure via hard link to symlink",
+  "details": "In CPython 3.13 and earlier, the tarfile module's data and tar extraction filters are vulnerable to crafted archives containing a hard link to a symbolic link. Such archives may cause extraction to modify the permissions or modification time of a file outside the destination directory, or expose the contents of that file within the extracted tree.",
+  "aliases": [
+    "CVE-2026-82049"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python-min",
+        "purl": "pkg:bitnami/python-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.14.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/09/14/27"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/5a57248b22ad3b9aafcaaadae2c304a1923daeca"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b38be2e6cf9d989075ab73412c63e003ebad4ff3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/b8f23e307097552eaea2604383a12ab280520d0d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/157190"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/157191"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/EFJWGAZJA56AKSBR2WHMHQZO7RRLZPRH/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82049"
+    }
+  ],
+  "published": "2026-09-21T09:07:26.945Z",
+  "modified": "2026-09-21T09:26:48.669Z"
+}
