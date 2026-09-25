@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-79779",
+  "summary": "rclone before v1.75.0 WebDAV Credential Exposure via HTTPS-to-HTTP Redirect",
+  "details": "rclone versions before v1.75.0 fail to reject transport downgrades in redirect handling, allowing Basic authorization and Cookie headers to be replayed over plaintext HTTP after same-host HTTPS-to-HTTP redirects. An on-path attacker observing the plaintext hop can capture and reuse credentials to perform WebDAV operations with the compromised account's permissions.",
+  "aliases": [
+    "CVE-2026-79779"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-h4mf-4v27-hggj"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79779"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-webdav-credential-exposure-via-https-to-http-redirect"
+    }
+  ],
+  "published": "2026-09-25T12:30:11.727Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

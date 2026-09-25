@@ -37,7 +37,8 @@
   "database_specific": {
     "severity": "High",
     "cpes": [
-      "cpe:2.3:a:apache:nifi:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:nifi:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2026-09-22T08:50:56.153Z",
-  "modified": "2026-09-22T09:11:41.425Z"
+  "modified": "2026-09-25T12:52:12.177Z"
 }

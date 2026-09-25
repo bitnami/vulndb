@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2026-82985",
+  "details": "The Photos app's filter-based \"smart albums\" build their file listing using the search configuration (photosSourceFolders) of the user viewing the album, rather than the album owner's configuration. When an album owner shares a smart album with another user, that user's own folder configuration is used to determine which of the owner's files are searched — allowing them to discover files (name, file ID, and other metadata) in folders the album owner never intended to include in the shared album.\n\nThis requires the album owner to have shared a filter-based smart album with the attacker; it does not allow access to arbitrary users' files without such a share.",
+  "aliases": [
+    "CVE-2026-82985"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "32.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3506873"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82985"
+    }
+  ],
+  "published": "2026-09-25T12:27:08.344Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

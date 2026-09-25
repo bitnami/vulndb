@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jupyterlab-2026-73627",
+  "summary": "JupyterLab 4.6.0 Plugin Manager Lock-Rule Enforcement Bypass",
+  "details": "JupyterLab (pip package 'jupyterlab') versions >=4.1.0,<=4.5.9 and >=4.6.0,<=4.6.1 contain a plugin manager lock-rule enforcement bypass. Two server-side enforcement gaps allow an authenticated user to circumvent administrator lock rules by making direct requests to the /lab/api/plugins endpoint, enabling or disabling plugins that were locked — including child plugins of multi-plugin extensions and plugins locked via the 'lock all' mechanism. This can impact data integrity and bypass hardening or restrictions (e.g., download/upload limits) implemented through locked plugins. Fixed in versions 4.6.2 and 4.5.10.",
+  "aliases": [
+    "CVE-2026-73627"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyterlab",
+        "purl": "pkg:bitnami/jupyterlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.5.10"
+            },
+            {
+              "introduced": "4.6.0"
+            },
+            {
+              "fixed": "4.6.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jupyter:jupyterlab:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterlab/jupyterlab/security/advisories/GHSA-h5v5-8746-g7mm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73627"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/jupyterlab-plugin-manager-lock-rule-enforcement-bypass"
+    }
+  ],
+  "published": "2026-09-25T12:23:15.905Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

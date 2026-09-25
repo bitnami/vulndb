@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-seaweedfs-2026-58371",
+  "summary": "SeaweedFS < 4.30 - Cross-Origin Information Disclosure via Unvalidated JSONP callback Parameter",
+  "details": "SeaweedFS before 4.30 reflects the callback query parameter verbatim into responses served with Content-Type application/javascript in the shared writeJson helper (weed/server/common.go), with no callback-name validation, no X-Content-Type-Options: nosniff header, and no CORS allow-list. Every JSON endpoint that uses writeJson - including the unauthenticated master endpoints /dir/status, /dir/lookup and /cluster/status, the volume server /status, and the filer directory listing, all reachable in the default configuration (no -whiteList, no security.toml, bound to 0.0.0.0) - can therefore be loaded cross-origin via a script tag with a chosen callback, letting a third-party web page read cluster topology, volume server URLs and gRPC ports, file identifiers, and directory listings. Because the callback string is reflected at the start of the body and no nosniff header is sent, MIME-sniffing clients may also interpret the reflected content as HTML.",
+  "aliases": [
+    "CVE-2026-58371"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "seaweedfs",
+        "purl": "pkg:bitnami/seaweedfs"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:P/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "4.30.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:seaweedfs:seaweedfs:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:seaweedfs:seaweedfs:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/geo-chen/oss/blob/main/seaweedfs.md"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/commit/77dcb20a7485074d37340985d53103f94538abe6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/pull/9686"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/seaweedfs/seaweedfs/releases/tag/4.30"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58371"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/seaweedfs-cross-origin-information-disclosure-via-unvalidated-jsonp-callback-parameter"
+    }
+  ],
+  "published": "2026-09-25T12:30:37.847Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

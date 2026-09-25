@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-76154",
+  "summary": "CVE-2026-76154 CVE Record",
+  "details": "A stored cross-site scripting vulnerability in the Geomap panel's MapLibre base layer allows a user with the Editor role to execute arbitrary JavaScript in another user's session by hosting a malicious style configuration, enabling escalation to Org Admin.",
+  "aliases": [
+    "CVE-2026-76154"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.1"
+            },
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.11"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.9"
+            },
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.6"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-76154"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76154"
+    }
+  ],
+  "published": "2026-09-25T12:24:13.816Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

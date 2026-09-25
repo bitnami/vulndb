@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-15815",
+  "summary": "CVE-2026-15815 CVE Record",
+  "details": "Grafana OSS and Grafana Enterprise did not safely resolve symbolic links when\nextracting plugin archives. A crafted plugin archive can chain relative symbolic link\nentries to escape the plugin installation directory, writing arbitrary files and an\nexecutable backend binary outside that directory. The dropped executable runs with the\nprivileges of the Grafana server process, resulting in remote code execution.\n\nPlugin archives are extracted before their signature is verified, so a valid plugin\nsignature does not prevent the write. An operator can therefore be affected by\ninstalling a plugin that appears legitimate, as well as by installing a plugin from an\narbitrary archive using grafana-cli, the GF_INSTALL_PLUGINS environment variable, or\npreinstall configuration.\n\nGrafana Enterprise is affected because it includes the same plugin extraction code as\nGrafana OSS.",
+  "aliases": [
+    "CVE-2026-15815"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.6.0"
+            },
+            {
+              "fixed": "12.0.1"
+            },
+            {
+              "introduced": "12.1.0"
+            },
+            {
+              "fixed": "12.1.1"
+            },
+            {
+              "introduced": "12.2.0"
+            },
+            {
+              "fixed": "12.2.1"
+            },
+            {
+              "introduced": "12.3.0"
+            },
+            {
+              "fixed": "12.3.1"
+            },
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.11"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.9"
+            },
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.6"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-15815"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15815"
+    }
+  ],
+  "published": "2026-09-25T12:23:29.496Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

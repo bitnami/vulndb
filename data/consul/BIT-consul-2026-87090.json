@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-87090",
+  "summary": "Consul vulnerable to an authorization bypass in the catalog node-write path",
+  "details": "Consul and Consul Enterprise are vulnerable to an authorization bypass in the catalog node-write path that may allow an authenticated attacker to delete another node's catalog registration and take over its node identity. An attacker with a token granting node-write permission on any single node name may exploit this issue if they can obtain the node ID of a node they do not control. This vulnerability (CVE-2026-87090) is fixed in Consul 2.0.4 and Consul Enterprise 1.21.18, 1.22.12 and 2.0.4.",
+  "aliases": [
+    "CVE-2026-87090"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.1.0"
+            },
+            {
+              "fixed": "2.0.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:-:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-34-consul-vulnerable-to-an-authorization-bypass-in-the-catalog-node-write-path/77736"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87090"
+    }
+  ],
+  "published": "2026-09-25T12:20:48.712Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}
