@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-79776",
+  "summary": "rclone before 1.75.0 Authentication Bypass via pprof",
+  "details": "rclone before 1.75.0 mounts the pprof debug handler as its own router route, bypassing the fail-closed authentication rule in the main handler. Attackers can access the /debug/pprof/cmdline endpoint unauthenticated to retrieve the full process argv including backend credentials.",
+  "aliases": [
+    "CVE-2026-79776"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-mfvx-7rcj-9m5g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79776"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-authentication-bypass-via-pprof"
+    }
+  ],
+  "published": "2026-09-25T12:30:08.109Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

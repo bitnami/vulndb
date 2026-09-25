@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-16794",
+  "summary": "Missing Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 18.11 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that under certain conditions could have allowed an authenticated user with the Security Manager role to execute arbitrary CI/CD jobs and access protected variables within group projects due to improper authorization controls on compliance framework management.",
+  "aliases": [
+    "CVE-2026-16794"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.11.0"
+            },
+            {
+              "fixed": "19.1.8"
+            },
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.2.6"
+            },
+            {
+              "introduced": "19.3.0"
+            },
+            {
+              "fixed": "19.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/606750"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3785754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16794"
+    }
+  ],
+  "published": "2026-09-25T12:47:55.018Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-78252",
+  "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.3 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an authenticated user could have induced a targeted user to perform unintended state-changing HTTP requests due to improper sanitization of user-controlled data in the Markdown JSON table renderer.",
+  "aliases": [
+    "CVE-2026-78252"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.3.0"
+            },
+            {
+              "fixed": "19.1.8"
+            },
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.2.6"
+            },
+            {
+              "introduced": "19.3.0"
+            },
+            {
+              "fixed": "19.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/621447"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3917471"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78252"
+    }
+  ],
+  "published": "2026-09-25T12:49:59.824Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

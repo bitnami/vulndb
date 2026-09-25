@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-55775",
+  "summary": "OpenBao's System Backend allows Unauthorized Management of the containing Namespace",
+  "details": "OpenBao is an open source identity-based secrets management system. Prior to 2.5.5, OpenBao users granted capabilities on /sys/namespaces/root within a non-root namespace could exploit special handling of the literal root path in namespace canonicalization. The /sys/namespaces/* endpoint family can resolve its containing namespace through a path prefix or X-Vault-Namespace header. ACL checks occurred before root canonicalized to an empty path, causing /sys/namespaces/root to resolve to the system backend's containing namespace and allowing permitted lookups, deletion, locking, or custom metadata changes against that direct containing namespace. The root namespace and arbitrary unrelated namespaces are not affected, and available operations depend on the capabilities granted on the path and subpaths such as /api-lock. This issue is fixed in version 2.5.5.",
+  "aliases": [
+    "CVE-2026-55775"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/commit/216b623cdde161eb7798bd095fc874c2174a4dd2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/commit/d3c1cc64b1ae7f9868b5c3e80b8b11671f0d97ae"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/pull/3308"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/pull/3311"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/releases/tag/v2.5.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/releases/tag/v2.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-mwr2-wmgp-crj6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55775"
+    }
+  ],
+  "published": "2026-09-25T12:28:10.963Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

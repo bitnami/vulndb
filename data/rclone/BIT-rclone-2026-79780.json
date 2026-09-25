@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-79780",
+  "summary": "rclone before v1.75.0 Credential Exposure via S3 Redirect",
+  "details": "rclone before v1.75.0 fails to sanitize IBM IAM bearer tokens and SSE-C encryption keys during S3 redirect callbacks, allowing credentials to be preserved across scheme or host changes. Attackers observing network traffic from a trusted endpoint can capture reusable IBM IAM tokens on same-host HTTPS-to-HTTP downgrades or SSE-C keys on cross-origin redirects to access protected S3 objects.",
+  "aliases": [
+    "CVE-2026-79780"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:A/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-8mxv-9xhp-86h4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79780"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-credential-exposure-via-s3-redirect"
+    }
+  ],
+  "published": "2026-09-25T12:30:12.849Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

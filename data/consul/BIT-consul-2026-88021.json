@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-88021",
+  "summary": "Consul vulnerable to an authorization bypass in the Connect service mesh",
+  "details": "Consul and Consul Enterprise are vulnerable to an authorization bypass in the Connect service mesh that may allow a service to reach a destination it is not authorized to access. When building Envoy RBAC rules to enforce Connect intentions, Consul did not correctly escape certain characters in service names, namespaces, and partitions, causing the generated authorization rules to match more broadly than intended. This vulnerability (CVE-2026-88021) is fixed in Consul 2.0.4 and Consul Enterprise 1.21.18, 1.22.12 and 2.0.4.",
+  "aliases": [
+    "CVE-2026-88021"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.9.0"
+            },
+            {
+              "fixed": "2.0.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:go:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:go:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-37-consul-vulnerable-to-an-authorization-bypass-in-the-connect-service-mesh/77739"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88021"
+    }
+  ],
+  "published": "2026-09-25T12:20:54.265Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

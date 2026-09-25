@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-86341",
+  "summary": "Access Control Check Implemented After Asset is Accessed in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 17.1 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an authenticated user with Owner or Maintainer permissions could have silently disabled protected environment deployment approval requirements, allowing unapproved deployments to reach production, due to improper access control checks performed after the protected resource was modified.",
+  "aliases": [
+    "CVE-2026-86341"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "17.1.0"
+            },
+            {
+              "fixed": "19.1.8"
+            },
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.2.6"
+            },
+            {
+              "introduced": "19.3.0"
+            },
+            {
+              "fixed": "19.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-3-2-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/600088"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86341"
+    }
+  ],
+  "published": "2026-09-25T12:50:15.601Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-79778",
+  "summary": "rclone before v1.75.0 Denial of Service via TUS nil-response panic",
+  "details": "rclone before v1.75.0 contains a denial of service vulnerability in the WebDAV TUS creation handler that dereferences a nil response before checking for transport errors. A malicious or compromised configured endpoint can reset connections during TUS uploads to trigger a panic that terminates unrecovered goroutines and halts unrelated work in long-lived processes.",
+  "aliases": [
+    "CVE-2026-79778"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-3x6r-wxxg-53vv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79778"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-denial-of-service-via-tus-nil-response-panic"
+    }
+  ],
+  "published": "2026-09-25T12:30:10.481Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}

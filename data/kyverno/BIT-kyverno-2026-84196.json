@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-84196",
+  "summary": "Kyverno before 1.18.0 Server-Side Request Forgery via apiCall",
+  "details": "Kyverno before 1.18.0 contains a server-side request forgery vulnerability in apiCall.service.url that allows authenticated users to send arbitrary HTTP requests by injecting user-controlled input through variable substitution. Attackers can target internal services, cloud metadata endpoints, and loopback addresses, with response data reflected in admission error messages enabling non-blind data exfiltration.",
+  "aliases": [
+    "CVE-2026-84196"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.18.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-qr4g-8hrp-c4rw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84196"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/kyverno-before-1.18.0-server-side-request-forgery-via-apicall"
+    }
+  ],
+  "published": "2026-09-25T12:23:41.268Z",
+  "modified": "2026-09-25T12:52:12.177Z"
+}
