@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-75158",
+  "summary": "Apache Airflow: Assets events API returns asset events for every Dag with no per-Dag authorization filter",
+  "details": "Apache Airflow's `/assets/events` API returned asset events for every Dag in the deployment, with no filter restricting them to the Dags the caller is authorized to read. Any authenticated user holding asset-read access could therefore enumerate asset events — including the source Dag ID, task ID, run ID and event timestamps — for Dags they have no permission to see. Because the filter was also absent from the count query, `total_entries` and pagination disclosed the existence of hidden Dags even without inspecting individual rows. Deployments are affected whenever per-Dag access control is used to separate teams or tenants; no special configuration is required. Upgrade to apache-airflow 3.3.2 or later.",
+  "aliases": [
+    "CVE-2026-75158"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/09/21/3"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/apache/airflow/pull/71741"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://lists.apache.org/thread/rx5lg86l0qkjl2s7dtmpqxjq0xplr4fy"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75158"
+    }
+  ],
+  "published": "2026-09-26T08:41:40.516Z",
+  "modified": "2026-09-26T09:13:27.730Z"
+}
