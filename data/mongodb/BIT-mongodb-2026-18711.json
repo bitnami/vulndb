@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-18711",
+  "summary": "Use-After-Free in MongoDB Query Execution Engine Leads to Denial of Service and Potential Memory Disclosure",
+  "details": "An issue in MongoDB Server's query execution engine could allow an authenticated user with read and write privileges to cause an internal reference to be used after the underlying memory has been freed, when running certain queries against time-series collections. This could result in a server crash or disclosure of freed memory contents within query results.",
+  "aliases": [
+    "CVE-2026-18711"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.41"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.29"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.3.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://jira.mongodb.org/browse/SERVER-130247"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18711"
+    }
+  ],
+  "published": "2026-09-28T08:44:16.018Z",
+  "modified": "2026-09-28T09:07:52.091Z"
+}
