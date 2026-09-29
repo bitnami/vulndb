@@ -43,7 +43,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:nats:nats_server:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -73,5 +74,5 @@
     }
   ],
   "published": "2026-07-14T15:47:14.889Z",
-  "modified": "2026-09-08T08:34:36.952Z"
+  "modified": "2026-09-29T09:14:51.928Z"
 }

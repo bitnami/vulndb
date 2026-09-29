@@ -37,7 +37,8 @@
   "database_specific": {
     "severity": "Critical",
     "cpes": [
-      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
     ]
   },
   "references": [
@@ -59,5 +60,5 @@
     }
   ],
   "published": "2026-09-26T08:41:43.057Z",
-  "modified": "2026-09-26T09:13:27.730Z"
+  "modified": "2026-09-29T09:14:51.928Z"
 }

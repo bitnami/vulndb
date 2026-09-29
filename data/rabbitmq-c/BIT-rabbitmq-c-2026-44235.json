@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-c-2026-44235",
+  "summary": "rabbitmq-c: size_t underflow in AMQP frame length computation leads to out-of-bounds read",
+  "details": "rabbitmq-c is a C-language AMQP client library for RabbitMQ. Prior to 0.16.0, a malicious AMQP server can send an undersized HEADER or METHOD frame during client login and cause unsigned size_t underflow in amqp_handle_input() in librabbitmq/amqp_connection.c. The parser subtracts HEADER_SIZE, fixed per-frame fields, and FOOTER_SIZE from state->target_size without first checking the minimum frame length. The wrapped encoded.len value is passed through amqp_decode_properties() to amqp_decode_table_internal(), where it defeats bounds checks and causes an out-of-bounds read and process crash. An on-path attacker can also trigger the issue when AMQP traffic is not protected by TLS with certificate validation. The demonstrated impact is denial of service, with no reliable memory disclosure or code execution shown. This issue is fixed in version 0.16.0.",
+  "aliases": [
+    "CVE-2026-44235"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq-c",
+        "purl": "pkg:bitnami/rabbitmq-c"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rabbitmq-c_project:rabbitmq-c:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/commit/1d3afbb056fee5cc9ea05680bf32288715d0d802"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/pull/878"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/releases/tag/v0.16.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/security/advisories/GHSA-9mmv-r8g3-qp46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44235"
+    }
+  ],
+  "published": "2026-09-29T08:56:06.323Z",
+  "modified": "2026-09-29T09:14:51.928Z"
+}
