@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-discourse-2026-59830",
+  "summary": "Discourse: Stored XSS via unescaped actor name in post actions",
+  "details": "Discourse is an open-source discussion platform. Prior to 2026.7.0, the post action component failed to escape user-controlled display names before interpolating them into an HTML string passed to trustHTML. A user who could choose a crafted display name could persist markup in post action descriptions. Viewing the affected user activity streams could execute attacker-controlled script in another user's browser. This issue is fixed in version 2026.7.0.",
+  "aliases": [
+    "CVE-2026-59830"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "discourse",
+        "purl": "pkg:bitnami/discourse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:stable:*:*:*",
+      "cpe:2.3:a:discourse:discourse:*:*:*:*:beta:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/commit/dd786594ddd088657a7e6f9fefba5bd889965fe4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/releases/tag/v2026.7.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/discourse/discourse/security/advisories/GHSA-x6mf-p7cg-69rw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59830"
+    }
+  ],
+  "published": "2026-09-29T08:46:16.108Z",
+  "modified": "2026-09-29T09:14:51.928Z"
+}

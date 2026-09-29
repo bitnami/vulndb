@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-c-2026-44236",
+  "summary": "rabbitmq-c: Heap buffer overflow in AMQP login handshake via undersized connection.tune.frame_max",
+  "details": "rabbitmq-c is a C-language AMQP client library for RabbitMQ. Prior to 0.16.0, a malicious AMQP server can send an undersized connection.tune.frame_max value during amqp_login(), and rabbitmq-c accepts the value in amqp_login_inner() in librabbitmq/amqp_socket.c. amqp_tune_connection() in librabbitmq/amqp_connection.c uses frame_max to reallocate the outbound buffer without enforcing AMQP_FRAME_MIN_SIZE. Immediate serialization of connection.tune-ok through amqp_frame_to_bytes() writes beyond the undersized heap allocation, causing memory corruption and likely denial of service. An on-path attacker can also trigger the flaw against plaintext AMQP traffic. Code execution is theoretically possible but was not demonstrated. This issue is fixed in version 0.16.0.",
+  "aliases": [
+    "CVE-2026-44236"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq-c",
+        "purl": "pkg:bitnami/rabbitmq-c"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rabbitmq-c_project:rabbitmq-c:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/commit/4777d0b5c58cb02966a04a85832436bd66ed5d1f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/pull/879"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/releases/tag/v0.16.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/security/advisories/GHSA-jh48-qjf5-fx5v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44236"
+    }
+  ],
+  "published": "2026-09-29T08:56:07.627Z",
+  "modified": "2026-09-29T09:14:51.928Z"
+}
