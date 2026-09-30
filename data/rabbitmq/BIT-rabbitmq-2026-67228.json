@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67228",
+  "summary": "RabbitMQ: Atom exhaustion: to_atom on runtime-parameter component",
+  "details": "RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, The runtime-parameters lookup path coerces the URL :component segment to an atom with rabbit_data_coercion:to_atom/1 in lookup_component/1 (deps/rabbit/src/rabbit_runtime_parameters.erl), creating a new atom for any previously unseen value. A safe helper, rabbit_registry:binary_to_type/1, which uses binary_to_existing_atom with a catch, already exists but is not used at this call site. lookup_component/1 calls rabbit_data_coercion:to_atom(Component) on the :component segment of the request URL, converting an attacker-supplied string into a new atom. Because the Erlang atom table is bounded and atoms are never garbage collected, an authorized policymaker issuing roughly one million requests with distinct component values can exhaust the atom table and crash the node, resulting in a denial of service. Preconditions include Exploitation requires policymaker privileges and roughly one million requests.. This issue is fixed in versions 4.2.7 and 4.3.1.",
+  "aliases": [
+    "CVE-2026-67228"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.7"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-73qp-fwh4-2q5g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67228"
+    }
+  ],
+  "published": "2026-09-30T17:59:18.504Z",
+  "modified": "2026-09-30T18:17:58.437Z"
+}
