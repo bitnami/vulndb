@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-25552",
+  "summary": "Ghost CLI < 1.30.1 IP Spoofing via X-Forwarded-For Header",
+  "details": "Ghost CLI before 1.30.1 contains an IP spoofing vulnerability that allows unauthenticated remote attackers to bypass rate-limiting controls by manipulating the X-Forwarded-For header through a misconfigured Nginx configuration. Attackers can append attacker-controlled values to the header chain using the $proxy_add_x_forwarded_for directive to present an arbitrary IP address, circumventing Ghost's rate-limiting mechanisms on self-hosted instances.",
+  "aliases": [
+    "CVE-2026-25552"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.30.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost-CLI/security/advisories/GHSA-wjx2-9fpq-8997"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25552"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-cli-ip-spoofing-via-x-forwarded-for-header"
+    }
+  ],
+  "published": "2026-09-30T20:43:53.743Z",
+  "modified": "2026-09-30T21:18:25.857Z"
+}
