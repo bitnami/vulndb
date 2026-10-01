@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-php-2026-91766",
+  "summary": "Cross-origin credential leak in HTTP stream wrapper redirects",
+  "details": "When the http:// stream wrapper follows a redirect it forwards the user-supplied Authorization, Cookie and Proxy-Authorization headers unchanged, even when the redirect target is a different host, a different port, or a downgrade from HTTPS to HTTP. A server that can steer a redirect therefore receives credentials that were only meant for the original origin. This is the same class of issue that libcurl fixed in 7.58.0 ( CVE-2018-1000007 https://github.com/advisories/GHSA-g7x2-hrfp-pv5f ).",
+  "aliases": [
+    "CVE-2026-91766"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php",
+        "purl": "pkg:bitnami/php"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.34"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.35"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.4.26"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-fpwc-w8rq-cr92"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91766"
+    }
+  ],
+  "published": "2026-10-01T08:49:54.899Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

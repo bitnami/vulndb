@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67420",
+  "summary": "RabbitMQ OAuth credential refresh retains revoked runtime tags",
+  "details": "RabbitMQ is a messaging and streaming broker. From 3.13.0 until 3.13.19, 4.0.24, 4.1.15, 4.2.10, and 4.3.5, RabbitMQ OAuth credential refresh retains revoked runtime tags. when an existing AMQP connection refreshes from an OAuth token that grants the impersonator tag to a valid same-username token that no longer grants that tag, RabbitMQ updates the OAuth backend implementation (token/scopes/expiry) but leaves the connection's runtime #user.tags unchanged. rabbitaccesscontrol:checkuserid/2 then still honors the stale impersonator tag, so the connection (including newly opened channels) can continue publishing messages with a foreign AMQP userid after that privilege should have been revoked. A fresh connection using the downgraded token correctly refuses the same publish, proving the defect is stale session state rather than the token Limited to connections that once held impersonator and successfully refresh to a downgraded same-username rabbitauthbackendoauth2 (or an equivalent refresh-capable backend that returns tags) is enabled for This issue is fixed in versions 3.13.19, 4.0.24, 4.1.15, 4.2.10, and 4.3.5.",
+  "aliases": [
+    "CVE-2026-67420"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.19"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.24"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.15"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.10"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/5de287d213765ca592ff5848ad2f6b9b98ee6772"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-86fm-44m9-rqjx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67420"
+    }
+  ],
+  "published": "2026-10-01T08:50:31.580Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

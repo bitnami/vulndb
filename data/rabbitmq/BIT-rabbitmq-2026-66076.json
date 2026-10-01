@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-66076",
+  "summary": "RabbitMQ: Cross-vhost quorum-queue status and stream tracking disclosure",
+  "details": "RabbitMQ is a messaging and streaming broker. Prior to versions 3.13.15, 4.0.20, 4.1.11, 4.2.6, and 4.3.0, is_authorized/2 calls rabbit_mgmt_util:is_authorized/2, which checks only the management tag, instead of is_authorized_vhost/2. The /api/queues/quorum/:vhost/:queue/status handler reads the vhost from the path without checking that the user can access it. Any management-tagged user can therefore read Raft status, including leader, members, term, and commit index, for quorum queues in inaccessible vhosts, exposing cross-tenant queue names and cluster topology. The management plugin must be enabled and the attacker must have a management tag. This issue is fixed in versions 3.13.15, 4.0.20, 4.1.11, 4.2.6, and 4.3.0.",
+  "aliases": [
+    "CVE-2026-66076"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.20"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.11"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-j45q-v7g2-82ph"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66076"
+    }
+  ],
+  "published": "2026-10-01T08:49:51.008Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

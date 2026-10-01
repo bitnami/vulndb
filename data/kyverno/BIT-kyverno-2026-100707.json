@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-100707",
+  "summary": "Kyverno before 1.19.1 Namespace Isolation Bypass via Percent-Encoded Path",
+  "details": "Kyverno before 1.19.1 contains a namespace isolation bypass in the apiCall context entry of namespaced Policy resources due to inconsistent path interpretation between validation and execution. A low-privilege tenant can use percent-encoded dot-segments in urlPath to bypass namespace checks and read resources from other namespaces using the Kyverno admission controller's ServiceAccount credentials.",
+  "aliases": [
+    "CVE-2026-100707"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.19.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-c5qq-7g2q-cpqp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100707"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/kyverno-before-1.19.1-namespace-isolation-bypass-via-percent-encoded-path"
+    }
+  ],
+  "published": "2026-10-01T08:43:40.204Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-82294",
+  "summary": "Uncontrolled Resource Consumption in Elasticsearch Leading to Denial of Service",
+  "details": "Uncontrolled Resource Consumption (CWE-400) in Elasticsearch can lead to denial of service via Excessive Allocation (CAPEC-130).",
+  "aliases": [
+    "CVE-2026-82294"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.21"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.6"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-21-9-4-6-9-5-3-security-update-esa-2026-170/390681"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82294"
+    }
+  ],
+  "published": "2026-10-01T08:39:23.777Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

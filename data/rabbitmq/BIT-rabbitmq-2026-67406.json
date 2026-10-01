@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67406",
+  "summary": "RabbitMQ: Federation and Shovel Gen-Servers Lack format_status Callback — Plaintext Credentials Exposed in Crash Dumps and sys:get_status",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.0.0 until 4.3.3, 4.2.9, 4.1.14, and 4.0.23, Shovel does not format state logged by the crash reporter and can leave unencrypted credentials in a crash dump file. the shovel worker genserver processes does not implement the formatstatus/2 callback. When these processes crash (e.g., due to network partitions, connection failures), the OTP SASL error handler writes the full process state , including plaintext AMQP passwords and URIs , to the error log. This is particularly severe for the shovel worker, which stores deobfuscated plaintext URIs (including amqp://user:password@host format) in its genserver state for the entire process Automatic Credential Exposure: Shovel worker crashes (common during network partitions) automatically write plaintext upstream/downstream passwords to error logs No Special Configuration Needed: Unlike DEBUG logging, SASL error reports are always active Broad. This issue is fixed in versions 4.3.3, 4.2.9, 4.1.14, and 4.0.23.",
+  "aliases": [
+    "CVE-2026-67406"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.23"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.14"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-q44f-9vc5-grh7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67406"
+    }
+  ],
+  "published": "2026-10-01T08:50:21.920Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

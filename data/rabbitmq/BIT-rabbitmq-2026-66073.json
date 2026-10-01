@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-66073",
+  "summary": "RabbitMQ: Atom table exhaustion via management API node field",
+  "details": "RabbitMQ is a messaging and streaming broker. From 3.13.0 until 3.13.15 and 4.0.20 and 4.1.11 and 4.2.6, Atom table exhaustion via management API node field. pUT /api/queues/:vhost/:name (and the exchanges and bindings endpoints) accepts a node JSON field. The value goes through rabbitnodes:make → listtoatom with no cluster membership check first. Each unique value permanently leaks one atom. A March 2026 refactoring (ea61ce2563) introduced safe helpers in rabbitmgmtnodes.erl (parsenodename, safeatom, and requirenodename, using binarytoexistingatom) and fixed several callers (QQ replica ops, wmauthattempts, wmnodememoryets, getsortreverse, and rabbitfederationmgmt), but getnode/1 in rabbitmgmtutil.erl:880-885, the primary vector used by directrequest/6, was not Roughly 900K requests crash the VM via systemlimit, and all tenants lose Any user with the management tag and one vhost, the lowest privilege This issue is fixed in versions 3.13.15 and 4.0.20 and 4.1.11 and 4.2.6.",
+  "aliases": [
+    "CVE-2026-66073"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.20"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.11"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/7f64311471840e68f8cae09e4d4fdc4c8aca9229"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-6v53-r759-jrvx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66073"
+    }
+  ],
+  "published": "2026-10-01T08:49:48.043Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-authentik-2026-94613",
+  "summary": "authentik: Denial of Service via Document Type Declarations in SAML Messages",
+  "details": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, an unauthenticated attacker can submit a malformed SAML message to an authentik deployment using SAML in either the identity-provider or SAML source role. The message can stop the worker handling /application/saml/* or /source/saml/*, causing the requests assigned to that worker to fail. Worker process termination and automatic restart do not destroy database-backed sessions, but continued malicious messages can cause a sustained share of legitimate traffic to fail. Other protocol implementations are not affected. This issue is fixed in versions 2026.2.7, 2026.5.7, and 2026.8.2.",
+  "aliases": [
+    "CVE-2026-94613"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "authentik",
+        "purl": "pkg:bitnami/authentik"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2026.2.7"
+            },
+            {
+              "introduced": "2026.5.0"
+            },
+            {
+              "fixed": "2026.5.7"
+            },
+            {
+              "introduced": "2026.8.0"
+            },
+            {
+              "fixed": "2026.8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:goauthentik:authentik:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.goauthentik.io/releases/2026.2#fixed-in-202627"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.goauthentik.io/releases/2026.5#fixed-in-202657"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.goauthentik.io/releases/2026.8#fixed-in-202682"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/03d19d63b8d8dd7bc3de7cf6e57c6df341a9fc86"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/4cf2f803b1c2ef38c224eead375fd057a10ee8ac"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/732adad26bb97361b6bf25ef138df5c16471ba1f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/commit/a029f5372295bfeb1e334855f78601681cdc9a2d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/25959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/25964"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/25969"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/pull/25974"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version/2026.2.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version/2026.5.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/releases/tag/version/2026.8.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/goauthentik/authentik/security/advisories/GHSA-cxwx-9x59-28qm"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94613"
+    }
+  ],
+  "published": "2026-10-01T08:38:03.401Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

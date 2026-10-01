@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67234",
+  "summary": "RabbitMQ: Non-RFC-conformant cookie name when clearing the auth-mechanism preference",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.2.0 until 4.2.8 and 4.3.2, get_auth_mechanism/1 used term_to_binary/1 on the strict_auth_mechanism or preferred_auth_mechanism atom when clearing the corresponding cookie, producing a non-ASCII cookie name that violates RFC 6265 and can prevent the browser from deleting the preference. The issue is not directly exploitable for code execution or data exfiltration; its security relevance is limited to stale authentication-mechanism preferences persisting across logout and login cycles. This issue is fixed in versions 4.2.8 and 4.3.2.",
+  "aliases": [
+    "CVE-2026-67234"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.8"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/149cb59d618cefa83c6deb02dbbb1e8a7a2bc968"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/baac0aaf170efeb4f124ee36b8417274fa8dcc1a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-q286-p3m9-j69f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67234"
+    }
+  ],
+  "published": "2026-10-01T08:50:11.268Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

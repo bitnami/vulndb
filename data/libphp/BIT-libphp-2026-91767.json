@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libphp-2026-91767",
+  "summary": "Heap-buffer-overflow in php_openssl_matches_wildcard_name on crafted server cert wildcard CN",
+  "details": "php_openssl_matches_wildcard_name() in ext/openssl/xp_ssl.c underflows the length argument passed to memchr() when a TLS server certificate presents a wildcard name whose literal characters are together longer than the hostname being verified. A malicious server presenting such a certificate makes the PHP client read up to SIZE_MAX bytes past the end of a heap allocation. The path is reachable from any default client stream, because verify_peer_name is enabled by default.",
+  "aliases": [
+    "CVE-2026-91767"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libphp",
+        "purl": "pkg:bitnami/libphp"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.34"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.35"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.4.26"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-xr7j-rvgx-xq5p"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91767"
+    }
+  ],
+  "published": "2026-10-01T08:45:59.221Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

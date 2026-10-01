@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67415",
+  "summary": "RabbitMQ: Shovel Management Atom Exhaustion Allows Persistent Broker-Wide Denial of Service",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.2.0 until 4.2.9 and 4.3.3, the Shovel parameter parser converted attacker-controlled runtime parameter values into non-garbage-collected Erlang atoms before bounding them or checking a fixed allowlist. Exploitation requires network access to the Management HTTP API, valid credentials with both the management and policymaker tags, permission to set Shovel runtime parameters on a vhost, and the rabbitmq_shovel and rabbitmq_shovel_management plugins to be enabled. The attacker can exhaust the node-wide atom table and deny service, and malicious parameters are stored durably and reparsed when workers start, so atom pressure can recur after restart without a live attacker connection. This issue is fixed in versions 4.2.9 and 4.3.3.",
+  "aliases": [
+    "CVE-2026-67415"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-8mpg-qw9r-m5cr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67415"
+    }
+  ],
+  "published": "2026-10-01T08:50:29.648Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}

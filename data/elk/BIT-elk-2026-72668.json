@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72668",
+  "summary": "Unintended Proxy or Intermediary ('Confused Deputy') in Kibana Leading to Privilege Escalation",
+  "details": "Unintended Proxy or Intermediary ('Confused Deputy') (CWE-441) in Kibana Agent Builder can lead to privilege escalation. A non-administrative user able to edit a shared agent could cause privileged operations to be carried out under the identity of a higher-privileged user who subsequently interacts with that agent. Where the same user can also author workflows, this can extend to full administrative control of Kibana and of the Elasticsearch cluster.",
+  "aliases": [
+    "CVE-2026-72668"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-9-4-7-9-5-0-security-update-esa-2026-85/390678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72668"
+    }
+  ],
+  "published": "2026-10-01T08:39:55.049Z",
+  "modified": "2026-10-01T09:01:49.047Z"
+}
