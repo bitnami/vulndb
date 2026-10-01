@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-php-2025-14181",
+  "summary": "Integer overflow to buffer overflow in soap HTTP parsing",
+  "details": "The SOAP HTTP client guards its response buffer growth with a check that relies on signed integer overflow, which is undefined behaviour and is not guaranteed to trigger. When the check is optimised away, a malicious SOAP server can make the client allocate a buffer far smaller than the data it then writes into it, producing a heap buffer overflow.",
+  "aliases": [
+    "CVE-2025-14181"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php",
+        "purl": "pkg:bitnami/php"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.34"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.35"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.4.26"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-cj93-vc83-wgqv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14181"
+    }
+  ],
+  "published": "2026-10-01T09:33:39.330Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

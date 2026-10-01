@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67410",
+  "summary": "RabbitMQ: OAuth2 Client Secret Exposed via Unauthenticated JavaScript Endpoint",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.2.0 until 4.3.3 and 4.2.9, OAuth2 Client Secret Exposed via Unauthenticated JavaScript Endpoint (CWE-200). when OAuth2 authentication is enabled for the RabbitMQ Management UI and the configured flow, IDP use a client secret, the oauthclientsecret configuration value is included in the JavaScript served by the unauthenticated endpoint /js/oidc-oauth/bootstrap.js. Any user who can reach the management UI port can retrieve the OAuth2 client secret without Files: deps/rabbitmqmanagement/src/rabbitmgmtwmauth.erl, line 186 deps/rabbitmqmanagement/src/rabbitmgmtoauthbootstrap.erl, lines 35-50 deps/rabbitmqmanagement/src/rabbitmgmtdispatcher.erl, lines 45-49 (route registration) Code Path: 1. The route /js/oidc-oauth/bootstrap.js is registered as a plain Cowboy handler (rabbitmgmtdispatcher.erl:46): Credential exposure for the affected configuration: OAuth2 client secret is accessible without any authentication Token theft: Attacker can complete the authorization code flow using stolen authorization codes Client impersonation: Attacker can make requests. Any RabbitMQ deployment with: This issue is fixed in versions 4.3.3 and 4.2.9.",
+  "aliases": [
+    "CVE-2026-67410"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/60a85d3605ebf94fd234497242812547d441d457"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/869f800998334bb363f2ad046f58de9caedc409e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-f9f2-q3jf-wfj3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67410"
+    }
+  ],
+  "published": "2026-10-01T09:33:50.763Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

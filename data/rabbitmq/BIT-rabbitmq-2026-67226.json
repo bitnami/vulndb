@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67226",
+  "summary": "RabbitMQ: Admin-only atom exhaustion: PUT /api/users tags list",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.0.0 until 4.0.22 and 4.1.14 and 4.2.7, Admin-only atom exhaustion: PUT /api/users tags list. settags/2 maps rabbitdatacoercion:toatom/1 over the user's tags list. The 20 MB management body limit fits ~3-4M short tag strings. An administrator can crash the node in a single request by creating a user (or importing definitions) with ~1M unique tag administrator. This issue is fixed in versions 4.0.22 and 4.1.14 and 4.2.7.",
+  "aliases": [
+    "CVE-2026-67226"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.22"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.14"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/86601c5a6d1c7e41060e3dbd165c88bdc91266ee"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-34c7-r8w9-5wv8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67226"
+    }
+  ],
+  "published": "2026-10-01T09:33:16.686Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

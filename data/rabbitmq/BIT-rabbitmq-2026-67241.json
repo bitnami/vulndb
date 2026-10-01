@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67241",
+  "summary": "RabbitMQ: AMQP 1.0 management exchange.declare skips alternate-exchange permission check",
+  "details": "RabbitMQ is a messaging and streaming broker. From 4.2.0 until 4.2.9 and 4.3.3, AMQP 1.0 management exchange.declare skips alternate-exchange permission check. pUT /exchanges/:name (lines 192-240) checks only configure on the declared exchange and passes XArgs straight to rabbitexchange:declare/7. It omits the checkreadpermitted(X) + checkwritepermitted(AE) that rabbitchannel.erl:2540-2548 enforces for the alternate-exchange argument on the AMQP 0-9-1 path. The same file already implements the analogous DLX check for queues (lines 708-719), confirming this is a missing-check bug rather than intentional A user with only configure on exchange X can route X's unroutable messages into an alternate exchange they have no write permission AMQP 1.0 enabled (default in RabbitMQ 4.x) Attacker has configure on at least one exchange but lacks write on the target. This issue is fixed in versions 4.2.9 and 4.3.3.",
+  "aliases": [
+    "CVE-2026-67241"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:L/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.9"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/18eac8d547b4382bf830c621b20a35932dd1cfa5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/commit/56005e7cebffc478ef397573de24aff1167e7cda"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-rg2g-289m-xhhw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67241"
+    }
+  ],
+  "published": "2026-10-01T09:33:39.054Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

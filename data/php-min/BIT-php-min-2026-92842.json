@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-php-min-2026-92842",
+  "summary": "OOB read / info leak in convert.* stream filters when line-break-chars contains NUL",
+  "details": "The convert.base64-encode, convert.quoted-printable-encode and convert.quoted-printable-decode stream filters accept a line-break-chars option whose length is tracked separately from the string itself. The filter constructors duplicate the value with pestrdup(), which stops at the first NUL byte, while keeping the original length. When the filter later emits a line break it copies the recorded length out of the truncated allocation, reading past its end and placing adjacent heap bytes into the filter output.",
+  "aliases": [
+    "CVE-2026-92842"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php-min",
+        "purl": "pkg:bitnami/php-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.34"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.35"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.4.26"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-88hq-2827-7pg6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92842"
+    }
+  ],
+  "published": "2026-10-01T09:34:25.216Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

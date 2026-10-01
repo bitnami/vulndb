@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-php-2026-93682",
+  "summary": "Out-of-bounds read in the HTTP stream wrapper when following a redirect with an empty Location header",
+  "details": "When the HTTP stream wrapper follows a redirect and the response carries a Location header with an empty value, the redirect code reads one byte past the end of the heap buffer holding the location. The value of that out-of-bounds byte decides which redirect target is built, so a malicious server controls whether the client is sent to the host root or to the current directory.",
+  "aliases": [
+    "CVE-2026-93682"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "php",
+        "purl": "pkg:bitnami/php"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.2.34"
+            },
+            {
+              "introduced": "8.3.0"
+            },
+            {
+              "fixed": "8.3.35"
+            },
+            {
+              "introduced": "8.4.0"
+            },
+            {
+              "fixed": "8.4.26"
+            },
+            {
+              "introduced": "8.5.0"
+            },
+            {
+              "fixed": "8.5.11"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/php/php-src/security/advisories/GHSA-7875-c8px-7q5f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93682"
+    }
+  ],
+  "published": "2026-10-01T09:34:13.249Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

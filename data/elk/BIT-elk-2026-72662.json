@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-72662",
+  "summary": "Authorization Bypass Through User-Controlled Key in Kibana Leading to Unauthorized Disclosure, Modification, and Deletion of Data",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana can lead to unauthorized disclosure, modification, and deletion of data via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). An authenticated user granted the Timeline feature privilege in a Kibana space could enumerate, read, modify, and delete draft Timeline objects belonging to other users in the same space. Read access is sufficient for enumeration and disclosure; the Timeline write privilege is required for modification and deletion.",
+  "aliases": [
+    "CVE-2026-72662"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.22"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-22-9-4-6-security-update-esa-2026-103/390679"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72662"
+    }
+  ],
+  "published": "2026-10-01T09:24:43.308Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

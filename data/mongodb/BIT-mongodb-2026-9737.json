@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongodb-2026-9737",
+  "summary": "Find command with $meta sort can lead to crash",
+  "details": "During query planning when reading the sort pattern in raw BSONObj form, in some places we don’t explicitly handle the meta expression case. This may lead to incorrect transformations leading to invariant failure.",
+  "aliases": [
+    "CVE-2026-9737"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongodb",
+        "purl": "pkg:bitnami/mongodb"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.39"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.28"
+            },
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "8.3.7"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:-:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://jira.mongodb.org/browse/SERVER-128341"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9737"
+    }
+  ],
+  "published": "2026-10-01T09:32:15.647Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}
