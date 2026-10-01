@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-100632",
+  "summary": "Parse Server 9.0.0 before 9.10.1 Protected Fields Disclosure via LiveQuery",
+  "details": "Parse Server is an open-source backend server. In versions >= 9.0.0 and < 9.10.1, and in versions < 8.6.89, LiveQuery evaluates the protectedFields class-level permission against an incompletely resolved caller identity: the subscriber's roles are not resolved, and when a subscription does not supply its own session token the event payload is redacted against an anonymous identity even though the read was authorized against the connected user. As a result, field masks defined for a role, for authenticated users, or for a specific user are not applied, so an authenticated subscriber can receive field values that the REST API correctly withholds and can use a masked field to filter or watch a subscription. Only classes with LiveQuery enabled that define protectedFields under a role:, authenticated, or per-user group are affected; masks under the public (*) group are applied correctly. The issue is fixed in 9.10.1 and 8.6.89. As a workaround, additionally define the affected field masks under the public (*) group, or disable LiveQuery for classes whose class-level permissions rely on role-scoped, authenticated, or per-user protectedFields groups.",
+  "aliases": [
+    "CVE-2026-100632"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.89"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-9jpp-xhh6-75mf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100632"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-before-9.10.1-protected-fields-disclosure-via-livequery"
+    }
+  ],
+  "published": "2026-10-01T10:36:21.879Z",
+  "modified": "2026-10-01T10:55:19.103Z"
+}
