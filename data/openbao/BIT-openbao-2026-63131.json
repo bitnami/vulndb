@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-63131",
+  "summary": "OpenBao LIST ACL bypass: a trailing-slash LIST request skips a more-specific deny rule (unported Vault v2.0.3 fix)",
+  "details": "OpenBao is an open source identity-based secrets management system. Prior to 2.6.0, OpenBao's vault/policy/acl.go could evaluate a broader wildcard ACL grant before more-specific trailing-wildcard ACL paths with capabilities = [\"deny\"] for a LIST operation. When a parent path permitted LIST and a child path was denied, the trailing-slash lookup could therefore allow listing the denied path. Other operation types are outside the repository advisory's affected scope. This issue is fixed in version 2.6.0.",
+  "aliases": [
+    "CVE-2026-63131"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/hashicorp/vault/blob/main/CHANGELOG.md#203"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/commit/2e9625d6cebe4639d051ef53dd6ce7c49914ae6a"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/commit/f58d848c139e5ba71aa63103fcfe101972b999fc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/pull/3389"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/pull/3474"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/releases/tag/v2.6.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-xp3c-3jw3-4vcr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63131"
+    }
+  ],
+  "published": "2026-10-01T05:54:22.879Z",
+  "modified": "2026-10-01T06:16:48.082Z"
+}
