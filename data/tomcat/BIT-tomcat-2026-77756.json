@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-77756",
+  "summary": "Apache Tomcat: Transfer-Encoding honored for HTTP/1.0 requests",
+  "details": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') vulnerability in Apache Tomcat caused by processing the transfer-encoding header for an HTTP/1.0 request may allow an attacker to cause one request from another user to fail when Tomcat is located behind a reverse proxy.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.25, from 10.1.0 through 10.1.59, from 9.0.47 through 9.0.121.\n\n\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: from 8.5.67 through 8.5.100. Other unsupported versions may also be affected.\n\n\n\nUsers are recommended to upgrade to version 11.0.26, 10.1.60 or 9.0.122, which fix the issue.",
+  "aliases": [
+    "CVE-2026-77756"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.67"
+            },
+            {
+              "fixed": "9.0.45"
+            },
+            {
+              "introduced": "9.0.47"
+            },
+            {
+              "fixed": "9.0.122"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.60"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.26"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/09/23/22"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/bl5b6rxqh3vb2k9bj2794vhor7o6xl3z"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77756"
+    }
+  ],
+  "published": "2026-10-01T09:36:27.286Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

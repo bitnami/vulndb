@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-67240",
+  "summary": "RabbitMQ: ReDoS via AMQP 1.0 SQL filter LIKE wildcard",
+  "details": "RabbitMQ is a messaging and streaming broker. Prior to versions 4.2.7 and 4.3.1, pattern_to_regex maps % -> .*? and _ -> ., then compiles ^...$ with only [unicode]; re:run is called with only [{capture, none}] - no explicit match_limit. A pattern like %_%_..._%X becomes ^.*?..*?.....*?.X$ with overlapping lazy quantifiers. The whole-expression cap is ?MAX_EXPRESSION_LENGTH=4096 chars / ?MAX_TOKENS=200; a LIKE string literal is one token, so ~2000 %_ pairs fit. SQL filters are accepted unconditionally at rabbit_amqp_session.erl:3264 (no feature flag). Evaluated per-message at rabbit_stream_queue.erl:1439. OTP's default 10M match_limit caps each match at ~100-200 ms (not seconds), and the re NIF yields to the scheduler. An authenticated AMQP 1.0 consumer with read+write on a stream queue can cause ~100-200 ms of CPU per delivered message via a crafted LIKE filter, multiplied across thousands of messages and parallel sessions - a substantial backtracking-driven CPU amplification. Preconditions include AMQP 1.0 with stream queues in use Attacker can attach a receiver with a filter (read permission) and publish messages with long property values (write permission). This issue is fixed in versions 4.2.7 and 4.3.1.",
+  "aliases": [
+    "CVE-2026-67240"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.7"
+            },
+            {
+              "introduced": "4.3.0"
+            },
+            {
+              "fixed": "4.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-59c5-553c-57m2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67240"
+    }
+  ],
+  "published": "2026-10-01T09:33:37.521Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

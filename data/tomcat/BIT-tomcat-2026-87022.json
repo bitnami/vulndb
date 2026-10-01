@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-87022",
+  "summary": "Apache Tomcat: WebSocket message smuggling with per-message-deflate",
+  "details": "Improper handling of length parameter inconsistency vulnerability in Apache Tomcat allows WebSocket message smuggling when per-message-deflate is used.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.25, from 10.1.0 through 10.1.59, from 9.0.0 through 9.0.121.\n\n\n\nThe following versions were EOS at the time the CVE was created but are known to be affected: from 8.5.0 through 8.5.100, from 7.0.56 through 7.0.109. Other unsupported versions may also be affected.\n\n\n\nUsers are recommended to upgrade to version 11.0.26, 10.1.60 or 9.1.22, which fix the issue.",
+  "aliases": [
+    "CVE-2026-87022"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.56"
+            },
+            {
+              "fixed": "9.0.45"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.60"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.26"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.122"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/09/23/30"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/ypvlkjqsq0480fnk9jm6h9qllddwlw4w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87022"
+    }
+  ],
+  "published": "2026-10-01T09:36:37.109Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}

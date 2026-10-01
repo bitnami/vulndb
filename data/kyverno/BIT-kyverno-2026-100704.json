@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-100704",
+  "summary": "Kyverno before 1.19.1 ImageValidatingPolicy Exception Bypass",
+  "details": "Kyverno is a policy engine for Kubernetes. In versions 1.14.0 through 1.19.0, the ImageValidatingPolicy (policies.kyverno.io/v1beta1) evaluator never reads the spec.images and spec.allowedValues fields of a PolicyException. Any PolicyException whose policyRefs and matchConditions match a resource causes image signature verification to be skipped for the entire resource rather than only for the listed images or values, so an exception intended to exempt a single trusted image exempts every image on the matched resource(s). As a result, unsigned or untrusted images can be admitted to the cluster without signature verification. This differs from ValidatingPolicy, GeneratingPolicy, and MutatingPolicy, which treat the same field as a partial exemption. The issue is fixed in version 1.19.1.",
+  "aliases": [
+    "CVE-2026-100704"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.14.0"
+            },
+            {
+              "fixed": "1.19.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-5cjf-wwfg-pj4c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100704"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/kyverno-before-1.19.1-imagevalidatingpolicy-exception-bypass"
+    }
+  ],
+  "published": "2026-10-01T09:26:24.560Z",
+  "modified": "2026-10-01T09:55:18.588Z"
+}
