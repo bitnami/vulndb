@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-100631",
+  "summary": "Parse Server 9.0.0 Unauthenticated Installation Deletion via Operator Injection",
+  "details": "Parse Server is an open source backend server. In versions prior to 8.6.90 and in versions from 9.0.0 prior to 9.10.1, the device token deduplication logic for installation records does not validate the type of client-supplied installation fields before using them to build database queries. An unauthenticated remote attacker who knows only the public application ID can submit non-string values in these fields to inject query operators, causing the deduplication cleanup — which runs with elevated privileges before class-level permissions are evaluated — to delete every device registration in the application or an attacker-chosen subset of them. No account, session token, master key, or user interaction is required. Deleted registrations cannot be recovered on the server, so push notifications cannot be delivered until every client re-registers. Any deployment that exposes the REST API to clients and uses push notifications is affected in its default configuration. Versions 8.6.90 and 9.10.1 fix the issue by rejecting non-string values with a client error and by scoping the deduplication cleanup to the calling application. No workaround other than upgrading is available.",
+  "aliases": [
+    "CVE-2026-100631"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.90"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-cc6h-c8m4-hgrx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100631"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-unauthenticated-installation-deletion-via-operator-injection"
+    }
+  ],
+  "published": "2026-10-01T10:36:20.756Z",
+  "modified": "2026-10-01T10:55:19.103Z"
+}
