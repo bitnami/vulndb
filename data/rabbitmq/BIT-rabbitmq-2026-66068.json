@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-2026-66068",
+  "summary": "RabbitMQ: Shovel DEBUG log of full state exposes decrypted URIs",
+  "details": "RabbitMQ is a messaging and streaming broker. Prior to versions 3.13.15, 4.0.20, 4.1.11, 4.2.6, and 4.3.0, ?LOG_DEBUG(\"shutting down Shovel '~ts', ... Shovel state: ~tp\", [Name, State]) formats the entire state map. The 'uris' field holds plaintext URIs after credentials_obfuscation:decrypt (called in rabbit_shovel_util:deobfuscated_uris/2). No format_status/1,2 callback exists in rabbit_shovel_worker to redact it. Triggered when an autodelete shovel (src-delete-after = N) completes. With DEBUG logging enabled, autodelete-shovel completion writes the full shovel state map , including decrypted amqp://user:password@host/ URIs , to the broker log file. Preconditions include Shovel plugin enabled with URI-embedded credentials DEBUG log level (non-default) Autodelete shovel configuration Attacker has log read access. This issue is fixed in versions 3.13.15, 4.0.20, 4.1.11, 4.2.6, and 4.3.0.",
+  "aliases": [
+    "CVE-2026-66068"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq",
+        "purl": "pkg:bitnami/rabbitmq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.15"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.20"
+            },
+            {
+              "introduced": "4.1.0"
+            },
+            {
+              "fixed": "4.1.11"
+            },
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "fixed": "4.2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-9wm4-9m6g-w38x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66068"
+    }
+  ],
+  "published": "2026-09-30T23:50:01.690Z",
+  "modified": "2026-10-01T00:02:52.267Z"
+}
