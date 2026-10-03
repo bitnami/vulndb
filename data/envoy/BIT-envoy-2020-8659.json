@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-envoy-2020-8659",
+  "details": "CNCF Envoy through 1.13.0 may consume excessive amounts of memory when proxying HTTP/1.1 requests or responses with many small (i.e. 1 byte) chunks.",
+  "aliases": [
+    "CVE-2020-8659"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "envoy",
+        "purl": "pkg:bitnami/envoy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "1.13.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:envoyproxy:envoy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://access.redhat.com/errata/RHSA-2020:0734"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/envoyproxy/envoy/security/advisories/GHSA-jwcm-4pwp-c2qv"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00025.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8659"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.envoyproxy.io/docs/envoy/v1.13.1/intro/version_history"
+    }
+  ],
+  "published": "2026-10-03T08:39:21.595Z",
+  "modified": "2026-10-03T09:05:13.546Z"
+}
