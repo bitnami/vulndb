@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-python-2026-82049",
   "summary": "tarfile extraction filters allow file modification and content disclosure via hard link to symlink",
-  "details": "In CPython 3.13 and earlier, the tarfile module's data and tar extraction filters are vulnerable to crafted archives containing a hard link to a symbolic link. Such archives may cause extraction to modify the permissions or modification time of a file outside the destination directory, or expose the contents of that file within the extracted tree.",
+  "details": "In CPython 3.13 and earlier, the tarfile module's data and tar extraction filters are vulnerable to crafted archives containing a hard link to a symbolic link. Such archives may cause extraction to modify the permissions or modification time of a file outside the destination directory, or expose the contents of that file within the extracted tree.",
   "aliases": [
     "CVE-2026-82049"
   ],
@@ -27,7 +27,37 @@
               "introduced": "0"
             },
             {
-              "fixed": "3.14.0"
+              "fixed": "3.10.22"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.17"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.10.22"
+            },
+            {
+              "introduced": "3.11.0"
+            },
+            {
+              "fixed": "3.11.17"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.15"
+            },
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.16"
             }
           ]
         }
@@ -91,5 +121,5 @@
     }
   ],
   "published": "2026-09-21T09:07:26.646Z",
-  "modified": "2026-10-01T09:55:18.588Z"
+  "modified": "2026-10-03T18:04:43.755Z"
 }
