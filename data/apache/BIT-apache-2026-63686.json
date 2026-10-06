@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2026-63686",
+  "summary": "Apache HTTP Server: mod_xml2enc crash on charset conversion failure",
+  "details": "A NULL pointer dereference in mod_xml2enc in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows an untrusted backend server to cause a denial of service via a proxied response with a charset whose conversion partially succeeds then fails.\n\nUsers are recommended to upgrade to version 2.4.69, which fixes this issue.",
+  "aliases": [
+    "CVE-2026-63686"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.69"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/25"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63686"
+    }
+  ],
+  "published": "2026-10-06T11:41:03.404Z",
+  "modified": "2026-10-06T12:12:21.709Z"
+}

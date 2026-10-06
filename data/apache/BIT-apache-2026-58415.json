@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2026-58415",
+  "summary": "Apache HTTP Server: mod_dav_fs property database read access",
+  "details": "Internal state files accessible to external parties in mod_dav_fs in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows a remote client to read WebDAV dead properties of resources it cannot author via a GET request for the .DAV state directory\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+  "aliases": [
+    "CVE-2026-58415"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.69"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/20"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58415"
+    }
+  ],
+  "published": "2026-10-06T11:40:56.066Z",
+  "modified": "2026-10-06T12:12:21.709Z"
+}

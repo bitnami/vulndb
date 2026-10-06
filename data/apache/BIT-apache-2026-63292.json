@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apache-2026-63292",
+  "summary": "Apache HTTP Server: mod_vhost_alias stack overflow",
+  "details": "Stack-based buffer overflow in mod_vhost_alias in Apache Software Foundation Apache HTTP Server through 2.4.68 on all platforms allows a remote client to cause a denial of service or potentially execute arbitrary code via an HTTP request with a Host header exceeding 8192 bytes when VirtualDocumentRoot uses a hostname format specifier and LimitRequestFieldSize is raised above the default.\n\nUsers are recommended to upgrade to version 2.4.69, which fixes this issue.",
+  "aliases": [
+    "CVE-2026-63292"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apache",
+        "purl": "pkg:bitnami/apache"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.4.0"
+            },
+            {
+              "fixed": "2.4.69"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/24"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63292"
+    }
+  ],
+  "published": "2026-10-06T11:41:02.070Z",
+  "modified": "2026-10-06T12:12:21.709Z"
+}
