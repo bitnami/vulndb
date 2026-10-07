@@ -1,10 +1,10 @@
 {
   "schema_version": "1.6.2",
-  "id": "BIT-apache-2026-42528",
-  "summary": "Apache HTTP Server: mod_dav shared lock overflow",
-  "details": "A memory calculation bug in mod_dav in Apache httpd 2.4.67 and earlier allows an attacker with permission to create WebDAV locks to crash server child processes.\n\nUsers are recommended to upgrade to version 2.4.69, which fixes this issue",
+  "id": "BIT-apache-2026-63718",
+  "summary": "Apache HTTP Server: mod_proxy_uwsgi Transfer-Encoding response smuggling",
+  "details": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') response smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi and a crafted uwsgi response with Transfer-Encoding.\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.30 through 2.4.68.",
   "aliases": [
-    "CVE-2026-42528"
+    "CVE-2026-63718"
   ],
   "affected": [
     {
@@ -16,7 +16,7 @@
       "severity": [
         {
           "type": "CVSS_V3",
-          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "2.4.0"
+              "introduced": "2.4.30"
             },
             {
               "fixed": "2.4.69"
@@ -35,7 +35,7 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*"
     ]
@@ -43,7 +43,7 @@
   "references": [
     {
       "type": "ADVISORY",
-      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/12"
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/26"
     },
     {
       "type": "ADVISORY",
@@ -51,9 +51,9 @@
     },
     {
       "type": "WEB",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42528"
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63718"
     }
   ],
-  "published": "2026-10-05T11:39:15.046Z",
+  "published": "2026-10-07T11:40:10.578Z",
   "modified": "2026-10-07T12:12:41.058Z"
 }
