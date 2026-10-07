@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-joomla-2026-90906",
+  "summary": "Joomla! Core - [20260901] - XSS in HTMLHelper::link method in Joomla 1.5.0-5.4.8, 6.0.0-6.1.3",
+  "details": "Joomla! Core - [20260901] - XSS in HTMLHelper::link method in Joomla 1.5.0-5.4.8, 6.0.0-6.1.3 - Lack of escaping leads to XSS vulnerabilities in the link method of the HTML Helper.",
+  "aliases": [
+    "CVE-2026-90906"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "joomla",
+        "purl": "pkg:bitnami/joomla"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.5.0"
+            },
+            {
+              "fixed": "5.4.8"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.1.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:joomla:joomla!:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://developer.joomla.org/security-centre/1081-20260901-core-xss-in-htmlhelper-link-method.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90906"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.joomla.org/"
+    }
+  ],
+  "published": "2026-10-07T08:47:29.394Z",
+  "modified": "2026-10-07T09:14:46.766Z"
+}
