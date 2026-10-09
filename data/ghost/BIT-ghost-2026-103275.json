@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-103275",
+  "summary": "Ghost 5.42.2 before 6.58.0 Password Hash Disclosure",
+  "details": "Ghost 5.42.2 before 6.58.0 contains an information disclosure vulnerability in the Admin API bulk post and page edit and delete endpoints, which accept filters on restricted fields such as authors.password, because of an incomplete fix for CVE-2026-70590. Staff-level attackers can infer other staff users' password hashes from which filters match and perform offline password-guessing attacks against them.",
+  "aliases": [
+    "CVE-2026-103275"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.42.2"
+            },
+            {
+              "fixed": "6.58.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/5ef16abe85e9b71ac3f1b1e2cbc462802efe3b5b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-ghq6-q78f-2cpg"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103275"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-5.42.2-before-6.58.0-password-hash-disclosure"
+    }
+  ],
+  "published": "2026-10-09T08:42:46.143Z",
+  "modified": "2026-10-09T09:07:18.841Z"
+}

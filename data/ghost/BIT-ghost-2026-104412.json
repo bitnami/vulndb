@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-104412",
+  "summary": "Ghost 0.5.0 before 6.64.0 Privilege Escalation via Staff Role Assignment",
+  "details": "Ghost 0.5.0 before 6.64.0 does not correctly restrict staff role assignment, allowing users with the Editor or Super Editor role to assign their own role to other staff despite lacking permission to do so. An authenticated Editor or Super Editor can promote Author and Contributor users to Editor or Super Editor.",
+  "aliases": [
+    "CVE-2026-104412"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.5.0"
+            },
+            {
+              "fixed": "6.64.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-4pvx-fwjj-8gpc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104412"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-0.5.0-before-6.64.0-privilege-escalation-via-staff-role-assignment"
+    }
+  ],
+  "published": "2026-10-09T08:43:09.384Z",
+  "modified": "2026-10-09T09:07:18.841Z"
+}

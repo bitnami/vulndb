@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-thrift-2026-66054",
+  "summary": "Apache Thrift: C++ THeaderTransport does not enforce configured maxFrameSize",
+  "details": "Allocation of Resources Without Limits or Throttling, Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in Apache Thrift C++ bindings.\n\n\n\nThis issue affects Apache Thrift: before 0.25.0.\n\n\n\nUsers are recommended to upgrade to version 0.25.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-66054"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "thrift",
+        "purl": "pkg:bitnami/thrift"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.25.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:thrift:*:*:*:*:*:c++:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/33otcgbqd27wf6qq810q56znzbomnhg1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/7c23sgowkb3ssmolqofqsn8wzsddvf33"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66054"
+    }
+  ],
+  "published": "2026-10-09T08:55:15.499Z",
+  "modified": "2026-10-09T09:07:18.841Z"
+}
