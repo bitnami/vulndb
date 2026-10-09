@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-103286",
+  "summary": "Ghost 2.21.0 before 6.56.0 Privilege Escalation via Notifications",
+  "details": "Ghost versions from 2.21.0 before 6.56.0 contain a privilege escalation vulnerability in the notifications system that allows low-privilege staff users to escalate to higher-privilege staff roles. Attackers with low-privilege staff access can exploit the notifications system to gain elevated privileges without proper authorization checks.",
+  "aliases": [
+    "CVE-2026-103286"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.21.0"
+            },
+            {
+              "fixed": "6.56.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-pv24-pfvg-vr83"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103286"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-2.21.0-before-6.56.0-privilege-escalation-via-notifications"
+    }
+  ],
+  "published": "2026-10-09T10:45:05.579Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-thrift-2026-91135",
+  "summary": "Apache Thrift: C++ `THeaderTransport::transform()` heap buffer overflow (write direction)",
+  "details": "Heap-based buffer overflow vulnerability in Apache Thrift C++ THeaderTransport.\n\n\n\nWhen an application enables the ZLIB transform for the frames it sends, THeaderTransport::transform() copies the compressed frame into the write buffer without making sure it fits. Data that does not compress, such as content a remote peer supplied, grows under compression, so the copy writes past the end of the heap buffer by an amount that grows with the size of the frame, and for large frames it also reads past the end of the transform buffer.\n\n\n\nThis issue affects Apache Thrift: before 0.25.0.\n\n\n\nUsers are recommended to upgrade to version 0.25.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-91135"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "thrift",
+        "purl": "pkg:bitnami/thrift"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.25.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:thrift:*:*:*:*:*:c++:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/33otcgbqd27wf6qq810q56znzbomnhg1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/rbpwlhlxnv2qgyk8cfscp2d2fd3p0ojb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91135"
+    }
+  ],
+  "published": "2026-10-09T10:53:14.306Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}

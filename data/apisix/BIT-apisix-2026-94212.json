@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-94212",
+  "summary": "Apache APISIX: unauthenticated impersonation issue in saml-auth",
+  "details": "Improper verification of cryptographic signature vulnerability in Apache APISIX.\n\n\n\nAny unauthenticated attacker could impersonate any user on every route protected by the saml-auth plugin under default configuration. This issue affects Apache APISIX: from 3.17.0 through 3.18.0.\n\n\n\nUsers are recommended to upgrade to version 3.19.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-94212"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.17.0"
+            },
+            {
+              "fixed": "3.19.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/01/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/1230fnojnmc7bfz3n0nkt7tkcld9d1sc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94212"
+    }
+  ],
+  "published": "2026-10-09T10:43:47.772Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}

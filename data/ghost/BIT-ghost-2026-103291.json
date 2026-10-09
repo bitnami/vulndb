@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-103291",
+  "summary": "Ghost 3.20.2 before 6.51.0 SSRF via image-size fetch",
+  "details": "Ghost versions from 3.20.2 before 6.51.0 contain a server-side request forgery vulnerability in image dimension refetching that allows authenticated staff users to trigger outbound HTTP requests to arbitrary URLs. Attackers can point image cards at attacker-controlled hosts or internal network endpoints to access metadata services and internal resources unavailable from the public internet.",
+  "aliases": [
+    "CVE-2026-103291"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.20.2"
+            },
+            {
+              "fixed": "6.51.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-rrq6-9r3c-7w26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103291"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-3.20.2-before-6.51.0-ssrf-via-image-size-fetch"
+    }
+  ],
+  "published": "2026-10-09T10:45:11.140Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}
