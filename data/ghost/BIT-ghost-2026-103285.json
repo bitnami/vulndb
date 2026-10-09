@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-103285",
+  "summary": "Ghost 5.19.0 before 6.57.1 Cross-Site Request Forgery",
+  "details": "Ghost versions from 5.19.0 before 6.57.1 contain a cross-site request forgery vulnerability in the post feedback functionality that allows attackers to submit feedback on behalf of logged-in users. Attackers can craft a malicious link to the feedback page that automatically submits feedback when visited by authenticated members without their knowledge or consent.",
+  "aliases": [
+    "CVE-2026-103285"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.19.0"
+            },
+            {
+              "fixed": "6.57.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-mf3j-vxq2-vmc4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103285"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/ghost-5.19.0-before-6.57.1-cross-site-request-forgery"
+    }
+  ],
+  "published": "2026-10-09T10:45:04.326Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-13720",
+  "summary": "Editor can forge file-provisioning provenance on dashboards via the dashboard API",
+  "details": "An Editor can set file-provisioning metadata (the grafana.app/managedBy, grafana.app/managerId and grafana.app/sourcePath annotations) when creating a dashboard through the dashboard API, because these fields were stored without an authorization check. The dashboard then appears file-provisioned, and administrators can no longer update or delete it through Grafana. The impact is limited to the same organization and no data is exposed.",
+  "aliases": [
+    "CVE-2026-13720"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "12.4.12"
+            },
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.10"
+            },
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.7"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-13720"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13720"
+    }
+  ],
+  "published": "2026-10-09T10:46:27.565Z",
+  "modified": "2026-10-09T11:12:02.352Z"
+}

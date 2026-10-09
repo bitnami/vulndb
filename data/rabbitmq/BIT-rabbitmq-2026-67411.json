@@ -15,8 +15,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V4",
-          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
         }
       ],
       "ranges": [
@@ -59,30 +59,30 @@
     }
   ],
   "database_specific": {
-    "severity": "Medium",
+    "severity": "High",
     "cpes": [
       "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
-      "type": "WEB",
+      "type": "FIX",
       "url": "https://github.com/rabbitmq/rabbitmq-server/commit/a7528314840c4f8dc9904684f9f97ffa7aac6349"
     },
     {
-      "type": "WEB",
+      "type": "FIX",
       "url": "https://github.com/rabbitmq/rabbitmq-server/commit/edbead0eabbd65925d0dc914a22d6a29e155e646"
     },
     {
-      "type": "WEB",
+      "type": "ARTICLE",
       "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
     },
     {
-      "type": "WEB",
+      "type": "ARTICLE",
       "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
     },
     {
-      "type": "WEB",
+      "type": "ADVISORY",
       "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-4r6f-9cpw-f6g6"
     },
     {
@@ -91,5 +91,5 @@
     }
   ],
   "published": "2026-10-01T09:33:52.137Z",
-  "modified": "2026-10-01T09:55:18.588Z"
+  "modified": "2026-10-09T11:12:02.352Z"
 }
