@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105675",
+  "summary": "Ghost: Invite Token Disclosure in Ghost Admin API",
+  "details": "Ghost is a Node.js content management system. From 4.39.0 until 6.64.0, staff users with permission to view staff invites were able to discover the secret token of pending invites, including invites for roles with higher privileges than their own. This could allow a staff user to escalate their privileges by accepting a pending invite. This issue is fixed in version 6.64.0.",
+  "aliases": [
+    "CVE-2026-105675"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.39.0"
+            },
+            {
+              "fixed": "6.64.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/4fb587e4d49667f929b87f7d6a873ae5e9cc087f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/pull/30760"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.64.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-v6q3-xqxm-6f5v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105675"
+    }
+  ],
+  "published": "2026-10-10T20:44:21.104Z",
+  "modified": "2026-10-10T21:15:06.650Z"
+}
