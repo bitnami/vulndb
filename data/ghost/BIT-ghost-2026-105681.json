@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105681",
+  "summary": "Ghost: Authorization Bypass in Comments Feature",
+  "details": "Ghost is a Node.js content management system. From 5.9.0 until 6.44.1, an input validation issue allowed members to access comments they were not authorized to access. This issue is fixed in version 6.44.1.",
+  "aliases": [
+    "CVE-2026-105681"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.9.0"
+            },
+            {
+              "fixed": "6.44.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/405c2623ff9060295d4a87d3a0eb4ef766c8d2d3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/pull/28297"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.44.1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-6q6j-f24j-p477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105681"
+    }
+  ],
+  "published": "2026-10-10T14:43:58.611Z",
+  "modified": "2026-10-10T15:13:57.456Z"
+}
