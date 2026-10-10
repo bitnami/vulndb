@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105678",
+  "summary": "Ghost: Editors Could Promote Staff Users to Their Own Role",
+  "details": "Ghost is a Node.js content management system. From 0.5.0 until 6.64.0, staff users with the Editor or Super Editor role were able to assign their own role to Author and Contributor users, despite not having permission to assign that role. This issue is fixed in version 6.64.0.",
+  "aliases": [
+    "CVE-2026-105678"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.5.0"
+            },
+            {
+              "fixed": "6.64.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/99c5642b9bb481df4811a004a6f19d6143ed9aaf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/issues/30764"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.64.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-4pvx-fwjj-8gpc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105678"
+    }
+  ],
+  "published": "2026-10-10T14:43:54.388Z",
+  "modified": "2026-10-10T15:13:57.456Z"
+}

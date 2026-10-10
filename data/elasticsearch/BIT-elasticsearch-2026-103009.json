@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-103009",
+  "summary": "Authorization Bypass Through User-Controlled Key in Elasticsearch Leading to Information Disclosure",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Elasticsearch can lead to Information Disclosure via a specially crafted cross-cluster search request that references an unauthorized shard identifier. Elasticsearch contains an authorization bypass weakness in its handling of cross-cluster search requests made through the Remote Cluster Security (RCS) 2.0 model. An authorization check validates a request against one identifying attribute of the target shard, while a separate, independently-supplied identifying attribute in the same request determines which shard is actually accessed. A holder of a cross-cluster API key authorized for one index can craft a request whose two identifying attributes refer to different indices, causing the request to be authorized against an index they can access while actually operating against a different, unauthorized index. This can expose that index's document contents, field mappings, and other metadata, and in limited cases allows modification of retention-lease state on the unauthorized index.",
+  "aliases": [
+    "CVE-2026-103009"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.13.0"
+            },
+            {
+              "fixed": "8.19.23"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.8"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-23-9-4-8-9-5-5-security-update-esa-2026-199/390874"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103009"
+    }
+  ],
+  "published": "2026-10-10T14:41:00.150Z",
+  "modified": "2026-10-10T15:13:57.456Z"
+}
