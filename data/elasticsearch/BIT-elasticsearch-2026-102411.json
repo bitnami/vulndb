@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-102411",
+  "summary": "Allocation of Resources Without Limits or Throttling in Elasticsearch Leading to Denial of Service",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Elasticsearch can lead to Denial of Service via Excessive Allocation (CAPEC-130). Elasticsearch enforces a size limit on the user-supplied metadata field for each individual template resource, but does not limit the total memory used when multiple such resources are retrieved together. A user holding the *manage_index_templates* cluster privilege can register multiple resources each within the individual limit. Retrieving them together materializes all of their metadata values in memory at once, exhausting available heap and causing the affected node to fail with an out-of-memory error, resulting in a denial of service.",
+  "aliases": [
+    "CVE-2026-102411"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.23"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.7"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://discuss.elastic.co/t/elasticsearch-9-4-7-9-5-3-8-19-23-security-update-esa-2026-192/390865"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102411"
+    }
+  ],
+  "published": "2026-10-10T17:39:59.864Z",
+  "modified": "2026-10-10T18:13:22.264Z"
+}

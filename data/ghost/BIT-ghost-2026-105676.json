@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105676",
+  "summary": "Ghost: Path Traversal via Locale Setting",
+  "details": "Ghost is a Node.js content management system. From 1.20.0 until 6.64.0, a vulnerability in how Ghost loads theme translation files allowed an authenticated Administrator to read JSON files outside of the active theme's directory, potentially exposing server configuration secrets. This issue is fixed in version 6.64.0.",
+  "aliases": [
+    "CVE-2026-105676"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "fixed": "6.64.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/d2f498694be549074dd5817fd0e8a1371b65df02"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/issues/30635"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.64.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-m382-6jw4-fmp6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105676"
+    }
+  ],
+  "published": "2026-10-10T17:43:00.698Z",
+  "modified": "2026-10-10T18:13:22.264Z"
+}

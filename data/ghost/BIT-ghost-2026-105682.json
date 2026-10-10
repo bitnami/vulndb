@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105682",
+  "summary": "Ghost: Server-Side Request Forgery in Webhook Trigger",
+  "details": "Ghost is a Node.js content management system. From 1.18.0 until 6.27.0, an SSRF vulnerability in the webhooks feature allowed staff users to probe internal hosts from the Ghost server. This issue is fixed in version 6.27.0.",
+  "aliases": [
+    "CVE-2026-105682"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "6.27.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/815962dd2760e55c5dc8d0fb7fac732a7634566f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/issues/27219"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.27.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-354h-gmhv-mr9c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105682"
+    }
+  ],
+  "published": "2026-10-10T17:43:09.656Z",
+  "modified": "2026-10-10T18:13:22.264Z"
+}
