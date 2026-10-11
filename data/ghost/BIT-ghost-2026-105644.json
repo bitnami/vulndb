@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ghost-2026-105644",
+  "summary": "Ghost: Stored XSS via SVG Files in Content Imports",
+  "details": "Ghost is a Node.js content management system. From 4.0.0 until 6.67.0, SVG images included in content imports were stored without sanitization. An attacker who convinced an Administrator to import a crafted file could host scripts on the site's domain, possibly resulting in compromise of staff users' admin sessions. This issue is fixed in version 6.67.0.",
+  "aliases": [
+    "CVE-2026-105644"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ghost",
+        "purl": "pkg:bitnami/ghost"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "6.67.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:ghost:ghost:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/commit/1be06f4e95a5eb159d14abda7660e689af13cff1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/pull/31060"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.66.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-hqq2-xqr2-fmx2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105644"
+    }
+  ],
+  "published": "2026-10-10T23:43:28.034Z",
+  "modified": "2026-10-11T00:14:38.600Z"
+}
