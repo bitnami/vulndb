@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elk-2026-102406",
+  "summary": "Authorization Bypass Through User-Controlled Key in Kibana Leading to Cross-Tenant Data Interception",
+  "details": "Authorization Bypass Through User-Controlled Key (CWE-639) in Kibana could lead to cross-tenant data interception. In this context, \"tenant\" refers to a user or team sharing the same Kibana deployment, not a separate Elastic Cloud organization or customer. Kibana's Fleet package installation process allowed a user holding delegated Fleet package-management privileges, without direct Elasticsearch administrative privileges, to claim a data stream identifier already in use by another tenant. Because ownership of that identifier was not verified before Fleet applied the uploaded package's generated index and ingest-pipeline settings to already-existing infrastructure, an attacker could redirect an existing tenant's data stream through infrastructure under their control. This exposed the affected tenant's subsequently ingested data to unauthorized disclosure and modification, and prevented that data from reaching its intended destination. Interception could continue even after the malicious package was removed, requiring separate remediation of the affected infrastructure.",
+  "aliases": [
+    "CVE-2026-102406"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elk",
+        "purl": "pkg:bitnami/elk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.14.0"
+            },
+            {
+              "fixed": "8.19.22"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.7"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:elasticsearch:kibana:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://discuss.elastic.co/t/kibana-8-19-22-9-4-7-9-5-4-security-update-esa-2026-187/390860"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102406"
+    }
+  ],
+  "published": "2026-10-14T08:40:36.417Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

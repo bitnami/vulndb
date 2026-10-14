@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-102407",
+  "summary": "Incorrect Authorization in Elasticsearch Leading to Unauthorized Data Stream Modification",
+  "details": "Incorrect Authorization (CWE-863) in Elasticsearch can lead to unauthorized data stream modification via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). An authenticated user with sufficient privileges over a single resource could use the Modify Data Streams API to modify a data stream to which they were not otherwise authorized, potentially injecting data into it or affecting its ability to be searched normally. This issue does not allow an attacker to read the contents of a data stream they do not otherwise have access to.",
+  "aliases": [
+    "CVE-2026-102407"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.17.5"
+            },
+            {
+              "fixed": "8.19.19"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.3.8"
+            },
+            {
+              "introduced": "9.4.0"
+            },
+            {
+              "fixed": "9.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-19-9-3-8-9-4-4-security-update-esa-2026-188/390861"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102407"
+    }
+  ],
+  "published": "2026-10-14T08:40:26.339Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

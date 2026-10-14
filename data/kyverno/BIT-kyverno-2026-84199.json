@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-84199",
+  "summary": "Kyverno before 1.16.2 SSRF via APICall Feature",
+  "details": "Kyverno before 1.16.2 contains a server-side request forgery (SSRF) vulnerability in the APICall feature. The URL field in a Policy's ServiceCall configuration is not validated, so a user with namespace-level Policy creation permissions can direct Kyverno to make HTTP requests to arbitrary internal resources (e.g., cloud metadata endpoints such as 169.254.169.254 or other tenants' resources). Because Kyverno executes these requests using its cluster-wide high-privilege ServiceAccount (a Confused Deputy problem), the responses—potentially including other tenants' secrets and cloud IAM credentials—are returned in the PolicyReport and can be read by the attacker, breaking multi-tenant isolation.",
+  "aliases": [
+    "CVE-2026-84199"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.16.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-fmqp-4wfc-w3v7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84199"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/kyverno-before-1.16.2-ssrf-via-apicall-feature"
+    }
+  ],
+  "published": "2026-10-14T08:47:48.970Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

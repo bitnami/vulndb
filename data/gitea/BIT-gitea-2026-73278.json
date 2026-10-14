@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-73278",
+  "summary": "Gitea WebAuthn bypass during OAuth and OIDC sign-in",
+  "details": "Gitea's OAuth2 and OpenID Connect sign-in paths do not require a WebAuthn challenge when WebAuthn is the account's only configured second factor. A party able to authenticate through the affected external identity flow can obtain a full session without the passkey verification enforced during password login. One affected path can also persist an external identity link, extending the compromise beyond the initial session; accounts with TOTP configured are outside the reported WebAuthn-only scenario.",
+  "aliases": [
+    "CVE-2026-73278"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.16.0"
+            },
+            {
+              "fixed": "1.27.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-1.27.2/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/38805"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/38810"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v1.27.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-92j2-6qcg-c28c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73278"
+    }
+  ],
+  "published": "2026-10-14T08:43:01.032Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}
