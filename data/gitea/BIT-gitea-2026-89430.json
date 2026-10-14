@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-89430",
+  "summary": "Gitea push mirror SSRF and forced writes to internal Git hosts",
+  "details": "Gitea validated a push mirror's remote address against the `[migrations]` allow and block lists only when the mirror was created. Each synchronization passed the stored address directly to `git push`, so a name that later resolved to a blocked or internal address was still reached. A user with administrator access to a repository, which includes repositories they create themselves, could aim push mirror synchronization at internal Git services and force-push the repository's contents to them.",
+  "aliases": [
+    "CVE-2026-89430"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39010"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39426"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-hcgw-r9gf-8mph"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89430"
+    }
+  ],
+  "published": "2026-10-14T08:43:06.048Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

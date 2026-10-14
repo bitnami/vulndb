@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-104633",
+  "summary": "Gitea migration memory exhaustion from zero page size",
+  "details": "When migrating a repository from another Gitea instance, Gitea used the page size reported in the source server's API settings to end its paginated downloads. A source that reported `max_response_items` as `0` made these loops run indefinitely and grow server memory until it was exhausted. Any user who can migrate repositories could point a migration at a server they control and cause a denial of service.",
+  "aliases": [
+    "CVE-2026-104633"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.1.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39501"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39507"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.1.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-jj5r-9rpc-8h6h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104633"
+    }
+  ],
+  "published": "2026-10-14T08:42:40.149Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-96589",
+  "summary": "Gitea private repository access retained after rejected transfer",
+  "details": "When a private repository is transferred to a user who lacks access, Gitea grants that recipient temporary read access as a collaborator so they can review the repository. Rejecting or cancelling the transfer did not revoke this collaboration, so the named recipient kept persistent read access to the private repository, including its code, issues, pull requests and wiki, and could clone it. The repository owner was not notified. Transfer-granted access is now removed while collaborations that existed before the transfer are preserved.",
+  "aliases": [
+    "CVE-2026-96589"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39042"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-xfqq-h54g-92f8"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96589"
+    }
+  ],
+  "published": "2026-10-14T08:43:16.262Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

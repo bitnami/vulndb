@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-104626",
+  "summary": "Gitea fork workflow job revival through later approval",
+  "details": "A user who can open a fork pull request can place workflow content with a shared run-level concurrency group into a Gitea Actions run that is awaiting approval. When a later run in that group cancels the blocked job, the run becomes terminal while still marked as needing approval. If a maintainer later approves the run, Gitea passed the already-cancelled job back through concurrency preparation, set it to waiting, and made it claimable by a matching runner, executing fork-controlled workflow code. Exploitation requires the maintainer's later approval action, Actions to be enabled, and a runner that accepts the repository's jobs.",
+  "aliases": [
+    "CVE-2026-104626"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39399"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-93pj-3x56-5gc2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104626"
+    }
+  ],
+  "published": "2026-10-14T08:42:37.770Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

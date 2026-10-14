@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-96594",
+  "summary": "Gitea repository media API stored XSS",
+  "details": "The Gitea API endpoint `GET /api/v1/repos/{owner}/{repo}/media/{filepath}` wrote files of up to 1 KiB that are stored directly in Git, not in LFS, to the response without the content type and disposition headers Gitea uses for user content. An HTML file committed to a repository was therefore rendered by the browser on the Gitea origin. A user who can push to a repository could run JavaScript in the session of a victim who opens the media URL and act with the victim's permissions.",
+  "aliases": [
+    "CVE-2026-96594"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.1.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39501"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39507"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.1.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-94rx-fqm6-q23v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96594"
+    }
+  ],
+  "published": "2026-10-14T08:43:17.529Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

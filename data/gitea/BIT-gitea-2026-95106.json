@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-95106",
+  "summary": "Gitea review and execution mismatch through duplicate tree entries",
+  "details": "Gitea accepted pushed Git trees containing two entries with the same name, which Git's own consistency checks reject. Gitea's web views resolved such a path to the first entry, while `git checkout`, Gitea Actions, and release archives use the last. A contributor could open a pull request whose diff and file views show benign content while CI and checkouts at the same commit use different, attacker-controlled content. Incoming objects are now checked for consistency; objects already stored in existing repositories are not rescanned.",
+  "aliases": [
+    "CVE-2026-95106"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39472"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-6pv5-8rp7-8c75"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95106"
+    }
+  ],
+  "published": "2026-10-14T08:43:08.365Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

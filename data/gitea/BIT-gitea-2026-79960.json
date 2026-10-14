@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-79960",
+  "summary": "Gitea deploy key pushes acting as the repository owner",
+  "details": "When a push was authenticated with a deploy key, Gitea recorded the repository owner as the pusher, so permission checks in the push hook pipeline evaluated the owner instead of the deploy key. A holder of a writable deploy key could create protected tags without being on the tag allow list and change repository visibility through push options, for example making a private repository public. Pull requests created through the AGit flow with a deploy key were also attributed to the owner.",
+  "aliases": [
+    "CVE-2026-79960"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/37306"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-7769-9pr9-m24h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79960"
+    }
+  ],
+  "published": "2026-10-14T08:43:02.338Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}

@@ -49,7 +49,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
     ]
   },
   "references": [
@@ -63,5 +64,5 @@
     }
   ],
   "published": "2026-10-13T06:47:22.097Z",
-  "modified": "2026-10-13T07:22:07.779Z"
+  "modified": "2026-10-14T09:12:20.145Z"
 }

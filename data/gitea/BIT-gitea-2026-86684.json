@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-86684",
+  "summary": "Gitea push mirror local path check uses the repository owner",
+  "details": "The Gitea push mirror API checked whether the repository owner, instead of the requesting user, may use local file system paths. On instances with `[security] IMPORT_LOCAL_PATHS = true`, a repository administrator who is not allowed to import local paths could add a push mirror to a local path on the server when the repository owner has that permission. Gitea then pushed the repository's refs into an existing Git repository at that path with the permissions of the Gitea process.",
+  "aliases": [
+    "CVE-2026-86684"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.18.0"
+            },
+            {
+              "fixed": "28.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.1.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39501"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39507"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.1.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-7v5j-mph8-9w6g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86684"
+    }
+  ],
+  "published": "2026-10-14T08:43:03.580Z",
+  "modified": "2026-10-14T09:12:20.145Z"
+}
