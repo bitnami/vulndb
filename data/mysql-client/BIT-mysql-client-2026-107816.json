@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mysql-client-2026-107816",
+  "summary": "MariaDB: `qc_info` plugin can do OOB reads if query contains \\0",
+  "details": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the qc_info plugin could be confused by a query containing embedded null bytes. Reading information_schema.query_cache_info after such a query was cached could access data beyond the end of a heap-allocated buffer, potentially disclosing adjacent memory or crashing the server. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
+  "aliases": [
+    "CVE-2026-107816"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-client",
+        "purl": "pkg:bitnami/mysql-client"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.28"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.19"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.13"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.9"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.3"
+            },
+            {
+              "introduced": "13.0.1"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/MariaDB/server/commit/0931994096b84ecc9ffc8eb3517c7e09e6e8631e"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.11.19"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.6.28"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.4.13"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.8.9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-12.3.3"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-13.0.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-wfqg-88r5-55f6"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://jira.mariadb.org/browse/MDEV-40670"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107816"
+    }
+  ],
+  "published": "2026-10-15T08:50:38.744Z",
+  "modified": "2026-10-15T09:07:07.540Z"
+}

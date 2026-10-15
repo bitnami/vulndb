@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-105820",
+  "summary": "Vault ACL Policy Cache Vulnerable to Cross-Namespace Policy Resolution",
+  "details": "Vault's ACL policy cache allowed namespace traversal when policy names contained path traversal constructs. This may allow a token assigned specially crafted policy names to use the capabilities of policies defined in other namespaces, including the root namespace. This vulnerability (CVE-2026-105820) is fixed in Vault Enterprise 2.1.2, 1.21.12, 1.20.17, and 1.19.23. Vault Community Edition does not support namespaces, and is not affected.",
+  "aliases": [
+    "CVE-2026-105820"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.0.1"
+            },
+            {
+              "fixed": "1.19.23"
+            },
+            {
+              "introduced": "1.20.0"
+            },
+            {
+              "fixed": "1.20.17"
+            },
+            {
+              "introduced": "1.21.0"
+            },
+            {
+              "fixed": "1.21.12"
+            },
+            {
+              "introduced": "2.0.0"
+            },
+            {
+              "fixed": "2.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-42-vault-enterprise-acl-policy-cache-vulnerable-to-cross-namespace-policy-resolution/77814"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105820"
+    }
+  ],
+  "published": "2026-10-15T08:55:30.446Z",
+  "modified": "2026-10-15T09:07:07.540Z"
+}
