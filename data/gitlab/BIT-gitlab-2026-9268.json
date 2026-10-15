@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-9268",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 13.6 before 19.2.8, 19.3 before 19.3.5, and 19.4 before 19.4.2 that, under certain conditions, could have allowed an authenticated user with limited permissions to modify project CI/CD deployment rollback settings without proper authorization, due to insufficient access control checks.",
+  "aliases": [
+    "CVE-2026-9268"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.6.0"
+            },
+            {
+              "fixed": "19.2.8"
+            },
+            {
+              "introduced": "19.3.0"
+            },
+            {
+              "fixed": "19.3.5"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/600934"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3687442"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9268"
+    }
+  ],
+  "published": "2026-10-15T12:59:28.015Z",
+  "modified": "2026-10-15T13:01:31.998Z"
+}

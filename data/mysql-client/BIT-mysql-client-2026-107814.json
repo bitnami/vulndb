@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mysql-client-2026-107814",
+  "summary": "MariaDB: Insecure $HOME in MariaDB rpm packages",
+  "details": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, MariaDB RPM packages created the dedicated mysql service account with the database data directory as its home directory. A database user with the FILE privilege could write startup dot-files such as .bash_profile into $HOME, and those files could execute when an administrator opened a login shell for the mysql account. Debian packages are not affected because they use /nonexistent as the account home. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
+  "aliases": [
+    "CVE-2026-107814"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mysql-client",
+        "purl": "pkg:bitnami/mysql-client"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.28"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.19"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.13"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.9"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.3"
+            },
+            {
+              "introduced": "13.0.1"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/MariaDB/server/commit/d842d6e994a8b0d67c280bf785a11357d6b316a2"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.11.19"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.6.28"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.4.13"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.8.9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-12.3.3"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-13.0.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-m5gf-432r-g5jw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107814"
+    }
+  ],
+  "published": "2026-10-15T12:38:40.630Z",
+  "modified": "2026-10-15T13:01:31.998Z"
+}

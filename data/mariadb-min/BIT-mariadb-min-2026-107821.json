@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2026-107821",
+  "summary": "MariaDB: insufficient validation of binary frm data when opening a table",
+  "details": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, MariaDB insufficiently validated counts, offsets, lengths, and field boundaries in FRM metadata while opening binary FRM files. An attacker able to place a crafted FRM file in the data directory could trigger out-of-bounds reads or writes, crash the server, or potentially execute code. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
+  "aliases": [
+    "CVE-2026-107821"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.28"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.19"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.13"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.9"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.3"
+            },
+            {
+              "introduced": "13.0.1"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/MariaDB/server/commit/3b1c2e58abab5571bec4ff52773ddc75b1738da9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.11.19"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.6.28"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.4.13"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.8.9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-12.3.3"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-13.0.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-c4gx-34mg-95q5"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://jira.mariadb.org/browse/MDEV-40571"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107821"
+    }
+  ],
+  "published": "2026-10-15T12:36:44.786Z",
+  "modified": "2026-10-15T13:01:31.998Z"
+}
