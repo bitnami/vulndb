@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2026-107817",
+  "summary": "MariaDB: mysql_json plugin OOB reads",
+  "details": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the mysql_json plugin assumed that imported MySQL tables contained valid MySQL binary JSON data. A specially prepared MySQL table containing invalid JSON data could cause out-of-bounds reads, information disclosure, or a server crash. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
+  "aliases": [
+    "CVE-2026-107817"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.28"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.19"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.13"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.9"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.3"
+            },
+            {
+              "introduced": "13.0.1"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/MariaDB/server/commit/851f52470d470a96a66e0b7e5599f3b6c2e45907"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.11.19"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.6.28"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.4.13"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.8.9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-12.3.3"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-13.0.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-89ph-64cf-gqcc"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://jira.mariadb.org/browse/MDEV-40678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107817"
+    }
+  ],
+  "published": "2026-10-15T14:51:28.287Z",
+  "modified": "2026-10-15T15:14:20.248Z"
+}
