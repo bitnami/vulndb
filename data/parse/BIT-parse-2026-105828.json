@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-105828",
+  "summary": "Parse Server 9.0.0 before 9.10.1 Class Name Disclosure via GraphQL Errors",
+  "details": "Parse Server 8.2.2 before 8.6.92 and 9.0.0 before 9.10.1 contains an information disclosure vulnerability in which GraphQL validation error messages reveal hidden class names when public introspection is disabled. Unauthenticated attackers holding only the public Application Id can send crafted operations triggering unknown-argument or invalid enum value errors to learn pointer and relation target classes.",
+  "aliases": [
+    "CVE-2026-105828"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.2"
+            },
+            {
+              "fixed": "8.6.92"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-6m77-f8xr-f723"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105828"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-before-9.10.1-alpha.12-class-name-disclosure-via-graphql-errors"
+    }
+  ],
+  "published": "2026-10-16T08:43:36.573Z",
+  "modified": "2026-10-16T09:07:50.945Z"
+}

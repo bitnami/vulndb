@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-101027",
+  "summary": "Gitea migration SSRF through ALLOWED_DOMAINS address check bypass",
+  "details": "When `[migrations] ALLOWED_DOMAINS` was configured, a hostname matching the allow list was accepted without checking its resolved address against the local-network restrictions. A user who can start repository migrations and control the DNS of an allowed hostname could make it resolve to loopback or private addresses and bypass `ALLOW_LOCALNETWORKS = false`, reaching internal services from the Gitea server. Instances without `ALLOWED_DOMAINS` configured are not affected by this specific bypass.",
+  "aliases": [
+    "CVE-2026-101027"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39426"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-fqjr-23c8-gg9m"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101027"
+    }
+  ],
+  "published": "2026-10-16T08:36:27.105Z",
+  "modified": "2026-10-16T09:07:50.945Z"
+}
