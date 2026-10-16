@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jupyterhub-2026-108752",
+  "summary": "JupyterHub through 6.0.1 OAuth Client ID Collision via Unescaped Hyphen",
+  "details": "JupyterHub through 6.0.1 contains an identifier collision vulnerability that allows authenticated users to overwrite another user's named-server OAuth client by registering a hyphenated username. Attackers holding a name like alice-prod can overwrite the client for alice's server prod, breaking OAuth login and revoking tokens by stopping their own server.",
+  "aliases": [
+    "CVE-2026-108752"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jupyterhub",
+        "purl": "pkg:bitnami/jupyterhub"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "6.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jupyter:jupyterhub:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/blob/3e516c6f382b481e815ec455befb2f14d80d337b/jupyterhub/oauth/provider.py#L719-L754"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/blob/3e516c6f382b481e815ec455befb2f14d80d337b/jupyterhub/user.py#L1174-L1186"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/jupyterhub/jupyterhub/blob/3e516c6f382b481e815ec455befb2f14d80d337b/jupyterhub/user.py#L563-L567"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackmd.io/@haind/jupyterhub-oauth-client-id-cross-user-collision"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108752"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/jupyterhub-through-6.0.1-oauth-client-id-collision-via-unescaped-hyphen"
+    }
+  ],
+  "published": "2026-10-16T08:38:05.910Z",
+  "modified": "2026-10-16T09:07:50.945Z"
+}

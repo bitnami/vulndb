@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-103670",
+  "summary": "Gitea trusted workflow cancellation by unapproved fork runs",
+  "details": "When a Gitea Actions run was inserted, older runs in the same workflow-level concurrency group were cancelled without checking whether the new run still needed approval. Because fork pull request runs are inserted under the base repository, a user who can open a pull request from a fork could cancel trusted in-progress runs that share a concurrency group with `cancel-in-progress` enabled, without approval and without running any code. On self-hosted runners this can interrupt deployments and leave partial state behind.",
+  "aliases": [
+    "CVE-2026-103670"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39399"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-4j4g-m7mr-hp5j"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103670"
+    }
+  ],
+  "published": "2026-10-16T08:36:31.082Z",
+  "modified": "2026-10-16T09:07:50.945Z"
+}

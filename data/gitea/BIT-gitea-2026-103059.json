@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitea-2026-103059",
+  "summary": "Gitea built-in SSH server authentication bypass through key case folding",
+  "details": "When Gitea's built-in SSH server is enabled (`START_SSH_SERVER = true`), the presented public key was looked up with an SQL `LIKE` comparison of its encoded content, which is case-insensitive on some databases, including the default SQLite. An attacker who can construct a case variant of another user's registered RSA public key for which they can derive the private key could have that key matched to the victim's account and authenticate over SSH as that user. Keys are now looked up by fingerprint.",
+  "aliases": [
+    "CVE-2026-103059"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitea",
+        "purl": "pkg:bitnami/gitea"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "28.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitea:gitea:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ARTICLE",
+      "url": "https://blog.gitea.com/release-of-28.0.0/"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/go-gitea/gitea/pull/39423"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/go-gitea/gitea/releases/tag/v28.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-8pwg-hcgm-54cp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103059"
+    }
+  ],
+  "published": "2026-10-16T08:36:29.274Z",
+  "modified": "2026-10-16T09:07:50.945Z"
+}
