@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mariadb-min-2026-107823",
+  "summary": "MariaDB: privilege escalation via incorrect view frm parsing",
+  "details": "MariaDB server is a community developed fork of MySQL server. From 10.6.1 until 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2, the MariaDB view FRM parser did not safely encode embedded newline characters in a username. An account with CREATE USER and CREATE VIEW WITH GRANT OPTION could create a crafted username containing additional view metadata, causing the parser to interpret part of the username as security metadata and potentially escalating database privileges. This issue is fixed in versions 10.6.28, 10.11.19, 11.4.13, 11.8.9, 12.3.3, and 13.0.2.",
+  "aliases": [
+    "CVE-2026-107823"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mariadb-min",
+        "purl": "pkg:bitnami/mariadb-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.6.1"
+            },
+            {
+              "fixed": "10.6.28"
+            },
+            {
+              "introduced": "10.11.1"
+            },
+            {
+              "fixed": "10.11.19"
+            },
+            {
+              "introduced": "11.4.1"
+            },
+            {
+              "fixed": "11.4.13"
+            },
+            {
+              "introduced": "11.8.1"
+            },
+            {
+              "fixed": "11.8.9"
+            },
+            {
+              "introduced": "12.3.1"
+            },
+            {
+              "fixed": "12.3.3"
+            },
+            {
+              "introduced": "13.0.1"
+            },
+            {
+              "fixed": "13.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mariadb:mariadb:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/MariaDB/server/commit/8a642bc8103aadc6b2087d781ba8e1595616a2c4"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.11.19"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-10.6.28"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.4.13"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-11.8.9"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-12.3.3"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/MariaDB/server/releases/tag/mariadb-13.0.2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/MariaDB/server/security/advisories/GHSA-g2q2-3936-cp37"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://jira.mariadb.org/browse/MDEV-40484"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107823"
+    }
+  ],
+  "published": "2026-10-15T23:51:19.633Z",
+  "modified": "2026-10-16T00:15:01.531Z"
+}
