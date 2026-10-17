@@ -15,8 +15,8 @@
       },
       "severity": [
         {
-          "type": "CVSS_V4",
-          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
         }
       ],
       "ranges": [
@@ -59,22 +59,22 @@
     }
   ],
   "database_specific": {
-    "severity": "Low",
+    "severity": "Medium",
     "cpes": [
       "cpe:2.3:a:vmware:rabbitmq:*:*:*:*:*:*:*:*"
     ]
   },
   "references": [
     {
-      "type": "WEB",
+      "type": "FIX",
       "url": "https://github.com/rabbitmq/rabbitmq-server/commit/5de287d213765ca592ff5848ad2f6b9b98ee6772"
     },
     {
-      "type": "WEB",
+      "type": "ARTICLE",
       "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.5"
     },
     {
-      "type": "WEB",
+      "type": "ADVISORY",
       "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-86fm-44m9-rqjx"
     },
     {
@@ -83,5 +83,5 @@
     }
   ],
   "published": "2026-10-01T09:33:59.215Z",
-  "modified": "2026-10-01T09:55:18.588Z"
+  "modified": "2026-10-17T09:09:07.826Z"
 }
