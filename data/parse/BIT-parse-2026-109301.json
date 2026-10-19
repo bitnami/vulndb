@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-109301",
+  "summary": "Parse Server before 8.6.95 and 9.0.0 before 9.10.2 Denial of Service via File Pointer Without URL",
+  "details": "Parse Server before 8.6.95 and 9.0.0 before 9.10.2 does not resolve file references lacking a URL before passing objects to Cloud Code triggers and LiveQuery, causing an uncaught exception that terminates the process. Attackers able to write to a class with Cloud Code save, find, or delete triggers or LiveQuery enabled, including unauthenticated users when public write access or sign-up is allowed, can crash the server or break subsequent requests.",
+  "aliases": [
+    "CVE-2026-109301"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.95"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-gpr6-gr9g-pfw6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109301"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-before-8.6.95-and-9.0.0-before-9.10.2-alpha.3-denial-of-service-via-file-pointer-without-url"
+    }
+  ],
+  "published": "2026-10-19T11:54:56.160Z",
+  "modified": "2026-10-19T12:14:18.227Z"
+}
