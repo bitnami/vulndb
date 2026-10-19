@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-dotnet-sdk-2026-96957",
+  "summary": ".NET Security Feature Bypass Vulnerability",
+  "details": "Improper verification of cryptographic signature in .NET allows an unauthorized attacker to bypass a security feature over a network.",
+  "aliases": [
+    "CVE-2026-96957"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet-sdk",
+        "purl": "pkg:bitnami/dotnet-sdk"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96957"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96957"
+    }
+  ],
+  "published": "2026-10-19T11:43:52.682Z",
+  "modified": "2026-10-19T12:14:18.227Z"
+}
