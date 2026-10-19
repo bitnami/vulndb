@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-dotnet-2026-96959",
+  "summary": ".NET Denial of Service Vulnerability",
+  "details": "Allocation of resources without limits or throttling in .NET allows an unauthorized attacker to deny service over a network.",
+  "aliases": [
+    "CVE-2026-96959"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "dotnet",
+        "purl": "pkg:bitnami/dotnet"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.0.5"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.0.21"
+            },
+            {
+              "introduced": "10.0.0"
+            },
+            {
+              "fixed": "10.0.13"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:.net:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96959"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96959"
+    }
+  ],
+  "published": "2026-10-19T10:25:35.855Z",
+  "modified": "2026-10-19T10:51:02.936Z"
+}
