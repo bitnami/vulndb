@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-distribution-2026-85747",
+  "summary": "Distribution: Client `manifests.Get()` does not verify returned content against requested digest",
+  "details": "Distribution is a toolkit to pack, ship, store, and deliver container content. Prior to 3.1.2, registry/client.(*manifests).Get() reads a manifest returned for a digest-pinned request and passes it to distribution.UnmarshalManifest without hashing the body against the requested digest, allowing a malicious or intercepted registry response to substitute attacker-chosen manifest content even when Docker-Content-Digest claims the requested value. The bundled pull-through proxy in registry/proxy/proxymanifeststore.go can cache and re-serve the substituted manifest. This issue is fixed in version 3.1.2.",
+  "aliases": [
+    "CVE-2026-85747"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "distribution",
+        "purl": "pkg:bitnami/distribution"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:distribution:distribution:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/distribution/distribution/commit/960439b09f342cdeb8f1c0e18e8c7349bdcfbf80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/distribution/distribution/releases/tag/v3.1.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/distribution/distribution/security/advisories/GHSA-685w-q87j-wqw3"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85747"
+    }
+  ],
+  "published": "2026-10-20T08:39:45.031Z",
+  "modified": "2026-10-20T09:10:19.569Z"
+}

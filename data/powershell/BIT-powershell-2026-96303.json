@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2026-96303",
+  "summary": "Microsoft PowerShell Security Feature Bypass Vulnerability",
+  "details": "Improperly implemented security check for standard in Microsoft PowerShell allows an unauthorized attacker to bypass a security feature over a network.",
+  "aliases": [
+    "CVE-2026-96303"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.21"
+            },
+            {
+              "introduced": "7.5.0"
+            },
+            {
+              "fixed": "7.5.12"
+            },
+            {
+              "introduced": "7.6.0"
+            },
+            {
+              "fixed": "7.6.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96303"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96303"
+    }
+  ],
+  "published": "2026-10-20T08:54:44.520Z",
+  "modified": "2026-10-20T09:10:19.569Z"
+}
