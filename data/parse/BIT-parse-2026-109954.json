@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-109954",
+  "summary": "Parse Server 9.0.0 before 9.10.2 Transactional Batch Request Write Interference",
+  "details": "Parse Server 5.4.0 before 8.6.96 and 9.0.0 before 9.10.2 shares transactional batch state across concurrent requests, letting any client's transactional batch request interfere with other clients' database writes. On PostgreSQL or MongoDB replica sets and sharded clusters, other clients' acknowledged writes are rolled back if the batch fails, and PostgreSQL transactions can remain open indefinitely, causing subsequent writes to fail.",
+  "aliases": [
+    "CVE-2026-109954"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "fixed": "8.6.96"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-jhh9-hrgh-c9gv"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109954"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-before-9.10.2-alpha.5-transactional-batch-request-write-interference"
+    }
+  ],
+  "published": "2026-10-20T10:51:20.841Z",
+  "modified": "2026-10-20T11:12:05.243Z"
+}
