@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pgbouncer-2026-107350",
+  "summary": "Authentication bypass via second StartupMessage during SCRAM authentication in PgBouncer",
+  "details": "Improper authentication in PgBouncer 1.17.0 through 1.26.0 allows a remote attacker who knows the password of a user listed in auth_file to log in as any other user that authenticates using SCRAM, including PgBouncer admin users and backend superusers. A second StartupMessage sent during SCRAM authentication against a non-existent database is not rejected and switches the user being logged in as, while the SCRAM exchange is still verified against the keys of the first user.",
+  "aliases": [
+    "CVE-2026-107350"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pgbouncer",
+        "purl": "pkg:bitnami/pgbouncer"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "fixed": "1.26.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:pgbouncer:pgbouncer:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107350"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.pgbouncer.org/changelog.html"
+    }
+  ],
+  "published": "2026-10-21T08:55:11.420Z",
+  "modified": "2026-10-21T09:15:38.550Z"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-powershell-2026-96251",
+  "summary": "Microsoft PowerShell Remote Code Execution Vulnerability",
+  "details": "Reliance on untrusted inputs in a security decision in Microsoft PowerShell allows an unauthorized attacker to execute code over a network.",
+  "aliases": [
+    "CVE-2026-96251"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "powershell",
+        "purl": "pkg:bitnami/powershell"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.4.0"
+            },
+            {
+              "fixed": "7.4.21"
+            },
+            {
+              "introduced": "7.5.0"
+            },
+            {
+              "fixed": "7.5.12"
+            },
+            {
+              "introduced": "7.6.0"
+            },
+            {
+              "fixed": "7.6.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:microsoft:powershell:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96251"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96251"
+    }
+  ],
+  "published": "2026-10-21T08:57:52.870Z",
+  "modified": "2026-10-21T09:15:38.550Z"
+}
