@@ -2,7 +2,7 @@
   "schema_version": "1.6.2",
   "id": "BIT-apache-2026-56449",
   "summary": "Apache HTTP Server: mod_proxy_html: crash in dump_content",
-  "details": "Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies.\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+  "details": "Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies.\n\n\n\nThis issue affects Apache HTTP Server version 2.4.68.",
   "aliases": [
     "CVE-2026-56449"
   ],
@@ -55,5 +55,5 @@
     }
   ],
   "published": "2026-10-06T11:40:53.280Z",
-  "modified": "2026-10-06T12:12:21.709Z"
+  "modified": "2026-10-22T09:03:44.939Z"
 }
