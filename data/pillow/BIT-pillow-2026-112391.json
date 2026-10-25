@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-112391",
+  "summary": "Pillow: PdfParser can recurse without limit in get_value() and linearize_page_tree()",
+  "details": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-112391"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112391"
+    }
+  ],
+  "published": "2026-10-25T05:50:02.862Z",
+  "modified": "2026-10-25T06:03:39.453Z"
+}

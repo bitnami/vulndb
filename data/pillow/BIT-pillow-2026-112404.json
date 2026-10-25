@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-112404",
+  "summary": "Pillow: OOB read in TiffDecode.c tile and RGBA paths leaks heap memory into pixels",
+  "details": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow's TIFF tile and RGBA decode paths can read beyond row data produced by libtiff. In _decodeTile and the RGBA unpacker path, when Pillow and libtiff interpret duplicated PhotometricInterpretation or BitsPerSample tags differently, Pillow does not verify that the required input row fits inside the row libtiff produced, while the strip path has this validation. Loading pixels from such a crafted TIFF can expose adjacent heap data in output pixels or crash the process. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-112404"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-c6hw-5grf-ff96"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112404"
+    }
+  ],
+  "published": "2026-10-25T05:50:14.587Z",
+  "modified": "2026-10-25T06:03:39.453Z"
+}
