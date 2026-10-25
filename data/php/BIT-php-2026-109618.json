@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "7.3.0"
             },
             {
               "fixed": "8.2.35"
@@ -74,8 +74,12 @@
     {
       "type": "ADVISORY",
       "url": "https://www.wiz.io/blog/php2shell-php-rce"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/23/5"
     }
   ],
   "published": "2026-10-22T08:08:19.155Z",
-  "modified": "2026-10-23T09:13:02.774Z"
+  "modified": "2026-10-25T00:12:10.969Z"
 }
