@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-112395",
+  "summary": "Pillow tiled-TIFF decoder reads past tile buffer in copy4 (Unpack.c:1290)",
+  "details": "Pillow is a Python imaging library. From 8.2.0 until 13.0.0, Pillow's tiled-TIFF decoder can read past the tile buffer while copying four-byte pixels. In _decodeTile, libtiff can return a tile allocation smaller than the required row stride multiplied by the tile length, and Pillow's stride-and-copy loop walks beyond that allocation. An attacker can supply a crafted tiled TIFF to an application that loads it. This can expose adjacent heap data in pixels or crash the process. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-112395"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.2.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/76869efdbbf2ad7dccd7536520fb61b7a00ab61e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112395"
+    }
+  ],
+  "published": "2026-10-25T20:51:23.212Z",
+  "modified": "2026-10-25T21:05:09.747Z"
+}

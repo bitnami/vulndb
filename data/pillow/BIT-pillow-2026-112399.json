@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-112399",
+  "summary": "Pillow: APNG background disposal allocates full canvas before decompression bomb check",
+  "details": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-112399"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112399"
+    }
+  ],
+  "published": "2026-10-25T20:51:26.668Z",
+  "modified": "2026-10-25T21:05:09.747Z"
+}

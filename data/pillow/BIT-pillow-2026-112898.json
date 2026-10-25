@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-112898",
+  "summary": "Pillow: Image.quantize() with empty palette leaks uninitialized stack memory",
+  "details": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-112898"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.1.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112898"
+    }
+  ],
+  "published": "2026-10-25T20:51:39.346Z",
+  "modified": "2026-10-25T21:05:09.747Z"
+}
