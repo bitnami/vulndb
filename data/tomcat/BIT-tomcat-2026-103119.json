@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-103119",
+  "summary": "Apache Tomcat: AJP response mix-up",
+  "details": "Buffer under-read vulnerability in Apache Tomcat meant that a large non-blocking write could result in the response body being split between the current request and the next request received on that connection leading most likely to failure of the second request and possibly leakage of data from the first response to the second.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.26.\n\n\n\nUsers are recommended to upgrade to version 11.0.27, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-103119"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/20/28"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/sk2cg4k077fwcqbm6tqz2n700nq06h80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103119"
+    }
+  ],
+  "published": "2026-10-28T21:00:18.292Z",
+  "modified": "2026-10-28T21:14:41.144Z"
+}
