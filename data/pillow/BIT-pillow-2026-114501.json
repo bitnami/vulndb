@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-114501",
+  "summary": "Pillow: Arrow export leaks stale heap memory when PILLOW_ALIGNMENT > 1",
+  "details": "Pillow is a Python imaging library. From 11.2.1 until 13.0.0, Arrow export assumes that an image's rows are tightly contiguous and exports from im->blocks[0].ptr even when PILLOW_ALIGNMENT makes aligned_linesize include row padding or an aligned offset before the first row. The resulting Arrow buffer can include uninitialized padding, bytes preceding the first row, or stale heap contents from previously freed images. Applications that configure alignment and export images to Arrow can therefore disclose one user's pixels or other process memory to another user. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-114501"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "11.2.1"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "FIX",
+      "url": "https://github.com/python-pillow/Pillow/commit/19f64946eb247b973dd4560be7dea3bf979d2e6a"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://github.com/python-pillow/Pillow/pull/10172"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-654x-cwwv-5j9c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114501"
+    }
+  ],
+  "published": "2026-10-28T11:58:29.373Z",
+  "modified": "2026-10-28T12:17:02.544Z"
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-103515",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 19.2 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, when an instance administrator locked a group's Duo availability, an authenticated user with group Owner permissions could have re-enabled AI-backed data egress to a third-party service for that group and its descendant projects, due to insufficient granularity of the admin-lock enforcement controls.",
+  "aliases": [
+    "CVE-2026-103515"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.3.6"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.3"
+            },
+            {
+              "introduced": "19.5.0"
+            },
+            {
+              "fixed": "19.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/631564"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3871692"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103515"
+    }
+  ],
+  "published": "2026-10-28T12:10:20.830Z",
+  "modified": "2026-10-28T12:17:02.544Z"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-110264",
+  "summary": "Integer Overflow or Wraparound in GitLab",
+  "details": "An issue has been discovered in GitLab CE/EE affecting all versions from 7.0 before 18.11.13, 19.0 before 19.0.10, 19.1 before 19.1.9, 19.2 before 19.2.9, 19.3 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server due to integer overflow when compiling a specially crafted regular expression.",
+  "aliases": [
+    "CVE-2026-110264"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "18.11.13"
+            },
+            {
+              "introduced": "19.0.0"
+            },
+            {
+              "fixed": "19.0.10"
+            },
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "fixed": "19.1.9"
+            },
+            {
+              "introduced": "19.2.0"
+            },
+            {
+              "fixed": "19.2.9"
+            },
+            {
+              "introduced": "19.3.0"
+            },
+            {
+              "fixed": "19.3.6"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.3"
+            },
+            {
+              "introduced": "19.5.0"
+            },
+            {
+              "fixed": "19.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/633633"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/4093475"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110264"
+    }
+  ],
+  "published": "2026-10-28T12:10:44.540Z",
+  "modified": "2026-10-28T12:17:02.544Z"
+}
