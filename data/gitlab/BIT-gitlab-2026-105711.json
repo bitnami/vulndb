@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-105711",
+  "summary": "Use of Cache Containing Sensitive Information in GitLab",
+  "details": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 15.0 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, when a merge request in a public project referenced a confidential issue from a private project, an authenticated user with no project membership could have read the confidential issue's title, due to a viewer-independent fragment cache key that incorrectly shared per-user-redacted rendered content across all users.",
+  "aliases": [
+    "CVE-2026-105711"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "19.3.6"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.3"
+            },
+            {
+              "introduced": "19.5.0"
+            },
+            {
+              "fixed": "19.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/632207"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3963293"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105711"
+    }
+  ],
+  "published": "2026-10-28T16:47:55.431Z",
+  "modified": "2026-10-28T16:54:28.273Z"
+}

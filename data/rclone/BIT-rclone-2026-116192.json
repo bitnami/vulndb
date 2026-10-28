@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116192",
+  "summary": "rclone from 1.37 before 1.74.2 SSRF via --rc-serve scheme-relative remote roots",
+  "details": "rclone from 1.37 before 1.74.2 contains a server-side request forgery vulnerability that allows unauthenticated attackers to redirect http and netstorage backend requests by supplying a double-slash root on an existing named remote via --rc-serve. Attackers can make HEAD/GET requests to attacker-chosen hosts to read responses, capture configured custom headers, or obtain valid NetStorage request signatures.",
+  "aliases": [
+    "CVE-2026-116192"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.37.0"
+            },
+            {
+              "fixed": "1.74.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-xqmq-v4wj-rw5m"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116192"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-from-1.37-before-1.74.2-ssrf-via-rc-serve-scheme-relative-remote-roots"
+    }
+  ],
+  "published": "2026-10-28T16:32:12.657Z",
+  "modified": "2026-10-28T16:54:28.273Z"
+}

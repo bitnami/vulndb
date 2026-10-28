@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-88041",
+  "summary": "Apache Tomcat: HTTP/2 trailer header cross-contamination",
+  "details": "Incomplete cleanup vulnerability in Apache Tomcat allowed an trailer information from a previous request to leak into a subsequent request.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.26, from 10.1.27 through 10.1.60, from 9.0.92 through 9.0.122.\n\n\n\nUsers are recommended to upgrade to version 11.0.27, 10.1.61 or 9.0.123, which fix the issue.",
+  "aliases": [
+    "CVE-2026-88041"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.92"
+            },
+            {
+              "fixed": "9.0.123"
+            },
+            {
+              "introduced": "10.1.27"
+            },
+            {
+              "fixed": "10.1.61"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/20/24"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/dnmm9l3byytg3l66nk1jrqfrl7jty7n1"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88041"
+    }
+  ],
+  "published": "2026-10-28T16:35:53.512Z",
+  "modified": "2026-10-28T16:54:28.273Z"
+}

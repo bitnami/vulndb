@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-16255",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 12.0 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, when the instance-wide SAML or LDAP membership lock was enabled, an authenticated user could have granted or accepted project and group membership outside the identity provider's control, due to incomplete enforcement of the membership lock on requests created before the lock was enabled.",
+  "aliases": [
+    "CVE-2026-16255"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.0.0"
+            },
+            {
+              "fixed": "19.3.6"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.3"
+            },
+            {
+              "introduced": "19.5.0"
+            },
+            {
+              "fixed": "19.5.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/606479"
+    },
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3809350"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16255"
+    }
+  ],
+  "published": "2026-10-28T16:49:22.592Z",
+  "modified": "2026-10-28T16:54:28.273Z"
+}
