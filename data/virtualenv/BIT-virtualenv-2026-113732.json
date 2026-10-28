@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-virtualenv-2026-113732",
+  "summary": "virtualenv activate.fish runs commands from a path or prompt with a backslash before a quote",
+  "details": "virtualenv is a tool for creating isolated virtual python environments. Prior to 21.14.2, FishActivator inherits ViaTemplateActivator.quote(), which uses POSIX shlex.quote() even though fish interprets backslashes and single quotes differently. An attacker-influenced environment path, --prompt, or VIRTUALENV_PROMPT value containing a backslash before a quote can therefore terminate the generated fish literal and execute command substitution when the user sources activate.fish. This issue is fixed in version 21.14.2.",
+  "aliases": [
+    "CVE-2026-113732"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "virtualenv",
+        "purl": "pkg:bitnami/virtualenv"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "21.14.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:virtualenv:virtualenv:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/commit/3bddeaf8d02c3ee7f576503efb082f8f494cfcab"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/releases/tag/21.14.2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/pypa/virtualenv/security/advisories/GHSA-c947-3pg5-gm8q"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113732"
+    }
+  ],
+  "published": "2026-10-28T18:00:01.044Z",
+  "modified": "2026-10-28T18:15:26.644Z"
+}

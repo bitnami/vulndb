@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-74048",
+  "summary": "Apache Tomcat: OpenSSL-FFM FIPS failure does not prevent start-up",
+  "details": "Not Failing Securely ('Failing Open') vulnerability in Apache Tomcat. If the OpenSSLLifecycleListener is configured to use FIPS mode but FIPS activation fails, Tomcat logs and error but continues to use JSSE in non-FIPS mode with the provided configuration.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.26, from 10.1.22 through 10.1.60, from 9.0.92 through 9.0.122.\n\n\n\nUsers are recommended to upgrade to version 11.0.27, 10.1.61 or 9.0.123, which fix the issue.",
+  "aliases": [
+    "CVE-2026-74048"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.92"
+            },
+            {
+              "fixed": "9.0.123"
+            },
+            {
+              "introduced": "10.1.22"
+            },
+            {
+              "fixed": "10.1.61"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.27"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Unknown",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/20/21"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/v5ry0sx1c7x1wr5mx4cddj3p3mv1ho6m"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74048"
+    }
+  ],
+  "published": "2026-10-28T18:01:49.073Z",
+  "modified": "2026-10-28T18:15:26.644Z"
+}
