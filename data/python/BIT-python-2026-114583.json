@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-python-2026-114583",
+  "summary": "tar filter allows writing outside destination via empty-named symlink",
+  "details": "tarfile.tar_filter could be bypassed using crafted link entries, including symlinks with empty or directory-like names, to redirect later archive members outside the intended extraction directory. This allowed a malicious tar archive to cause tarfile.extractall() with filter=\"tar\" to write files outside the destination directory, subject to the permissions of the extracting process.\n\nThis is the tarfile.tar_filter counterpart of CVE-2026-7774, which covered tarfile.data_filter.",
+  "aliases": [
+    "CVE-2026-114583"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "python",
+        "purl": "pkg:bitnami/python"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.11.18"
+            },
+            {
+              "introduced": "3.12.0"
+            },
+            {
+              "fixed": "3.12.16"
+            },
+            {
+              "introduced": "3.13.0"
+            },
+            {
+              "fixed": "3.13.18"
+            },
+            {
+              "introduced": "3.14.0"
+            },
+            {
+              "fixed": "3.14.10"
+            },
+            {
+              "introduced": "3.15.0"
+            },
+            {
+              "fixed": "3.15.2"
+            },
+            {
+              "introduced": "3.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/04d8fca7da2cf3ebc0881fec8a53a1330c3b665d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/0901ad4ffb22605f12b705d1c1197f0a01f0ba0b"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/bc93f8ad4c4a0f92d184ec8fccc8ff8a651dcec2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/c6ada40177436e4e2533a7b252082b5f0c043477"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/e7e0b3523ad6ba8472873dda594cf4021a16f8b5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/commit/f4401da82e2baec5dab06cf070fbca77d53220f0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/160097"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/160098"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/43JOWPRAV5DI3VZ4FUEUAZOHCATXXOCK/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114583"
+    }
+  ],
+  "published": "2026-10-29T12:19:39.543Z",
+  "modified": "2026-10-29T12:40:48.706Z"
+}
