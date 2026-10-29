@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116195",
+  "summary": "Rclone before 1.75.2 Path Traversal via translateLink .rclonelink Suffix Trim",
+  "details": "Rclone before 1.75.2 contains a path traversal vulnerability in the local backend's translateLink function, which trims the .rclonelink suffix from a path after the containment check, so a name can resolve outside the destination root. Attackers can plant a directory named ...rclonelink in a source tree synced with --links and --metadata to change ownership, timestamps, and xattrs of the destination's parent directory.",
+  "aliases": [
+    "CVE-2026-116195"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.75.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-55qp-jrwr-x827"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116195"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-1.75.2-path-traversal-via-translatelink-rclonelink-suffix-trim"
+    }
+  ],
+  "published": "2026-10-29T05:59:09.775Z",
+  "modified": "2026-10-29T06:16:51.475Z"
+}
