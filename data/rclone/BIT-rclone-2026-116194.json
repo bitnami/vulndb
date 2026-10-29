@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116194",
+  "summary": "Rclone 1.52.0 before 1.75.2 CSRF via pCloud OAuth Callback",
+  "details": "Rclone from 1.52.0 before 1.75.2 contains a cross-site request forgery vulnerability in the pCloud backend's localhost OAuth callback, which disables the state check and trusts the hostname parameter. Malicious web pages can send a stateless request to port 53682 during authorization, planting attacker tokens and API hosts so later transfers reach the attacker.",
+  "aliases": [
+    "CVE-2026-116194"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.52.0"
+            },
+            {
+              "fixed": "1.75.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-hvpr-p4pv-4f46"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116194"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-1.52.0-before-1.75.2-csrf-via-pcloud-oauth-callback"
+    }
+  ],
+  "published": "2026-10-29T08:58:39.618Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

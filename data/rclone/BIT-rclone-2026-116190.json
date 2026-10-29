@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116190",
+  "summary": "rclone v1.56.0 before v1.75.2 WebDAV Credential Header Leak on Redirect",
+  "details": "rclone from v1.56.0 before v1.75.2 contains an information disclosure vulnerability in the WebDAV backend that forwards operator-configured custom credential headers to different hosts on HTTP 3xx redirects. Attackers who control or influence a cross-host redirect can capture headers such as X-Auth-Token set via --webdav-headers and replay them against the original WebDAV service.",
+  "aliases": [
+    "CVE-2026-116190"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.56.0"
+            },
+            {
+              "fixed": "1.75.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-3rqf-7h69-gg5v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116190"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-1.56.0-before-1.75.2-webdav-credential-header-leak-on-redirect"
+    }
+  ],
+  "published": "2026-10-29T08:58:34.800Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

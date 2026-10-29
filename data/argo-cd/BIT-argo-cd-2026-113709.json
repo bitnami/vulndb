@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-argo-cd-2026-113709",
+  "summary": "Argo CD: A Kustomize Helm config home can run commands in the repo-server",
+  "details": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 2.1.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0, when an operator has enabled --enable-helm for kustomize build, helmGlobals.configHome can point Helm's config and data directories at a repository-controlled location. Helm automatically loads a downloader plugin from `<configHome>/.data/plugins` without a separate plugin-install step and executes its program inside argocd-repo-server when a helmCharts repository URL uses the plugin's protocol. The command runs as the repo-server user and can read repository credentials and other process-accessible data. An attacker can commit the Kustomization and plugin to a Git repository that an Application builds or upload the files through POST /api/v1/applications/manifestsWithFiles, also exposed by argocd app diff --local --server-side-generate. The upload path requires only Application get permission on an existing Application, without Application update or sync permission or repository write access. Both delivery paths require prior operator enablement of --enable-helm; deployments that do not enable it are not affected. Kustomize 4.1.0 first passed helmGlobals.configHome through to Helm. This issue is fixed in versions 3.3.15, 3.4.10, 3.5.4, and 3.6.0.",
+  "aliases": [
+    "CVE-2026-113709"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "argo-cd",
+        "purl": "pkg:bitnami/argo-cd"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "2.1.0"
+            },
+            {
+              "fixed": "3.3.15"
+            },
+            {
+              "introduced": "3.4.0"
+            },
+            {
+              "fixed": "3.4.10"
+            },
+            {
+              "introduced": "3.5.0"
+            },
+            {
+              "fixed": "3.5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:linuxfoundation:argo_continuous_delivery:*:*:*:*:*:kubernetes:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://argo-cd.readthedocs.io/en/stable/user-guide/kustomize/#kustomizing-helm-charts"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/commit/b6d5c23bce2f8a46c52975ba438a3b93d242d96c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/pull/6059"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.3.15"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.4.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.5.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/releases/tag/v3.6.0-rc2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-fw5c-w8rc-j7fx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-j6cw-g6p4-7hch"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/kubernetes-sigs/kustomize/pull/3784"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113709"
+    }
+  ],
+  "published": "2026-10-29T08:38:57.459Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

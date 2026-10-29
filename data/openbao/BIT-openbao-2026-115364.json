@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-115364",
+  "summary": "OpenBao before 2.6.3 Missing Header Check on Agent/Proxy Quit Endpoints",
+  "details": "OpenBao before 2.6.3 contains a missing authorization check that allows attackers to stop Agent and Proxy services by omitting the X-Vault-Header. When require_request_header is enabled, attackers can send requests via server-side request forgery to /agent/v1/quit or /proxy/v1/quit to shut down these services.",
+  "aliases": [
+    "CVE-2026-115364"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-8gmq-wv9h-fcwp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115364"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbao-before-2.6.3-missing-header-check-on-agent-proxy-quit-endpoints"
+    }
+  ],
+  "published": "2026-10-29T08:54:43.281Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

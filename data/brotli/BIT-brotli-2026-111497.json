@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-brotli-2026-111497",
+  "summary": "Out-of-Bounds Write in Google Brotli Decoder",
+  "details": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\n\n\n\n\n\nUsers need to update any Brotli libraries or binaries between 1.0.3 through 1.2.0 to the latest available version: 1.0.10 or 1.1.1 or 1.2.1.",
+  "aliases": [
+    "CVE-2026-111497"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "brotli",
+        "purl": "pkg:bitnami/brotli"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.3"
+            },
+            {
+              "fixed": "1.0.10"
+            },
+            {
+              "introduced": "1.1.0"
+            },
+            {
+              "fixed": "1.1.1"
+            },
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "1.2.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:google:brotli:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/23/25"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/24/6"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/26/12"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/26/13"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "http://www.openwall.com/lists/oss-security/2026/10/26/16"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://broccoli2shell.com"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://ellio.tech/en/blog/node2shell-cve-2026-111497-rce-on-stock-nodejs-builds/"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/advisories/GHSA-9v8h-qqgm-4m35"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/andybalholm/brotli/releases/tag/v1.2.7"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/dotnet/announcements/issues/494"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/google/brotli/releases/tag/v1.0.10"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/google/brotli/releases/tag/v1.1.1"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://github.com/google/brotli/releases/tag/v1.2.1"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://lists.debian.org/debian-lts-announce/2026/10/msg00049.html"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases#nodejs-brotli-decoder-out-of-bounds-write-permits-remote-code-execution-cve-2026-111497---high"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://patchtheplanet.org/brotli"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.aikido.dev/blog/node2shell-nodejs-brotli-rce-cve-2026-111497"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-111497"
+    }
+  ],
+  "published": "2026-10-29T08:38:40.345Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}
