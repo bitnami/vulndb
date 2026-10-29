@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-115356",
+  "summary": "OpenBao before 2.6.4 and 2.7.0 before 2.7.1 Kubernetes Auth Method Token Renewal After Revocation",
+  "details": "OpenBao before 2.6.4 and 2.7.x before 2.7.1 does not verify, when renewing a token issued by the Kubernetes Auth method, that the service account token originally used to authenticate is still valid. An authenticated attacker can keep renewing such tokens to persist access after the Kubernetes service account has been deleted.",
+  "aliases": [
+    "CVE-2026-115356"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.4"
+            },
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-gf3j-hm38-jhh5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115356"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbao-before-2.6.4-and-2.7.0-before-2.7.1-kubernetes-auth-method-token-renewal-after-revocation"
+    }
+  ],
+  "published": "2026-10-29T08:54:33.324Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

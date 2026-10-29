@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-115357",
+  "summary": "OpenBao before 2.6.4 and 2.7.0 before 2.7.1 Improper Audit Logging of Root Generation and Rekey Responses",
+  "details": "OpenBao before 2.6.4 and 2.7.x before 2.7.1 fails to write response audit entries for the unauthenticated sys/generate-root, sys/rekey, and sys/rekey-recovery-key endpoints when request audit logging succeeds but response audit logging fails. An attacker using these endpoints can complete root token generation or rekey operations without a corresponding response audit record, hindering forensic detection.",
+  "aliases": [
+    "CVE-2026-115357"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.4"
+            },
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-q74w-hv5x-6hxf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115357"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbao-before-2.6.4-and-2.7.0-before-2.7.1-improper-audit-logging-of-root-generation-and-rekey-responses"
+    }
+  ],
+  "published": "2026-10-29T08:54:34.519Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

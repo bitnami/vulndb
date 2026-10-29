@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116187",
+  "summary": "Rclone v1.68.0 before v1.75.2 Authorization Bypass in serve s3 Multipart Uploads",
+  "details": "Rclone from v1.68.0 before v1.75.2 contains an authorization bypass vulnerability in serve s3 --auth-proxy that allows authenticated tenants to manipulate other tenants' multipart uploads by referencing their upload IDs. Attackers who learn a victim's bucket, object, and upload ID can inject parts, complete, or abort in-flight uploads and view upload and object metadata across tenants.",
+  "aliases": [
+    "CVE-2026-116187"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.68.0"
+            },
+            {
+              "fixed": "1.75.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-35g6-9fjv-rmx5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116187"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-1.68.0-before-1.75.2-authorization-bypass-in-serve-s3-multipart-uploads"
+    }
+  ],
+  "published": "2026-10-29T08:58:31.215Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

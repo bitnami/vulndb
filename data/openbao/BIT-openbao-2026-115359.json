@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-115359",
+  "summary": "OpenBao before 2.6.4 and 2.7.0 before 2.7.1 Role-Based Rate Limit Quota Bypass via Request Parsing",
+  "details": "OpenBao before 2.6.4 and 2.7.x before 2.7.1 contains a flaw in its rate limit quota subsystem where role resolution fails for requests with form-encoded bodies or forwarded certificates, so quota rules scoped to backend-specific roles are not enforced. Valid callers can repeatedly issue tokens without consuming the configured role-based rate limit budget.",
+  "aliases": [
+    "CVE-2026-115359"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.4"
+            },
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-5v22-543h-wg96"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115359"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbao-before-2.6.4-and-2.7.0-before-2.7.1-role-based-rate-limit-quota-bypass-via-request-parsing"
+    }
+  ],
+  "published": "2026-10-29T08:54:36.923Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}

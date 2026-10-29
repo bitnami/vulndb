@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-116188",
+  "summary": "rclone serve s3 1.75.0 before 1.75.2 Memory Limit Bypass via Multipart Overflow",
+  "details": "rclone serve s3 versions 1.75.0 before 1.75.2 contain an integer overflow vulnerability in multipart reorder-memory accounting that bypasses the configured buffer limit. Attackers can open two concurrent current-part PUT requests declaring huge lengths to wrap the signed int64 counter and retain out-of-order parts in memory, exhausting the host.",
+  "aliases": [
+    "CVE-2026-116188"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.75.0"
+            },
+            {
+              "fixed": "1.75.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-qjw8-8hmp-c3m6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116188"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-serve-s3-1.75.0-before-1.75.2-memory-limit-bypass-via-multipart-overflow"
+    }
+  ],
+  "published": "2026-10-29T08:58:32.428Z",
+  "modified": "2026-10-29T09:16:42.832Z"
+}
