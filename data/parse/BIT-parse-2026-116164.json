@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-116164",
+  "summary": "Parse Server 9.0.0 before 9.10.4 Reserved Field Name Injection via Object Writes",
+  "details": "Parse Server before 8.6.100 and 9.0.0 before 9.10.4 does not reject reserved internal field names in client object writes, allowing clients to store or clear internal fields. Attackers can write a reserved field that makes reads of an object fail on MongoDB, disrupting queries on that class for all users, or clear their own account lockout state and password history to bypass lockout and password policies.",
+  "aliases": [
+    "CVE-2026-116164"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.100"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-gwrq-q25v-g8mr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116164"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-before-9.10.4-alpha.3-reserved-field-name-injection-via-object-writes"
+    }
+  ],
+  "published": "2026-10-30T17:53:28.507Z",
+  "modified": "2026-10-30T18:13:27.168Z"
+}
