@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-sqlite-2026-11822",
-  "summary": "SQLite before 3.53.2 Memory Corruption in FTS5 Extension",
+  "summary": "SQLite before 3.53.2 Out-of-Bounds Read in FTS5 fts5LeafSeek",
   "details": "SQLite before 3.53.2 contains memory corruption vulnerabilities in the FTS5 full-text search extension that allow attackers to cause process crashes, memory exhaustion, or arbitrary code execution by supplying a crafted database with malformed FTS5 page data. Attackers can trigger an out-of-bounds read in fts5LeafSeek() via an attacker-controlled loop bound and a heap buffer overflow write in fts5ChunkIterate() through a crafted continuation page causing an integer underflow, exploitable when an FTS5 MATCH query is executed against the malicious database.",
   "aliases": [
     "CVE-2026-11822"
@@ -63,5 +63,5 @@
     }
   ],
   "published": "2026-06-12T08:51:44.016Z",
-  "modified": "2026-09-08T08:34:36.952Z"
+  "modified": "2026-10-30T06:15:07.538Z"
 }
