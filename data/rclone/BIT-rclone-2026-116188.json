@@ -37,7 +37,8 @@
   "database_specific": {
     "severity": "Medium",
     "cpes": [
-      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:go:*:*"
     ]
   },
   "references": [
@@ -55,5 +56,5 @@
     }
   ],
   "published": "2026-10-29T08:58:32.428Z",
-  "modified": "2026-10-29T09:16:42.832Z"
+  "modified": "2026-10-30T09:15:51.334Z"
 }
