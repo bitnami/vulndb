@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-consul-2026-105765",
+  "summary": "Consul vulnerable to an authorization bypass in the agent's service mesh leaf certificate API",
+  "details": "HashiCorp Consul and Consul Enterprise 1.17.0 up to 2.0.4 are vulnerable to an authorization bypass in the agent's service mesh leaf certificate API that may allow an attacker without a valid ACL token to retrieve a cached service leaf certificate and its private key. This vulnerability (CVE-2026-105765) is fixed in Consul Community Edition 2.1.0 and Consul Enterprise 2.1.0 and 1.21.19.",
+  "aliases": [
+    "CVE-2026-105765"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "consul",
+        "purl": "pkg:bitnami/consul"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.17.0"
+            },
+            {
+              "fixed": "2.1.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:community:*:*:*",
+      "cpe:2.3:a:hashicorp:consul:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-46-consul-vulnerable-to-an-authorization-bypass-in-the-agents-service-mesh-leaf-certificate-api/77911"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105765"
+    }
+  ],
+  "published": "2026-10-31T20:39:31.250Z",
+  "modified": "2026-10-31T21:06:56.715Z"
+}
