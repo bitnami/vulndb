@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2026-119554",
+  "summary": "Moodle through 5.3.0, 5.2.4, 5.1.8, 5.0.11 and 4.5.15 SQL Injection via enrol_database Course idnumber",
+  "details": "Moodle 5.3.0, 5.2.0 through 5.2.4, 5.1.0 through 5.1.8, 5.0.0 through 5.0.11, and through 4.5.15 contain an sql injection vulnerability in the External database enrolment plugin via course idnumber. Editing teachers can store a backslash-quote payload in idnumber that executes during scheduled sync on MySQL/MariaDB external databases, reading data and manipulating enrolment results.",
+  "aliases": [
+    "CVE-2026-119554"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://abraxaslabs.tech/research/moodle-enrol-database-sqli"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle/blob/v5.3.0/public/enrol/database/lib.php#L527-L528"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle/blob/v5.3.0/public/enrol/database/lib.php#L918-L926"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle/blob/v5.3.0/public/enrol/database/lib.php#L971-L979"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119554"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/moodle-through-5.3.0-5.2.4-5.1.8-5.0.11-and-4.5.15-sql-injection-via-enrol-database-course-idnumber"
+    }
+  ],
+  "published": "2026-11-05T08:54:56.150Z",
+  "modified": "2026-11-05T09:12:17.111Z"
+}
