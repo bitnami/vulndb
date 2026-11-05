@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-117616",
+  "details": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier provides an HTTP endpoint that loads agents by name without validating the name, allowing attackers with Overall/Read permission to load any config.xml file on the controller file system as an agent configuration, and to overwrite an arbitrary config.xml file when that agent is saved, potentially resulting in arbitrary code execution.",
+  "aliases": [
+    "CVE-2026-117616"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.2"
+            },
+            {
+              "introduced": "2.581.0"
+            },
+            {
+              "fixed": "2.588.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117616"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.jenkins.io/security/advisory/2026-10-28/#SECURITY-4188"
+    }
+  ],
+  "published": "2026-11-04T23:46:42.447Z",
+  "modified": "2026-11-05T00:14:04.911Z"
+}
