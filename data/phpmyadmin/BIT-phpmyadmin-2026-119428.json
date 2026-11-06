@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-phpmyadmin-2026-119428",
+  "summary": "phpMyAdmin through 5.2.3 SSRF via setup/validate.php After Setup Disabled",
+  "details": "phpMyAdmin through 5.2.3 contains a server-side request forgery vulnerability that allows unauthenticated attackers to trigger outbound connections via setup/validate.php, which lacks the setup-disabled guard. Attackers can POST attacker-chosen host and port values reaching Validator::testDBConnection() to open MySQL-protocol connections and probe internal ports using returned error messages.",
+  "aliases": [
+    "CVE-2026-119428"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmyadmin",
+        "purl": "pkg:bitnami/phpmyadmin"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:php:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/phpmyadmin-setup-validate"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/blob/RELEASE_5_2_3/libraries/classes/Config/Validator.php#L241"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/blob/RELEASE_5_2_3/setup/validate.php#L21-L35"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/126ac3ac5662ed3171ef3646636348fad3f8e952"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/510e442593af5d4702bbb46cdb45ad51f3a8a9d3"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/pull/19156"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119428"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/phpmyadmin-through-5.2.3-ssrf-via-setup-validate-php-after-setup-disabled"
+    }
+  ],
+  "published": "2026-11-06T11:54:17.983Z",
+  "modified": "2026-11-06T12:13:34.648Z"
+}
