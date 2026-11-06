@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-117623",
+  "details": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier does not escape the text shown in the tooltips of breadcrumb bar overflow menu entries, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with Overall/Read permission.",
+  "aliases": [
+    "CVE-2026-117623"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.2"
+            },
+            {
+              "introduced": "2.581.0"
+            },
+            {
+              "fixed": "2.588.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117623"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.jenkins.io/security/advisory/2026-10-28/#SECURITY-4229"
+    }
+  ],
+  "published": "2026-11-06T08:42:40.599Z",
+  "modified": "2026-11-06T09:04:33.277Z"
+}
