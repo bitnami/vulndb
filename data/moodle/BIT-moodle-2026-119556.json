@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-moodle-2026-119556",
+  "summary": "Moodle through 5.3.0, 5.2.4, 5.1.8, 5.0.11 and 4.5.15 Missing Authorization via core_grades_get_gradeitems",
+  "details": "Moodle 4.2.0 through 4.5.15, 5.0.0 through 5.0.11, 5.1.0 through 5.1.8, 5.2.0 through 5.2.4, and 5.3.0 contain a missing capability check in the core_grades_get_gradeitems web service that allows enrolled students to view hidden grade items. Authenticated course users can call the AJAX or mobile web service to list hidden grade item ids, names, and categories that the gradebook conceals from them.",
+  "aliases": [
+    "CVE-2026-119556"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "moodle",
+        "purl": "pkg:bitnami/moodle"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.2.0"
+            },
+            {
+              "last_affected": "5.3.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://abraxaslabs.tech/research/moodle-grades-gradeitems"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/moodle/moodle/blob/v5.3.0/public/grade/classes/external/get_gradeitems.php#L74-L80"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119556"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/moodle-through-5.3.0-5.2.4-5.1.8-5.0.11-and-4.5.15-missing-authorization-via-core-grades-get-gradeitems"
+    }
+  ],
+  "published": "2026-11-06T05:51:21.784Z",
+  "modified": "2026-11-06T06:05:04.694Z"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2026-119378",
+  "summary": "SQLite before 3.54.0 Use-After-Free in R-Tree nodeWrite()",
+  "details": "SQLite before 3.54.0 contains a use-after-free vulnerability in the R-Tree extension that allows attackers to make applications use freed heap memory by manipulating the %_node shadow table. Attackers can supply a database declaring %_node WITHOUT ROWID or with a RAISE(IGNORE) trigger so nodeWrite() hashes nodes as 0, crashing the process after node splits.",
+  "aliases": [
+    "CVE-2026-119378"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.54.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/sqlite-rtree-rowid0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sqlite/sqlite"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sqlite/sqlite/blob/version-3.53.4/ext/rtree/rtree.c#L905"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/sqlite/sqlite/commit/d21bd37c7cfc1b85b17a6703555f0926b6236e04"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119378"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://sqlite.org/releaselog/3_54_0.html"
+    },
+    {
+      "type": "FIX",
+      "url": "https://sqlite.org/src/info/6a9e1415659f9e75"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/sqlite-before-3.54.0-use-after-free-in-r-tree-nodewrite"
+    }
+  ],
+  "published": "2026-11-06T05:52:58.497Z",
+  "modified": "2026-11-06T06:05:04.694Z"
+}
