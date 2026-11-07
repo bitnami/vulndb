@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-119126",
+  "summary": "Parse Server before 8.6.106 and 9.0.0 before 9.10.5 afterSave Trigger and LiveQuery Bypass via Dot Notation Keys",
+  "details": "Parse Server before 8.6.106 and 9.0.0 before 9.10.5 mishandles dot notation keys with null or undefined values when building the saved object, so a write is stored but returns an error and skips afterSave triggers and LiveQuery events. A client with write access can exploit this to evade audit logging, notifications, and derived data updates.",
+  "aliases": [
+    "CVE-2026-119126"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.106"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-969q-274f-mc7w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119126"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-before-8.6.106-and-9.0.0-before-9.10.5-alpha.7-aftersave-trigger-and-livequery-bypass-via-dot-notation-keys"
+    }
+  ],
+  "published": "2026-11-06T23:54:33.071Z",
+  "modified": "2026-11-07T00:15:11.343Z"
+}
