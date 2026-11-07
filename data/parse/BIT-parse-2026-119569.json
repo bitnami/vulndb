@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-119569",
+  "summary": "Parse Server 9.0.0 before 9.10.5 Prototype Pollution Denial of Service",
+  "details": "Parse Server before 8.6.108 and 9.0.0 before 9.10.5 contains a prototype pollution vulnerability because user-controlled keys are expanded into objects without own-property checks. Clients with class write access can send dot notation field keys or ACL entry names matching built-in object members to corrupt built-in functions, causing all requests to fail until server restart.",
+  "aliases": [
+    "CVE-2026-119569"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.108"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-rx55-fw4j-pvpx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119569"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.0.0-before-9.10.5-alpha.9-prototype-pollution-denial-of-service"
+    }
+  ],
+  "published": "2026-11-07T14:53:48.371Z",
+  "modified": "2026-11-07T15:13:21.549Z"
+}
