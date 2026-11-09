@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2026-77167",
+  "details": "Abusing the federated share endpoint, an attacker can write arbitrary rows into the oc_share_external database table. These rows persist indefinitely — there is no automatic cleanup mechanism. Three distinct denial-of-service conditions follow from this write primitive, all triggered from the same unauthenticated source and all self-renewing on a 24-hour cycle for as long as the injected rows remain in the database.",
+  "aliases": [
+    "CVE-2026-77167"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "22.2.11"
+            },
+            {
+              "introduced": "23.0.0"
+            },
+            {
+              "fixed": "23.0.13"
+            },
+            {
+              "introduced": "24.0.0"
+            },
+            {
+              "fixed": "24.0.13"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "25.0.14"
+            },
+            {
+              "introduced": "26.0.0"
+            },
+            {
+              "fixed": "26.0.14"
+            },
+            {
+              "introduced": "27.0.0"
+            },
+            {
+              "fixed": "27.1.12"
+            },
+            {
+              "introduced": "28.0.0"
+            },
+            {
+              "fixed": "28.0.15"
+            },
+            {
+              "introduced": "29.0.0"
+            },
+            {
+              "fixed": "29.0.17"
+            },
+            {
+              "introduced": "30.0.0"
+            },
+            {
+              "fixed": "30.0.18"
+            },
+            {
+              "introduced": "31.0.0"
+            },
+            {
+              "fixed": "31.0.15"
+            },
+            {
+              "introduced": "32.0.0"
+            },
+            {
+              "fixed": "32.0.13"
+            },
+            {
+              "introduced": "33.0.0"
+            },
+            {
+              "fixed": "33.0.7"
+            },
+            {
+              "introduced": "34.0.0"
+            },
+            {
+              "fixed": "34.0.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3679640"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77167"
+    }
+  ],
+  "published": "2026-11-09T11:52:12.398Z",
+  "modified": "2026-11-09T12:14:21.457Z"
+}
