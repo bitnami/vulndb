@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-16491",
+  "summary": "CVE-2026-16491 CVE Record",
+  "details": "Grafana’s RBAC service ignored the requested folder when checking whether a user was a folder administrator for deleted dashboard listings. A user with dashboard permission-management rights on any folder could therefore be treated as an administrator of every folder.\n\nThis could expose deleted dashboard items from folders where the user lacked administrative access. The fix requires permission on the specified folder, an ancestor, or a wildcard scope.",
+  "aliases": [
+    "CVE-2026-16491"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.1.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-16491"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16491"
+    }
+  ],
+  "published": "2026-11-10T08:49:50.602Z",
+  "modified": "2026-11-10T09:17:15.368Z"
+}
