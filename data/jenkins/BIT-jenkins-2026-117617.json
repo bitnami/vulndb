@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-117617",
+  "details": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier checks for symbolic links in the path of an extracted file only before creating its parent directories, not immediately before writing it, and allows symbolic links in artifacts to replace existing files or empty directories, allowing attackers with Item/Configure permission to write files to arbitrary locations on the Jenkins controller file system.",
+  "aliases": [
+    "CVE-2026-117617"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.2"
+            },
+            {
+              "introduced": "2.581.0"
+            },
+            {
+              "fixed": "2.588.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117617"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.jenkins.io/security/advisory/2026-10-28/#SECURITY-4248"
+    }
+  ],
+  "published": "2026-11-10T14:45:42.340Z",
+  "modified": "2026-11-10T15:12:17.324Z"
+}
