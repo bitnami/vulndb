@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-117621",
+  "details": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier computes on the agent the URL of the link shown in the workspace browser for each file and directory, resulting in a cross-site scripting (XSS) vulnerability exploitable by attackers in control of agent processes.",
+  "aliases": [
+    "CVE-2026-117621"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.2"
+            },
+            {
+              "introduced": "2.581.0"
+            },
+            {
+              "fixed": "2.588.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117621"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.jenkins.io/security/advisory/2026-10-28/#SECURITY-4232"
+    }
+  ],
+  "published": "2026-11-10T17:45:04.231Z",
+  "modified": "2026-11-10T18:09:10.512Z"
+}
