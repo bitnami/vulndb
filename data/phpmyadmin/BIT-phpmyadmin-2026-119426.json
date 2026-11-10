@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-phpmyadmin-2026-119426",
+  "summary": "phpMyAdmin through 5.2.3 CSRF Token Bypass via Non-AJAX POST to /sql",
+  "details": "phpMyAdmin through 5.2.3 contains a cross-site request forgery vulnerability that allows remote attackers to execute arbitrary SQL by bypassing CSRF token checks on non-AJAX POST requests. Attackers can lure authenticated victims into submitting cross-site POSTs carrying sql_query to /sql or /database/sql, running SQL with the victim's database privileges under http or config authentication.",
+  "aliases": [
+    "CVE-2026-119426"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmyadmin",
+        "purl": "pkg:bitnami/phpmyadmin"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:php:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/phpmyadmin-csrf-sql"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/blob/RELEASE_5_2_3/libraries/classes/Common.php#L87-L151"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/910322373f14ed4601c85234858f630f127569ef"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/d1e2b54b530685c24dd91181b9f64a5a64621789"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/pull/20569"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119426"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/phpmyadmin-through-5.2.3-csrf-token-bypass-via-non-ajax-post-to-sql"
+    }
+  ],
+  "published": "2026-11-10T11:55:14.446Z",
+  "modified": "2026-11-10T12:15:29.760Z"
+}
