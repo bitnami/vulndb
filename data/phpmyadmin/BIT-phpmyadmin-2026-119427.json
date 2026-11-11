@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-phpmyadmin-2026-119427",
+  "summary": "phpMyAdmin through 5.2.3 SQL Injection via Designer saveSetting",
+  "details": "phpMyAdmin through 5.2.3 contains an sql injection vulnerability in Designer saveSetting() that allows authenticated users to inject SQL via unescaped json_encode() output. Attackers can send crafted index or value parameters with operation=save_setting_value to /database/designer to overwrite other users' designer settings or run controluser subqueries.",
+  "aliases": [
+    "CVE-2026-119427"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "phpmyadmin",
+        "purl": "pkg:bitnami/phpmyadmin"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "last_affected": "5.2.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:php:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/phpmyadmin-designer-json-sqli"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/blob/RELEASE_5_2_3/libraries/classes/Database/Designer/Common.php#L788-L808"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/8d1244a72b3be073418e0e08f6f5506815bc7e65"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/commit/ec0c6d8394b70d67798f38b645e39c26ea96a2a3"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/phpmyadmin/phpmyadmin/pull/18698"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119427"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/phpmyadmin-through-5.2.3-sql-injection-via-designer-savesetting"
+    }
+  ],
+  "published": "2026-11-11T08:53:21.568Z",
+  "modified": "2026-11-11T09:13:23.921Z"
+}
