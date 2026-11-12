@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-108949",
+  "summary": "Apache ActiveMQ, ActiveMQ Broker: Repeated rejected temporary destination consumer requests can lead to broker OOM",
+  "details": "Denial of Service via OOM vulnerability in Apache ActiveMQ, ActiveMQ Broker.\n\n\n\nAn authenticated OpenWire client that sends a ConsumerInfo for a temporary queue/topic owned by another connection is rejected with InvalidDestinationException, but the rejected Subscription is left behind in the region's subscriptions map. Repeating the request leaks broker heap until OOM because the broker does not clean up the rejected subscriptions in the map.\n\n\n\nThis issue affects Apache ActiveMQ: from 6.0.0 before 6.3.3, before 5.19.12; ActiveMQ Broker: from 6.0.0 before 6.3.3, before 5.19.12.\n\n\n\nUsers are recommended to upgrade to version 6.4.0, 6.3.3, or 5.19.12, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-108949"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.12"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/03/18"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/2l1jbc8j88w1n9bd44vm9bjtj9t3o80n"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108949"
+    }
+  ],
+  "published": "2026-11-12T11:38:20.805Z",
+  "modified": "2026-11-12T12:13:32.855Z"
+}
