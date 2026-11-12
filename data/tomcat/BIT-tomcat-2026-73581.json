@@ -27,7 +27,7 @@
               "introduced": "8.5.0"
             },
             {
-              "fixed": "9.0.45"
+              "fixed": "9.0.122"
             },
             {
               "introduced": "10.1.0"
@@ -40,12 +40,6 @@
             },
             {
               "fixed": "11.0.26"
-            },
-            {
-              "introduced": "9.0.0"
-            },
-            {
-              "fixed": "9.0.122"
             }
           ]
         }
@@ -71,8 +65,32 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73581"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/15a76156ced9f6a6306ef7d6f2e343034231a2de"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/2dce8f26b3ba6a89c8f172b94fa41a5fa2dcc361"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/6907d47ea2d4c3f13ef9f65b0c51ff2fd485c252"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.60"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.122"
     }
   ],
   "published": "2026-10-01T09:36:23.598Z",
-  "modified": "2026-10-01T09:55:18.588Z"
+  "modified": "2026-11-12T06:13:07.337Z"
 }
