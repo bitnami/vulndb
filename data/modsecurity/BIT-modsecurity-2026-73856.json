@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity-2026-73856",
+  "summary": "ModSecurity: Response Body Inspection Bypass",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. From 3.0.0 until 3.0.17, src/transaction.cc compares a response Content-Type value against SecResponseBodyMimeType entries case-sensitively. A mixed-case response media type that is semantically equivalent to a configured lowercase type can therefore be treated as unconfigured, causing ModSecurity to skip RESPONSE_BODY inspection. An unauthenticated requester can then receive response content that a phase 4 rule would otherwise block, including sensitive error or debug data. This issue is fixed in version 3.0.17.",
+  "aliases": [
+    "CVE-2026-73856"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity",
+        "purl": "pkg:bitnami/modsecurity"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.0"
+            },
+            {
+              "fixed": "3.0.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/23ccd9202114f8313df3773f7992782fd9949c98"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/releases/tag/v3.0.17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-vmg8-j66p-vgvw"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73856"
+    }
+  ],
+  "published": "2026-11-12T17:50:35.406Z",
+  "modified": "2026-11-12T18:13:00.580Z"
+}

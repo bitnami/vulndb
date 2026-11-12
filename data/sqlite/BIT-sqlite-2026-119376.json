@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2026-119376",
+  "summary": "SQLite before 3.54.0 Stack Exhaustion via COLLATE Operator Chain",
+  "details": "SQLite before 3.54.0 contains a stack exhaustion vulnerability that allows attackers to bypass the SQLITE_LIMIT_EXPR_DEPTH limit by chaining COLLATE postfix operators. Attackers can supply roughly 175,000 chained COLLATE operators in SQL or an untrusted database view to trigger unbounded recursion in sqlite3WalkExprNN() and crash the process.",
+  "aliases": [
+    "CVE-2026-119376"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.54.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/sqlite-collate-depth"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sqlite/sqlite"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/sqlite/sqlite/blob/version-3.53.4/src/expr.c#L175"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/sqlite/sqlite/commit/d54522a5b832422ab893a1e9fa7a99ab314ea4e2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119376"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://sqlite.org/bugs/info/2026-10-04T04:50:56Z"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://sqlite.org/releaselog/3_54_0.html"
+    },
+    {
+      "type": "REPORT",
+      "url": "https://sqlite.org/src/info/252c0b7bf5a727d2"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/sqlite-before-3.54.0-stack-exhaustion-via-collate-operator-chain"
+    }
+  ],
+  "published": "2026-11-12T17:58:00.062Z",
+  "modified": "2026-11-12T18:13:00.580Z"
+}
