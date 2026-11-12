@@ -27,7 +27,7 @@
               "introduced": "0"
             },
             {
-              "last_affected": "3.17.2"
+              "fixed": "3.18.0"
             }
           ]
         }
@@ -56,8 +56,12 @@
     {
       "type": "WEB",
       "url": "https://www.vulncheck.com/advisories/mlflow-path-traversal-via-trace-id-api"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/mlflow/mlflow/commit/d64cc8b673f71d29d93a7845fc179946ad56a881"
     }
   ],
   "published": "2026-10-26T05:51:59.928Z",
-  "modified": "2026-10-26T06:13:43.911Z"
+  "modified": "2026-11-12T00:06:52.379Z"
 }
