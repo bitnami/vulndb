@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-33379",
+  "summary": "Dashboard snapshot permission bypass",
+  "details": "A user with any role, including Viewer or a service account with no permissions, can create, externally publish, and delete dashboard snapshots (missing authorization). Only Grafana OSS and Grafana Enterprise 12.4 are affected; earlier versions and Grafana 13 are not.",
+  "aliases": [
+    "CVE-2026-33379"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "12.4.0"
+            },
+            {
+              "fixed": "12.4.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-33379"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33379"
+    }
+  ],
+  "published": "2026-11-12T17:45:04.440Z",
+  "modified": "2026-11-12T18:13:00.580Z"
+}

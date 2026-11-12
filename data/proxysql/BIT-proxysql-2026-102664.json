@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-proxysql-2026-102664",
+  "summary": "ProxySQL: Uninitialized heap read in MySQL compressed packet decompression via zlib path",
+  "details": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. Prior to 3.0.10, 3.1.10, and 4.0.10, decompress_mysql_payload() in lib/mysql_data_stream.cpp accepts a zlib stream when uncompress() returns Z_OK without checking that the actual output length equals the attacker-controlled payload_length. An authenticated MySQL client that negotiates compression can overstate payload_length, causing buffer2array() to parse the uninitialized tail of a heap buffer as MySQL packet headers and forward stale data to the backend. Backend error responses can disclose prior SQL queries, result data, credentials, or session state, and malformed lengths can also cause excessive allocations. This issue is fixed in versions 3.0.10, 3.1.10, and 4.0.10.",
+  "aliases": [
+    "CVE-2026-102664"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "proxysql",
+        "purl": "pkg:bitnami/proxysql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.0.10"
+            },
+            {
+              "introduced": "3.1.0"
+            },
+            {
+              "fixed": "3.1.10"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:proxysql:proxysql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/commit/396c742f7d50b1f479e1157e296ee9d0aff1b724"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/commit/a8c1cef4d44c4beea7f6aa21b8a09a7cb8c75520"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/releases/tag/v3.0.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/releases/tag/v3.1.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/releases/tag/v4.0.10"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sysown/proxysql/security/advisories/GHSA-fvch-fpgq-pwfx"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102664"
+    }
+  ],
+  "published": "2026-11-12T17:55:27.566Z",
+  "modified": "2026-11-12T18:13:00.580Z"
+}
