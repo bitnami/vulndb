@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-119125",
+  "summary": "Parse Server before 8.6.107 and 9.0.0 before 9.10.5 Information Disclosure via beforeSave Reverted Fields",
+  "details": "Parse Server before 8.6.107 and 9.0.0 before 9.10.5 returns the stored value of a field reverted by a beforeSave trigger in object update responses, even to clients without read access to that object or field. An authenticated client able to update an object whose beforeSave trigger reverts a field, via revert() or a constant: true validator, can read protected values, including its own account's raw MFA authData when protectedFieldsTriggerExempt is enabled.",
+  "aliases": [
+    "CVE-2026-119125"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "8.6.107"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.10.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-9rvr-f5hc-9f2f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119125"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-before-8.6.107-and-9.0.0-before-9.10.5-alpha.8-information-disclosure-via-beforesave-reverted-fields"
+    }
+  ],
+  "published": "2026-11-12T11:54:09.267Z",
+  "modified": "2026-11-12T12:13:32.855Z"
+}
