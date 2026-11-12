@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-kyverno-2026-122323",
+  "summary": "Kyverno 1.11.0 before 1.19.2 Memory Exhaustion via Notary Signature Decompression",
+  "details": "Kyverno from 1.11.0 before 1.19.2 contains an unbounded decompression vulnerability in FetchSignatureBlob that allows attackers to exhaust memory by supplying highly compressed notary signature layers. Attackers who control registry referrers or signatures can publish small gzip layers that decompress beyond maxPayloadSize, causing admission controller OOM kills and denial of service.",
+  "aliases": [
+    "CVE-2026-122323"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "kyverno",
+        "purl": "pkg:bitnami/kyverno"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.11.0"
+            },
+            {
+              "fixed": "1.19.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:kyverno:kyverno:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/kyverno/kyverno/security/advisories/GHSA-fr24-3hvf-393q"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122323"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/kyverno-1.11.0-before-1.19.2-memory-exhaustion-via-notary-signature-decompression"
+    }
+  ],
+  "published": "2026-11-12T05:47:36.903Z",
+  "modified": "2026-11-12T06:13:07.337Z"
+}
