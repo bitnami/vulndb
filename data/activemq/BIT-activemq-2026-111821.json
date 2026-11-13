@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-111821",
+  "summary": "Apache ActiveMQ, Apache ActiveMQ KahaDB: Oversized client identifier strings poison the KahaDB journal",
+  "details": "Improper input validation vulnerability in Apache ActiveMQ, Apache ActiveMQ KahaDB.\n\n\n\nA user can create a durable subscription with a clientId and subscription name that have a combined length > 65,535 (while separately being shorter) on a broker using KahaDB which can cause the broker to shutdown and be unrecoverable. \n\n\n\nThis issue affects Apache ActiveMQ: from 6.0.0 before 6.3.3, before 5.19.12; Apache ActiveMQ KahaDB: from 6.0.0 before 6.3.3, before 5.19.12.\n\n\n\nUsers are recommended to upgrade to version 6.4.0, 6.3.3 or 5.19.12, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-111821"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.12"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/03/19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/p8gxq66lmztkrls74wkz3xh9chqd0pwl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111821"
+    }
+  ],
+  "published": "2026-11-13T17:38:48.280Z",
+  "modified": "2026-11-13T18:15:42.039Z"
+}
