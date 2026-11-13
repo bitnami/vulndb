@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-modsecurity2-2026-103932",
+  "summary": "ModSecurity: PCRE2 `@rxGlobal` match-limit errors are converted to no-match",
+  "details": "ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. From 3.0.5 until 3.0.17, the PCRE2 implementation of @rxGlobal in src/utils/regex.cc converts pcre2_match match-limit errors into an ordinary no-match result instead of propagating a non-OK RegexResult. When attacker-controlled input exhausts SecPcreMatchLimit, rules that rely on MSC_PCRE_LIMITS_EXCEEDED or its TX compatibility indicator do not run, so a request that should be rejected can pass through the WAF. The issue affects PCRE2 deployments that use @rxGlobal with a limit-exhaustible expression and a compensating rule; it is not a universal WAF bypass. This issue is fixed in version 3.0.17.",
+  "aliases": [
+    "CVE-2026-103932"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "modsecurity2",
+        "purl": "pkg:bitnami/modsecurity2"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.0.5"
+            },
+            {
+              "fixed": "3.0.17"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:trustwave:modsecurity:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/commit/d92bdc3b2183824ba3c582154b7385ee8349ea7e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/releases/tag/v3.0.17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/owasp-modsecurity/ModSecurity/security/advisories/GHSA-5m93-4h75-3p2w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103932"
+    }
+  ],
+  "published": "2026-11-13T20:51:41.967Z",
+  "modified": "2026-11-13T21:15:48.983Z"
+}
