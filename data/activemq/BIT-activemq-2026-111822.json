@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-111822",
+  "summary": "Apache ActiveMQ, Apache ActiveMQ Runtime Config: ActiveMQ retains write access after live ACL revocation",
+  "details": "Improper invalidation of cached authorizations vulnerability in Apache ActiveMQ, Apache ActiveMQ Runtime Config.\n\n\n\nAfter the runtime configuration plugin removes a principal's write grant on a destination, an authenticated connection opened before the change can keep sending to that destination, including through a new anonymous producer, while fresh connections and new explicit producers are denied.\n\n\n\nThis issue affects Apache ActiveMQ: from 6.0.0 before 6.3.3, before 5.19.12; Apache ActiveMQ Runtime Config: from 6.0.0 before 6.3.3, before 5.19.12.\n\n\n\nUsers are recommended to upgrade to version 6.4.0, 6.3.3 or 5.19.12, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-111822"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.12"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/03/20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/b5gop0kwsm4sr1pgdrfcd14q8hx942j5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111822"
+    }
+  ],
+  "published": "2026-11-13T14:38:04.303Z",
+  "modified": "2026-11-13T15:12:37.740Z"
+}
