@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-115715",
+  "summary": "Allocation of Resources Without Limits or Throttling in Elasticsearch Leading to Denial of Service",
+  "details": "Allocation of Resources Without Limits or Throttling (CWE-770) in Elasticsearch can lead to denial of service via a specially crafted input value that is processed by an affected phonetic encoder of the analysis-phonetic plugin. An authenticated user with permission to write documents to or run searches against an index that uses an affected encoder can cause an Elasticsearch node to exhaust its heap memory. The node can become unresponsive or terminate.",
+  "aliases": [
+    "CVE-2026-115715"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.19.24"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.9"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-24-9-4-9-9-5-6-security-update-esa-2026-235/391372"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115715"
+    }
+  ],
+  "published": "2026-11-13T05:40:54.099Z",
+  "modified": "2026-11-13T06:15:53.309Z"
+}
