@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-sqlite-2026-119374",
+  "summary": "SQLite before 3.54.0 Heap Buffer Overflow via FTS5 fts5DoSecureDelete()",
+  "details": "SQLite before 3.54.0 built with FTS5 contains a heap buffer overflow in fts5DoSecureDelete() that allows attackers to write past the leaf page buffer via crafted footer key offsets. Attackers can supply a database file with a corrupted FTS5 index that, when deleted from with secure-delete enabled, corrupts heap memory and crashes the application.",
+  "aliases": [
+    "CVE-2026-119374"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "sqlite",
+        "purl": "pkg:bitnami/sqlite"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.54.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://abraxaslabs.tech/research/sqlite-fts5-securedel"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/sqlite/sqlite"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/sqlite/sqlite/blob/version-3.53.4/ext/fts5/fts5_index.c#L5525"
+    },
+    {
+      "type": "FIX",
+      "url": "https://github.com/sqlite/sqlite/commit/d9de6eedbe918c074c7556400fa21df5960704d9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119374"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://sqlite.org/releaselog/3_54_0.html"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://sqlite.org/src/info/9cd4f9e920"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/sqlite-before-3.54.0-heap-buffer-overflow-via-fts5-fts5dosecuredelete"
+    }
+  ],
+  "published": "2026-11-13T08:58:29.618Z",
+  "modified": "2026-11-13T09:12:41.048Z"
+}
