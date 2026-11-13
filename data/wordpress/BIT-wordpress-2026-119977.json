@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-wordpress-2026-119977",
+  "summary": "WordPress Core 4.7.0 - 7.1.3 - Unauthenticated Upgrade-Window Staged-Installer Remote Code Execution",
+  "details": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+  "aliases": [
+    "CVE-2026-119977"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "wordpress",
+        "purl": "pkg:bitnami/wordpress"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "4.7.0"
+            },
+            {
+              "fixed": "4.7.39"
+            },
+            {
+              "introduced": "4.8.0"
+            },
+            {
+              "fixed": "4.8.34"
+            },
+            {
+              "introduced": "4.9.0"
+            },
+            {
+              "fixed": "4.9.35"
+            },
+            {
+              "introduced": "5.0.0"
+            },
+            {
+              "fixed": "5.0.31"
+            },
+            {
+              "introduced": "5.1.0"
+            },
+            {
+              "fixed": "5.1.28"
+            },
+            {
+              "introduced": "5.2.0"
+            },
+            {
+              "fixed": "5.2.30"
+            },
+            {
+              "introduced": "5.3.0"
+            },
+            {
+              "fixed": "5.3.27"
+            },
+            {
+              "introduced": "5.4.0"
+            },
+            {
+              "fixed": "5.4.25"
+            },
+            {
+              "introduced": "5.5.0"
+            },
+            {
+              "fixed": "5.5.24"
+            },
+            {
+              "introduced": "5.6.0"
+            },
+            {
+              "fixed": "5.6.23"
+            },
+            {
+              "introduced": "5.7.0"
+            },
+            {
+              "fixed": "5.7.21"
+            },
+            {
+              "introduced": "5.8.0"
+            },
+            {
+              "fixed": "5.8.19"
+            },
+            {
+              "introduced": "5.9.0"
+            },
+            {
+              "fixed": "5.9.20"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.0.18"
+            },
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.16"
+            },
+            {
+              "introduced": "6.2.0"
+            },
+            {
+              "fixed": "6.2.15"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.14"
+            },
+            {
+              "introduced": "6.4.0"
+            },
+            {
+              "fixed": "6.4.14"
+            },
+            {
+              "introduced": "6.5.0"
+            },
+            {
+              "fixed": "6.5.14"
+            },
+            {
+              "introduced": "6.6.0"
+            },
+            {
+              "fixed": "6.6.11"
+            },
+            {
+              "introduced": "6.7.0"
+            },
+            {
+              "fixed": "6.7.11"
+            },
+            {
+              "introduced": "6.8.0"
+            },
+            {
+              "fixed": "6.8.12"
+            },
+            {
+              "introduced": "6.9.0"
+            },
+            {
+              "fixed": "6.9.11"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.8"
+            },
+            {
+              "introduced": "7.1.0"
+            },
+            {
+              "fixed": "7.1.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:wordpress:wordpress:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-core-upgrader.php#L162"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/class-wp-upgrader.php#L378"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/includes/update-core.php#L1549"
+    },
+    {
+      "type": "WEB",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.3/src/wp-admin/setup-config.php#L282"
+    },
+    {
+      "type": "FIX",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/class-wp-upgrader.php#L346"
+    },
+    {
+      "type": "FIX",
+      "url": "https://core.trac.wordpress.org/browser/tags/7.1.4/src/wp-admin/includes/update-core.php#L1545"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
+    },
+    {
+      "type": "ARTICLE",
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-119977"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4b4da0cf-d9f4-47c4-a0e8-6c4dc5a6f250?source=cve"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-core-470-713-unauthenticated-upgrade-window-staged-installer-remote-code-execution"
+    }
+  ],
+  "published": "2026-11-13T09:00:51.884Z",
+  "modified": "2026-11-13T09:12:41.048Z"
+}
