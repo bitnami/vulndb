@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-nextcloud-2026-82984",
+  "details": "When a team was configured as \"visible to everyone\", the web UI correctly blocked non-members from viewing the team (\"You are not a member of ...\"), but the resources API endpoint could still be called directly, allowing any authenticated non-member to enumerate the team's internal resources and their identifiers.\n\nThis does not grant access to the contents of the discovered resources themselves, only their existence, names, and identifiers.",
+  "aliases": [
+    "CVE-2026-82984"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "nextcloud",
+        "purl": "pkg:bitnami/nextcloud"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "32.0.0"
+            },
+            {
+              "fixed": "32.0.12"
+            },
+            {
+              "introduced": "33.0.0"
+            },
+            {
+              "fixed": "33.0.6"
+            },
+            {
+              "introduced": "34.0.0"
+            },
+            {
+              "fixed": "34.0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nextcloud:nextcloud:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://hackerone.com/reports/3511955"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82984"
+    }
+  ],
+  "published": "2026-11-13T17:53:10.670Z",
+  "modified": "2026-11-13T18:15:42.039Z"
+}
