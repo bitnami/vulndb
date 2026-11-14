@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jenkins-2026-117620",
+  "details": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier allows attackers with Overall/Read permission to trigger warnings in the \"Manage Old Data\" feature that can be acted on by administrators to inject attacker-controlled data, overriding existing user account information, including login passwords.",
+  "aliases": [
+    "CVE-2026-117620"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jenkins",
+        "purl": "pkg:bitnami/jenkins"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.580.2"
+            },
+            {
+              "introduced": "2.581.0"
+            },
+            {
+              "fixed": "2.588.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117620"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.jenkins.io/security/advisory/2026-10-28/#SECURITY-4226"
+    }
+  ],
+  "published": "2026-11-14T14:46:05.789Z",
+  "modified": "2026-11-14T15:14:48.392Z"
+}
