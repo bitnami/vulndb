@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-108946",
+  "summary": "Apache ActiveMQ, ActiveMQ Broker: The broker does not verify user provided connection id matches connection",
+  "details": "Improper input validation vulnerability in Apache ActiveMQ, Apache ActiveMQ KahaDB.\n\n\n\nThe ActiveMQ broker resolves connection, session and consumer state from ids that are user provided and in some scenarios does not validate that they ids are bound to that user. This allows an authenticated client to spoof another user's ids. This allows:\n\n\n\n\n\n  *   an authenticated client consumes from another connection's temporary queue/topic by putting the victim's connection id in its own ConsumerId, bypassing the broker-side ownership check. \n  *  a duplicate ConsumerId registration is only logged, after which the attacker's RemoveInfo or disconnect tears down the victim's live subscription\n  *  a forged MessageAck for the victim's ConsumerId permanently deletes an in-flight, unacknowledged message.\n\n\n\n\n\n\n\n\nThis issue affects Apache ActiveMQ: from 6.0.0 before 6.3.3, before 5.19.12; Apache ActiveMQ KahaDB: from 6.0.0 before 6.3.3, before 5.19.12.\n\n\n\nUsers are recommended to upgrade to version 6.4.0, 6.3.3, or 5.19.12, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-108946"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "5.19.12"
+            },
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/03/17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/0spj0m846vhw3cjyfmzsy3l8vxh6f5t6"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108946"
+    }
+  ],
+  "published": "2026-11-14T14:37:42.792Z",
+  "modified": "2026-11-14T15:14:48.392Z"
+}
