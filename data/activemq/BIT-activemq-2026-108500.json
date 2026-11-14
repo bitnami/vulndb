@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-activemq-2026-108500",
+  "summary": "Apache ActiveMQ: LDAPAuthorizationMap allows authorization bypass via DN injection",
+  "details": "Input validation vulnerability in Apache ActiveMQ configured to use the LDAPAuthorizationMapPlugin allows an authenticated attacker to create or address a destination with a crafted name containing LDAP DN special characters (such as comma, plus, equals, backslash) can manipulate the LDAP search base used for ACL lookups.\n\n\n\nThis issue affects Apache ActiveMQ: from 6.3.0 before 6.3.3, from 5.19.0 before 5.19.12.\n\n\n\nUsers are recommended to upgrade to version 6.4.0, 6.3.3 or 5.19.12, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-108500"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "activemq",
+        "purl": "pkg:bitnami/activemq"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "5.19.0"
+            },
+            {
+              "fixed": "5.19.12"
+            },
+            {
+              "introduced": "6.3.0"
+            },
+            {
+              "fixed": "6.3.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:activemq:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/03/16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/0oh4k4ty6hv56d4sydjp26l95f4bsnxt"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108500"
+    }
+  ],
+  "published": "2026-11-14T05:36:45.533Z",
+  "modified": "2026-11-14T06:04:04.375Z"
+}

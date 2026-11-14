@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-elasticsearch-2026-115710",
+  "summary": "Use of Cache Containing Sensitive Information in Elasticsearch Leading to Information Disclosure",
+  "details": "Use of Cache Containing Sensitive Information (CWE-524) in Elasticsearch can lead to information disclosure and incorrect search results via specially crafted search requests. For some query types, Elasticsearch can share cached query results between users who have field-level security restrictions and users who do not. A user restricted by field-level security can learn which documents match a value in a field that they cannot read. A restricted user can also cause users with full access to receive incomplete search results. Disclosure is only possible when a user with full access ran the same query on the same shard recently.",
+  "aliases": [
+    "CVE-2026-115710"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "elasticsearch",
+        "purl": "pkg:bitnami/elasticsearch"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.9.0"
+            },
+            {
+              "fixed": "8.19.24"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.4.9"
+            },
+            {
+              "introduced": "9.5.0"
+            },
+            {
+              "fixed": "9.5.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:elastic:elasticsearch:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-19-24-9-4-9-9-5-6-security-update-esa-2026-210/391363"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115710"
+    }
+  ],
+  "published": "2026-11-14T05:38:26.693Z",
+  "modified": "2026-11-14T06:04:04.375Z"
+}
