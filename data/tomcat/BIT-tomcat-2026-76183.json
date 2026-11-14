@@ -24,7 +24,7 @@
           "type": "SEMVER",
           "events": [
             {
-              "introduced": "0"
+              "introduced": "7.0.43"
             },
             {
               "fixed": "9.0.45"
@@ -71,8 +71,32 @@
     {
       "type": "WEB",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76183"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/5b48790abd13d94c2bd351027a39a671916b5ddf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/a93a60a33f4cc202542eb6a0b87b7142d7db311c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/e182d86b7d4cc19ec4c24c38f37acc004404fe8e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.60"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.122"
     }
   ],
   "published": "2026-10-01T09:36:26.067Z",
-  "modified": "2026-10-01T09:55:18.588Z"
+  "modified": "2026-11-14T09:14:06.850Z"
 }
