@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-82337",
+  "summary": "Apache Airflow: DeadlineAlert fields bypass plugin-registration gate for scheduler-side deserialization",
+  "details": "Apache Airflow rebuilt deadline alert fields through generic deserialization, which imports and instantiates the class named in the serialized Dag, in the scheduler and API server. A Dag author could cause classes within Airflow's deserialization allow list to be constructed in those processes with arguments they control. Deployments whose Dags use deadline alerts are affected.\n\nThis is an incomplete fix of CVE-2026-45360, which only hardened the `reference` field; deployments that applied that fix remain affected through the `callback` and `interval` fields.\n\nUsers of apache-airflow are recommended to upgrade to 3.4.0 or later.",
+  "aliases": [
+    "CVE-2026-82337"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/72651"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/74830"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/9v8f3hlm6pxbwl2jt1c2bw84s80gg6kp"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82337"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-45360"
+    }
+  ],
+  "published": "2026-11-18T11:41:56.395Z",
+  "modified": "2026-11-18T12:16:10.639Z"
+}
