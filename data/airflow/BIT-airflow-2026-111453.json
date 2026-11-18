@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-111453",
+  "summary": "Apache Airflow: API: asset queuedEvents DELETE checks Dag edit on a ?dag_id query value but deletes rows for every readable Dag",
+  "details": "Apache Airflow's API endpoint for deleting an asset's queued events checked Dag edit permission against the `dag_id` query parameter, but deleted the queued events of every Dag the caller could read. An authenticated user with edit permission on one Dag and read access to others could suppress asset-triggered runs of Dags they cannot edit. This is an incomplete fix for CVE-2026-75157: users who upgraded to apache-airflow 3.3.2 for that fix are still affected and should upgrade to apache-airflow 3.4.0 or later.",
+  "aliases": [
+    "CVE-2026-111453"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.3.2"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/74839"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/z212137tkfobdgl0hnos7qg6w6r1mxw5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111453"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-75157"
+    }
+  ],
+  "published": "2026-11-18T17:40:46.088Z",
+  "modified": "2026-11-18T18:17:00.342Z"
+}
