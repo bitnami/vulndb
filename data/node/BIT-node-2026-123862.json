@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-node-2026-123862",
+  "summary": "Node.js is vulnerable to a zlib denial of service via a stream destroy during a pending params() call",
+  "details": "An uncatchable exception in the Node.js zlib streaming API lets a peer crash a process by disconnecting while data is being compressed. zlib.params() queues a flush and completes its work in that write's callback; if the stream is destroyed first, as pipeline() does when the peer goes away, Writable still invokes the callback with an error, but the callback ignores its arguments and asserts that the native handle still exists. The handle is gone, so an ERR_INTERNAL_ASSERTION is thrown from inside stream internals and bypasses the stream's error event, the params() callback, and the pipeline() callback, terminating the process. An application is affected only if it calls deflate.params() while streaming to a peer, which is uncommon. This vulnerability affects Node.js 26.x, 24.x, and 22.x.",
+  "aliases": [
+    "CVE-2026-123862"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node",
+        "purl": "pkg:bitnami/node"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "22.23.5"
+            },
+            {
+              "introduced": "23.0.0"
+            },
+            {
+              "fixed": "24.22.3"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "26.13.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cna.openjsf.org/security-advisories.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123862"
+    }
+  ],
+  "published": "2026-11-19T11:56:32.721Z",
+  "modified": "2026-11-19T12:15:55.434Z"
+}
