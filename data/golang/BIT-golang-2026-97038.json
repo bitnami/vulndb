@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-97038",
+  "summary": "Arbitrary code execution via crafted .syso files and cgo linker input files in cmd/go",
+  "details": "Building a malicious package containing \".syso\" files or cgo linker inputs could inject arbitrary linker flags or execute arbitrary code at link time. Linker input files—including \".syso\" files, direct object or library inputs in \"#cgo LDFLAGS\", and libraries in \"-L\" directories—were passed to the external linker without validating their format or checking for embedded linker options. Across platforms, this allowed executing GNU ld implicit linker scripts disguised as libraries or \".syso\" files (or loaded via \"-l:<filename>\" or \"-l\" containing path separators), injecting unallowlisted linker flags via PE/COFF \".drectve\" sections on Windows or Mach-O \"LC_LINKER_OPTION\" load commands on Darwin, or invoking LTO plugins via GCC or LLVM LTO intermediate representation sections in ELF, PE/COFF, or Mach-O objects. The go command now verifies that \".syso\" files, direct linker inputs, and libraries in \"-L\" directories are valid binary objects or archives that do not contain unallowlisted \".drectve\" directives, \"LC_LINKER_OPTION\" load commands, or LTO IR sections, and disallows \"-l:<filename>\" and \":\", \"=\", or path separators in \"-l\" flags.",
+  "aliases": [
+    "CVE-2026-97038"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.26.11"
+            },
+            {
+              "introduced": "1.27.0-0"
+            },
+            {
+              "fixed": "1.27.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/862151"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/82572"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97038"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-6853"
+    }
+  ],
+  "published": "2026-11-19T20:48:15.426Z",
+  "modified": "2026-11-19T21:16:58.637Z"
+}
