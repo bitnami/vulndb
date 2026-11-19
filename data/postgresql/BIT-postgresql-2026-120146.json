@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2026-120146",
+  "summary": "PostgreSQL REASSIGN OWNED bypasses role SET and CREATEDB checks",
+  "details": "Missing authorization in PostgreSQL REASSIGN OWNED allows a role granted INHERIT but not SET to transfer objects to the granted role.  It also allows reassignment of database ownership without the CREATEDB privilege.  The equivalent ALTER ... OWNER commands block this.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.",
+  "aliases": [
+    "CVE-2026-120146"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.25.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.20.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.16.0"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.12.0"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120146"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2026-120146/"
+    }
+  ],
+  "published": "2026-11-19T17:58:51.761Z",
+  "modified": "2026-11-19T18:15:56.649Z"
+}
