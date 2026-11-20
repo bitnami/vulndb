@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-92735",
+  "summary": "Vault integrated storage join may disclose server environment credentials",
+  "details": "HashiCorp Vault and Vault Enterprise are vulnerable to an issue in the integrated storage join process that may allow an unauthenticated attacker with network access to a new, uninitialized node to cause that node to send credentials from its server environment to an attacker-controlled server. This vulnerability (CVE-2026-92735) is fixed in Vault Community Edition 2.2.2 and Vault Enterprise 2.2.2, 1.21.14, and 1.19.25.",
+  "aliases": [
+    "CVE-2026-92735"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.2.0"
+            },
+            {
+              "fixed": "2.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-55-vault-integrated-storage-join-may-disclose-server-environment-credentials/78198"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92735"
+    }
+  ],
+  "published": "2026-11-20T12:01:18.890Z",
+  "modified": "2026-11-20T12:13:28.776Z"
+}
