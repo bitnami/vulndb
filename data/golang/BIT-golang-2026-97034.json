@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-97034",
+  "summary": "Arbitrary command execution via GCC spec files in cgo linker search directories in cmd/go",
+  "details": "When using GCC, building a malicious package that uses cgo could cause arbitrary command execution at link time via untrusted GCC spec files (\"specs\" or \"*.spec\"). When linking with \"-fopenmp\", \"-fopenacc\", or \"-fsanitize=\" in \"#cgo LDFLAGS\", GCC's built-in link spec evaluates \"%:include(libgomp.spec)\" or \"%:include(libsanitizer.spec)\" and searches for spec files in \"-L\" and sysroot directories (including subdirectories and multilib sibling directories such as \"../lib64\"), as well as the working directory when \"-fopenmp\" or \"-fopenacc\" is used or when \"-fsanitize=\" is combined with \"-static\" or \"-static-lib*\". The go command now rejects \"-L\", \"-isysroot\", and \"-Wl,-syslibroot\" directories (and the working and package directories when applicable) that contain GCC spec files, and disallows \"@\" and \"-\" prefixes in \"-fsanitize=\" compiler flag values.",
+  "aliases": [
+    "CVE-2026-97034"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.26.11"
+            },
+            {
+              "introduced": "1.27.0-0"
+            },
+            {
+              "fixed": "1.27.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/862147"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/82576"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97034"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-6857"
+    }
+  ],
+  "published": "2026-11-20T08:46:36.628Z",
+  "modified": "2026-11-20T09:08:21.633Z"
+}
