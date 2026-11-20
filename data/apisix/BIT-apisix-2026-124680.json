@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-124680",
+  "summary": "Apache APISIX: Route-level authentication bypass via path normalization mismatch between routing and upstream forwarding",
+  "details": "Interpretation Conflict, resulting in (Incorrect Authorization) vulnerability in Apache APISIX.\n\n\n\nAn unauthenticated client can reach upstream paths protected\nby a route-level auth plugin when a route without auth exists on the\nsame upstream and the upstream does not collapse encoded dot segments.\n\n\n\nThis issue affects Apache APISIX: from 0.9 through 3.19.0.\n\n\n\nUsers are recommended to upgrade to version 3.20.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-124680"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.9.0"
+            },
+            {
+              "fixed": "3.20.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/13/7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/tsr691p4s58572og5f88p831vygbflvz"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124680"
+    }
+  ],
+  "published": "2026-11-20T14:37:16.118Z",
+  "modified": "2026-11-20T15:11:33.599Z"
+}

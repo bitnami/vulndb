@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-node-min-2026-123868",
+  "summary": "Node.js is vulnerable to an HTTP/2 memory exhaustion denial of service via unaccounted inbound DATA on an undrained stream",
+  "details": "An unauthenticated HTTP/2 client can exhaust Node.js server memory because inbound DATA queued on an undrained stream is charged to no session budget. Each inbound DATA frame creates one JavaScript Buffer view in the receiving stream's readable queue, but nothing charges that queue to current_session_memory_: the socket read buffer is accounted only during parsing and released immediately, so whatever stays queued is accounted to nothing. A peer that fills a stream's receive window with one-byte DATA frames pays about 10 wire bytes per frame while the server retains about 114 bytes per frame, so a single stream on one connection can retain hundreds of megabytes from tens of megabytes sent. maxSessionMemory neither bounds the growth nor refuses new streams, because Http2Session::CanAddStream gates admission on the same counter that never sees the queue. This vulnerability affects Node.js 26.x and 24.x.",
+  "aliases": [
+    "CVE-2026-123868"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "node-min",
+        "purl": "pkg:bitnami/node-min"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "24.0.0"
+            },
+            {
+              "fixed": "24.22.3"
+            },
+            {
+              "introduced": "25.0.0"
+            },
+            {
+              "fixed": "26.13.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:nodejs:node.js:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://cna.openjsf.org/security-advisories.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123868"
+    }
+  ],
+  "published": "2026-11-20T14:53:55.863Z",
+  "modified": "2026-11-20T15:11:33.599Z"
+}
