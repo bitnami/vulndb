@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-124666",
+  "summary": "Apache APISIX: Multi-auth preserves client-supplied Wolf identity headers",
+  "details": "Authentication bypass by spoofing vulnerability in Apache APISIX.\n\n\n\nOn a route where multi-auth falls back from wolf-rbac to another successful authenticator, client-supplied Wolf identity headers can remain in the request. A downstream service that relies on those documented headers may therefore receive an identity that was not established by the successful authenticator.\n\n\n\nThis issue affects Apache APISIX: from 3.8.0 through 3.19.0.\n\n\n\nUsers are recommended to upgrade to version 3.20.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-124666"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.8.0"
+            },
+            {
+              "fixed": "3.20.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/13/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/1kpvbj2m069bnhod8rwyx0mdz5hkwkml"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124666"
+    }
+  ],
+  "published": "2026-11-21T14:37:45.789Z",
+  "modified": "2026-11-21T15:12:07.747Z"
+}

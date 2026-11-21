@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2026-116313",
+  "summary": "PostgreSQL \"vacuumdb --missing-stats-only\" lets a database owner execute code as the vacuumdb user",
+  "details": "Untrusted search path in PostgreSQL vacuumdb allows a database owner to execute arbitrary SQL as the database user running vacuumdb, via shadowing operators used in the --missing-stats-only catalog query.  The pg_upgrade documentation recommends an affected vacuumdb invocation.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.",
+  "aliases": [
+    "CVE-2026-116313"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116313"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2026-116313/"
+    }
+  ],
+  "published": "2026-11-21T14:56:10.555Z",
+  "modified": "2026-11-21T15:12:07.747Z"
+}
