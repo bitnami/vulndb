@@ -1,7 +1,7 @@
 {
   "schema_version": "1.6.2",
   "id": "BIT-jupyterlab-2026-73627",
-  "summary": "JupyterLab 4.6.0 Plugin Manager Lock-Rule Enforcement Bypass",
+  "summary": "JupyterLab 4.1.0 before 4.5.10 and 4.6.0 before 4.6.2 Plugin Manager Lock-Rule Enforcement Bypass",
   "details": "JupyterLab (pip package 'jupyterlab') versions >=4.1.0,<=4.5.9 and >=4.6.0,<=4.6.1 contain a plugin manager lock-rule enforcement bypass. Two server-side enforcement gaps allow an authenticated user to circumvent administrator lock rules by making direct requests to the /lab/api/plugins endpoint, enabling or disabling plugins that were locked — including child plugins of multi-plugin extensions and plugins locked via the 'lock all' mechanism. This can impact data integrity and bypass hardening or restrictions (e.g., download/upload limits) implemented through locked plugins. Fixed in versions 4.6.2 and 4.5.10.",
   "aliases": [
     "CVE-2026-73627"
@@ -61,5 +61,5 @@
     }
   ],
   "published": "2026-09-25T12:23:15.905Z",
-  "modified": "2026-09-25T12:52:12.177Z"
+  "modified": "2026-11-21T12:14:57.218Z"
 }
