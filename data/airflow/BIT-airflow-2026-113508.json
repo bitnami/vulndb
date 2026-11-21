@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-113508",
+  "summary": "Apache Airflow: Logout token revocation fails open; errors silently swallowed",
+  "details": "Apache Airflow's logout endpoint attempted to revoke the presented token on the server, but any failure during revocation was silently ignored and logout still reported success. When the auth manager redirects logout to an external logout URL (for example the FAB or Keycloak auth managers), server-side revocation is the only thing that invalidates the Airflow token; it failed on database errors and, reliably, for tokens from an external issuer accepted via `[api_auth] trusted_jwks_url` whose token identifier is longer than 32 characters. Anyone holding a copy of a user's token from before logout could keep using it against the Airflow API until it expired. Users are advised to upgrade to apache-airflow 3.4.0 or later.",
+  "aliases": [
+    "CVE-2026-113508"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/09/20"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/73562"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/73788"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/6t892ozodb9f3498jrsc8k0crbdnm7no"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113508"
+    }
+  ],
+  "published": "2026-11-21T08:39:11.269Z",
+  "modified": "2026-11-21T09:12:57.536Z"
+}
