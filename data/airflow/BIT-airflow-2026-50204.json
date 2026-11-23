@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-50204",
+  "summary": "Apache Airflow: Audit-log secrets masker redacts by key name only, persisting connection and Variable secrets in cleartext",
+  "details": "Apache Airflow's audit log stored Connection and Variable secret values in cleartext in the `Log.extra` column because the secrets masker matched only on configured sensitive key names. An authenticated low-privilege user with read access to the event-log / audit API — with no prior access to the affected connection or variable — could read those rows and recover the credentials verbatim. Users should upgrade to apache-airflow 3.4.0 or later, which masks these values and restricts the affected audit rows to authorized users. Airflow 2.x is also affected; Airflow 2 has reached end of life and will not receive a fix, so Airflow 2 users should upgrade to Apache Airflow 3.4.0 or later.",
+  "aliases": [
+    "CVE-2026-50204"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/09/4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/68049"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/70759"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/1rfswowf30yck0ql4nhnc5vlk854s8jy"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50204"
+    }
+  ],
+  "published": "2026-11-23T05:39:24.848Z",
+  "modified": "2026-11-23T06:04:44.570Z"
+}
