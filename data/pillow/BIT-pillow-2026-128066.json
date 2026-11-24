@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-pillow-2026-128066",
+  "summary": "Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data",
+  "details": "Pillow is a Python imaging library. From 1.0 through 12.3.0, ImageFileDirectory_v2.load() in src/PIL/TiffImagePlugin.py retains a separate bytes object for each out-of-line IFD tag value without limiting the total data read or preventing distinct tags from referencing the same file region. A small crafted TIFF or EXIF-bearing JPEG, PNG, WebP, or MPO can therefore cause memory use quadratic in the input size. TIFF and some JPEG paths trigger parsing during Image.open(), while other formats are exposed when EXIF is requested, including through getexif() or ImageOps.exif_transpose(). The declared pixel dimensions do not bound this metadata allocation, so decompression-bomb checks do not prevent process memory exhaustion. This issue is fixed in version 13.0.0.",
+  "aliases": [
+    "CVE-2026-128066"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "pillow",
+        "purl": "pkg:bitnami/pillow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.0.0"
+            },
+            {
+              "fixed": "13.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:python:pillow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/4908edaf7f416616784c7c03d8c1a60153710ffb"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/commit/4b63dffd8a6d980fa0e21b40832fa6cbf033eacf"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-wqgw-9xfh-qf2g"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128066"
+    }
+  ],
+  "published": "2026-11-24T08:56:32.876Z",
+  "modified": "2026-11-24T09:14:13.539Z"
+}
