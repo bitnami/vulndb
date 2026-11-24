@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-ruby-2026-132825",
+  "details": "Ruby before 3.3.14, 3.4.13, and 4.0.10 has a heap-based buffer overflow during case conversion. One byte can be written outside a buffer for, for example, ISO-8859-1 or Windows-1252.",
+  "aliases": [
+    "CVE-2026-132825"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "ruby",
+        "purl": "pkg:bitnami/ruby"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.3.14"
+            },
+            {
+              "introduced": "3.4.0"
+            },
+            {
+              "fixed": "3.4.13"
+            },
+            {
+              "introduced": "4.0.0"
+            },
+            {
+              "fixed": "4.0.10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:ruby-lang:ruby:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/20/5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://bugzilla.suse.com/show_bug.cgi?id=1290919"
+    },
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-6-1-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/evenomn/CVE-2026-132825"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/ruby/ruby/security/advisories/GHSA-34m4-m9fh-gqp5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/semgrep/detection-scripts/pull/16"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/omnibus-gitlab/-/commit/8fcf9d6372da3fe553bd21c3beae70634d6ba936"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.debian.org/debian-lts-announce/2026/11/msg00052.html"
+    },
+    {
+      "type": "WEB",
+      "url": "https://news.ycombinator.com/item?id=50554038"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132825"
+    },
+    {
+      "type": "WEB",
+      "url": "https://ubuntu.com/security/CVE-2026-132825"
+    },
+    {
+      "type": "WEB",
+      "url": "https://verialabs.com/ruby2shell/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/"
+    }
+  ],
+  "published": "2026-11-24T05:59:14.627Z",
+  "modified": "2026-11-24T06:14:15.745Z"
+}
