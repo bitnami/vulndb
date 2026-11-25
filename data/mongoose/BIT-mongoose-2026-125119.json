@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-mongoose-2026-125119",
+  "summary": "Mongoose: Connection-level sanitizeFilter not applied",
+  "details": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. From 6.0.0 until 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Mongoose stores the connection-level sanitizeFilter option in Connection.config, but Query.prototype._castConditions() and query casting check other option locations and do not read that configuration. An application that enables sanitizeFilter through mongoose.connect() or createConnection() and passes an attacker-controlled object into a query filter therefore receives a connection that reports the defense as enabled while query selector objects remain unsanitized. A crafted password value using a query operator can match an account record without the expected literal password, while global configuration through mongoose.set('sanitizeFilter') and per-query Model.find().sanitizeFilter() remain unaffected. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4.",
+  "aliases": [
+    "CVE-2026-125119"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "mongoose",
+        "purl": "pkg:bitnami/mongoose"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.0.0"
+            },
+            {
+              "fixed": "6.13.12"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.8.13"
+            },
+            {
+              "introduced": "8.0.0"
+            },
+            {
+              "fixed": "8.24.7"
+            },
+            {
+              "introduced": "9.0.0"
+            },
+            {
+              "fixed": "9.11.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/4bb659478be2f30655a7bdd78bc251bdf111cd29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/4f4f9a79f860786a54133bee2c9af967ec691491"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/83eda6af1489e9ef60bb8eee8cf9ee005771b9d5"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/commit/b8970c25998c23fbccd17f76c0398b902ff4911d"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases/tag/6.13.12"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases/tag/7.8.13"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases/tag/8.24.7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/releases/tag/9.11.4"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/Automattic/mongoose/security/advisories/GHSA-gg4r-jv3p-qx3c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125119"
+    }
+  ],
+  "published": "2026-11-25T05:51:42.421Z",
+  "modified": "2026-11-25T06:15:02.938Z"
+}

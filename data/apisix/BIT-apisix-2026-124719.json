@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-apisix-2026-124719",
+  "summary": "Apache APISIX: identity spoofing in openapi-to-mcp",
+  "details": "Authentication bypass by spoofing vulnerability in Apache APISIX.\n\n\n\nWhen a Route's configured headers carry a caller identity and the OpenAPI document declares\nthe same header, a caller can act as another identity against the\nupstream API. This issue affects Apache APISIX: from 3.19.0 before 3.20.0.\n\n\n\nUsers are recommended to upgrade to version 3.20.0, which fixes the issue.",
+  "aliases": [
+    "CVE-2026-124719"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "apisix",
+        "purl": "pkg:bitnami/apisix"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.19.0"
+            },
+            {
+              "fixed": "3.20.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:apache:apisix:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/13/9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread/k7v3vfh09mr1spk4r5k8n1gsjrhk6d8x"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124719"
+    }
+  ],
+  "published": "2026-11-25T05:38:01.654Z",
+  "modified": "2026-11-25T06:15:02.938Z"
+}
