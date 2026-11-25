@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-postgresql-2026-16240",
+  "summary": "PostgreSQL pg_basebackup can use backup manifest content as a format string",
+  "details": "Use of externally-controlled format string in PostgreSQL pg_basebackup allows an attacker having already compromised a server to achieve disclosure from pg_basebackup memory, via backup manifest bytes.  The vulnerability does not return the improperly-read bytes back to the attacker's server, so a successful attack would need separate implementation-specific secrets for that.  Integrity impact is unlikely; in particular, the applicable formatter does not support %n.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.",
+  "aliases": [
+    "CVE-2026-16240"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "postgresql",
+        "purl": "pkg:bitnami/postgresql"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "14.25.0"
+            },
+            {
+              "introduced": "15.0.0"
+            },
+            {
+              "fixed": "15.20.0"
+            },
+            {
+              "introduced": "16.0.0"
+            },
+            {
+              "fixed": "16.16.0"
+            },
+            {
+              "introduced": "17.0.0"
+            },
+            {
+              "fixed": "17.12.0"
+            },
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "18.7.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:postgresql:postgresql:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16240"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.postgresql.org/support/security/CVE-2026-16240/"
+    }
+  ],
+  "published": "2026-11-25T12:01:01.894Z",
+  "modified": "2026-11-25T12:18:35.053Z"
+}

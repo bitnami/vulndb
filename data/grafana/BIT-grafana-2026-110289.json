@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-110289",
+  "summary": "Git Sync connections send credentials to unvalidated server URLs",
+  "details": "A user with the Organization Admin role could point the server or token URL of a Git Sync connection at a loopback or internal address, and Grafana would then send the connection's OAuth client secret and tokens, or requests signed with the GitHub App private key, to that address (server-side request forgery).",
+  "aliases": [
+    "CVE-2026-110289"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.10"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.6"
+            },
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-110289"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110289"
+    }
+  ],
+  "published": "2026-11-25T11:45:49.236Z",
+  "modified": "2026-11-25T12:18:35.053Z"
+}
