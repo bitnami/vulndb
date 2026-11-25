@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rabbitmq-c-2026-59986",
+  "summary": "rabbitmq-c: amqp_decode_bytes size_t integer overflow bypasses bounds check on 32-bit (OOB read)",
+  "details": "rabbitmq-c is a C-language AMQP client library for RabbitMQ. Prior to version 0.17.0, the bounds check (*offset = o + len) <= encoded.len overflows when o + len > SIZE_MAX on 32-bit systems. len is a uint32_t read from the AMQP wire as a BYTES/UTF8 field length. The overflow wraps the check to a small value that passes, producing a decoded amqp_bytes_t with a multi-GB .len pointing into a small frame buffer. This results in an out-of-bounds read of up to ~4GB of process memory on 32-bit systems (ARM, MIPS, x86 ILP32, embedded IoT AMQP clients). Enabling information disclosure or denial of service. Not exploitable on 64-bit systems where size_t is 64-bit. This issue has been patched in version 0.17.0.",
+  "aliases": [
+    "CVE-2026-59986"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rabbitmq-c",
+        "purl": "pkg:bitnami/rabbitmq-c"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "0.17.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:rabbitmq-c_project:rabbitmq-c:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/pull/888"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/releases/tag/v0.17.0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/alanxz/rabbitmq-c/security/advisories/GHSA-jgjf-7fwf-f3c7"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59986"
+    }
+  ],
+  "published": "2026-11-25T18:00:13.815Z",
+  "modified": "2026-11-25T18:18:45.948Z"
+}
