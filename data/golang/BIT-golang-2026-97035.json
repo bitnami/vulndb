@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-97035",
+  "summary": "Unexpected code execution and arbitrary file write via Clang -gen-* and GCC -gnat* flags in cgo in cmd/go",
+  "details": "When using Clang or GCC, building a malicious package that uses cgo could cause unexpected code execution at build time or write files to arbitrary directories via \"-gen-*\" or \"-gnat*\" flags in \"#cgo\" directives. The \"-g*\" wildcard in the compiler and linker flag allowlists previously matched Clang's two-argument \"-gen-cdb-fragment-path <dir>\" flag and GCC's two-argument \"-gnatO <file>\" flag, permitting compilation database fragments and sidecar output files to be written to arbitrary directories and desynchronizing flag argument parsing between the go command and the compiler driver so that subsequent arguments could be passed as unvalidated positional inputs to the linker. \"-gen-*\" and \"-gnat*\" flags are now disallowed in \"#cgo\" compiler and linker flags.",
+  "aliases": [
+    "CVE-2026-97035"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.26.11"
+            },
+            {
+              "introduced": "1.27.0-0"
+            },
+            {
+              "fixed": "1.27.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/862148"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/82575"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97035"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-6856"
+    }
+  ],
+  "published": "2026-11-25T13:46:28.623Z",
+  "modified": "2026-11-25T14:14:03.500Z"
+}
