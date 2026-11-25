@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-grafana-2026-110992",
+  "summary": "Path traversal in Git Sync delete and move jobs",
+  "details": "A user who can create Git Sync provisioning jobs (the Editor role by default) could delete or move files outside the configured repository path with a job that references a resource whose source path contains ../ sequences (path traversal). With a local filesystem repository on versions before 13.0.4 and 13.1.1, this reached files on the Grafana host.",
+  "aliases": [
+    "CVE-2026-110992"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "grafana",
+        "purl": "pkg:bitnami/grafana"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "13.0.0"
+            },
+            {
+              "fixed": "13.0.13"
+            },
+            {
+              "introduced": "13.1.0"
+            },
+            {
+              "fixed": "13.1.10"
+            },
+            {
+              "introduced": "13.2.0"
+            },
+            {
+              "fixed": "13.2.6"
+            },
+            {
+              "introduced": "13.3.0"
+            },
+            {
+              "fixed": "13.3.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:*:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:*:go:*:*",
+      "cpe:2.3:a:grafana:grafana:*:*:*:*:enterprise:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://grafana.com/security/security-advisories/cve-2026-110992"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110992"
+    }
+  ],
+  "published": "2026-11-25T14:43:18.269Z",
+  "modified": "2026-11-25T15:07:32.429Z"
+}

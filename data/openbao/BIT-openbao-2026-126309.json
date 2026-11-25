@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-openbao-2026-126309",
+  "summary": "OpenBao before 2.6.5 and 2.7.2 Path Traversal in Transit Key Import",
+  "details": "OpenBao before 2.6.5 and 2.7.2 contains a path traversal vulnerability in Transit key import that allows authenticated attackers to bypass name restrictions in ACL policies. Attackers limited by a required_parameters name constraint can craft traversal sequences during import to write key material under arbitrary Transit key names.",
+  "aliases": [
+    "CVE-2026-126309"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "openbao",
+        "purl": "pkg:bitnami/openbao"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.6.5"
+            },
+            {
+              "introduced": "2.7.0"
+            },
+            {
+              "fixed": "2.7.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:openbao:openbao:*:*:*:*:*:go:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/openbao/openbao/security/advisories/GHSA-5pmx-2p74-x478"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126309"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/openbao-before-2.6.5-and-2.7.2-path-traversal-in-transit-key-import"
+    }
+  ],
+  "published": "2026-11-25T14:51:02.145Z",
+  "modified": "2026-11-25T15:07:32.429Z"
+}
