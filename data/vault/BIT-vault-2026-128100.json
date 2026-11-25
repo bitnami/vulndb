@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-128100",
+  "summary": "Vault vulnerable to ACL deny bypass via case-variant auth method user and group names",
+  "details": "Vault Community Edition and Vault Enterprise did not apply explicit ACL policy deny rules to letter case variants of user and group names in auth methods that treat these names as case-insensitive. This may allow an authenticated user with delegated permissions to modify a protected user or group, potentially leading to privilege escalation. This vulnerability (CVE-2026-128100) is fixed in Vault Community Edition 2.2.2 and Vault Enterprise 2.2.2, 1.21.14, and 1.19.25.",
+  "aliases": [
+    "CVE-2026-128100"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.10.0"
+            },
+            {
+              "fixed": "2.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-58-vault-vulnerable-to-acl-deny-bypass-via-case-variant-auth-method-user-and-group-names/78256"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128100"
+    }
+  ],
+  "published": "2026-11-25T00:02:59.708Z",
+  "modified": "2026-11-25T00:17:24.389Z"
+}
