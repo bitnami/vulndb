@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-airflow-2026-113504",
+  "summary": "Apache Airflow: Secrets masker: pattern-based masking bounded at depth 5 returns deeply-nested registered secrets in cleartext",
+  "details": "Apache Airflow's secrets masker stopped descending into nested structures after five levels, so a secret registered with the masker — for example a Connection password or a Variable value — that appeared more than five containers deep under non-sensitive keys was shown in cleartext in task logs and rendered template fields. A user who can read task logs or rendered templates, but is not meant to see those secrets, could read them. Users are advised to upgrade to apache-airflow 3.4.0 or later. Airflow 2.x is also affected; Airflow 2 has reached end of life and will not receive a fix, so Airflow 2 users should upgrade to Apache Airflow 3.4.0 or later.",
+  "aliases": [
+    "CVE-2026-113504"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "airflow",
+        "purl": "pkg:bitnami/airflow"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:apache:airflow:*:*:*:*:*:python:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://www.openwall.com/lists/oss-security/2026/11/09/19"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/airflow/pull/73793"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/c0bzrpq913qh7srwdmx0smvt1tgvthrr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113504"
+    }
+  ],
+  "published": "2026-11-25T23:40:03.136Z",
+  "modified": "2026-11-26T00:16:26.470Z"
+}
