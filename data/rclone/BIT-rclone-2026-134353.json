@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-134353",
+  "summary": "rclone before 1.76.0 Credential Leak via Swift, NetStorage and Seafile Redirects",
+  "details": "rclone before 1.76.0 leaks credentials in its swift, netstorage and seafile backends, which follow HTTP redirects using Go's default policy: swift and netstorage send auth headers or passwords on cross-host or HTTPS-to-HTTP redirects, and seafile sends API tokens or passwords on same-host HTTPS-to-HTTP redirects. Attackers receiving or observing a redirect issued by the configured endpoint can capture these credentials to access storage or replay signed requests.",
+  "aliases": [
+    "CVE-2026-134353"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.76.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-m97j-7x65-wh93"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134353"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-before-1.76.0-credential-leak-via-swift-netstorage-and-seafile-redirects"
+    }
+  ],
+  "published": "2026-11-26T14:59:43.306Z",
+  "modified": "2026-11-26T15:17:14.187Z"
+}

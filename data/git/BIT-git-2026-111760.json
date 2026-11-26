@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-git-2026-111760",
+  "summary": "Git: Recursive clones are susceptible to Remote Code Execution",
+  "details": "Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. Prior to 2.50.2, 2.51.3, 2.52.1, 2.53.1, 2.54.1, 2.55.1, and 2.56.1, an attacker-controlled repository hosted by the attacker rather than on a normal forge site can exploit git clone --recurse-submodules by causing Git to overwrite a submodule gitfile with a symbolic link. The symbolic link can point to a directory containing attacker-controlled Git configuration or hooks, allowing those hooks or configuration to execute code on the cloning user's system. The issue requires the recursive-submodule option, and users should avoid cloning repositories from untrusted sources. This issue is fixed in versions 2.50.2, 2.51.3, 2.52.1, 2.53.1, 2.54.1, 2.55.1, and 2.56.1.",
+  "aliases": [
+    "CVE-2026-111760"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "git",
+        "purl": "pkg:bitnami/git"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "2.50.2"
+            },
+            {
+              "introduced": "2.51.0"
+            },
+            {
+              "fixed": "2.51.3"
+            },
+            {
+              "introduced": "2.52.0"
+            },
+            {
+              "fixed": "2.52.1"
+            },
+            {
+              "introduced": "2.53.0"
+            },
+            {
+              "fixed": "2.53.1"
+            },
+            {
+              "introduced": "2.54.0"
+            },
+            {
+              "fixed": "2.54.1"
+            },
+            {
+              "introduced": "2.55.0"
+            },
+            {
+              "fixed": "2.55.1"
+            },
+            {
+              "introduced": "2.56.0"
+            },
+            {
+              "fixed": "2.56.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:git:git:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/git/git/commit/29411cf59fd417d8fce1be40ab2911e3e0885f26"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/git/git/security/advisories/GHSA-vp2w-7xxj-jvxr"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.50.2/Documentation/RelNotes/2.50.2.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.51.3/Documentation/RelNotes/2.51.3.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.52.1/Documentation/RelNotes/2.52.1.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.53.1/Documentation/RelNotes/2.53.1.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.54.1/Documentation/RelNotes/2.54.1.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.55.1/Documentation/RelNotes/2.55.1.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/git-scm/git/-/blob/v2.56.1/Documentation/RelNotes/2.56.1.adoc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111760"
+    }
+  ],
+  "published": "2026-11-26T14:43:54.683Z",
+  "modified": "2026-11-26T15:17:14.187Z"
+}

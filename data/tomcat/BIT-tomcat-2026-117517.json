@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-117517",
+  "summary": "Apache Tomcat: Fix for CVE-2026-25854 was incomplete",
+  "details": "The fix for CVE-2026-25854 was incomplete.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.19 through 11.0.27, from 10.1.53 through 10.1.61, from 9.0.116 through 9.0.123.\n\n\n\nUsers are recommended to upgrade to version 11.0.29, 10.1.62 or 9.0.124, which fix the issue.\nNote: Tomcat 11.0.28 was not released",
+  "aliases": [
+    "CVE-2026-117517"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "9.0.116"
+            },
+            {
+              "fixed": "9.0.124"
+            },
+            {
+              "introduced": "10.1.53"
+            },
+            {
+              "fixed": "10.1.62"
+            },
+            {
+              "introduced": "11.0.19"
+            },
+            {
+              "fixed": "11.0.29"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/b9ad7fa2d2a963bc06f237f3238ae7de510ba0fe"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/cf7eae399468ae0e8f190dc3022e03028fa20314"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/d872f4e9121a0f2a2aacc03336dc79c266ef196c"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/jshmkv50msc5lgwwqzt2b98w3t2n2v7w"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117517"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.62"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.124"
+    }
+  ],
+  "published": "2026-11-26T15:02:53.251Z",
+  "modified": "2026-11-26T15:17:14.187Z"
+}
