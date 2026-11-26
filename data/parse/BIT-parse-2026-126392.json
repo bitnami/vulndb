@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-126392",
+  "summary": "Parse Server 9.10.6 before 9.10.8 Information Disclosure via Dot Notation Update",
+  "details": "Parse Server from 9.10.6 before 9.10.8 contains an information disclosure vulnerability that allows clients with write but not read access to learn whether fields are stored on MongoDB. Attackers can send updates with dot notation operations on top-level fields and observe internal server errors versus success responses to infer field existence.",
+  "aliases": [
+    "CVE-2026-126392"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.6.109"
+            },
+            {
+              "fixed": "8.6.118"
+            },
+            {
+              "introduced": "9.10.6"
+            },
+            {
+              "fixed": "9.10.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-4m87-fqwv-2m8v"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126392"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.10.6-alpha.1-before-9.10.8-alpha.1-information-disclosure-via-dot-notation-update"
+    }
+  ],
+  "published": "2026-11-26T08:49:56.941Z",
+  "modified": "2026-11-26T09:03:53.289Z"
+}

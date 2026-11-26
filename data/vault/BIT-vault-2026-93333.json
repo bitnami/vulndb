@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-vault-2026-93333",
+  "summary": "Vault audit device prefix vulnerable to log injection",
+  "details": "Vault's audit devices did not validate the contents of a configured audit log prefix and did not consistently enforce the server-level setting that restricts audit log prefixing. This may allow a privileged operator to inject content into audit logs, potentially leading to forged or misleading audit records. This vulnerability (CVE-2026-93333) is fixed in Vault Community Edition 2.2.2 and Vault Enterprise 2.2.2, 1.21.14, and 1.19.25.",
+  "aliases": [
+    "CVE-2026-93333"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "vault",
+        "purl": "pkg:bitnami/vault"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0.7.0"
+            },
+            {
+              "fixed": "2.2.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:-:*:*:*",
+      "cpe:2.3:a:hashicorp:vault:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://discuss.hashicorp.com/t/hcsec-2026-57-vault-audit-device-prefix-vulnerable-to-log-injection/78200"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93333"
+    }
+  ],
+  "published": "2026-11-26T08:54:17.125Z",
+  "modified": "2026-11-26T09:03:53.289Z"
+}

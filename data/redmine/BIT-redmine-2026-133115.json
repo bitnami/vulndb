@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-redmine-2026-133115",
+  "summary": "Redmine 6.1.0 before 6.1.6 and 7.0.0 before 7.0.3 OAuth Scope Bypass in Project Creation",
+  "details": "Redmine 6.1.0 before 6.1.6 and 7.0.0 before 7.0.3 contains an incorrect authorization vulnerability that lets OAuth clients exceed token scope during project creation. A client with only project-creation scope can set is_public, enabled_module_names and inherit_members, making projects public and granting parent-project members subproject access.",
+  "aliases": [
+    "CVE-2026-133115"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "redmine",
+        "purl": "pkg:bitnami/redmine"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "6.1.0"
+            },
+            {
+              "fixed": "6.1.6"
+            },
+            {
+              "introduced": "7.0.0"
+            },
+            {
+              "fixed": "7.0.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:redmine:redmine:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/redmine/redmine/commit/2e818c2fd7209e17e2f5f127c6092684e0f5f4dc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/redmine/redmine/commit/ea5ac19f381e2ecb0166bf2cc6fab44521938678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133115"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.redmine.org/projects/redmine/wiki/Changelog_7_0"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.redmine.org/projects/redmine/wiki/Security_Advisories"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/redmine-6.1.0-before-6.1.6-and-7.0.0-before-7.0.3-oauth-scope-bypass-in-project-creation"
+    }
+  ],
+  "published": "2026-11-26T08:51:56.148Z",
+  "modified": "2026-11-26T09:03:53.289Z"
+}
