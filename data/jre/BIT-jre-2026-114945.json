@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-jre-2026-114945",
+  "details": "Vulnerability in the Oracle Java SE, Oracle GraalVM for JDK product of Oracle Java SE (component: Libraries). Supported versions that are affected are Oracle Java SE: 21.0.13.0.3, 25.0.5.0.3 and 27.0.1.0.3; Oracle GraalVM for JDK: 21.0.13.0.3. Easily exploitable vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise Oracle Java SE, Oracle GraalVM for JDK. Successful attacks of this vulnerability can result in unauthorized update, insert or delete access to some of Oracle Java SE, Oracle GraalVM for JDK accessible data. Note: This vulnerability can be exploited by using APIs in the specified Component, e.g., through a web service which supplies data to the APIs. This vulnerability also applies to Java deployments, typically in clients running sandboxed Java Web Start applications or sandboxed Java applets, that load and run untrusted code (e.g., code that comes from the internet) and rely on the Java sandbox for security. CVSS 3.1 Base Score 5.3 (Integrity impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N).",
+  "aliases": [
+    "CVE-2026-114945"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "jre",
+        "purl": "pkg:bitnami/jre"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "18.0.0"
+            },
+            {
+              "fixed": "21.0.13-1"
+            },
+            {
+              "introduced": "22.0.0"
+            },
+            {
+              "fixed": "25.0.5-1"
+            },
+            {
+              "introduced": "26.0.0"
+            },
+            {
+              "fixed": "27.0.1-1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:bellsoft:libericajre:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114945"
+    },
+    {
+      "type": "WEB",
+      "url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.oracle.com/security-alerts/cspunov2026.html"
+    }
+  ],
+  "published": "2026-11-26T20:50:31.496Z",
+  "modified": "2026-11-26T21:16:32.294Z"
+}
