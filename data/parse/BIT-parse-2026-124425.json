@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-parse-2026-124425",
+  "summary": "Parse Server 9.10.6 before 9.10.7 Information Disclosure via Save Response",
+  "details": "Parse Server 8.6.109 before 8.6.116 and 9.10.6 before 9.10.7 contains an information disclosure vulnerability in which create or update responses mark fields as deleted based on stored values the caller cannot read. Attackers with write but not read access to an object can inspect these markers to infer whether protected fields are set.",
+  "aliases": [
+    "CVE-2026-124425"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "parse",
+        "purl": "pkg:bitnami/parse"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.6.109"
+            },
+            {
+              "fixed": "8.6.116"
+            },
+            {
+              "introduced": "9.10.6"
+            },
+            {
+              "fixed": "9.10.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-ch64-8phh-m7hc"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124425"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.vulncheck.com/advisories/parse-server-9.10.6-alpha.1-before-9.10.7-alpha.2-information-disclosure-via-save-response"
+    }
+  ],
+  "published": "2026-11-26T17:50:26.940Z",
+  "modified": "2026-11-26T18:06:21.992Z"
+}
