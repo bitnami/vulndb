@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-golang-2026-97033",
+  "summary": "Unexpected code execution via --sysroot, -target, -isysroot, -Wl,-syslibroot, and -x cgo flags in cmd/go",
+  "details": "Building a malicious package that uses cgo could cause arbitrary code execution at build time through several compiler and linker flags permitted in \"#cgo\" directives. Specifically, \"--sysroot\" in GCC and Clang relocates compiler subprograms, spec files, and CRT startup objects to an attacker-controlled directory; \"-target\" in Clang falls back to executing target helper tools from the current working directory when not found in PATH; \"-isysroot\" and \"-Wl,-syslibroot\" can pass a regular file on disk to GNU ld.bfd, which interprets it as a positional linker script; and \"-x\" permitted specifying arbitrary compiler input languages beyond those supported by cgo. \"--sysroot\" and \"-target\" are now disallowed in \"#cgo\" flags, \"-isysroot\" and \"-Wl,-syslibroot\" are verified not to point to regular files, and \"-x\" is restricted to the C, C++, Objective-C, and assembler languages supported by cgo.",
+  "aliases": [
+    "CVE-2026-97033"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "golang",
+        "purl": "pkg:bitnami/golang"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "1.26.11"
+            },
+            {
+              "introduced": "1.27.0-0"
+            },
+            {
+              "fixed": "1.27.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://go.dev/cl/862146"
+    },
+    {
+      "type": "WEB",
+      "url": "https://go.dev/issue/82577"
+    },
+    {
+      "type": "WEB",
+      "url": "https://groups.google.com/g/golang-announce/c/iY8TY0wWgbM"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97033"
+    },
+    {
+      "type": "WEB",
+      "url": "https://pkg.go.dev/vuln/GO-2026-6858"
+    }
+  ],
+  "published": "2026-11-26T11:46:31.364Z",
+  "modified": "2026-11-26T12:13:50.999Z"
+}
