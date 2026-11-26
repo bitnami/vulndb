@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-libpython-2026-16052",
+  "summary": "Cookie Attribute Injection via Unescaped Semicolons in http.cookies.Morsel",
+  "details": "The http.cookies.Morsel class allows separator semicolons in attribute\nvalues\nand includes them verbatim in all output formats. An attacker who can\ncontrol\nthese values could use this to relax the cookie's Domain or SameSite\nrestrictions.",
+  "aliases": [
+    "CVE-2026-16052"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "libpython",
+        "purl": "pkg:bitnami/libpython"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.16.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Low",
+    "cpes": [
+      "cpe:2.3:a:python:python:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/issues/161707"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/python/cpython/pull/161711"
+    },
+    {
+      "type": "WEB",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/IZL4QUFV7PKGT2JYSU2DCBMLTWYJDGKZ/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16052"
+    }
+  ],
+  "published": "2026-11-26T05:50:34.358Z",
+  "modified": "2026-11-26T06:16:33.685Z"
+}

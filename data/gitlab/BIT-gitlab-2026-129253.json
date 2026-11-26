@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-gitlab-2026-129253",
+  "summary": "Incorrect Authorization in GitLab",
+  "details": "GitLab has remediated an issue in GitLab EE affecting all versions from 19.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with developer-role permissions to bypass admin-configured AI tool governance controls in a governed namespace due to improper binding of authorization tokens to their intended workflow execution context.",
+  "aliases": [
+    "CVE-2026-129253"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "gitlab",
+        "purl": "pkg:bitnami/gitlab"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "19.1.0"
+            },
+            {
+              "fixed": "19.3.9"
+            },
+            {
+              "introduced": "19.4.0"
+            },
+            {
+              "fixed": "19.4.8"
+            },
+            {
+              "introduced": "19.5.0"
+            },
+            {
+              "fixed": "19.5.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*",
+      "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-6-released/"
+    },
+    {
+      "type": "WEB",
+      "url": "https://gitlab.com/gitlab-org/gitlab/-/work_items/605431"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129253"
+    }
+  ],
+  "published": "2026-11-26T06:10:18.462Z",
+  "modified": "2026-11-26T06:16:33.685Z"
+}
