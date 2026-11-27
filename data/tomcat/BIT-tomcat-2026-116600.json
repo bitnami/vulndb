@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-116600",
+  "summary": "Apache Tomcat: Memory leak with OWB integration leads to DoS",
+  "details": "Missing release of memory after effective lifetime vulnerability in Apache Tomcat via WebSocket.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.27, from 10.1.0 through 10.1.61, from 9.0.22 through 9.0.123\n\n\n\nThe following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.0 through 8.5.100, from 7.0.43 through 7.0.109. Other unsupported versions may also be affected.\n\n\n\nUsers are recommended to upgrade to version 11.0.29, 10.0.62 or 9.0.124, which fix the issue.\nNote: Tomcat 11.0.28 was not released",
+  "aliases": [
+    "CVE-2026-116600"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "7.0.43"
+            },
+            {
+              "fixed": "9.0.124"
+            },
+            {
+              "introduced": "10.1.0"
+            },
+            {
+              "fixed": "10.1.62"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.29"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/1cf262375bca6d15d63d041db9c472431ca82471"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/2fb7b7e22fac85cca61d764185575137d6342d7e"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/fc0dbcd7df8e719c7528998e4c15cd94239c8afd"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/3rmv2290wywfhosv5okqmbqc2m1nxjtl"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116600"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.62"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.124"
+    }
+  ],
+  "published": "2026-11-27T09:02:54.427Z",
+  "modified": "2026-11-27T09:16:50.457Z"
+}

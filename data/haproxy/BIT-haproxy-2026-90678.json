@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-haproxy-2026-90678",
+  "details": "An issue was discovered in HAProxy 3.3.0 through 3.4.4 and in 3.5-dev1 through 3.5-dev5. Exploitation requires an HTTP/3 frontend: HAProxy must be built with QUIC support and configured with a QUIC bind listener, and the affected traffic must reach a backend over HTTP/1.1 using chunked transfer coding on a reused connection. Under those conditions, when an HTTP/3 request carries no Content-Length header, the HTTP/3 multiplexer credits the length declared in a DATA frame header to the stream endpoint's known-input-payload estimate at the moment the frame header is decoded, before the payload has been received, and that declared length is emitted verbatim as the HTTP/1.1 chunk size. A remote unauthenticated client that declares more payload than it delivers and then ends the stream causes HAProxy to announce a chunk larger than the bytes it writes and to return the connection to the idle pool in a desynchronized state. The result is potential HTTP request smuggling on reused backend connections: an attacker can place a request past a frontend rule such as a path-based http-request deny, so that the smuggled request is never seen by HAProxy's HTTP analysis, and can cause concurrent clients' requests, including their request lines and Authorization headers, to be consumed as the attacker's request body and lost. Exploitation is not deterministic; it depends on a race with backend connection pooling, succeeding in a majority of but not all trials during testing, and can be retried freely. The mechanism was introduced in 3.3-dev10; releases 3.2.x and earlier are unaffected.",
+  "aliases": [
+    "CVE-2026-90678"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "haproxy",
+        "purl": "pkg:bitnami/haproxy"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:L"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "3.3.0"
+            },
+            {
+              "fixed": "3.4.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "High",
+    "cpes": [
+      "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "http://git.haproxy.org/?p=haproxy.git;a=commit;h=86a4ebc761a278838e8cb06f3a292282ba704c65"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/haproxy/haproxy/commit/86a4ebc761a278838e8cb06f3a292282ba704c65"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90678"
+    },
+    {
+      "type": "WEB",
+      "url": "https://www.haproxy.org/download/3.5/src/CHANGELOG"
+    }
+  ],
+  "published": "2026-11-27T08:44:41.465Z",
+  "modified": "2026-11-27T09:16:50.457Z"
+}
