@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-tomcat-2026-118028",
+  "summary": "Apache Tomcat: RewriteValve [F]/[G]/[R] rule matches do not stop processing",
+  "details": "Execution After Redirect (EAR) vulnerability in Apache Tomcat in RedirectValve affecting flags [F], [G] and [R].\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0 through 11.0.27, from 10.1.20 through 10.1.61, from 9.0.87 through 9.0.123.\n\n\n\nThe following versions were EOL at the time the CVE was created but are known to be affected: 8.5.100. Other unsupported versions may also be affected.\n\n\n\nUsers are recommended to upgrade to version 11.0.29, 10.1.62, 9.0.124, which fixes the issue.\nNote: Tomcat 11.0.28 was not released",
+  "aliases": [
+    "CVE-2026-118028"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "tomcat",
+        "purl": "pkg:bitnami/tomcat"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V3",
+          "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "8.5.100"
+            },
+            {
+              "fixed": "9.0.0"
+            },
+            {
+              "introduced": "9.0.87"
+            },
+            {
+              "fixed": "9.0.124"
+            },
+            {
+              "introduced": "10.1.20"
+            },
+            {
+              "fixed": "10.1.62"
+            },
+            {
+              "introduced": "11.0.0"
+            },
+            {
+              "fixed": "11.0.29"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Critical",
+    "cpes": [
+      "cpe:2.3:a:apache:tomcat:*:*:*:*:*:maven:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/3747d6c787cba377eafa580f8bff5482e9755fd2"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/a51516e6b7121ade6cf212ecf20406a7cecfc54f"
+    },
+    {
+      "type": "WEB",
+      "url": "https://github.com/apache/tomcat/commit/b756a2b1683a78af316404970c56e7e68a29f321"
+    },
+    {
+      "type": "WEB",
+      "url": "https://lists.apache.org/thread.html/jkny14sj62px2hswp7fjk1s5889m5d5r"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118028"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.62"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.29"
+    },
+    {
+      "type": "WEB",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.124"
+    }
+  ],
+  "published": "2026-11-27T09:02:58.458Z",
+  "modified": "2026-11-27T09:16:50.457Z"
+}
