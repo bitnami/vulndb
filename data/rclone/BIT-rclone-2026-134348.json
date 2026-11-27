@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.6.2",
+  "id": "BIT-rclone-2026-134348",
+  "summary": "Rclone from 1.56.0 before 1.76.0 Username Enumeration via htpasswd Timing Oracle",
+  "details": "Rclone from 1.56.0 before 1.76.0 contains a timing side-channel vulnerability in its htpasswd authentication middleware that allows unauthenticated attackers to enumerate valid usernames. Attackers can send HTTP Basic Auth requests with wrong passwords and measure response times, because bcrypt verification runs only for existing users, enabling targeted password guessing.",
+  "aliases": [
+    "CVE-2026-134348"
+  ],
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Bitnami",
+        "name": "rclone",
+        "purl": "pkg:bitnami/rclone"
+      },
+      "severity": [
+        {
+          "type": "CVSS_V4",
+          "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+        }
+      ],
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "1.56.0"
+            },
+            {
+              "fixed": "1.76.0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "database_specific": {
+    "severity": "Medium",
+    "cpes": [
+      "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+    ]
+  },
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://github.com/rclone/rclone/security/advisories/GHSA-hwj7-wp9g-wrv9"
+    },
+    {
+      "type": "WEB",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134348"
+    },
+    {
+      "type": "ADVISORY",
+      "url": "https://www.vulncheck.com/advisories/rclone-from-1.56.0-before-1.76.0-username-enumeration-via-htpasswd-timing-oracle"
+    }
+  ],
+  "published": "2026-11-26T23:58:25.975Z",
+  "modified": "2026-11-27T00:15:35.692Z"
+}
